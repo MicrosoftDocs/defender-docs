@@ -5,9 +5,9 @@ ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/11/2026
+ms.date: 07/02/2026
 ms.topic: how-to
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1013
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -17,7 +17,7 @@ The Microsoft Defender portal allows granular access to features and data based 
 
 To access the Microsoft Defender for IoT features in the Defender portal, such as site security, and Defender for IoT specific alerts and vulnerability updates, you need to assign permissions and roles to the correct users.
 
-This article shows you how to set up the new roles and permissions to access the site security and Defender for IoT specific features.
+This article shows you how to set up the new roles and permissions to access the site security and Defender for IoT specific features. Before you begin, make sure you meet the [prerequisites](#prerequisites).
 
 To make general changes to RBAC roles and permissions that relate to all other areas of Defender for IoT, see [configure general RBAC permissions](configure-permissions.md).
 

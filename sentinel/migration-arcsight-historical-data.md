@@ -4,9 +4,9 @@ description: Export historical data from ArcSight for migration to a target plat
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security engineer, I want to export historical data from ArcSight so that I can migrate it to a new platform for further analysis and storage.
@@ -29,7 +29,7 @@ To export the data, use one of the following methods:
 
 Use the Event Data Transfer tool to export data from ArcSight Enterprise Security Manager (ESM) version 7.x. To export data from ArcSight Logger, use the [lacat utility](#lacat-utility). 
 
-The Event Data Transfer tool retrieves event data from ESM, which allows you to combine analysis with unstructured data, in addition to the CEF data. The Event Data Transfer tool exports ESM events in three formats: CEF, CSV, and key-value pairs. 
+The Event Data Transfer tool retrieves event data from ESM. This event data can be combined with unstructured data in addition to the CEF data. The Event Data Transfer tool exports ESM events in three formats: CEF, CSV, and key-value pairs. 
 
 To export data using the Event Data Transfer tool:
 

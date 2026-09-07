@@ -18,7 +18,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
@@ -26,7 +26,7 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Advanced hunting is based on the [Kusto query language](/azure/kusto/query/). You can use Kusto operators and statements to construct queries that locate information in a specialized [schema](advanced-hunting-schema-tables.md).
+Advanced hunting is based on the [Kusto query language](/azure/kusto/query/). You can use Kusto operators and statements to construct queries that locate information in a specialized [advanced hunting schema](advanced-hunting-schema-tables.md).
 
 Watch this short video to learn some handy Kusto query language basics.
 
@@ -82,7 +82,7 @@ The first piped element is a time filter scoped to the previous seven days. Limi
 | where Timestamp > ago(7d)
 ```
 > [!NOTE]
-> Kusto time filters are in UTC regardless of the timezone you specified in your [settings](m365d-time-zone.md). 
+> Kusto time filters are in UTC regardless of the timezone you specified in your [time zone settings](m365d-time-zone.md). 
 
 
 ### Check specific processes
@@ -142,7 +142,7 @@ You've just run your first query and have a general idea of its components. It's
 | `makeset` |  Return a dynamic (JSON) array of the set of distinct values that Expr takes in the group. |
 | `find` | Find rows that match a predicate across a set of tables. |
 
-To see a live example of these operators, run them from the **Get started** section in advanced hunting.
+To see a live example of these operators, run them from the **Get started** pane on the **Advanced hunting** page in the Microsoft Defender portal.
 
 ## Understand data types
 
@@ -156,7 +156,7 @@ Advanced hunting supports Kusto data types, including the following common types
 | `int` | 32-bit integer  |
 | `long` | 64-bit integer |
 
-To learn more about Kusto scalar data types, [Kusto scalar data types](/azure/data-explorer/kusto/query/scalar-data-types/).
+To learn more about Kusto scalar data types, see [Kusto scalar data types](/azure/data-explorer/kusto/query/scalar-data-types/).
 
 ## Get help as you write queries
 

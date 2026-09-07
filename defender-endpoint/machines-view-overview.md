@@ -12,19 +12,19 @@ ms.collection:
 - tier2
 ms.topic: how-to
 search.appverid: met150
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Vulnerability Management
 
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Explore devices in the device inventory
 
-The **Device inventory** is the authoritative source for all devices visible to Microsoft Defender for Endpoint. It shows devices that are onboarded (with the full agent installed) and devices discovered on your network through [device discovery](device-discovery.md).
+The **Device inventory** is the authoritative source for all devices visible to Microsoft Defender for Endpoint. It shows devices that are onboarded (with the full agent installed) and devices discovered on your network through the [device discovery overview](device-discovery.md).
 
 This article explains how to view, customize, and manage devices in your device inventory.
 
@@ -43,7 +43,7 @@ In the Defender portal, go to **Assets** \> **Devices** or, to go directly to th
 The device inventory opens on the **All devices** tab. You can see information such as device name, domain, risk level, exposure level, OS platform, criticality level, onboarding status, sensor health state, mitigation status, and other details for easy identification of devices most at risk.
 
 > [!NOTE]
-> The device inventory is available in Microsoft Defender services. The available information might differ depending on your license. To get the most complete set of capabilities, use [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md).
+> The device inventory is available in Microsoft Defender services. The available information might differ depending on your license. To get the most complete set of device inventory capabilities, use [Microsoft Defender for Endpoint Plan 2](microsoft-defender-endpoint.md).
 >
 > Risk Level, which can influence enforcement of Conditional Access and other security policies in Microsoft Intune, is available for Windows devices.
 
@@ -133,7 +133,7 @@ Export the device inventory to a CSV file for offline review or reporting.
 > Antivirus status shows as `Not-Supported` in the export. For antivirus status, use the [Microsoft Defender Antivirus health report](device-health-microsoft-defender-antivirus-health.md) instead.
 
 > [!TIP]
-> The API, UI, export, and AH interfaces all draw from a single authoritative data source. However, because each is powered by separate backend systems with different update frequencies, slight variations may appear across views—especially in short-term queries or recently reactivated devices. Each interface is optimized for its specific use case: export for large data retrieval, UI for fast interactive tasks like tag management, and AH for tracking device update history over time.
+> The API, UI, export, and Advanced Hunting (AH) interfaces all draw from a single authoritative data source. However, because each is powered by separate backend systems with different update frequencies, slight variations may appear across views—especially in short-term queries or recently reactivated devices. The export interface is optimized for large data retrieval, the UI for fast interactive tasks like tag management, and Advanced Hunting for tracking device update history over time.
 
 ## Common device inventory tasks
 

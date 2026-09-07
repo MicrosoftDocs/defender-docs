@@ -5,28 +5,29 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # Export and import automation rules to and from ARM templates
 
-Manage your Microsoft Sentinel automation rules as code! You can now export your automation rules to Azure Resource Manager (ARM) template files, and import rules from these files, as part of your program to manage and control your Microsoft Sentinel deployments as code. The export action creates a JSON file in your browser's downloads location, that you can then rename, move, and otherwise handle like any other file.
+Manage your Microsoft Sentinel automation rules as code! You can now export your automation rules to Azure Resource Manager (ARM) template files, and import rules from these files, as part of your program to manage and control your Microsoft Sentinel deployments as code. The export action creates a JSON file in your browser's downloads location. You can then rename, move, and otherwise handle the file like any other file.
 
 The exported JSON file is workspace-independent, so it can be imported to other workspaces and even other tenants. As code, it can also be version-controlled, updated, and deployed in a managed CI/CD framework.
 
-The file includes all the parameters defined in the automation rule. Rules of any trigger type can be exported to a JSON file.
+The exported JSON file includes all the parameters defined in the automation rule. Rules of any trigger type can be exported to a JSON file.
 
-This article shows you how to export and import automation rules.
+This section explains how to export and import Microsoft Sentinel automation rules.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
-## Export rules
+<a name="export-rules"></a>
+## Export automation rules to ARM templates
 
 To export one or more automation rules to a JSON file, perform the following steps:
 
@@ -45,7 +46,8 @@ To export one or more automation rules to a JSON file, perform the following ste
     >
     > - When you export multiple rules at once, a single file (named *Azure_Sentinel_automation_rules.json*) is created, and contains JSON code for all the exported rules.
 
-## Import rules
+<a name="import-rules"></a>
+## Import automation rules from ARM templates
 
 To import automation rules from an ARM template JSON file, perform the following steps:
 
@@ -62,7 +64,7 @@ To import automation rules from an ARM template JSON file, perform the following
 
 ## Troubleshooting
 
-If you have any issues importing an exported automation rule, consult the following table.
+If you have any issues importing an exported automation rule, consult the troubleshooting table in this section.
 
 | Behavior (with *error*) | Reason | Suggested action |
 | ----------------------- | ------ | ---------------- |

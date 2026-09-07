@@ -1,11 +1,11 @@
 ---
 title: Cloud discovery data anonymization
 description: This article provides information about how to protect user privacy by anonymizing the usernames in your cloud discovery data.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - sfi-ga-blocked
   - sfi-image-nochange
 ai-usage: ai-assisted
@@ -51,7 +51,7 @@ To resolve (deanonymize) usernames in Cloud Discovery data:
 
 1. When anonymization is selected, Defender for Cloud Apps parses the traffic log and extracts specific data attributes.
 1. Defender for Cloud Apps replaces the username with an encrypted username.
-1. It then analyzes cloud usage data and generates cloud discovery reports based on the anonymized data.
+1. Defender for Cloud Apps then analyzes cloud usage data and generates cloud discovery reports based on the anonymized data.
 
     ![Screenshot of the cloud discovery dashboard displaying anonymized usage data.](media/anonymize-dashboard.png)
 
@@ -96,7 +96,7 @@ To resolve (deanonymize) usernames in Cloud Discovery data:
 
         ![Screenshot of the resolve dialog prompting for justification before deanonymizing multiple users.](media/anonymize-resolve-dialog.png)
 
-1. The action is audited in the portal's **Audit log**.
+1. Each username resolution action is audited in the portal's **Audit log**.
 
 > [!NOTE]
 > Starting October, 2025 - **Resolve Anonymization** actions are no longer part of **Governance logs**. Instead, they will be audited in the **Activity log** only.

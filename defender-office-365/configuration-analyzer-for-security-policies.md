@@ -10,12 +10,12 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - sfi-ga-nochange
   - sfi-image-nochange
 description: Admins can learn how to use the configuration analyzer to find and fix threat policies that are less secure than Standard protection and Strict protections in preset security policies.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -80,11 +80,11 @@ The **Configuration analyzer** page has three main tabs:
 
 ### Standard recommendations and Strict recommendations tabs in the configuration analyzer
 
-By default, the configuration analyzer opens on the **Standard recommendations** tab. You can switch to the **Strict recommendations** tab. The settings, layout, and actions are the same on both tabs.
+By default, the configuration analyzer opens on the **Standard recommendations** tab. You can switch to the **Strict recommendations** tab. The settings, layout, and actions are the same on the **Standard recommendations** and **Strict recommendations** tabs.
 
 :::image type="content" source="media/configuration-analyzer-settings-and-recommendations-view.png" alt-text="The Settings and recommendations view in the Configuration analyzer" lightbox="media/configuration-analyzer-settings-and-recommendations-view.png":::
 
-The first section of the tab displays the number of settings in each type of policy that need improvement as compared to Standard or Strict protection. The types of policies are:
+The first section of the **Standard recommendations** or **Strict recommendations** tab displays the number of settings in each type of policy that need improvement as compared to Standard or Strict protection. The types of policies are:
 
 - **Anti-spam**
 - **Anti-phishing**
@@ -97,7 +97,7 @@ The first section of the tab displays the number of settings in each type of pol
 
 If a policy type and number isn't shown, then all of your policies of that type meet the recommended settings of Standard or Strict protection.
 
-The rest of the tab is the table of settings that need to be brought up to the level Standard or Strict protection. The table contains the following columns<sup>\*</sup>:
+The rest of the **Standard recommendations** or **Strict recommendations** tab is the table of settings that need to be brought up to the level Standard or Strict protection. The table contains the following columns<sup>\*</sup>:
 
 - **Recommendations**: The value of the setting in the Standard or Strict protection profile.
 - **Policy**: The name of the affected policy that contains the setting.

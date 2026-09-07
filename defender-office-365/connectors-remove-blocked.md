@@ -9,11 +9,11 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - sfi-ga-nochange
 description: Admins can learn how to remove connectors from the Restricted entities page in the Microsoft Defender portal. Connectors are added to the Restricted entities page after signs of compromise.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -36,9 +36,9 @@ In all organizations with cloud mailboxes, several things happen if an [inbound 
 
 > Your message couldn't be delivered. The most common reason for this is that your organization's email connector is suspected of sending spam or phish and it's no longer allowed to send email. Contact your email admin for assistance. Remote Server returned '550;5.7.711 Access denied, bad inbound connector. AS(2204).'
 
-For more information about compromised connectors and how to regain control of them, see [Respond to a compromised connector](connectors-detect-respond-to-compromise.md).
+For more information about compromised connectors and how to regain control of those connectors, see [Respond to a compromised connector](connectors-detect-respond-to-compromise.md).
 
-The procedures in this article explain how admins can remove connectors from the **Restricted entities** page in the Microsoft Defender portal or in Exchange Online PowerShell.
+The following procedures explain how admins can remove connectors from the **Restricted entities** page in the Microsoft Defender portal or in Exchange Online PowerShell.
 
 For more information about compromised _user accounts_ and how to remove them from the **Restricted entities** page, see [Remove blocked users from the Restricted entities page](outbound-spam-restore-restricted-users.md).
 
@@ -50,7 +50,7 @@ Before you begin, make sure you have access to the required tools and permission
 
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
 
-- You need to be assigned permissions before you can do the procedures in this article. You have the following options:
+- You need to be assigned permissions before you can remove connectors from the **Restricted entities** page. You have the following options:
   - [Microsoft Defender XDR Unified role based access control (RBAC)](/defender-xdr/manage-rbac) (If **Email & collaboration** \> **Defender for Office 365** permissions is :::image type="icon" source="media/scc-toggle-on.png" border="false"::: **Active**. Affects the Defender portal only, not PowerShell): **Authorization and settings/Security settings/Detection tuning (manage)** or **Authorization and settings/Security settings/Core security settings (read)**.
   - [Exchange Online permissions](/exchange/permissions-exo/permissions-exo):
     - _Remove connectors from the Restricted entities page_: Membership in the **Organization Management** or **Security Administrator** role groups.
@@ -60,7 +60,7 @@ Before you begin, make sure you have access to the required tools and permission
     > [!IMPORTANT]
     > <sup>\*</sup> Microsoft strongly advocates for the principle of least privilege. Assigning accounts only the minimum permissions necessary to perform their tasks helps reduce security risks and strengthens your organization's overall protection. Global Administrator is a highly privileged role that you should limit to emergency scenarios or when you can't use a different role.
 
-- Before you follow the procedures in this article to remove a connector from the **Restricted entities** page, be sure to follow the required steps to regain control of the connector as described in [Respond to a compromised connector](connectors-detect-respond-to-compromise.md).
+- Before you remove a connector from the **Restricted entities** page, be sure to follow the required steps to regain control of the connector as described in [Respond to a compromised connector](connectors-detect-respond-to-compromise.md).
 
 ## Remove a connector from the Restricted entities page in the Microsoft Defender portal
 
@@ -78,10 +78,10 @@ Before you begin, make sure you have access to the required tools and permission
 
 4. In the **Unblock entity** flyout that opens, read the details about the restricted connector. You should go through the recommendations to ensure you're taking the proper actions in case the connector is compromised.
 
-   When you're finished in the **Unblock entity** flyout, select **Unblock**.
-
    > [!NOTE]
    > It might take up to 1 hour for all restrictions to be removed from the connector.
+
+   When you're finished in the **Unblock entity** flyout, select **Unblock**.
 
 ## Verify the alert settings for restricted connectors
 

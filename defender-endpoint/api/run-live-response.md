@@ -31,14 +31,14 @@ Before you can initiate a session on a device, make sure you fulfill the followi
 
 - Windows 10
 - [Version 1909](/windows/whats-new/whats-new-windows-10-version-1909) or later
-  - [Version 1903](/windows/whats-new/whats-new-windows-10-version-1903) with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)
-  - [Version 1809 (RS 5)](/windows/whats-new/whats-new-windows-10-version-1809) with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818)
-  - [Version 1803 (RS 4)](/windows/whats-new/whats-new-windows-10-version-1803) with [KB4537795](https://support.microsoft.com/help/4537795/windows-10-update-kb4537795)
-  - [Version 1709 (RS 3)](/windows/whats-new/whats-new-windows-10-version-1709) with [KB4537816](https://support.microsoft.com/help/4537816/windows-10-update-kb4537816)
+  - [Version 1903](/windows/whats-new/whats-new-windows-10-version-1903) with [KB4515384](https://support.microsoft.com/servicing/os/windows-10/2019/09/september-10-2019-kb4515384-os-build-18362-356)
+  - [Version 1809 (RS 5)](/windows/whats-new/whats-new-windows-10-version-1809) with [KB4537818](https://support.microsoft.com/servicing/os/windows-10/2020/02/february-25-2020-kb4537818-os-build-17763-1075)
+  - [Version 1803 (RS 4)](/windows/whats-new/whats-new-windows-10-version-1803) with [KB4537795](https://support.microsoft.com/topic/february-25-2020-kb4537795-os-build-17134-1345-36b35e62-d897-2dc3-289c-44a1327c2d8e)
+  - [Version 1709 (RS 3)](/windows/whats-new/whats-new-windows-10-version-1709) with [KB4537816](https://support.microsoft.com/servicing/os/windows-10/2020/02/february-25-2020-kb4537816-os-build-16299-1717)
 
 - Windows Server 2019 - Only applicable for Public preview
-  - Version 1903 or (with [KB4515384](https://support.microsoft.com/help/4515384/windows-10-update-kb4515384)) later
-  - Version 1809 (with [KB4537818](https://support.microsoft.com/help/4537818/windows-10-update-kb4537818))
+  - Version 1903 or (with [KB4515384](https://support.microsoft.com/servicing/os/windows-10/2019/09/september-10-2019-kb4515384-os-build-18362-356)) later
+  - Version 1809 (with [KB4537818](https://support.microsoft.com/servicing/os/windows-10/2020/02/february-25-2020-kb4537818-os-build-17763-1075))
 
 - Windows Server 2022 and later
 
@@ -166,7 +166,7 @@ Here's an example of the response.
 Possible values for each command status are "Created", "Completed", and "Failed".
 
 ```HTTP
-HTTP/1.1 200 Ok
+HTTP/1.1 201 Created
 ```
 
 Content-type: application/json

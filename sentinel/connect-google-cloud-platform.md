@@ -5,8 +5,8 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.date: 07/02/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 #Customer intent: As a security engineer, I want to ingest Google Cloud Platform log data into Microsoft Sentinel so that analysts can monitor and detect potential threats across my multicloud environment.
@@ -17,7 +17,7 @@ ai-usage: ai-assisted
 
 Organizations are increasingly moving to multicloud architectures, whether by design or due to ongoing requirements. A growing number of these organizations use applications and store data on multiple public clouds, including the Google Cloud Platform (GCP).
 
-This article describes how to ingest GCP data into Microsoft Sentinel to get full security coverage and analyze and detect attacks in your multicloud environment. Before you begin, review the [prerequisites](#prerequisites), including required access permissions for both Azure and GCP.
+This article describes how to ingest GCP data into Microsoft Sentinel to get full security coverage and analyze and detect attacks in your multicloud environment. Before you begin, review the [GCP connector prerequisites](#prerequisites), including required access permissions for both Azure and GCP.
 
 With the **GCP Pub/Sub** connectors, based on our [Codeless Connector Framework (CCF)](isv/create-codeless-connector.md?tabs=deploy-via-arm-template%2Cconnect-via-the-azure-portal), you can ingest logs from your GCP environment using the GCP [Pub/Sub capability](https://cloud.google.com/pubsub/docs/overview):
 
@@ -56,7 +56,7 @@ There are two things you need to set up in your GCP environment:
 
 You can set up the environment in one of two ways:
 
-- [Create GCP resources via the Terraform API](?tabs=terraform): Terraform provides APIs for resource creation and for Identity and Access Management (see [Prerequisites](#prerequisites)). Microsoft Sentinel provides Terraform scripts that issue the necessary commands to the APIs.
+- [Create GCP resources via the Terraform API](?tabs=terraform): Terraform provides APIs for resource creation and for Identity and Access Management (see [GCP connector prerequisites](#prerequisites)). Microsoft Sentinel provides Terraform scripts that issue the necessary commands to the APIs.
 
 - [Set up GCP environment manually](?tabs=manual), creating the resources yourself in the GCP console.
 
@@ -72,6 +72,8 @@ You can set up the environment in one of two ways:
 Required for all GCP connectors.
 
 # [Terraform API Setup](#tab/terraform)
+
+Use the following steps to set up GCP authentication resources by using Terraform scripts.
 
 1. Open [GCP Cloud Shell](https://cloud.google.com/shell/).
 
@@ -121,6 +123,8 @@ Create and configure the following items in the Google Cloud Platform [Identity 
 
 #### Create a custom role
 
+Create a custom IAM role for Microsoft Sentinel with the permissions needed to access GCP Pub/Sub resources.
+
 1. Follow the instructions in the Google Cloud documentation to [**create a role**](https://cloud.google.com/iam/docs/creating-custom-roles#creating). Per those instructions, create a custom role from scratch.
 
 1. Name the role so it's recognizable as a Sentinel custom role.
@@ -135,15 +139,19 @@ For more information about creating roles in Google Cloud Platform, see [Create 
 
 #### Create a service account 
 
+Create a service account that Microsoft Sentinel uses to access the configured GCP Pub/Sub resources.
+
 1. Follow the instructions in the Google Cloud documentation to [**create a service account**](https://cloud.google.com/iam/docs/service-accounts-create#creating).
 
 1. Name the service account so it's recognizable as a Sentinel service account.
 
-1. Assign [the role you created in the previous section](#create-a-custom-role) to the service account.  
+1. Assign the custom role you created in [Create a custom role](#create-a-custom-role) to the service account.  
 
 For more information about service accounts in Google Cloud Platform, see [Service accounts overview](https://cloud.google.com/iam/docs/service-account-overview) in the Google Cloud documentation.
 
 #### Create the workload identity pool and provider 
+
+Create a workload identity pool and provider so that Microsoft Sentinel can authenticate to GCP without using long-lived keys.
 
 1. Follow the instructions in the Google Cloud documentation to [**create the workload identity pool and provider**](https://cloud.google.com/iam/docs/workload-identity-federation-with-other-clouds#create_the_workload_identity_pool_and_provider).
 
@@ -169,6 +177,8 @@ For more information about service accounts in Google Cloud Platform, see [Servi
 For more information about workload identity federation in Google Cloud Platform, see [Workload identity federation](https://cloud.google.com/iam/docs/workload-identity-federation) in the Google Cloud documentation.
 
 #### Grant the identity pool access to the service account
+
+Grant the workload identity pool principal permission to impersonate the service account so that Microsoft Sentinel can authenticate to GCP.
 
 1. Locate and select the service account you created earlier.
 
@@ -197,12 +207,14 @@ See [GKE Logs setup](#google-kubernetes-engine-connector-setup) for using the Mi
 
 # [Terraform API Setup](#tab/terraform)
 
+Use the following steps to create the GCP Pub/Sub resources required for audit log collection by using Terraform.
+
 1. Copy the Terraform audit log setup script provided by Microsoft Sentinel from the Sentinel GitHub repository into a different folder in your GCP Cloud Shell environment.
 
     1. Open the Terraform [GCPAuditLogsSetup script](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/GCP/Terraform/sentinel_resources_creation/GCPAuditLogsSetup/GCPAuditLogsSetup.tf) file and copy its contents.
 
        > [!NOTE]
-       > For ingesting GCP data into an **Azure Government cloud**, [use this audit log setup script instead](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/GCP/Terraform/sentinel_resources_creation_gov/GCPAuditLogsSetup/GCPAuditLogsSetup.tf).
+       > For ingesting GCP data into an **Azure Government cloud**, use the [GCPAuditLogsSetup script for Azure Government](https://github.com/Azure/Azure-Sentinel/blob/master/DataConnectors/GCP/Terraform/sentinel_resources_creation_gov/GCPAuditLogsSetup/GCPAuditLogsSetup.tf) instead.
 
     1. Create another directory in your Cloud Shell environment, enter it, and create a new blank file.
         ```bash
@@ -288,7 +300,7 @@ Otherwise, skip to [Set up the GCP Pub/Sub connector in Microsoft Sentinel](#set
 
 The instructions in this section are for using the Microsoft Sentinel **GCP Pub/Sub Security Command Center** connector.
 
-See [the instructions in the previous section](#gcp-audit-logs-setup) for using the Microsoft Sentinel **GCP Pub/Sub Audit Logs** connector.
+See [Set up GCP audit logs](#gcp-audit-logs-setup) for using the Microsoft Sentinel **GCP Pub/Sub Audit Logs** connector.
 
 See [GKE Logs setup](#google-kubernetes-engine-connector-setup) for using the Microsoft Sentinel **Google Kubernetes Engine** connector.
 
@@ -310,6 +322,8 @@ See [GCP Security Command Center setup](#gcp-security-command-center-setup) for 
 See [GCP Audit Logs setup](#gcp-audit-logs-setup) for using the Microsoft Sentinel **GCP Pub/Sub Audit Logs** connector.
 
 # [Terraform API Setup](#tab/terraformgke)
+
+Use the following steps to create the GCP Pub/Sub resources required for GKE log collection by using Terraform.
 
 1. Copy the Terraform audit log setup script provided by Microsoft Sentinel from the Sentinel GitHub repository into a different folder in your GCP Cloud Shell environment.
 
@@ -370,7 +384,7 @@ Perform the following steps to install and connect the GCP Pub/Sub Audit Logs co
 
     :::image type="content" source="media/connect-google-cloud-platform/add-new-collector.png" alt-text="Screenshot of GCP connector configuration" lightbox="media/connect-google-cloud-platform/add-new-collector.png":::
 
-1. In the **Connect new collector** panel, type the resource parameters you created when you [created the GCP resources](#set-up-gcp-environment). 
+1. In the **Connect new collector** panel, type the resource parameters you created when you [set up the GCP environment](#set-up-gcp-environment). 
 
     :::image type="content" source="media/connect-google-cloud-platform/new-collector-dialog.png" alt-text="Screenshot of new collector side panel.":::
 
@@ -396,7 +410,7 @@ Perform the following steps to install and connect the Security Command Center c
 
     :::image type="content" source="media/connect-google-cloud-platform/add-new-collector.png" alt-text="Screenshot of GCP connector configuration." lightbox="media/connect-google-cloud-platform/add-new-collector.png":::
 
-1. In the **Connect new collector** panel, type the resource parameters you created when you [created the GCP resources](#set-up-gcp-environment). 
+1. In the **Connect new collector** panel, type the resource parameters you created when you [set up the GCP environment](#set-up-gcp-environment). 
 
     :::image type="content" source="media/connect-google-cloud-platform/new-collector-dialog.png" alt-text="Screenshot of new collector side panel.":::
 
@@ -422,7 +436,7 @@ Perform the following steps to install and connect the Google Kubernetes Engine 
 
     :::image type="content" source="media/connect-google-cloud-platform/add-new-collector.png" alt-text="Screenshot of GCP connector configuration" lightbox="media/connect-google-cloud-platform/add-new-collector.png":::
 
-1. In the **Connect new collector** panel, type the resource parameters you created when you [created the GCP resources](#set-up-gcp-environment). 
+1. In the **Connect new collector** panel, type the resource parameters you created when you [set up the GCP environment](#set-up-gcp-environment). 
 
     :::image type="content" source="media/connect-google-cloud-platform/new-collector-dialog.png" alt-text="Screenshot of new collector side panel.":::
 
@@ -432,7 +446,9 @@ Perform the following steps to install and connect the Google Kubernetes Engine 
 
 ## Verify that the GCP data is in the Microsoft Sentinel environment 
 
-1. To ensure that the GCP logs were successfully ingested into Microsoft Sentinel, run the following query 30 minutes after you finish [setting up the GCP Pub/Sub connector in Microsoft Sentinel](#set-up-the-gcp-pubsub-connector-in-microsoft-sentinel). 
+Use the following steps to confirm that Microsoft Sentinel is receiving data from GCP.
+
+1. To ensure that the GCP logs were successfully ingested into Microsoft Sentinel, run the following query 30 minutes after you finish the steps in [Set up the GCP Pub/Sub connector in Microsoft Sentinel](#set-up-the-gcp-pubsub-connector-in-microsoft-sentinel). 
 
     # [GCP Audit Logs](#tab/auditlogs)
 
@@ -457,14 +473,14 @@ Perform the following steps to install and connect the Google Kubernetes Engine 
 
     ---
 
-1. Enable the [health feature](enable-monitoring.md) for data connectors. 
+1. Enable the [Microsoft Sentinel health feature](enable-monitoring.md) for data connectors. 
 
 ## Troubleshooting
 
 Use the following guidance to resolve common issues when setting up the GCP Pub/Sub connectors.
 
-1. "Error 409: Requested entity already exists" When running terraform scripts:  import those existing GCP resources into Terraform state so Terraform manages them instead of trying to recreate them.
-For example, with error message: "Error creating WorkloadIdentityPool: googleapi: Error 409: Requested entity already exists", import the existing workload identity pool into Terraform state so Terraform can manage it declaratively. Find the pool ID and project ID, then run:
+1. **"Error 409: Requested entity already exists"** when running Terraform scripts: Terraform state is the file Terraform uses to track the resources it manages. If the resources already exist in GCP, import them into Terraform state so Terraform tracks them instead of trying to recreate them.
+For example, with error message: "Error creating WorkloadIdentityPool: googleapi: Error 409: Requested entity already exists", import the existing workload identity pool into Terraform state so Terraform can manage it declaratively. Find the pool ID and project ID, then use the following command to import the existing workload identity pool into your local Terraform state:
 ```bash
 terraform import google_iam_workload_identity_pool.<POOL_RESOURCE_NAME> projects/<PROJECT_ID>/locations/global/workloadIdentityPools/<POOL_ID>
 ```

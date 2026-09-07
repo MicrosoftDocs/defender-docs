@@ -65,8 +65,9 @@
       items:
         - name: Microsoft Sentinel platform deployment overview
           href: datalake/sentinel-lake-onboarding.md
-        - name: Onboard to data lake and graph from Defender portal
-          href: datalake/sentinel-lake-onboard-defender.md
+          items:
+          - name: Onboard to data lake and graph from Defender portal
+            href: datalake/sentinel-lake-onboard-defender.md
         - name: Onboard to data lake and graph from Microsoft Purview Insider Risk Management
           href: /purview/insider-risk-management-data-risk-graph?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json
         - name: Onboard to data lake and graph from Microsoft Purview Data Security Investigations
@@ -115,10 +116,12 @@
           items:
             - name: Integrate SAP systems
               items:
+                - name: Overview
+                  href: sap/solution-overview.md
                 - name: SAP applications
                   items:
                     - name: Overview
-                      href: sap/solution-overview.md
+                      href: sap/sap-applications-overview.md
                     - name: Deploy the SAP integration
                       items:
                         - name: Deployment overview
@@ -130,38 +133,24 @@
                         - name: Prepare your SAP environment
                           href: sap/preparing-sap.md
                         - name: Connect your SAP system
-                          href: sap/deploy-data-connector-agent-container.md
+                          href: sap/deploy-data-connector-agentless.md
                           displayName: disable, stop ingestion, stop
                         - name: Troubleshoot SAP data connector
                           href: sap/sap-deploy-troubleshoot.md
                         - name: Extra deployment steps
                           items:
+                            - name: Update SAP connector and DCR settings
+                              href: sap/update-sap-connector-data-collection-rule.md
                             - name: Migrate agent to agentless connector
                               href: sap/sap-agent-migrate.md
                             - name: Collect SAP HANA audit logs
                               href: sap/collect-sap-hana-audit-logs.md
-                            - name: Update the data connector agent
-                              href: sap/update-sap-data-connector.md
-                            - name: Deploy the agent from the command line
-                              href: sap/deploy-command-line.md
-                            - name: Deploy the agent with expert options
-                              href: sap/sap-solution-deploy-alternate.md
                         - name: SAP deployment reference (advanced)
                           items:
                             - name: Required ABAP permissions
                               href: sap/required-abap-authorizations.md
-                            - name: Data connector agent kickstart script reference
-                              href: sap/reference-kickstart.md
-                            - name: Data connector agent update script reference
-                              href: sap/reference-update.md
-                            - name: Data connector agent systemconfig.json file reference
-                              href: sap/reference-systemconfig-json.md
-                            - name: Data connector agent systemconfig.ini file reference (legacy)
-                              href: sap/reference-systemconfig.md
                     - name: Enable SAP detections and threat protection
                       href: sap/deployment-solution-configuration.md
-                    - name: Integrate SAP across multiple workspaces
-                      href: sap/cross-workspace.md
                     - name: Monitor SAP systems
                       items:
                         - name: Monitor SAP system health and role
@@ -331,6 +320,8 @@
               href: investigate-with-ueba.md
             - name: Aggregate behavioral insights from raw logs
               href: entity-behaviors-layer.md
+            - name: Investigate anomalies on UEBA behaviors (preview)
+              href: ueba-anomalies-on-behaviors.md
             - name: UEBA data sources and table schemas
               href: ueba-reference.md
         - name: Data classification with entities
@@ -656,7 +647,7 @@
             href: datalake/sentinel-mcp-use-tool-security-copilot.md
           - name: Use Sentinel MCP tools in Copilot Studio
             href: datalake/sentinel-mcp-use-tool-copilot-studio.md
-          - name: Use Sentinel MCP tools in Microsoft Foundry
+          - name: Use Sentinel MCP tools in Microsoft Foundry (preview)
             href: datalake/sentinel-mcp-use-tool-azure-ai-foundry.md
           - name: Use Sentinel MCP tools in Visual Studio Code
             href: datalake/sentinel-mcp-use-tool-visual-studio-code.md
@@ -939,54 +930,87 @@
     - name: Audit Microsoft Sentinel data lake and graph in Microsoft Purview portal
       href: datalake/auditing-lake-activities.md
       displayName: data lake
-    - name: Remove Microsoft Sentinel from your workspaces
-      href: offboard.md
+
 - name: Build and publish Microsoft Sentinel solutions
   items:
-    - name: Overview
-      href: isv/sentinel-integration-guide.md
-    - name: Partner integrations best practices
-      href: isv/partner-integrations.md
-    - name: Sentinel solution quality guidelines
-      href: isv/sentinel-solution-quality-guidance.md
-    - name: Microsoft Sentinel solution setup essentials
-      href: isv/solution-setup-essentials.md      
-    - name: Sentinel SIEM content 
+    - name: Microsoft Sentinel SIEM and platform solution introduction
+      href: isv/sentinel-siem-platform-solution-introduction.md
+    - name: Microsoft Sentinel SIEM solutions
       items:
+      - name: Build and publish Microsoft Sentinel SIEM solutions
+        href: manage-platform-solutions.md
+      - name: Decide what SIEM solutions to build
+        href: isv/siem-components-to-include.md  
+      - name: Microsoft Sentinel SIEM solution quality guidelines
+        href: isv/sentinel-siem-solution-quality-guidance.md
+      - name: Develop a SIEM solution for Microsoft Sentinel
+        href: isv/develop-siem-solutions-overview.md
       - name: Create custom connectors using AI agent in Microsoft Sentinel
         href: isv/create-custom-connector-builder-agent.md
         displayName: custom sentinel connector agent
-      - name: Creating codeless data connectors (CCF)
-        href: isv/create-codeless-connector.md
-      - name: Creating push codeless data connectors (CCF)
+      - name: Pull codeless data connectiors (CCF)
+        items:
+        - name: Create a pull codeless connector for Microsoft Sentinel
+          href: isv/create-codeless-connector.md
+        - name: Create pull codeless data connectors with nested API polling
+          href: isv/custom-connector-nested-api-polling.md
+        - name: Support multiple connections in a codeless connector
+          href: isv/multi-account-ccf-connector.md  
+        - name: Azure Storage Blob data connector reference
+          href: data-connection-rules-reference-azure-storage.md
+          items:
+          - name: Enable network security for Azure Storage Blob data connector
+            href: enable-storage-network-security.md
+          - name: Troubleshoot Azure Storage Blob connector issues
+            href: azure-storage-blob-connector-troubleshoot.md  
+      - name: Create push codeless data connectors (CCF)
         href: isv/create-push-codeless-connector.md
-      - name: Creating analytics rules
+      - name: Create analytics rules
         href: isv/sentinel-analytic-rules-creation.md
-      - name: Creating hunting queries
+      - name: Create hunting queries
         href: isv/sentinel-hunting-rules-creation.md
-      - name: Creating summary rules
+      - name: Create summary rules
         href: isv/sentinel-summary-rules-creation.md
-      - name: Creating workbooks
+      - name: Create workbooks
         href: isv/sentinel-workbook-creation.md
-      - name: Creating playbooks
+      - name: Create playbooks
         href: isv/sentinel-playbook-creation.md
-
-    - name: Publish solutions
-      href: isv/publish-sentinel-solutions.md
-    - name: Sentinel SIEM solution lifecycle post publish
-      href: isv/sentinel-solutions-post-publish-tracking.md
-    - name: Packaging and publishing a Sentinel platform solution
-      href: isv/package-platform-solution.md
-    - name: Managing Platform Solutions
-      href: isv/manage-platform-solutions.md
+      - name: Create Parsers for Microsoft Sentinel Solutions
+        href: isv/sentinel-parsers-creation.md
+      - name: Publish SIEM solutions to Microsoft Sentinel
+        href: isv/publish-sentinel-solutions.md
+      - name: Sentinel SIEM solution lifecycle post publish
+        href: isv/sentinel-solutions-post-publish-tracking.md
+    - name: Microsoft Sentinel Platform content
+      items:
+        - name: Decide what platform solutions to build
+          href: isv/which-platform-components-to-build.md
+        - name: Platform solution quality guidelines
+          href: isv/platform-solution-quality-guidance.md
+        - name: How to onboard to the Microsoft Sentinel data lake
+          href: isv/sentinel-data-lake-onboarding.md 
+        - name: Ingest sample data into data lake
+          href: isv/ingest-sample-data.md
+        - name: Develop Security Copilot agent platform solutions
+          href: isv/build-agent-security-copilot.md
+        - name: Develop custom Graph platform solutions
+          href: isv/develop-custom-graph-platform-solutions.md
+        - name: Develop Notebook platform solutions
+          href: isv/develop-notebook-platform-solutions.md
+        - name: Publish platform solutions overview
+          href: /security/store/partners/publish-a-security-copilot-agent-or-analytics-solution-in-security-store?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json
+        - name: Package and publish notebook and graph solutions
+          href: isv/package-publish-notebook-graph-solutions.md  
+        - name: How to publish a Microsoft Security Copilot agent
+          href: isv/publish-agent-to-security-store.md
     - name: Troubleshoot solutions in Microsoft Sentinel
       href: isv/troubleshoot-sentinel-solutions.md
-    - name: Remove Microsoft Sentinel from your workspace
-      items:
-        - name: Overview
-          href: offboard-implications.md
-        - name: Remove Microsoft Sentinel
-          href: offboard.md
+- name: Remove Microsoft Sentinel from your workspace
+  items:
+    - name: Overview
+      href: offboard-implications.md
+    - name: Remove Microsoft Sentinel
+      href: offboard.md
 - name: Reference
   items:
     - name: Microsoft Sentinel REST-API
@@ -1091,14 +1115,6 @@
           href: data-connector-connection-rules-reference.md
         - name: GCP data connectors API reference
           href: data-connection-rules-reference-gcp.md
-        - name: Azure Storage Blob data connectors
-          items:
-            - name: Azure Storage Blob data connector reference
-              href: data-connection-rules-reference-azure-storage.md
-            - name: Enable network security for Azure Storage Blob data connector
-              href: enable-storage-network-security.md
-            - name: Troubleshoot Azure Storage Blob connector issues
-              href: azure-storage-blob-connector-troubleshoot.md  
         - name: Sample API requests for creating Data Collection Rules (DCRs)
           href: api-dcr-reference.md
         - name: Microsoft Purview Information Protection reference

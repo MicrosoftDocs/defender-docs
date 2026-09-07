@@ -5,8 +5,8 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.date: 07/02/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -27,7 +27,7 @@ Even in a correctly built analytics rule, false positives often stem from specif
 
 Common scenarios include:
 
-- Normal activities by certain users, usually service principals, show a pattern that seems suspicious.
+- Normal activities by certain users, usually service principals (automated identities used by applications and services), show a pattern that seems suspicious.
 - Intentional security scanning activity coming from known IP addresses is detected as malicious.
 - A rule that excludes private IP addresses should also exclude some internal IP addresses that aren't private.
 
@@ -45,7 +45,7 @@ The following table describes characteristics of each method:
 
 ## Add exceptions with automation rules (Azure portal only)
 
-This procedure describes how to [add an automation rule](automate-incident-handling-with-automation-rules.md#creating-and-managing-automation-rules) when you see a false positive incident. This procedure is supported in the Azure portal only.
+The following procedure describes how to [add an automation rule](automate-incident-handling-with-automation-rules.md#creating-and-managing-automation-rules) when you see a false positive incident. This procedure is supported in the Azure portal only.
 
 If Microsoft Sentinel is onboarded to the Defender portal, create automation rules from scratch based on the details of your incident. For more information, see [Automate threat response in Microsoft Sentinel with automation rules](automate-incident-handling-with-automation-rules.md). 
 
@@ -72,15 +72,16 @@ To add an automation rule to handle a false positive:
 
 1. Select **Apply** to activate the exception.
 
-## Add exceptions by modifying analytics rules
+<a name="add-exceptions-by-modifying-analytics-rules"></a>
+## Add exceptions by modifying analytics rule queries
 
-Another option for implementing exceptions is to modify the analytics rule query. You can include exceptions directly in the rule, or preferably, when possible, use a reference to a [watchlist](watchlists-queries.md#create-an-analytics-rule-with-a-watchlist). You can then manage the exception list in the watchlist.
+You can also implement exceptions by modifying the analytics rule query. You can include exceptions directly in the rule, or preferably, when possible, use a reference to a [watchlist](watchlists-queries.md#create-an-analytics-rule-with-a-watchlist). You can then manage the exception list in the watchlist.
 
 ### Modify the query
 
-To edit existing analytics rules, select **Automation** from the Microsoft Sentinel left navigation menu. Select the rule you want to edit, and then select **Edit** at lower right to open the **Analytics Rules Wizard**.
-
 For detailed instructions on using the **Analytics Rules Wizard** to create and edit analytics rules, see [Create custom analytics rules to detect threats](detect-threats-custom.md).
+
+To edit existing analytics rules, select **Automation** from the Microsoft Sentinel left navigation menu. Select the rule you want to edit, and then select **Edit** at lower right to open the **Analytics Rules Wizard**.
 
 To implement an exception in a typical rule preamble, you can add a condition like `where IPAddress !in ('<ip addresses>')` near the beginning of the rule query. This line excludes specific IP addresses from the rule.
 
@@ -148,7 +149,7 @@ You can also do subnet filtering by using a watchlist. For example, in the prece
 let subnets = _GetWatchlist('subnetallowlist');
 ```
 
-See more information on the following items used in the preceding examples, in the Kusto documentation:
+For more information about the Kusto operators and functions used in the exception query examples, see the Kusto documentation:
 - [***let*** statement](/kusto/query/let-statement?view=microsoft-sentinel&preserve-view=true)
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***project*** operator](/kusto/query/project-operator?view=microsoft-sentinel&preserve-view=true)

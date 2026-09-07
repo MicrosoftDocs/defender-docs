@@ -1,11 +1,11 @@
 ---
 title: Create activity policies | Microsoft Defender for Cloud Apps
 description: Create and manage activity policies in Microsoft Defender for Cloud Apps to monitor user actions, automate enforcement, and generate alerts for suspicious activity.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Ronen-Refaeli
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Create Microsoft Defender for Cloud Apps activity policies
@@ -20,7 +20,8 @@ After you set an activity detection policy, it starts to generate alerts - alert
 >  - Policies that trigger more than 200,000 matches per day, or 100,000 matches per 3 hours, may be disabled automatically. You can try refining policies by adding additional filters or, if you're using policies for reporting purposes, consider [saving activity filters as queries](activity-filters-queries.md#activity-queries) instead.
 >   - It may take up to 15 minutes from setting up a new policy to deployment.
 
-## Custom alerts
+<a name="custom-alerts"></a>
+## Create custom alerts for activity policies
 
 Activity policies allow custom alerts to be sent or actions taken when user activity is detected. For example, you want to know every time:
 
@@ -28,7 +29,7 @@ Activity policies allow custom alerts to be sent or actions taken when user acti
 - A user downloads 7,000 files
 - A user is logged in from an unfamiliar country/region
 
-You can set activity alerts to be sent to yourself or to the user when these events occur. You can even suspend the user until you have finished investigating what happened.
+You can set activity alerts to be sent to yourself or to the user when the activities defined in the policy are detected. You can even suspend the affected user until you have finished investigating the activity.
 
 To create a new activity policy, follow this procedure:
 
@@ -80,7 +81,7 @@ Take a look at these examples:
 
 ## Activity policy reference
 
-The following reference describes activity policy types, their components, and the fields that can be configured for each policy.
+This section describes activity policy types, their components, and the fields that can be configured for each policy.
 
 An **Activity policy** is an API-based policy that enables you to monitor your organization's activities in the cloud. The policy takes into account over 20 file metadata filters including device type and location. Based on the policy results, notifications can be generated and users can be suspended from the cloud app.
 Each policy is composed of the following parts:
@@ -94,6 +95,8 @@ Each policy is composed of the following parts:
 - Actions – The policy provides a set of governance actions that can be automatically applied when violations are detected.
 
 ## Next steps
+
+Learn more about related policy types in the following article:
 
 > [!div class="nextstepaction"]
 > [Data protection policies](data-protection-policies.md)

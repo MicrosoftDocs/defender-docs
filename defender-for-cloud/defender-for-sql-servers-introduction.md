@@ -20,7 +20,7 @@ Defender for SQL servers on machines provides the following features:
 
 When you [enable Defender for SQL servers on machines](defender-for-sql-usage.md), all supported resources that exist within the subscription are protected. Future resources created on the same subscription ware also be protected.
 
-Defender for SQL servers on machines allows you to [explore vulnerability assessment reports](defender-for-sql-on-machines-vulnerability-assessment.md#explore-vulnerability-assessment-reports) via scans that occur every 12 hours. The vulnerability assessment reports provide an overview of your SQL machines' security state and details of any security findings. Defender for SQL servers on machines helps you identify and mitigate potential database vulnerabilities, and detect anomalous activities that could indicate threats to your databases.
+Defender for SQL servers on machines allows you to [explore vulnerability assessment reports](defender-for-sql-on-machines-vulnerability-assessment.md#view-vulnerabilities-in-graphical-interactive-reports) via scans that occur every 12 hours. The vulnerability assessment reports provide an overview of your SQL machines' security state and details of any security findings. Defender for SQL servers on machines helps you identify and mitigate potential database vulnerabilities, and detect anomalous activities that could indicate threats to your databases.
 
 You can also [set a baseline](defender-for-sql-on-machines-vulnerability-assessment.md#set-a-baseline) to mark the current state of your SQL servers on machines and compare it to the state of your SQL servers on machines at a later time. This process allows you to track changes in your SQL servers on machines' security state over time.
 

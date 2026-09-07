@@ -12,11 +12,11 @@ ms.collection:
 - mde-edr
 ms.topic: how-to
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - autoir
   - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
@@ -67,7 +67,7 @@ Use an incident details page to view detailed information about an incident, inc
 <a name="investigation-details"></a>
 ## Review investigation details
 
-Use the investigation details view to see past, current, and pending activity pertaining to an investigation. In the investigation details view, you can see information on the **Investigation graph**, **Alerts**, **Devices**, **Identities**, **Key findings**, **Entities**, **Log**, and **Pending actions** tabs, described in the following table.
+Use the investigation details view to see past, current, and pending activity pertaining to an investigation. The following table describes the **Investigation graph**, **Alerts**, **Devices**, **Identities**, **Key findings**, **Entities**, **Log**, and **Pending actions** tabs available in the investigation details view.
 
 > [!NOTE]
 > - The specific tabs you see in an investigation details page depends on what your subscription includes. For example, if your subscription doesn't include Microsoft Defender for Office 365 Plan 2, you won't see a **Mailboxes** tab.

@@ -20,7 +20,7 @@ appliesto:
 # Microsoft Defender for Endpoint on Windows Server with SAP
 
 
-If your organization uses SAP, it's essential to understand the compatibility and support between [antivirus](microsoft-defender-antivirus-on-windows-server.md) and [endpoint detection and response (EDR)](overview-endpoint-detection-response.md) capabilities in Microsoft Defender for Endpoint and your SAP applications. This article helps you understand the support provided by SAP for endpoint protection security solutions like Defender for Endpoint and how they interact with SAP applications.
+If your organization uses SAP, it's essential to understand the compatibility and support between [antivirus](microsoft-defender-antivirus-windows-server-configure.md) and [endpoint detection and response (EDR)](overview-endpoint-detection-response.md) capabilities in Microsoft Defender for Endpoint and your SAP applications. This article helps you understand the support provided by SAP for endpoint protection security solutions like Defender for Endpoint and how they interact with SAP applications.
 
 This article describes how to use Defender for Endpoint on Windows Server alongside SAP applications, such as NetWeaver and S4 Hana, and SAP standalone engines, such as LiveCache. In this article, we focus on antivirus and EDR capabilities in Defender for Endpoint; however, Defender for Endpoint includes additional capabilities. For an overview of all of the Defender for Endpoint capabilities, see [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md).
 
@@ -89,7 +89,7 @@ Here's a list of SAP articles you can use as needed:
 
 1. **Deploy Defender for Endpoint to nonproduction systems first before deploying to production systems**. Deploying Defender for Endpoint directly to production systems without testing is highly risky and can lead to downtime. If you can't delay deploying Defender for Endpoint to your production systems, consider temporarily disabling [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) and [real-time protection](configure-protection-features-microsoft-defender-antivirus.md).
 
-1. **Remember that real-time protection is enabled by default on Windows Server**. If problems are identified that might be related to Defender for Endpoint, it's recommended to [configure exclusions](defender-endpoint-antivirus-exclusions.md) and/or [open a support case](contact-support.md) via the [Microsoft Defender portal](https://security.microsoft.com).
+1. **Remember that real-time protection is enabled by default on Windows Server**. If problems are identified that might be related to Defender for Endpoint, it's recommended to [configure exclusions](defender-endpoint-exclusions-overview.md) and/or [open a support case](contact-support.md) via the [Microsoft Defender portal](https://security.microsoft.com).
 
 1. **Have the SAP Basis team and your security team work together on your Defender for Endpoint deployment**. The two teams need to jointly create a phased deployment, testing, and monitoring plan.
 
@@ -105,7 +105,7 @@ Here's a list of SAP articles you can use as needed:
    - The entire contents of the TRANS directory
    - The entire contents of directories for standalone engines such as TREX
 
-   Advanced users can consider using [contextual file and folder exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md).
+   Advanced users can consider using [contextual file and folder exclusions](microsoft-defender-antivirus-exclusions-overview.md#contextual-exclusions).
 
    For more information about DBMS exclusions, use the following resources:
 
@@ -132,7 +132,7 @@ Here's a list of SAP articles you can use as needed:
 
    1. In the [Microsoft Defender portal](https://security.microsoft.com), go to **Endpoints** > **Configuration management** > **Endpoint security policies**.
    
-   1. Select **Create new Policy**, and follow the guidance. For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](manage-security-policies.md).
+   1. Select **Create new Policy**, and follow the guidance. For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](endpoint-security-policies-configure.md).
 
 1. **Use the latest release of Defender for Endpoint**. Several new features are being implemented in Defender for Endpoint on Windows, and these features were tested with SAP systems. These new features reduce blocking and lower CPU consumption. For more information about new features, see [What's new in Microsoft Defender for Endpoint](whats-new-in-microsoft-defender-endpoint.md).
 
@@ -334,9 +334,9 @@ For more information about this command, see [Get-MpComputerStatus](/powershell/
 
 For more information about exclusions, see the following resources:
 
-- [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)
-- [Configure custom exclusions for Microsoft Defender Antivirus](configure-exclusions-microsoft-defender-antivirus.md)
-- [Contextual file and folder exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md)
+- [Exclusions overview](defender-endpoint-exclusions-overview.md)
+- [Configure custom exclusions for Microsoft Defender Antivirus](microsoft-defender-antivirus-exclusions-configure.md)
+- [Contextual file and folder exclusions](microsoft-defender-antivirus-exclusions-overview.md#contextual-exclusions)
 
 ### Configure EDR exclusions
 
@@ -384,7 +384,7 @@ For more information about cloud-delivered protection, see the following resourc
 ## Related articles
 
 - [Deployment guidance for Microsoft Defender for Endpoint on Linux for SAP](mde-linux-deployment-on-sap.md)
-- [Microsoft Defender Antivirus on Windows Server](microsoft-defender-antivirus-on-windows-server.md)
+- [Microsoft Defender Antivirus on Windows Server](microsoft-defender-antivirus-windows-server-configure.md)
 - [Onboard servers to Microsoft Defender for Endpoint](onboard-server.md)
 - [Overview of endpoint detection and response](overview-endpoint-detection-response.md)
 

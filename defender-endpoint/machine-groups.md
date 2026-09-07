@@ -10,16 +10,18 @@ ms.collection:
 - tier2
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# Create and manage device groups
+# Create and manage device groups in Microsoft Defender for Endpoint
+
+## Overview
 
 > [!NOTE]
 > Device group creation is supported in Defender for Endpoint Plan 1 and Plan 2.  
@@ -28,7 +30,7 @@ In an enterprise scenario, security operation teams are typically assigned a set
 
 In Microsoft Defender for Endpoint, you can create device groups and use them to:
 
-- Limit access to related alerts and data to specific Microsoft Entra user groups with [assigned RBAC roles](rbac.md)
+- Limit access to related alerts and data to specific Microsoft Entra user groups that have [assigned RBAC roles](rbac.md)
 - Configure different auto-remediation settings for different sets of devices
 - Assign specific remediation levels to apply during automated investigations
 - In an investigation, filter the **Devices list** to specific device groups by using the **Group** filter.
@@ -41,7 +43,7 @@ You can create device groups in the context of role-based access (RBAC) to contr
 As part of the process of creating a device group, you'll:
 
 - Set the automated remediation level for that group. For more information on remediation levels, see [Use Automated investigation to investigate and remediate threats](automated-investigations.md).
-- Specify the matching rule that determines which device group belongs to the group based on the device name, domain, tags, and OS platform. If a device is also matched to other groups, it's added only to the highest ranked device group.
+- Specify the matching rule that determines which devices belong to the device group based on the device name, domain, tags, and OS platform. If a device is also matched to other groups, it's added only to the highest ranked device group.
 - Select the Microsoft Entra user group that should have access to the device group.
 - Rank the device group relative to other groups after it's created.
 
@@ -55,6 +57,9 @@ As part of the process of creating a device group, you'll:
 
 > [!NOTE]
 > You can create up to 2,000 device groups per tenant.
+
+> [!IMPORTANT]
+> Before you begin, make sure the Microsoft Entra user groups you want to assign are already configured with [RBAC roles](rbac.md).
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Settings** \> **Endpoints** \> **Permissions** section \> **Device groups**. Or, to go directly to the device groups tab, use <https://security.microsoft.com/securitysettings/endpoints/machine_groups>.
 
@@ -72,14 +77,14 @@ As part of the process of creating a device group, you'll:
 
    Select **Next**
 
-1. On the **Devices** page, configure the matching rule that determines which devices belong to the group. For instructions, see [How the automated investigation starts](automated-investigations.md#how-the-automated-investigation-starts).
+1. On the **Devices** page, configure the matching rule that determines which devices belong to the group. You can define conditions based on device name, domain, tags, and OS platform. Devices that match all specified conditions are added to the group. For information about how matching rules and automated investigations work together, see [How the automated investigation starts](automated-investigations.md#how-the-automated-investigation-starts).
 
    > [!TIP]
    > To use tagging for grouping devices, see [Create and manage device tags](machine-tags.md).
 
    Select **Next**.
 
-1. On the **Preview devices** page, select **Show preview** to show up to 10 devices that match the device rule you configured on the previous page. If you're satisfied with the results, select **Next**.
+1. On the **Preview devices** page, select **Show preview** to show up to 10 devices that match the device rule you configured on the previous page. If you're satisfied with the previewed devices, select **Next**.
 
 1. On the **User access** page, assign the user groups that can access the device group you created.
 
@@ -100,7 +105,7 @@ By default, device groups are accessible to all users with portal access. You ca
 Devices that aren't matched to any groups are added to Ungrouped devices (default) group. You cannot change the rank of this group or delete it. However, you can change the remediation level of this group, and define the Microsoft Entra user groups that can access this group.
 
 > [!NOTE]
-> Applying changes to device group configuration may take up to several minutes.
+> Applying changes to device group configuration may take up to several minutes. In some environments, changes can take several hours to fully propagate. For example, new device groups might not appear as filter options under **Assets** > **Devices** for up to several hours after creation.
 
 ### Add device group definitions
 

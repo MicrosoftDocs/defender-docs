@@ -1,22 +1,22 @@
 ---
 title: Advanced log collector management | Microsoft Defender for Cloud Apps
 description: Configure advanced settings for Defender for Cloud Apps cloud discovery log collectors, including FTP configuration, proxy setup, certificate management, custom ports, and traffic validation.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - sfi-image-nochange
   - sfi-ropc-nochange
 ai-usage: ai-assisted
 ---
 # Advanced log collector management
 
-
+## Configure advanced options for cloud discovery log collectors
 
 This article describes how to configure advanced options for Defender for Cloud Apps cloud discovery log collectors.
 
-Defender for Cloud Apps cloud discovery continues to focus on base firewall formats. Changes to the logs being forwarded at the firewall level may not continue to work, or may cause issues with parsing. If you find errors of this sort, we recommend that you continue to use the base firewall format, or use options with the custom log collector. For more information, see [Use a custom log parser](custom-log-parser.md).
+Defender for Cloud Apps cloud discovery continues to focus on base firewall formats. Changes to the logs being forwarded at the firewall level may not continue to work, or may cause issues with parsing. If you find parsing errors caused by modified firewall log formats, we recommend that you continue to use the base firewall format, or use options with the custom log collector. For more information, see [Use a custom log parser](custom-log-parser.md).
 
 This article describes how to modify the configuration for your Defender for Cloud Apps cloud discovery Docker.
 
@@ -108,7 +108,7 @@ To enable your log collector behind a proxy, [set up the log collector behind a 
 
 Make sure you that you've performed the necessary steps to run Docker on a Windows or Linux machine and have successfully downloaded the Defender for Cloud Apps Docker image onto your host machine.
 
-For more information, see [Configure automatic log upload for continuous reports](discovery-docker.md).
+For setup prerequisites and deployment steps, see [Configure automatic log upload for continuous reports](discovery-docker.md).
 
 ### Validate Docker log collector container creation
 
@@ -196,7 +196,7 @@ The log collector is now able to communicate with Defender for Cloud Apps. After
 >[!NOTE]
 > If you have to update the configuration of the log collector, to add or remove a data source for example, you normally have to **delete** the container and repeat the steps in [Set up the log collector behind a proxy](#set-up-the-log-collector-behind-a-proxy) through [Set the log collector to run with the new configuration](#set-the-log-collector-to-run-with-the-new-configuration). 
 >
-> To avoid this, you can re-run the *collector_config* tool with the new API token generated in the Defender for Cloud Apps.
+> To avoid deleting and recreating the container, you can re-run the *collector_config* tool with the new API token generated in the Defender for Cloud Apps.
 
 ### Change the Java KeyStore password
 
@@ -470,9 +470,9 @@ Use the following steps to verify that traffic is received by log collectors:
 
         1. Install *netcat* and *wget*.
 
-        1. Download a sample log file from Microsoft Defender XDR. If needed, unzip the log file.
+        1. Download a sample log file from the Defender portal. If needed, unzip the log file.
 
-            1. In Microsoft Defender XDR, under **Cloud Apps** select **Cloud Discovery** > **Actions** > **Create Cloud Discovery snapshot report**.
+            1. In the Defender portal, under **Cloud Apps** select **Cloud Discovery** > **Actions** > **Create Cloud Discovery snapshot report**.
 
             1. Select the **Data source** from which you want to upload the log files.
 
@@ -523,7 +523,9 @@ Use the following steps to verify that traffic is received by log collectors:
 
 ### Write output of the *messages* file to a local file
 
-If you want to use your own sample log but don't have access to the appliance, you can capture incoming Syslog messages from a specific data source port to a local file for troubleshooting. Use the following command to continuously tail the *messages* file from the log collector's syslog directory and write the output to a local file on the host:
+If you want to use your own sample log but don't have access to the appliance, you can capture incoming Syslog messages from a specific data source port to a local file for troubleshooting.
+
+Run the following command to stream the collector's Syslog messages for a given data source port into a local file on the host, so you can validate log ingestion or troubleshoot connectivity:
 
 ```bash
 docker exec CustomerLogCollectorName tail -f -q /var/adallom/syslog/<datasource_port>/messages > /tmp/log.log

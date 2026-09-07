@@ -2,7 +2,8 @@
 title: Remediate system updates and patches recommendations
 description: Understand and remediate Defender for Cloud recommendations for missing system updates and patches. This article covers assessment powered by Azure Update Manager and configuration requirements.
 ms.topic: how-to
-ms.date: 06/02/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a <role>, I want to learn how to enable system updates on my servers so that I can keep them secure and healthy.
 ai-usage: ai-assisted
 ---
@@ -26,6 +27,8 @@ These recommendations rely on [Azure Update Manager](/azure/update-manager/overv
 > The older method for update assessment used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) to gather data. Use of the MMA is now deprecated.
 
 ## Prerequisites
+
+Before you verify or remediate system updates, make sure the following prerequisites are met:
 
 - [Defender for Servers Plan 2](defender-for-servers-overview.md) must be enabled.
 - To verify system updates, machines must meet the [Azure Update Manager support requirements](/azure/update-manager/support-matrix).
@@ -56,7 +59,7 @@ To remediate system update recommendations, complete the following steps:
 1. In Defender for Cloud, open the **Recommendations** page.
 1. Select the recommendation `System updates should be installed on your machines (powered by Azure Update Manager)`.
 1. Review the recommendation.
-1. Select the **Fix option** to do a one-time installation of missing updates through the Update Manager portal.
+1. Select **Fix** to install the missing updates. The updates are applied as a one-time fix.
 
     :::image type="content" source="media/enable-periodic-system-updates/fix-updates.png" alt-text="Screenshot that shows where the fix button is located." lightbox="media/enable-periodic-system-updates/fix-updates.png":::
 
@@ -66,9 +69,8 @@ You can remediate recommendations on many machines at the same time.
 
 1. In Defender for Cloud, open the **Recommendations** page.
 1. Select the recommendation `System updates should be installed on your machines (powered by Azure Update Manager)`.
-1. Locate the relevant system update recommendation.
-1. Review the recommendation.
-1. In the recommendation details page, select **View recommendation for all resources**.
+1. Review the update details.
+1. On the details page, select **View recommendation for all resources**.
 
     :::image type="content" source="media/enable-periodic-system-updates/view-recommendations.png" alt-text="Screenshot that shows where the view recommendation for all resources button is located." lightbox="media/enable-periodic-system-updates/view-recommendations.png":::
 
@@ -76,7 +78,8 @@ You can remediate recommendations on many machines at the same time.
 
 1. Select **Fix**.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Use Azure Update Manager to manage updates](/azure/update-manager/overview)

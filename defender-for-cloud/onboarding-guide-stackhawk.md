@@ -1,8 +1,9 @@
 ---
 title: Technical onboarding guide for StackHawk (preview)
 description: Learn how to use StackHawk with Microsoft Defender for Cloud to enhance your application security testing.
-ms.date: 05/28/2026
+ms.date: 07/03/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As an API security engineer, I want to onboard StackHawk with Defender for Cloud so that API security findings are integrated into centralized security operations.
 ai-usage: ai-assisted
 ---
@@ -25,15 +26,16 @@ Developers can [activate a free trial of StackHawk](https://auth.stackhawk.com/s
 
 ## Connect your DevOps environments to Microsoft Defender for Cloud
 
-This feature requires connecting your DevOps environment to Defender for Cloud.
+StackHawk integration with Defender for Cloud requires connecting your DevOps environment to Defender for Cloud.
 
-See [how to onboard your GitHub organizations](quickstart-onboard-github.md).
+See [Onboard GitHub organizations](quickstart-onboard-github.md).
 
-See [how to onboard your Azure DevOps organizations](quickstart-onboard-devops.md).
+See [Onboard Azure DevOps organizations](quickstart-onboard-devops.md).
 
 ## Configure StackHawk API security testing scan
 
-### For GitHub Actions CI/CD environments
+<a name="for-github-actions-cicd-environments"></a>
+### Configure StackHawk scans for GitHub Actions CI/CD environments
 >
 > [!NOTE]
 > This workflow assumes you have GitHub Code Scanning enabled. If enabled, ensure the **upload-to-code-scanning** option is set to **true**. If you don't have GitHub Code Scanning enabled, set **upload-to-code-scanning** to **false** and use the steps in [Enable Defender for Cloud integration without GitHub Code Scanning](#enable-defender-for-cloud-integration-without-github-code-scanning).
@@ -59,7 +61,7 @@ See [how to onboard your Azure DevOps organizations](quickstart-onboard-devops.m
             SARIF_ARTIFACT: true
    ```
 
-   This starts HawkScan on the runner pointed at the app.host defined in the *stackhawk.yml*. Be sure to include `with.env.SARIF_ARTIFACT: true` to get the SARIF output from the scan. The HawkScan action has documented configuration inputs, and the sample workflow at [hawkscan.yml](https://github.com/kaakaww/javaspringvulny/blob/main/.github/workflows/hawkscan.yml#L21-L32) shows it in use.
+   The `stackhawk/hawkscan-action` step starts HawkScan on the runner pointed at the app.host defined in the *stackhawk.yml*. Be sure to include `with.env.SARIF_ARTIFACT: true` to get the SARIF output from the scan. The HawkScan action has documented configuration inputs, and the sample workflow at [sample HawkScan GitHub Actions workflow (hawkscan.yml)](https://github.com/kaakaww/javaspringvulny/blob/main/.github/workflows/hawkscan.yml#L21-L32) shows the HawkScan action in use.
 
 1. You can also follow these steps to add *stackhawk/hawkscan-action* to a new workflow action:
 
@@ -69,7 +71,7 @@ See [how to onboard your Azure DevOps organizations](quickstart-onboard-devops.m
    1. Select **New Workflow**.
    1. Filter by searching for *StackHawk HawkScan* in the search box.
    1. Select **Configure** for the *StackHawk* workflow.
-   1. Modify the sample workflow in the editor. Review the [GitHub Actions documentation](https://docs.stackhawk.com/continuous-integration/github-actions/).
+   1. Modify the sample workflow in the editor. Review the [StackHawk GitHub Actions documentation](https://docs.stackhawk.com/continuous-integration/github-actions/).
    1. Select **Commit changes**. You can either directly commit to the main branch or create a pull request. We recommend following GitHub best practices by creating a PR, as the default workflow launches when a PR is opened against the main branch.
    1. Select **Actions** and verify the new action is running.
    1. After the workflow is completed, select **Security**, then select **Code scanning** to view the results.
@@ -101,13 +103,16 @@ After running the workflow, it might take up to 30 minutes for the results to sh
 
 #### Navigate to Defender for Cloud
 
+To view the imported StackHawk findings in Defender for Cloud, follow these steps:
+
 1. Select **Recommendations**.
 1. Filter by searching for **API security testing**.
 1. Select the recommendation **GitHub repositories should have API security testing findings resolved**.
 
 :::image type="content" source="media/onboarding-guide-stackhawk/github-recommendations-result.png" alt-text="Screenshot of GitHub repositories should have API security testing findings resolved recommendation." lightbox="media/onboarding-guide-stackhawk/github-recommendations-result.png":::
 
-### For Azure Pipelines environments
+<a name="for-azure-pipelines-environments"></a>
+### Configure StackHawk scans for Azure Pipelines environments
 
 1. To use the [StackHawk HawkScan extension](https://marketplace.visualstudio.com/items?itemName=StackHawk.stackhawk-extensions), make sure you're logged into Azure Pipelines (`https://dev.azure.com/{yourorganization}`), and have a [StackHawk account](http://auth.stackhawk.com/signup).
 1. From Azure Pipelines, you can use a defined pipeline with a defined *azure-pipelines.yml* process already in place, or create a new workflow. We scan this Azure DevOps repository for API vulnerabilities as part of the *azure-pipelines.yml* workflow.
@@ -139,11 +144,11 @@ After running the workflow, it might take up to 30 minutes for the results to sh
       SARIF_ARTIFACT: true
    ```
 
-   This installs HawkScan on the runner pointed at the app.host defined in *stackhawk.yml*. Be sure to include `env.SARIF_ARTIFACT: true` on the task specification to get the SARIF output from the scan. The HawkScan action has documented configuration inputs, and the sample pipeline at [azure-pipelines.yml](https://github.com/kaakaww/javaspringvulny/blob/main/azure-pipelines.yml) shows it in use.
+   These tasks install HawkScan on the runner and run it against the app.host defined in *stackhawk.yml*. Be sure to include `env.SARIF_ARTIFACT: true` on the task specification to get the SARIF output from the scan. The HawkScan action has documented configuration inputs, and the sample pipeline at [sample Azure Pipelines YAML file (azure-pipelines.yml)](https://github.com/kaakaww/javaspringvulny/blob/main/azure-pipelines.yml) shows the HawkScan tasks in use.
 
-1. Install the [HawkScan](https://marketplace.visualstudio.com/items?itemName=StackHawk.stackhawk-extensions) extension on your Azure DevOps organization.
+1. Install the [HawkScan Azure DevOps extension](https://marketplace.visualstudio.com/items?itemName=StackHawk.stackhawk-extensions) on your Azure DevOps organization.
 
-   1. Visit the StackHawk website and [sign up for a free trial](https://auth.stackhawk.com/signup).
+   1. Visit the StackHawk website and [sign up for a free StackHawk trial](https://auth.stackhawk.com/signup).
    1. For Windows developers, reference this [sample app for building software on Windows](https://github.com/kaakaww/javaspringvulny/blob/main/azure-pipelines.yml).
    1. Review the [HawkScan and Azure Pipelines documentation](https://docs.stackhawk.com/continuous-integration/azure/azure-pipelines.html).
 
@@ -165,11 +170,14 @@ After running the workflow, it might take up to 30 minutes for the results to sh
 
 ## FAQ
 
+The following answers address common questions about StackHawk.
+
 ### How is StackHawk licensed?
 
 StackHawk is licensed based on the number of code contributors that are provisioned on the platform. For custom pricing, EULA, or a private contract, contact <marketplace-orders@stackhawk.com>.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Review Microsoft Defender for APIs overview](defender-for-apis-introduction.md)

@@ -1,22 +1,23 @@
 ---
 title: Integrate with Microsoft Power Automate for custom alert automation
-description: This article provides information about how to get custom alert automation by integrating Microsoft Power Automate with Defender for Cloud Apps.
-ms.date: 06/16/2026
+description: Integrate Defender for Cloud Apps with Microsoft Power Automate to trigger custom alert automation and orchestration playbooks, such as ticket creation or approval workflows.
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Integrate with Microsoft Power Automate for custom alert automation
 
 
 
-Defender for Cloud Apps integrates with [Microsoft Power Automate](/power-automate/getting-started) to provide custom alert automation and orchestration playbooks. By using the [connectors](/connectors/) available in Power Automate, you can automate the triggering of playbooks when Defender for Cloud Apps generates alerts. For example, automatically create an issue in ticketing systems using [ServiceNow connector](/connectors/service-now/) or send an approval email to execute a custom governance action when an alert is triggered in Defender for Cloud Apps.
+Defender for Cloud Apps integrates with [Microsoft Power Automate](/power-automate/getting-started) to provide custom alert automation and orchestration playbooks. By using the [Power Automate connectors](/connectors/) available in Power Automate, you can automate the triggering of playbooks when Defender for Cloud Apps generates alerts. For example, automatically create an issue in ticketing systems using [ServiceNow connector](/connectors/service-now/) or send an approval email to execute a custom governance action when an alert is triggered in Defender for Cloud Apps. Before you begin, make sure you meet the [prerequisites](#prerequisites).
 
 ## Prerequisites
 
-Before you create playbooks, make sure you meet the following prerequisite:
+Before you create playbooks, make sure you meet the following prerequisites:
 
 - You must have a valid [Microsoft Power Automate plan](https://flow.microsoft.com/pricing/)
+- [Create an API token](api-tokens-legacy.md) in Defender for Cloud Apps.
 
 ## How it works
 
@@ -38,7 +39,7 @@ Perform the following steps to create a Power Automate playbook for Defender for
 
     ![Screenshot of the Power Automate trigger configuration selecting When an alert is generated for Defender for Cloud Apps.](media/flow-when-alert.png)
 
-1. Under **Authentication settings**, paste the Defender for Cloud Apps API token you created earlier. Give your connection a name and select **Create**.
+1. Under **Authentication settings**, paste the Defender for Cloud Apps API token you created in step 1. Give your connection a name and select **Create**.
 
     ![Screenshot of the Power Automate authentication settings where the API token is pasted to create a connection.](media/add-token.png)
 

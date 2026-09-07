@@ -1,10 +1,10 @@
 ---
-title: Create and manage users on an on-premises management console - Microsoft Defender for IoT
+title: Create and Manage Users on an On-premises Management Console
 description: Create and manage users on a Microsoft Defender for IoT on-premises management console.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Create and manage users on an on-premises management console (Legacy)
@@ -13,7 +13,7 @@ ms.custom: msecd-doc-authoring-1014
 
 Microsoft Defender for IoT provides tools for managing on-premises user access in the [OT network sensor](../manage-users-sensor.md), and the on-premises management console. Azure users are managed at the Azure subscription level using Azure RBAC. For more information, see [Manage users and user access](../manage-users-overview.md).
 
-This section describes how to manage on-premises users directly on an on-premises management console.
+This article describes how to create, edit, and delete on-premises users, change passwords, recover privileged access, integrate with Active Directory, define global access permissions, and control session timeouts on an on-premises management console. Each procedure lists the required permissions as prerequisites.
 
 ## Default privileged users
 
@@ -27,9 +27,10 @@ For more information, see [Install OT monitoring software on an on-premises mana
 
 This procedure describes how to create new users for an on-premises management console.
 
-**Prerequisites**: This procedure is available for the *support* and *cyberx* users, and any user with the **Admin** role.
+> [!NOTE]
+> This procedure is available for the *support* and *cyberx* users, and any user with the **Admin** role.
 
-**To add a user**:
+To add a user:
 
 1. Sign in to the on-premises management console and select **Users** > **+ Add user**.
 
@@ -46,30 +47,33 @@ This procedure describes how to create new users for an on-premises management c
     |**Password**     |   Select the user type, either **Local** or **Active Directory User**. <br><br>For local users, enter a password for the user. Password requirements include: <br>- At least eight characters<br>- Both lowercase and uppercase alphabetic characters<br>- At least one number<br>- At least one symbol|
 
     > [!TIP]
-    > Integrating with Active Directory lets you associate groups of users with specific permission levels. If you want to create users using Active Directory, first configure [Active Directory on the on-premises management console](#integrate-users-with-active-directory) and then return to this procedure.
+    > Integrating with Active Directory lets you associate groups of users with specific permission levels. If you want to create users using Active Directory, first configure [Active Directory integration on the on-premises management console](#integrate-users-with-active-directory) and then return to this procedure.
     >
 
 1. Select **Save** when you're done.
 
 Your new user is added and is listed on the on-premises management console **Users** page.
 
-**To edit a user**, select the **Edit** :::image type="icon" source="../media/manage-users-on-premises-management-console/icon-edit.png" border="false"::: button for the user you want to edit, and change any values as needed.
+To edit a user, select the **Edit** :::image type="icon" source="../media/manage-users-on-premises-management-console/icon-edit.png" border="false"::: button for the user you want to edit, and change any values as needed.
+
+**To delete a user**:
 
 > [!WARNING]
 > Deleting a user is irreversible and cannot be undone.
 
-**To delete a user**, select the **Delete**  :::image type="icon" source="../media/manage-users-on-premises-management-console/icon-delete.png" border="false"::: button for the user you want to delete.
+To delete a user, select the **Delete**  :::image type="icon" source="../media/manage-users-on-premises-management-console/icon-delete.png" border="false"::: button for the user you want to delete.
 
 ### Change a user's password
 
-This procedure describes how **Admin** users can change local user passwords. **Admin** users can change passwords for themselves or for other **Security Analyst** or **Read Only** users. [Privileged users](#default-privileged-users) can change their own passwords, and the passwords for **Admin** users.
+The following steps describe how **Admin** users can change local user passwords. **Admin** users can change passwords for themselves or for other **Security Analyst** or **Read Only** users. [Privileged users](#default-privileged-users) can change their own passwords, and the passwords for **Admin** users.
 
 > [!TIP]
 > If you need to recover access to a privileged user account, see [Recover privileged access to an on-premises management console](#recover-privileged-access-to-an-on-premises-management-console).
 
-**Prerequisites**: This procedure is available only for the *support* or *cyberx* users, or for users with the **Admin** role.
+> [!NOTE]
+> This procedure is available only for the *support* or *cyberx* users, or for users with the **Admin** role.
 
-**To reset a user's password on the on-premises management console**:
+To reset a user's password on the on-premises management console:
 
 1. Sign into the on-premises management console and select **Users**.
 
@@ -85,17 +89,18 @@ This procedure describes how **Admin** users can change local user passwords. **
 
 ### Recover privileged access to an on-premises management console
 
-This procedure describes how to recover either the *support* or *cyberx* user password on an on-premises management console. For more information, see [Default privileged on-premises users](../roles-on-premises.md#default-privileged-on-premises-users).
+The following steps describe how to recover either the *support* or *cyberx* user password on an on-premises management console. For more information, see [Default privileged on-premises users](../roles-on-premises.md#default-privileged-on-premises-users).
 
-**Prerequisites**: This procedure is available for the *support* and *cyberx* users only.
+> [!NOTE]
+> This procedure is available for the *support* and *cyberx* users only.
 
-**To recover privileged access to an on-premises management console**:
+To recover privileged access to an on-premises management console:
 
 1. Start signing in to your on-premises management console. On the sign-in screen, under the **Username** and **Password** fields, select **Password recovery**.
 
 1. In the **Password Recovery** dialog, select either **CyberX** or **Support** from the drop-down menu, and copy the unique identifier code that's displayed to the clipboard.
 
-1. Go the Defender for IoT **Sites and sensors** page in the Azure portal. You may want to open the Azure portal in a new browser tab or window, keeping your on-premises management console open.
+1. Go the Defender for IoT **Sites and sensors** page in the Azure portal. You might want to open the Azure portal in a new browser tab or window, keeping your on-premises management console open.
 
     In your Azure portal settings > **Directories + subscriptions**, make sure that you've selected the subscription where your sensors were onboarded to Defender for IoT.
 
@@ -110,7 +115,7 @@ This procedure describes how to recover either the *support* or *cyberx* user pa
 1. Back on the on-premises management console tab, on the **Password recovery** dialog, select **Upload**. Browse to an upload the **password_recovery.zip** file you downloaded from the Azure portal.
 
     > [!NOTE]
-    > If an error message appears, indicating that the file is invalid, you may have had an incorrect subscription selected in your Azure portal settings.
+    > If an error message appears, indicating that the file is invalid, you might have had an incorrect subscription selected in your Azure portal settings.
     >
     > Return to Azure, and select the settings icon in the top toolbar. On the **Directories + subscriptions** page, make sure that you've selected the subscription where your sensors were onboarded to Defender for IoT. Then repeat the steps in Azure to download the **password_recovery.zip** file and upload it on the on-premises management console again.
 
@@ -129,9 +134,10 @@ For example, use Active Directory when you have a large number of users that you
 
 For more information, see [Microsoft Entra ID support on sensors and on-premises management consoles](../manage-users-overview.md#microsoft-entra-id-support-on-sensors).
 
-**Prerequisites**: This procedure is available for the *support* and *cyberx* users only, or any user with an **Admin** role.
+> [!NOTE]
+> This procedure is available for the *support* and *cyberx* users only, or any user with an **Admin** role.
 
-**To integrate with Active Directory**:
+To integrate with Active Directory:
 
 1. Sign in to your on-premises management console and select **System Settings**.
 
@@ -174,9 +180,8 @@ Create *user access groups* to establish global access control across Defender f
 
 For more information, see [On-premises global access groups](../manage-users-overview.md#on-premises-global-access-groups).
 
-**Prerequisites**:
-
-This procedure is available for the *support* and *cyberx* users, and any user with the **Admin** role.
+> [!NOTE]
+> This procedure is available for the *support* and *cyberx* users, and any user with the **Admin** role.
 
 Before you create access groups, we also recommend that you:
 
@@ -190,7 +195,7 @@ Before you create access groups, we also recommend that you:
 
 - Carefully set up your business topology. For a rule to be successfully applied, you must assign sensors to zones in the **Site Management** window. For more information, see [Create OT sites and zones on an on-premises management console](sites-and-zones-on-premises.md).
 
-**To create access groups**:
+To create access groups:
 
 1. Sign in to the on-premises management console as user with an **Admin** role.
 
@@ -216,7 +221,7 @@ Before you create access groups, we also recommend that you:
 
        :::image type="content" source="../media/how-to-define-global-user-access-control/add-access-group.png" alt-text="Screenshot of adding an Active Directory group to a Global Access Group." lightbox="../media/how-to-define-global-user-access-control/add-access-group.png":::
 
-       If the option doesn't appear, and you want to include Active Directory groups in access groups, make sure that you've included your Active Directory group in your Active Directory integration. For more information, see [Integrate on-premises users with Active Directory](#integrate-users-with-active-directory).
+       If the option doesn't appear, and you want to include Active Directory groups in access groups, make sure that you've included your Active Directory group in your Active Directory integration. For more information, see [Integrate users with Active Directory](#integrate-users-with-active-directory).
 
     - Add local users to your groups by editing existing users from the **Users** page. On the **Users** page, select the **Edit** button for the user you want to assign to the group, and then update the **Remote Sites Access Group** value for the selected user. For more information, see [Add new on-premises management console users](#add-new-on-premises-management-console-users).
 
@@ -225,7 +230,7 @@ Before you create access groups, we also recommend that you:
 
 If you later modify a topology entity and the change affects the rule logic, the rule is automatically deleted.
 
-If modifications to topology entities affect rule logic so that all rules are deleted, the access group remains but users won't be able to sign in to the on-premises management console. Instead, users are notified to contact their on-premises management console administrator for help with signing in. [Edit each affected user](#add-new-on-premises-management-console-users) to update their **Remote Sites Access Group** assignment so that they're no longer part of the legacy access group.
+If modifications to topology entities affect rule logic so that all rules are deleted, the access group remains but users won't be able to sign in to the on-premises management console. Instead, users are notified to contact their on-premises management console administrator for help with signing in. Edit each affected user (see [Add new on-premises management console users](#add-new-on-premises-management-console-users)) to update their **Remote Sites Access Group** assignment so that they're no longer part of the legacy access group.
 
 ## Control user session timeouts
 
@@ -235,11 +240,12 @@ For more information, see [Work with Defender for IoT CLI commands](../reference
 > [!NOTE]
 > Any changes made to user session timeouts are reset to defaults when you update the software. For more information, see [Update OT monitoring software](../update-ot-software.md).
 
-**Prerequisites**: This procedure is available for the *support* and *cyberx* users only.
+> [!NOTE]
+> This procedure is available for the *support* and *cyberx* users only.
 
-**To control on-premises management console user session timeouts**:
+To control on-premises management console user session timeouts:
 
-1. Sign in to your sensor via a terminal and run:
+1. Sign in to your on-premises management console via a terminal and run:
 
     ```cli
     sudo nano /var/cyberx/properties/authentication.properties
@@ -262,18 +268,16 @@ For more information, see [Work with Defender for IoT CLI commands](../reference
 
 1. Do one of the following:
 
-    - **To turn off user session timeouts entirely**, change `infinity_session_expiration = true` to `infinity_session_expiration = false`. Change it back to turn it back on again.
+    - To turn off user session timeouts entirely, change `infinity_session_expiration = true` to `infinity_session_expiration = false`. Change it back to turn it back on again.
 
-    - **To adjust an inactivity timeout period**, adjust one of the following values to the required time, in seconds:
+    - To adjust an inactivity timeout period, adjust one of the following values to the required time, in seconds:
 
         - `session_expiration_default_seconds` for all users
         - `session_expiration_admin_seconds` for *Admin* users only
         - `session_expiration_security_analyst_seconds` for *Security Analyst* users only
         - `session_expiration_read_only_users_seconds` for *Read Only* users only
 
-## Next steps
-
-For more information, see:
+## Related content
 
 - [Create and manage users on an OT network sensor](../manage-users-sensor.md)
 - [Audit user activity](../track-user-activity.md)

@@ -1,13 +1,15 @@
 ---
 title: Audit Microsoft Defender for IoT user activity
 description: Learn how to track and audit user activity across Microsoft Defender for IoT.
-ms.date: 12/19/2023
+ms.date: 07/03/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Audit user activity
 
-After you've set up your user access for the [Azure portal](manage-users-portal.md), on your [OT network sensors](manage-users-sensor.md), you'll want to be able to track and audit user activity across all of Microsoft Defender for IoT.
+After you've set up user access in the [Azure portal](manage-users-portal.md) and on your [OT network sensors](manage-users-sensor.md), you can track and audit user activity across Microsoft Defender for IoT.
 
 ## Audit Azure user activity
 
@@ -20,9 +22,9 @@ Use Microsoft Entra user auditing resources to audit Azure user activity across 
 
 Audit and track user activity on a sensor's **Event timeline**. The **Event timeline** displays events that occurred on the sensor, affected devices for each event, and the time and date that the event occurred.
 
-> [!NOTE]
-> This procedure is supported for the default, privileged *admin* users and any user with an **Admin** role.
->
+### Prerequisites
+
+You must be a default, privileged *admin* user or have an **Admin** role on the sensor.
 
 **To use the sensor's Event Timeline**:
 

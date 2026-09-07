@@ -3,21 +3,24 @@ title: Onboard agentless containers for CSPM
 description: Learn how to onboard agentless containers in Defender CSPM.
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Onboard agentless containers for CSPM
 
 Enable agentless container posture in Defender CSPM to gain visibility into Kubernetes clusters and container images without deploying agents.
 
-Agentless container posture is available for Azure, AWS, and GCP environments.
+Agentless container posture is available for Azure, AWS, and GCP environments. This article walks you through enabling agentless container posture in each supported cloud so you can discover running containers, assess vulnerabilities in container registries, and analyze Kubernetes cluster configurations.
 
 ## Prerequisites
 
 - [Defender CSPM plan is enabled for your environment](connect-azure-subscription.md).
 
 ## How to onboard agentless container posture in Defender CSPM
+
+Use the following steps to onboard agentless container posture in Defender CSPM for your cloud environment.
 
 # [Azure](#tab/azure)
 
@@ -100,7 +103,7 @@ Agentless container posture is available for Azure, AWS, and GCP environments.
 1. Select **Update**.
 
 > [!NOTE]
-> Kubernetes API access uses AKS trusted access. For more information about AKS trusted access, see [Enable Azure resources to access Azure Kubernetes Service (AKS) clusters using Trusted Access](/azure/aks/trusted-access-feature).
+> Kubernetes API access uses Azure Kubernetes Service (AKS) trusted access, a feature that lets Azure resources securely access AKS clusters. For more information, see [Enable Azure resources to access Azure Kubernetes Service (AKS) clusters using Trusted Access](/azure/aks/trusted-access-feature).
 
 ---
 

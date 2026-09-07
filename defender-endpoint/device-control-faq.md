@@ -57,7 +57,7 @@ If the policy still isn't working, generate the `C:\ProgramData\Microsoft\Window
 
 ## Why is there no configuration UX for some policy groups?
 
-There's no configuration UX for **Define device control policy groups** and **Define device control policy rules** on your Group Policy. But, you can still get the related `.adml` and `.admx` files from [Administrative Templates (.admx) for Windows 10 2022 Update (22H2)](https://www.microsoft.com/download/details.aspx?id=104677).
+There's no configuration UX for **Define device control policy groups** and **Define device control policy rules** in Group Policy. However, you can configure the policies by using the related `.adml` and `.admx` files. For details, see [Deploy and manage device control by using Group Policy](device-control-deploy-manage-gpo.md).
 
 ## How do I confirm that the latest policy has been deployed to the target machine?
 

@@ -2,16 +2,17 @@
 title: Review security findings in the AKS security dashboard
 description: Learn how to review and investigate alerts, vulnerabilities, misconfigurations, and compliance findings in the AKS security dashboard in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 05/18/2026
+ms.date: 07/03/2026
 ms.service: defender-for-cloud
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Review security findings in the AKS security dashboard
 
 The AKS security dashboard shows security findings for an Azure Kubernetes Service (AKS) cluster in Microsoft Defender for Cloud.
 
-It includes alerts, vulnerabilities, misconfigurations, and compliance results to help you identify and prioritize issues.
+This article explains how to review, investigate, and remediate security alerts, vulnerabilities, misconfigurations, and compliance findings in the dashboard.
 
 ## Prerequisites
 
@@ -24,6 +25,8 @@ To use the AKS Security dashboard, ensure you have:
   - [Defender CSPM](tutorial-enable-cspm-plan.md)
 
 ## Review security findings
+
+Use the following sections to review alerts, vulnerabilities, misconfigurations, and compliance results in the AKS security dashboard.
 
 ## Security alerts
 

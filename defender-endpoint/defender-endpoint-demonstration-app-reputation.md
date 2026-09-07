@@ -73,7 +73,7 @@ This download is known malware; SmartScreen should block this program from runni
 
 ## Learn more
 
-[Microsoft Defender SmartScreen Documentation](/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview)
+[Microsoft Defender SmartScreen Documentation](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/)
 
 ## See also
 

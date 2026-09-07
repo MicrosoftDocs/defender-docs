@@ -4,12 +4,12 @@ description: Launch and run notebooks with the Microsoft Sentinel hunting capabi
 author: EdB-MSFT
 ms.author: edbaynash
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 #Customer intent: As a security analyst, I want to deploy and launch a Jupyter notebook to hunt for security threats.
 
@@ -79,7 +79,7 @@ Use the following steps to create an Azure Machine Learning workspace with a pub
 
 # [Private endpoint](#tab/private-endpoint)
 
-The steps in this private endpoint workspace creation procedure reference specific articles in the Azure Machine Learning documentation when relevant. For more information, see [How to create a secure Azure Machine Learning workspace](/azure/machine-learning/tutorial-create-secure-workspace).
+The following procedure for creating a private-endpoint Azure Machine Learning workspace references specific Azure Machine Learning articles when relevant. For more information, see [How to create a secure Azure Machine Learning workspace](/azure/machine-learning/tutorial-create-secure-workspace).
 
 1. Create a virtual machine (VM) jump box within a virtual network. Since the virtual network restricts access from the public internet, the jump box is used as a way to connect to resources behind the virtual network.
 
@@ -205,7 +205,7 @@ In a notebook:
 - **Markdown** cells have text, including HTML, and static images.
 - **Code** cells contain code. After you select a code cell, run the code in the cell by selecting the **Play** icon to the left of the cell, or by pressing **SHIFT+ENTER**.
 
-For example, run the following code cell in your notebook:
+The following sample code cell demonstrates basic Python operations and shows how code cells run in the notebook environment. Run the following code cell in your notebook:
 
 ```python
 # This is your first code cell. This cell contains basic Python code.
@@ -222,15 +222,15 @@ print("2 + 2 =", y)
 
 ```
 
-The sample code produces this output:
+After you run the sample cell, the notebook displays the following output, confirming that the notebook kernel is working correctly:
 
-```python
+```output
 Congratulations, you just ran this code cell
 
 2 + 2 = 4
 ```
 
-Variables set within a notebook code cell persist between cells, so you can chain cells together. For example, the following code cell uses the value of `y` from the previous cell:
+Variables set within a notebook code cell persist between cells, so you can chain cells together. For example, the following code cell uses the value of `y` from the previous cell. This example also shows how Jupyter automatically displays the result of the last expression in a cell, even if you don't call `print()`:
 
 ```python
 # Note that output from the last line of a cell is automatically
@@ -239,7 +239,7 @@ Variables set within a notebook code cell persist between cells, so you can chai
 y + 2
 ```
 
-The output is:
+The notebook displays the evaluated result of the expression `y + 2` in the output area:
 
 ```output
 6

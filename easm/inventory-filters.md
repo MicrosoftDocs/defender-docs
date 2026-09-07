@@ -5,9 +5,9 @@ description: This article outlines the filter functionality available in Defende
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -39,7 +39,7 @@ You can save queries of interest to quickly access the resulting asset list. Thi
 
 To save a query:
 
-1. First, carefully select the filters to produce the results you want. For more information on the applicable filters for each kind of asset, see [Related content](#related-content). In this example, you're searching for domains that expire within 30 days that require renewal. Select **Search**.
+1. First, carefully select the filters to produce the results you want. For more information on the applicable filters for each kind of asset, see the asset-specific filter articles such as [Domain asset filters](domain-asset-filters.md), [Host asset filters](host-asset-filters.md), and [IP address asset filters](ip-address-asset-filters.md). In this example, you're searching for domains that expire within 30 days that require renewal. Select **Search**.
 
     ![Screenshot of the Inventory page showing where to run a search and access saved queries.](media/saved-filters-1.png)
 
@@ -54,7 +54,8 @@ To save a query:
     ![Screenshot of the Saved queries tab listing existing saved queries with options to open, edit, or delete them.](media/saved-filters-3.png)
 
 <a name="operators"></a>
-## Filter operators
+<a name="filter-operators"></a>
+## Inventory filter operators reference
 
 Inventory filters can be used with the following operators. Some operators aren't available for every filter. Some operators are hidden if they aren't logically applicable to the specific filter.
 
@@ -81,11 +82,13 @@ Inventory filters can be used with the following operators. Some operators aren'
 | `Greater Than or Equal To` | Returns results that are greater than or equal to a numerical value. Includes dates.                                                                                                                                                                               |
 | `Between`                  | Returns results within a numerical range. Includes date ranges.                                                                                                                                                                                                    |
 
-## Common filters
+<a name="common-filters"></a>
+## Common Defender EASM inventory filters
 
-The following common filters apply to all kinds of assets within an inventory. You can use these filters when you search for a wider range of assets. For filters specific to each kind of asset, see [Related content](#related-content).
+The following common filters apply to all kinds of assets within an inventory. You can use these filters when you search for a wider range of assets. For filters specific to each kind of asset, see the asset-specific filter articles such as [ASN asset filters](asn-asset-filters.md), [Domain asset filters](domain-asset-filters.md), [Host asset filters](host-asset-filters.md), and [IP address asset filters](ip-address-asset-filters.md).
 
-### Defined value filters
+<a name="defined-value-filters"></a>
+### Defined-value inventory filters
 
  The following filters provide a dropdown list of options that you can select. The available values are predefined.
 
@@ -101,7 +104,8 @@ The following common filters apply to all kinds of assets within an inventory. Y
 | Updated At             | Filters by the date that asset data was last updated in inventory.                                                         | Date range via calendar dropdown                                                                          |                                                                |
 | Wildcard               | A wildcard DNS record answers DNS requests for subdomains that haven't already been defined. An example is  *.contoso.com. | True, False                                                                                               | `Equals`, `Not Equals`                                         |
 
-### Freeform filters
+<a name="freeform-filters"></a>
+### Freeform inventory filters
 
 The following filters require you to manually enter the value you want to use for your search. Many of these values are case sensitive.  
 
@@ -113,7 +117,7 @@ The following filters require you to manually enter the value you want to use fo
 
 ## Filter for assets outside your approved inventory
 
-Use the following steps to remove the default **Approved** state filter and locate assets in other states, such as **Candidate** or **Requires investigation**.
+To remove the default **Approved** state filter and locate assets in other states, such as **Candidate** or **Requires investigation**, complete this procedure:
 
 1. On the leftmost pane, select **Inventory** to view your inventory.
 

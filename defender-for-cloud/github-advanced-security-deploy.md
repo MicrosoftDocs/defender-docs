@@ -1,8 +1,9 @@
 ---
-title: Deploy GitHub Advanced Security integration
+title: Deploy GitHub Advanced Security integration with Microsoft Defender for Cloud
 description: Use this step-by-step guide to integrate GitHub Advanced Security with Microsoft Defender for Cloud for code-to-runtime security.
-ms.date: 05/28/2026
+ms.date: 07/03/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to deploy and configure GitHub Advanced Security integration with Microsoft Defender for Cloud to protect applications from code to production.
 ai-usage: ai-assisted
 ---
@@ -31,9 +32,11 @@ By following this guide, you:
 
 ## Prepare your environment
 
+Complete the following steps to configure your GitHub repository and Defender for Cloud settings before you validate the integration.
+
 ### Step 1: Set up the GitHub repository and run the workflow
 
-To test the integration, use your own repositories or an [example sandbox project](github-advanced-security-deploy-sandbox.md) that has a test GitHub repository with all the contents to build a vulnerable container image.
+To test the integration, use your own repositories or an [example sandbox project](github-advanced-security-deploy-sandbox.md). The sandbox project provides a test GitHub repository with everything you need to build a vulnerable container image.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 1. Go to **Microsoft Defender for Cloud** > **DevOps security**.
@@ -41,16 +44,17 @@ To test the integration, use your own repositories or an [example sandbox projec
 1. Validate that it belongs to the organization you're monitoring, for example, the **zava-corporation** organization.
 1. Review if there are any findings for the repo.
 1. Ensure **Advanced security status** is **On**. This indicates that GitHub Advanced Security is enabled on the monitored repository.
-1. If your repository isn't found, refer to Microsoft Defender for Cloud documentation for troubleshooting and [GitHub connector onboarding](quickstart-onboard-github.md).
+1. If your repository isn't found, see the [GitHub connector onboarding quickstart](quickstart-onboard-github.md) for troubleshooting and setup guidance.
 1. Make sure that agentless scanning is turned on for your GitHub connector.
 
     :::image type="content" source="media/github-advanced-security-deploy/agentless-scan.png" alt-text="Screenshot of Plan Configuration in Defender CSPM with Agentless code scanning toggled on and all scanner options enabled." lightbox="media/github-advanced-security-deploy/agentless-scan.png":::
 
 ### Step 2: Validate that your environment is ready
 
-Validation confirms that your environment is correctly configured to surface code to runtime recommendations and generate actionable results. During this step, Defender verifies that:
+This environment validation confirms that your repository and cloud resources are set up correctly. It checks that Defender can show code-to-runtime recommendations and produce useful results. During the environment validation step, Defender verifies that:
 
-#### Full code to runtime visibility
+<a name="full-code-to-runtime-visibility"></a>
+#### Validate full code-to-runtime visibility
 
 - Microsoft Defender for Cloud continuously monitors source code repositories for security vulnerabilities.
 - Build artifacts, such as container images, are scanned in container registries before deployment.
@@ -86,7 +90,7 @@ Go to **Microsoft Defender for Cloud** > **Cloud Security Explorer** and perform
 Successful validation ensures that next steps, such as recommendations, campaigns, and GitHub issue generation, produce meaningful results.
 
 > [!NOTE]
-> After you classify your resource as critical, it can take up to 12 hours for Defender for Cloud to send the data to GitHub.  [**Learn more**](https://docs.github.com/en/code-security/securing-your-organization/understanding-your-organizations-exposure-to-vulnerabilities/alerts-in-production-code).
+> After you classify your resource as critical, it can take up to 12 hours for Defender for Cloud to send the data to GitHub.  [Understand alerts in production code](https://docs.github.com/en/code-security/securing-your-organization/understanding-your-organizations-exposure-to-vulnerabilities/alerts-in-production-code).
 
 ### Step 3: Create a GitHub campaign
 
@@ -94,7 +98,7 @@ To create a scanning campaign, you must work at the GitHub organization level. T
 
 1. In GitHub, go to the GitHub organization that you used for the setup testing.
 1. Select **Security** > **Campaigns** > **Create campaign** > **From code scanning filters**.
-1. This campaign helps prioritize GHAS findings that belong to code that is truly deployed and running.
+1. The runtime-risk campaign helps prioritize GitHub Advanced Security (GHAS) findings that belong to code that is truly deployed and running.
 1. Select **Runtime Risks** filters for the campaign.
 
     :::image type="content" source="media/github-advanced-security-deploy/select-filters.png" alt-text="Screenshot of GitHub code scanning campaign creation with a filter bar, Filter button, and a tooltip about filtering by artifact metadata."lightbox="media/github-advanced-security-deploy/select-filters.png":::
@@ -104,7 +108,8 @@ To create a scanning campaign, you must work at the GitHub organization level. T
 1. Track campaign advancement.
     :::image type="content" source="media/github-advanced-security-deploy/test-campaign.png" alt-text="Screenshot of GitHub campaign page showing overdue status, campaign progress bar, critical alerts list, and filter options."lightbox="media/github-advanced-security-deploy/test-campaign.png":::
 
-### Step 4: Recommendations mobilization
+<a name="step-4-recommendations-mobilization"></a>
+### Step 4: Act on recommendations
 
 Use running Containers VA recommendations code-to-runtime functionality and correlation of the identified CVEs to **Dependabot** security alerts to understand the status of security issues. You can then assign the recommendation for resolution to the relevant engineering team based on code-to-runtime mapping.
 
@@ -118,9 +123,9 @@ Use running Containers VA recommendations code-to-runtime functionality and corr
 
 Select the link to open the relevant GHAS security alert. (To view the GHAS alert content in GitHub, you must have access permissions to the relevant GitHub repository. If you don’t have access permissions, you can always copy the link for next usage or contact your GitHub administrator.)
 
-If there's an alert enrichment, there's a matched Dependabot alert that is already known to engineering. If the status is **Active**, no one has fixed it yet, and the issue needs to be prioritized for a fix.
+If the **Related GitHub Alerts** column shows a matched Dependabot alert, the vulnerability is already known to engineering. If the alert status is **Active**, no one has fixed it yet, and the issue needs to be prioritized for a fix.
 
-If there's no finding enrichment, this indicates a runtime risk unknown to engineering that needs to be prioritized for a fix.
+If no matched GitHub alert appears in the column, the CVE represents a runtime risk unknown to engineering that needs to be prioritized for a fix.
 
 What’s next? How would I know who is the relevant team for the fix? How would I know which context can help engineering with the fix?
 
@@ -163,6 +168,8 @@ On the GitHub side, if you have a GitHub Copilot license, you can resolve the is
 1. Observe as Defender for Cloud updates the issue status to **Closed**.
 
 ## Related content
+
+Learn more about GitHub Advanced Security and Defender for Cloud:
 
 - [What is GitHub Advanced Security integration with Microsoft Defender for Cloud?](github-advanced-security-overview.md)
 - [Overview of Microsoft Defender for Cloud DevOps security](defender-for-devops-introduction.md)

@@ -2,8 +2,9 @@
 title: Investigate Defender for Endpoint misconfiguration recommendations (agentless)
 description: Use agentless scanning to identify and investigate Defender for Endpoint configuration issues, such as outdated signatures, disabled antivirus, or overdue scans.
 ms.topic: how-to
-ms.date: 06/02/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a user, I want to learn how to review endpoint detection and response configuration recommendations in order to ensure the security of my virtual machine.
 ---
 
@@ -13,7 +14,7 @@ Defender for Cloud uses agentless scanning with Defender for Endpoint integratio
 
 Microsoft Defender for Cloud integrates with [Microsoft Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) to identify endpoint detection and response configuration issues for machines.
 
-As part of these [integrated capabilities](integration-defender-for-endpoint.md), Defender for Cloud uses agentless scanning to evaluate whether Defender for Endpoint is configured correctly on protected machines. Examples of these checks include:
+As part of the [Defender for Cloud and Defender for Endpoint integration](integration-defender-for-endpoint.md), Defender for Cloud uses agentless scanning to evaluate whether Defender for Endpoint is configured correctly on protected machines. Examples of these checks include:
 
 - `Both full and quick scans are out of 7 days`
 - `Signature out of date`
@@ -72,7 +73,8 @@ To investigate and remediate misconfiguration recommendations for Defender for E
 
 After remediation is complete, it can take up to 24 hours for the machine to appear in the **Healthy resources** tab.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Verify that machines have an EDR solution configured](endpoint-detection-response.md)

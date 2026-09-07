@@ -1,9 +1,9 @@
 ---
 title: Deploy conditional access app control for any web app using PingOne
 description: This article provides information about how to deploy the Microsoft Defender for Cloud Apps conditional access app control for any web app using the PingOne identity provider.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 # Deploy conditional access app control for any web app using PingOne as the identity provider (IdP)
@@ -201,6 +201,10 @@ In Salesforce, browse to **Setup** > **Settings** > **Identity** > **Single Sign
 
 1. Recommended: Create a backup of your current settings.
 1. Replace the **Identity Provider Login URL** field value with the Defender for Cloud Apps SAML single sign-on URL you noted earlier.
+
+    > [!NOTE]
+    > The Defender for Cloud Apps SAML certificate is valid for one year. After it expires, a new certificate will need to be generated.
+
 1. Upload the Defender for Cloud Apps SAML certificate you downloaded earlier.
 1. Replace the **Entity ID** field value with the PingOne custom app Entity ID you noted earlier.
 1. Select **Save**.

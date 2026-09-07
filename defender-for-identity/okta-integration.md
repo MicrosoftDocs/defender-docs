@@ -1,19 +1,19 @@
 ---
 title: Connect Okta to Microsoft Defender for Identity (Preview)
 description: Learn how to connect your Okta app to Defender for Identity using the API connector.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms. reviewer: Himanch
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Connect Okta to Microsoft Defender for Identity (Preview)
 
-This page explains how to connect Microsoft Defender for Identity to your Okta account. Connecting Microsoft Defender for Identity to your Okta account provides visibility into Okta activity and enables shared data collection across Microsoft security products. The connector allows Defender for Identity to collect Okta system logs once and share them with other supported Microsoft security products, such as Microsoft Sentinel. Collecting Okta system logs once and sharing them across supported Microsoft security products reduces API usage, avoids duplicate data collection, and simplifies connector management. Before you begin, make sure you meet the [prerequisites](#prerequisites) for your Okta and Defender for Identity environments.
+This page explains how to connect Microsoft Defender for Identity to your Okta account. Connecting Microsoft Defender for Identity to your Okta account provides visibility into Okta activity and enables shared data collection across Microsoft security products. The connector allows Defender for Identity to collect Okta system logs once and share them with other supported Microsoft security products, such as Microsoft Sentinel. Collecting Okta system logs once and sharing them across supported Microsoft security products reduces API usage, avoids duplicate data collection, and simplifies connector management. Before you begin, make sure your Okta and Defender for Identity environments meet the following prerequisites, including required licenses, roles, and access configurations.
 
 > [!NOTE]
-> If your Okta environment is already integrated with [Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-okta), connecting it to Microsoft Defender for Identity can cause duplicate Okta data, such as user activity, to appear in the Defender portal.
+> If your Okta environment is already integrated with [Protect Okta with Microsoft Defender for Cloud Apps](/defender-cloud-apps/protect-okta), connecting it to Microsoft Defender for Identity can cause duplicate Okta data, such as user activity, to appear in the Defender portal.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ Your Okta environment must have one of the following licenses:
 
 ### Okta roles 
 
-The Super Admin role is required only to create the API token. After you create the token, remove the role and assign the Read-Only Administrator and Defender for Identity custom roles for ongoing API access.
+The Super Admin role is required only to create the API token. After you create the token, remove the Super Admin role and assign the Read-Only Administrator and Defender for Identity custom roles for ongoing API access.
 
 ### Microsoft Entra and Defender XDR role-based access options
 
@@ -113,11 +113,13 @@ Add the required custom user attributes in Okta by completing the following step
 
 ### Create a custom Okta role
 
+Create a custom Okta role named Microsoft Defender for Identity to provide the permissions required for ongoing API access.
+
 > [!NOTE]
 > To support ongoing API access, you must assign both the **Read-Only Administrator role** and the **custom Microsoft Defender for Identity role.** The Read-Only Administrator role and the custom Microsoft Defender for Identity role are mandatory to successfully configure the Okta connector. Configuration fails if either role is missing.
 
 
-After you assign both roles, you can remove the **Super Admin role**. Removing the Super Admin role after assigning both required roles ensures that only relevant permissions are assigned to your Okta account at all times.
+After you assign the Read-Only Administrator role and the custom Microsoft Defender for Identity role, you can remove the **Super Admin role**. Removing the Super Admin role after assigning both required roles ensures that only relevant permissions are assigned to your Okta account at all times.
 
 1. Navigate to **Security > Administrator**.
 1. Select the **Roles** tab.
@@ -158,10 +160,12 @@ To complete the configuration in Okta, assign the custom role and resource set t
 
 1. Assign the Microsoft Defender for Identity resource set to the dedicated Okta account.
 
-1. When you're done, remove the Super Admin role from the account.
+1. After confirming that both the Read-Only Administrator role and the custom Microsoft Defender for Identity role are assigned, remove the Super Admin role from the account.
 
 <a name="connect-okta-to-microsoft-defender-for-identity-1"></a>
 ### Configure the connector in Microsoft Defender Portal
+
+Use the following steps to configure the Okta connector in Microsoft Defender Portal.
 
 1. Navigate to the Microsoft Defender Portal.
 1. Select **System** > **Data management** > **Data connectors** > **Catalog**

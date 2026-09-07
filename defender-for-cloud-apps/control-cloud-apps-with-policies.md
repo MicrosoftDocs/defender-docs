@@ -1,9 +1,9 @@
 ---
 title: Control cloud apps with policies
 description: Learn how Microsoft Defender for Cloud Apps policies help detect risky behavior, policy violations, and suspicious activity, and how to create and manage different policy types for monitoring and remediation.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 # Control cloud apps with policies
@@ -25,14 +25,14 @@ The following types of policies can be created:
 
 |Policy type icon|Policy type|Category|Use|
 |-----|---------|--------|---------|
-|![Icon for the activity policy type in Defender for Cloud Apps.](media/activity-policy.png)|Activity policy|Threat detection|Activity policies allow you to enforce a wide range of automated processes using the app provider's APIs. These policies enable you to monitor specific activities carried out by various users, or follow unexpectedly high rates of a certain type of activity. [Learn more](user-activity-policies.md)|
+|![Icon for the activity policy type in Defender for Cloud Apps.](media/activity-policy.png)|Activity policy|Threat detection|Activity policies allow you to enforce a wide range of automated processes using the app provider's APIs. These policies enable you to monitor specific activities carried out by various users, or follow unexpectedly high rates of a certain type of activity. [Learn about user activity policies](user-activity-policies.md)|
 |![Icon for the anomaly detection policy type in Defender for Cloud Apps.](media/anomaly-detection-policy.png)|Anomaly detection policy|Threat detection|Anomaly detection policies enable you to look for unusual activities on your cloud. Detection is based on the risk factors you set to alert you when something happens that is different from the baseline of your organization or from the user's regular activity. [Learn about anomaly detection policies](anomaly-detection-policy.md)|
 |![Icon for the OAuth app policy type in Defender for Cloud Apps.](media/oauth-policy.png)|OAuth app policy|Threat detection|OAuth app policies enable you to investigate which permissions each OAuth app requested and automatically approve or revoke it. OAuth app policies are built-in policies that come with Defender for Cloud Apps and can't be created. [Learn about app permission policies](app-permission-policy.md)|
 |![Icon for the malware detection policy type in Defender for Cloud Apps.](media/malware-detection-policy.png)|Malware detection policy|Threat detection|Malware detection policies enable you to identify malicious files in your cloud storage and automatically approve or revoke it. Malware detection policy is a built-in policy that comes with Defender for Cloud Apps and can't be created. [Learn about malware detection policies](anomaly-detection-policy.md#malware-detection)|
 |![Icon for the file policy type in Defender for Cloud Apps.](media/file-policy.png)|File policy|Information protection|File policies enable you to scan your cloud apps for specified files or file types (shared, shared with external domains), data (proprietary information, personal data, credit card information, and other types of data) and apply governance actions to the files (governance actions are cloud-app specific). [Learn about data protection policies](data-protection-policies.md) <br/><br/> **File policies retire on January 6, 2027.** [Migrate to Microsoft Purview DLP or auto-labeling policies](migrate-file-policies-to-purview.md).|
 |![Icon for the access policy type in Defender for Cloud Apps.](media/proxy-policy.png)|Access policy|Conditional Access|Access policies provide you with real-time monitoring and control over user logins to your cloud apps. [Learn about access policies](access-policy-aad.md)|
-|![Icon for the session policy type in Defender for Cloud Apps.](media/proxy-policy.png)|Session policy|Conditional Access|Session policies provide you with real-time monitoring and control over user activity in your cloud apps. [Learn more](session-policy-aad.md)|
-|![Icon for the cloud discovery policy type in Defender for Cloud Apps.](media/discovery-policy.png)|App discovery policy|Shadow IT|App discovery policies enable you to set alerts that notify you when new apps are detected within your organization. [Learn more](cloud-discovery-policies.md)|
+|![Icon for the session policy type in Defender for Cloud Apps.](media/proxy-policy.png)|Session policy|Conditional Access|Session policies provide you with real-time monitoring and control over user activity in your cloud apps. [Learn about session policies](session-policy-aad.md)|
+|![Icon for the cloud discovery policy type in Defender for Cloud Apps.](media/discovery-policy.png)|App discovery policy|Shadow IT|App discovery policies enable you to set alerts that notify you when new apps are detected within your organization. [Learn about cloud discovery policies](cloud-discovery-policies.md)|
 
 
 ## Identifying risk
@@ -105,7 +105,7 @@ To create a policy from **Policy templates**, perform the following steps:
 
 Alternatively, you can **create a policy during investigation**. If you're investigating the **Activity log**, **Files**, or **Identities**, and you drill down to search for something specific, at any time you can create a new policy based on the results of your investigation.
 
-For example, you might want to create one if you're looking at the **Activity log**, and see an admin activity from outside your office's IP addresses.
+For example, you might want to create a policy if you're looking at the **Activity log** and see an admin activity from outside your office's IP addresses.
 
 To create a policy based on investigation results, do the following steps:
 
@@ -117,7 +117,7 @@ To create a policy based on investigation results, do the following steps:
 
 1. Use the filters at the top of the page to limit the search results to the suspicious area. For example, in the Activity log page, select **Administrative activity** and select **True**. Then, under **IP address**, select **Category** and set the value to not include IP address categories you've created for your recognized domains, such as your admin, corporate, and VPN IP addresses.
 
-    ![Screenshot of the Activity log with filters applied to narrow investigation results.](media/create-file-from-investigation.png)
+    ![Screenshot of Activity log filtered to administrative activity and untrusted IP categories for investigation.](media/create-file-from-investigation.png)
 
 1. Below the query, select **New policy from search**.
 
@@ -131,7 +131,7 @@ To create a policy based on investigation results, do the following steps:
     > When using the policy filters, **Contains**  searches only for full words – separated by comas, dots, spaces, or underscores. For example if you search for **malware** or **virus**, it finds virus_malware_file.exe but it does not find malwarevirusfile.exe.  
 **Equals** searches only for the complete string, for example if you search for **malware.exe** it finds malware.exe but not malware.exe.txt.
 
-    ![Screenshot of creating an activity policy from an investigation result.](media/create-activity-policy-from-investigation.png)
+    ![Screenshot of the create activity policy page with pre-populated filters from an investigation query.](media/create-activity-policy-from-investigation.png)
 
     > [!NOTE]
     > For more information on setting the policy fields, see the corresponding policy documentation:
@@ -156,15 +156,16 @@ After you create a policy, you can enable or disable it. Disabling avoids the ne
 
 - To enable a policy, in the **Policy** page, select the three dots at the end of the row of the policy you want to enable. Select **Enable**.
 
-    ![Screenshot showing the Enable option in the policy context menu.](media/enable-policy.png)
+    ![Screenshot of the policy context menu with the Enable command.](media/enable-policy.png)
 
 - To disable a policy, in the **Policy** page, select the three dots at the end of the row of the policy you want to disable. Select **Disable**.
 
-    ![Screenshot showing the Disable option in the policy context menu.](media/disable-policy.png)
+    ![Screenshot of the policy context menu with the Disable command.](media/disable-policy.png)
 
 By default, after you create a new policy, it's enabled.
 
-## Policies overview report
+<a name="policies-overview-report"></a>
+## View the Policies overview report
 
 Defender for Cloud Apps lets you export a policies overview report showing aggregated alert metrics per policy to help you monitor, understand, and customize your policies to better protect your organization.
 
@@ -182,7 +183,7 @@ To download the exported report:
 
 1. In the table, select the relevant report, and then select download.
 
-    ![Screenshot showing the download button for exported reports.](media/download-button.png)
+    ![Screenshot of the Exported reports page with the control to download a report.](media/download-button.png)
 
 ## Next steps
 

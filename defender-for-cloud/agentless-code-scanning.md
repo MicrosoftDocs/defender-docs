@@ -3,15 +3,15 @@ title: Configure agentless code scanning (Preview)
 description: Learn how to configure agentless code scanning in Microsoft Defender for Cloud to detect code and dependency risks across Azure DevOps and GitHub repositories.
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/24/2026
-ms.custom: references_regions
+ms.date: 07/03/2026
+ms.custom: references_regions, msecd-doc-authoring-1013
 #customer intent: As a security professional, I want to learn how agentless code scanning in Microsoft Defender for Cloud can help identify vulnerabilities in my code and IaC configurations.
 ai-usage: ai-assisted
 ---
 
 # Configure agentless code scanning (Preview)
 
-Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable security coverage for all repositories in Azure DevOps and GitHub. It automatically scans code, open-source dependencies, and infrastructure-as-code (IaC) to identify vulnerabilities and misconfigurations. You don't need to change build or deployment pipelines. This approach simplifies setup and maintenance with a single Azure DevOps or GitHub connector and provides broad coverage, continuous insights, and actionable security findings. It lets security and development teams focus on fixing risks without interrupting development workflows.
+Agentless code scanning in Microsoft Defender for Cloud offers fast and scalable security coverage for all repositories in Azure DevOps and GitHub. It automatically scans code, open-source dependencies, and infrastructure-as-code (IaC) to identify vulnerabilities and misconfigurations. You don't need to change build or deployment pipelines. Agentless code scanning simplifies setup and maintenance with a single Azure DevOps or GitHub connector and provides broad coverage, continuous insights, and actionable security findings. It lets security and development teams focus on fixing risks without interrupting development workflows.
 
 You can customize which scanners to run and define exactly which organizations, projects, or repositories to include or exclude from scanning.
 
@@ -44,12 +44,12 @@ Before you enable agentless code scanning, make sure you meet the following requ
 
 Agentless code scanning in Microsoft Defender for Cloud provides the following benefits:
 
-- **Proactive risk management**: Identify risks early in the development process. This enables secure coding practices and reduces vulnerabilities before they reach production.  
+- **Proactive risk management**: Identify risks early in the development process. Early risk identification enables secure coding practices and reduces vulnerabilities before they reach production.  
 - **Effortless onboarding**: Set up quickly with minimal configuration and without pipeline changes.  
-- **Enterprise-scale, centralized management**: Automatically scan code across multiple repositories using a single connector. This offers extensive coverage for large environments.  
-- **Rapid insights for quick remediation**: Receive actionable vulnerability insights right after onboarding. This allows quick fixes and reduces exposure time.  
-- **Developer-friendly and seamless**: Operate independently of continuous integration and continuous deployment (CI/CD) pipelines, without changes or direct developer involvement needed. This allows for continuous security monitoring without disrupting developer productivity or workflows.
-- **Flexible coverage and control:** Choose which scanners run and what gets scanned. You can cover everything by default or customize settings to include or exclude specific organizations, projects, or repositories. This allows you to match security coverage to your risk profile and operational needs, without extra complexity.
+- **Enterprise-scale, centralized management**: Automatically scan code across multiple repositories using a single connector. Centralized management offers extensive coverage for large environments.  
+- **Rapid insights for quick remediation**: Receive actionable vulnerability insights right after onboarding, which allows quick fixes and reduces exposure time.  
+- **Developer-friendly and seamless**: Operate independently of continuous integration and continuous deployment (CI/CD) pipelines, without changes or direct developer involvement needed. Operating independently of CI/CD pipelines allows for continuous security monitoring without disrupting developer productivity or workflows.
+- **Flexible coverage and control:** Choose which scanners run and what gets scanned. You can cover everything by default or customize settings to include or exclude specific organizations, projects, or repositories. These customization options allow you to match security coverage to your risk profile and operational needs, without extra complexity.
 - **Software Bill of Materials (SBOM) creation**: Automatically generating an SBOM on every scan gives teams a precise, queryable inventory of dependencies and versions across their repositories, without additional workflow changes. This enables rapid impact analysis, faster response to newly disclosed vulnerabilities, and confident decision-making when assessing exposure to specific packages or versions.
 
 ## Risk detection capabilities
@@ -63,21 +63,22 @@ Agentless code scanning improves security by delivering targeted, actionable rec
 
 Creating the connector enhances security by providing foundational cloud security posture management recommendations for repositories, pipelines, and service connections.
 
-## Scanning tools
+<a name="scanning-tools"></a>
+## Supported scanning tools
 
 Agentless code scanning uses open-source tools to find vulnerabilities and misconfigurations in code and infrastructure-as-code (IaC) templates:
 
 | **Tool** | **Supported IaC/Languages** | **License** |
 | --- | --- | --- |
-| **[Template Analyzer](https://github.com/Azure/template-analyzer)** | ARM IaC templates, Bicep IaC templates | [MIT](https://github.com/Azure/template-analyzer/blob/main/LICENSE.txt) |
-| **[Checkov](https://github.com/bridgecrewio/checkov)** | Terraform IaC templates, Terraform plan files, AWS CloudFormation templates, Kubernetes manifest files, Helm chart files, Dockerfiles, Azure Resource Manager (ARM) IaC templates, Azure Bicep IaC templates, AWS SAM templates (Serverless Application Model), Kustomize files, Serverless framework templates, OpenAPI specification files | [Apache 2.0](https://github.com/bridgecrewio/checkov/blob/main/LICENSE) |
-| **[Bandit](https://github.com/PyCQA/bandit)** | Python | [Apache 2.0](https://github.com/PyCQA/bandit/blob/master/LICENSE) |
-| **[ESLint](https://github.com/eslint/eslint)** | JavaScript, TypeScript, JSX, TSX | [MIT](https://github.com/eslint/eslint/blob/main/LICENSE) |
-| **[Trivy](https://www.github.com/aquasecurity/trivy/)** | Dependency and OS package vulnerability scanning from repository manifests and lockfiles (filesystem mode) | [Apache 2.0](https://github.com/aquasecurity/trivy/blob/main/LICENSE) |
-| **[Syft](https://github.com/anchore/syft/)** | Alpine (apk), Bitnami packages, C (conan), C++ (conan), Dart (pubs), Debian (dpkg), Dotnet (deps.json), Objective-C (cocoapods), Elixir (mix), Erlang (rebar3), Go (go.mod, Go binaries), GitHub (workflows, actions), Haskell (cabal, stack), Java (jar, ear, war, par, sar, nar, rar, native-image), JavaScript (npm, yarn), Jenkins Plugins (jpi, hpi), Linux kernel archives (vmlinuz), Linux kernel modules (ko), Nix (outputs in /nix/store), PHP (composer, PECL, Pear), Python (wheel, egg, poetry, requirements.txt, uv), Red Hat (rpm), Ruby (gem), Rust (cargo.lock, auditable binary), Swift (cocoapods, swift-package-manager), Wordpress plugins, Terraform providers (.terraform.lock.hcl) | [Apache 2.0](https://github.com/anchore/syft/blob/main/LICENSE) |
+| **[Template Analyzer](https://github.com/Azure/template-analyzer)** | ARM IaC templates, Bicep IaC templates | [Template Analyzer MIT license](https://github.com/Azure/template-analyzer/blob/main/LICENSE.txt) |
+| **[Checkov](https://github.com/bridgecrewio/checkov)** | Terraform IaC templates, Terraform plan files, AWS CloudFormation templates, Kubernetes manifest files, Helm chart files, Dockerfiles, Azure Resource Manager (ARM) IaC templates, Azure Bicep IaC templates, AWS SAM templates (Serverless Application Model), Kustomize files, Serverless framework templates, OpenAPI specification files | [Checkov Apache 2.0 license](https://github.com/bridgecrewio/checkov/blob/main/LICENSE) |
+| **[Bandit](https://github.com/PyCQA/bandit)** | Python | [Bandit Apache 2.0 license](https://github.com/PyCQA/bandit/blob/master/LICENSE) |
+| **[ESLint](https://github.com/eslint/eslint)** | JavaScript, TypeScript, JSX, TSX | [ESLint MIT license](https://github.com/eslint/eslint/blob/main/LICENSE) |
+| **[Trivy](https://www.github.com/aquasecurity/trivy/)** | Dependency and OS package vulnerability scanning from repository manifests and lockfiles (filesystem mode) | [Trivy Apache 2.0 license](https://github.com/aquasecurity/trivy/blob/main/LICENSE) |
+| **[Syft](https://github.com/anchore/syft/)** | Alpine (apk), Bitnami packages, C (conan), C++ (conan), Dart (pubs), Debian (dpkg), Dotnet (deps.json), Objective-C (cocoapods), Elixir (mix), Erlang (rebar3), Go (go.mod, Go binaries), GitHub (workflows, actions), Haskell (cabal, stack), Java (jar, ear, war, par, sar, nar, rar, native-image), JavaScript (npm, yarn), Jenkins Plugins (jpi, hpi), Linux kernel archives (vmlinuz), Linux kernel modules (ko), Nix (outputs in /nix/store), PHP (composer, PECL, Pear), Python (wheel, egg, poetry, requirements.txt, uv), Red Hat (rpm), Ruby (gem), Rust (cargo.lock, auditable binary), Swift (cocoapods, swift-package-manager), Wordpress plugins, Terraform providers (.terraform.lock.hcl) | [Syft Apache 2.0 license](https://github.com/anchore/syft/blob/main/LICENSE) |
 
 
-These tools support a wide range of languages and infrastructure-as-code (IaC) frameworks, ensuring thorough security analysis across your codebase.
+The scanning tools listed in the preceding table support a wide range of languages and infrastructure-as-code (IaC) frameworks, ensuring thorough security analysis across your codebase.
 
 ### Supported systems and file types
 
@@ -150,11 +151,12 @@ For both GitHub and Azure DevOps, you can control which scanners run and specify
 
 ## How agentless code scanning works
 
-Agentless code scanning works independently of CI/CD pipelines. It uses the Azure DevOps or GitHub connector to automatically scan code and infrastructure-as-code (IaC) configurations. You don't need to modify pipelines or add extensions. This setup enables broad and continuous security analysis across multiple repositories. Results are processed and shown directly in Microsoft Defender for Cloud.
+Agentless code scanning works independently of CI/CD pipelines. It uses the Azure DevOps or GitHub connector to automatically scan code and infrastructure-as-code (IaC) configurations. You don't need to modify pipelines or add extensions. Using the connector without pipeline modifications enables broad and continuous security analysis across multiple repositories. Results are processed and shown directly in Microsoft Defender for Cloud.
 
 :::image type="content" source="media/agentless-code-scanning/agentless-code-scanning-architecture.png" alt-text="Diagram showing the architecture of agentless code scanning." lightbox="media/agentless-code-scanning/agentless-code-scanning-architecture.png":::
 
-### Scanning process
+<a name="scanning-process"></a>
+### Agentless code scanning process
 
 Once you enable the agentless code scanning feature within a connector, the scanning process includes these steps:
 
@@ -166,7 +168,7 @@ Once you enable the agentless code scanning feature within a connector, the scan
 
 1. **Findings processing**: It processes scan findings through Defender for Cloud’s backend to create actionable security recommendations.
 
-1. **Results delivery**: The system shows findings in Defender for Cloud as security recommendations. For details, see [DevOps security recommendations reference](recommendations-reference-devops.md).
+1. **Results delivery**: The system shows findings in Defender for Cloud as security recommendations. For details about DevOps security recommendations, see [DevOps security recommendations reference](recommendations-reference-devops.md).
 
 ### Scan frequency and duration
 
@@ -182,7 +184,8 @@ Agentless code scanning uses the following schedule:
 
 After the scans finish, you can access security findings within Microsoft Defender for Cloud.
 
-### Access findings
+<a name="access-findings"></a>
+### View agentless code scanning findings
 
 To access findings:
 
@@ -199,7 +202,7 @@ To access findings:
    
 1. For the full range of recommendations supported for both platforms, see [Azure DevOps and GitHub security recommendations](recommendations-reference-devops.md).
 
-   Recommendations include items such as requiring multi-reviewer approvals, restricting secret access, and enforcing best practices for both Azure DevOps and GitHub environments.
+   Azure DevOps and GitHub security recommendations include items such as requiring multi-reviewer approvals, restricting secret access, and enforcing best practices for both Azure DevOps and GitHub environments.
 
    Select any recommendation to view details on affected files, severity, and remediation steps.
 

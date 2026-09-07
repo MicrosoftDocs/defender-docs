@@ -1,7 +1,7 @@
 ---
 title: US Government offerings
 description: This article describes the features differences between Microsoft Defender for Cloud Apps for US Government offerings and the commercial offering.
-ms.date: 04/11/2024
+ms.date: 08/07/2026
 ms.topic: overview
 ---
 # Microsoft Defender for Cloud Apps for US Government offerings
@@ -50,17 +50,11 @@ Microsoft Defender for Cloud Apps for US Government offers parity with the Micro
 
 - App performed drive enumeration
 
-- App redirects to phishing URL by exploiting OAuth redirection vulnerability
-
 - App with bad URL reputation
 
 - App with suspicious OAuth scope made graph calls to read email and created inbox rule
 
-- App impersonating a Microsoft logo
-
-- App is associated with a typosquatted domain
-
-- App metadata associated with known phishing campaign
+- App metadata associated with known phishing campaign
 
 - App metadata associated with previously flagged suspicious apps
 

@@ -4,11 +4,11 @@ ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, oogunrinde
 description: Turn tamper protection on or off for your tenant using the Microsoft Defender portal.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 author: limwainstein
 ms.author: lwainstein
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
   - nextgen
   - admindeeplinkDEFENDER
   - sfi-ga-nochange
@@ -29,7 +29,7 @@ ai-usage: ai-assisted
 
 
 
-[Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. If you're part of your organization's security team, you can turn tamper protection on (or off) tenant wide by using the [Microsoft Defender portal](https://security.microsoft.com).
+This article explains how to turn [tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) on or off tenant wide by using the [Microsoft Defender portal](https://security.microsoft.com). Tamper protection helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. Before you begin, review the [prerequisites](#prerequisites) to ensure your environment meets the requirements.
 
 > [!IMPORTANT]
 > If tamper protection is [deployed and managed through Intune](manage-tamper-protection-intune.md), turning tamper protection on or off in the Microsoft Defender portal doesn't impact the state of tamper protection. Instead, the Microsoft Defender portal restricts tamper-protected settings to their secure default values. For more information, see [What happens when tamper protection is turned on](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on)?
@@ -42,7 +42,7 @@ Before you manage tamper protection in the Microsoft Defender portal, ensure the
 
 - You must have appropriate permissions assigned through roles, such as Security Administrator. See [Microsoft Defender XDR role-based access control (RBAC)](/defender-xdr/manage-rbac).
 
-- Devices must be running certain versions of Windows or macOS. (See [On what devices can tamper protection be enabled](prevent-changes-to-security-settings-with-tamper-protection.md#)
+- Devices must be running certain versions of Windows or macOS. (See [Supported operating systems](prevent-changes-to-security-settings-with-tamper-protection.md#supported-operating-systems).)
 
 - Devices must be [onboarded to Microsoft Defender for Endpoint](onboarding.md).
 
@@ -73,7 +73,8 @@ Use the following steps to turn tamper protection on or off in the Microsoft Def
 
 1. Go to **General** \> **Advanced features**, and then turn tamper protection on.
 
-## Important points to keep in mind
+<a name="important-points-to-keep-in-mind"></a>
+## Considerations for managing tamper protection in the Microsoft Defender portal
 
 - Currently, the option to manage tamper protection in the Microsoft Defender portal is on by default for new deployments, as part of [built-in protection, which helps guard against ransomware](built-in-protection.md). For existing deployments, tamper protection is available on an opt-in basis. To opt in, in the [Microsoft Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139), choose **Settings** \> **Endpoints** \> **Advanced features** \> **Tamper protection**. 
 

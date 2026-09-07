@@ -10,17 +10,17 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # How to configure quarantine permissions and policies
 
-Providing security admins and users with a simple way to manage false positive folders is vital, given the increased demand for a more aggressive security posture with the evolution of hybrid work. Taking a prescriptive approach, admins and users can achieve this with the guidance in this article.
+Providing security admins and users with a simple way to manage false positive folders is vital, given the increased demand for a more aggressive security posture with the evolution of hybrid work. Taking a prescriptive approach, admins and users can manage false positive folders effectively with the guidance in this article.
 
 > [!TIP]
-> For a short video aimed at admins trying to set quarantine permissions and policies, see [Configure quarantine permissions and policies](https://www.youtube.com/watch?v=vnar4HowfpY). If you are an end user opt for this [1 minute overview](https://www.youtube.com/watch?v=s-vozLO43rI) of the process.
+> For a short video aimed at admins trying to set quarantine permissions and policies, see [Configure quarantine permissions and policies](https://www.youtube.com/watch?v=vnar4HowfpY). If you are an end user, see this [overview of quarantine permissions and policies](https://www.youtube.com/watch?v=s-vozLO43rI).
 
 <a name="what-you-need"></a>
 ## Prerequisites
@@ -32,7 +32,7 @@ Before you begin, make sure you have the following:
 
 ## Deciding between built-in or custom quarantine policies
 
-Custom quarantine policies give admins the ability to decide what items their users can triage in the ***False positive*** folder with an extended ability of allowing the user to request the *release* of those items from the folder.
+Custom quarantine policies let admins decide which items users can triage in the ***False positive*** folder. Admins can also allow users to request the *release* of those items from the folder.
 
 1. Decide what verdicts category (bulk, spam, phish, high confidence phish, or malware) of items you want your user to triage and not triage.
 1. For each verdict category that you don't want users to triage, assign messages in that category to the **AdminOnlyPolicy**. As for the category you want users to triage with limited access, you can *create a custom policy* with a request release access and assign users to that verdict category.
@@ -52,12 +52,12 @@ When your security team has decided on which categories of items that users can 
 1. Select each of the following: **Anti-spam policies**, **Anti-phishing policy**, **Anti-Malware policy**.
 1. Select **Create policy** and choose **Inbound**.
 1. Add policy Name, users, groups, or domains to apply the policy to, and **Next**.
-1. In the **Actions** tab, select **Quarantine message** for categories. You notice another panel for *select quarantine policy*. Use the dropdown to select the custom quarantine policy you created in the previous procedure.
+1. In the **Actions** tab, select **Quarantine message** for categories. You notice another panel for *select quarantine policy*. Use the dropdown to select the custom quarantine policy you created in [Deciding between built-in or custom quarantine policies](#deciding-between-built-in-or-custom-quarantine-policies).
 1. Move on to the **Review** section and select the **Confirm** button to create the new policy.
-1. Repeat steps 6–9 for the remaining policies: **Anti-phishing policy**, **Anti-Malware policy**, and **Safe Attachment policy**.
+1. For each remaining policy (**Anti-phishing policy**, **Anti-Malware policy**, and **Safe Attachment policy**), select **Create policy** > **Inbound**, add the policy name and recipients, select **Quarantine message** with your custom quarantine policy in the **Actions** tab, and then select **Confirm** in the **Review** section.
 
 > [!TIP]
-> For more detailed information on what you've learned so far, see:
+> For more detailed information about configuring anti-spam, anti-phishing, and Safe Attachments policies, see:
 >
 > - [Configure spam filter policies](../anti-spam-policies-configure.md)
 > - [Configure anti-phishing policies if you don't have Microsoft Defender for Office 365](../anti-phishing-policies-eop-configure.md)
@@ -66,10 +66,10 @@ When your security team has decided on which categories of items that users can 
 
 ## Next Steps
 
-To complete the configuration, apply the following settings:
+To finish setup, apply these settings:
 
-- Use **Global policy** available in quarantine policy to enable your organization branding logo, display name, and disclaimer.
-- Also set the **User frequency to 1 day** for the quarantine notification.
+- In quarantine policy, open **Global policy**. Turn on your branding logo, display name, and disclaimer.
+- Set **User frequency to 1 day** for quarantine notices.
 
 <a name="more-information"></a>
 ## Related content

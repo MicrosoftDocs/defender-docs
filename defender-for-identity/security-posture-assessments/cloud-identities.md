@@ -1,126 +1,290 @@
 ---
-title: 'Security assessments for cloud identities'
-description: Microsoft Defender for Identity security posture assessment on Okta. In this assessment, we recommend customers review their cloud identities for potential security risks.
+title: 'Cloud identity assessments in Microsoft Defender for Identity'
+description: Learn how Microsoft Defender for Identity assesses cloud identities in Okta, CyberArk Identity, and SailPoint Identity Security Cloud for security risks.
 ms.service: microsoft-defender-for-identity
 ms.topic: article
 # ms.prod:   microsoft-defender-for-identity
-ms.date: 07/14/2025
+ms.date: 07/30/2026
 ms.reviewer: Himanch
+ms.custom: msecd-doc-authoring-1015
+ai-usage: ai-assisted
+#customer intent: As a security admin, I want to review security assessments for cloud identities so that I can reduce risks in connected identity platforms.
 ---
 
-# Security assessments for cloud identities
+# Microsoft Defender for Identity security assessments for cloud identities
 
-This article describes the various security assessments available in Microsoft Defender for Identity related to cloud identities, specifically Okta. Each assessment highlights potential security risks and provides recommendations for mitigating these risks.
+Microsoft Defender for Identity provides security assessments for cloud identities in Okta, CyberArk Identity, and SailPoint Identity Security Cloud. Use these assessments to identify potential security risks and review recommended remediation actions.
 
 ## Prerequisites
 
-To use these security assessments, you must first connect your Okta instance in the Microsoft Defender portal.  
-For setup instructions, see [Connect your Okta instance](/defender-for-identity/okta-integration#connect-okta-to-defender-for-identity).
+Before you use these security assessments, connect your Okta, CyberArk Identity, or SailPoint Identity Security Cloud instance in the Microsoft Defender portal.
+
+For setup instructions, see:
+
+- [Connect your Okta instance](/defender-for-identity/okta-integration#connect-okta-to-defender-for-identity)
+- [Connect your CyberArk Identity instance](/defender-for-identity/connect-cyber-ark)
+- [Connect your SailPoint Identity Security Cloud instance](/defender-for-identity/connect-sail-point)
 
 ## Assign multifactor authentication to Okta privileged user accounts
 
-**Description**
+**Description**:
 
-This report lists any Okta privileged accounts that don't have any multifactor authentication (MFA) methods assigned. 
+This assessment identifies Okta privileged accounts that don't have a multifactor authentication (MFA) method assigned.
 
-All privileged accounts should have multifactor authentication (MFA) enabled to strengthen security. By ensuring that privileged accounts such as Super Admin or Org Admin roles are secured with MFA, organizations can significantly reduce the risk of unauthorized access from compromised credentials. This strategy helps prevent attackers from gaining elevated access, safeguarding sensitive resources and protecting critical administrative functions from abuse.
+Enable MFA for all privileged accounts to reduce the risk of unauthorized access from compromised credentials. Securing accounts with roles such as Super Admin or Org Admin helps prevent attackers from gaining elevated access to sensitive resources and critical administrative functions.
 
+**Implementation**:
 
-**Implementation**
+To address this assessment, take the following actions:
 
-
-1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for the "Assign multifactor authentication for Okta privileged user accounts" security assessment.
-1. Review the list of exposed entities to discover which of your Okta privileged user accounts don't have any MFA method assigned.
-1. Assign and enforce a multifactor authentication (MFA) method to the privileged accounts.
-
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "Assign multifactor authentication for Okta privileged user accounts" security assessment.
+1. Review the exposed entities to identify Okta privileged user accounts that don't have an MFA method assigned.
+1. Assign and enforce an MFA method for the privileged accounts.
 
 ## Change password for Okta privileged User accounts
 
-**Description**
+**Description**:
 
-This recommendation lists any Okta privileged accounts that use outdated passwords that were last set over 180 days ago.  
+This assessment identifies Okta privileged accounts with passwords that were last set more than 180 days ago.
 
-**Impact**
+**Impact**:
 
-Privileged accounts with old passwords create a significant security risk, as older credentials are more likely to be exposed through data breaches or other attack vectors. Enforcing regular password updates for privileged accounts reduces the likelihood of unauthorized access and strengthens overall security. Applying stringent password policies to accounts with elevated privileges protects sensitive resources and lowers the risk of exploitation.
+Old passwords for privileged accounts increase the risk of unauthorized access because the credentials might have been exposed in a data breach or by another attack method. Regularly updating passwords for privileged accounts helps protect sensitive resources.
 
-**Implementation**
+**Implementation**:
 
+To address this assessment, take the following actions:
 
-1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for the "Change password for Okta privileged User accounts" security assessment.
-1. Review the list of exposed entities to discover which of your Okta privileged user accounts have an old password.
-1. Take appropriate action on those accounts by resetting their password. 
-
-
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "Change password for Okta privileged User accounts" security assessment.
+1. Review the exposed entities to identify Okta privileged user accounts with old passwords.
+1. Reset the passwords for those accounts.
 
 ## High number of Okta accounts with privileged role assigned
 
+**Description**:
 
-This article describes the security risks associated with having a high number of Okta accounts with privileged roles assigned and provides recommendations for mitigating these risks.
+This assessment identifies Okta accounts assigned administrator roles, excluding Super Administrator, when more than 25 accounts have these roles.
 
-**Description**
+**User impact**:
 
-This report lists Okta accounts with administrator roles - excluding Super Administrator, where the number of accounts assigned to these roles is greater than 25.  
+Many users with privileged roles increase the risk of misuse or unauthorized access to critical systems. Reducing the number of users assigned roles such as Super Admin or Org Admin limits access to sensitive resources and reduces the attack surface.
 
-**User impact**
+**Implementation**:
 
-A high number of users with privileged roles increases the risk of misuse or unauthorized access to critical systems. By reducing the number of users assigned to roles such as Super Admin or Org Admin, organizations can better limit access to sensitive resources and reduce the attack surface. Maintaining a smaller, set of privileged accounts ensures more effective governance and minimizes potential security vulnerabilities.
+To address this assessment, take the following actions:
 
-**Implementation**
-
-
-1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for the "High number of Okta accounts with privileged role assigned" security assessment.
-1. Review the list of exposed entities to discover which of your Okta accounts have privileged roles assigned.
-1. Reduce the number of users assigned to administrator roles (other than Super-Admin) to the minimum necessary to ensure better control and align with least privilege best practices. 
-
-
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "High number of Okta accounts with privileged role assigned" security assessment.
+1. Review the exposed entities to identify Okta accounts with privileged roles.
+1. Reduce the number of users assigned administrator roles, other than Super Administrator, to the minimum needed to follow the principle of least privilege.
 
 ## Highly privileged Okta API token
 
-**Description**
+**Description**:
 
-Okta’s API tokens inherit the permissions of the user who creates them. If a user with sensitive permissions generates an API token, it carries those permissions. Any API token created by a Super Admin has the same level of access as the Super Admin account. This can expose sensitive data and functionality to unauthorized users. If the token is stolen, it can grant the attacker access equivalent to the original user.
+Okta API tokens inherit the permissions of the user who creates them. An API token created by a Super Admin has the same access as the Super Admin account. A stolen highly privileged token can give an attacker access to sensitive data and features.
 
-**Implementation**
+**Implementation**:
 
+To address this assessment, take the following actions:
 
-1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for the "Highly privileged Okta API token" security assessment.
-1. Review the list of exposed entities to discover which of your Okta API tokens are highly privileged.
-1. If the API token is no longer required, delete it to eliminate unnecessary exposure.
-
-
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "Highly privileged Okta API token" security assessment.
+1. Review the exposed entities to identify highly privileged Okta API tokens.
+1. Delete API tokens that are no longer needed.
 
 ## Limit the number of Okta Super Admin accounts
 
-**Description**
+**Description**:
 
-This report lists Okta accounts with Super Administrator role, where the number of users assigned to this role is greater than 5.
+This assessment identifies Okta accounts with the Super Administrator role when more than five users have this role.
 
-**User impact**
+**User impact**:
 
-A high number of users with privileged roles increases the risk of misuse or unauthorized access to critical systems. By reducing the number of users assigned to roles such as Super Admin or Org Admin, organizations can better limit access to sensitive resources and reduce the attack surface. Maintaining a smaller, set of privileged accounts ensures more effective governance and minimizes potential security vulnerabilities.
+Many users with the Super Administrator role increase the risk of misuse or unauthorized access to critical systems. Reducing the number of users with this role limits access to sensitive resources and reduces the attack surface.
 
-**Implementation**
+**Implementation**:
 
-1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for the "Limit the number of Okta Super Admin accounts" security assessment.
-1. Review the list of exposed entities to discover which of your Okta accounts have Super Admin role assigned.
-1. Limit Super Administrator access to the minimum number of users necessary to maintain control over highest level of privileged access.
+To address this assessment, take the following actions:
 
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "Limit the number of Okta Super Admin accounts" security assessment.
+1. Review the exposed entities to identify Okta accounts with the Super Administrator role.
+1. Limit Super Administrator access to the minimum number of users needed to manage the highest level of privileged access.
 
+## Remove dormant Okta privileged accounts
 
-##  Remove dormant Okta privileged accounts
+**Description**:
 
-**Description**
+This assessment identifies Okta privileged accounts that haven't been used in the last 90 days.
 
-This assessment describes the security risks associated with dormant Okta privileged accounts and provides recommendations for mitigating these risks.
+**User impact**:
 
-**User impact**
+Dormant privileged accounts can become targets for undetected unauthorized access or misuse. Deactivating or removing unused privileged accounts helps ensure that only active, monitored users have critical administrative access.
 
-Dormant privileged accounts represent a significant security risk, as they can become targets for unauthorized access or misuse without detection. Deactivating or removing unused privileged accounts ensures that only active, monitored users have access to critical administrative capabilities.
+**Implementation**:
 
-**Implementation**
+To address this assessment, take the following actions:
 
-1. Review the recommended action at [https://security.microsoft.com/securescore?viewid=actions](https://security.microsoft.com/securescore?viewid=actions) for the "Remove dormant Okta privileged accounts" security assessment.
-1. Review the list of exposed entities to identify Okta privileged user accounts not used in the last 90 days. This inactivity indicates that the account might be a dormant account or no longer needed.
-1. If the account is no longer required, deactivate or remove it to eliminate unnecessary exposure.
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "Remove dormant Okta privileged accounts" security assessment.
+1. Review the exposed entities to identify Okta privileged user accounts that haven't been used in the last 90 days.
+1. Deactivate or remove accounts that are no longer needed.
 
+## Change password for CyberArk Identity privileged user accounts
+
+**Description**:
+
+This assessment identifies CyberArk Identity privileged accounts with passwords that were last set more than 180 days ago.
+
+**Impact**:
+
+Old passwords for privileged accounts increase the risk of unauthorized access because the credentials might have been exposed in a data breach or by another attack method. Regularly updating passwords for privileged accounts helps protect sensitive resources.
+
+**Implementation**:
+
+To address this assessment, take the following actions:
+
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "Change password for CyberArk Identity privileged user accounts" security assessment.
+1. Review the exposed entities to identify CyberArk Identity privileged user accounts with old passwords.
+1. Reset the passwords for those accounts.
+
+## Remove stale CyberArk Identity privileged accounts
+
+**Description**:
+
+This assessment identifies CyberArk Identity privileged accounts that are inactive or haven't been used for an extended period.
+
+**Impact**:
+
+Stale privileged accounts retain elevated access without active oversight. Removing or deactivating unused privileged accounts reduces the attack surface and helps maintain least-privilege access.
+
+**Implementation**:
+
+To address this assessment, take the following actions:
+
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "Remove stale CyberArk Identity privileged accounts" security assessment.
+1. Review the exposed entities to identify inactive CyberArk Identity privileged accounts.
+1. Remove or deactivate stale privileged accounts that are no longer needed.
+
+## Limit the number of CyberArk Identity accounts with system admin role
+
+**Description**:
+
+This assessment identifies CyberArk Identity accounts with the system admin role.
+
+**Impact**:
+
+Many system admin accounts increase the risk of unauthorized access and misuse of privileged permissions. Limiting the number of accounts with this role strengthens governance and reduces the attack surface.
+
+**Implementation**:
+
+To address this assessment, take the following actions:
+
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "Limit the number of CyberArk Identity accounts with system admin role" security assessment.
+1. Review the exposed entities to identify CyberArk Identity accounts with the system admin role.
+1. Remove unnecessary system admin role assignments and keep the number of accounts to the minimum needed.
+
+## High number of CyberArk Identity accounts with a privileged role assigned
+
+**Description**:
+
+This assessment identifies CyberArk Identity accounts with one or more privileged roles when the number of accounts exceeds the recommended threshold.
+
+**Impact**:
+
+Too many accounts with privileged roles increase the risk of misuse or unauthorized access to critical systems. Reducing the number of accounts with elevated privileges supports the principle of least privilege and improves security posture.
+
+**Implementation**:
+
+To address this assessment, take the following actions:
+
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "High number of CyberArk Identity accounts with a privileged role assigned" security assessment.
+1. Review the exposed entities to identify CyberArk Identity accounts with privileged roles.
+1. Reduce the number of privileged role assignments to the minimum necessary.
+
+## Change password for SailPoint Identity Security Cloud privileged user accounts
+
+**Description**:
+
+This assessment identifies SailPoint Identity Security Cloud privileged accounts with passwords that were last set more than 180 days ago.
+
+**Impact**:
+
+Old passwords for privileged accounts increase the risk of unauthorized access because the credentials might have been exposed in a data breach or by another attack method. Regularly updating passwords for privileged accounts helps protect sensitive resources.
+
+**Implementation**:
+
+To address this assessment, take the following actions:
+
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "Change password for SailPoint Identity Security Cloud privileged user accounts" security assessment.
+1. Review the exposed entities to identify SailPoint Identity Security Cloud privileged user accounts with old passwords.
+1. Reset the passwords for those accounts.
+
+## Remove stale SailPoint Identity Security Cloud privileged accounts
+
+**Description**:
+
+This assessment identifies SailPoint Identity Security Cloud privileged accounts that are inactive or haven't been used for an extended period.
+
+**Impact**:
+
+Stale privileged accounts retain elevated access without active oversight. Removing or deactivating unused privileged accounts reduces the attack surface and helps maintain least-privilege access.
+
+**Implementation**:
+
+To address this assessment, take the following actions:
+
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "Remove stale SailPoint Identity Security Cloud privileged accounts" security assessment.
+1. Review the exposed entities to identify inactive SailPoint Identity Security Cloud privileged accounts.
+1. Remove or deactivate stale privileged accounts that are no longer needed.
+
+## Limit the number of SailPoint Identity Security Cloud accounts with system admin role
+
+**Description**:
+
+This assessment identifies SailPoint Identity Security Cloud accounts with the system admin role.
+
+**Impact**:
+
+Many system admin accounts increase the risk of unauthorized access and misuse of privileged permissions. Limiting the number of accounts with this role strengthens governance and reduces the attack surface.
+
+**Implementation**:
+
+To address this assessment, take the following actions:
+
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "Limit the number of SailPoint Identity Security Cloud accounts with system admin role" security assessment.
+1. Review the exposed entities to identify SailPoint Identity Security Cloud accounts with the system admin role.
+1. Remove unnecessary system admin role assignments and keep the number of accounts to the minimum needed.
+
+## High number of SailPoint Identity Security Cloud accounts with a privileged role assigned
+
+**Description**:
+
+This assessment identifies SailPoint Identity Security Cloud accounts with one or more privileged roles when the number of accounts exceeds the recommended threshold.
+
+**Impact**:
+
+Too many accounts with privileged roles increase the risk of misuse or unauthorized access to critical systems. Reducing the number of accounts with elevated privileges supports the principle of least privilege and improves security posture.
+
+**Implementation**:
+
+To address this assessment, take the following actions:
+
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "High number of SailPoint Identity Security Cloud accounts with a privileged role assigned" security assessment.
+1. Review the exposed entities to identify SailPoint Identity Security Cloud accounts with privileged roles.
+1. Reduce the number of privileged role assignments to the minimum necessary.
+
+## Assign multifactor authentication for SailPoint privileged user accounts
+
+**Description**:
+
+This assessment identifies SailPoint Identity Security Cloud privileged accounts that don't have an MFA method assigned.
+
+**Impact**:
+
+Enable MFA for all privileged accounts to reduce the risk of unauthorized access from compromised credentials.
+
+**Implementation**:
+
+To address this assessment, take the following actions:
+
+1. On the **Recommended actions** page in Microsoft Secure Score at <https://security.microsoft.com/securescore?viewid=actions>, select the "Assign multifactor authentication for SailPoint privileged user accounts" security assessment.
+1. Review the exposed entities to identify SailPoint Identity Security Cloud privileged user accounts that don't have an MFA method assigned.
+1. Assign and enforce an MFA method for those privileged accounts.

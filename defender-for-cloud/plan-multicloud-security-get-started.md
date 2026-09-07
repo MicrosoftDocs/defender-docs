@@ -2,28 +2,32 @@
 title: Start to Plan Multicloud Protection in Microsoft Defender for Cloud
 description: Learn about designing a solution for securing and protecting your multicloud environment with Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 06/11/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Start to plan multicloud protection
 
+## Introduction to multicloud security design with Defender for Cloud
+
 This article introduces guidance to help you design a solution for securing and protecting a multicloud environment with Microsoft Defender for Cloud. The guidance can be used by cloud solution and infrastructure architects, security architects and analysts, and anyone else involved in designing a multicloud security solution.
 
-As you capture your functional and technical requirements, the articles provide an overview of multicloud capabilities, planning guidance, and prerequisites.
+As you capture your functional and technical requirements, the articles in this guide provide an overview of multicloud capabilities, planning guidance, and prerequisites.
 
-Follow the guides in order. They build on each other to help you make design decisions. We recommend that you reread the articles as needed, to understand and incorporate all considerations.
+Follow the multicloud security planning guides in order. The guides build on each other to help you make design decisions. We recommend that you reread the articles in this guide as needed, to understand and incorporate all considerations.
 
 ## What should I get from this guide?
 
-Use this guide as an aid as you design Cloud Security Posture Management (CSPM) and Cloud Workload Protection Platform (CWPP) solutions across multicloud environments. After reading the articles you should have answers to the following:
+Use this guide as an aid as you design Cloud Security Posture Management (CSPM) solutions for identifying and remediating security misconfigurations, and Cloud Workload Protection Platform (CWPP) solutions for protecting workloads such as servers, databases, and containers, across multicloud environments. After reading the articles in this guide, you should have answers to the following:
 
 - What questions should I ask and answer as I design my multicloud solution?
 - What steps do I need to complete to design a solution?
 - What technologies and capabilities are available to me?
 - What trade-offs do I need to consider?
 
-## Problem space
+<a name="problem-space"></a>
+## Multicloud protection challenges
 
 As organizations span multiple cloud providers, it becomes increasingly complex to centralize security, and for security teams to work across multiple environments and vendors.
 
@@ -37,4 +41,4 @@ Before working through these articles, you should have a basic understanding of 
 
 ## Next step
 
-In this article, we provided an introduction to begin your path to designing a multicloud security solution. Continue with the next step to [determine business needs](plan-multicloud-security-determine-business-needs.md).
+To continue the multicloud security design process, see [Determine business needs](plan-multicloud-security-determine-business-needs.md).

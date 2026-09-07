@@ -1,20 +1,21 @@
 ---
 title: Protect your Miro environment
 description: Connect Miro to Microsoft Defender for Cloud Apps by using the API connector to gain visibility into user activity and detect anomalous behavior.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # How Defender for Cloud Apps helps protect your Miro environment
 
 Miro is an online workspace that enables distributed, cross-functional teams organize and collaborate on projects. Miro holds critical data of your organization, which makes Miro a target for malicious actors. 
 
-Connecting Miro to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection using machine learning based anomaly detections. Before you connect, review the [prerequisites](#connect-miro-to-microsoft-defender-for-cloud-apps) later in this article to ensure your environment is ready.
+Connecting Miro to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection using machine learning based anomaly detections. Before you connect, review the [prerequisites for connecting Miro to Defender for Cloud Apps](#connect-miro-to-microsoft-defender-for-cloud-apps) to ensure your environment is ready.
 
-## Main threats
+<a name="main-threats"></a>
+## Main threats to your Miro environment
 
 The main threats to consider in a Miro environment include the following:
 
@@ -46,6 +47,8 @@ For more information about creating policies, see [Create a policy](control-clou
 In addition to monitoring for potential threats, you can apply and automate the following Miro governance actions to remediate detected threats.
 
 ### Supported governance actions
+
+The following table lists the governance actions supported for Miro.
 
 | **Type**        | **Action**                                                   |
 | --------------- | ------------------------------------------------------------ |

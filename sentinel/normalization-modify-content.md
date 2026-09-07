@@ -4,9 +4,9 @@ description: Learn how to convert existing Microsoft Sentinel analytics rules to
 ms.author: edbaynash
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security analyst, I want to modify custom analytics rules to use the Advanced Security Information Model (ASIM) so that I can leverage normalized data for more efficient and consistent threat detection.
@@ -14,6 +14,8 @@ ms.custom: msecd-doc-authoring-1014
 ---
 
 # Modify content to use the Advanced Security Information Model (ASIM)
+
+## Convert Microsoft Sentinel content to use ASIM normalized data
 
 Normalized security content in Microsoft Sentinel includes analytics rules, hunting queries, and workbooks that work with unifying normalization parsers.
 

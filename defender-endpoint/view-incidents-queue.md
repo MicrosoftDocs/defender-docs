@@ -23,7 +23,7 @@ appliesto:
 
 The **Incidents queue** shows a collection of incidents that were flagged from devices in your network. It helps you sort through incidents to prioritize and create an informed cybersecurity response decision.
 
-By default, the queue displays incidents seen in the last six months, with the most recent incident showing at the top of the list, helping you see the most recent incidents first.
+By default, the queue displays incidents seen in the last week, with the most recent incident showing at the top of the list, helping you see the most recent incidents first.
 
 There are several options you can choose from to customize the Incidents queue view. 
 

@@ -9,7 +9,7 @@ ms.collection:
   - msftsolution-secops
   - tier3
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 08/07/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1014
 ---
@@ -60,8 +60,8 @@ To integrate the capabilities of Microsoft Defender XDR, you will need to refine
 
 - [What is Microsoft Defender for Endpoint?](/defender-endpoint/microsoft-defender-endpoint)
 - [What is Microsoft Defender for Identity?](/defender-for-identity/what-is)
-- [What is Defender for Office 365?](microsoft-365-defender.md)
-- [What is Microsoft Defender for Cloud Apps?](/cloud-app-security/what-is-cloud-app-security)
+- [What is Defender for Office 365?](/defender-office-365/mdo-about)
+- [What is Microsoft Defender for Cloud Apps?](/defender-cloud-apps/what-is-defender-for-cloud-apps)
 
 ## Next step
 

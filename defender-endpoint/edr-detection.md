@@ -9,10 +9,10 @@ ms.collection:
 - m365-security
 - tier3
 - mde-macos
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
 ms.subservice: edr
-ms.date: 06/17/2026
+ms.date: 07/03/2026
 appliesto:
     - Microsoft Defender for Endpoint Plan 2
     - Microsoft Defender for Business
@@ -24,6 +24,8 @@ ai-usage: ai-assisted
 
 ## Prerequisites
 
+Before you run the EDR detection test, make sure your environment meets these requirements:
+
 - Windows client devices must be running Windows 11, Windows 10 version 1709 build 16273 or newer, Windows 8.1, or Windows 7 SP1.
 - Windows server devices must be running Windows Server 2008 R2 SP1, Windows Server 2012 R2 and later, or Azure Stack HCI OS, version 23H2 and later.
 - Linux servers must be running a supported version (see [Prerequisites for Microsoft Defender for Endpoint on Linux](mde-linux-prerequisites.md))
@@ -33,26 +35,28 @@ Endpoint detection and response (EDR) in Microsoft Defender for Endpoint provide
 
 ## Run an EDR detection test
 
+Use the following platform-specific procedures to run the EDR detection test.
+
 <a name="windows"></a>
 ### Run the EDR detection test on Windows
 
 > [!TIP]
 > The Windows device must be listening for requests on TCP port 80 for the following commands to work. You can verify by running the following PowerShell command: `Test-NetConnection 127.0.0.1 -Port 80`.
 
-In a Command Prompt window, run the following commands:
+In a Command Prompt window, run the following command to download and launch a test file that triggers an EDR detection:
 
 ```dos
 powershell.exe -NoExit -ExecutionPolicy Bypass -WindowStyle Hidden $ErrorActionPreference='silentlycontinue';(New-Object System.Net.WebClient).DownloadFile('http://127.0.0.1/1.exe', 'C:\\test-WDATP-test\\invoice.exe');Start-Process 'C:\\test-WDATP-test\\invoice.exe'
 ```
 
-If the command runs successfully and the test file executes, the detection test is marked as completed and a new alert appears within a few minutes.
+If the command runs successfully and the test file executes, the Windows EDR detection test is marked as completed and a new alert appears within a few minutes.
 
 <a name="linux"></a>
 ### Run the EDR detection test on Linux
 
 Perform the following steps to run the EDR detection test on Linux.
 
-1. Download the MDE Linux EDR DIY package to an onboarded Linux server so you can extract and run the test script locally. For more information, see the [script file](https://aka.ms/MDE-Linux-EDR-DIY).
+1. Download the MDE Linux EDR DIY package to an onboarded Linux server so you can extract and run the test script locally. For more information, see the [MDE Linux EDR DIY test script](https://aka.ms/MDE-Linux-EDR-DIY).
 
    ```bash
    curl -o ~/Downloads/MDE-Linux-EDR-DIY.zip -L https://aka.ms/MDE-Linux-EDR-DIY
@@ -133,7 +137,7 @@ Perform the following steps to run the EDR detection test on macOS.
 
 ## Next steps
 
-If you're experiencing issues with application compatibility or performance, you might consider adding exclusions. See the following articles for more information:
+If you have app compatibility or performance issues, consider adding exclusions. For more information, see:
 
 - [Configure and validate exclusions for Microsoft Defender for Endpoint on macOS](mac-exclusions.md)
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)

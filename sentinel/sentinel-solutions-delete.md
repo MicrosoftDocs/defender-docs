@@ -3,13 +3,13 @@ title: Delete installed Microsoft Sentinel out-of-the-box content and solutions
 description: Remove solutions and content you deployed in Microsoft Sentinel.
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ms.author: edbaynash
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security operations center (SOC) analyst, I want to delete Microsoft Sentinel out-of-the-box content and solutions so that I can manage and customize my security monitoring environment effectively.
@@ -40,7 +40,7 @@ To restore deleted content items, select **Reinstall** on the solution.
 
 ## Delete the solution
 
-Delete a solution and its content templates from the content hub or the manage solution view. This action doesn't delete active, cloned, saved, or custom items.
+Delete a solution and its content templates from the content hub or the manage solution view. Deleting a solution doesn't delete active, cloned, saved, or custom items.
 
 1. In the content hub, select an installed solution.
 1. On the solutions details page, select **Delete**.

@@ -1,9 +1,9 @@
 ---
 title: Deploy conditional access app control for any web app using Okta
 description: This article provides information about how to deploy the Microsoft Defender for Cloud Apps conditional access app control for any web app using Okta as the identity provider.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 # Deploy conditional access app control for any web app using Okta as the identity provider (IdP)
@@ -92,7 +92,7 @@ Enter your app's SAML single sign-on details into Defender for Cloud Apps.
 ## Step 3: Create a new Okta Custom Application and App Single Sign-On configuration
 
 > [!NOTE]
-> To limit end-user downtime and preserve your existing known good configuration, we recommend creating a new **Custom Application** and **Single Sign-On configuration**. Where this is not possible, skip the relevant steps. For example, if the app you are configuring does not support creating multiple **Single Sign-On configurations**, then skip the create new single sign-on step.
+> To limit end-user downtime and preserve your existing known good configuration, we recommend creating a new **Custom Application** and **Single Sign-On configuration**. If creating a new Custom Application and Single Sign-On configuration is not possible, skip the relevant steps. For example, if the app you are configuring does not support creating multiple **Single Sign-On configurations**, then skip the create new single sign-on step.
 
 1. In the **Okta Admin** console, under **Applications**, view the properties of your existing configuration for your app, and make note of the settings.
 
@@ -101,7 +101,7 @@ Enter your app's SAML single sign-on details into Defender for Cloud Apps.
 
     ![Screenshot of the Okta application Sign On tab showing the View Setup Instructions option and SSO service location.](media/proxy-idp-okta/idp-okta-sf-view-setup-instructions.png)
 
-1. Make a note of the **Identity Provider Single Sign-On URL** and download the identity provider's Signing Certificate (X.509). You'll need both the URL and the signing certificate later.
+1. Make a note of the **Identity Provider Single Sign-On URL** and download the identity provider's Signing Certificate (X.509). You'll need both the URL and the signing certificate in [Step 4](#idp1-conf-cas-with-okta-app-info) to configure Defender for Cloud Apps.
 
 1. Back in Salesforce, on the existing Okta single sign-on settings page, make a note of all the settings.
 1. Create a new SAML single sign-on configuration. Apart from the **Entity ID** value that must match the custom application's **Audience URI (SP Entity ID)**, configure the single sign-on using the settings from the existing Okta single sign-on settings page noted in the previous step. You'll need this new configuration later when configuring Defender for Cloud Apps.
@@ -113,7 +113,7 @@ Enter your app's SAML single sign-on details into Defender for Cloud Apps.
 
 Provide Defender for Cloud Apps with your Okta identity provider details.
 
-1. Back in the Defender for Cloud Apps **IDENTITY PROVIDER** page, click **Next** to proceed.
+1. In Defender for Cloud Apps, on the **IDENTITY PROVIDER** page, click **Next** to proceed.
 
 1. On the next page of the **IDENTITY PROVIDER** wizard, select **Fill in data manually**, do the following, and then click **Next**.
     - For the **Single sign-on service URL**, enter the Salesforce **Login URL** you noted earlier.
@@ -121,13 +121,13 @@ Provide Defender for Cloud Apps with your Okta identity provider details.
 
     ![Screenshot of Defender for Cloud Apps identity provider settings showing the SSO service URL and SAML certificate upload fields.](media/proxy-idp-okta/idp-okta-cas-sf-app-idp-info.png)
 
-1. On the **External Configuration** page, make a note of the following information, and then click **Next**. You'll need this information when configuring the Okta custom application in [Step 5](#idp1-complete-custom-app-in-okta).
+1. On the **External Configuration** page, make a note of the following information, and then click **Next**. You'll need the Defender for Cloud Apps single sign-on URL and attribute values when configuring the Okta custom application in [Step 5](#idp1-complete-custom-app-in-okta).
 
     - Defender for Cloud Apps single sign-on URL
     - Defender for Cloud Apps attributes and values
 
     > [!NOTE]
-    > If you see an option to upload the **Defender for Cloud Apps SAML certificate for the identity provider**, click on the click to download the certificate file. You'll need this later.
+    > If you see an option to upload the **Defender for Cloud Apps SAML certificate for the identity provider**, click the download link to download the certificate file. You'll need this certificate file in [Step 5](#idp1-complete-custom-app-in-okta) to configure the Okta custom application.
 
     ![Screenshot of the Defender for Cloud Apps configuration page showing the SSO URL and attribute values.](media/proxy-idp-okta/idp-okta-cas-get-sf-app-external-config.png)
 

@@ -9,12 +9,12 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-ga-nochange
-description: Admins can learn about the spoof intelligence insight in Microsoft 365.
+description: Learn how to review and manage spoof intelligence in Microsoft 365 to identify legitimate spoofed senders and improve anti-spoofing protection.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -44,9 +44,9 @@ Use the _spoof intelligence insight_ in the Microsoft Defender portal to quickly
 
 By allowing known senders to send spoofed messages from known locations, you can reduce false positives (good email marked as bad). By monitoring the allowed spoofed senders, you provide an extra layer of security to prevent unsafe messages from arriving in your organization.
 
-Likewise, you can use the spoof intelligence insight to review spoofed senders allowed by spoof intelligence and manually block specific allowed spoofed senders.
+You can also use the spoof intelligence insight to review spoofed senders allowed by spoof intelligence and manually block specific allowed spoofed senders.
 
-The rest of this article explains how to use the spoof intelligence insight in the Microsoft Defender portal and in PowerShell.
+The following sections explain how to use the spoof intelligence insight in the Microsoft Defender portal and in PowerShell.
 
 > [!NOTE]
 >
@@ -56,7 +56,7 @@ The rest of this article explains how to use the spoof intelligence insight in t
 >
 > - The **Action** values **Allow** or **Block** in the spoof intelligence insight refer to spoof _detection_ (whether Microsoft 365 identified the message as spoofed or not). The **Action** value doesn't necessarily affect the overall filtering of the message. For example, to avoid false positives, a spoofed message might be delivered if we find that it doesn't have malicious intent.
 >
-> - The spoof intelligence insight shows seven days worth of data. The **Get-SpoofIntelligenceInsight** cmdlet shows 30 days worth of data.
+> - The spoof intelligence insight shows seven days worth of data. In Exchange Online PowerShell, the **Get-SpoofIntelligenceInsight** cmdlet shows 30 days worth of data.
 
 ## What do you need to know before you begin?
 
@@ -85,6 +85,8 @@ The rest of this article explains how to use the spoof intelligence insight in t
 ## Find the spoof intelligence insight in the Microsoft Defender portal
 
 ### Open the spoof intelligence insight
+
+To open the spoof intelligence insight in the Microsoft Defender portal, perform the following steps:
 
 1. In the Microsoft Defender portal at <https://security.microsoft.com>, go to **Email & collaboration** \> **Policies & rules** \> **Threat policies** \> **Tenant Allow/Block Lists** in the **Rules** section. Or, to go directly to the **Tenant Allow/Block Lists** page, use <https://security.microsoft.com/tenantAllowBlockList>.
 
@@ -165,6 +167,9 @@ When you select a spoof detection from the list by clicking anywhere in the row 
 To change the spoof detection from **Allow** to **Block** or vice-versa, see [Override the spoof intelligence verdict](#override-the-spoof-intelligence-verdict).
 
 ### Override the spoof intelligence verdict
+
+> [!IMPORTANT]
+> When you override the spoof intelligence verdict, the entry is removed from the **Spoof intelligence insight** page and added to the **Spoofed senders** tab on the **Tenant Allow/Block Lists** page at <https://security.microsoft.com/tenantAllowBlockList?viewid=SpoofItem>.
 
 On the **Spoof intelligence insight** page at <https://security.microsoft.com/spoofintelligence>, use either of the following methods to override the spoof intelligence verdict:
 

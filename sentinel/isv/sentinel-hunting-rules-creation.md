@@ -6,7 +6,8 @@ author: mberdugo
 ms.reviewer: tbeerthuis
 ms.service: microsoft-sentinel
 ms.topic: how-to
-ms.date: 2/06/2025
+ms.date: 06/25/2026
+ai-usage: ai-assisted
 
 #CustomerIntent: As an ISV partner, I want to create and publish hunting queries to my Microsoft Sentinel solution so that I can provide inbuilt detection use cases to my customers.
 ---
@@ -43,9 +44,57 @@ When you integrate threat intelligence feeds into your queries, it can help you 
 
 ## Create and publish hunting queries
 
-You create hunting queries in [YAML](https://yaml.org/) format. You can use this hunting query as a reference to create your own queries: [Sample hunting query in GitHub](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Malware%20Protection%20Essentials/Hunting%20Queries/FileCretaedInStartupFolder.yaml).
+You create hunting queries in [YAML](https://yaml.org/) format. Use these hunting queries in the Azure-Sentinel repository as references to create your own:
+
+* [Malware Protection Essentials — FileCretaedInStartupFolder.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Malware%20Protection%20Essentials/Hunting%20Queries/FileCretaedInStartupFolder.yaml)
+* [Okta Single Sign-On — AdminPrivilegeGrant.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Okta%20Single%20Sign-On/Hunting%20Queries/AdminPrivilegeGrant.yaml)
+* [PaloAlto-PAN-OS — Palo Alto - potential beaconing detected.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/PaloAlto-PAN-OS/Hunting%20Queries/Palo%20Alto%20-%20potential%20beaconing%20detected.yaml)
+* [Azure Firewall — Azure Firewall - First Time Source IP to Destination Using Port.yaml](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Azure%20Firewall/Hunting%20Queries/Azure%20Firewall%20-%20First%20Time%20Source%20IP%20to%20Destination%20Using%20Port.yaml)
 
 In this section, we provide a detailed walkthrough of hunting query attributes.
+
+> [!CAUTION]
+> Don't include the analytic rule fields `kind`, `severity`, `queryFrequency`, `queryPeriod`, `triggerOperator`, `triggerThreshold`, `alertDetailsOverride`, or `eventGroupingSettings`. These fields don't apply to hunting queries and cause a review failure if included. If you start from an analytic rule YAML, remove these fields before you save the file to the `Hunting Queries/` folder.
+
+### Sample hunting query template
+
+The following is a sample hunting query template. Use it as a reference to create your own hunting queries.
+
+```yaml
+id: aaaaaaaa-0000-1111-2222-bbbbbbbbbbb
+name: Admin privilege granted to user or group
+description: |
+  Identifies successful grants of administrator permissions to users or groups.
+  Adversaries often assign administrator permissions to maintain access or elevate privileges.
+description-detailed: |
+  This query searches for successful grant of administrator permissions to user or groups.
+  Please verify that the behavior is known and filter out anything that is expected.
+  Reference: https://developer.okta.com/docs/reference/api/event-types/
+status: Available
+requiredDataConnectors:
+  - connectorId: ContosoMyProduct
+    dataTypes:
+      - ContosoMyProduct_CL
+tactics:
+  - Persistence
+relevantTechniques:
+  - T1098
+query: |
+  ContosoMyProduct_CL
+  | where EventType == "privilege.grant"
+  | where Outcome == "SUCCESS"
+  | summarize StartTime = min(TimeGenerated), EndTime = max(TimeGenerated),
+      count() by ActorDisplayName, TargetDisplayName, PrivilegeGranted
+entityMappings:
+  - entityType: Account
+    fieldMappings:
+      - identifier: FullName
+        columnName: ActorDisplayName
+customDetails:
+  PrivilegeGranted: PrivilegeGranted
+  TargetUser: TargetDisplayName
+version: 1.0.0
+```
 
 ### ID
 
@@ -59,7 +108,7 @@ The `name` attribute provides a brief label that summarizes the detection. Make 
 
 * Uses sentence-case capitalization.
 * Doesn't end in a period.
-* Has a maximum length of 50 characters (whenever possible).
+* Recommended length of up to 50 characters, and a maximum of 100 characters.
 
 This field is mandatory.
 
@@ -74,8 +123,17 @@ The `description` attribute provides a detailed description of the detection. Th
 * Is five sentences or less.
 * Doesn't describe the data source (connector or data type).
 * Doesn't provide a technical explanation for the query language.
+* Uses ASCII characters only. Em dashes, smart quotes, and other non-ASCII characters fail validation.
 
 This field is mandatory.
+
+### Detailed description
+
+The `description-detailed` attribute is optional and has no length limit. Use it when 255 characters isn't enough to document data sources, filters, or reference links.
+
+### Status
+
+The `status` attribute indicates the production readiness of the query. Use `Available` for production-ready queries.
 
 ### Required data connectors
 
@@ -87,20 +145,22 @@ The `dataTypes` attribute represents the data types that the hunting query depen
 
 ### Tactics
 
-The `tactics` attribute defines the [`MITRE ATT&CK tactics`](https://attack.mitre.org/versions/v13/matrices/enterprise/) that the detection relates to. When you define the tactics, it helps users understand the context of the detection and how it fits into the overall threat landscape. For this attribute:
+The `tactics` attribute defines the [`MITRE ATT&CK tactics`](https://attack.mitre.org/versions/v16/matrices/enterprise/) that the detection relates to. When you define the tactics, it helps users understand the context of the detection and how it fits into the overall threat landscape. For this attribute:
 
-* `ATT&CK Framework v13` is supported.
+* `ATT&CK Framework v16` is supported.
 * Names can't include spaces. For example: `InitialAccess` or `LateralMovement`.
+* A maximum of five tactics can be defined per query.
 
 This field is mandatory.
 
 ### Relevant techniques
 
-The `relevantTechniques` attribute defines the [`MITRE ATT&CK techniques`](https://attack.mitre.org/versions/v13/matrices/enterprise/) that the detection relates to. When you define the techniques, it helps users understand the context of the detection and how it fits into the overall threat landscape. For this attribute:
+The `relevantTechniques` attribute defines the [`MITRE ATT&CK techniques`](https://attack.mitre.org/versions/v16/matrices/enterprise/) that the detection relates to. When you define the techniques, it helps users understand the context of the detection and how it fits into the overall threat landscape. For this attribute:
 
-* `ATT&CK Framework v13` is supported.
-* Attribute matches `MITRE` tactics.
+* `ATT&CK Framework v16` is supported.
+* Each technique must belong to at least one of the listed `tactics`.
 * Names can't include spaces. For example: `T1078` or `T1078.001`.
+* A maximum of 10 techniques can be defined per query.
 
 This field is mandatory.
 
@@ -139,7 +199,12 @@ Summarize when necessary. Ensure that you include the time field (usually `TimeG
 
 Additionally, include as many fields as possible to help the user understand the context of the alert. We recommend that you include at least one of the primary entities: `Host`, `Account`, or `IP`.
 
+Don't include a hardcoded time filter in a hunting query. The Hunting blade injects the analyst's selected time range at runtime. When you surface time bounds in the results, use the `StartTime` and `EndTime` column names, not `StartTimeUtc` or `EndTimeUtc`.
+
 This field is mandatory.
+
+> [!NOTE]
+> If the query uses a custom log table (`*_CL`), add a schema JSON for that table to the [`.script/tests/KqlvalidationsTests/CustomTables/`](https://github.com/Azure/Azure-Sentinel/tree/master/.script/tests/KqlvalidationsTests/CustomTables) folder. Without it, KQL validation fails because the table isn't recognized.
 
 ### Entity mappings
 
@@ -147,7 +212,7 @@ The `entityMappings` attribute is integral when you configure scheduled hunting 
 
 The `entityType` represents the standard list of entities recognized by Microsoft Sentinel. See allowed values in the Entity type column in the [Entity mapping table](/azure/sentinel/entities-reference#entity-types-and-identifiers).
 
-This field is mandatory.
+For hunting queries, entity mappings are recommended but not required.
 
 ### Field mappings
 
@@ -179,7 +244,7 @@ The `fieldMappings` attribute represents the identifier of the field in the quer
 
 ### Custom details
 
-The `customDetails` attribute integrates event data into alerts, making it visible in security incidents for faster triaging, investigation, and response. Custom details are key/value pairs of property and column names. For more information, see [Surface custom event details in alerts in Microsoft Sentinel](/azure/sentinel/surface-custom-details-in-alerts). Up to 20 custom details (that is, key/value pairs) can be defined per template.
+The `customDetails` attribute integrates event data into alerts, making it visible in security incidents for faster triaging, investigation, and response. Custom details are key/value pairs of property and column names. For more information, see [Surface custom event details in alerts in Microsoft Sentinel](/azure/sentinel/surface-custom-details-in-alerts). Up to 20 custom details (that is, key/value pairs) can be defined per template, and key names must be 20 characters or fewer. Custom details are recommended because they surface key columns in the results pane for faster triage.
 
 ```json
     customDetails:

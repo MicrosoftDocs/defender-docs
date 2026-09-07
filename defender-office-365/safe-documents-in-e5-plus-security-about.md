@@ -6,7 +6,7 @@ ms.reviewer:
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - has-azure-ad-ps-ref
   - azure-ad-ref-level-one-done
   - sfi-ga-nochange
@@ -16,7 +16,7 @@ ms.collection:
   - tier1
 description: Enable and configure Safe Documents to scan Office files opened in Protected View or Application Guard using the Microsoft Defender for Endpoint cloud backend. Includes licensing requirements for Microsoft 365 A5, E5, G5, and Microsoft Defender Suite.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://www.microsoft.com/education/products/microsoft-365/compare-microsoft-365-education-plans" target="_blank">Microsoft 365 A5</a>
   - ✅ <a href="https://www.microsoft.com/microsoft-365/enterprise/e5" target="_blank">Microsoft 365 E5</a>
@@ -33,9 +33,9 @@ Safe Documents is a premium feature that uses the cloud back end of [Microsoft D
 
 Users don't need Defender for Endpoint installed on their local devices to get Safe Documents protection. Users get Safe Documents protection if all of the following requirements are met:
 
-- Safe Documents is enabled in the organization using the Safe Documents configuration steps in this section.
+- Safe Documents is enabled in the organization using the Safe Documents configuration steps later in this article.
 
-- Users are assigned licenses from a [required licensing plan](/entra/identity/users/licensing-service-plan-reference).
+- Users are assigned licenses from a [licensing plan that includes the Office 365 SafeDocs service plan](/entra/identity/users/licensing-service-plan-reference).
 
   Safe Documents is controlled by the **Office 365 SafeDocs** (or **SAFEDOCS** or **bf6f5520-59e3-4f82-974b-7dbbc4fd27c7**) service plan. This service plan is available in the following products:
 

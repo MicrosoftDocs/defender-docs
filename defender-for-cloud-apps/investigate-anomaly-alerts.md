@@ -1,11 +1,11 @@
 ---
 title: How to investigate anomaly detection alerts | Microsoft Defender for Cloud Apps
 description: This article explains how to investigate the Defender for Cloud Apps anomaly detection alerts issued when attacks are detected against your organization.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: gayasalomon
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # How to investigate anomaly detection alerts
@@ -21,9 +21,9 @@ Microsoft Defender for Cloud Apps provides security detections and alerts for ma
 <a name="mitre-attck"></a>
 ## MITRE ATT&CK coverage for anomaly detection alerts
 
-To explain and make it easier to map the relationship between Defender for Cloud Apps alerts and the familiar MITRE ATT\&CK Matrix, we've categorized the alerts by their corresponding MITRE ATT\&CK tactic. This extra reference makes it easier to understand the suspected attacks technique potentially in use when a Defender for Cloud Apps alert is triggered.
+To explain and make it easier to map the relationship between Defender for Cloud Apps alerts and the familiar MITRE ATT\&CK Matrix, we've categorized the alerts by their corresponding MITRE ATT\&CK tactic. This MITRE ATT&CK mapping makes it easier to understand the suspected attack technique potentially in use when a Defender for Cloud Apps alert is triggered.
 
-This guide provides information about investigating and remediating Defender for Cloud Apps alerts in the following categories.
+This guide provides information about investigating and remediating Defender for Cloud Apps alerts in the following MITRE ATT&CK tactic categories:
 
 > [!div class="checklist"]
 - [Initial Access](#initial-access-alerts)
@@ -67,7 +67,7 @@ Activity from an IP address that has been identified as an anonymous proxy IP ad
 
 **TP**, **B-TP**, or **FP**?
 
-This detection uses a machine learning algorithm that reduces **B-TP** incidents, such as mis-tagged IP addresses that are widely used by users in the organization.
+The anonymous proxy detection uses a machine learning algorithm that reduces **B-TP** incidents, such as mis-tagged IP addresses that are widely used by users in the organization.
 
 1. **TP**: If you're able to confirm that the activity was performed from an anonymous or TOR IP address.
 
@@ -88,7 +88,7 @@ The policy can be further scoped to a subset of users or can exclude users known
 
 **Learning period**
 
-Detecting anomalous locations requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
+The infrequent country detection requires time to learn normal location patterns before it can alert accurately. Detecting anomalous locations requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
 
 **TP**, **B-TP**, or **FP**?
 
@@ -97,7 +97,7 @@ Detecting anomalous locations requires an initial learning period of seven days 
     **Recommended action**:
     1. Suspend the user, reset their password, and identify the right time to safely re-enable the account.
     1. Optional: Create a playbook using Power Automate to contact users detected as connecting from infrequent locations, and their managers, to verify their activity.
-1. **B-TP**: If a user is known to be at this location. For example, when a user who travels frequently and is currently in the specified location.
+1. **B-TP**: If a user is known to be at the country or region identified in the alert. For example, when a user who travels frequently and is currently in the specified location.
 
     **Recommended action**:
     1. Dismiss the alert and modify the policy to exclude the user.
@@ -138,11 +138,11 @@ To improve accuracy and alert only when there's a strong indication of a breach,
 
 **Learning period**
 
-Establishing a new user's activity pattern requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
+The Impossible travel detection needs an initial observation period to establish normal travel patterns for each user. Establishing a new user's activity pattern requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
 
 **TP**, **B-TP**, or **FP**?
 
-This detection uses a machine learning algorithm that ignores obvious **B-TP** conditions, such as when the IP addresses on both sides of the travel are considered safe, the travel is trusted and excluded from triggering the Impossible travel detection. For example, both sides are considered safe if they're [tagged as corporate](ip-tags.md). However, if the IP address of only one side of the travel is considered safe, the detection is triggered as normal.
+The Impossible travel detection uses a machine learning algorithm that ignores obvious **B-TP** conditions, such as when the IP addresses on both sides of the travel are considered safe, the travel is trusted and excluded from triggering the Impossible travel detection. For example, both sides are considered safe if they're [tagged as corporate](ip-tags.md). However, if the IP address of only one side of the travel is considered safe, the detection is triggered as normal.
 
 1. **TP**: If you're able to confirm that the location in the impossible travel alert is unlikely for the user.
 
@@ -164,7 +164,7 @@ This detection uses a machine learning algorithm that ignores obvious **B-TP** c
 
 ### Misleading OAuth app name
 
-This detection identifies apps with characters, such as foreign letters, that resemble Latin letters. This can indicate an attempt to disguise a malicious app as a known and trusted app so that attackers can deceive users into downloading their malicious app.
+The misleading OAuth app name detection identifies apps with characters, such as foreign letters, that resemble Latin letters. This can indicate an attempt to disguise a malicious app as a known and trusted app so that attackers can deceive users into downloading their malicious app.
 
 **TP**, **B-TP**, or **FP**?
 
@@ -186,7 +186,7 @@ To ban access to the app, on the **Google** or **Salesforce** tabs on the **App 
 
 ### Misleading publisher name for an OAuth app
 
-This detection identifies apps with characters, such as foreign letters, that resemble Latin letters. This can indicate an attempt to disguise a malicious app as a known and trusted app so that attackers can deceive users into downloading their malicious app.
+The misleading publisher name detection identifies apps with characters, such as foreign letters, that resemble Latin letters. This can indicate an attempt to disguise a malicious app as a known and trusted app so that attackers can deceive users into downloading their malicious app.
 
 **TP**, **B-TP**, or **FP**?
 
@@ -268,7 +268,7 @@ Activities in a single session indicating that, a user performed suspicious emai
 > As part of ongoing improvements to Defender for Cloud Apps alert threat protection capabilities, this policy has been disabled, migrated to the new dynamic model.
 > If you previously configured governance actions or email notifications for this policy, you can re-enable it at any time in the Microsoft Defender portal > Cloud Apps > Policy management page.
 
-Activities indicating that an attacker gained access to a user's inbox and created a suspicious rule. Manipulation rules, such as deleting or moving messages, or folders, from a user's inbox might be an attempt to exfiltrate information from your organization. Similarly, they can indicate an attempt to manipulate information that a user sees or to use their inbox to distribute spam, phishing emails, or malware. Defender for Cloud Apps profiles your environment and triggers alerts when suspicious inbox manipulation rules are detected on a user's inbox. This might indicate that the user's account is compromised.
+Activities indicating that an attacker gained access to a user's inbox and created a suspicious rule. Manipulation rules, such as deleting or moving messages, or folders, from a user's inbox might be an attempt to exfiltrate information from your organization. Similarly, they can indicate an attempt to manipulate information that a user sees or to use their inbox to distribute spam, phishing emails, or malware. Defender for Cloud Apps profiles your environment and triggers alerts when suspicious inbox manipulation rules are detected on a user's inbox. Detecting suspicious inbox manipulation rules might indicate that the user's account is compromised.
 
 **TP**, **B-TP**, or **FP**?
 
@@ -298,7 +298,7 @@ Activities indicating that an attacker has compromised a user account and perfor
 
 **Learning period**
 
-Establishing a new user's activity pattern requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
+The detection requires an initial seven-day learning period to establish a new user's activity pattern. During this time, alerts aren't triggered for any new locations.
 
 **TP**, **B-TP**, or **FP**?
 
@@ -325,11 +325,11 @@ Failed sign in attempts could indicate on an attempt to breach an account. Howev
 
 **Learning period**
 
-Establishing a new user's activity pattern requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
+The multiple failed login attempts detection needs time to learn each user's normal sign-in behavior before it can alert accurately. Establishing a new user's activity pattern requires an initial learning period of seven days during which alerts aren't triggered for any new locations.
 
 **TP**, **B-TP**, or **FP**?
 
-This policy is based on learning the normal sign in behavior of a user. When a deviation from the norm is detected, an alert is triggered. If the detection begins to see that the same behavior continues, the alert is only raised once.
+The multiple failed login attempts policy is based on learning the normal sign in behavior of a user. When a deviation from the norm is detected, an alert is triggered. If the detection begins to see that the same behavior continues, the alert is only raised once.
 
 1. **TP** (MFA fails): If you're able to confirm that MFA is working correctly, this could be a sign of an attempted brute force attack.
 
@@ -362,7 +362,7 @@ This policy is based on learning the normal sign in behavior of a user. When a d
 
 ### Unusual addition of credentials to an OAuth app
 
-This detection identifies the suspicious addition of privileged credentials to an OAuth app. This can indicate that an attacker has compromised the app, and is using it for malicious activity.
+The unusual addition of credentials detection identifies the suspicious addition of privileged credentials to an OAuth app. This can indicate that an attacker has compromised the app, and is using it for malicious activity.
 
 **Learning period**
 
@@ -370,7 +370,7 @@ Learning your organization's environment requires a period of seven days during 
 
 ### Unusual ISP for an OAuth app
 
-The detection identifies an OAuth app connecting to your cloud application from an ISP that is uncommon for the app. This might indicate that an attacker tried to use a legitimate compromised app to perform malicious activities on your cloud applications.
+The detection identifies an OAuth app connecting to your cloud application from an ISP that is uncommon for the app. An OAuth app connecting from an uncommon ISP might indicate that an attacker tried to use a legitimate compromised app to perform malicious activities on your cloud applications.
 
 **Learning period**
 
@@ -421,7 +421,7 @@ Establishing a new user's activity pattern requires an initial learning period o
 
 ### Suspicious Power BI report sharing
 
-Activities indicating that a user shared a Power BI report that might contain sensitive information identified using NLP to analyze the metadata of the report. The report was either shared with an external email address, published to the web, or a snapshot was delivered to an externally subscribed email address. This can indicate an attempted breach of your organization.
+Activities indicating that a user shared a Power BI report that might contain sensitive information identified using natural language processing (NLP) to analyze the metadata of the report. The report was either shared with an external email address, published to the web, or a snapshot was delivered to an externally subscribed email address. This can indicate an attempted breach of your organization.
 
 **TP**, **B-TP**, or **FP**?
 

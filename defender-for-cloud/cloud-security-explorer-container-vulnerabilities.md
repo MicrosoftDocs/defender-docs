@@ -2,21 +2,22 @@
 title: Build Cloud Security Explorer queries for container vulnerabilities
 description: Learn how to build Cloud Security Explorer queries in Microsoft Defender for Cloud to identify vulnerabilities in registry images and running containers.
 ms.topic: how-to
-ms.date: 04/23/2026
+ms.date: 07/03/2026
 ms.author: elkrieger
 author: Elazark
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Build Cloud Security Explorer queries for container vulnerabilities
 
-Use Cloud Security Explorer to identify vulnerabilities in registry images and running containers.
+Use Cloud Security Explorer to identify vulnerabilities in registry images and running containers. This article shows you how to build queries that find vulnerable container images in registries and in running Kubernetes workloads, and how to review the results.
 
 For an introduction to Cloud Security Explorer, see [Build queries with Cloud Security Explorer](how-to-manage-cloud-security-explorer.md).
 
 ## Create a query to identify vulnerabilities in registry images
 
-Use this query to find container images stored in registries that have known vulnerabilities.
+Find registry container images that have known vulnerabilities.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -40,13 +41,13 @@ Use this query to find container images stored in registries that have known vul
 
 1. Select **View details >** for a container image.
 
-1. In the **Result details** pane, review vulnerability information such as affected packages and severity.
+1. In **Result details**, review the affected packages and severity.
 
-1. Select **Open the vulnerability page** to review the vulnerability details.
+1. Select **Open the vulnerability page** for more details.
 
 ## Create a query to identify vulnerabilities in running containers
 
-Use this query to find container images that are currently used by workloads running in Kubernetes clusters and have known vulnerabilities.
+Find running containers in Kubernetes clusters that have known vulnerabilities.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -80,9 +81,9 @@ Use this query to find container images that are currently used by workloads run
 
 1. Select **View details >** for a container.
 
-1. In the **Result details** pane, review vulnerability information such as affected images, severity, and related resources.
+1. In **Result details**, review the affected images, severity, and related resources.
 
-1. Select **Open the vulnerability page** to review the vulnerability details.
+1. Select **Open the vulnerability page** for more details.
 
 ## Related content
 

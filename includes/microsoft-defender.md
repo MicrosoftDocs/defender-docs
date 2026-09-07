@@ -1,6 +1,6 @@
 ---
-title: Microsoft Defender XDR important guidance
-description: A note regarding important Microsoft Defender XDR guidance.
+title: Microsoft Defender important guidance
+description: A note regarding important Microsoft Defender guidance.
 ms.date: 09/21/2020
 ms.reviewer: 
 manager: orspodek

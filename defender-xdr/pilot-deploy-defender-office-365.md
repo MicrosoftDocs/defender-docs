@@ -25,7 +25,7 @@ appliesto:
 
 # Pilot and deploy Defender for Office 365
 
-This article provides a workflow for piloting and deploying Microsoft Defender for Office 365 in your organization. You can use these recommendations to onboard Microsoft Defender for Office 365 as an individual cybersecurity tool or as part of an end-to-end solution with Microsoft Defender XDR.
+This article provides a workflow for piloting and deploying Microsoft Defender for Office 365 in your organization. You can use these recommendations to onboard Microsoft Defender for Office 365 as an individual cybersecurity tool or as part of an end-to-end solution with Microsoft Defender.
 
 This article assumes you have a production Microsoft 365 tenant and are piloting and deploying Microsoft Defender for Office 365 in this environment. This practice will maintain any settings and customizations you configure during your pilot for your full deployment.
 
@@ -38,7 +38,7 @@ Defender for Office 365 contributes to a Zero Trust architecture by helping to p
 > - [Quickly configure Microsoft Teams protection in Microsoft Defender for Office 365 Plan 2](/defender-office-365/mdo-support-teams-quick-configure)
 > - [Security Operations Guide for Teams protection in Microsoft Defender for Office 365](/defender-office-365/mdo-support-teams-sec-ops-guide)
 
-## End-to-end deployment for Microsoft Defender XDR
+## End-to-end deployment for Microsoft Defender
 
 This is article 3 of 6 in a series to help you deploy the components of Microsoft Defender XDR, including investigating and responding to incidents.
 
@@ -49,7 +49,7 @@ The articles in this series correspond to the following phases of end-to-end dep
 | Phase | Link |
 |---|---|
 | A. Start the pilot | [Start the pilot](pilot-deploy-overview.md#start-the-pilot)|
-| B. Pilot and deploy Microsoft Defender XDR components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - **Pilot and deploy  Defender for Office 365** (this article) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
+| B. Pilot and deploy Microsoft Defender components | - [Pilot and deploy Defender for Identity](pilot-deploy-defender-identity.md) <br><br> - **Pilot and deploy  Defender for Office 365** (this article) <br><br> - [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md) <br><br> - [Pilot and deploy Microsoft Defender for Cloud Apps](pilot-deploy-defender-cloud-apps.md)  |
 |C. Investigate and respond to threats | [Practice incident investigation and response](pilot-deploy-investigate-respond.md) |
 
 ## Pilot and deploy workflow for Defender for Office 365
@@ -98,7 +98,7 @@ The following table describes this illustration.
 | 4  |A message that isn't malicious, blocked, or quarantined is processed and delivered to the recipient in EXO where user preferences related to junk mail, mailbox rules, or other settings are evaluated and triggered. |
 | 5 | Integration with on-premises Active Directory can be enabled using Microsoft Entra Connect to synchronize and provision mail-enabled objects and accounts to Microsoft Entra ID and ultimately Exchange Online. |
 | 6 | When integrating an on-premises environment, it's best to use an Exchange server for supported management and administration of mail-related attributes, settings, and configurations. |
-| 7 | Microsoft Defender for Office 365 shares signals to Microsoft Defender XDR for extended detection and response (XDR). |
+| 7 | Microsoft Defender for Office 365 shares signals to Microsoft Defender for extended detection and response (XDR). |
 
 On-premises integration is common but optional. If your environment is cloud-only, this guidance also works for you.
 
@@ -269,7 +269,7 @@ Microsoft Defender for Office 365 can also be integrated into other SIEM solutio
 
 Incorporate the information in [Microsoft Defender for Office 365 Security Operations Guide](/defender-office-365/mdo-sec-ops-guide) into your SecOps processes.
 
-## Next step for the end-to-end deployment of Microsoft Defender XDR
+## Next step for the end-to-end deployment of Microsoft Defender
 
 Continue your end-to-end deployment of Microsoft Defender XDR with [Pilot and deploy Defender for Endpoint](pilot-deploy-defender-endpoint.md).
 

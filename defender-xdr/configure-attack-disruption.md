@@ -6,12 +6,12 @@ author: guywi-ms
 ms.topic: how-to
 ms.service: defender-xdr
 ms.localizationpriority: medium
-ms.date: 06/15/2026
+ms.date: 08/07/2026
 ms.collection:
 - m365-security
 - tier2
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1015
   - autoir
   - admindeeplinkDEFENDER
   - sfi-ga-nochange
@@ -27,7 +27,9 @@ ai-usage: ai-assisted
 
 Microsoft Defender XDR includes powerful [automated attack disruption](automatic-attack-disruption.md) capabilities that can protect your environment from sophisticated, high-impact attacks.
 
-Configure automatic attack disruption capabilities in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a>. After you're all set up, you can view and manage containment actions in Incidents and the Action center. And, if necessary, you can make changes to automatic attack disruption settings.
+Configure automatic attack disruption capabilities in <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a>. Before you begin, review the [prerequisites](#prerequisites) for licensing, permissions, and product-specific setup requirements. After you're all set up, you can view and manage containment actions in Incidents and the Action center. And, if necessary, you can make changes to automatic attack disruption settings.
+
+When Microsoft Defender for Endpoint is deployed, automatic attack disruption can contain unmanaged devices and users or automatically isolate a compromised workstation from the network. Automatic device isolation is currently in preview. For details about each response action, see [Automated response actions](automatic-attack-disruption.md#automated-response-actions).
 
 ## Prerequisites
 
@@ -36,22 +38,30 @@ The following are prerequisites for configuring automatic attack disruption in M
 |Requirement|Details|
 |---|---|
 |Subscription requirements|One of these subscriptions: <ul><li>Microsoft 365 E5 or A5</li><li>Microsoft 365 E3 with the Microsoft Defender Suite add-on</li><li>Microsoft 365 E3 with the Enterprise Mobility + Security E5 add-on</li><li>Microsoft 365 A3 with the Microsoft 365 A5 Security add-on</li><li>Windows 10 Enterprise E5 or A5</li><li>Windows 11 Enterprise E5 or A5</li><li>Enterprise Mobility + Security (EMS) E5 or A5</li><li>Office 365 E5 or A5</li><li>Microsoft Defender for Endpoint (Plan 2)</li><li>Microsoft Defender for Identity</li><li>Microsoft Defender for Cloud Apps</li><li>Defender for Office 365 (Plan 2)</li><li>Microsoft Defender for Business</li></ul> <p> See [Microsoft Defender XDR licensing requirements](./prerequisites.md#licensing-requirements).|
-|Deployment requirements|<ul><li>Deployment of Defender products (for example, Defender for Endpoint, Defender for Office 365, Defender for Identity, and Defender for Cloud Apps)</li><ul><li>The wider the deployment, the greater the protection coverage is. For example, if a Microsoft Defender for Cloud Apps signal is used in a certain detection, then this product is required to detect the relevant specific attack scenario.</li><li>Similarly, each Defender product must be deployed to execute its automated response actions. For example, Microsoft Defender for Endpoint is required to automatically contain a device. </li></ul><li>Microsoft Defender for Endpoint's device discovery is set to 'standard discovery' (prerequisite for the automatic initiation of the "Contain Device" action)</li><li>For attack disruption actions in [external platforms](#microsoft-sentinel-prerequisites-for-external-platforms-preview) such as Okta or AWS (preview): Microsoft Sentinel analytic workspace connected to the unified security operations portal with the relevant provider connector deployed.</li></ul>|
+|Deployment requirements|<ul><li>Deployment of Defender products (for example, Defender for Endpoint, Defender for Office 365, Defender for Identity, and Defender for Cloud Apps)</li><ul><li>The wider the deployment, the greater the protection coverage is. For example, if a Microsoft Defender for Cloud Apps signal is used in a certain detection, then this product is required to detect the relevant specific attack scenario.</li><li>Similarly, each Defender product must be deployed to execute its automated response actions. For example, Microsoft Defender for Endpoint is required to contain an unmanaged device or isolate an onboarded workstation.</li></ul><li>Microsoft Defender for Endpoint device discovery is set to **Standard discovery** for the automatic **Contain device** action.</li><li>For attack disruption actions in [external platforms](#microsoft-sentinel-prerequisites-for-external-platforms-preview) such as Okta or AWS (preview): Microsoft Sentinel analytic workspace connected to the unified security operations portal with the relevant provider connector deployed.</li></ul>|
 |Permissions|To configure automatic attack disruption capabilities, you must have one of the following roles assigned in either Microsoft Entra ID (<https://portal.azure.com>) or in the Microsoft 365 admin center (<https://admin.microsoft.com>): <ul><li>Global Administrator</li><li>Security Administrator</li><li>User Administrator</li><li>Authentication Administrator</li><li>Privileged Authentication Administrator</li><li>Directory Writers</li> <li>Helpdesk Administrator</li><li>Security Operator</li></ul>To work with automated investigation and response capabilities, such as by reviewing, approving, or rejecting pending actions, see [Required permissions for Action center tasks](m365d-action-center.md#required-permissions-for-action-center-tasks).|
 
 ### Microsoft Defender for Endpoint prerequisites
 
 To support automatic attack disruption, Microsoft Defender for Endpoint requires a minimum Sense client version and proper automation settings for your device groups.
 
+#### Automatic device isolation prerequisites and safeguards (preview)
+
+Automatic device isolation works only on end-user workstations that are onboarded and managed by Microsoft Defender for Endpoint. Isolation blocks most network traffic while maintaining connectivity to required Defender for Endpoint security services. The action is scoped to devices involved in the incident and is automatically undone after a defined time window. Security operators can release the device earlier.
+
+If isolated devices need access to specific processes or destinations, configure [selective isolation exclusions](/defender-endpoint/network-isolation-exclusions). To prevent automatic attack disruption from isolating selected devices, configure [automatic attack disruption exclusions](automatic-attack-disruption-exclusions.md).
+
 #### Minimum Sense Client version (MDE client)
 
-The Minimum Sense Agent version required for the **Contain User** action to work is v10.8470. You can identify the Sense Agent version on a device by running the following PowerShell command: 
+The Sense Agent is the Microsoft Defender for Endpoint sensor component that runs on each device. The minimum Sense Agent version required for the **Contain User** action to work is v10.8470. You can identify the Sense Agent version on a device by running the following PowerShell commands.
+
+To verify that Microsoft Defender for Endpoint is installed and determine its installation path, query the registry:
 
 ```powershell
 Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Advanced Threat Protection\' -Name "InstallLocation"
 ```
 
-Or
+Alternatively, to confirm the installed sensor version by reading the MsSense DLL version from the registry, run the following command:
 
 ```powershell
 Get-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Advanced Threat Protection\Status' -Name "MsSenseDllVersion"
@@ -101,7 +111,7 @@ Microsoft Defender for Cloud Apps must be connected to Microsoft Office 365 thro
 
 
 > [!IMPORTANT]
-> To ensure full functionality of the capability, it is mandatory to properly configure the Microsoft 365 connector. As part of the setup process, all checkboxes within the Microsoft 365 connector must be selected, including the option to enable Microsoft Entra ID apps. Failure to select all required options may result in:
+> To ensure full functionality of the capability, it is mandatory to properly configure the Microsoft 365 connector. When configuring the Microsoft 365 connector in Defender for Cloud Apps, all checkboxes must be selected, including the option to enable Microsoft Entra ID apps. Failure to select all required options may result in:
 > - Partial or degraded functionality
 > - Inability to perform critical actions (such as app governance or disruption flows)
 > - Increased likelihood of operation failures 

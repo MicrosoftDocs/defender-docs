@@ -10,12 +10,12 @@ ms.collection:
   - tier1
   - mde-edr
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.subservice: edr
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 
 ai-usage: ai-assisted
 ---
@@ -24,7 +24,7 @@ ai-usage: ai-assisted
 
 The alert page in Microsoft Defender for Endpoint provides full context to the alert, by combining attack signals and alerts related to the selected alert, to construct a detailed alert story.
 
-Quickly triage, investigate, and take effective action on alerts that affect your organization. Understand why the alerts were triggered, and their impact from one location. Learn more in this overview.
+Quickly triage, investigate, and take effective action on alerts that affect your organization. Understand why the alerts were triggered, and their impact from one location. Learn more about alerts in [Investigate alerts in Microsoft Defender for Endpoint](investigate-alerts.md).
 
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=8a9c08a6-558c-47a8-a336-d748acbdaa80]
 

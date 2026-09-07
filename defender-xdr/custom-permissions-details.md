@@ -10,7 +10,8 @@ ms.collection:
 - tier3
 ms.custom:
 ms.topic: concept-article
-ms.date: 07/13/2025
+ms.date: 05/25/2026
+ai-usage: ai-assisted
 ms.reviewer:
 appliesto:
 - Microsoft Defender for Endpoint Plan 2
@@ -69,6 +70,17 @@ Permissions for managing the organization's security posture and performing vuln
 |Application handling|Manage|Manage vulnerable applications and software, including blocking and unblocking them in Defender Vulnerability Management.|
 |Security baseline assessment|Manage|Create and manage profiles so you can assess if your devices comply with security industry baselines.|
 |Exposure Management|Read / Manage|View or manage Exposure Management insights, including Microsoft Secure Score recommendations from all products that are covered by Secure Score.|
+
+## Security posture – AI code scan
+
+Permissions for running AI code scans and managing scan results.
+
+|Permission name|Level|Description|
+|---|---|---|
+|Run scan|Manage|Allows users to run AI code scans.|
+|Upload results|Manage|Allows users to upload AI code scan results to Defender.|
+|Scan results|Read|View AI code scan results.|
+|Scan results|Manage|Manage AI code scan results.|
 
 ## Authorization and settings
 

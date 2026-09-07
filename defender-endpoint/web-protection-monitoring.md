@@ -1,6 +1,6 @@
 ---
 title: Monitoring web browsing security in Microsoft Defender for Endpoint
-description: Use web protection in Microsoft Defender for Endpoint to monitor web browsing security
+description: Monitor web browsing security in Microsoft Defender for Endpoint by using web protection reports in the Microsoft Defender portal. Learn about available threat detection metrics and summary views.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
@@ -11,13 +11,13 @@ ms.collection:
 - mde-asr
 ms.topic: how-to
 ms.subservice: asr
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Monitor web browsing security in Microsoft Defender for Endpoint
 
@@ -45,7 +45,7 @@ Web protection categorizes malicious and unwanted websites as:
 
 ## View the domain list
 
-Select a specific web threat category in the **Web threat protection summary** card to open the **Domains** page. This page displays the list of the domains under that threat category. The **Domains** page provides the following information for each domain:
+Select a specific web threat category in the **Web threat protection summary** card to open the **Domains** page. The **Domains** page displays the list of the domains under that threat category. The **Domains** page provides the following information for each domain:
 
 - **Access count** - number of requests for URLs in the domain
 - **Blocks** - number of times requests were blocked

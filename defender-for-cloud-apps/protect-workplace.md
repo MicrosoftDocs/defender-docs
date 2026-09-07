@@ -2,22 +2,24 @@
 title:       Protect your Workplace environment | Microsoft Defender for Cloud Apps
 description: Connect Workplace by Meta to Microsoft Defender for Cloud Apps with the API connector to monitor user activity and detect suspicious behavior.
 ms.topic:    how-to
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.reviewer: AmitMishaeli 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # How Defender for Cloud Apps helps protect your Workplace environment (Preview)
 
 
 
-Workplace by Meta is an online collaboration software tool developed by Meta that facilitates online group work, instant messaging, video conferencing, and news sharing in one place. Along with the benefits of effective collaboration in the cloud, your organization's most critical assets may be exposed to threats. Exposed assets include messages, posts, and files with potentially sensitive information, collaboration, partnership details, and more. Preventing exposure of this data requires continuous monitoring to prevent any malicious actors or security-unaware insiders from exfiltrating sensitive information.
+Workplace by Meta is a collaboration tool built by Meta. It brings group work, instant messaging, video calls, and news sharing into one place. Cloud collaboration has many benefits, but it can also expose critical assets to threats. These assets include messages, posts, and files that might contain sensitive data or partnership details. You need continuous monitoring to stop malicious actors or careless insiders from leaking this data.
 
-Connecting Workplace by Meta to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection for anomalous behavior.
+Connect Workplace by Meta to Defender for Cloud Apps to get better insights into user activity and detect unusual behavior.
 
 <a name="main-threats"></a>
 ## Main threats to Workplace by Meta
+
+The main threats to Workplace by Meta include the following:
 
 - Compromised accounts and insider threats
 - Insufficient security awareness
@@ -43,7 +45,7 @@ For more information about creating policies, see [Create a policy](control-clou
 
 ## Automate governance controls
 
-In addition to monitoring for potential threats, you can apply and automate the following Workplace governance actions to remediate detected threats:
+Beyond monitoring for threats, you can also automate Workplace governance actions to fix detected issues:
 
 | Type | Action |
 | ---- | ---- |
@@ -58,7 +60,7 @@ Review our best practices for [securing and collaborating with external users](b
 <a name="saas-security-posture-management-preview"></a>
 ## SaaS security posture management for Workplace by Meta (Preview)
 
-[Connect Workplace](#connect-workplace-to-microsoft-defender-for-cloud-apps) to automatically get security posture recommendations for Workplace in Microsoft Secure Score. In Secure Score, select **Recommended actions** and filter by **Product** = **Workplace**. Workplace supports security recommendations to *Adopt SSO (Single sign on) in Workplace by Meta*.
+When you connect Workplace by Meta to Defender for Cloud Apps using the API connector, you automatically get security posture recommendations for Workplace in Microsoft Secure Score. In Secure Score, select **Recommended actions** and filter by **Product** = **Workplace**. Workplace supports security recommendations to *Adopt SSO (Single sign on) in Workplace by Meta*.
 
 For more information, see:
 
@@ -66,9 +68,10 @@ For more information, see:
 - [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)
 
 
-## Connect Workplace to Microsoft Defender for Cloud Apps
+<a name="connect-workplace-to-microsoft-defender-for-cloud-apps"></a>
+## Connect Workplace by Meta to Microsoft Defender for Cloud Apps
 
-This section describes the current support status for connecting Workplace by Meta to Defender for Cloud Apps using the API connector.
+The following information describes the current support status for connecting Workplace by Meta to Defender for Cloud Apps using the API connector.
 
 > [!NOTE]
 > Due to the [Workplace from Meta planned deprecation notice](https://www.workplace.com/help/work/1167689491269151) by Meta of Workplace from Meta, we no longer support new connections to the Workplace from Meta API connector. If you have an existing Workplace from Meta connection, it will continue to work as expected.

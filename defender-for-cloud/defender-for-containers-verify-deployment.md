@@ -2,8 +2,9 @@
 title: Verify Defender for Containers deployment
 description: Learn how to verify that Microsoft Defender for Containers sensors and extensions are running correctly on Kubernetes clusters.
 ms.topic: how-to
-ms.date: 03/12/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Verify Defender for Containers deployment
@@ -104,7 +105,7 @@ Confirm that the Defender sensor pods are in a `Running` state.
 
 ## Verify the Defender DaemonSet (Arc-enabled clusters and Helm)
 
-You can also verify that the Defender DaemonSet is deployed correctly.
+For Arc-enabled clusters and Helm deployments, the Defender collectors run as a Kubernetes DaemonSet, which ensures a pod is scheduled on each node. You can verify that the DaemonSet is deployed correctly:
 
 ```bash
 kubectl get ds -n mdc microsoft-defender-collectors-ds

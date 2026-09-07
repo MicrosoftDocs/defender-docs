@@ -2,15 +2,15 @@
 title: Add Defender for Cloud data to Power BI
 description: Learn how to connect Power BI to Microsoft Defender for Cloud to gain enhanced value from the data collected by Defender for Cloud.
 ms.topic: how-to
-ms.date: 05/24/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 #customer intent: As a user, I want to learn how to connect Power BI to Microsoft Defender for Cloud so that I can gain enhanced value from the data collected by Defender for Cloud.
 ---
 
 # Add Defender for Cloud data to Power BI
 
-Connect Microsoft Defender for Cloud data to Microsoft Power BI to monitor and analyze your security metrics. This integration helps you visualize security insights and identify potential threats and vulnerabilities quickly. This article explains how to connect Defender for Cloud data to Power BI so you can turn complex security information into clear, actionable insights.
+You can connect Microsoft Defender for Cloud data to Microsoft Power BI. Use this setup to track security metrics and spot threats. This article shows how to link Defender for Cloud to Power BI and create clear visuals from your security data. Before you begin, review the [prerequisites](#prerequisites) to ensure you have the required setup and permissions.
 
 ## Prerequisites
 
@@ -38,13 +38,13 @@ To connect Power BI to Azure Resource Graph:
 
 ## Query Defender for Cloud data into Power BI
 
-To query Defender for Cloud data into Power BI:
+Use Azure Resource Graph queries in Power BI to retrieve Defender for Cloud data. To query Defender for Cloud data into Power BI:
 
 ### Run Defender for Cloud queries
 
 Once Power BI Desktop is connected to Azure Resource Graph, you can use Azure Resource Graph to query various data sources from Defender for Cloud into Power BI.
 
-The queries on this page are examples that return sample results. Azure Resource Graph supports many data queries, and you can customize them to meet your requirements.
+The following sample queries are examples that return sample results. Azure Resource Graph supports many data queries, and you can customize them to meet your requirements.
 
 1. Copy and paste one of the provided queries into the query editor in Power BI Desktop.
 

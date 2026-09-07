@@ -1,15 +1,17 @@
 ---
 title: Map container images from code to runtime
-description: Learn how to map your container images from code to cloud.
-ms.date: 05/24/2026
+description: Learn how Microsoft Defender for Cloud maps container images from CI/CD pipelines to registries and Kubernetes runtime so teams can trace vulnerabilities back to the right developer and remediate faster.
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: ignite-2023
+ms.custom: ignite-2023, msecd-doc-authoring-1013
 ai-usage: ai-assisted
 ---
 
 # Map container images from code to runtime
 
 When Defender for Cloud finds a vulnerability in a container image, it can be hard to trace that image back to the original CI/CD pipeline run. This challenge is common whether the image is in a container registry or running in a Kubernetes cluster. Without pipeline context, it's harder to find the right developer and start remediation quickly. Defender Cloud Security Posture Management (CSPM) includes DevOps security capabilities that map container workloads from code to cloud, so teams can start remediation faster.
+
+This article explains the available mapping methods, the prerequisites for each, and how to verify the resulting code-to-runtime mapping in the Azure portal. Before you begin, make sure the required Defender CSPM or Defender for Containers prerequisites are met.
 
 ## Code to runtime – technical prerequisites
 
@@ -29,14 +31,14 @@ The following prerequisites apply regardless of the mapping method used:
 
 ### Option 1: Connect your code environment to Defender for Cloud
 
-When you connect your code environment to Defender for Cloud, a set of automated tools is triggered automatically. These tools do **not** affect your existing DevOps workflows and enable code-to-runtime mapping.
+When you connect an Azure DevOps or GitHub environment to Defender for Cloud, a set of automated tools is triggered automatically. The automated tools do **not** affect your existing DevOps workflows and enable code-to-runtime mapping.
 
 >[!NOTE]
 >
 > - Currently supported for **Azure DevOps** and **GitHub**
 > - Container images built and deployed **prior** to connecting may have limited support
 
-For setup steps, see:
+For steps to connect a code environment to Defender for Cloud, see:
 
 - [Connect Azure DevOps to Defender for Cloud](quickstart-onboard-devops.md)
 - [Connect GitHub to Defender for Cloud](quickstart-onboard-github.md)
@@ -45,7 +47,7 @@ For setup steps, see:
 
 Docker labels-based mapping relies on metadata that is embedded directly in the container image at build time. Defender for Cloud extracts this metadata from the OCI/Docker image manifest and uses it to correlate the image to its source repository.
 
-For more information, see:
+For more information about Docker labels-based mapping, see:
 
 - [OCI Docker image annotations specification](https://github.com/opencontainers/image-spec/blob/main/annotations.md)
 - [Add OCI/Docker labels in Azure DevOps](/azure/devops/pipelines/tasks/reference/docker-v2)
@@ -54,22 +56,22 @@ For more information, see:
 
 >[!NOTE]
 >
->- This method does **not** require a DevOps connector.
+>- Docker labels-based mapping does **not** require a DevOps connector.
 >- Mapping is performed for Kubernetes environments covered by Defender CSPM or Defender for Containers.
 
 ### Option 3: GitHub attestations-based mapping
 
 Attestation-based mapping uses **cryptographically verifiable provenance metadata** generated during GitHub Actions workflows. These attestations link container images to their exact source repository, commit, and build identity.
 
-For more information, see:
+For more information about attestation-based mapping, see:
 
 - [Using artifact attestations to establish provenance for builds – GitHub Docs](https://docs.github.com/en/actions/how-tos/secure-your-work/use-artifact-attestations/use-artifact-attestations)
 
 ## Verify your code to runtime mapping (Azure portal)
 
-After building a container image in an Azure DevOps CI/CD pipeline and pushing it to a registry, use [Cloud Security Explorer](how-to-manage-cloud-security-explorer.md) to view the mapping:
+Regardless of which mapping method you use (DevOps connector, Docker labels, or GitHub attestations), you can verify the resulting code-to-runtime mapping in the Azure portal. The following example shows how to view mapping results after building a container image in an Azure DevOps CI/CD pipeline and pushing it to a registry. Use [Cloud Security Explorer](how-to-manage-cloud-security-explorer.md) to view the mapping:
 
-1. Sign in to the Azure portal at [portal.azure.com](https://portal.azure.com/).
+1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Go to **Microsoft Defender for Cloud** > **Cloud Security Explorer**. Container image mapping can take up to four hours to appear.
 

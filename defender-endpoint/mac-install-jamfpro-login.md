@@ -12,16 +12,19 @@ ms.collection:
 - mde-macos
 ms.topic: how-to
 ms.subservice: macos
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 
 ai-usage: ai-assisted
 ---
 # Sign in to Jamf Pro to set up Microsoft Defender for Endpoint on macOS
 
+## Sign in and open Computer settings in Jamf Pro
+
+To begin configuring devices for Microsoft Defender for Endpoint on macOS, sign in to Jamf Pro and navigate to the Computers area.
 
 1. Sign in to the Jamf Pro portal with your administrator credentials.
 
@@ -38,9 +41,9 @@ ai-usage: ai-assisted
 
 ## Next step
 
-After you sign in, set up the device groups:
+After you open Computer settings in Jamf Pro, continue with device group configuration:
 
-> [Setup the device groups in Jamf Pro](mac-jamfpro-device-groups.md)
+> [Set up the device groups in Jamf Pro](mac-jamfpro-device-groups.md)
 
 
 

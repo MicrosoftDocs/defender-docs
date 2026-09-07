@@ -1,14 +1,14 @@
 ---
 title: Discover and manage devices in the device inventory for Microsoft Defender for IoT in the Defender portal
-description: This article describes how to discover and manage devices in the device inventory for Microsoft Defender for IoT in the Defender portal.
+description: Use the device inventory in Microsoft Defender for IoT to find OT devices, filter and explore inventory data, investigate device details, and manage device site associations in the Defender portal.
 ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/11/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1013
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Discover and manage devices
@@ -61,4 +61,6 @@ Use the following options to manage OT devices from the device inventory:
 
 ## Next steps
 
-[Prioritize and remediate vulnerabilities](prioritize-vulnerabilities.md)
+After you set up and manage your device inventory, prioritize and address security gaps:
+
+- [Prioritize and remediate vulnerabilities](prioritize-vulnerabilities.md)

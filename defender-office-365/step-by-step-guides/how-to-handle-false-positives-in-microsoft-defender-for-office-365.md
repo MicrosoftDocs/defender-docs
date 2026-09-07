@@ -11,8 +11,8 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.custom: msecd-doc-authoring-1014
-ms.date: 06/12/2026
+ms.custom: msecd-doc-authoring-1016
+ms.date: 08/03/2026
 #customer intent: As a mail admin, I want to resolve false positives in Defender for Office 365 so that legitimate email isn't blocked or delivered to Junk.
 ---
 
@@ -37,7 +37,7 @@ Before you begin troubleshooting, identify whether the false positive is spam-re
 - Legitimate bulk email (newsletters, marketing) is marked as spam.
 - Messages are delivered to the **Junk Email** folder instead of the Inbox.
 - Messages are quarantined as spam (not phishing or malware).
-- Message headers show a high Spam Confidence Level (SCL 5-9) or Bulk Complaint Level (BCL 7-9).
+- Message headers show a high Bulk Complaint Level (BCL 7-9).
 - Message headers show `SFV:SPM` (spam filter verdict).
 
 **Use the phishing/malware false positive steps in this article if**:
@@ -58,10 +58,10 @@ Look for these key values in the **X-Forefront-Antispam-Report** header:
 
 |Value|Description|Implication|
 |---|---|---|
-|`SCL:5` or `SCL:6`|Medium spam probability|Delivered to Junk Email folder|
-|`SCL:7`, `SCL:8`, or `SCL:9`|High confidence spam|Delivered to Junk Email folder (default) or quarantined (preset security policies)|
+|`SFV:SPM`|Spam filtering verdict|Spam filtering processed the message. Use the `CAT` value to determine whether the message was identified as spam, phishing, or malware.|
+|`CAT:SPM`|Category: spam|Delivered to Junk Email folder by default|
+|`CAT:HSPM`|Category: high confidence spam|Quarantined by default|
 |`BCL:7` to `BCL:9`|High bulk complaint level|Likely blocked by bulk mail threshold|
-|`SFV:SPM`|Spam filter verdict: spam|Message flagged as spam by content filters|
 |`SFV:BLK`|Blocked sender|Sender is on the user's Blocked Senders list in Outlook|
 
 <!-- Does SFV:BLK also appear for Tenant Allow/Block List block entries? The official anti-spam headers doc only associates SFV:BLK with the user's Blocked Senders list, but support case data may show otherwise. If TABL blocks also stamp SFV:BLK, update this table and Step 2 accordingly. -->
@@ -73,29 +73,29 @@ Based on the header values, determine what caused the false positive:
 - **Tenant Allow/Block List block entry**: Check the [email entity page](../mdo-email-entity-page.md) overrides information, or check the Tenant Allow/Block List directly for block entries that match the sender.
 - **User's Blocked Senders list**: Look for `SFV:BLK` in the message headers.
 - **Exchange mail flow rule (transport rule)**: Look for the `X-MS-Exchange-Organization-RuleID` header.
-- **Anti-spam policy settings**: A high SCL score (5+) or BCL threshold exceeded.
+- **Anti-spam policy settings**: A **Spam** or **High confidence spam** verdict (`SFV:SPM` with `CAT:SPM` or `CAT:HSPM`), or the BCL threshold is exceeded.
 - **Connection filter (IP block list)**: Check the [connection filter policy settings](../connection-filter-policies-configure.md) for the sending IP address in the IP Block List.
 
 ### Step 3: Apply the appropriate fix
 
-Based on the source you identified, apply the correct resolution:
+Based on the false-positive source identified in the message headers or policy checks, apply the corresponding resolution:
 
 |Source identified|Recommended fix|
 |---|---|
 |Tenant Allow/Block List block entry|Remove the block entry or [create an allow entry for the sender](../tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-domains-and-email-addresses).|
 |User's Blocked Senders list|Remove the sender from the user's [Blocked Senders list in Outlook](../configure-junk-email-settings-on-exo-mailboxes.md) or use an admin allow override.|
 |IP block list|Add the sending IP to the [connection filter IP Allow List](../connection-filter-policies-configure.md).|
-|Anti-spam policy (high SCL)|[Tune the anti-spam policy](../anti-spam-policies-configure.md). For example, increase the BCL threshold or adjust the spam action.|
+|Anti-spam policy (spam verdict)|[Tune the anti-spam policy](../anti-spam-policies-configure.md). For example, increase the BCL threshold or adjust the spam action.|
 |Mail flow rule|Modify the [mail flow rule conditions in Exchange](/exchange/security-and-compliance/mail-flow-rules/mail-flow-rules) or add exceptions for the affected sender.|
 |Spam filtering error (no organization configuration issue)|[Submit the message to Microsoft for analysis](../submissions-admin.md#report-good-email-to-microsoft) as a false positive.|
 
 ### Step 4: Validate the fix
 
-After you apply the fix, confirm that the issue is resolved:
+After you apply the selected remediation, confirm that the false-positive spam classification is resolved:
 
 1. Ask the sender to send a test message with the same content type and sender domain.
 1. Use [message trace](../message-trace-defender-portal.md) to verify the message was delivered to the Inbox.
-1. Check the message headers to confirm the SCL value is lower or the spam verdict is no longer applied.
+1. Check the message headers to confirm the spam verdict is no longer applied (for example, `SFV:NSPM` or `CAT:NONE`).
 
 > [!TIP]
 > Allow 15-30 minutes for policy changes to take effect. Mail flow rule changes might take up to one hour due to caching.
@@ -106,28 +106,29 @@ The following table describes common scenarios and recommended approaches:
 
 |Scenario|Key indicators|Recommended approach|
 |---|---|---|
-|Legitimate newsletter or marketing email consistently quarantined|High BCL (7-9), high SCL (5-9), `SFV:SPM`|Increase the [Bulk Complaint Level (BCL) threshold](../anti-spam-policies-configure.md) (the default value is 7). Or, [submit the messages to Microsoft for analysis](../submissions-admin.md#report-good-email-to-microsoft) and create an allow entry for the sender during the submission.|
+|Legitimate bulk newsletter or marketing email consistently quarantined|High BCL (7-9), `CAT:BULK`|Increase the [Bulk Complaint Level (BCL) threshold](../anti-spam-policies-configure.md) (the default value is 7).|
+|Legitimate newsletter or marketing email identified as spam or high confidence spam|`CAT:SPM` or `CAT:HSPM`|[Submit the messages to Microsoft for analysis](../submissions-admin.md#report-good-email-to-microsoft) and create an allow entry for the sender during the submission.|
 |All email from a specific partner domain is blocked|Sender found in the Tenant Allow/Block List (check the [email entity page](../mdo-email-entity-page.md) or the Tenant Allow/Block List directly)|Remove the block entry or [create an allow entry for the domain](../tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-domains-and-email-addresses).|
 |Marketing automation platform email blocked (Marketo, HubSpot, Mailchimp, etc.)|High BCL, possible email authentication failures|Verify the sender's SPF/DKIM/DMARC configuration. If authentication passes but filtering still triggers, increase the BCL threshold or add the sending domain to the allow list.|
 |Forwarded emails quarantined as spoofing|DMARC failure, spoof detection triggered|Configure [ARC trusted sealers](../email-authentication-arc-configure.md) for the forwarding service, or add a [spoof intelligence override](../anti-spoofing-spoof-intelligence.md) for the sender/infrastructure pair.|
 
 ### Troubleshoot fixes that aren't working
 
-If your fix doesn't resolve the issue, check for the following common causes:
+If the selected remediation doesn't resolve the false-positive spam classification, check for the following common causes:
 
 - **Propagation delay**: Allow 15-30 minutes for anti-spam policy changes and up to one hour for mail flow rule changes.
 - **Policy precedence conflict**: A higher-priority policy (preset security policy) might override your custom policy settings. For details, see [Troubleshoot anti-spam policy issues](../anti-spam-policies-troubleshooting.md).
 - **Multiple detection reasons**: The message triggered more than one detection (for example, spam _and_ spoof detection). Resolving one cause might not be enough.
 - **Allow entry expired or incorrect**: Verify the [Tenant Allow/Block List entry](../tenant-allow-block-list-email-spoof-configure.md) is active, not expired, and uses the correct format (email address vs. domain).
-- **Mail flow rule override**: Mail flow rules are evaluated before anti-spam policies. A mail flow rule that sets the SCL overrides the anti-spam policy action. Check for rules that set SCL or delete messages.
+- **Mail flow rule action**: Mail flow rules can request that messages [bypass spam filtering](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl). Spam filtering considers the request with other signals when it determines how to handle the message. Mail flow rules can also delete messages.
 
 ## Handle phishing and malware false positives
 
-Use the following steps when legitimate email is incorrectly detected as phishing, malware, or another non-spam threat.
+Use the phishing, malware, and non-spam false-positive remediation steps in this section when legitimate email is incorrectly detected as phishing, malware, or another non-spam threat.
 
 ### Legitimate emails delivered to the Junk Email folder
 
-Follow these steps when messages are delivered but land in the wrong folder.
+Follow the end-user and admin remediation steps in this subsection when messages are delivered but land in the wrong folder.
 
 #### End user actions
 
@@ -136,7 +137,8 @@ End users can try the following actions to correct messages that were delivered 
 1. Report the email as **Not junk** by using the [built-in **Report** button in supported versions of Outlook](../submissions-outlook-report-messages.md#use-the-built-in-report-button-in-outlook).
 1. Optionally, add the sender to the [Safe Senders list](https://support.microsoft.com/office/add-recipients-to-the-safe-senders-list-in-outlook-be1baea0-beab-4a30-b968-9004332336ce) in Outlook to prevent future messages from that sender from going to Junk Email.
 
-#### Admin actions
+<a name="admin-actions"></a>
+#### Actions admins can take for legitimate emails in Junk Email
 
 Admins can use the following process to investigate and remediate these reports:
 
@@ -146,7 +148,7 @@ Admins can use the following process to investigate and remediate these reports:
    > In organizations with Defender for Office 365 Plan 2 and Security Copilot, the [Phishing Triage Agent](/defender-xdr/phishing-triage-agent) can autonomously triage and classify user-reported phishing emails, reducing manual investigation work for security teams.
 
 1. [Submit the messages to Microsoft for analysis](../submissions-admin.md#notify-users-about-admin-submitted-messages-to-microsoft) to understand why the email was blocked.
-1. If needed, while submitting to Microsoft for analysis, [create an allow entry for the sender](../tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-domains-and-email-addresses) to mitigate the problem.
+1. If needed, while submitting to Microsoft for analysis, [create an allow entry for the sender](../tenant-allow-block-list-email-spoof-configure.md#create-allow-entries-for-domains-and-email-addresses) to mitigate the false positive.
 1. After the submission results are available, read the verdict on the **Submissions** page to understand why the emails were blocked.
 1. Use the results to improve your organization's configuration and _prevent_ similar false positives in the future.
 
@@ -163,8 +165,8 @@ Admins can release quarantined messages and submit them to Microsoft for analysi
 
 1. View quarantined emails (including messages where users requested release) from the [admin quarantine review page for messages and files](../quarantine-admin-manage-messages-files.md).
 1. [Release messages from quarantine while submitting them to Microsoft for analysis](../quarantine-admin-manage-messages-files.md#release-quarantined-email). You can also create a temporary allow entry in the Tenant Allow/Block List during the submission to mitigate the issue.
-1. After submission results are available, [read the Microsoft submission verdict results](../submissions-admin.md#results-from-microsoft) to understand the reason for the detection.
-   - If false positives are due to organization configuration, correct the configuration to mitigate the issue.
+1. After submission results are available, [read the Microsoft submission verdict results](../submissions-admin.md#results-from-microsoft) to understand why the message was detected as phishing, malware, or spoofing.
+   - If false positives are due to your organization's mail-flow, anti-spam, or spoof-protection configuration, correct those settings to mitigate the false positive.
    - If false positives are due to other factors, Microsoft learns from the submission and similar messages aren't quarantined anymore.
 
 > [!NOTE]
@@ -175,7 +177,7 @@ Admins can release quarantined messages and submit them to Microsoft for analysi
 Externally forwarded emails or legitimate cross-domain senders can trigger spoof detection because the sending infrastructure doesn't match the From address domain. If you see forwarded or non-Microsoft emails blocked as spoofing:
 
 - Review the [spoof intelligence insight and configure overrides](../anti-spoofing-spoof-intelligence.md) for legitimate sender/infrastructure pairs.
-- If your organization receives mail through an intermediary (mailing list, forwarding service, or email gateway), configure [ARC trusted sealers](../email-authentication-arc-configure.md) so messages preserve authentication through the relay.
+- If your organization receives mail through an intermediary (mailing list, forwarding service, or email gateway), configure Authenticated Received Chain (ARC) [trusted sealers](../email-authentication-arc-configure.md) so messages preserve authentication through the relay.
 - Ask the external sender to fix their SPF, DKIM, and DMARC records to align with their sending infrastructure.
 
 ## Related content

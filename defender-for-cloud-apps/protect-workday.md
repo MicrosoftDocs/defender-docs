@@ -1,10 +1,10 @@
 ---
 title: Protect your Workday environment | Microsoft Defender for Cloud Apps
 description: Connect Workday to Microsoft Defender for Cloud Apps with the API connector to monitor user activity and detect anomalous behavior.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli 
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 # How Defender for Cloud Apps helps protect your Workday environment
@@ -12,9 +12,10 @@ ai-usage: ai-assisted
 
 As a major HCM solution, Workday holds some of the most sensitive information in your organization such as employees' personal data, contracts, vendor details, and more. Preventing exposure of this data requires continuous monitoring to prevent any malicious actors or security unaware insiders from exfiltrating the sensitive information.
 
-Connecting Workday to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection for anomalous behavior.
+Connecting Workday to Defender for Cloud Apps gives you improved insights into your users' activities and provides threat detection for anomalous behavior. Before you begin, review the [prerequisites](#prerequisites) for connecting Workday to Defender for Cloud Apps.
 
-## Main threats
+<a name="main-threats"></a>
+## Main threats to your Workday environment
 
 Workday deployments commonly face the following threats:
 
@@ -39,11 +40,11 @@ You can use the following built-in policy templates to detect and notify you abo
 | Built-in anomaly detection policy | [Activity from anonymous IP addresses](anomaly-detection-policy.md#activity-from-anonymous-ip-addresses)<br />[Activity from infrequent country](anomaly-detection-policy.md#activity-from-infrequent-country)<br />[Activity from suspicious IP addresses](anomaly-detection-policy.md#activity-from-suspicious-ip-addresses)<br />[Impossible travel](anomaly-detection-policy.md#impossible-travel) |
 | Activity policy template | Logon from a risky IP address |
 
-For more information about creating policies, see [Create a policy](control-cloud-apps-with-policies.md#create-a-policy).
+For more information about creating policies, see [Create a policy for controlling cloud apps](control-cloud-apps-with-policies.md#create-a-policy).
 
 ## Automate governance controls
 
-Currently, there are no governance controls available for Workday. If you are interested in having governance actions for this connector, you can [open a Microsoft Defender support ticket](/defender-xdr/contact-defender-support) with details of the actions you want.
+Currently, there are no governance controls available for Workday. If you are interested in having governance actions for this connector, you can [contact Microsoft Defender support](/defender-xdr/contact-defender-support) with details of the actions you want.
 
 For more information about remediating threats from apps, see [Governing connected apps](governance-actions.md).
 
@@ -54,14 +55,15 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## Connect Workday to Microsoft Defender for Cloud Apps
 
-The following instructions explain how to connect Microsoft Defender for Cloud Apps to your existing Workday account using the app connector API. This connection gives you visibility into and control over Workday use. For information about how Defender for Cloud Apps protects Workday, see [Protect Workday](protect-workday.md).
+The following instructions explain how to connect Microsoft Defender for Cloud Apps to your existing Workday account using the app connector API. Connecting Defender for Cloud Apps to your Workday account through the app connector API gives you visibility into and control over Workday use. For information about how Defender for Cloud Apps protects Workday, see [Protect Workday](protect-workday.md).
 
-### Quick start
+<a name="quick-start"></a>
+### Quick start: Connect Workday to Defender for Cloud Apps
 
-Watch our quick start video showing how to configure the prerequisites and perform the steps in Workday. Once you've completed the steps in the video, you can proceed to add the Workday connector.
+Watch our quick start video showing how to configure the prerequisites and perform the steps in Workday. Once you've completed the Workday prerequisite and configuration steps shown in the quick start video, you can proceed to add the Workday connector.
 
 > [!NOTE]
-> The video does not show the prerequisite step for configuring the security group **Set Up: Tenant Setup –  System** permission. Make sure you configure it as well.
+> The video does not show the prerequisite step for configuring the security group **Set Up: Tenant Setup –  System** permission. Make sure you configure the **Set Up: Tenant Setup –  System** permission as well.
 
 <br />
 
@@ -143,7 +145,7 @@ Complete the following steps in Microsoft Defender for Cloud Apps to add the Wor
 
     ![Screenshot of the Workday app connector setup page with the connector instance name field.](media/connect-workday-add-app-connect.png)
 
-1. On the **Enter details** page, fill out the details with the information you noted earlier, and then select **Next**.
+1. On the **Enter details** page, enter the Client ID, Client Secret, Workday REST API Endpoint, Token Endpoint, and Authorization Endpoint values that you noted during Workday API client registration, and then select **Next**.
 
     ![Screenshot of the Workday connector Enter details page with Client ID, Client Secret, and endpoint fields.](media/connect-workday-add-app-connect-details.png)
 

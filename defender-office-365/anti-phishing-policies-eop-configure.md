@@ -9,11 +9,11 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - sfi-ga-nochange
 description: Admins can learn how to create, modify, and delete the anti-phishing policies for all cloud mailboxes.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
 ai-usage: ai-assisted
@@ -198,7 +198,7 @@ Use the following steps to enable, disable, delete, or modify anti-phishing poli
 
      :::image type="content" source="media/anti-phishing-policies-details-flyout.png" alt-text="The details flyout of a custom anti-phishing policy." lightbox="media/anti-phishing-policies-details-flyout.png":::
 
-These actions are described in the following sections: [Modify anti-phishing policies](#use-the-microsoft-defender-portal-to-modify-anti-phishing-policies), [Enable or disable custom anti-phishing policies](#use-the-microsoft-defender-portal-to-enable-or-disable-custom-anti-phishing-policies), [Set the priority of custom anti-phishing policies](#use-the-microsoft-defender-portal-to-set-the-priority-of-custom-anti-phishing-policies), and [Remove custom anti-phishing policies](#use-the-microsoft-defender-portal-to-remove-custom-anti-phishing-policies).
+The modify, enable or disable, set priority, and remove actions are described in the following sections: [Modify anti-phishing policies](#use-the-microsoft-defender-portal-to-modify-anti-phishing-policies), [Enable or disable custom anti-phishing policies](#use-the-microsoft-defender-portal-to-enable-or-disable-custom-anti-phishing-policies), [Set the priority of custom anti-phishing policies](#use-the-microsoft-defender-portal-to-set-the-priority-of-custom-anti-phishing-policies), and [Remove custom anti-phishing policies](#use-the-microsoft-defender-portal-to-remove-custom-anti-phishing-policies).
 
 ### Use the Microsoft Defender portal to modify anti-phishing policies
 
@@ -230,7 +230,7 @@ On the **Anti-phishing** page, the **Status** value of the policy is now **On** 
 
 Anti-phishing policies are processed in the order they're displayed on the **Anti-phishing** page:
 
-- The anti-phishing policy named **Strict Preset Security Policy** that's associated with the Strict preset security policy is always applied first (if the Strict preset security policy is [assigned to users](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users)).
+- The anti-phishing policy named **Strict Preset Security Policy** that's associated with the Strict preset security policy is always applied first (if the Strict preset security policy is [assigned to users in the Defender portal](preset-security-policies.md#use-the-microsoft-defender-portal-to-assign-standard-and-strict-preset-security-policies-to-users)).
 - The anti-phishing policy named **Standard Preset Security Policy** that's associated with the Standard preset security policy is always applied next (if the Standard preset security policy is enabled).
 - Custom anti-phishing policies are applied next in priority order (if they're enabled):
   - A lower priority value indicates a higher priority (0 is the highest).
@@ -253,6 +253,9 @@ Back on the **Anti-phishing** page, the order of the policy in the list matches 
 ### Use the Microsoft Defender portal to remove custom anti-phishing policies
 
 You can't remove the default anti-phishing policy or the anti-phishing policies named **Standard Preset Security Policy** and **Strict Preset Security Policy** that are associated with [preset security policies](preset-security-policies.md).
+
+> [!WARNING]
+> Deleting a custom anti-phishing policy permanently removes it from the policy list. Review the policy carefully before you continue.
 
 After you select the custom anti-phishing policy, use either of the following methods to remove it:
 
@@ -283,6 +286,8 @@ In Exchange Online PowerShell, the difference between anti-phish policies and an
 - When you remove an anti-phish policy from PowerShell, the corresponding anti-phish rule isn't automatically removed, and vice versa.
 
 ### Use PowerShell to create anti-phishing policies
+
+Use the following steps to create an anti-phishing policy and its associated rule in Exchange Online PowerShell.
 
 Creating an anti-phishing policy in PowerShell is a two-step process:
 
@@ -480,6 +485,9 @@ Set-AntiPhishRule -Identity "Marketing Department" -Priority 2
 
 When you use PowerShell to remove an anti-phish policy, the corresponding anti-phish rule isn't removed.
 
+> [!WARNING]
+> Removing an anti-phish policy is permanent and doesn't remove the associated anti-phish rule. An orphaned anti-phish rule has no effect, but you should remove it separately to avoid confusion.
+
 To remove an anti-phish policy in PowerShell, use this syntax:
 
 ```powershell
@@ -497,6 +505,9 @@ For detailed syntax and parameter information, see [Remove-AntiPhishPolicy](/pow
 ### Use PowerShell to remove anti-phish rules
 
 When you use PowerShell to remove an anti-phish rule, the corresponding anti-phish policy isn't removed.
+
+> [!WARNING]
+> Removing an anti-phish rule is permanent. The associated anti-phish policy isn't automatically removed and no longer applies to any recipients. Remove the orphaned anti-phish policy separately if it's no longer needed.
 
 To remove an anti-phish rule in PowerShell, use this syntax:
 

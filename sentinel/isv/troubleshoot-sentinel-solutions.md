@@ -120,5 +120,5 @@ For Microsoft Sentinel SIEM components, see: [Audit Microsoft Sentinel queries a
 
 ## Related content 
 
-- [Guidance on publishing high quality solutions for Microsoft Sentinel](sentinel-solution-quality-guidance.md)
-- [Best practices for partners integrating with Microsoft Sentinel](partner-integrations.md)
+- [Microsoft Sentinel SIEM solution quality guidelines](sentinel-siem-solution-quality-guidance.md)
+- [Decide which components to include in your solution](siem-components-to-include.md)

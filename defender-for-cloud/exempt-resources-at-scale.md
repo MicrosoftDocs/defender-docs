@@ -1,8 +1,9 @@
 ---
 title: Exempt resources at scale
-description: Learn how to create exemptions for how policies are applied to resources in Microsoft Defender for Cloud.
+description: Create exemptions at scale in Microsoft Defender for Cloud to exclude resources or recommendations from unhealthy status and secure score impact across subscriptions or management groups.
 ms.topic: how-to
-ms.date: 06/02/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to create exemptions at scale so I can manage recommendation scope consistently.
 ai-usage: ai-assisted
 ---

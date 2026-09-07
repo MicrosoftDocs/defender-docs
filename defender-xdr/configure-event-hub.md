@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier2
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender XDR
 ai-usage: ai-assisted
@@ -23,15 +23,15 @@ ai-usage: ai-assisted
 > [!NOTE]
 > **Try our new APIs using MS Graph security API**. Find out more at: [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview).
 
-Learn how to configure Azure Event Hubs so that your event hub namespace can ingest events from Microsoft Defender XDR.
+Learn how to configure Azure Event Hubs so that your event hub namespace can ingest events from Microsoft Defender XDR. This article walks you through registering the required resource provider, creating a Microsoft Entra app registration, setting up an Event Hubs namespace with the correct permissions, and configuring Microsoft Defender XDR to stream event data to your event hubs.
 
 ## Set up the required Resource Provider in the Event Hubs subscription
 
-Register the required resource provider in the Azure subscription where you plan to deploy Event Hubs.
+Register the resource provider in your Azure subscription for Event Hubs.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 1. Select **Subscriptions** > **{ Select the subscription the event hubs will be deployed to }** > **Resource providers**.
-1. Verify whether the **Microsoft.Insights** Provider is registered. Otherwise, register it.
+1. Check that **Microsoft.Insights** is registered. If not, register it.
 
 :::image type="content" source="media/configure-event-hub/f893db7a7b1f7aa520e8b9257cc72562.png" alt-text="The list of service providers page in the Microsoft Azure portal" lightbox="media/configure-event-hub/f893db7a7b1f7aa520e8b9257cc72562.png":::
 
@@ -39,13 +39,15 @@ Register the required resource provider in the Azure subscription where you plan
 
 ## Set up Microsoft Entra App Registration
 
+A service principal is the identity your app uses to access Azure resources. When you create an app registration, Azure automatically creates a service principal for it.
+
 > [!NOTE]
-> You must have Administrator role or Microsoft Entra ID must be set to allow non-Administrators to register apps. You must also have an Owner or User Access Administrator role to assign the service principal a role. For more information, see [Create a Microsoft Entra app & service principal in the portal - Microsoft identity platform](/azure/active-directory/develop/howto-create-service-principal-portal).
+> You need the Administrator role, or Microsoft Entra ID must allow non-admins to register apps. You also need an Owner or User Access Administrator role to assign a role to the service principal. For more information, see [Create a Microsoft Entra app & service principal in the portal - Microsoft identity platform](/azure/active-directory/develop/howto-create-service-principal-portal).
 
-1. Create a new registration (which inherently creates a service principal) in
-**Microsoft Entra ID** \> **App registrations** \> **New registration.**
+1. Create a new registration in
+**Microsoft Entra ID** \> **App registrations** \> **New registration.** This step also creates a service principal.
 
-1. Fill out the form with just the Name (no Redirect URI is required).
+1. Fill out the form with just the Name. No Redirect URI is required.
 
     :::image type="content" source="media/configure-event-hub/336bc84e6be23900c43232b4ef0c253c.png" alt-text="The application name display section in the Microsoft Azure portal" lightbox="media/configure-event-hub/336bc84e6be23900c43232b4ef0c253c.png":::
 
@@ -54,12 +56,12 @@ Register the required resource provider in the Azure subscription where you plan
 
 1. Create a secret by clicking on **Certificates & secrets** \> **New client secret**:
 
+    > [!WARNING]
+    > **You can view this client secret only once. Copy and save it before leaving this page.**
+
     :::image type="content" source="media/configure-event-hub/d2ef88d3d2310d2c60c294b569cdf02e.png" alt-text="The Client secret section in the Microsoft Azure portal" lightbox="media/configure-event-hub/d2ef88d3d2310d2c60c294b569cdf02e.png":::
 
-This client secret value is used by Microsoft Graph APIs to authenticate the Microsoft Entra app registration you created.
-
-> [!WARNING]
-> **You won't be able to access the client secret again so make sure to save it**.
+Microsoft Graph APIs use this client secret to authenticate your app registration.
 
 ## Set up Event Hubs namespace
 
@@ -67,14 +69,14 @@ Create an Event Hubs namespace and capture its Resource ID for use in the Micros
 
 1. Create an Event Hubs Namespace:
 
-    Go **to Event Hub \> Add** and select the pricing tier, throughput units and Auto-Inflate (requires standard pricing and under features) appropriate for the load you're expecting. For more information, see [Pricing - Event Hubs \| Microsoft Azure](https://azure.microsoft.com/pricing/details/event-hubs/).
+    Go to **Event Hub \> Add**. Select the pricing tier, throughput units, and Auto-Inflate settings for your expected load. Auto-Inflate requires standard pricing. For more information, see [Pricing - Event Hubs \| Microsoft Azure](https://azure.microsoft.com/pricing/details/event-hubs/).
 
     > [!NOTE]
-    > You can use an existing event-hub, but the throughput and scaling are set at the namespace level. Microsoft recommends to place an event-hub in its own namespace.
+    > You can use an existing event hub. However, throughput and scaling apply at the namespace level. Microsoft recommends placing each event hub in its own namespace.
 
    :::image type="content" source="media/configure-event-hub/ebc4ca37c342ad1da75c4aee4018e51a.png" alt-text="The event hubs section in the Microsoft Azure portal" lightbox="media/configure-event-hub/ebc4ca37c342ad1da75c4aee4018e51a.png":::
 
-1. You need the Resource ID of this Event Hubs Namespace. Go to your Azure Event Hubs namespace page \> Properties. Copy the text under Resource ID and record it for use during the Microsoft 365 Configuration.
+1. Get the Resource ID for this namespace. Go to your Event Hubs namespace page \> Properties. Copy the **Resource ID** value and save it for the Microsoft 365 configuration.
 
     :::image type="content" source="media/configure-event-hub/759498162a4e93cbf17c4130d704d164.png" alt-text="The event hubs properties section in the Microsoft Azure portal" lightbox="media/configure-event-hub/759498162a4e93cbf17c4130d704d164.png":::
 
@@ -94,6 +96,8 @@ Go to **Event Hub Namespace** \> **Access Control (IAM)** \> **Add** and verify 
 
 ## Set up Event Hubs
 
+You can send all selected event types to a single event hub or create a separate event hub for each event type. Choose the option that fits your needs.
+
 **Option 1:**
 
 You can create Event Hubs within your Namespace and **all** the Event Types (Tables) you select to export are written into this **one** Event Hub.
@@ -111,11 +115,11 @@ For example:
 
 :::image type="content" source="media/configure-event-hub/005c1f6c10c34420d387f594987f9ffe.png" alt-text="An event hubs section in the Microsoft Azure portal" lightbox="media/configure-event-hub/005c1f6c10c34420d387f594987f9ffe.png":::
 
-If you choose Option 2 (one event hub per event type), skip the manual event hub creation steps below and go directly to the "Configure Microsoft Defender XDR to send email tables" section, where you configure the export settings in the Defender portal.
+If you choose Option 2, don't manually create event hubs. Instead, skip to [Configure Microsoft Defender XDR to export email tables to Event Hubs](#configure-microsoft-365-defender-to-send-email-tables) to set up the export in the Defender portal. Microsoft Defender XDR creates the event hubs for you.
 
-Create Event Hubs within your Namespace by selecting **Event Hub** \> **+ Event Hub**.
+To create event hubs in your namespace, select **Event Hub** \> **+ Event Hub**.
 
-The Partition Count allows for more throughput via parallelism, so it's recommended to increase this number based on the load you're expecting. Default Message Retention and Capture values of 1 and Off are recommended.
+A higher partition count allows more throughput. Increase this value based on your expected load. Use the default values for Message Retention (1) and Capture (Off).
 
 :::image type="content" source="media/configure-event-hub/1db04b8ec02a6298d7cc70419ac6e6a9.png" alt-text="An event hubs creation section in the Microsoft Azure portal" lightbox="media/configure-event-hub/1db04b8ec02a6298d7cc70419ac6e6a9.png":::
 
@@ -125,33 +129,38 @@ For these Event Hubs (not namespace), you need to configure a Shared Access Poli
 
 <a name='configure-microsoft-365-defender-to-send-email-tables'></a>
 
-## Configure Microsoft Defender to send email tables
+<a name="configure-microsoft-defender-to-send-email-tables"></a>
+## Configure Microsoft Defender XDR to export email tables to Event Hubs
+
+After your Event Hubs namespace and event hubs are set up, configure Microsoft Defender XDR to export event data through Event Hubs.
 
 <a name='set-up-microsoft-365-defender-send-email-tables-to-splunk-via-event-hubs'></a>
 
-### Set up Microsoft Defender XDR send Email tables to Splunk via Event Hubs
+<a name="set-up-microsoft-defender-xdr-send-email-tables-to-splunk-via-event-hubs"></a>
+### Set up Microsoft Defender XDR to send email tables to Splunk through Event Hubs
 
 Use the following steps to configure Microsoft Defender XDR to export email tables to Splunk through Event Hubs.
 
-1. Sign in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a> with an account that meets all the following role requirements:
+Before you begin, make sure your account has the following roles:
 
-    - Contributor role at the Event Hubs *Namespace* Resource level or higher for the Event Hubs that you're be exporting to. An export error occurs when you try to save the settings without this permission.
+- **Contributor** role (or higher) at the Event Hubs *Namespace* resource level for the event hubs you're exporting to. Without this role, an error occurs when you try to save the export settings.
+- **Security Admin** role on the tenant tied to Microsoft Defender XDR and Azure.
 
-    - Security Admin Role on the tenant tied to Microsoft Defender XDR and Azure.
+1. Sign in to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender XDR</a>.
 
       :::image type="content" source="media/configure-event-hub/55d5b1c21dd58692fb12a6c1c35bd4fa.png" alt-text="The Settings page of the Microsoft Defender portal" lightbox="media/configure-event-hub/55d5b1c21dd58692fb12a6c1c35bd4fa.png":::
 
 1. Click on **Raw Data Export \> +Add**.
 
-    Use the Event Hubs namespace Resource ID, event hub name, and client secret values you recorded in the earlier setup steps.
+    Use the Event Hubs namespace Resource ID you recorded in [Set up Event Hubs namespace](#set-up-event-hubs-namespace), the event hub name, and the client secret from [Set up Microsoft Entra App Registration](#set-up-azure-active-directory-app-registration).
 
     **Name**: This value is local and should be whatever works in your environment.
 
     **Forward events to event hub**: Select this checkbox.
 
-    **Event-Hub Resource ID**: Enter the Event Hubs namespace Resource ID you recorded during the namespace setup steps.
+    **Event-Hub Resource ID**: Enter the Event Hubs namespace Resource ID you recorded in [Set up Event Hubs namespace](#set-up-event-hubs-namespace).
 
-    **Event-Hub name**: If you created an Event Hubs inside your Event Hubs Namespace, paste the Event Hubs name you previously recorded.
+    **Event-Hub name**: If you created an event hub in your namespace during [Set up Event Hubs](#set-up-event-hubs), paste that event hub name here.
 
     If you choose to let Microsoft Defender XDR create Event Hubs per Event Types (Tables) for you, leave the **Event-Hub name** field empty.
 
@@ -161,9 +170,10 @@ Use the following steps to configure Microsoft Defender XDR to export email tabl
 
 1. Make sure to click **Submit**.
 
-### Verify that the events are being exported to the Event Hubs
+<a name="verify-that-the-events-are-being-exported-to-the-event-hubs"></a>
+### Verify event export to Event Hubs
 
-You can verify that events are being sent to the Event Hubs by running a basic Advanced Hunting query. The query uses the `EmailEvents`, `EmailAttachmentInfo`, `EmailUrlInfo`, and `EmailPostDeliveryEvents` Advanced Hunting tables to confirm that email-related data is flowing through the export pipeline. Select **Hunting** \> **Advanced Hunting** \> **Query** and enter the following query:
+You can verify that events are being sent to the Event Hubs by running a basic Advanced Hunting query. The query uses the `EmailEvents`, `EmailAttachmentInfo`, `EmailUrlInfo`, and `EmailPostDeliveryEvents` Advanced Hunting tables to confirm that email-related data is flowing through the export pipeline. Select **Hunting** \> **Advanced Hunting** \> **Query** and enter the following query. This query uses full outer joins to correlate email events with attachment, URL, and post-delivery details by `NetworkMessageId`, giving you a count of all email activity in the last hour:
 
 ```console
 EmailEvents

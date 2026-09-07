@@ -1,11 +1,11 @@
 ---
-title: Device health Sensor health & OS report
-description: Use the device health report to track device health, OS platforms, and Windows 10 versions.
+title: Device health sensor health and OS report in Microsoft Defender for Endpoint
+description: Use the Sensor health and OS device health report in Microsoft Defender for Endpoint to monitor sensor health, antivirus status, OS platforms, and Windows version trends.
 ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.collection: 
 - m365-security
 - tier2
@@ -15,7 +15,7 @@ ms.reviewer: mkaminska
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -62,9 +62,10 @@ To assign these permissions:
 
 For more information about user role management, see [Create and manage roles for role-based access control](user-roles.md).
 
-## Sensor health & OS tab
+<a name="sensor-health--os-tab"></a>
+## Sensor health and operating system tab
 
-Sensor health and OS cards report on general operating system health, which includes detection sensor health, up to date versus out-of-date operating systems, and Windows 10 versions.
+Sensor health and operating system (OS) cards report on general operating system health, which includes detection sensor health, up to date versus out-of-date operating systems, and Windows 10 versions.
 
 >:::image type="content" source="media/device-health-sensor-health-os-tab.png" alt-text="Shows Sensor health and Operating system information." lightbox="media/device-health-sensor-health-os-tab.png":::
 
@@ -73,7 +74,7 @@ Each of the three cards on the **Sensor health** tab has two reporting sections,
 <a name="current-state-graph"></a>
 ### Current state graph overview
 
-In each card, the Current state (referred to in some documentation as _Device summary_) is the top, horizontal bar graph. Current state is a snapshot that shows information collected about devices in your organization, scoped to the current day. This graph represents the distribution of devices across your organization that report status or are detected to be in a specific state.
+In each card, the Current state (referred to in some documentation as _Device summary_) is the top, horizontal bar graph. Current state is a snapshot that shows information collected about devices in your organization, scoped to the current day. The Current state graph represents the distribution of devices across your organization that report status or are detected to be in a specific state.
 
 >:::image type="content" source="media/device-health-sensor-health-os-current-state-graph.png" alt-text="Shows the current state graph." lightbox="media/device-health-sensor-health-os-current-state-graph.png":::
 
@@ -86,9 +87,10 @@ By default, the device trends graph displays device information from the 30-day 
 >:::image type="content" source="media/device-health-sensor-health-os-device-trends-graph.png" alt-text="Shows the Device Health versions trends graph." lightbox="media/device-health-sensor-health-os-device-trends-graph.png":::
 
 <a name="filtering-data"></a>
-### Data filters
+<a name="data-filters"></a>
+### Use data filters to refine report results
 
-Use the provided filters to include or exclude devices with certain attributes. You can select multiple filters to apply from the device attributes. When applied, filters apply to all three cards in the report.
+Use the provided filters to include or exclude devices with certain attributes. You can select multiple filters to apply from the device attributes. When filters are applied, they affect all three cards in the report.
 
 For example, to show data about Windows 10 devices with Active sensor health state:
 
@@ -117,7 +119,7 @@ Devices that are either experiencing impaired communications, or devices from wh
 <a name="operating-systems-and-platforms-card"></a>
 ### Operating systems and platforms card overview
 
-This card shows the distribution of operating systems and platforms that exist within your organization.
+The Operating systems and platforms card shows the distribution of operating systems and platforms that exist within your organization.
 _OS systems and platforms_ can give useful insights into whether devices in your organization are running current or outdated operating systems. When new operating systems are introduced, security enhancements are frequently included that improve your organization's posture against security threats.
 
 For example, Secure Boot (introduced in Windows 8) practically eliminated the threat from some of the most harmful types of malware. Improvements in Windows 10 provide PC manufacturers the option to prevent users from disabling Secure Boot. Preventing users from disabling Secure Boot removes almost any chance of malicious rootkits or other low-level malware from infecting the boot process.

@@ -1,16 +1,16 @@
 ---
 title: Protect your ServiceNow environment | Microsoft Defender for Cloud Apps
 description: Connect ServiceNow to Microsoft Defender for Cloud Apps with the API connector to monitor user activity and detect anomalous behavior and sensitive data exposure.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli 
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # How Defender for Cloud Apps helps protect your ServiceNow environment
 
-As a major CRM cloud provider, ServiceNow incorporates large amounts of sensitive information about customers, internal processes, incidents, and reports inside your organization. Being a business-critical app, ServiceNow is accessed and used by people inside your organization and by others outside of it (such as partners and contractors) for various purposes. In many cases, a large proportion of your users accessing ServiceNow have low awareness of security and might put your sensitive information at risk by unintentionally sharing sensitive data. In other instances, malicious actors might gain access to your most sensitive customer-related assets.
+ServiceNow is a major CRM cloud provider. It stores sensitive data about customers, internal processes, incidents, and reports. As a business-critical app, people both inside and outside your organization use it, including partners and contractors. Many of these users might not follow security best practices. They could share sensitive data without meaning to. Malicious actors might also try to access your most sensitive customer assets.
 
 Connecting ServiceNow to Defender for Cloud Apps improves insights into your users' activities. It also helps detect threats using machine-learning anomaly detection and information protection, such as identifying when sensitive customer data is uploaded to ServiceNow.
 
@@ -26,9 +26,10 @@ Connecting ServiceNow to Defender for Cloud Apps helps you address the following
 - Insufficient security awareness
 - Unmanaged bring your own device (BYOD)
 
-## How Defender for Cloud Apps helps to protect your environment
+<a name="how-defender-for-cloud-apps-helps-to-protect-your-environment"></a>
+## Protect your environment with Defender for Cloud Apps
 
-Defender for Cloud Apps helps protect your ServiceNow environment in the following ways:
+You can protect your ServiceNow environment in these ways:
 
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Discover, classify, label, and protect regulated and sensitive data stored in the cloud](best-practices.md#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)
@@ -39,9 +40,9 @@ Defender for Cloud Apps helps protect your ServiceNow environment in the followi
 <a name="saas-security-posture-management"></a>
 ## SaaS security posture management for ServiceNow
 
-[Connect ServiceNow](#connect-servicenow-to-microsoft-defender-for-cloud-apps) to automatically get security recommendations for ServiceNow in Microsoft Secure Score.
+Connect ServiceNow to Microsoft Defender for Cloud Apps to get security tips for ServiceNow in Microsoft Secure Score.
 
-In Secure Score, select **Recommended actions** and filter by **Product** = **ServiceNow**. For example, recommendations for ServiceNow include:
+In Secure Score, select **Recommended actions**. Filter by **Product** = **ServiceNow**. Examples include:
 
 - *Enable MFA*
 - *Activate the explicit role plugin*
@@ -71,7 +72,7 @@ For more information about creating policies, see [Create a policy](control-clou
 
 ## Automate governance controls
 
-In addition to monitoring for potential threats, you can apply and automate the following ServiceNow governance actions to remediate detected threats. These actions are performed through Microsoft Entra ID, Microsoft's cloud identity service:
+You can also automate ServiceNow governance actions to fix detected threats. These actions run through Microsoft Entra ID:
 
 | Type | Action |
 | ---- | ---- |
@@ -86,7 +87,7 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## Connect ServiceNow to Microsoft Defender for Cloud Apps
 
-The following section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing ServiceNow account using the app connector API. The ServiceNow app connector gives you visibility into and control over ServiceNow use. For information about how Defender for Cloud Apps protects ServiceNow, see [Protect ServiceNow](protect-servicenow.md).
+Use the app connector API to connect Microsoft Defender for Cloud Apps to your existing ServiceNow account. The ServiceNow app connector gives you visibility into and control over ServiceNow use. For threat detection, governance controls, and real-time protection guidance, see [Protect ServiceNow](protect-servicenow.md).
 
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
@@ -120,6 +121,7 @@ Defender for Cloud Apps supports the following ServiceNow versions:
 - Xanadu
 - Yokohama
 - Zurich
+- Australia
 
 For more information, see [ServiceNow OAuth applications documentation](https://docs.servicenow.com/bundle/paris-platform-administration/page/administer/security/concept/c_OAuthApplications.html#c_OAuthApplications).
 
@@ -148,7 +150,8 @@ Perform the following steps to create an OAuth profile in ServiceNow and connect
       
    1. Increase the **Access Token Lifespan** to at least 3,600.
       
- 
+   1. Change the **Scope Restriction** value to **Broadly Scoped**.
+      
 1. Select the name of the OAuth that was defined, and change the **Refresh Token Lifespan** to **7,776,000 seconds** (90 days).
    
 1. Establish an internal procedure to ensure that the connection remains active.
@@ -156,7 +159,7 @@ Perform the following steps to create an OAuth profile in ServiceNow and connect
     1. In the Microsoft Defender Portal, edit the existing connector, using the same client ID and client secret. This will generate a new refresh token. 
 
     > [!NOTE]
-    > This is a recurring process every 90 days. Without this, the ServiceNow connection will stop working.
+    > Token rotation is a recurring process every 90 days. Without refreshing the token before expiration, the ServiceNow connection will stop working.
 
 ### Connect ServiceNow to Microsoft Defender for Cloud Apps
 
@@ -174,13 +177,46 @@ To complete the connection in the Microsoft Defender Portal, follow these steps:
 
     :::image type="content" source="media/servicenow-app-connector-details-screenshot.png" alt-text="Screenshot of the ServiceNow App Connector Details Dialog.":::
    
-1. To find your ServiceNow User ID, in the ServiceNow portal, go to **Users** and then locate your name in the table.
+1. To find your ServiceNow user name, in the ServiceNow portal, go to **Users** and then locate your name in the table. (Optional) To use a non-admin user for this step, create a non-admin user by following the steps in the below section.
      
 1. In the **OAuth Details** page, enter your **Client ID** and **Client Secret**. Select **Next**.
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
 After connecting ServiceNow, you'll receive events for 1 hour prior to connection.
+
+### Optional: Create a non-admin user in ServiceNow
+
+#### Step 1: Create custom access control lists (ACLs) in ServiceNow
+
+1. Sign in to ServiceNow with an administrator account.
+1. Open the **Elevate Roles** menu and enable both **admin** and **security_admin**. These elevated roles are required to create ACLs for certain tables.
+1. Navigate to **Access Control (ACL)** configuration.
+1. Create a **Read** ACL for each of the following tables:
+   - sys_user
+   - sys_user_group
+   - sys_user_grmember
+   - sys_user_has_role
+   - sys_properties
+   - v_plugin
+   - sysevent_script_action
+   - sys_attachment
+   - sys_attachment_doc
+   - sysevent
+   - syslog_transaction
+   - incident
+   - sys_user_role_contains
+1. For each ACL, set **Type** = **record**, **Operation** = **read**, **Name** = the table name, and **Required Role** = a custom role such as **custom_table_access**.
+1. Use the same custom role across all ACLs to simplify management.
+
+#### Step 2: Create a non-admin user
+
+1. In ServiceNow, go to **User Administration** > **Users**.
+1. Create a new user account.
+1. Record the username and password for later use in the integration setup.
+1. Open the newly created user profile.
+1. Scroll to the **Roles** section.
+1. Assign the custom role created in Step 1 (for example, **custom_table_access**) to the user.
 
 ### Legacy ServiceNow connection
 

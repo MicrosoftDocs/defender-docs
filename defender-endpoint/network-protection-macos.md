@@ -40,7 +40,7 @@ Network protection helps reduce the attack surface of your devices from Internet
 - exploits
 - other malicious content on the Internet
 
-Network protection expands the scope of Microsoft Defender [SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) to block all outbound HTTP/HTTPS traffic that attempts to connect to low-reputation sources across all major browsers. Blocks on outbound HTTP/HTTPS traffic are based on the domain or hostname.
+Network protection expands the scope of Microsoft Defender [SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/) to block all outbound HTTP/HTTPS traffic that attempts to connect to low-reputation sources across all major browsers. Blocks on outbound HTTP/HTTPS traffic are based on the domain or hostname.
 
 In non-Microsoft Edge processes, Network Protection determines the fully qualified domain name for each HTTPS connection by examining the content of the TLS handshake that occurs after a TCP/IP handshake. This requires that the HTTPS connection use TCP/IP (not UDP/QUIC) and that the ClientHello message not be encrypted. To disable QUIC and Encrypted Client Hello in Google Chrome, see [QuicAllowed](https://chromeenterprise.google/policies/#QuicAllowed) and [EncryptedClientHelloEnabled](https://chromeenterprise.google/policies/#EncryptedClientHelloEnabled). For Mozilla Firefox, see [Disable EncryptedClientHello](https://mozilla.github.io/policy-templates/#disableencryptedclienthello) and [network.http.http3.enable](https://support.mozilla.org/ml/questions/1408003#answer-1571474).
 

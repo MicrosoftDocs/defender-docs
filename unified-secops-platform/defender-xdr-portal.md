@@ -66,7 +66,7 @@ Defender XDR provides threat hunting capabilities in the Defender portal.
 
 ## Responding to threats
 
-Defender for XDR provides [automated investigation and response](/defender-xdr/m365d-autoir) capabilities. Automation reduces the volume of alerts that must be handled manually by SOC teams. 
+Defender XDR provides [automated investigation and response](/defender-xdr/m365d-autoir) capabilities. Automation reduces the volume of alerts that must be handled manually by SOC teams.
 
 As alerts create incidents, automated investigations produce a verdict that determines whether a threat was found. When suspicious and malicious threats are identified, remediation actions include sending a file to quarantine, stopping a process, blocking a URL, or isolating a device.
 

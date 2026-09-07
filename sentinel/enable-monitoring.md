@@ -1,16 +1,16 @@
 ---
 title: Turn on auditing and health monitoring in Microsoft Sentinel
-description: Monitor supported data connectors by using the SentinelHealth data table.
+description: Turn on auditing and health monitoring in Microsoft Sentinel to collect resource health and audit data in the SentinelHealth and SentinelAudit tables for monitoring, alerting, and investigation.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to configure auditing and health monitoring for my Microsoft Sentinel resources so that I can ensure the integrity and health of our security infrastructure.
 
@@ -18,7 +18,7 @@ ms.custom: msecd-doc-authoring-1014
 
 # Turn on auditing and health monitoring for Microsoft Sentinel
 
-Monitor the health of supported Microsoft Sentinel resources and audit their integrity. Turn on auditing and health monitoring in Microsoft Sentinel's **Settings** page. Get insights on health drifts, such as the latest failure events or changes from success to failure states. Track unauthorized actions, and use this information to create notifications and other automated actions.
+Monitor the health of supported Microsoft Sentinel resources and audit their integrity. Turn on auditing and health monitoring in Microsoft Sentinel's **Settings** page. Get insights on health drifts, such as the latest failure events or changes from success to failure states. Track unauthorized actions, and use audit and health data to create notifications and other automated actions.
 
 The [*SentinelHealth*](health-table-reference.md) data table stores health data. The [*SentinelAudit*](audit-table-reference.md) data table stores audit information. To use these tables, first turn on auditing and health monitoring for your workspace. This article shows you how.
 

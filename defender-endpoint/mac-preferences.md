@@ -12,29 +12,29 @@ ms.collection:
 - mde-macos
 ms.topic: how-to
 ms.subservice: macos
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Set preferences for Microsoft Defender for Endpoint on macOS
 
 > [!IMPORTANT]
-> This article contains instructions for how to set preferences for Microsoft Defender for Endpoint on macOS in enterprise organizations. To configure Microsoft Defender for Endpoint on macOS using the command-line interface, see [Configure from the command line](mac-resources.md#configuring-from-the-command-line).
+> This article is for enterprise administrators who need to manage Microsoft Defender for Endpoint on macOS using a configuration profile deployed through JAMF or Intune. It covers preferences for the antivirus engine, cloud-delivered protection, endpoint detection and response (EDR), tamper protection, and the user interface. It also includes recommended and full configuration profile templates, plus deployment instructions. To configure Defender for Endpoint on macOS using the command-line interface instead, see [Configure from the command line](mac-resources.md#configuring-from-the-command-line).
 
 ## Summary
 
-In enterprise organizations, Microsoft Defender for Endpoint on macOS can be managed through a configuration profile that is deployed by using one of several management tools. Preferences that are managed by your security operations team take precedence over preferences that are set locally on the device. Changing the preferences that are set through the configuration profile requires escalated privileges and isn't available for users without administrative permissions.
+In enterprise organizations, you can manage Microsoft Defender for Endpoint on macOS through a configuration profile. You deploy this profile by using one of several management tools. Preferences set by your security operations team take precedence over local device preferences. To change preferences set through the configuration profile, users need admin permissions.
 
-This article describes the structure of the configuration profile, includes a recommended profile that you can use to get started, and provides instructions on how to deploy the profile.
+This article describes the configuration profile structure. It includes a recommended profile to help you get started and explains how to deploy the profile.
 
 ## Configuration profile structure
 
-The configuration profile is a *.plist* file that consists of entries identified by a key (which denotes the name of the preference), followed by a value, which depends on the nature of the preference. Values can either be simple (such as a numerical value) or complex, such as a nested list of preferences.
+The configuration profile is a *.plist* file made up of key-value pairs. Each key is the name of a preference. Each value depends on the type of preference. Values can be simple (such as a number) or complex (such as a nested list of preferences).
 
 > [!CAUTION]
 > The layout of the configuration profile depends on the management console that you're using. The following sections contain examples of configuration profiles for JAMF and Intune.
@@ -159,7 +159,7 @@ Specify entities excluded from being scanned. Exclusions can be specified by ful
 |**Domain**|`com.microsoft.wdav`|
 |**Key**|exclusions|
 |**Data type**|Dictionary (nested preference)|
-|**Comments**|See the following sections for a description of the dictionary contents.|
+|**Comments**|The dictionary contains the keys `$type` (exclusion type), `path` (file or folder path), `isDirectory` (path type), `extension` (file extension), and `name` (process name).|
 
 ##### Type of exclusion
 
@@ -205,9 +205,10 @@ File, folder, and process exclusions support the following wildcards:
 |\*|Matches any number of any characters including none (note that when this wildcard is used inside a path it substitutes only one folder)|`/var/\*/\*.log`|`/var/log/system.log`|`/var/log/nested/system.log`|
 |?|Matches any single character|`file?.log`|`file1.log` <p> `file2.log`|`file123.log`|
 
-### Path type (file / directory)
+<a name="path-type-file--directory"></a>
+### Scan exclusion path type (file or directory)
 
-Indicate if the *path* property refers to a file or directory.
+In an antivirus scan exclusion entry, use *isDirectory* to indicate whether the *path* value refers to a file or a directory.
 
 |Section|Value|
 |---|---|
@@ -217,9 +218,10 @@ Indicate if the *path* property refers to a file or directory.
 |**Possible values**|false (default) <p> true|
 |**Comments**|Applicable only if *$type* is *excludedPath*|
 
-### File extension excluded from the scan
+<a name="file-extension-excluded-from-the-scan"></a>
+### Scan exclusion: file extension
 
-Specify content excluded from being scanned by file extension.
+In an antivirus scan exclusion entry, use *extension* to exclude files by file extension.
 
 |Section|Value|
 |---|---|
@@ -229,9 +231,10 @@ Specify content excluded from being scanned by file extension.
 |**Possible values**|valid file extensions|
 |**Comments**|Applicable only if *$type* is *excludedFileExtension*|
 
-### Process excluded from the scan
+<a name="process-excluded-from-the-scan"></a>
+### Scan exclusion: process name or path
 
-Specify a process for which all file activity is excluded from scanning. The process can be specified either by its name (for example, `cat`) or full path (for example, `/bin/cat`).
+In an antivirus scan exclusion entry, use *name* to exclude a process and all files opened by that process from scanning. The process can be specified either by its name (for example, `cat`) or full path (for example, `/bin/cat`).
 
 |Section|Value|
 |---|---|
@@ -272,7 +275,7 @@ Specify how certain threat types are handled by Microsoft Defender for Endpoint 
 |**Domain**|`com.microsoft.wdav`|
 |**Key**|threatTypeSettings|
 |**Data type**|Dictionary (nested preference)|
-|**Comments**|See the following sections for a description of the dictionary contents.|
+|**Comments**|Each entry in the array contains a `key` (threat type, such as `potentially_unwanted_application` or `archive_bomb`) and a `value` (action to take: `audit`, `block`, or `off`).|
 
 ##### Threat type
 
@@ -514,7 +517,7 @@ Specify a tag name and its value.
 |**Domain**|`com.microsoft.wdav`|
 |**Key**|tags|
 |**Data type**|Dictionary (nested preference)|
-|**Comments**|See the following sections for a description of the dictionary contents.|
+|**Comments**|Each entry in the array contains a `key` (tag type, such as `GROUP`) and a `value` (the tag string assigned to the device).|
 
 ##### Type of tag
 
@@ -641,9 +644,9 @@ Used in combination with other parameters to identify the process.
 
 ## Recommended configuration profile
 
-To get started, we recommend the following configuration for your enterprise to take advantage of all protection features that Microsoft Defender for Endpoint provides.
+The recommended configuration profile enables all protection features in Microsoft Defender for Endpoint. Both the JAMF property list and the Intune XML profile in the following subsections apply these settings.
 
-The following configuration profile (or, if there's JAMF, a property list that could be uploaded into the custom settings configuration profile) will:
+This configuration profile (or, for JAMF, a property list uploaded into custom settings) will:
 
 - Enable real-time protection (RTP)
 - Specify how the following threat types are handled:
@@ -792,11 +795,11 @@ Use the following XML for the recommended Intune profile:
 
 ## Full configuration profile example
 
-The following templates contain entries for all settings described in this document and can be used for more advanced scenarios where you want more control over Microsoft Defender for Endpoint on macOS.
+The following JAMF and Intune templates include all available Microsoft Defender for Endpoint on macOS settings. Use these templates for advanced scenarios where you need full control over every preference.
 
 ### Property list for JAMF full configuration profile
 
-The following property list shows the full JAMF configuration profile with all available settings:
+The following complete plist shows a Defender for Endpoint configuration profile for JAMF with all available settings, including antivirus engine, cloud service, EDR, tamper protection, and user interface preferences:
 
 ```XML
 <?xml version="1.0" encoding="UTF-8"?>
@@ -949,7 +952,7 @@ The following property list shows the full JAMF configuration profile with all a
 
 ### Intune full profile
 
-The following XML shows the full Intune configuration profile with all available settings:
+The following mobile configuration payload wraps all available Defender for Endpoint macOS settings into a deployable Intune profile. It includes antivirus engine, cloud service, EDR, tamper protection, and user interface preferences:
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -1145,11 +1148,13 @@ The following XML shows the full Intune configuration profile with all available
 
 ## Property list validation
 
-The property list must be a valid *.plist* file. This can be checked by executing:
+The property list must be a valid *.plist* file. Validate the plist syntax before uploading or deploying the profile by running the following command:
 
 ```bash
 plutil -lint com.microsoft.wdav.plist
 ```
+
+If the plist is valid, you see output similar to the following:
 
 ```console
 com.microsoft.wdav.plist: OK
@@ -1159,16 +1164,21 @@ If the file is well-formed, the above command outputs `OK` and returns an exit c
 
 ## Configuration profile deployment
 
-Once you've built the configuration profile for your enterprise, you can deploy it through the management console that your enterprise is using. The following sections provide instructions on how to deploy this profile using JAMF and Intune.
+Once you've built the configuration profile for your enterprise, you can deploy it through your management console. See [JAMF deployment](#jamf-deployment) and [Intune deployment](#intune-deployment) for step-by-step instructions.
 
 ### JAMF deployment
 
+> [!CAUTION]
+> You must use `com.microsoft.wdav` as the preference domain. If the domain is incorrect, Microsoft Defender for Endpoint won't recognize the preferences.
+
 From the JAMF console, open **Computers** \> **Configuration Profiles**, navigate to the configuration profile you'd like to use, then select **Custom Settings**. Create an entry with `com.microsoft.wdav` as the preference domain and upload the *.plist* produced earlier.
 
-> [!CAUTION]
-> You must enter the correct preference domain (`com.microsoft.wdav`); otherwise, the preferences won't be recognized by Microsoft Defender for Endpoint.
-
 ### Intune deployment
+
+> [!CAUTION]
+> You must use `com.microsoft.wdav` as the custom configuration profile name. If the name is incorrect, Microsoft Defender for Endpoint won't recognize the preferences.
+
+Use the following steps to deploy the configuration profile with Intune:
 
 1. Open **Devices** \> **Configuration Profiles**. Select **Create Profile**.
 
@@ -1183,9 +1193,6 @@ From the JAMF console, open **Computers** \> **Configuration Profiles**, navigat
 1. Select **OK**.
 
 1. Select **Manage** \> **Assignments**. In the **Include** tab, select **Assign to All Users & All devices**.
-
-> [!CAUTION]
-> You must enter the correct custom configuration profile name; otherwise, these preferences won't be recognized by Microsoft Defender for Endpoint.
 
 <a name="resources"></a>
 ## Related content

@@ -1,9 +1,9 @@
 ---
 title: Create attack vector reports in Microsoft Defender for IoT
 description: Attack vector reports provide a graphical representation of a vulnerability chain of exploitable devices.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -11,7 +11,7 @@ ai-usage: ai-assisted
 
 Attack vector reports show a chain of vulnerable devices in a specified attack path, for devices detected by a specific OT network sensor. Simulate an attack on a specific target in your network to discover vulnerable devices and analyze attack vectors in real time.
 
-Attack vector reports can also help evaluate mitigation activities to ensure that you're taking all required steps to reduce the risk to your network. For example, use an attack vector report to understand whether a software update would disrupt the attacker's path, or if an alternate attack path still remains.
+Attack vector reports can also help evaluate mitigation activities to ensure that you're taking all required steps to reduce the risk to your network. For example, use an attack vector report to understand whether a software update would disrupt a potential attack path, or if an alternate attack path still remains.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ For more information, see [On-premises users and roles for OT monitoring with De
 
 Generate an attack vector simulation so that you can view the resulting report.
 
-**To generate an attack vector simulation:**
+To generate an attack vector simulation:
 
 1. Sign into the sensor console and select **Attack vector** on the left.
 1. Select **Add simulation** and enter the following values:
@@ -62,7 +62,7 @@ The Device map provides a graphical representation of vulnerable devices detecte
 
 For more information, see [Investigate sensor detections in the Device map](how-to-work-with-the-sensor-device-map.md).
 
-## Next steps
+## Related content
 
 - Enhance security posture with Azure [security recommendations](recommendations.md).
 
@@ -70,8 +70,8 @@ For more information, see [Investigate sensor detections in the Device map](how-
 
 - Continue creating other reports for more security data from your OT sensor. For more information, see:
 
-    - [Risk assessment reporting](how-to-create-risk-assessment-reports.md)
-    
-    - [Sensor data mining queries](how-to-create-data-mining-queries.md)
-    
-    - [Create trends and statistics dashboards](how-to-create-trends-and-statistics-reports.md)
+  - [Risk assessment reporting](how-to-create-risk-assessment-reports.md)
+
+  - [Sensor data mining queries](how-to-create-data-mining-queries.md)
+
+  - [Create trends and statistics dashboards](how-to-create-trends-and-statistics-reports.md)

@@ -5,10 +5,10 @@ description: This article outlines the filter functionality available in Microso
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # SSL certificate asset filters
@@ -28,7 +28,7 @@ The following filters provide a drop-down list of options to select. The availab
 
 ## Freeform filters
 
-The following filters require that the user manually enters the value with which they want to search. This list is organized by the number of applicable operators for each filter, then alphabetically. 
+The following filters require the user to manually enter a filter value to search for. This list is organized by the number of applicable operators for each filter, then alphabetically. 
 
 |       Filter name                     |     Description                                                                                            |     Value format                        |     Applicable operators                                                                                                                                                                                                                            |
 |---------------------------------------|------------------------------------------------------------------------------------------------------------|-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

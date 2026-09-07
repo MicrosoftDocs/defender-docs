@@ -3,7 +3,7 @@ title: Manage security operations cases natively in the Microsoft Defender porta
 description: Learn about the case management capabilities in the Defender portal for managing and standardizing unified security operations.
 author: mberdugo
 ms.author: monaberdugo
-ms.date: 05/04/2025
+ms.date: 07/31/2026
 ms.collection:
 - M365-security-compliance
 - tier1
@@ -128,6 +128,9 @@ Alternatively, if the IR team needs to escalate one or more incidents to the hun
 :::image type="content" source="media/cases-overview/link-incident-from-incident-graph.png" alt-text="Screenshot showing the link incident option from ellipses menu in the incident view.":::
 
 #### Link indicators (preview)
+
+> [!IMPORTANT]
+> Projects in Microsoft Defender Threat Intelligence are deprecated. To organize and investigate threat indicators, link indicators to a case in the Microsoft Defender portal.
 
 Linking a case to relevant indicators of compromise (IOCs) helps your SecOps teams understand the broader context of a threat.
 

@@ -2,16 +2,17 @@
 title: Deploy GitHub Advanced Security integration with Microsoft Defender for Cloud (Sandbox project)
 description: Set up and validate a sandbox environment to evaluate GitHub Advanced Security and Microsoft Defender for Cloud integration end to end.
 ms.topic: how-to
-ms.date: 04/30/2026
+ms.date: 07/03/2026
 ms.service: defender-for-cloud
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # GitHub Advanced Security Integration with Microsoft Defender for Cloud – Sandbox Project
 
 This guide provides setup steps for a sandbox project that helps you evaluate GitHub Advanced Security (GHAS) and Microsoft Defender for Cloud integration end to end with a simple use case.
 
-This integration helps maximize Microsoft's cloud-native application security by correlating runtime risks and context with the originated code for faster AI-powered remediation.
+The GHAS and Microsoft Defender for Cloud integration helps maximize Microsoft's cloud-native application security by correlating runtime risks and context with the originated code for faster AI-powered remediation.
 
 By following this guide, you:
 
@@ -59,7 +60,7 @@ Before you set up a repository, make sure that:
 > [!NOTE]
 > You can choose any names for these variables. They don't need to follow a specific pattern.
 
-You can find this information in the Azure portal by following these steps:
+You can find the container registry authentication server, username, and password in the Azure portal by following these steps:
 
 1. Select the container registry that you want to deploy to.
 1. Under **Settings**, select **Access keys**.
@@ -69,7 +70,7 @@ In your repository, select **Actions**, select the **Build and Push to ACR** wor
 
 Check that the image was deployed to your container registry. For the example repository, the image should be in a registry called `mdc-mock-0001` with the tag `mdc-ghas-integration`.
 
-Deploy the same image as a running container on your cluster. One way to complete this step is by connecting to the cluster and using the `kubectl run` command. Here's an example for Azure Kubernetes Service (AKS):
+Deploy the `mdc-mock-0001:mdc-ghas-integration` image as a running container on your cluster. One way to deploy the container image to your cluster is by connecting to the cluster and using the `kubectl run` command. Here's an example for Azure Kubernetes Service (AKS):
 
 Set the cluster subscription:
 
@@ -102,7 +103,7 @@ One of the risk factors that Defender for Cloud detects for this integration is 
 
 Validation confirms that your environment is correctly configured to surface code to runtime recommendations and generate actionable results.
 
-During this step, Defender verifies full code to runtime visibility.
+During validation, Defender verifies full code to runtime visibility.
 
 - Microsoft Defender for Cloud continuously monitors source code repositories for security vulnerabilities.
 - Build artifacts, such as container images, are scanned in container registries before deployment.
@@ -114,7 +115,7 @@ During this step, Defender verifies full code to runtime visibility.
 
 Test that GitHub agentless scanning picks up the repository.
 
-Go to Cloud Security Explorer and perform the query. The validation queries test whether Defender can identify artifacts produced by your pipelines and workloads. If the queries return results, it indicates that scanning and correlation are working as expected.
+Go to Cloud Security Explorer and run the validation queries described in the following list. These validation queries test whether Defender can identify artifacts produced by your pipelines and workloads. If the queries return results, it indicates that scanning and correlation are working as expected.
 
 > [!NOTE]
 > If no results are returned, it might indicate that artifacts aren't yet generated, scanning isn't configured, or permissions are missing.
@@ -125,11 +126,13 @@ Go to Cloud Security Explorer and perform the query. The validation queries test
 - Validate that the risk factors are configured correctly on the Defender for Cloud side. Search for your container name on the Defender for Cloud inventory page, and you should see it marked as critical.
 
 > [!NOTE]
-> This step is required only if risk factors aren't already configured in your environment.
+> Validating the risk factor configuration is required only if risk factors aren't already configured in your environment.
 
 Successful validation ensures that subsequent steps, such as recommendations, campaigns, and GitHub issue generation, produce meaningful results.
 
 ## Next steps
+
+### Related content
 
 - [Set up GitHub Advanced Security native integration with Microsoft Defender for Cloud](github-advanced-security-deploy.md)
 - [What is GitHub Advanced Security integration with Microsoft Defender for Cloud?](github-advanced-security-overview.md)

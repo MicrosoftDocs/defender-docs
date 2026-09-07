@@ -1,20 +1,25 @@
 ---
-title: Determine ownership requirements
+title: Determine ownership requirements for multicloud security planning
 description: Learn about determining ownership requirements when planning multicloud deployment with Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 06/11/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Determine ownership requirements
 
-This article is one of a series providing guidance as you design a cloud security posture management (CSPM) and cloud workload protection platform (CWPP) solution across multicloud resources with Microsoft Defender for Cloud.
+## Identify teams and ownership for multicloud security
 
-## Goal
+When you deploy a multicloud security solution with Microsoft Defender for Cloud, you need to determine which teams own specific security functions. This article helps you plan ownership requirements as you design a cloud security posture management (CSPM) and cloud workload protection platform (CWPP) solution across multicloud resources. It helps you identify the security teams involved in your multicloud environment, define their functions and responsibilities, align teams on ownership for security decision making, and choose between centralized and decentralized operating models.
+
+<a name="goal"></a>
+## Ownership planning goals
 
 Identify the teams involved in your multicloud security solution, and plan how they will align and work together.
 
-## Security functions
+<a name="security-functions"></a>
+## Define security functions and responsibilities
 
 Depending on the size of your organization, separate teams will manage [security functions](/azure/cloud-adoption-framework/organize/cloud-security-compliance-management). In a complex enterprise, functions might be numerous.
 
@@ -32,7 +37,8 @@ Depending on the size of your organization, separate teams will manage [security
 |[Posture management](/azure/cloud-adoption-framework/organize/cloud-security-posture-management)|Continuously reporting on, and improving, your organizational security posture.|
 |[Incident preparation](/azure/cloud-adoption-framework/organize/cloud-security-incident-preparation)|Building tools, processes, and expertise to respond to security incidents. |
 
-## Team alignment
+<a name="team-alignment"></a>
+## Align teams on ownership responsibilities
 
 Despite the many different teams who manage cloud security, it's critical that they work together to figure out who's responsible for decision making in the multicloud environment. Lack of ownership creates friction that can result in stalled projects and insecure deployments that couldn't wait for security approval.
 
@@ -47,10 +53,13 @@ Security leadership, most commonly under the CISO, should specify who's accounta
 |Application workloads|Focus on security controls for specific workloads. The goal is to integrate security assurances into development processes and custom line of business (LOB) applications.|Joint responsibility of [application development](/azure/cloud-adoption-framework/organize/cloud-security-application-security-devsecops) and [central IT operations](/azure/cloud-adoption-framework/organize/central-it) teams.|
 |Identity security and standards | Understand Permission Creep Index (PCI) for Azure subscriptions, AWS accounts, and GCP projects, in order to identify risks associated with unused or excessive permissions across identities and resources.| Joint responsibility of [identity and key management](/azure/cloud-adoption-framework/organize/cloud-security-identity-keys), [policy and standards](/azure/cloud-adoption-framework/organize/cloud-security-policy-standards), and [security architecture](/azure/cloud-adoption-framework/organize/cloud-security-architecture) teams. |
 
-## Best practices
+<a name="best-practices"></a>
+## Best practices for assigning ownership
+
+Consider the following best practices when assigning ownership and aligning teams in a multicloud security model:
 
 - Although multicloud security might be divided across different areas of the business, teams should manage security across the multicloud estate. This is better than having different teams secure different cloud environments. For example where one team manages Azure and another team manages AWS. Teams working across multicloud environments helps to prevent sprawl within the organization. It also helps to ensure that security policies and compliance requirements are applied in every environment.
-- Often, teams that manage Defender for Cloud don't have privileges to remediate recommendations in workloads. For example, the Defender for Cloud team might not be able to remediate vulnerabilities in an AWS EC2 instance. The security team might be responsible for improving the security posture, but unable to fix the resulting security recommendations. To address this issue:
+- Often, teams that manage Defender for Cloud don't have privileges to remediate recommendations in workloads. For example, the Defender for Cloud team might not be able to remediate vulnerabilities in an AWS EC2 instance. The security team might be responsible for improving the security posture, but unable to fix the resulting security recommendations. To address the gap between security posture responsibility and remediation authority:
   - It's imperative to involve the AWS workload owners.
     - [Assigning owners with due dates](./governance-rules.md) and [defining governance rules](./governance-rules.md) creates accountability and transparency, as you drive processes to improve security posture.
 - Depending on organizational models, we commonly see these options for central security teams operating with workload owners:
@@ -70,4 +79,4 @@ Security leadership, most commonly under the CISO, should specify who's accounta
 
 ## Next steps
 
-In this article, you have learned how to determine ownership requirements when designing a multicloud security solution. Continue with the next step to [determine access control requirements](plan-multicloud-security-determine-access-control-requirements.md).
+This guidance covered how to determine ownership requirements when designing a multicloud security solution with Microsoft Defender for Cloud. To plan ownership, identify the security functions your organization needs, assign clear team responsibilities for each function, and choose a centralized or decentralized operating model. After you establish ownership, continue to [Determine access control requirements](plan-multicloud-security-determine-access-control-requirements.md).

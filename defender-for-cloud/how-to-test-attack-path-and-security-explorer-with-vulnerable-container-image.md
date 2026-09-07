@@ -1,10 +1,11 @@
 ---
 title: Attack path analysis and enhanced risk-hunting for containers
-description: Learn how to test attack paths and perform enhanced risk-hunting for containers with cloud security explorer in Microsoft Defender for Cloud
+description: Learn how to test attack path analysis and explore container risks with Cloud Security Explorer by deploying a mock vulnerable container image in Microsoft Defender for Cloud
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Attack path analysis and enhanced risk-hunting for containers
@@ -16,6 +17,8 @@ This article shows how to test attack path analysis by deploying a mock vulnerab
 # [Azure](#tab/azure)
 
 ## Prerequisites
+
+Before you begin, make sure you have the following prerequisites:
 
 - [Defender CSPM enabled for your subscription](tutorial-enable-cspm-plan.md).
 
@@ -86,6 +89,8 @@ This article shows how to test attack path analysis by deploying a mock vulnerab
 
 ## Prerequisites
 
+Before you begin, ensure you have the following prerequisites:
+
 - [Defender CSPM enabled for your AWS account](tutorial-enable-cspm-plan.md).
 
 - Access to an Amazon Elastic Kubernetes Service (EKS) cluster.
@@ -152,6 +157,8 @@ The Helm chart deploys resources onto your cluster that you can use to infer att
 
 ## Prerequisites
 
+Before you begin, make sure the following prerequisites are met:
+
 - [Defender CSPM enabled for your GCP project](tutorial-enable-cspm-plan.md).
 
 - Access to a Google Kubernetes Engine (GKE) cluster.
@@ -215,7 +222,7 @@ After deploying the mock scenario, you can view the generated attack path in **M
 
 1. Locate the attack path related to the deployed resources.
 
-Learn how to [identify and remediate attack paths](how-to-manage-attack-path.md).
+For more information, see [Identify and remediate attack paths](how-to-manage-attack-path.md).
 
 ## Investigate container risks with Cloud Security Explorer
 

@@ -1,18 +1,18 @@
 ---
 title: Work with STIX objects and indicators to enhance threat intelligence and threat hunting in Microsoft Sentinel (Preview)
 titleSuffix: Microsoft Sentinel
-description: This article provides examples of how to incorporate STIX objects into queries to enhance threat hunting.
+description: Learn how to use STIX objects and indicators in Microsoft Sentinel queries for threat hunting, and how to migrate to the new ThreatIntelIndicators and ThreatIntelObjects table schemas.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: yoninave
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #Customer intent: As a security analyst, I want to understand how to incorporate STIX objects into queries to enhance threat hunting.
 ---
 
@@ -24,7 +24,7 @@ For more information about threat intelligence in Microsoft Sentinel, see [Threa
 
 > [!IMPORTANT]
 > Microsoft Sentinel will ingest all threat intelligence into the new `ThreatIntelIndicators` and `ThreatIntelObjects` tables, while continuing to ingest the same data into the legacy `ThreatIntelligenceIndicator` table until July 31, 2025. 
-> **Be sure to update your custom queries, analytics and detection rules, workbooks, and automation to use the new tables by July 31, 2025.** After this date, Microsoft Sentinel will stop ingesting data to the legacy `ThreatIntelligenceIndicator` table. We're updating all out-of-the-box threat intelligence solutions in Content hub to leverage the new tables.
+> **Be sure to update your custom queries, analytics and detection rules, workbooks, and automation to use the new tables by July 31, 2025.** After July 31, 2025, Microsoft Sentinel will stop ingesting data to the legacy `ThreatIntelligenceIndicator` table. We're updating all out-of-the-box threat intelligence solutions in Content hub to leverage the new tables.
 > We introduced important updates to the data republishing processes.
 > 1. Previously, data was divided and republished to Log Analytics over a **12-day period**. Now, **all data** is republished every **7-10 days**. You can identify this data in the `ThreatIntelIndicators` and `ThreatIntelObjects` tables by checking if `LastUpdateMethod` equals `LogARepublisher`.  
 > 2. The new tables now support more columns, including the `Data` column, which contains the full data object (except for attributes that already exist in other columns) used in advanced hunting scenarios. If the `Data` column or other added columns don't align with your scenario, learn more about [filtering out columns](#transform-away-columns-sent-to-log-analytics) and [filtering out rows](#transform-away-rows-sent-to-log-analytics) before ingestion to Log Analytics. 

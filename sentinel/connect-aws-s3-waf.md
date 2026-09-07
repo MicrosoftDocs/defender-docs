@@ -5,13 +5,13 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #Customer intent: As a security operator, I want to ingest web application firewall (WAF) from my Amazon Web Services S3 bucket to my Microsoft Sentinel workspace, so that security analysts can monitor activity on these systems and detect security threats.
 ---
 
@@ -19,7 +19,7 @@ ms.custom: msecd-doc-authoring-1014
 
 Use the Amazon Web Services (AWS) S3-based Web Application Firewall (WAF) connector to ingest AWS WAF logs, collected in AWS S3 buckets, to Microsoft Sentinel. AWS WAF logs are detailed records of the web traffic analyzed by the AWS WAF against web access control lists (ACLs). These records contain information such as the time AWS WAF received the request, the specifics of the request, and the action taken by the rule that the request matched. These logs and this traffic analysis are essential for maintaining the security and performance of web applications.
 
-This connector features an *AWS CloudFormation*-based onboarding script to streamline the creation of the AWS resources used by the connector.
+This connector features an *AWS CloudFormation*-based onboarding script to streamline the creation of the AWS resources used by the Amazon Web Services S3 WAF connector.
 
 > [!IMPORTANT]
 > - The **Amazon Web Services S3 WAF** data connector is currently in preview. The [Azure Preview Supplemental Terms](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) include additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
@@ -34,7 +34,7 @@ The **Amazon Web Services S3 WAF** data connector serves the following use cases
 
 - **Compliance and auditing:** AWS WAF logs provide detailed records of web ACL traffic, which can be crucial for compliance reporting and auditing purposes. The connector ensures that these logs are available within Sentinel for easy access and analysis.
 
-This article explains how to configure the Amazon Web Services S3 WAF connector. The process of setting it up has two parts: the AWS side and the Microsoft Sentinel side. Each side's process produces information used by the other side. Exchanging this configuration information between AWS and Microsoft Sentinel enables secure authenticated communication.
+This article explains how to configure the Amazon Web Services S3 WAF connector. The process of setting up the connector has two parts: the AWS side and the Microsoft Sentinel side. The AWS process produces information used by Microsoft Sentinel, and the Microsoft Sentinel process produces information used by AWS. Exchanging this configuration information between AWS and Microsoft Sentinel enables secure authenticated communication.
 
 ## Prerequisites
 
@@ -68,7 +68,7 @@ The process of enabling and configuring the connector consists of the following 
 
 ## Set up the AWS environment
 
-To simplify the onboarding process, the **Amazon Web Services S3 WAF** connector page in Microsoft Sentinel contains downloadable templates for you to use with the AWS CloudFormation service. The CloudFormation service uses these templates to automatically create resource stacks in AWS. These stacks include the resources themselves as described in this article, and credentials, permissions, and policies.
+To simplify the onboarding process, the **Amazon Web Services S3 WAF** connector page in Microsoft Sentinel contains downloadable templates for you to use with the AWS CloudFormation service. The CloudFormation service uses these templates to automatically create resource stacks in AWS. These stacks include the resources themselves, as described in [Enable and configure the Amazon Web Services S3 WAF connector](#enable-and-configure-the-amazon-web-services-s3-waf-connector), along with credentials, permissions, and policies.
 
 > [!NOTE]
 > We strongly recommend using the automatic setup process. For special cases, see the [manual setup instructions](connect-aws-configure-environment.md#manual-setup).
@@ -122,6 +122,8 @@ Follow the instructions on the AWS Console page for creating a new stack.
 1. Advance through the rest of the process and create the stack.
 
 #### Create the remaining AWS resources
+
+Use the second CloudFormation template to create the remaining AWS resources, including the S3 bucket, SQS queue, and IAM role.
 
 1. Return to the AWS CloudFormation stacks page and create a new stack.
 

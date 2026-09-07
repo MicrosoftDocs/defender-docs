@@ -1,9 +1,9 @@
 ---
 title: Edit DevOps connectors
 description: Update authorization, organization scope, and connector settings for Azure DevOps, GitHub, and GitLab environments onboarded to Defender for Cloud.
-ms.date: 06/02/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: ignite-2023
+ms.custom: ignite-2023, msecd-doc-authoring-1013
 ai-usage: ai-assisted
 ---
 
@@ -15,7 +15,7 @@ After onboarding your Azure DevOps, GitHub, or GitLab environments to Microsoft 
 
 Before you edit a DevOps connector, make sure you have the following:
 
-- An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create one for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
+- An Azure account with Defender for Cloud onboarded. If you don't already have an Azure account, [create an Azure account for free](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 - An onboarded DevOps environment. For onboarding guidance, see [Onboard Azure DevOps](quickstart-onboard-devops.md), [Onboard GitHub](quickstart-onboard-github.md), or [Onboard GitLab](quickstart-onboard-gitlab.md).
 
 ## Make edits to your DevOps connector

@@ -1,16 +1,16 @@
 ---
 title: Test the Defender for Storage data security features
 description: Learn how to test the malware scanning, sensitive data threat detection, and activity monitoring features provided by Defender for Storage.
-ms.date: 07/15/2025
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 #customer intent: As a user, I want to learn how to test the Defender for Storage data security features so that I can validate its capabilities and ensure the security of my storage accounts.
 ai-usage: ai-assisted
 ---
 
 # Test the Defender for Storage data security features
 
-After you [enable Microsoft Defender for Storage](tutorial-enable-storage-plan.md), you can test the service and run a proof of concept. This helps you familiarize yourself with its features and validate that its advanced security capabilities effectively protect your storage accounts by generating real security alerts. This guide walks you through testing various aspects of the security coverage offered by Defender for Storage.
+After you [enable Microsoft Defender for Storage](tutorial-enable-storage-plan.md), you can test the service and run a proof of concept. Testing the service helps you familiarize yourself with Defender for Storage features and validate that its advanced security capabilities effectively protect your storage accounts by generating real security alerts. This guide walks you through testing various aspects of the security coverage offered by Defender for Storage.
 
 There are three main components to test:
 
@@ -46,7 +46,7 @@ Follow these steps to test malware scanning after enabling the feature:
 
 ### Upload an EICAR test file to simulate malware upload
 
-To simulate a malware upload using an EICAR test file, follow these steps:
+An EICAR test file is a harmless standardized file that anti-malware software recognizes as malware for testing purposes. To simulate a malware upload using an EICAR test file, follow these steps:
 
 1. Prepare for the EICAR test file:
 
@@ -120,7 +120,7 @@ To test the sensitive data threat detection feature by uploading test data that 
 
     1. Enable Defender for Storage on the storage account with the Sensitivity Data Discovery feature enabled.
 
-    Sensitive data discovery scans for sensitive information within the first 24 hours. This occurs when you enable it at the storage account level or create a new storage account under a subscription protected by this feature at the subscription level. Following this initial scan, the service scans for sensitive information every seven days from the time of enablement.
+    Sensitive data discovery scans for sensitive information within the first 24 hours. The initial scan occurs when you enable Sensitive Data Discovery at the storage account level or create a new storage account under a subscription protected by Sensitive Data Discovery at the subscription level. Following this initial scan, the service scans for sensitive information every seven days from the time of enablement.
 
     > [!NOTE]
     > If you enable the feature and then add sensitive data on the days after enablement, the next scan for that newly added data will occur within the next 7-day scanning cycle, depending on the day of the week the data was added.
@@ -199,5 +199,5 @@ In this article, you learned how to test data protection and threat detection in
 Learn more about:
 
 - [Threat response](defender-for-storage-threats-alerts.md)
-- [Customizing data sensitivity settings](defender-for-storage-data-sensitivity.md)8
+- [Customizing data sensitivity settings](defender-for-storage-data-sensitivity.md)
 - [Threat detection and alerts](defender-for-storage-threats-alerts.md)

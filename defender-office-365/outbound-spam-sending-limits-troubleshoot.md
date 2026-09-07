@@ -143,7 +143,7 @@ When a user exceeds outbound sending limits or is detected sending spam, Exchang
 
 A blocked user shows the following symptoms:
 
-- The user receives an NDR with error code [5.1.8](https://support.microsoft.com/topic/ndr-error-code-550-5-1-8-access-denied-bad-outbound-sender-e323f21d-4460-4be1-999c-c9c0cc6be4b4) (bad outbound sender, typically due to suspected spam) when trying to send email.
+- The user receives an NDR with error code [5.1.8](https://support.microsoft.com/servicing/Exchange/non-delivery-report/ndr-error-code-550-5-1-8-access-denied-bad-outbound-sender) (bad outbound sender, typically due to suspected spam) when trying to send email.
 - The user appears on the **Restricted entities** page.
 - Admins receive the **User restricted from sending email** [alert notification](outbound-spam-restore-restricted-users.md#verify-the-alert-settings-for-restricted-users).
 
@@ -164,6 +164,8 @@ To prevent future blocks, take the following actions:
 
 ## Related content
 
+- [How outbound spam policy limits apply to Send As and Send on behalf permissions](outbound-spam-policies-send-as-send-on-behalf.md)
+- [Inventory delegated From addresses for outbound spam policies](outbound-spam-delegated-from-addresses-inventory.md)
 - [Outbound spam protection](outbound-spam-protection-about.md)
 - [Configure outbound spam policies](outbound-spam-policies-configure.md)
 - [Remove blocked users from the Restricted entities page](outbound-spam-restore-restricted-users.md)

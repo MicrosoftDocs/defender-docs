@@ -2,13 +2,14 @@
 title: Enable Defender for Containers in Microsoft Defender for Cloud
 description: Learn how to enable the Microsoft Defender for Containers plan in Microsoft Defender for Cloud for Azure subscriptions, AWS connectors, and GCP connectors.
 ms.topic: how-to
-ms.date: 06/29/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Enable Defender for Containers in Microsoft Defender for Cloud
 
-Enable the Microsoft Defender for Containers plan in Microsoft Defender for Cloud to protect your Kubernetes clusters and container workloads.
+Enable the Microsoft Defender for Containers plan in Microsoft Defender for Cloud to protect your Kubernetes clusters and container workloads. This article walks you through enabling the plan in the Azure portal for Azure Kubernetes Service (AKS), Amazon Elastic Kubernetes Service (EKS), Google Kubernetes Engine (GKE), and Azure Arc-enabled Kubernetes clusters. When you enable the plan, you can configure protection components such as runtime threat detection, vulnerability scanning, and security posture assessments.
 
 # [Azure Kubernetes Service (AKS)](#tab/aks)
 
@@ -16,13 +17,15 @@ Enable the Microsoft Defender for Containers plan in Microsoft Defender for Clou
 
 Before you begin, make sure that: 
 
-- You have an AKS cluster. See the [support matrix](support-matrix-defender-for-containers.md).
+- You have an AKS cluster. See the [Defender for Containers support matrix](support-matrix-defender-for-containers.md).
 
 - You reviewed the [Defender for Containers feature access patterns](defender-for-containers-feature-access-patterns.md).
 
-- You reviewed the required [network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
+- You reviewed the required [Defender for Containers network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
 
 ## Enable the Defender for Containers plan
+
+To enable the Defender for Containers plan for your AKS clusters in the Azure portal:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -72,15 +75,17 @@ Before you begin, make sure that:
 
 - You have an [AWS project onboarded to Microsoft Defender for Cloud](quickstart-onboard-aws.md).
 
-- You have one or more Amazon EKS clusters running a supported Kubernetes version. See the [support matrix](support-matrix-defender-for-containers.md).
+- You have one or more Amazon EKS clusters running a supported Kubernetes version. See the [Defender for Containers support matrix](support-matrix-defender-for-containers.md).
 
 - You reviewed the [Defender for Containers feature access patterns](defender-for-containers-feature-access-patterns.md).
 
-- You reviewed the required [network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
+- You reviewed the required [Defender for Containers network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
 
 - You reviewed the required [cloud IAM permissions](containers-permissions.md). 
 
 ## Enable the Defender for Containers plan
+
+To enable the Defender for Containers plan for your EKS clusters:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -139,15 +144,17 @@ Before you begin, make sure that:
 
 - You have a [GCP project onboarded to Microsoft Defender for Cloud](quickstart-onboard-gcp.md).
 
-- You have one or more Google Kubernetes Engine (GKE) clusters running a supported Kubernetes version. See the [support matrix](support-matrix-defender-for-containers.md).
+- You have one or more Google Kubernetes Engine (GKE) clusters running a supported Kubernetes version. See the [Defender for Containers support matrix](support-matrix-defender-for-containers.md).
 
 - You reviewed the [Defender for Containers feature access patterns](defender-for-containers-feature-access-patterns.md).
 
-- You reviewed the required [network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
+- You reviewed the required [Defender for Containers network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
 
 - You reviewed the required [cloud IAM permissions](containers-permissions.md). 
 
 ## Enable the Defender for Containers plan
+
+To enable the Defender for Containers plan for your GKE clusters:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -207,13 +214,15 @@ Before you begin, make sure that:
 
 - Your cluster is:
     - [Connected to Azure Arc](/azure/azure-arc/kubernetes/quickstart-connect-cluster).
-    - Supported by Defender for Containers. See the [support matrix](support-matrix-defender-for-containers.md).
+    - Supported by Defender for Containers. See the [Defender for Containers support matrix](support-matrix-defender-for-containers.md).
 
 - You reviewed the [Defender for Containers feature access patterns](defender-for-containers-feature-access-patterns.md).
 
 - You reviewed the required [network access and permissions](defender-for-containers-network-access.md#microsoft-defender-for-cloud-to-kubernetes-clusters).
 
 ## Enable the Defender for Containers plan
+
+To enable the Defender for Containers plan for your Azure Arc-enabled Kubernetes clusters:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -250,11 +259,13 @@ Before you begin, make sure that:
 
 ## Verify the plan is enabled
 
+To confirm that the Defender for Containers plan is enabled and the required components are active:
+
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
 1. Go to **Microsoft Defender for Cloud** > **Environment settings**.
 
-1. Select the subscription.
+1. Select the subscription or connector where you enabled Defender for Containers.
 
 1. Verify that **Containers** is set to **On**.
 

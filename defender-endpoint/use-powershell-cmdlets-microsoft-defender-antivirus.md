@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.topic: how-to
@@ -42,6 +42,8 @@ PowerShell is typically installed under the folder `%SystemRoot%\system32\Window
 ## Prerequisites
 
 ### Supported operating systems
+
+The following operating systems are supported:
 
 - Windows
 
@@ -101,6 +103,8 @@ For full syntax and parameter options, see [Microsoft Defender Antivirus cmdlets
 >   You can use this information to better assess performance issues and apply remediation actions. For more information, see [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 
 ## Related articles
+
+The following resources provide additional information about managing and configuring Microsoft Defender Antivirus:
 
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md)
 - [Reference topics for management and configuration tools](configuration-management-reference-microsoft-defender-antivirus.md)

@@ -27,7 +27,7 @@ To learn more about the services that are part of the Microsoft Defender portal,
 - **[Microsoft Defender for Office 365 in the Microsoft Defender portal](microsoft-365-security-center-mdo.md)**
 - **[Microsoft Defender for Identity in the Microsoft Defender portal](/defender-for-identity/microsoft-365-security-center-mdi)**
 - **[Microsoft Defender for Cloud Apps in the Microsoft Defender portal](/defender-cloud-apps/microsoft-365-security-center-defender-cloud-apps)**
-- **[Microsoft Defender for Cloud integration with Microsoft Defender XDR](/azure/defender-for-cloud/concept-integration-365)**
+- **[Microsoft Defender for Cloud integration with Microsoft Defender](/azure/defender-for-cloud/concept-integration-365)**
 - **[Microsoft Purview Data Loss Prevention alerts in the Microsoft Defender portal](dlp-investigate-alerts-defender.md)**
 - **[Microsoft Defender Vulnerability Management in the Microsoft Defender portal](/defender-vulnerability-management/defender-vulnerability-management)**
 - **[Microsoft Security Copilot embedded experience in the Microsoft Defender portal](security-copilot-in-microsoft-365-defender.md)**
@@ -43,7 +43,7 @@ Watch this short video to learn about the Defender portal.
 
 ## What to expect
 
-Microsoft Defender XDR correlates signals from various Microsoft security solutions in the Microsoft Defender portal to help security teams investigate and respond to attacks into a set of unified experiences for:
+Microsoft Defender correlates signals from various Microsoft security solutions in the Microsoft Defender portal to help security teams investigate and respond to attacks into a set of unified experiences for:
 
 - Incidents & alerts
 - Hunting
@@ -57,7 +57,7 @@ The Microsoft Defender portal emphasizes *unity, clarity, and common goals*. Sea
 
 ## Incident and alert investigations
 
-Microsoft Defender XDR [correlates alerts and events](alerts-incidents-correlation.md) from all Microsoft security solutions across all assets in your entire organization into incidents. **Incidents** are a collection of alerts that are related to a single threat or attack. Incidents are prioritized based on the severity of the threat and the potential impact on your organization.
+Microsoft Defender [correlates alerts and events](alerts-incidents-correlation.md) from all Microsoft security solutions across all assets in your entire organization into incidents. **Incidents** are a collection of alerts that are related to a single threat or attack. Incidents are prioritized based on the severity of the threat and the potential impact on your organization.
 
 :::image type="content" source="media/incidents-ss-incidents.png" alt-text="The Incidents page in the Microsoft Defender portal." lightbox="media/incidents-ss-incidents.png":::
 
@@ -73,13 +73,13 @@ For more information, see [Incidents in the Microsoft Defender portal](incidents
 
 You can build custom detection rules and hunt for specific threats in your environment. **Hunting** uses a query-based threat hunting tool that lets you proactively inspect events in your organization to locate threat indicators and entities. These rules run automatically to check for, and then respond to, suspected breach activity, misconfigured machines, and other findings.
 
-For more information, see [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](advanced-hunting-overview.md).
+For more information, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](advanced-hunting-overview.md).
 
 ## Actions and submissions
 
 **Actions** are tasks performed on entities in the Microsoft Defender portal. Actions can be performed on an asset like a device or user, can be performed on a single entity or on multiple entities at once, and be performed manually or automatically. 
 
-Automated actions are capabilities within Microsoft Defender XDR that help you address alerts and incidents automatically and speedily respond to attacks. Automated actions include:
+Automated actions are capabilities within Microsoft Defender that help you address alerts and incidents automatically and speedily respond to attacks. Automated actions include:
 
 - [Automated investigation and response](m365d-autoir.md)
 - [Attack disruption](automatic-attack-disruption.md)
@@ -90,7 +90,7 @@ You can submit files, email and email attachments, URLs, or Teams messages in th
 
 ## Threat analytics
 
-[**Threat analytics**](threat-analytics.md) is the Microsoft Defender XDR threat intelligence solution from expert Microsoft security researchers. It's designed to assist security teams to be as efficient as possible while facing emerging threats like:
+[**Threat analytics**](threat-analytics.md) is the Microsoft Defender threat intelligence solution from expert Microsoft security researchers. It's designed to assist security teams to be as efficient as possible while facing emerging threats like:
 
 - Active threat actors and their campaigns
 - Popular and new attack techniques
@@ -98,9 +98,9 @@ You can submit files, email and email attachments, URLs, or Teams messages in th
 - Common attack surfaces
 - Prevalent malware
 
-## Microsoft Defender XDR settings
+## Microsoft Defender settings
 
-You can manage settings for Microsoft Defender XDR in the **Settings > Microsoft Defender XDR** page in the Microsoft Defender portal. The settings page is where you can configure the following:
+You can manage settings for Microsoft Defender in the **Settings > Microsoft Defender XDR** page in the Microsoft Defender portal. The settings page is where you can configure the following:
 
 - Email notifications for [incidents](m365d-notifications-incidents.md), [response actions](m365d-response-actions-notifications.md), and [threat analytics reports](m365d-threat-analytics-notifications.md).
 - [Permissions and roles](m365d-permissions.md)
@@ -154,7 +154,7 @@ Notifications are sorted by their generated time in the notification panel, with
 
 ## Training for security analysts
 
-With this learning path from Microsoft Learn, you can understand Microsoft Defender XDR and how it can help identify, control, and remediate security threats.
+With this learning path from Microsoft Learn, you can understand Microsoft Defender and how it can help identify, control, and remediate security threats.
 
 |Training:|Mitigate threats using Microsoft Defender XDR|
 |---|---|

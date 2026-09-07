@@ -1,8 +1,9 @@
 ---
-title: Migrate from the Microsoft Monitoring Agent or the Azure Monitor Agent 
-description: Learn how to migrate File Integrity Monitor (FIM) from previous versions to the new version using Defender for Endpoint.
+title: Migrate File Integrity Monitoring from MMA or AMA to Defender for Endpoint
+description: Migrate File Integrity Monitoring in Defender for Servers Plan 2 from the Microsoft Monitoring Agent or Azure Monitor Agent to the new Defender for Endpoint-based version.
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to migrate FIM so that I can use the latest features and improvements.
 ai-usage: ai-assisted
 ---
@@ -11,7 +12,7 @@ ai-usage: ai-assisted
 
 [File integrity monitoring](file-integrity-monitoring-overview.md) in Defender for Servers Plan 2 uses the Microsoft Defender for Endpoint agent to collect data from machines according to collection rules.
 
-The previous version of file integrity monitoring used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) or the Azure Monitor Agent (AMA) for data collection. This article describes how to migrate previous versions of MMA and AMA to the new version.
+The previous version of file integrity monitoring used the Log Analytics agent (also known as the Microsoft Monitoring Agent (MMA)) or the Azure Monitor Agent (AMA) for data collection. This article describes how to migrate previous versions of MMA and AMA to the new version of file integrity monitoring that uses the Microsoft Defender for Endpoint agent.
 
 ## Prerequisites
 
@@ -33,7 +34,7 @@ Note that:
 
 - You can only run the migration tool once per subscription. You can't run it again to migrate rules from multiple workspaces in the same subscription.
 - The in-product migration requires Security Admin permissions on the target subscription and Owner permissions on the target Log Analytics workspace.
-- The tool lets you transfer existing monitoring rules to the new experience.
+- The migration tool lets you transfer existing monitoring rules to the new experience.
 - You can't migrate custom and legacy built-in rules that aren't part of the new experience, but you can export them to a JSON file.
 - The migration tool lists all the machines in a subscription, not just those onboarded to file integrity monitoring with MMA.
   - The legacy version required MMA connected to the Log Analytics workspace. Machines protected by Defender for Servers Plan 2 but not running MMA didn't benefit from file integrity monitoring.
@@ -45,6 +46,8 @@ Note that:
 - To exempt individual machines from file integrity monitoring, downgrade them to Defender for Servers Plan 1 by [enabling Defender for Servers at the resource level](tutorial-enable-servers-plan.md#enable-defender-for-servers-at-the-resource-level)
 
 ### Migrate with the in-product experience
+
+Follow these steps to migrate with the in-product experience:
 
 1. In Defender for Cloud, go to **Workload protections** > **File Integrity Monitoring**.
 1. In the banner message, select **Click here to migrate your environments**.
@@ -68,7 +71,7 @@ Note that:
 1. Select **Next**.
 1. On the **Review and approve** tab, review the migration summary. Select **Migrate** to start the migration process.
 
-After the migration finishes, the subscription is removed from the migration wizard, and migrated file integrity monitoring rules are applied.
+After the migration finishes, the selected subscription is removed from the migration wizard, and migrated file integrity monitoring rules are applied.
 
 ### Disable the legacy MMA solution
 
@@ -87,12 +90,12 @@ Follow these steps to disable file integrity monitoring with MMA manually.
 
 Follow these steps to migrate from file integrity monitoring with AMA.
 
-1. Remove the related file change tracking data collection rules (DCR).
-1. To do this, follow the instructions in [Remove-AzDataCollectionRuleAssociation](/powershell/module/az.monitor/remove-azdatacollectionruleassociation) and [Remove-AzDataCollectionRule](/powershell/module/az.monitor/remove-azdatacollectionrule).
+1. Remove the related data collection rules (DCRs) for file change tracking.
+1. To remove the related file change tracking data collection rules, follow the instructions in [Remove-AzDataCollectionRuleAssociation](/powershell/module/az.monitor/remove-azdatacollectionruleassociation) and [Remove-AzDataCollectionRule](/powershell/module/az.monitor/remove-azdatacollectionrule).
 
     After removal, no new file integrity monitoring events are collected. Historical events remain stored in the relevant workspace under the table `ConfigurationChange` in the Change Tracking section. Events are stored according to the [workspace data retention settings](/azure/azure-monitor/logs/data-retention-configure).
 
-If you want to keep using AMA to consume file integrity monitoring events, manually connect to the relevant workspace and view changes in the **Change Tracking** table with this query.
+If you want to keep using AMA to consume file integrity monitoring events, manually connect to the relevant workspace and view changes in the **Change Tracking** table. Use the following KQL query to find recent registry and file configuration changes over the last 14 days:
 
 ```kusto
 ConfigurationChange  
@@ -103,7 +106,8 @@ ConfigurationChange
 
 To continue onboarding new scope or configuring monitoring rules, manually work with data collection rules and customize data collection.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Review changes in file integrity monitoring](file-integrity-monitoring-review-changes.md)

@@ -1,14 +1,14 @@
 ---
 title: Troubleshoot ASR rules
-description: Resources and sample code to troubleshoot issues with attack surface reduction (ASR) rules in Microsoft Defender Antivirus.
+description: Troubleshoot false positives, false negatives, and other issues with attack surface reduction (ASR) rules in Microsoft Defender Antivirus. Includes self-service diagnostic steps and guidance for collecting data before opening a support case.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
 audience: ITPro
 author: chrisda
 ms.author: chrisda
-ms.date: 06/16/2026
+ms.date: 07/17/2026
 ms.reviewer:
-ms.custom: asr, msecd-doc-authoring-1014
+ms.custom: asr, msecd-doc-authoring-1016
 ms.subservice: asr
 ms.topic: how-to
 ms.collection:
@@ -43,13 +43,13 @@ For ASR rule requirements, see [Requirements for ASR rules](attack-surface-reduc
 
 ## Verify the active ASR rules and actions on devices
 
-Run the following command in PowerShell on the device to see the state of all configured ASR rules:
+Run the following command in PowerShell on the device to list the configured ASR rule IDs and their current action values. The output helps you identify which rules are active and whether they're set to **Block**, **Audit**, or another mode:
 
 ```powershell
 $p = Get-MpPreference;0..([math]::Min($p.AttackSurfaceReductionRules_Ids.Count,$p.AttackSurfaceReductionRules_Actions.Count)-1) | % {[pscustomobject]@{Id=$p.AttackSurfaceReductionRules_Ids[$_];Action=$p.AttackSurfaceReductionRules_Actions[$_]}} | Format-Table -AutoSize
 ```
 
-Example output from this command might look like this:
+The following sample output shows ASR rule GUIDs in the **Id** column and their configured action values in the **Action** column. Use this output to confirm which rules are set to **Block** mode (action value 1) or **Audit** mode (action value 2):
 
 ```powershell
 Id                                   Action
@@ -71,10 +71,13 @@ d4f940ab-401b-4efc-aadc-ad5f3c50688a      2
 e6db77e5-3df2-4cf1-b95a-636979351e5b      1
 ```
 
-In this example, the [ASR rules](attack-surface-reduction-rules-overview.md#asr-rules) are active in [different modes](attack-surface-reduction-rules-overview.md#modes-for-asr-rules) on the device (2 = **Audit** mode, 1 = **Block** mode).
+In this example, the [ASR rules listed in the overview](attack-surface-reduction-rules-overview.md#asr-rules) are active in [different ASR rule modes](attack-surface-reduction-rules-overview.md#modes-for-asr-rules) on the device (2 = **Audit** mode, 1 = **Block** mode).
 
 > [!NOTE]
 > If you used [Group Policy to configure ASR rules](attack-surface-reduction-rules-configure.md#configure-asr-rules-and-exclusions-in-group-policy), verify there are no extra characters like quotation marks or spaces in the ASR rule GUID value.
+
+> [!TIP]
+> To see the actual value of each ASR rule setting on a device and the source that configured it, use the **Effective settings** tab on the device page. For more information, see [Configuration management - Effective settings](investigate-machines.md#configuration-management---effective-settings).
 
 <a name="use-audit-mode-to-test-the-rule"></a>
 
@@ -84,7 +87,7 @@ In this example, the [ASR rules](attack-surface-reduction-rules-overview.md#asr-
 
 ASR rules in **Audit mode** don't block files or processes, but the actions that the rule would have taken in **Block** or **Warn** mode are recorded.
 
-Whatever method you used to distribute ASR rules to devices, use that same method to set the problematic rules to **Audit** mode. For instructions, see [Configure attack surface reduction rules](attack-surface-reduction-rules-configure.md).
+Use the same method you originally used to distribute ASR rules to devices (for example, Group Policy, Intune, or PowerShell) to set the problematic rules to **Audit** mode. For instructions, see [Configure attack surface reduction rules](attack-surface-reduction-rules-configure.md).
 
 > [!TIP]
 > If the ASR rule was already in **Audit** mode, that explains why it wasn't blocking the files or processes you expected it to block (false negative). ASR rules can accidentally get into **Audit** mode in the following scenarios:
@@ -114,11 +117,13 @@ If the ASR rule still isn't working as expected, do one of the following steps:
 
 - For false positives, add the file or path as an exclusion to the ASR rule. For more information, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 - Use the [Microsoft Security Intelligence web-based submission form](https://www.microsoft.com/wdsi/support/report-exploit-guard) to report a false negative or false positive for ASR rules. With a Windows E5 subscription, you can also provide a link to any associated alert from the [Alerts queue](alerts-queue.md).
-- When you report a problem involving ASR rules to Microsoft, you need to collect and submit diagnostic data to help troubleshoot the issue as described in [Collect diagnostic data for Microsoft support](#collect-diagnostic-data-for-microsoft-support).
+- When you report a problem involving ASR rules to Microsoft, you need to collect and submit diagnostic data to help troubleshoot the issue. See the following diagnostic data collection sections for instructions on using the MDE Client Analyzer or MpCmdRun.
 
 <a name="collect-microsoft-defender-anti-malware-protection-diagnostic-data-for-file-submissions"></a>
 
 ## Collect diagnostic data for Microsoft support
+
+When you open a support case with Microsoft for an ASR rule issue, you need to collect diagnostic data from the affected device. You can use either the MDE Client Analyzer or the MpCmdRun command-line tool to generate the required diagnostic files.
 
 <a name="using-the-mde-client-analyzer"></a>
 
@@ -130,7 +135,7 @@ Follow these steps to collect diagnostic data with the MDE Client Analyzer:
 
 1. Close any apps on the device that aren't essential to reproducing the issue.
 
-1. To collect verbose Defender for Endpoint diagnostics for ASR troubleshooting, run the MDE Client Analyzer with the `-v` switch [locally or using Live Response](run-analyzer-windows.md):
+1. Run MDE Client Analyzer in verbose mode to collect detailed diagnostic data for troubleshooting ASR-related behavior. The `-v` switch enables verbose logging, which captures the additional detail that Microsoft Support needs to diagnose ASR rule issues. You can run the analyzer [locally or using Live Response](run-analyzer-windows.md):
 
    ```dos
    C:\Work\tools\MDEClientAnalyzer\MDEClientAnalyzer.cmd -v

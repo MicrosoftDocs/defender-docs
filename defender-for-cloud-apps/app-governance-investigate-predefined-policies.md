@@ -1,11 +1,11 @@
 ---
 title: Investigate predefined OAuth app policy alerts with app governance | Microsoft Defender for Cloud Apps 
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: shragar
 description: Learn how to investigate predefined app policy alerts from app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Investigate predefined OAuth app policy alerts
@@ -46,10 +46,10 @@ The following predefined app governance policy alerts include investigation and 
 
 ### Increase in data usage by an overprivileged or highly privileged app
 
-An overprivileged app has permissions that exceed what it needs for its intended function, while a highly privileged app holds powerful permissions such as full mailbox or directory access. This alert detects unusual increases in data usage by these apps.
+An overprivileged app has permissions that exceed what it needs for its intended function, while a highly privileged app holds powerful permissions such as full mailbox or directory access. This alert detects unusual increases in data usage by overprivileged and highly privileged apps.
 
 > [!NOTE]
-> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy, we have disabled this policy. This policy remains visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
+> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy, we have disabled this policy. The Increase in data usage by an overprivileged or highly privileged app policy remains visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
 
 **Severity**: Medium
 
@@ -72,7 +72,7 @@ To determine if the alert is a true positive (TP) or a false positive (FP), revi
 A priority account is a high-value account, such as an executive or service administrator, that you tag in Microsoft Defender for Cloud Apps. This alert triggers when an app that a priority account has consented to exhibits unusual activity.
 
 > [!NOTE]
-> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy, we have disabled this policy. This policy remains visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
+> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy, we have disabled this policy. The Unusual activity from an app with priority account consent policy remains visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
 
 **Severity**: Medium
 
@@ -236,8 +236,10 @@ Review all activities performed by the app, scopes granted to the app and user a
 
 ### Access to sensitive data
 
+This alert detects apps that access sensitive data in ways that might indicate risky or malicious behavior.
+
 > [!NOTE]
-> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy, we have disabled this policy. This policy remains visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
+> As part of our continuous efforts to enhance Defender for Cloud apps alert accuracy, we have disabled this policy. The Access to sensitive data policy remains visible in the Defender portal in a disabled state. If you want to continue using this policy,  in the Defender portal, go to **App Governance**, and then the **Policies** page. Select the policy, and then select **Activate**.
 
 **Severity**: Medium
 
@@ -258,4 +260,4 @@ To determine if the alert is a true positive (TP) or a false positive (FP), revi
 <a name="next-steps"></a>
 ## Related content
 
-- [Learn about app threat detection and remediation](app-governance-detect-remediate-overview.md)
+- [App threat detection and remediation overview](app-governance-detect-remediate-overview.md)

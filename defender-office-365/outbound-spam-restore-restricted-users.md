@@ -12,11 +12,11 @@ ms.collection:
   - tier2
 description: Admins can learn how to remove user accounts from the Restricted entities page in the Microsoft Defender portal. Users are added to the Restricted entities page for sending outbound spam, typically as a result of account compromise.
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1015
   - seo-marvel-apr2020
   - sfi-ga-nochange
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 08/24/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
@@ -42,11 +42,11 @@ In all organizations with cloud mailboxes, several things happen if a user excee
 > your email address is suspected of sending spam and it's no longer allowed to send email.  Contact  your email admin for
 > assistance. Remote Server returned '550 5.1.8 Access denied, bad outbound sender."
 
-For more information about compromised user accounts and how to regain control of them, see [Responding to a compromised email account](responding-to-a-compromised-email-account.md).
+For more information about compromised user accounts and how to regain control of those accounts, see [Responding to a compromised email account](responding-to-a-compromised-email-account.md).
 
 The procedures in this article explain how admins can remove user accounts from the **Restricted entities** page in the Microsoft Defender portal or in Exchange Online PowerShell.
 
-For more information about compromised _connectors_ and how to remove them from the **Restricted entities** page, see [Remove blocked connectors from the Restricted entities page](connectors-remove-blocked.md).
+For more information about compromised _connectors_ and how to remove connectors from the **Restricted entities** page, see [Remove blocked connectors from the Restricted entities page](connectors-remove-blocked.md).
 
 ## What do you need to know before you begin?
 
@@ -127,13 +127,18 @@ The default alert policy named **User restricted from sending email** automatica
 
 ## Use Exchange Online PowerShell to view and remove users from the Restricted entities page
 
-To view this list of users that are restricted from sending email, run the following command in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
+To view the list of users who are restricted from sending email, run the following command in [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell):
 
 ```powershell
 Get-BlockedSenderAddress
 ```
 
-To view details about a specific user, replace \<emailaddress\> with their email address and run the following command:
+The identifier for a restricted sender depends on the sender type:
+
+- **Hosted mailbox**: The user principal name (UPN) of the blocked mailbox. The UPN and primary SMTP address aren't required to match.
+- **Nonhosted sender**: The SMTP address that the sender uses. For example, an on-premises sender is listed by its sending SMTP address.
+
+To view details about a specific restricted sender, replace \<emailaddress\> with the UPN of a hosted mailbox or the SMTP address of a nonhosted sender, and then run the following command:
 
 ```powershell
 Get-BlockedSenderAddress -SenderAddress <emailaddress> | Format-List
@@ -141,7 +146,7 @@ Get-BlockedSenderAddress -SenderAddress <emailaddress> | Format-List
 
 For detailed syntax and parameter information, see [Get-BlockedSenderAddress](/powershell/module/exchangepowershell/get-blockedsenderaddress).
 
-To remove a user from the Restricted users list, replace \<emailaddress\> with their email address and run the following command:
+To remove a restricted sender, replace \<emailaddress\> with the UPN of a hosted mailbox or the SMTP address of a nonhosted sender, and then run the following command:
 
 ```powershell
 Remove-BlockedSenderAddress -SenderAddress <emailaddress>

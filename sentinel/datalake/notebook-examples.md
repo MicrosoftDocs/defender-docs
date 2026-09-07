@@ -6,24 +6,24 @@ ms.author: edbaynash
 author: EdB-MSFT  
 ms.reviewer: zeinam
 ms.topic: how-to  
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 # Customer intent: As a security engineer or data scientist, I want to see examples of how to query the Microsoft Sentinel data lake using Jupyter notebooks, so I can analyze security data effectively.
 ---
  
 # Microsoft Sentinel Jupyter notebook code examples  
  
-This article presents some sample code snippets that demonstrate how to interact with Microsoft Sentinel lake data using Jupyter notebooks to analyze security data in the Microsoft Sentinel data lake. These examples illustrate how to access and analyze data from various tables, such as Microsoft Entra ID sign-in logs, group information, and device network events. The code snippets are designed to run in Jupyter notebooks within Visual Studio Code using the Microsoft Sentinel extension.
+This article provides code snippets that show how to query the Microsoft Sentinel data lake using Jupyter notebooks. The examples cover data from tables such as Microsoft Entra ID sign-in logs, group details, and device network events. Each snippet is designed to run in a Jupyter notebook in Visual Studio Code with the Microsoft Sentinel extension.
 
-To run these examples, must have the required permissions and Visual Studio Code installed with the Microsoft Sentinel extension. For more information, see [Microsoft Sentinel data lake permissions](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake) and  [Use Jupyter notebooks with Microsoft Sentinel data lake](./notebooks.md).
+To run these examples, you must have the required permissions and Visual Studio Code installed with the Microsoft Sentinel extension. For more information, see [Microsoft Sentinel data lake permissions](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake) and  [Use Jupyter notebooks with Microsoft Sentinel data lake](./notebooks.md).
 
 ## Failed sign-in attempts analysis
 
-This example identifies users with failed sign-in attempts. To do so, this notebook example processes sign-in data from two tables: 
+This example identifies users with failed sign-in attempts. To find these users, the notebook processes sign-in data from two tables: 
  + SigninLogs 
  + AADNonInteractiveUserSignInLogs
 
@@ -117,7 +117,7 @@ The following screenshot shows sample output from the failed sign-in analysis co
 ## Query the EntraGroups table
 
 
-This code sample reads the `EntraGroups` table from the data lake. It returns fields like `displayName`, `groupTypes`, `mail`, `mailNickname`, `description`, and `tenantId`. 
+This sample reads the `EntraGroups` table. It returns group details such as name, type, mail, and tenant ID.
 
 ```python  
 from sentinel_lake.providers import MicrosoftSentinelProvider
@@ -134,7 +134,7 @@ The following screenshot shows sample output from the EntraGroups table query co
 
 ## Access Microsoft Entra ID sign-in logs for a specific user  
 
-The following code sample demonstrates how to access the Microsoft Entra ID `SigninLogs` table and filter the results for a specific user. It retrieves various fields such as UserDisplayName, UserPrincipalName, UserId, and more.
+This sample queries the `SigninLogs` table and filters results for a specific user. It returns fields like UserDisplayName, UserPrincipalName, and UserId.
 
 ```python  
 from sentinel_lake.providers import MicrosoftSentinelProvider
@@ -251,7 +251,7 @@ result_df.show()
 
 ## Detect lateral movement attempts
 
-Use DeviceNetworkEvents to identify suspicious internal IP connections that may signal lateral movement, for example, abnormal Server Message Block (SMB) or Remote Desktop Protocol (RDP) traffic between endpoints.
+Use DeviceNetworkEvents to find internal-to-internal connections with high connection counts, which may signal lateral movement. You can adjust the connection-count threshold or add port filters to narrow results to specific protocols.
 
 ```python
 from sentinel_lake.providers import MicrosoftSentinelProvider
@@ -283,7 +283,7 @@ suspicious_lateral.show()
 
 ## Uncover credential dumping tools
 
-Query DeviceProcessEvents to find processes like mimikatz.exe or unexpected execution of lsass.exe access, which could indicate credential harvesting.
+Query DeviceProcessEvents to find known credential-dumping tools or suspicious processes that interact with lsass.exe, which could indicate credential harvesting.
 
 ```python
 from sentinel_lake.providers import MicrosoftSentinelProvider

@@ -4,9 +4,9 @@ description: Learn how to use Microsoft Defender External Attack Surface Managem
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -15,6 +15,8 @@ ai-usage: ai-assisted
 Microsoft Defender External Attack Surface Management (Defender EASM) relies on proprietary discovery technology to continuously define your organization's unique internet-exposed attack surface. Discovery scans the internet for assets owned by your organization to uncover previously unknown and unmonitored properties.
 
 Discovered assets are indexed in your inventory to provide a dynamic system of record of web applications, third-party dependencies, and web infrastructure under your organization's management through a single pane of glass.
+
+This article explains how to access your automated attack surface, configure and run custom discoveries, and review discovery results.
 
 Before you run a custom discovery, see [What is discovery?](what-is-discovery.md) to understand the key concepts discussed here.
 
@@ -36,7 +38,7 @@ You can run customized discoveries to detect outlier assets. For example, you mi
 
 ## Customize discovery
 
-Custom discoveries are ideal if your organization requires deeper visibility into infrastructure that might not be immediately linked to your primary seed assets. By submitting a larger list of known assets to operate as discovery seeds, the discovery engine returns a wider pool of assets. Custom discovery can also help your organization find disparate infrastructure that might relate to independent business units and acquired companies.
+Custom discoveries are ideal if your organization requires deeper visibility into infrastructure that might not be immediately linked to your primary seed assets. Seed assets (or discovery seeds) are known domains, hosts, IP ranges, or other identifiers that Defender EASM uses as starting points for discovery. By submitting a larger list of known assets to operate as discovery seeds, the discovery engine returns a wider pool of assets. Custom discovery can also help your organization find disparate infrastructure that might relate to independent business units and acquired companies.
 
 ### Discovery groups
 
@@ -52,7 +54,7 @@ To create a discovery group, follow these steps:
 
 2. The **Discovery** page shows your list of discovery groups by default. This list is empty when you first access the platform. To run your first discovery, select **Add Discovery Group**.
 
-    ![Screenshot that shows the Discovery screen with Add Discovery Group highlighted.](media/discovery-3.png)
+    ![Screenshot of the Discovery page with Add Discovery Group highlighted to start a new discovery group.](media/discovery-3.png)
 
 3. Name your new discovery group and add a description. The **Recurring Frequency** field allows you to schedule discovery runs for this group by scanning for new assets related to the designated seeds on a continuous basis. The default recurrence selection is **Weekly**. We recommend the **Weekly** cadence to ensure that your organization's assets are routinely monitored and updated.
 
@@ -80,7 +82,7 @@ To create a discovery group, follow these steps:
 
 6. Review your group information and seed list and select **Create & Run**.
 
-    ![Screenshot that shows the Review + Create screen.](media/discovery-8.png)
+    ![Screenshot of the Review + Create page showing the discovery group settings and selected seeds before creation.](media/discovery-8.png)
 
     You're taken back to the main Discovery page that displays your discovery groups. After your discovery run is finished, you see new assets added to your approved inventory.
 
@@ -88,17 +90,18 @@ To create a discovery group, follow these steps:
 
 You can manage your discovery groups from the main **Discovery** page. The default view displays a list of all your discovery groups and some key data about each one. From the list view, you can see the number of seeds, recurrence schedule, last run date, and created date for each group.
 
- ![Screenshot that shows the discovery groups screen.](media/discovery-9.png)
+ ![Screenshot of the Discovery groups list showing each group's seeds, recurrence schedule, last run date, and created date.](media/discovery-9.png)
 
 Select any discovery group to view more information, edit the group, or start a new discovery run.
 
-### Run history
+<a name="run-history"></a>
+### View run history
 
-The discovery group details page contains the run history for the group. This section displays key information about each discovery run that was performed on the specific group of seeds. The **Status** column indicates whether the run is **In Progress**, **Complete**, or **Failed**. This section also includes **started** and **completed** timestamps and a count of all new assets added to your inventory after that particular discovery run. This count includes all assets brought into inventory, regardless of state or billable status.
+The discovery group details page contains the run history for the group. The run history section displays key information about each discovery run that was performed on the specific group of seeds. The **Status** column indicates whether the run is **In Progress**, **Complete**, or **Failed**. The run history section also includes **started** and **completed** timestamps and a count of all new assets added to your inventory after that particular discovery run. This count includes all assets brought into inventory, regardless of state or billable status.
 
 Run history is organized by the seed assets that were scanned during the discovery run. To see a list of the applicable seeds, select **Details**. A pane opens on the right of your screen that lists all the seeds and exclusions by kind and name.
 
- ![Screenshot that shows the run history for the discovery group screen.](media/discovery-10.png)
+ ![Screenshot of a discovery group's run history showing run status, start and completion times, and new asset counts.](media/discovery-10.png)
 
 ### View seeds and exclusions
 
@@ -113,7 +116,7 @@ The source name is the value that was input in the appropriate type box when you
 
 When you input seeds, remember to validate the appropriate format for each entry. When you save the discovery group, the platform runs a series of validation checks and alerts you of any misconfigured seeds. For example, IP blocks should be input by network address (for example, the start of the IP range).
 
- ![Screenshot that shows the Seeds view of a discovery page.](media/discovery-11.png)
+ ![Screenshot of the Seeds view listing seed values with columns for Type, Source Name, and Discovery Groups.](media/discovery-11.png)
 
 <a name="exclusions"></a>
 ### View discovery exclusions

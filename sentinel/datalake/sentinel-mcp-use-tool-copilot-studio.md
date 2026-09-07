@@ -1,30 +1,28 @@
 ---
-title: Use a Microsoft Sentinel MCP tool in Microsoft Copilot Studio
+title: Add Microsoft Sentinel MCP tools to AI agents in Microsoft Copilot Studio
 titleSuffix: Microsoft Security  
-description: Learn how to add Microsoft Sentinel's Model Context Protocol (MCP) collection of security tools or your own custom tool in Microsoft Copilot Studio
+description: Add Microsoft Sentinel MCP security tools or custom tools to AI agents in Microsoft Copilot Studio. Includes steps for authentication, app registration, and connecting tool collections.
 ms.author: pauloliveria
 author: poliveria
 ms.reviewer: macasgra
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security analyst, I want to add Sentinel MCP tools in Microsoft Copilot Studio.
 ---
 
-# Use a Microsoft Sentinel MCP tool in Microsoft Copilot Studio (preview)
+# Add Microsoft Sentinel MCP tools to AI agents in Microsoft Copilot Studio (preview)
 
 > [!IMPORTANT]
 > This information relates to a prerelease product that may be substantially modified before it's released. Microsoft makes no warranties, expressed or implied, with respect to the information provided here.
 
 This article shows you how to add Microsoft Sentinel's Model Context Protocol (MCP) [collection of security tools](sentinel-mcp-tools-overview.md#available-collections) or your own custom tools to your AI agents in [Microsoft Copilot Studio](/microsoft-copilot-studio/fundamentals-what-is-copilot-studio) . 
 
-For information about how to get started with MCP tools, see the following articles:
-- [Get started with Microsoft Sentinel MCP server](sentinel-mcp-get-started.md)
-- [Create and use custom Microsoft Sentinel MCP tools](sentinel-mcp-create-custom-tool.md)
+For information about how to get started with MCP tools, see [Get started with Microsoft Sentinel MCP server](sentinel-mcp-get-started.md) and [Create and use custom Microsoft Sentinel MCP tools](sentinel-mcp-create-custom-tool.md).
 
 >[!TIP]
 >For the best performance with MCP tools, use GPT-5 or a later version with a higher context window. 
@@ -93,9 +91,9 @@ Register a Microsoft Entra application that Copilot Studio uses to authenticate 
     > Create a single app for all Sentinel custom tools, but create separate client secrets for each custom collection you want to add to your agent.
  
     >[!IMPORTANT]
-    > Once the client secret is added, copy and save its **Value**, which you use in the next steps.
+    > Once the client secret is added, copy and save its **Value**. You use it as the **Client secret** when you add the tool in Copilot Studio.
 
-1.	Go back to the Azure portal's **Overview** page and copy and save the following values for the next steps:
+1.	Go back to the Azure portal's **Overview** page and copy and save the following values to use in the Copilot Studio OAuth settings:
     - Application (client) ID
     - Directory (tenant) ID
 
@@ -135,7 +133,8 @@ In Copilot Studio, create a new MCP tool entry for the custom tool you registere
 
      :::image type="content" source="media/sentinel-mcp/custom-studio-redirect.png" alt-text="Screenshot of the URL redirect details in Copilot Studio Add tool setup." lightbox="media/sentinel-mcp/custom-studio-redirect.png":::
 
-### Step 3: Authenticate Copilot Studio to use your custom tool
+<a name="step-3-authenticate-copilot-studio-to-use-your-custom-tool"></a>
+### Step 3: Configure a redirect URI to authenticate Copilot Studio
 
 Configure a redirect URI so that Copilot Studio can authenticate with your custom MCP tool.
 

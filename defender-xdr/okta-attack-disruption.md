@@ -1,6 +1,6 @@
 ---
-title: Enable attack disruption actions in Okta with Microsoft Sentinel
-description: Learn how to configure your Okta integration with Microsoft Defender XDR to enable automatic attack disruption capabilities.
+title: Enable attack disruption actions in Okta with Microsoft Defender XDR
+description: Configure the Okta integration with Microsoft Defender for Identity to enable Microsoft Defender XDR automatic attack disruption actions in your Okta environment.
 ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
@@ -10,11 +10,11 @@ ms.collection:
   - m365-security
   - tier2
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender XDR
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Enable attack disruption actions in Okta with Microsoft Sentinel (preview)
@@ -23,22 +23,22 @@ ms.custom: msecd-doc-authoring-1014
 
 Microsoft Defender XDR's [automatic attack disruption](automatic-attack-disruption.md) capabilities can help protect your Okta-managed identities by automatically responding to threats. When an identity managed by Okta is compromised, Defender XDR can take remediation actions directly in Okta to contain the attack, limit lateral movement, and reduce overall impact.
 
-This article describes how to set up the Okta integration with Microsoft Defender for Identity to enable attack disruption actions in your Okta environment. Before you begin, review the [prerequisites](#prerequisites) to ensure your Okta and Microsoft environments are properly configured.
+This article describes how to set up the Okta integration in Microsoft Defender for Identity to enable attack disruption actions in your Okta environment. Before you begin, review the [prerequisites](#prerequisites) to ensure your Okta and Microsoft environments are properly configured.
 
 ## Prerequisites
 
-Before you begin, make sure the following prerequisites are met:
+Make sure you meet these requirements:
 
 ### Okta requirements
 
-You have an Okta account with admin privileges and a developer or enterprise license.
+You need an Okta account with admin access. You also need a developer or enterprise license.
 
 ### Microsoft requirements
 
-Make sure the following Microsoft prerequisites are completed before you continue:
+Complete these steps before you continue:
 
-- Your Microsoft Sentinel analytic workspace is connected to the unified security operations portal
-- The Okta connector for Microsoft Sentinel is deployed and enabled.
+- Connect your Microsoft Sentinel analytic workspace to the unified security operations portal.
+- Deploy and enable the Okta connector for Microsoft Sentinel.
 
 > [!NOTE]
 > During public preview, only the Okta single sign-in connector is supported.
@@ -51,7 +51,7 @@ To create the integration from an Okta account with admin privileges, follow the
 1. [Create an Okta API key](https://help.okta.com/en-us/content/topics/security/api.htm#create-okta-api-token)
 
    - Provide a friendly name for your token
-   - Make sure to keep the generated token value to be used later when creating the integration.
+   - Make sure to keep the generated token value to be used later when creating the integration profile in the Defender portal.
 
 > [!NOTE]
 > This token is a secret that allows connecting to your Okta environment and performing actions. Don't share its value or save it in any visible or public location.
@@ -82,7 +82,7 @@ To create the integration in the Defender portal, follow these steps:
 
 ## Related content
 
-- [Automatic attack disruption in Microsoft Defender XDR](automatic-attack-disruption.md)
+- [Automatic attack disruption in Microsoft Defender](automatic-attack-disruption.md)
 - [Configure automatic attack disruption](configure-attack-disruption.md)
 - [Enable attack disruption actions on AWS with Microsoft Sentinel](/azure/sentinel/aws-disruption?toc=/defender-xdr/toc.json&bc=/defender-xdr/breadcrumb/toc.json)
 - [How Microsoft Defender for Identity protects your Okta accounts](/defender-for-identity/okta-defender-for-identity-overview)

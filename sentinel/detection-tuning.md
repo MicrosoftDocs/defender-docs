@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security analyst, I want to receive fine-tuning recommendations for my Microsoft Sentinel analytics rules so that I can optimize threat detection and reduce false positives.
 
@@ -24,7 +24,7 @@ ms.custom: msecd-doc-authoring-1014
 
 Fine-tuning threat detection rules in your SIEM can be a difficult, delicate, and continuous process of balancing between maximizing your threat detection coverage and minimizing false positive rates. Microsoft Sentinel simplifies and streamlines this process by using machine learning to analyze billions of signals from your data sources as well as your responses to incidents over time, deducing patterns and providing you with actionable recommendations and insights that can significantly lower your tuning overhead and allow you to focus on detecting and responding to actual threats.
 
-Tuning recommendations and insights are now built in to your analytics rules. This article will explain what these insights show, and how you can implement the tuning recommendations.
+Tuning recommendations and insights are now built in to your analytics rules. The following sections explain what these insights show and how you can implement the tuning recommendations.
 
 ## View rule insights and tuning recommendations
 
@@ -38,7 +38,8 @@ Edit an analytics rule that displays the lightbulb icon to view its recommendati
 
 :::image type="content" source="media/detection-tuning/tuning-insights.png" alt-text="Screenshot of tuning insights in analytics rule." lightbox="media/detection-tuning/tuning-insights.png":::
 
-### Types of insights
+<a name="types-of-insights"></a>
+### Types of analytics rule insights
 
 The **Tuning insights** display consists of several panes that you can scroll or swipe through, each showing you something different. The time frame - 14 days - for which the insights are displayed is shown at the top of the frame.
 

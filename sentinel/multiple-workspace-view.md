@@ -5,11 +5,11 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security analyst, I want to manage and investigate incidents across multiple workspaces and tenants so that I can maintain comprehensive visibility and control over my organization's security posture.
 
@@ -53,7 +53,7 @@ Multiple workspace view is currently available only for incidents. The multiple 
 
 - You need to have read and write permissions on all the workspaces from which you've selected incidents. If you have only read permissions on some workspaces, you see warning messages if you select incidents in those workspaces. You aren't able to modify those incidents or any others you've selected together with those (even if you do have permissions for the others).
 
-- If you choose a single incident and select **View full details** or **Actions** > **Investigate**, you'll from then on be in the data context of that incident's workspace and no others.
+- If you choose a single incident and select **View full details** or **Actions** > **Investigate**, you'll from then on be in the data context of the selected incident's workspace and no others.
 
 <a name="next-steps"></a>
 ## Related content

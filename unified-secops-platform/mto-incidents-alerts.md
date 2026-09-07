@@ -9,19 +9,19 @@ ms.collection:
   - tier1
   - usx-security
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Sentinel in the Microsoft Defender portal
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # View and manage incidents and alerts in Microsoft Defender multitenant management
 
-Multi-tenant management for Microsoft Defender XDR and Microsoft Sentinel in the Defender portal enables security operation center (SOC) analysts to access and analyze data from multiple tenants and workspaces in one place, allowing them to quickly identify and respond to threats. Triage incidents and alerts across security information and event management (SIEM) and extended detection and response (XDR) data for tenants that onboarded a Microsoft Sentinel workspace to the Defender platform.
+Multitenant management in the Defender portal brings together data from multiple tenants and Microsoft Sentinel workspaces in one place. Security operations center (SOC) analysts can use it to quickly find and respond to threats across Microsoft Defender XDR and Microsoft Sentinel. You can triage incidents and alerts that span SIEM and XDR data for any tenant with a Microsoft Sentinel workspace onboarded to the Defender platform.
 
-Manage incidents & alerts originating from multiple tenants and workspaces under **Incidents & alerts**.
+This article shows you how to view, investigate, and manage incidents and alerts from multiple tenants and workspaces by using the **Incidents & alerts** pages.
 
 ## View and investigate incidents
 
@@ -33,12 +33,15 @@ To view or investigate an incident:
 
 1. Select the incident you want to view. A flyout opens with the incident details pane, where you can:
 
-    - Select **Open incident page** to view this incident in a new tab for the specific tenant in the [Microsoft Defender portal](https://security.microsoft.com).
-    - Select **Manage incident** to assign the incident, set incident tags, set the incident status, and classify the incident.
+    - Select **Open incident page** to open the incident in a new tab for that tenant in the [Microsoft Defender portal](https://security.microsoft.com).
+    - Select **Manage incident** to assign, tag, classify, or change the status of the incident.
 
 To learn more, see [Investigate incidents](/defender-endpoint/investigate-incidents).
 
 ## Manage multiple incidents
+
+> [!Note]
+> Currently, you can only assign multiple incidents from same tenant.
 
 To manage incidents across multiple tenants and workspaces:
 
@@ -47,10 +50,7 @@ To manage incidents across multiple tenants and workspaces:
 
    :::image type="content" source="media/mto-incidents-alerts/mto-manage-incidents.png" alt-text="Screenshot that highlights the manage incidents option on the incidents page in Microsoft Defender multitenant management." lightbox="media/mto-incidents-alerts/mto-manage-incidents.png":::
 
-On the incidents flyout pane you can assign incidents, assign incidents tags, set the incident status, and classify multiple incidents for multiple tenants simultaneously.
-
->[!Note]
-> Currently, you can only assign multiple incidents from same tenant.
+On the flyout pane, you can assign, tag, classify, or change the status of incidents across multiple tenants at once.
 
 To learn more about incidents in the Microsoft Defender portal, see [Manage incidents](/defender-endpoint/manage-incidents).
 
@@ -64,8 +64,8 @@ To view or investigate an alert:
 
 1. From the alert details pane you can:
 
-    - Select actions such as **Open alerts page**, **Move alert to another incident**, and **Tune alert** to view this alert in a new tab for the specific tenant in the [Microsoft Defender portal](https://security.microsoft.com).
-    - Select **Manage alert** to assign the alert, set the alert status, and classify the alert.
+    - Select **Open alerts page**, **Move alert to another incident**, or **Tune alert** to open the alert in a new tab for that tenant in the [Microsoft Defender portal](https://security.microsoft.com).
+    - Select **Manage alert** to assign, classify, or change the status of the alert.
 
 To learn more, see [Investigate alerts](/defender-endpoint/investigate-alerts).
 
@@ -78,7 +78,7 @@ To manage alerts across multiple tenants and workspaces:
 
    :::image type="content" source="media/mto-incidents-alerts/mto-manage-alerts.png" alt-text="Screenshot that highlights the manage alerts option for selected alerts in Microsoft Defender multitenant management." lightbox="media/mto-incidents-alerts/mto-manage-alerts.png":::
 
-Use the **Manage alerts** pane to set alert status, assign alerts, set classifications, and add comments for multiple alerts simultaneously. While alert status, classifications, and comments can be added across tenants, assigning alerts can only be done for alerts from the same tenant.
+Use the **Manage alerts** pane to set the status, assign, classify, and add comments for multiple alerts at once. You can set status, classifications, and comments across tenants. However, you can only assign alerts from the same tenant.
 
 For more information, see [Manage alerts](/defender-xdr/investigate-alerts#manage-alerts).
 

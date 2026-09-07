@@ -1,11 +1,11 @@
 ---
 title: Cloud discovery policies 
 description: Get started with cloud discovery in Defender for Cloud Apps to gain visibility into Shadow IT and analyze cloud app usage across your organization.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Create cloud discovery policies in Defender for Cloud Apps
 
@@ -66,7 +66,10 @@ Perform the following steps to create a policy that detects risky or non-complia
 
     1. Select **Daily traffic** greater than 2,000 GB (or other).
 
-1. Configure governance actions to be taken when an alert is triggered. Under **Governance**, select **Tag app as unsanctioned.**<br />Access to the app will be automatically blocked when the policy is matched.
+1. Configure governance actions to be taken when an alert is triggered. Under **Governance**, select **Tag app as unsanctioned.**
+
+    > [!IMPORTANT]
+    > Selecting **Tag app as unsanctioned** automatically blocks access to the app when the policy is matched.
 
 1. Optional: Apply [Defender for Cloud Apps native integrations](set-up-cloud-discovery.md) with Secure Web Gateways to block app access.
 
@@ -82,7 +85,7 @@ You can detect when your employees continue to use unsanctioned apps as a replac
 
 ### Create an unsanctioned app discovery policy
 
-Perform the following steps to detect use of unsanctioned business apps.
+App tags are labels you assign to discovered apps so you can filter and target them in discovery policies. Perform the following steps to detect use of unsanctioned business apps.
 
 1. In the Cloud app catalog, search for your business-ready apps and mark them with a [custom app tag](discovered-app-queries.md#creating-and-managing-custom-app-tags).
 
@@ -90,7 +93,10 @@ Perform the following steps to detect use of unsanctioned business apps.
 
 1. Add an **App tag** filter and choose the app tags you created for your business-ready apps.
 
-1. Configure governance actions to be taken when an alert is triggered. Under Governance, select **Tag app as unsanctioned**.<br />Access to the app will be automatically blocked when the policy is matched.
+1. Configure governance actions to be taken when an alert is triggered. Under **Governance**, select **Tag app as unsanctioned**.
+
+    > [!IMPORTANT]
+    > Selecting **Tag app as unsanctioned** automatically blocks access to the app when the policy is matched.
 
 1. Optional: Use [Defender for Cloud Apps native integrations](set-up-cloud-discovery.md) with Secure Web Gateways to block app access.
 

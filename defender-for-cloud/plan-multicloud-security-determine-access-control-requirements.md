@@ -1,20 +1,25 @@
 ---
-title: Planning multicloud security determine access control requirements guidance
-description: Learn about determining access control requirements to meet business goals in multicloud environment with Microsoft Defender for Cloud.
+title: Determine access control requirements for multicloud security
+description: Determine the permissions and access controls needed for your multicloud deployment with Microsoft Defender for Cloud as part of your CSPM and CWPP solution design.
 ms.topic: how-to
-ms.date: 05/31/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Determine access control requirements
 
-This article is part of a series to provide guidance as you design a cloud security posture management (CSPM) and cloud workload protection platform (CWPP) solution across multicloud resources with Microsoft Defender for Cloud.
+## Overview
 
-## Goal
+This article is part of a series to provide guidance as you design a cloud security posture management (CSPM) and cloud workload protection platform (CWPP) solution across multicloud resources with Microsoft Defender for Cloud. It helps you determine the permissions and access controls required for your multicloud deployment, including identity and access management (IAM) considerations for Azure, AWS, and GCP resources.
+
+<a name="goal"></a>
+## Define access control objectives
 
 Determine the permissions and access controls you need in your multicloud deployment.
 
-## Get started
+<a name="get-started"></a>
+## Assess access control requirements
 
 As part of your multicloud solution design, review access requirements for multicloud resources that users can access. As you plan, answer the following questions, take notes, and document why each answer matters.
 

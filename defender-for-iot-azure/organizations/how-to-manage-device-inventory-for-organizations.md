@@ -1,9 +1,9 @@
 ---
 title: Manage your device inventory from the Azure portal
 description: Learn how to view and manage OT and IoT devices (assets) from the Device inventory page in the Azure portal.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
   - enterprise-iot
   - sfi-image-nochange
 ai-usage: ai-assisted
@@ -15,10 +15,8 @@ Use the **Device inventory** page in [Defender for IoT](https://portal.azure.com
 
 For more information, see [Devices monitored by Defender for IoT](architecture.md#devices-monitored-by-defender-for-iot).
 
->[!Note]
->
->Currently, devices discovered in the Azure portal aren't synchronized with the Defender portal, and therefore the list of devices discovered could be different in each portal.
->
+> [!NOTE]
+> Currently, devices discovered in the Azure portal aren't synchronized with the Defender portal, and therefore the list of devices discovered could be different in each portal.
 
 ## View the device inventory
 
@@ -36,7 +34,6 @@ Use any of the following options to modify or filter the devices shown:
 | **Group devices** | From the **Group by** dropdown, select a category, such as **Class**, **Data source**, **Location**, **Purdue level**, **Site**, **Type**, **Vendor**, or **Zone**, to group the devices shown. Inside each group, devices retain the same column sorting. To remove the grouping, select **No grouping**. |
 
 For more information, see [Device inventory column data](device-inventory.md#device-inventory-column-data).
-
 
 > [!NOTE]
 > If your OT sensors detect multiple devices in the same zone with the same IP or MAC address, those devices are automatically merged and identified as a single, unique device. Devices that have different IP addresses, but the same MAC address, aren't merged, and continue to be listed as unique devices.
@@ -58,7 +55,7 @@ The device details page displays comprehensive device information, including the
 | **Attributes** | Displays full device details such as class, data source, firmware details, activity, type, protocols, Purdue level, sensor, site, zone, and more. |
 | **Backplane** | Displays the backplane hardware configuration, including slot and rack information. Select a slot in the backplane view to see the details of the underlying devices. The backplane tab is usually visible for Purdue level 1 devices that have slots in use, such as PLC, RTU, and DCS devices. |
 |**Vulnerabilities** | Displays current vulnerabilities specific to the device. Defender for IoT provides vulnerability coverage for [supported OT vendors](resources-manage-proprietary-protocols.md) where Defender for IoT can detect firmware models and firmware versions.<br><br>Vulnerability data is based on the repository of standards-based vulnerability data documented in the US government National Vulnerability Database (NVD). Select the CVE name to see the CVE details and description. <br><br>**Tip**: View vulnerability data across your network with the [Defender for IoT Vulnerability workbook](workbooks.md#view-workbooks).|
-|**Alerts** | Displays current open alerts related to the device. Select any alert to view more details, and then select **View full details** to open the alert page to view the full alert information and take action. For more information on the alerts page, see [View alerts on the Azure portal](how-to-manage-cloud-alerts.md#view-alerts-on-the-azure-portal). |
+|**Alerts** | Displays current open alerts related to the device. Select any alert to view more details, and then select **View full details** to open the alert page to view the full alert information and take action. For more information, see [View alerts on the Azure portal](how-to-manage-cloud-alerts.md#view-alerts-on-the-azure-portal). |
 |**Recommendations** | Displays current recommendations for the device, such as Review PLC operating mode and Review unauthorized devices. For more information on recommendations, see [Enhance security posture with security recommendations](recommendations.md). |
 
 For example:
@@ -86,9 +83,9 @@ If you suspect that certain devices aren't actively communicating with Azure, we
 
 ## Edit device details
 
-As you manage your network devices, you may need to update their details. For example, you may want to modify security value as assets change, or personalize the inventory to better identify devices, or if a device was classified incorrectly.
+As you manage your network devices, you might need to update their details. For example, you might want to modify security value as assets change, or personalize the inventory to better identify devices, or if a device was classified incorrectly.
 
-**To edit device details**:
+To edit device details:
 
 1. Select one or more devices in the grid, and then select **Edit** :::image type="icon" source="media/how-to-manage-sensors-on-the-cloud/edit-device-details.png" border="false":::.
 
@@ -128,7 +125,7 @@ For more information, see [Device inventory column data](device-inventory.md#dev
 
 Export your device inventory to a CSV file to manage or share data outside of the Azure portal. You can export a maximum of 30,000 devices at a time.
 
-**To export device inventory data**:
+To export device inventory data:
 
 On the **Device inventory page**, select **Export** :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/export-button.png" border="false":::.
 
@@ -138,23 +135,20 @@ The device inventory is exported with any filters currently applied, and you can
 
 If you have devices no longer in use, delete them from the device inventory so that they're no longer connected to Defender for IoT.
 
-Devices might be inactive because of misconfigured SPAN (port mirroring) ports, changes in network coverage, or because the device was unplugged from the network.
+Devices might be inactive because of misconfigured port mirroring (SPAN) ports, changes in network coverage, or because the device was unplugged from the network.
 
 Delete inactive devices to maintain a correct representation of current network activity, better understand the number of devices that you're monitoring when managing your Defender for IoT [licenses and plans](billing.md), and to reduce clutter on your screen.
 
 > [!IMPORTANT]
 > Device deletions are one-directional. When you delete a device from the **Azure portal**, the deletion doesn't sync to the sensor connected to the same site. When you delete a device from the **sensor**, the deletion syncs to the **Device inventory** in the Azure portal.
 
-**To delete a device**:
+To delete a device:
 
 In the **Device inventory** page, select the device you want to delete, and then select **Delete** :::image type="icon" source="media/how-to-manage-device-inventory-on-the-cloud/delete-device.png" border="false"::: in the toolbar at the top of the page.
 
 At the prompt, select **Yes** to confirm that you want to delete the device from Defender for IoT.
 
-
-## Next steps
-
-For more information, see:
+## Related content
 
 - [Defender for IoT device inventory](device-inventory.md)
 - [Control what traffic is monitored](how-to-control-what-traffic-is-monitored.md)

@@ -1,11 +1,11 @@
 ---
 title: Create and manage OAuth app policies with app governance | Microsoft Defender for Cloud Apps
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: shragar
 description: Create app governance policies to detect anomalous app behavior, trigger remediation, and enforce compliance for apps connected to Microsoft 365, Google Workspace, and Salesforce.
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Create and manage OAuth app policies
@@ -49,7 +49,8 @@ To create a new app policy based on an app policy template, on the **Choose App 
 
 App policy templates are grouped into these categories: Usage, Permissions, and Certification.
 
-### Usage
+<a name="usage"></a>
+### Usage-based app policy templates
 
 The following table lists the app governance templates supported to generate alerts for app usage.
 
@@ -59,7 +60,8 @@ The following table lists the app governance templates supported to generate ale
 |**New app with high data usage**|Find newly registered apps that have uploaded or downloaded large amounts of data using Microsoft Graph and EWS APIs. This policy checks the following conditions: <ul><li>Registration age: Seven days or less (customizable)</li><li>Data usage: Greater than 1 GB in one day (customizable)</li></ul>|
 |**Increase in users**|Find apps with a sizable increase in the number of users. This policy checks the following conditions: <ul><li>Time range: Last 90 days</li><li>Increase in consenting users: At least 50% (customizable)</li></ul>|
 
-### Permissions
+<a name="permissions"></a>
+### Permission-based app policy templates
 
 The following table lists the app governance templates supported to generate alerts for app permissions.
 
@@ -69,7 +71,8 @@ The following table lists the app governance templates supported to generate ale
 |**New highly privileged app**|Find newly registered apps that have been granted write access and other powerful permissions to Microsoft Graph and other common Microsoft first-party APIs. This policy checks the following conditions: <ul><li>Registration age: Seven days or less (customizable)</li></ul>|
 |**New app with non-Graph API permissions**|Find newly registered apps that have permissions to non-Graph APIs. These apps can expose you to risks if the APIs they access receive limited support and updates. <br/><br/> This policy checks the following conditions: <ul><li>Registration age: Seven days or less (customizable)</li><li>Non-Graph API permissions: Yes</li></ul>|
 
-### Certification
+<a name="certification"></a>
+### Certification-based app policy templates
 
 The following table lists the app governance templates supported to generate alerts for Microsoft 365 certification.
 
@@ -77,7 +80,8 @@ The following table lists the app governance templates supported to generate ale
 |---|---|
 |**New uncertified app**|Find newly registered apps that don't have publisher attestation or Microsoft 365 certification. This policy checks the following conditions: <ul><li>Registration age: Seven days or less (customizable)</li><li>Certification: No certification (customizable)</li></ul>|
 
-## Custom policies
+<a name="custom-policies"></a>
+## Create custom OAuth app policies
 
 Use a custom app policy when you need to do something not already done by one of the built-in templates.
 
@@ -150,7 +154,7 @@ Now that your app policy is created, you should monitor it on the **Policies** p
 
 :::image type="content" source="media\app-governance\mapg-cc-policies-policy.png" alt-text="Screenshot of the app governance policies summary page in Microsoft Defender XDR, with a highlighted policy." lightbox="media\app-governance\mapg-cc-policies-policy.png":::
 
-If the number of alerts is an unexpectedly low value, edit the settings of the app policy to ensure you've configured it correctly before setting its status.
+If the number of alerts is an unexpectedly low value, edit the settings of the app policy to ensure you've configured it correctly before setting the policy status.
 
 Here's an example of a process for creating a new policy, testing it, and then making it active:
 
@@ -176,7 +180,7 @@ Policies for OAuth apps trigger alerts only on policies that are authorized by u
 2. Filter the apps according to your needs. For example, you might want to view all apps that request **Permission** to **Modify calendars in your mailbox**.
 
    > [!TIP]
-   > Use the **Community use** filter to get information on whether allowing permission to this app is common, uncommon, or rare. This filter can be helpful if you have an app that's rare and requests permission that has a high severity level or requests permission from many users.
+   > Use the **Community use** filter to get information on whether allowing permission to a selected app is common, uncommon, or rare. The **Community use** filter can be helpful if you have an app that's rare and requests permission that has a high severity level or requests permission from many users.
 
 3. You might want to set the policy based on the group memberships of the users who authorized the apps. For example, an admin can decide to set a policy that revokes uncommon apps if they ask for high permissions, only if the user who authorized the permissions is a member of the Administrators group.
 
@@ -188,7 +192,7 @@ Policies for OAuth apps trigger alerts only on policies that are authorized by u
 
 In addition to Oauth app policies that you can create, Microsoft Defender for Cloud Apps provides out-of-the-box anomaly detection policies that profile metadata of OAuth apps to identify ones that are potentially malicious. Defender for Cloud Apps is the Microsoft security service that helps protect your organization's cloud app environment, including OAuth apps connected to Salesforce and Google Workspace.
 
-These anomaly detection policies are only relevant for Salesforce and Google Workspace applications.
+The out-of-the-box anomaly detection policies are only relevant for Salesforce and Google Workspace applications.
 
 > [!NOTE]
 > Anomaly detection policies are only available for OAuth apps that are authorized in your Microsoft Entra ID.
@@ -228,7 +232,7 @@ To change the configuration of a user-defined app policy:
     - **Actions**: Change the autoremediation action for alerts generated by the policy.
     - **Status**: Change the policy status.
 
-:::image type="content" source="media/app-governance-app-policies-manage/edit-user-defined-policy.png" alt-text="Screenshot that shows how to edit a user defined policy in the Defender portal. " lightbox="media/app-governance-app-policies-manage/edit-user-defined-policy.png":::
+:::image type="content" source="media/app-governance-app-policies-manage/edit-user-defined-policy.png" alt-text="Screenshot of the Edit policy pane for a user-defined app policy in App Governance." lightbox="media/app-governance-app-policies-manage/edit-user-defined-policy.png":::
 
 ### Delete an app policy
 
@@ -236,9 +240,11 @@ To delete an app policy, you can:
 
 - Select the policy in the policy list, and then select **Delete** on the app policy pane.
 
-An alternative to deleting an app policy is to change its status to disabled. Once disabled, the policy doesn't generate alerts. For example, rather than deleting an app policy for an app with a specific set of conditions that are useful for a future policy, rename the app policy to indicate its usefulness and set its status to disabled.
+An alternative to deleting an app policy is to change the app policy status to disabled. Once disabled, the policy doesn't generate alerts. For example, rather than deleting an app policy for an app with a specific set of conditions that are useful for a future policy, rename the app policy to indicate its usefulness and set its status to disabled.
 
 ### Edit an existing user-defined policy
+
+Follow these steps to edit an existing user-defined policy:
 
 1. On the **App governance** page, select the **Policies** tab and select the policy you want to edit. A panel opens on the right side with the details of the existing policy.
 
@@ -267,4 +273,7 @@ An alternative to deleting an app policy is to change its status to disabled. On
 
 ## Next step
 
-[Investigate predefined app policy alerts](app-governance-investigate-predefined-policies.md)
+After you create and configure your app policies, investigate the alerts they generate:
+
+> [!div class="nextstepaction"]
+> [Investigate predefined app policy alerts](app-governance-investigate-predefined-policies.md)

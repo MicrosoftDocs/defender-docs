@@ -6,7 +6,7 @@ ms.author: chrisda
 ms.reviewer: yongrhee
 ms.service: defender-endpoint
 ms.topic: troubleshooting-general
-ms.date: 11/06/2025
+ms.date: 07/17/2026
 ms.subservice: ngp
 ms.localizationpriority: medium
 ms.collection: # Useful for querying on a set of strategic or high-priority content.
@@ -77,6 +77,9 @@ Find out whether Microsoft Defender Antivirus settings are coming through a poli
 |Policy|`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender`|<ul><li>Microsoft Defender for Endpoint security settings management</li><li>Microsoft Configuration Manager co-management</li><li>Microsoft Configuration Manager</li><li>GPO</li></ul>|
 |MDM|`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager`|<ul><li>Microsoft Intune (MDM)</li><li>Microsoft Configuration Manager with Tenant Attaches</li></ul>|
 |Local setting|`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender`|<ul><li>PowerShell (Set-MpPreference)</li><li>MpCmdRun command-line tool</li><li>Windows Management Instrumentation (WMI)</li></ul>|
+
+> [!TIP]
+> To see the actual value of each security setting on a device and the source that configured it, use the **Effective settings** tab on the device page. For more information, see [Configuration management - Effective settings](investigate-machines.md#configuration-management---effective-settings).
 
 ## Step 3: Identify policies or settings
 

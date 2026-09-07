@@ -1,19 +1,21 @@
 ---
 title: Troubleshoot Defender for SQL on Machines configuration
-description: Troubleshoot configuration issues for SQL Servers on Machines
-ms.date: 04/22/2025
+description: Troubleshoot Defender for SQL on Machines configuration issues in commercial clouds after enabling protection at the subscription or SQL resource level.
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: references_regions
+ms.custom: references_regions, msecd-doc-authoring-1013
 #customer intent: As a security professional, I want to ensure that my configuration of SQL servers on Machines is correct and protects my resources.
 ai-usage: ai-assisted
 ---
 
 # Troubleshoot Defender for SQL on Machines configuration
 
+This article helps you identify and resolve configuration and protection issues with Microsoft Defender for SQL on Machines in commercial cloud environments.
+
 > [!IMPORTANT]
 > This article applies to commercial clouds. If you're using Government clouds, see the [Troubleshoot Defender for SQL on Machines configuration government](troubleshoot-sql-machines-guide-gov.md) article.
 
-Before starting the troubleshooting steps, you must [enable Defender for SQL server on Machines](defender-for-sql-usage.md) at the [subscription](defender-for-sql-usage.md#enable-the-plan-on-an-azure-subscription) or [SQL resource level.](defender-for-sql-usage.md#enable-the-plan-at-the-sql-server-resource-level).
+Before starting the troubleshooting steps, you must [enable Defender for SQL server on Machines](defender-for-sql-usage.md) at the [Azure subscription level](defender-for-sql-usage.md#enable-the-plan-on-an-azure-subscription) or [SQL Server resource level](defender-for-sql-usage.md#enable-the-plan-at-the-sql-server-resource-level).
 
 ## Step 1: Required resources and enablement process
 
@@ -32,12 +34,14 @@ When you enable Defender for SQL Server on a subscription or specified SQL Serve
 
 ## Step 2: Ensure that you fulfilled the prerequisites
 
+Before troubleshooting, ensure the following prerequisites are met:
+
 - **Subscription permissions**: To deploy the plan on a subscription, including Azure Policy, you need **Subscription Owner** permissions.
 
-- **SQL Server instance permissions**: SQL Server service accounts must have the **sysadmin** fixed server role on each SQL Server instance, which is the default setting. Learn more about the [SQL Server service account requirement](/sql/sql-server/azure-arc/configure-least-privilege?view=sql-server-ver16).
+- **SQL Server instance permissions**: SQL Server service accounts must have the **sysadmin** fixed server role on each SQL Server instance, which is the default setting. Learn more about the [SQL Server service account requirement](/sql/sql-server/azure-arc/configure-least-privilege).
 
 - **Supported Resources**:
-  - [SQL virtual machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview?view=azuresql), and [Azure Arc SQL Server instances](/sql/sql-server/azure-arc/overview?view=sql-server-ver16) are supported.
+  - [SQL virtual machines](/azure/azure-sql/virtual-machines/windows/sql-server-on-azure-vm-iaas-what-is-overview), and [Azure Arc SQL Server instances](/sql/sql-server/azure-arc/overview) are supported.
   - On-premises machines must be [onboarded to Arc and registered as Azure Arc SQL Server instances](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
 **Communication**: Allow outbound HTTPS traffic over Transmission Control Protocol (TCP) port 443 using Transport Layer Security (TLS) to `*.<region>.arcdataservices.com` URL. Learn more about [URL requirements](/azure/azure-arc/servers/network-requirements#urls?tabs=azure-cloud).
@@ -75,7 +79,7 @@ Use the corresponding unhealthy reason and recommended actions to resolve the mi
 | **Defender for SQL extension should be up-to-date** | Update the extension in the Extensions page in the virtual machine/Arc-enabled server resource. |
 | **Error during the installation of the Defender for SQL extension** | Check the Defender for SQL extension status in the portal for additional information to troubleshoot the issue. |
 | **SQL Server instance is inactive** | Defender for SQL server on Machines can only protect active (running) SQL server instances. |
-| **Lack of permissions** | Ensure that the SQL Server service account is a member of the sysadmin fixed server role on each SQL Server instance (default setting). Learn more about [SQL Server service permissions](/sql/sql-server/azure-arc/configure-least-privilege?view=sql-server-ver16). |
+| **Lack of permissions** | Ensure that the SQL Server service account is a member of the sysadmin fixed server role on each SQL Server instance (default setting). Learn more about [SQL Server service permissions](/sql/sql-server/azure-arc/configure-least-privilege). |
 | **Lack of communication** | Ensure outbound HTTPS traffic on TCP port 443 using Transport Layer Security (TLS) is allowed from the virtual machine/Arc-enabled server to the `*.<region>.arcdataservices.com` URL. Learn more about [URL requirements](/azure/azure-arc/servers/network-requirements#urls?tabs=azure-cloud) |
 | **SQL server restart is needed** | Restart the SQL Server instance so that the Defender for SQL Server installation takes effect. |
 | **Internal error** | Please contact support. |
@@ -100,7 +104,7 @@ If you have multiple SQL Server instances installed on the same virtual machine,
 
     :::image type="content" source="media/troubleshoot-sql-machines-guide/extension-status.png" alt-text="Screenshot that shows the information screen for the selected extension." lightbox="media/troubleshoot-sql-machines-guide/extension-status.png":::
 
-Based on the [unhealthy reason listed, take the appropriate action](#step-3-identify-and-resolve-protection-misconfigurations-at-the-sql-server-instance-level) to remediate the issue.
+Based on the unhealthy reason listed, take the appropriate action described in [Step 3: Identify and resolve protection misconfigurations](#step-3-identify-and-resolve-protection-misconfigurations-at-the-sql-server-instance-level) to remediate the misconfiguration for that SQL Server instance.
 
 ## Step 4: Reverify protection status
 

@@ -2,8 +2,9 @@
 title: Build queries with cloud security explorer
 description: Learn how to build queries with cloud security explorer in Microsoft Defender for Cloud to proactively identify security risks in your cloud environment.
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 # Customer Intent: As a security professional, I want to learn how to build queries with cloud security explorer in Microsoft Defender for Cloud so that I can proactively identify security risks in my cloud environment and improve my security posture.
 ---
 
@@ -13,10 +14,12 @@ Defender for Cloud's contextual security capabilities help security teams reduce
 
 Use the cloud security explorer to identify security risks in your cloud environment. Run graph-based queries on the cloud security graph, Defender for Cloud's context engine. Prioritize your security team's concerns while considering your organization's specific context and conventions.
 
-Use the cloud security explorer to query security issues and environment context. Including asset inventory, internet exposure, permissions, and lateral movement between resources across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
+Use the cloud security explorer to query security issues and environment context, including asset inventory, internet exposure, permissions, and lateral movement between resources across Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).
 
 
 ## Prerequisites
+
+Before you use cloud security explorer, make sure the following requirements are met:
 
 - You must [enable Defender Cloud Security Posture Management (CSPM)](connect-azure-subscription.md)
   - You must [enable agentless scanning](enable-agentless-scanning-vms.md).
@@ -26,9 +29,9 @@ Use the cloud security explorer to query security issues and environment context
   - [Registry access](tutorial-enable-cspm-plan.md#enable-the-components-of-the-defender-cspm-plan)
 
   > [!NOTE]
-  > If you only have [Defender for Servers P2](tutorial-enable-servers-plan.md) plan 2 enabled, you can use the cloud security explorer to query for keys and secrets, but you must have Defender CSPM enabled to get the full value of the explorer.
+  > With only [Defender for Servers P2](tutorial-enable-servers-plan.md) plan 2 enabled, you can query for keys and secrets. However, you need Defender CSPM to use the full explorer.
 
-- Required roles and permissions:
+- Required roles and permissions: You need one of the following Azure roles to use cloud security explorer:
   - Security Reader
   - Security Admin
   - Reader
@@ -75,17 +78,18 @@ The cloud security explorer lets you build queries to proactively hunt for secur
 
     :::image type="content" source="media/how-to-manage-cloud-security/download-csv-report.png" alt-text="Screenshot that shows where the download CSV report button is located on the screen.":::
 
-## Query templates
+<a name="query-templates"></a>
+## Use query templates
 
-Query templates are preformatted searches using common filters. Use one of the existing query templates at the bottom of the page by selecting **Open query**.
+Query templates are ready-made searches that use common filters. To use a template, scroll to the bottom of the page and select **Open query**.
 
 :::image type="content" source="media/how-to-manage-cloud-security/cloud-security-explorer-query-templates.png" alt-text="Screenshot that shows you the location of the query templates." lightbox="media/how-to-manage-cloud-security/cloud-security-explorer-query-templates.png":::
 
-Modify any template to search for specific results by changing the query and selecting **Search**.
+You can change any template to fit your needs. Update the query, then select **Search** to see your results.
 
 ## Share a query
 
-Use the query link to share a query with others. After creating a query, select **Share query link**. The link is copied to your clipboard.
+You can share any query with others. After you create a query, select **Share query link** to copy it to your clipboard.
 
 :::image type="content" source="media/how-to-manage-cloud-security/cloud-security-explorer-share-query.png" alt-text="Screenshot showing the Share Query Link icon." lightbox="media/how-to-manage-cloud-security/cloud-security-explorer-share-query.png":::
 

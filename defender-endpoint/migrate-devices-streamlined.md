@@ -10,13 +10,13 @@ ms.collection:
 - tier1
 ms.topic: how-to
 ms.subservice: onboard
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Migrate devices to use the streamlined connectivity method
@@ -38,6 +38,8 @@ In most cases, full device offboarding isn't required when reonboarding. You can
 
 ## Migrating devices using the streamlined method
 
+Use the following guidance to migrate previously onboarded devices to the streamlined connectivity method for each supported operating system and deployment tool.
+
 <a name="migration-recommendation"></a>
 ### Review migration recommendations before switching connectivity methods
 
@@ -49,7 +51,7 @@ Use the following recommendations to plan your migration rollout:
 
 - **Complete migration**. At this stage, you can gradually roll out the migration to a larger set of devices. To complete the migration, you can replace previous onboarding policies and remove the old URLs from your network device.
 
-Validate [device prerequisites](configure-device-connectivity.md#prerequisites) before proceeding with any migrations. This article builds upon [Onboarding devices using streamlined connectivity](configure-device-connectivity.md) by focusing on migrating existing devices.
+Validate [device prerequisites](configure-device-connectivity.md#prerequisites) before proceeding with any migrations. This migration guide builds upon [Onboarding devices using streamlined connectivity](configure-device-connectivity.md) by focusing on migrating existing devices.
 
 To reonboard devices, you need to use the streamlined onboarding package. For more information on how to access the package, see [Streamlined connectivity](configure-device-connectivity.md).
 
@@ -66,7 +68,10 @@ The following table lists migration instructions for the available onboarding to
 
 ### [Windows 10 and 11](#tab/windows10and11)
 
-### Windows 10 and 11
+Use the following options to migrate Windows 10 and Windows 11 devices to the streamlined connectivity method.
+
+<a name="windows-10-and-11"></a>
+### Migrate Windows 10 and Windows 11 devices
 
 > [!IMPORTANT]
 > Windows 10 versions 1607, 1703, 1709, and 1803 don't support reonboarding. To migrate existing devices, you need to fully offboard and onboard using the streamlined onboarding package.
@@ -75,29 +80,37 @@ For general information on onboarding Windows client devices, see [Onboarding Wi
 
 Confirm prerequisites are met: [Prerequisites for using streamlined method](configure-device-connectivity.md#prerequisites).
 
-### Local script
+<a name="local-script"></a>
+### Migrate devices using a local script
 
-Follow the guidance in [Local script (up to 10 devices)](configure-endpoints-script.md) using the streamlined onboarding package. After completing the steps, you must restart the device for device connectivity to switch over.
+Follow the guidance in [Local script (up to 10 devices)](configure-endpoints-script.md) using the streamlined onboarding package. After completing the local script onboarding steps, you must restart the device for device connectivity to switch over.
 
-### Group policy
+<a name="group-policy"></a>
+### Migrate devices using Group Policy
 
-Follow the guidance in [Group policy](configure-endpoints-gp.md) using the streamlined onboarding package. After completing the steps, you must restart the device for device connectivity to switch over.
+Follow the guidance in [Group policy](configure-endpoints-gp.md) using the streamlined onboarding package. After completing the Group Policy onboarding steps, you must restart the device for device connectivity to switch over.
 
-### Microsoft Intune
+<a name="microsoft-intune"></a>
+### Migrate devices using Microsoft Intune
 
-Follow the guidance in [Intune](/intune/intune-service/protect/endpoint-security-edr-policy#updating-the-onboarding-state-for-a-device) using the streamlined onboarding package. You can use the "auto from connector" option; however, this option doesn't automatically reapply the onboarding package. Create a new onboarding policy and target a test group first. After completing the steps, you must restart the device for device connectivity to switch over.
+Follow the guidance in [Intune](/intune/intune-service/protect/endpoint-security-edr-policy#updating-the-onboarding-state-for-a-device) using the streamlined onboarding package. You can use the "auto from connector" option; however, the "auto from connector" option doesn't automatically reapply the onboarding package. Create a new onboarding policy and target a test group first. After completing the Intune onboarding steps, you must restart the device for device connectivity to switch over.
 
-### Microsoft Configuration Manager
+<a name="microsoft-configuration-manager"></a>
+### Migrate devices using Microsoft Configuration Manager
 
 Follow the guidance in [Configuration Manager](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_updateatp).
 
-### VDI
+<a name="vdi"></a>
+### Migrate VDI devices using the streamlined method
 
-Use the guidance in [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md). After completing the steps, you must restart the device for device connectivity to switch over.
+Use the guidance in [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md). After completing the VDI onboarding steps, you must restart the device for device connectivity to switch over.
 
 ### [**Windows Server**](#tab/Windowsserver)
 
-### Windows Server
+Use the following options to migrate Windows Server devices to the streamlined connectivity method.
+
+<a name="windows-server"></a>
+### Migrate Windows Server devices
 
 For general information on onboarding Windows server devices, see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-server.md).
 
@@ -108,33 +121,41 @@ Confirm prerequisites are met: [Prerequisites for streamlined method](configure-
 
 Devices already onboarded don't reonboard automatically. Turn on the following Advanced Feature setting in the Microsoft Defender portal (**Settings > Endpoints > Advanced Features**) and select the option "Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud". Newly added devices start using the new onboarding information within ~48 hours. To reonboard existing devices, apply the onboarding script - see [Onboard Windows servers to the Microsoft Defender for Endpoint service](onboard-server.md).
 
-### Microsoft Configuration Manager
+<a name="microsoft-configuration-manager"></a>
+### Migrate Windows Server devices using Microsoft Configuration Manager
 
 Follow the guidance in [Configuration Manager](/intune/configmgr/protect/deploy-use/defender-advanced-threat-protection#bkmk_updateatp) to deploy a new policy.
 
-### Group policy
+<a name="group-policy"></a>
+### Migrate Windows Server devices using Group Policy
 
-Follow the guidance in [Group policy](configure-endpoints-gp.md) using the streamlined onboarding package. After completing the steps, you must restart the device for device connectivity to switch over.
+Follow the guidance in [Group policy](configure-endpoints-gp.md) using the streamlined onboarding package. After completing the Group Policy onboarding steps, you must restart the device for device connectivity to switch over.
 
-### VDI
+<a name="vdi"></a>
+### Migrate Windows Server VDI devices
 
-Follow the guidance in [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md). After completing the steps, you must restart the device for device connectivity to switch over.
+Follow the guidance in [Onboard non-persistent virtual desktop infrastructure (VDI) devices](configure-endpoints-vdi.md). After completing the VDI onboarding steps, you must restart the device for device connectivity to switch over.
 
 ### [**macOS**](#tab/macOS)
 
-### macOS
+Use the following options to migrate macOS devices to the streamlined connectivity method.
+
+<a name="macos"></a>
+### Migrate macOS devices
 
 For general information on onboarding macOS devices, see [Microsoft Defender for Endpoint on macOS](microsoft-defender-endpoint-mac.md).
 
 Confirm prerequisites are met: [Prerequisites for streamlined method](configure-device-connectivity.md#prerequisites).
 
-### Local script
+<a name="local-script"></a>
+### Migrate macOS devices using a local script
 
 Follow the guidance in [Manual deployment for Microsoft Defender for Endpoint on macOS](mac-install-manually.md) using the streamlined onboarding package.
 
-After completing the steps, you must either reboot the device or restart the Defender for Endpoint service for connectivity to switch over.
+After completing the manual macOS onboarding steps, you must either reboot the device or restart the Defender for Endpoint service for connectivity to switch over.
 
-### Microsoft Intune
+<a name="microsoft-intune"></a>
+### Migrate macOS devices using Microsoft Intune
 
 Use the following steps to migrate macOS devices with Microsoft Intune:
 
@@ -166,17 +187,19 @@ For more JAMF guidelines, see [Deploying Microsoft Defender for Endpoint on macO
 
 ### [**Linux**](#tab/linux)
 
-### Linux
+<a name="linux"></a>
+### Migrate Linux devices
 
 For general information on onboarding Linux devices, see [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md).
 
 Confirm prerequisites are met: [Prerequisites for streamlined method](configure-device-connectivity.md#prerequisites).
 
-### Local script
+<a name="local-script"></a>
+### Migrate Linux devices using a local script
 
 Use the guidance in [Deploy Microsoft Defender for Endpoint on Linux manually](linux-install-manually.md) using the streamlined onboarding package.
 
-After completing the steps, you must either reboot the device or restart the service using `sudo systemctl restart mdatp`.
+After completing the Linux manual onboarding steps, you must either reboot the device or restart the service using `sudo systemctl restart mdatp`.
 
 Device connectivity to streamlined approach doesn't start if you don't reboot the device.
 
@@ -219,7 +242,7 @@ Ensure connectivity is established with the appropriate URLs.
 
 You can use advanced hunting in Microsoft Defender portal to view the connectivity type status.
 
-This information is found in the DeviceInfo table under the "ConnectivityType" column:
+Connectivity type status is found in the DeviceInfo table under the "ConnectivityType" column:
 - Column Name: ConnectivityType
 - Possible Values: `<blank>`, Streamlined, Standard
 - Data type: String
@@ -304,11 +327,11 @@ For more information about MpCmdRun, see [Configure and manage Microsoft Defende
 
 #### Test Block at First Sight
 
-Follow instructions in [Microsoft Defender for Endpoint Block at First Sight (BAFS) demonstration](defender-endpoint-demonstrations.md).
+Follow the Block at First Sight (BAFS) demonstration instructions in [Microsoft Defender for Endpoint Block at First Sight (BAFS) demonstration](defender-endpoint-demonstrations.md).
 
 #### Test SmartScreen
 
-Follow instructions in [Microsoft Defender SmartScreen Demo (msft.net)](https://demo.smartscreen.msft.net/).
+Follow the SmartScreen demonstration instructions on the [Microsoft Defender SmartScreen Demo (msft.net)](https://demo.smartscreen.msft.net/) page.
 
 ### PowerShell detection test
 
@@ -342,8 +365,7 @@ For example: `https://mdav.us.endpoint.security.microsoft.com/storage`
 
 ### Tracking with advanced hunting in Microsoft Defender
 
-To view all devices (limit 30k) and their most recently reported connectivity type:
-
+Run the following query to list onboarded devices and show the most recent connectivity type reported for each device (limit 30k):
 
 ```kusto
 DeviceInfo
@@ -351,8 +373,7 @@ DeviceInfo
 | summarize arg_max(ConnectivityType, Timestamp) by DeviceName
 ```
 
-To view a count of Devices by OSPlatform and their connectivity type in a bar chart:
-
+Run the following query to view a count of onboarded devices grouped by operating system platform and connectivity type, rendered as a bar chart:
 
 ```kusto
 DeviceInfo

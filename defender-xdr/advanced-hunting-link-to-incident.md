@@ -18,7 +18,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
@@ -26,11 +26,11 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Use the link to incident feature to add advanced hunting query results to a new or existing incident under investigation. This feature helps you capture records from advanced hunting activities, including behavior-based results, so you can create richer incident context.
+Use the link to incident feature to add advanced hunting query results to a new or existing incident. This feature helps you capture records from advanced hunting activities, including behavior-based results, to create richer incident context.
 
 
 
-Use the link to incident feature to add advanced hunting query results to a new or existing incident under investigation. The link to incident feature helps you easily capture records from advanced hunting activities, which enables you to create a richer timeline or context of events regarding an incident. 
+You can also use this feature to capture records from advanced hunting activities. These records help you build a richer timeline or context of events for an incident. 
 
 ## Required permissions for linking incidents 
 
@@ -42,7 +42,7 @@ To link results from the `BehaviorInfo` table (preview), you also need access to
 
 Use the following steps to link advanced hunting results to a new or existing incident.
 
-1. In the advanced hunting query page, first enter your query in the query field provided then select **Run query** to get your results.
+1. On the advanced hunting page, enter your query and then select **Run query**.
 
     :::image type="content" source="media/advanced-hunting-link-to-incident/link-to-incident-1.png" alt-text="Screenshot of the advanced hunting page in the Microsoft Defender portal." lightbox="media/advanced-hunting-link-to-incident/link-to-incident-1.png":::
 
@@ -105,11 +105,11 @@ Use the following steps to link advanced hunting results to a new or existing in
 
 When you query the `BehaviorInfo` table, you can link a single behavior record to a new or existing incident.
 
-Before you start, make sure that behavior-based data sources are onboarded and that you have access to the `BehaviorInfo` and `BehaviorEntities` tables. You also need the permissions required to manage custom detections. For more information, see [Required permissions for linking incidents](#required-permissions-for-linking-incidents).
+Before you start, confirm that behavior-based data sources are set up and that you can access the `BehaviorInfo` and `BehaviorEntities` tables. You also need permissions to manage custom detections. For more information, see [Required permissions for linking incidents](#required-permissions-for-linking-incidents).
 
-This preview follows [existing RBAC](manage-rbac.md) and [incident scoping policies](./scoping.md). If **Link to incident** isn't available, or if the wizard doesn't populate entities as expected, verify your table access, data source onboarding, and incident scope.
+This preview follows [existing RBAC](manage-rbac.md) and [incident scoping policies](./scoping.md). If **Link to incident** isn't available or the wizard doesn't show entities, check your table access, data source setup, and incident scope.
 
-In this workflow, you select one `BehaviorId` at a time. The wizard creates one alert per selected behavior, and alert metadata and entities are automatically enriched from the selected behavior record. You can review and edit the auto-populated fields, and severity and recommended actions remain under your control.
+In this workflow, you select one `BehaviorId` at a time. The wizard creates one alert per behavior. It fills in alert details and entities from the selected record. You can edit these fields. Severity and recommended actions stay under your control.
 
 1. In the advanced hunting query page, run a query on the `BehaviorInfo` table to retrieve behavior records.
 
@@ -159,12 +159,12 @@ In this workflow, you select one `BehaviorId` at a time. The wizard creates one 
 
 ## View linked records in the incident
 
-To view the incident the events are linked to, select the generated link from the summary step of the wizard, or select the incident name from the incident queue.
+To view the linked incident, select the link shown in the summary step. You can also select the incident name from the incident queue.
 
 :::image type="content" source="media/advanced-hunting-results-link7.png" alt-text="Screenshot of the summary step in the link to incident wizard in the Microsoft Defender portal." lightbox="media/advanced-hunting-results-link7.png":::
 
-In our example, the alert created from the selected event was linked successfully to a new incident.
-In the alert page, you can find the complete information on the event in timeline view (if available) and the query results view.
+In this example, the alert from the selected event was linked to a new incident.
+On the alert page, you can view full event details in the timeline view (if available) and the query results view.
 
 You can also select the event from the timeline view or from the query results view to open the **Inspect record** pane.
 
@@ -172,6 +172,6 @@ You can also select the event from the timeline view or from the query results v
 
 ## Filter for events added using advanced hunting
 
-You can view which alerts were generated from advanced hunting by filtering incidents and alerts by **Manual** detection source.
+To find alerts created from advanced hunting, filter incidents and alerts by the **Manual** detection source.
 
 :::image type="content" source="media/advanced-hunting-results-link9.png" alt-text="Screenshot of the filter dropdown in advanced hunting in the Microsoft Defender portal." lightbox="media/advanced-hunting-results-link9.png":::

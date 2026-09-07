@@ -4,9 +4,9 @@ description: Learn how to modify Defender EASM inventory assets by changing asse
 ms.author: dandennis
 author: dandennis
 ms.service: defender-easm
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -24,20 +24,20 @@ Labels help you organize your attack surface and apply business context in a cus
 - Are affected by a specific vulnerability that requires mitigation.
 - Relate to a particular brand owned by the organization.
 - Were added to your inventory within a specific time range.
- 
+
 Labels are freeform text fields, so you can create a label for any use case that applies to your organization.
 
-[![Screenshot that shows an inventory list view with a filtered Labels column.](media/labels-1a.png)](media/labels-1a.png#lightbox)
+:::image type="content" source="media/labels-1a.png" alt-text="Screenshot that shows an inventory list view with a filtered Labels column." lightbox="media/labels-1a.png":::
 
 ### Change an asset state
 
 Users can also change the state of an asset. States help categorize your inventory based on their role in your organization. Users can switch between the following states:
 
 - **Approved Inventory**: A part of your owned attack surface; an item for which you're directly responsible.
-- **Dependency**: Infrastructure owned by a third party but is part of your attack surface because it directly supports the operation of your owned assets. For example, you might depend on an IT provider to host your web content. While the domain, hostname, and pages would be part of your *Approved Inventory*, you might wish to treat the IP Address running the host as a *Dependency*.
-- **Monitor Only**: An asset that is relevant to your attack surface but isn't directly controlled by your organization, nor a technical dependency. For example, independent franchisees or assets belonging to related companies might be labeled as *Monitor Only* rather than *Approved Inventory* to separate the groups for reporting purposes.
+- **Dependency**: Infrastructure that's owned by a third party but is part of your attack surface because it directly supports the operation of your owned assets. For example, you might depend on an IT provider to host your web content. While the domain, hostname, and pages are part of your *Approved Inventory*, you might wish to treat the IP Address running the host as a *Dependency*.
+- **Monitor Only**: An asset that's relevant to your attack surface but isn't directly controlled by your organization, nor a technical dependency. For example, independent franchisees or assets belonging to related companies might be labeled as *Monitor Only* rather than *Approved Inventory* to separate the groups for reporting purposes.
 - **Candidate**: An asset that has some relationship to your organization's known seed assets but doesn't have a strong enough connection to immediately label it as *Approved Inventory*. These candidate assets must be manually reviewed to determine ownership.
-- **Requires Investigation**: A state similar to the *Candidate* states, but this value is applied to assets that require manual investigation to validate. This is determined based on our internally generated confidence scores that assess the strength of detected connections between assets. It doesn't indicate the infrastructure's exact relationship to the organization as much as it denotes that this asset was flagged as requiring extra review to determine how it should be categorized.
+- **Requires Investigation**: A state similar to the *Candidate* states, but this value is applied to assets that require manual investigation to validate. This state is determined based on our internally generated confidence scores that assess the strength of detected connections between assets. It doesn't indicate the infrastructure's exact relationship to the organization as much as it denotes that this asset was flagged as requiring extra review to determine how it should be categorized.
 
 ### Apply an External ID
 
@@ -49,7 +49,7 @@ Many Defender EASM dashboards feature CVE data, bringing your attention to poten
 
 From the drill-down view of any CVE-related chart, next to the **Download CSV report** button, you now have the option to set an observation as non-applicable. Selecting this value routes you to an inventory list of all assets associated to that observation, and you can then elect to mark all observations as non-applicable from this page. The actual change is either performed from the Inventory list view or from the Asset details page for a particular asset.
 
-![Screenshot of dashboard drill-down view with "mark observation as nonapplicable" button highlighted.](media/cves-1.png)
+:::image type="content" source="media/cves-1.png" alt-text="Screenshot of dashboard drill-down view with mark observation as nonapplicable button highlighted.":::
 
 ## How to modify assets
 
@@ -58,37 +58,37 @@ You can modify assets from both the inventory list and asset details pages. You 
 <a name="inventory-list-page"></a>
 ### Modify assets from the inventory list page
 
-You should modify assets from the inventory list page if you want to update numerous assets at once. You can refine your asset list based on filter parameters. This process helps you to identify assets that should be categorized with the label, external ID or state change that you want. To modify assets from this page:
+You should modify assets from the inventory list page if you want to update numerous assets at once. You can refine your asset list based on filter parameters. Filtering the asset list helps you to identify assets that should be categorized with the label, external ID or state change that you want. To modify assets from this page:
 
 1. On the leftmost pane of your Microsoft Defender External Attack Surface Management (Defender EASM) resource, select **Inventory**.
 
 2. Apply filters to produce your intended results. In this example, we're looking for domains that expire within 30 days that require renewal. The applied label helps you more quickly access any expiring domains to simplify the remediation process. You can apply as many filters as necessary to obtain the specific results that are needed. For more information on filters, see [Inventory filters overview](inventory-filters.md). For instances where you'd like to mark CVEs as non-applicable, the relevant dashboard chart drilldown provides a link that directly routes you to this Inventory page with the correct filters applied.
 
-  ![Screenshot that shows the inventory list view with the Add filter dropdown opened to display the query editor.](media/labels-2.png)
+    :::image type="content" source="media/labels-2.png" alt-text="Screenshot that shows the inventory list view with the Add filter drop-down opened to display the query editor.":::
 
-3. After your inventory list is filtered, select the dropdown by the checkbox next to the **Asset** table header. This drop-down gives you the option to select all results that match your query or the results on that specific page (up to 25). The **None** option clears all assets. You can also choose to select only specific results on the page by selecting the individual check marks next to each asset.
+1. After your inventory list is filtered, select the drop-down by the checkbox next to the **Asset** table header. This drop-down gives you the option to select all results that match your query or the results on that specific page (up to 25). The **None** option clears all assets. You can also choose to select only specific results on the page by selecting the individual check marks next to each asset.
 
-  ![Screenshot that shows the inventory list view with the bulk selection dropdown opened.](media/labels-14.png)
+    :::image type="content" source="media/labels-14.png" alt-text="Screenshot that shows the inventory list view with the bulk selection drop-down opened.":::
 
 4. Select **Modify assets**.
 
-  ![Screenshot that shows the Modify Assets pane with options to change state, add labels, and apply external IDs.](media/cves-2.png)
+    :::image type="content" source="media/cves-2.png" alt-text="Screenshot of the Modify Assets pane with Add labels field used to select labels before updating assets.":::
 
 5. On the **Modify Assets** pane that opens on the right side of your screen, you can quickly change various fields for the selected assets. For this example, you create a new label. Select **Create a new label**.
 
 6. Determine the label name and display text values. You can't change the label name after you initially create the label, but the display text can be edited at a later time. The label name is used to query for the label in the product interface or via API, so edits are disabled to ensure these queries work properly. To edit a label name, you need to delete the original label and create a new one.
 
-  Select a color for your new label and select **Add**. This action takes you back to the **Modify Assets** screen.
+    Select a color for your new label and select **Add**. Selecting **Add** takes you back to the **Modify Assets** screen.
 
-  ![Screenshot of the Add label pane with fields to enter a label name, display text, and select a color.](media/labels-4.png)
+    :::image type="content" source="media/labels-4.png" alt-text="Screenshot of the Add label pane with fields to enter a label name, display text, and select a color.":::
 
 7. Apply your new label to the assets. Select inside the **Add labels** text box to view a full list of available labels. Or you can type inside the box to search by keyword. After you select the labels you want to apply, select **Update**.
 
-  ![Screenshot that shows the Modify Asset pane with the newly created label applied.](media/labels-5.png)
+    :::image type="content" source="media/labels-5.png" alt-text="Screenshot that shows the Modify Asset pane with the newly created label applied.":::
 
 8. Allow a few moments for the labels to be applied. After the process is finished, you see a *Completed* notification. The page automatically refreshes and displays your asset list with the labels visible. A banner at the top of the screen confirms that your labels were applied.
 
-  [![Screenshot that shows the inventory list view with the selected assets now displaying the new label.](media/labels-6.png)](media/labels-6.png#lightbox)
+    :::image type="content" source="media/labels-6.png" alt-text="Screenshot that shows the inventory list view with the selected assets now displaying the new label." lightbox="media/labels-6.png":::
 
 <a name="asset-details-page"></a>
 ### Modify assets from the asset details page
@@ -101,7 +101,7 @@ You can also modify a single asset from the asset details page. This option is i
 
 3. On this page, select **Modify asset**.
 
-  ![Screenshot that shows the asset details page with the Modify asset button highlighted.](media/labels-7a.png)
+    :::image type="content" source="media/labels-7a.png" alt-text="Screenshot of the asset details page with the Modify asset button highlighted.":::
 
 4. On the **Modify Assets** pane that opens on the right side of your screen, make your desired changes. You can change the asset state, apply an external ID, or add or remove labels. If you need to create a new label, select **Create a new label**, enter the label name and display text, select a color, and select **Add**. After you configure your changes, select **Update**.
 
@@ -115,30 +115,31 @@ To modify the label itself or delete a label from the system:
 
 1. On the leftmost pane of your Defender EASM resource, select **Labels (Preview)**.
 
-  [![Screenshot that shows the Labels (Preview) page that enables label management.](media/labels-8a.png)](media/labels-8a.png#lightbox)
+    :::image type="content" source="media/labels-8a.png" alt-text="Screenshot that shows the Labels (Preview) page that enables label management." lightbox="media/labels-8a.png":::
 
-  This page displays all the labels within your Defender EASM inventory. Labels on this page might exist in the system but not be actively applied to any assets. You can also add new labels from this page.
+    This page displays all the labels within your Defender EASM inventory. Labels on this page might exist in the system but not be actively applied to any assets. You can also add new labels from this page.
 
 2. To edit a label, select the **pencil** icon in the **Actions** column of the label you want to edit. A pane opens on the right side of your screen where you can modify the name or color of a label. Select **Update**.
 
 3. To remove a label, select the trash can icon from the **Actions** column of the label you want to delete. Select **Remove Label**.
 
-  ![Screenshot that shows the Confirm Remove option on the Labels management page.](media/labels-9a.png)
+    :::image type="content" source="media/labels-9a.png" alt-text="Screenshot that shows the Confirm Remove option on the Labels management page.":::
 
 The **Labels** page automatically refreshes. The label is removed from the list and also removed from any assets that had the label applied. A banner confirms the removal.
 
 ## Mark observations as non-applicable
 
-While observations can be marked as non-applicable from the same **Modify assets** screens for other manual changes, you can also make these updates from the **Observations** tab in **Asset details**. The **Observations** tab features two tables: **Observations** and **Non-applicable observations**. All active observations determined to be *recent* within your attack surface are in the **Observations** table, whereas the **Non-applicable observations** table lists any observations that were manually marked as non-applicable or determined by the system to no longer be applicable. To mark observations as non-applicable and therefore exclude that particular observation from dashboard counts, simply select the desired observations and select **Set as non-applicable**. These observations immediately disappear from the active **Observations** table and instead appear on the **Non-applicable observations** table. You can revert this change at any time by selecting the relevant observations from this table and selecting **Set as applicable**.
+While observations can be marked as non-applicable from the same **Modify assets** screens for other manual changes, you can also make these updates from the **Observations** tab in **Asset details**. The **Observations** tab features two tables: **Observations** and **Non-applicable observations**. All active observations determined to be *recent* within your attack surface are in the **Observations** table, whereas the **Non-applicable observations** table lists any observations that were manually marked as non-applicable or determined by the system to no longer be applicable. To mark observations as non-applicable and therefore exclude that particular observation from dashboard counts, simply select the desired observations and select **Set as non-applicable**. The selected observations immediately disappear from the active **Observations** table and instead appear on the **Non-applicable observations** table. You can revert this change at any time by selecting the relevant observations from this table and selecting **Set as applicable**.
 
-  ![Screenshot that shows the Observations tab with multiple CVEs selected to be marked as non-applicable.](media/cves-3.png)
+:::image type="content" source="media/cves-3.png" alt-text="Screenshot that shows the Observations tab with multiple CVEs selected to be marked as non-applicable.":::
 
 ## Task Manager and notifications
 
 After a task is submitted, a notification confirms that the update is in progress. From any page in Azure, select the **Notification** (bell) icon to see more information about recent tasks.
 
-![Screenshot that shows the Task submitted notification.](media/labels-12.png)
-![Screenshot that shows the Notifications pane that displays recent task status.](media/labels-13.png)
+:::image type="content" source="media/labels-12.png" alt-text="Screenshot that shows the Task submitted notification.":::
+
+:::image type="content" source="media/labels-13.png" alt-text="Screenshot that shows the Notifications pane that displays recent task status.":::
 
 ### Track modification tasks in Task Manager
 
@@ -146,7 +147,7 @@ The Defender EASM system can take seconds to update a handful of assets or minut
 
 1. On the leftmost pane of your Defender EASM resource, select **Task Manager**.
 
-  ![Screenshot that shows the Task Manager page with appropriate section in navigation pane highlighted.](media/labels-11a.png)
+    :::image type="content" source="media/labels-11a.png" alt-text="Screenshot that shows the Task Manager page with appropriate section in navigation pane highlighted.":::
 
 2. This page displays all your recent tasks and their status. Tasks are listed as **Completed**, **Failed**, or **In Progress**. A completion percentage and progress bar also appear. To see more details about a specific task, select the task name. A pane opens on the right side of your screen that provides more information.
 
@@ -162,17 +163,19 @@ After you label assets in your inventory, you can use inventory filters to retri
 
 3. Select **Labels** from the **Filter** drop-down list. Select an operator and choose a label from the drop-down list of options. The following example shows how to search for a single label. You can use the **In** operator to search for multiple labels. For more information on filters, see the [inventory filters overview](inventory-filters.md).
 
-  ![Screenshot that shows the query editor used to apply filters, displaying the Labels filter with possible label values in a dropdown list.](media/labels-10.png)
+    :::image type="content" source="media/labels-10.png" alt-text="Screenshot that shows the query editor used to apply filters, displaying the Labels filter with possible label values in a drop-down list.":::
 
 4. Select **Apply**. The inventory list page reloads and displays all assets that match your criteria.
 
 ## Asset chain-based management
 
-In some instances, you might wish to remove multiple assets at once based on the means with which they were discovered. For example, you might determine that a particular seed within a discovery group pulled in assets that are not relevant to your organization, or you might need to remove assets that relate to a subsidiary that is no longer under your purview. For this reason, Defender EASM offers the ability to remove the source entity and any assets "downstream" in the discovery chain. You can delete linked assets with the following three methods: 
+In some instances, you might wish to remove multiple assets at once based on the means with which they were discovered. For example, you might determine that a particular seed within a discovery group pulled in assets that are not relevant to your organization, or you might need to remove assets that relate to a subsidiary that is no longer under your purview.
 
-- **Seed-based management:** You can delete a seed that was once included in a discovery group, removing all assets that were introduced to inventory through an observed connection to the specified seed. This method is useful when you can determine that a specific manually inputted seed resulted in undesired assets being added to inventory.
+For this reason, Defender EASM offers the ability to remove the source entity and any assets "downstream" in the discovery chain. You can delete linked assets with the following three methods:
+
+- **Seed-based management**: You can delete a seed that was once included in a discovery group, removing all assets that were introduced to inventory through an observed connection to the specified seed. This method is useful when you can determine that a specific manually inputted seed resulted in undesired assets being added to inventory.
 - **Discovery chain management**: You can identify an asset within a discovery chain and delete it, simultaneously removing any assets discovered by that entity. Discovery is a recursive process; it scans seeds to identify new assets directly associated to these designated seeds, then continues to scan the newly discovered entities to unveil more connections. This deletion approach is useful when your discovery group is properly configured, but you need to remove a newly discovered asset and any assets brought into inventory by association to that entity. Consider your discovery group settings and designated seeds to be the "top" of your discovery chain; this deletion approach allows you to remove assets from the middle.
-- **Discovery group management:** You can remove entire discovery groups and all assets that were introduced to inventory through this discovery group. This is useful when an entire discovery group is no longer applicable to your organization. For instance, you might have a discovery group that specifically searches for assets related to a subsidiary. If this subsidiary is no longer relevant to your organization, you can leverage asset chain-based management to delete all assets brought into inventory through that discovery group.
+- **Discovery group management**: You can remove entire discovery groups and all assets that were introduced to inventory through this discovery group. This is useful when an entire discovery group is no longer applicable to your organization. For instance, you might have a discovery group that specifically searches for assets related to a subsidiary. If this subsidiary is no longer relevant to your organization, you can leverage asset chain-based management to delete all assets brought into inventory through that discovery group.
 
  You can still view removed assets in Defender EASM; simply filter your inventory list for assets in the "Archived" state.
 
@@ -183,28 +186,28 @@ You might decide that one of your initially designated discovery seeds should no
 
 To perform a bulk removal based on a seed, route to the appropriate Discovery Group details page and select **Edit discovery group**. Follow the prompts to reach the **Seeds** page and remove the problematic seed from the list. When you select **Review + Update**, you'll see a warning that indicates that all assets discovered through the designated seed will be removed as well. Select **Update** or **Update & Run** to complete the deletion.
 
-![Screenshot that shows the Edit Discovery Group page with a warning indicating the removal of a seed and any assets discovered through that seed.](media/chain-1.png)
+:::image type="content" source="media/chain-1.png" alt-text="Screenshot that shows the Edit Discovery Group page with a warning indicating the removal of a seed and any assets discovered through that seed.":::
 
 <a name="discovery-chain-based-deletion"></a>
 ### Delete assets by discovery chain
 
 In the following example, imagine that you've discovered an insecure login form on your **Attack Surface Summary** dashboard. Your investigation routes you to a host that does not appear to be owned by your organization. You view the asset details page for more information; upon reviewing the Discovery chain, you learn that the host was brought into inventory because the corresponding domain was registered using an employee's corporate email address that was also used to register approved business entities.
 
-![Screenshot that shows the Asset Details page with the Discovery Chain section highlighted.](media/chain-2.png)
+:::image type="content" source="media/chain-2.png" alt-text="Screenshot that shows the Asset Details page with the Discovery Chain section highlighted.":::
 
 In this situation, the initial discovery seed (the corporate domain) is still legitimate so we need to instead remove a problematic asset from the discovery chain. While we could perform the chain deletion from the contact email, we'll instead elect to remove everything associated to the personal domain registered to this employee so that Defender EASM will alert us of any other domains registered to that email address in the future. From the discovery chain, select this personal domain to view the asset details page. From this view, select **Remove from discovery chain** to remove the asset from your inventory, as well as all assets brought into inventory due to an observed connection to the personal domain. You need to confirm the removal of the asset and all downstream assets and are then presented with a summarized list of the other assets that are removed with this action. Select "Remove discovery chain" to confirm the bulk removal.
 
-![Screenshot that shows the confirmation box for removing the current asset and all downstream assets, with a summary of other assets also removed.](media/chain-3.png)
+:::image type="content" source="media/chain-3.png" alt-text="Screenshot that shows the confirmation box for removing the current asset and all downstream assets, with a summary of other assets also removed.":::
 
 <a name="discovery-group-deletion"></a>
 ### Delete assets by discovery group
 
 You might need to delete and entire discovery group and all the assets discovered through the group. For instance, your company might have sold a subsidiary that no longer needs to be monitored. Users can delete discovery groups from the Discovery management page. To remove a discovery group and all related assets, select the **trash bin** icon next to the appropriate group in the list. You'll receive a warning that lists a summary of the assets that will be removed with this action. To confirm the deletion of the discovery group; and all related assets, select **Remove discovery group**.
 
-![Screenshot that shows the Discovery management page, with the warning box that appears after electing to delete a group highlighted.](media/chain-4.png)
+:::image type="content" source="media/chain-4.png" alt-text="Screenshot that shows the Discovery management page, with the warning box that appears after electing to delete a group highlighted.":::
 
 ## Related content
 
-- [Inventory filters overview](inventory-filters.md)
+- [Defender EASM inventory filters overview](inventory-filters.md)
 - [Understand inventory assets](understanding-inventory-assets.md)
-- [Understand asset details](understanding-asset-details.md)
+- [Understand asset details in Microsoft Defender External Attack Surface Management](understanding-asset-details.md)

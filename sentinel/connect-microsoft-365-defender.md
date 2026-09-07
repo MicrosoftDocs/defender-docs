@@ -5,12 +5,12 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to integrate Microsoft Defender XDR data with Microsoft Sentinel so that we can centralize and streamline incident management and advanced threat hunting.
 
@@ -172,7 +172,7 @@ let Now = now();
 | render timechart 
 ```
 
-Use the following KQL query to generate a graph of daily event volume for a single advanced hunting table over the last 14 days. Replace the *DeviceEvents* table name with the table you want to monitor. The query renders a time chart so you can visually confirm that events are flowing:
+Use the following KQL query to build a 14-day daily trend of event volume for a single advanced hunting table. This time series helps you validate ingestion consistency after enabling the connector. Replace the *DeviceEvents* table name with the table you want to monitor:
 
 ```kusto
 let Now = now();
@@ -194,6 +194,8 @@ The following advanced hunting tables are **not ingested** into Microsoft Sentin
 
 ### Defender Vulnerability Management (TVM) tables
 
+The following TVM tables aren't ingested into Microsoft Sentinel:
+
 - `DeviceTvmBrowserExtensions`
 - `DeviceTvmBrowserExtensionsKB`
 - `DeviceTvmCertificateInfo`
@@ -209,7 +211,7 @@ The following advanced hunting tables are **not ingested** into Microsoft Sentin
 
 These tables are critical for security vulnerability management, but data is not currently streamed to Microsoft Sentinel through the Defender XDR connector. If you need to use this data in Microsoft Sentinel for analytics or detections, you must implement a [custom ingestion solution](/azure/sentinel/create-custom-connector). Otherwise, query the data in Defender XDR Advanced Hunting, where it’s available.
 
-See more information on the following items used in the preceding examples, in the Kusto documentation:
+See more information on the following items used in the incident and event-volume KQL queries in the [Verify data ingestion](#verify-data-ingestion) section, in the Kusto documentation:
 - [***let*** statement](/kusto/query/let-statement?view=microsoft-sentinel&preserve-view=true)
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***extend*** operator](/kusto/query/extend-operator?view=microsoft-sentinel&preserve-view=true)
@@ -225,7 +227,8 @@ See more information on the following items used in the preceding examples, in t
 
 [!INCLUDE [kusto-reference-general-no-alert](includes/kusto-reference-general-no-alert.md)]
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 You learned how to stream Defender XDR incidents, alerts, and hunting events into Microsoft Sentinel. You used the Defender XDR connector to set up this data flow.
 

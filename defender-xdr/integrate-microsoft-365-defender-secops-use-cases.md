@@ -9,9 +9,9 @@ ms.collection:
   - msftsolution-secops
   - tier2
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Step 5. Develop and test use cases
@@ -23,11 +23,11 @@ ms.custom: msecd-doc-authoring-1014
 
 The recommended methods to deploy Microsoft Defender XDR in your Security Operations Center (SOC) depends on the SOC team's current set of tools, processes, and skill set. Maintaining cyber hygiene across platforms can be challenging because of the vast amount of data coming from dozens if not hundreds of security sources.
 
-Security tools are interrelated. Turning on one feature in a security technology or changing a process may in turn break another. For this reason, Microsoft recommends that your SOC team formalize a method for defining and prioritizing use cases. Use cases help define requirements and test processes for SOC operations across various teams. It creates a methodology for capturing metrics to determine if the right roles and mix of tasks are aligned to the right team with the right skill set.
+Security tools are interrelated. Turning on one feature in a security technology or changing a process may in turn break another. For this reason, Microsoft recommends that your SOC team formalize a method for defining and prioritizing use cases. Use cases help define requirements and test processes for SOC operations across various teams. A formalized use-case method creates a methodology for capturing metrics to determine if the right roles and mix of tasks are aligned to the right team with the right skill set.
 
 ## Develop and formalize use case process
 
-The SOC should define a high-level standard and process for developing use cases, which would be regulated by the SOC Oversight team. The SOC Oversight team should work with your business, IT, legal, HR, and other groups to prioritize use cases for the SOC that will eventually make their way into the SOC team's runbooks and playbooks. Priority of use cases are based on objectives, such as compliance or privacy.
+The SOC should define a high-level standard and process for developing use cases, which would be regulated by the SOC Oversight team—the group responsible for governing SOC standards and cross-functional coordination. The SOC Oversight team should work with your business, IT, legal, HR, and other groups to prioritize use cases for the SOC that will eventually make their way into the SOC team's runbooks and playbooks. Priority of use cases are based on objectives, such as compliance or privacy.
 
 SOC Oversight activities related to use case development include:
 
@@ -43,7 +43,7 @@ To facilitate the runbook and playbook creation processes, create a use case dec
 
 :::image type="content" source="media/integrate-microsoft-365-defender-secops-use-cases/use-case-decision-process.png" alt-text="The use-case decision process" lightbox="media/integrate-microsoft-365-defender-secops-use-cases/use-case-decision-process.png":::
 
-Once a high-level use case standard has been defined and approved, the next step is to create and test an actual use case. The [new phishing variant](#use-case-example-1-new-phishing-variant) and [threat and vulnerability scanning](#use-case-example-2-threat-and-vulnerability-scanning) examples illustrate this process.
+Once a high-level use case standard has been defined and approved, the next step is to create and test an actual use case. The [new phishing variant](#use-case-example-1-new-phishing-variant) and [threat and vulnerability scanning](#use-case-example-2-threat-and-vulnerability-scanning) examples illustrate the process for creating and testing a use case.
 
 ## Use case example 1: New phishing variant
 
@@ -53,7 +53,7 @@ The first step in creating a use case is to outline the workflow using a story b
 
 ### Invoke the use case workflow for example 1
 
-Once the story board has been approved, the next step is to invoke the use case workflow. Here's an example process for an anti-phishing campaign.
+After the storyboard is approved, invoke the use case workflow. Here's an example process for an anti-phishing campaign.
 
 :::image type="content" source="media/integrate-microsoft-365-defender-secops-use-cases/example-detailed-use-case-workflow-phishing.png" alt-text="A detailed use case workflow for an anti-phishing campaign" lightbox="media/integrate-microsoft-365-defender-secops-use-cases/example-detailed-use-case-workflow-phishing.png":::
 
@@ -95,7 +95,7 @@ Additionally, the SOC teams could have made the following discoveries for the De
 |Engineering & SecOps Teams|High impact and critical vulnerabilities in assets are remediated according to policy|SecOps engineers, SOC analysts: Vulnerability & Compliance, Security Engineering|Defined process for categorizing High Risk and Critical Vulnerabilities|[Microsoft Defender Vulnerability Management Dashboards](/defender-vulnerability-management/defender-vulnerability-management)|Defender for Endpoint has identified high impact, high alert devices with no remediation plan or implementation of Microsoft recommended activity|Add a workflow for notifying asset owners when remediation activity is required within 30 days per policy; Implement a ticketing system to notify asset owners of remediation steps.|N|
 |Monitoring Teams|Threat and vulnerability status is reported via company intranet portal|Tier 2 SOC analyst|Auto-generated reports from Microsoft Defender XDR showing remediation progress of assets|[Investigate alerts in Microsoft Defender XDR](investigate-alerts.md) <p> Secure Score monitoring|No views or dashboard reports being communicated to asset owners regarding threat and vulnerability status of assets.|Create automation script to populate status of high risk and critical asset vulnerability remediation to the organization.|N|
 
-In these example use cases, the testing revealed several gaps in the SOC team's requirements that were established as baselines for the responsibilities of each team. The use case checklist can be as comprehensive as needed to ensure that the SOC team is prepared for the Microsoft Defender XDR integration with new or existing SOC requirements. Since this is an iterative process, the use case development process and the use case output content naturally serve to update and mature the SOC's runbooks with lessons learned.
+In these example use cases, use case testing revealed several gaps in the SOC team's requirements that were established as baselines for the responsibilities of each team. The use case checklist can be as comprehensive as needed to ensure that the SOC team is prepared for the Microsoft Defender XDR integration with new or existing SOC requirements. Since this is an iterative process, the use case development process and the use case output content naturally serve to update and mature the SOC's runbooks with lessons learned.
 
 ## Update production runbooks and playbooks
 

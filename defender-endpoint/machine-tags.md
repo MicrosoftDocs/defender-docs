@@ -63,7 +63,7 @@ You can add tags to devices using the following methods. Each method is suited f
 | **Portal** | All supported platforms | Manually add tags to individual devices or small groups. See [Add device tags using the portal](#add-device-tags-using-the-portal). |
 | **Dynamic rules** | All supported platforms | Create rules in the Defender portal that automatically assign and remove tags based on device properties. See [Asset rule management - Dynamic rules for devices](/defender-xdr/configure-asset-rules). |
 | **Registry key** | Windows | Set registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\DeviceTagging\` with REG_SZ value `Group` containing the tag name (max 200 characters). Tags sync once daily; restart the device for immediate sync. To remove a tag, clear the value data instead of deleting the `Group` key. |
-| **Security settings management** | macOS, Linux | Create an Endpoint detection and response security policy. See [Manage endpoint security policies on MDE-onboarded devices](/mem/intune/protect/mde-security-integration) and [Manage endpoint security policies in Defender for Endpoint](manage-security-policies.md). |
+| **Security settings management** | macOS, Linux | Create an Endpoint detection and response security policy. See [Manage endpoint security policies on MDE-onboarded devices](/mem/intune/protect/mde-security-integration) and [Manage endpoint security policies in Defender for Endpoint](endpoint-security-policies-configure.md). |
 | **Configuration profile** | macOS, Linux | **macOS**: Create a `.plist` configuration profile and deploy it manually or through a management tool. See [Set preferences for MDE on macOS](mac-preferences.md) and [Custom settings for macOS in Intune](/mem/intune/configuration/custom-settings-macos). **Linux**: Create a `.json` configuration profile. See [Set preferences for MDE on Linux](linux-preferences.md). |
 | **Custom Intune profile** | Windows 10 or later | Create a device configuration profile with custom settings in Intune. Use OMA-URI `./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/DeviceTagging/Group` with data type **String**. See [Create a profile with custom settings in Intune](/mem/intune/configuration/custom-settings-configure). |
 | **App configuration policy in Intune** | iOS, Android | Create an app configuration profile in Intune to define and apply tags for mobile devices. **For iOS**, see [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md). **For Android**, see [Configure Defender for Endpoint on Android features](android-configure.md). For more information, see [Tag mobile devices with Microsoft Defender for Endpoint](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/announcing-mobile-device-tagging-for-ios-and-android/ba-p/3897368). |
@@ -75,13 +75,15 @@ To add device tags using API, see [Add or remove device tags API](api/add-or-rem
 
 ### Add device tags using the portal
 
+To add tags to a device in the Defender portal, follow these steps:
+
 1. Select the device that you want to manage tags on. You can select or search for a device from any of the following views:
 
    - **Alerts queue** - Select the device name beside the device icon from the alerts queue.
    - **Devices inventory** - Select the device name from the list of devices.
    - **Search box** - Select Device from the drop-down menu and enter the device name.
 
-     You can also get to the alert page through the file and IP views.
+     You can also select a device from the file and IP address views.
 
 1. Select **Manage tags** from the row of Response actions.
 
@@ -98,7 +100,7 @@ Tags are added to the device view and are also reflected on the **Devices invent
 >
 > When you create a new tag, a list of existing tags is displayed. The list only shows tags created through the portal. Existing tags created from client devices aren't displayed.
 
-You can also delete tags from this view.
+You can also delete tags from the device page.
 
 :::image type="content" source="media/new-tag-label-display.png" alt-text="Adding tags on device2" lightbox="media/new-tag-label-display.png":::
 

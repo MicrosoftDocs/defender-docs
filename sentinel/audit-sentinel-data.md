@@ -1,13 +1,13 @@
 ---
 title: Audit Microsoft Sentinel queries and activities
-description: This article describes how to audit queries and activities performed in Microsoft Sentinel.
+description: Learn how to audit Microsoft Sentinel workspace activity using AzureActivity and LAQueryLogs tables for compliance and SOC monitoring.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security analyst, I want to audit queries and activities in my SOC environment so that I can ensure compliance and monitor security operations effectively.
 ---
@@ -46,7 +46,7 @@ Use the **AzureActivity** table when auditing activity in your SOC environment w
     - In the Azure portal, query this table in the **[Logs](hunts-custom-queries.md)** page.
     - In the Defender portal, query this table in the **Investigation & response > Hunting > [Advanced hunting](/defender-xdr/advanced-hunting-overview)** page.
 
-    The **AzureActivity** table includes data from many services, including Microsoft Sentinel. To filter in only data from Microsoft Sentinel, start your query with the following code:
+    The **AzureActivity** table includes data from many services, including Microsoft Sentinel. Use the following query to filter the **AzureActivity** table to show only Microsoft Sentinel operations:
 
     ```kusto
      AzureActivity
@@ -79,7 +79,7 @@ AzureActivity
 
 ### Find all delete operations
 
-The following **AzureActivity** table query lists all the delete operations performed in your Microsoft Sentinel workspace.
+To identify Microsoft Sentinel resources that were deleted, run the following query to filter Azure Activity logs for successful delete operations in your workspace.
 
 ```kusto
 AzureActivity
@@ -163,7 +163,7 @@ The following sections show more sample queries to run on the **LAQueryLogs** ta
 
 ### The number of queries run where the response wasn't "OK"
 
-The following **LAQueryLogs** table query shows the number of queries run, where anything other than an HTTP response of **200 OK** was received. For example, this number includes queries that had failed to run.
+Use the following query to count Log Analytics queries that returned a non-success response code. This count includes queries that failed to run or returned anything other than an HTTP **200 OK** response.
 
 ```kusto
 LAQueryLogs
@@ -173,7 +173,7 @@ LAQueryLogs
 
 ### Show users for CPU-intensive queries
 
-The following **LAQueryLogs** table query lists the users who ran the most CPU-intensive queries, based on CPU used and length of query time.
+To find the users or clients running the most resource-intensive queries, use the following query to surface the highest CPU-time query per Microsoft Entra client ID, sorted by CPU time consumed.
 
 ```kusto
 LAQueryLogs
@@ -185,7 +185,7 @@ LAQueryLogs
 
 ### Show users who ran the most queries in the past week
 
-The following **LAQueryLogs** table query lists the users who ran the most queries in the last week.
+Use the following query to summarize how many queries each user ran in the last seven days, which helps identify the most active users in your workspace for auditing or usage analysis.
 
 ```kusto
 LAQueryLogs
@@ -205,7 +205,7 @@ LAQueryLogs
 
 You might want to use Microsoft Sentinel auditing resources to create proactive alerts.
 
-For example, if you have sensitive tables in your Microsoft Sentinel workspace, use the following query to notify you each time those tables are queried:
+For example, if you have sensitive tables in your Microsoft Sentinel workspace, you can detect when those tables are accessed. The following query audits access to a specific sensitive table by listing queries that referenced it during the last 24 hours. Replace `[Name of sensitive table]` with the name of the table you want to monitor:
 
 ```kusto
 LAQueryLogs
@@ -237,7 +237,7 @@ Use Microsoft Sentinel's own features to monitor events and actions that occur w
 
 - **Monitor data connector health** using the [Connector Health Push Notification Solution](https://github.com/Azure/Azure-Sentinel/tree/master/Playbooks/Send-ConnectorHealthStatus) playbook to watch for stalled or stopped ingestion, and send notifications when a connector has stopped collecting data or machines have stopped reporting.
 
-See more information on the following items used in the KQL examples in this article, in the Kusto documentation:
+See the Kusto documentation for the operators and functions used in the KQL examples in this article:
 - [***let*** statement](/kusto/query/let-statement?view=microsoft-sentinel&preserve-view=true)
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
 - [***project*** operator](/kusto/query/project-operator?view=microsoft-sentinel&preserve-view=true)
@@ -253,6 +253,7 @@ See more information on the following items used in the KQL examples in this art
 
 [!INCLUDE [kusto-reference-general-no-alert](includes/kusto-reference-general-no-alert.md)]
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 In Microsoft Sentinel, use the **Workspace audit** workbook to audit the activities in your SOC environment. For more information, see [Visualize and monitor your data](monitor-your-data.md).

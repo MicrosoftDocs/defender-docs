@@ -37,7 +37,7 @@ For information on other tables in the advanced hunting schema, see [the advance
 
 | Column name | Data type | Description |
 |-------------|-----------|-------------|
-| `ConfigurationId` | `string` | Unique identifier for a specific configuration |
+| `ConfigurationId` | `string` | Identifier for a configuration within a specific benchmark and benchmark version |
 | `ConfigurationName` | `string` | Display name of the configuration |
 | `ConfigurationDescription` | `string` | Description of the configuration |
 | `ConfigurationRationale` | `string` | Description of any associated risks and rationale behind the configuration |
@@ -46,6 +46,7 @@ For information on other tables in the advanced hunting schema, see [the advance
 | `CCEReference` | `string` | Unique Common Configuration Enumeration (CCE) identifier for the configuration |
 | `RemediationOptions` | `string` | Recommended actions to reduce or address any associated risks |
 | `ConfigurationBenchmark` | `string` | Industry benchmark recommending the configuration |
+| `ConfigurationBenchmarkVersion` | `string` | Version of the industry benchmark recommending the configuration |
 | `Source` | `dynamic` | The registry path or other location used to determine the current device setting |
 | `RecommendedValue` | `dynamic` | Set of expected values for the current device setting to be compliant |
 

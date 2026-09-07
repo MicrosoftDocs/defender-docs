@@ -6,7 +6,7 @@ ms.author: chrisda
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 06/11/2026
+ms.date: 07/03/2026
 ms.reviewer: efratka
 ms.collection:
 - SMB
@@ -14,7 +14,7 @@ ms.collection:
 - m365-initiative-defender-business
 - tier1
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1013
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Review remediation actions in the Action Center
@@ -51,6 +51,8 @@ The following table lists remediation actions that are available.
 |[Live response](/defender-endpoint/live-response)|<ul></li>Collect forensic data</li><li>Analyze a file</li><li>Run a script</li><li>Send a suspicious entity to Microsoft for analysis</li><li>Remediate a file</li><li>Proactively hunt for threats</ul></li>|
 
 ## Next steps
+
+Use the following articles to learn more about responding to threats and managing devices:
 
 - [Respond to and mitigate threats in Defender for Business](mdb-respond-mitigate-threats.md)
 - [Manage devices in Defender for Business](mdb-manage-devices.md)

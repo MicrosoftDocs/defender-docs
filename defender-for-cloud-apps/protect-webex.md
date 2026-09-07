@@ -1,11 +1,11 @@
 ---
 title: Protect your Cisco Webex environment | Microsoft Defender for Cloud Apps
 description: Connect Cisco Webex to Microsoft Defender for Cloud Apps by using the API connector to gain activity visibility, information protection detections, and automated governance controls.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # How Defender for Cloud Apps helps protect your Cisco Webex environment
 
@@ -40,7 +40,7 @@ You can use the following built-in policy templates to detect and notify you abo
 
 | Type | Name |
 | ---- | ---- |
-| Built-in anomaly detection policy | [Activity performed by terminated user](anomaly-detection-policy.md#activity-performed-by-terminated-user) (requires Microsoft Entra ID as IdP)<br />[Ransomware detection](anomaly-detection-policy.md#ransomware-activity)<br />[Unusual file deletion activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />[Unusual file share activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />[Unusual multiple file download activities](anomaly-detection-policy.md#unusual-activities-by-user) |
+| Built-in anomaly detection policy | [Activity performed by terminated user](anomaly-detection-policy.md#activity-performed-by-terminated-user) (requires Microsoft Entra ID as the identity provider (IdP))<br />[Ransomware detection](anomaly-detection-policy.md#ransomware-activity)<br />[Unusual file deletion activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />[Unusual file share activities](anomaly-detection-policy.md#unusual-activities-by-user)<br />[Unusual multiple file download activities](anomaly-detection-policy.md#unusual-activities-by-user) |
 | File policy template | Detect a file shared with an unauthorized domain<br />Detect a file shared with personal email addresses |
 | Activity policy template | Mass download by a single user<br />Potential ransomware activity |
 
@@ -67,7 +67,7 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## Connect Cisco Webex to Microsoft Defender for Cloud Apps
 
-Use the connector APIs to connect Microsoft Defender for Cloud Apps to your existing Cisco Webex account. This connection gives you visibility into and control over Webex users, activities, and files. For information about how Defender for Cloud Apps protects Cisco Webex, see [Protect Cisco Webex](protect-webex.md).
+Use the connector APIs to connect Microsoft Defender for Cloud Apps to your existing Cisco Webex account. Connecting Microsoft Defender for Cloud Apps to your Cisco Webex account gives you visibility into and control over Webex users, activities, and files. For information about how Defender for Cloud Apps protects Cisco Webex, see [Protect Cisco Webex](protect-webex.md).
 
 **Prerequisites**:
 
@@ -94,7 +94,7 @@ Use the connector APIs to connect Microsoft Defender for Cloud Apps to your exis
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**. Make sure the status of the connected App Connector is **Connected**.
 
-After connecting Webex, you'll receive events for 7 days prior to connection. Defender for Cloud Apps scans events over the past three months. To increase the three-month event scan period, you must have a Cisco Webex pro license and open a ticket with Defender for Cloud Apps support.
+After connecting Webex, you'll receive events for 7 days prior to connection. Defender for Cloud Apps scans events over the past three months. To increase the default three-month Defender for Cloud Apps event scan period, you must have a Cisco Webex Pro license and open a ticket with Defender for Cloud Apps support.
 
 If you have any problems connecting the app, see [Troubleshooting App Connectors](troubleshooting-api-connectors-using-error-messages.md).
 

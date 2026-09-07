@@ -2,9 +2,9 @@
 title: Set up traffic mirroring - Defender for IoT
 description: A quick guide for the correct placement and mirroring of the OT sensor in your network for Microsoft Defender for IoT.
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Set up traffic mirroring
@@ -31,15 +31,15 @@ Compile a list all of the locations in the network where the sensors should be p
 
 ## Validate the sensor location
 
-After deciding on a potential location for the sensor, validate the presence of L2 and operational technology (OT) protocols. It's recommended to use tools like Wireshark to verify these protocols at the potential sensor location. For example:
+After deciding on a potential location for the sensor, validate the presence of Layer 2 (L2) and operational technology (OT) protocols. It's recommended to use tools like Wireshark to verify these protocols at the potential sensor location. For example:
 
 :::image type="content" source="media/guide/deployment-guide-analyzer.png" alt-text="Screenshot of the wireshark program used to confirm and validate OT sensor set up and network protocols communicating with the newly deployed OT sensor.":::
 
-Wireshark displays the list of protocols identified by the sensor and the amount of data being monitored, thereby validating the location of your sensor. If protocols don't appear or don't detect any data, this indicates that the sensor is incorrectly placed or set up in the network. For example:
+Wireshark displays the list of protocols identified by the sensor and the amount of data being monitored, thereby validating the location of your sensor. If protocols don't appear or no data is detected, this result indicates that the sensor is incorrectly placed or set up in the network. For example:
 
 :::image type="content" source="media/guide/deployment-guide-protocols.png" alt-text="Screenshot of the wireshark program protocol output used to confirm and validate OT sensor set up and network protocols communicating with the newly deployed OT sensor.":::
 
-Validating the presence of L2 and OT protocols at the potential sensor location is crucial to ensure effective monitoring of your OT networks.  For more information, see [validate traffic mirroring](configure-mirror-span.md#validate-traffic-mirroring).
+Validating the presence of L2 and OT protocols at the potential sensor location is crucial to ensure effective monitoring of your OT networks.  For steps to validate traffic mirroring, see [Validate traffic mirroring](configure-mirror-span.md#validate-traffic-mirroring).
 
 ## Deploy your sensor
 

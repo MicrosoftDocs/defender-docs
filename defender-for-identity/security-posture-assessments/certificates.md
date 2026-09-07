@@ -1,11 +1,11 @@
 ---
-title: Certificates security posture assessments - Microsoft Defender for Identity
+title: Certificates security posture assessment in Microsoft Defender for Identity
 description: Learn how to identify and remediate certificate-related security risks in Active Directory Certificate Services (AD CS) using Microsoft Defender for Identity security posture assessments.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: LiorShapiraa
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Security assessment: Certificates
@@ -28,7 +28,7 @@ If the `IF_ENFORCEENCRYPTICERTREQUEST` flag is turned on, the RPC interface only
 If the RPC enrollment interface doesn't require packet privacy, it becomes vulnerable to relay attacks (ESC11). The `IF_ENFORCEENCRYPTICERTREQUEST` flag is on by default, but is often turned off to allow clients that can't support the required RPC authentication level, such as clients running Windows XP. 
 
 >[!NOTE]
->This assessment is available only to customers who have installed a sensor on an AD CS server. 
+>The Enforce encryption for RPC certificate enrollment interface (ESC11) assessment is available only to customers who have installed a sensor on an AD CS server. 
 
 **Implementation**
 
@@ -48,13 +48,14 @@ If the RPC enrollment interface doesn't require packet privacy, it becomes vulne
     certutil -setreg CA\InterfaceFlags +IF_ENFORCEENCRYPTICERTREQUEST
     ```
 
+    > [!CAUTION]
+    > Make sure to test your settings in a controlled environment before turning them on in production.
+
     To restart the service, run:
 
     ```cmd
     net stop certsvc & net start certsvc
     ```
-
-  Make sure to test your settings in a controlled environment before turning them on in production.
 
 
 
@@ -75,9 +76,9 @@ If the IIS endpoint allows NTLM authentication without enforcing protocol signin
 
 Review the recommended action at <https://security.microsoft.com/securescore?viewid=actions> for insecure AD CS certificate enrollment IIS endpoints.
 
-The assessment lists the problematic HTTP endpoints in your organization and guidance to configuring the endpoints securely.
+The insecure AD CS certificate enrollment IIS endpoints assessment lists the problematic HTTP endpoints in your organization and guidance to configuring the endpoints securely.
 
-Once handled, the ESC8 attack risk is mitigated, reducing your attack surface significantly.
+Once the insecure IIS endpoints are remediated, the ESC8 attack risk is mitigated, reducing your attack surface significantly.
 
 
 ## Edit misconfigured certificate templates owner (ESC4)
@@ -119,7 +120,7 @@ The effect of a misconfigured ACL varies based on the type of permission applied
 
 ### Prerequisites
 
-This assessment is available only to customers who installed a sensor on an AD CS server. 
+The misconfigured Certificate Authority ACL (ESC7) assessment is available only to customers who installed a sensor on an AD CS server. 
 
 **Implementation**
 

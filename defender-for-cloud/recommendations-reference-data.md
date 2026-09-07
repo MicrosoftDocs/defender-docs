@@ -543,24 +543,10 @@ Configure a private endpoint connection to enable access to traffic coming only 
 
 **Severity**: High
 
-### SQL databases should have vulnerability findings resolved
-
-**Description**: SQL Vulnerability assessment scans your database for security vulnerabilities, and exposes any deviations from best practices such as misconfigurations, excessive permissions, and unprotected sensitive data. Resolving the vulnerabilities found can greatly improve your database security posture. [Learn more](https://aka.ms/SQL-Vulnerability-Assessment/)
-(Related policy: [Vulnerabilities on your SQL databases should be remediated](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicydefinitions%2ffeedbf84-6b99-488c-acc2-71c829aa5ffc)).
-
-**Severity**: High
-
 ### SQL managed instances should have vulnerability assessment configured
 
 **Description**: Vulnerability assessment can discover, track, and help you remediate potential database vulnerabilities.
 (Related policy: [Vulnerability assessment should be enabled on SQL Managed Instance](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fMicrosoft.Authorization%2fpolicyDefinitions%2f1b7aa243-30e4-4c9e-bca8-d0d3022b634a)).
-
-**Severity**: High
-
-### SQL servers on machines should have vulnerability findings resolved
-
-**Description**: SQL Vulnerability assessment scans your database for security vulnerabilities, and exposes any deviations from best practices such as misconfigurations, excessive permissions, and unprotected sensitive data. Resolving the vulnerabilities found can greatly improve your database security posture. [Learn more](https://aka.ms/explore-vulnerability-assessment-reports/)
-(Related policy: [Vulnerabilities on your SQL servers on machine should be remediated](https://portal.azure.com/#blade/Microsoft_Azure_Policy/PolicyDetailBlade/definitionId/%2fproviders%2fmicrosoft.authorization%2fpolicydefinitions%2f6ba6d016-e7c3-4842-b8f2-4992ebc0d72d)).
 
 **Severity**: High
 

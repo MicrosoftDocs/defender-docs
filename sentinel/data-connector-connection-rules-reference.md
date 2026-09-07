@@ -338,7 +338,7 @@ Follow this authentication flow:
 | `JwtTokenIdentifier`        |           | String   | The identifier used to extract the JWT from a prefixed token string. |
 | `QueryParameters`           |           | Object   | The custom query parameters to include when sending the request to the token endpoint. |
 | `Headers`                   |           | Object   | The custom headers to include when sending the request to the token endpoint. |
-| `RequestTimeoutInSeconds`   |           | Integer  | The request timeout in seconds. The default value is `100`, with a maximum value of `180`. |
+| `RequestTimeoutInSeconds`   |           | Integer  | The request timeout in seconds. The default value is `100`, with a maximum value of `300`. |
 
    > [!NOTE]
    > Limitations
@@ -361,7 +361,7 @@ The request section defines how the CCF data connector sends requests to your da
 | `HttpMethod` |  | String | This field defines the API method: `GET`(default) or `POST`. |
 | `QueryTimeFormat` |  | String | This field defines the date and time format the endpoint (remote server) expects. The CCF uses the current date and time wherever this variable is used. Possible values are the constants: `UnixTimestamp`, `UnixTimestampInMills`, or any other valid representation of date and time. For example: `yyyy-MM-dd`, `MM/dd/yyyy HH:mm:ss`.<br> The default is `ISO 8601 UTC`. |
 | `RetryCount` |  | Integer (1...6) | This field defines that values of `1` to `6` retries are allowed to recover from a failure. The default value is `3`. |
-| `TimeoutInSeconds` |  | Integer (1...180) | This field defines the request timeout in seconds. The default value is `20`. |
+| `TimeoutInSeconds` |  | Integer (1...300) | This field defines the request timeout in seconds. The default value is `20`. |
 | `IsPostPayloadJson` |  | Boolean | This field determines whether the `POST` payload is in JSON format. The default value is `false`. |
 | `Headers` |  | Object | This field includes key/value pairs that define the request headers. |
 | `QueryParameters` |  | Object | This field includes key/value pairs that define the request query parameters. |

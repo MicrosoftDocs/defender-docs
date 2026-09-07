@@ -1,26 +1,26 @@
 ---
-title: View aggregated data from the Overview | Microsoft Sentinel
+title: Use the Microsoft Sentinel Overview dashboard to view incidents, data, and analytics | Microsoft Sentinel
 description: Learn how to quickly view and monitor what's happening across your environment by using Microsoft Sentinel.
 ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security analyst, I want to visualize and monitor data on a unified dashboard so that I can efficiently track incidents, automation, data records, and analytics in my environment.
 
 ---
 
-# Visualize collected data on the Overview page
+# Visualize collected data on the Microsoft Sentinel Overview page
 
-After connecting your data sources to Microsoft Sentinel, use the **Overview** page to view, monitor, and analyze activities across your environment. This article describes the widgets and graphs available on Microsoft Sentinel's **Overview** dashboard, including insights into incidents, automation efficiency, data ingestion, and analytics rule status to help you quickly assess the security posture of your environment.
+Use the Microsoft Sentinel **Overview** page to view, monitor, and analyze activities across your environment. This article describes the widgets and graphs available on Microsoft Sentinel's **Overview** dashboard, including insights into incidents, automation efficiency, data ingestion, and analytics rule status to help you quickly assess the security posture of your environment. Before you start, make sure you meet the [prerequisites](#prerequisites), including connecting your data sources to Microsoft Sentinel.
 
 [!INCLUDE [unified-soc-preview](includes/unified-soc-preview.md)]
 
@@ -64,7 +64,7 @@ After deploying automation with Microsoft Sentinel, monitor your workspace's aut
 
 - Start with a summary of the automation rules activity: Incidents closed by automation, the time the automation saved, and related playbooks health.
 
-   Microsoft Sentinel calculates the time saved by automation by finding the average time that a single automation saved, multiplied by the number of incidents resolved by automation. The formula is as follows:
+   Microsoft Sentinel calculates the time saved by automation by finding the average time that a single automation saved, multiplied by the number of incidents resolved by automation. Microsoft Sentinel uses the following formula to calculate time saved by automation:
 
    `(avgWithout - avgWith) * resolvedByAutomation`
 
@@ -107,6 +107,8 @@ The number of analytics rules in Microsoft Sentinel are shown by status, includi
 Select the **MITRE view** link to jump to the **MITRE ATT&CK**, where you can view how your environment is protected against MITRE ATT&CK tactics and techniques. Select the **manage analytics rules** link to jump to the **Analytics** page, where you can view and manage the rules that configure how alerts are triggered.
 
 ## Next steps
+
+To continue exploring and monitoring your environment, use the following resources:
 
 - Use workbook templates to dive deeper into events generated across your environment. For more information, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](monitor-your-data.md).
 

@@ -12,9 +12,9 @@ ms.collection:
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure and run antivirus scans with Microsoft Defender for Endpoint on Linux
@@ -39,7 +39,7 @@ The following table describes each type of scan:
 
 |Scan type|Description|
 |--|--|
-|**Quick scan (recommended)**| A quick scan examines locations where malware is likely to be registered and executed, such as startup scripts, cron jobs, and system service directories (for example, `/etc/rc.local`, `/etc/init.d/`, and `systemd` service files). It also checks common directories where malware could reside, such as `/tmp`, `/var`, etc. This is subject to change based on various factors such as threat landscape or evolving malware techniques.|
+|**Quick scan (recommended)**| A quick scan examines locations where malware is likely to be registered and executed, such as startup scripts, cron jobs, and system service directories (for example, `/etc/rc.local`, `/etc/init.d/`, and `systemd` service files). It also checks common directories where malware could reside, such as `/tmp`, `/var`, etc. The list of scanned locations is subject to change based on various factors such as threat landscape or evolving malware techniques.|
 |**Full scan**| A full scan scans all files and folders within `/`. <br><br> A full scan with Defender for Endpoint on Linux can take several hours or even days to complete. The duration depends on the volume and type of data being scanned and the availability of CPU resources. |
 |**Custom scan**| A custom scan runs on files and folders specified with the `--path` parameter. <br><br> By default, custom scans in Defender for Endpoint on Linux ignore files and folders specified in the antivirus exclusions. However, you can override this behavior by using the `--ignore-exclusions` flag, to ensure the excluded files and folders are scanned during a custom scan. |
 
@@ -71,6 +71,8 @@ The following articles describe how to schedule antivirus scans using crontab or
 
 ## Run on-demand scans via the Defender portal
 
+Before you begin, ensure you have at least **Alerts (manage)** permission in the Defender portal.
+
 To trigger an antivirus scan on a device from the Defender portal:
 
 1. Go to the Microsoft Defender portal (https://security.microsoft.com) and sign-in.
@@ -87,21 +89,21 @@ To trigger an antivirus scan on a device from the Defender portal:
 
 ## Performance optimizations
 
-Running antivirus scans on your device is crucial for maintaining security, but it's important to balance this with the impact on device performance. Naturally, running a full scan on a device with extensive and complex content results in higher system resource usage and longer completion times.
+Antivirus scans are crucial for security, but they can affect device performance. A full scan on a device with large or complex content uses more system resources and takes longer to finish.
 
-Various antivirus settings and configurations can influence both performance and protection levels. To enhance the performance of Microsoft Defender for Endpoint on Linux during antivirus scans, consider adjusting the following settings and switches:
+You can adjust settings to balance performance and protection. To improve scan performance in Microsoft Defender for Endpoint on Linux, consider changing the following settings:
 
 |Flag|Description|
 |--|--|
-|**Scan after definitions update**|This setting determines whether to start a process scan after new security intelligence updates are downloaded on the device. When enabled, it initiates an antivirus scan on the device's active processes.|
-|**Scan archives (on-demand antivirus scans only)**|This setting specifies whether to scan archives (such as *.zip*, *.rar*, *.7z*, etc.) during on-demand antivirus scans. |
-|**Maximum on-demand scan threads**|This setting controls how many threads are used for on-demand scans, impacting both CPU usage and the scan's duration.|
+|**Scan after definitions update**|Controls whether a process scan runs after new security updates download to the device. When enabled, it scans active processes.|
+|**Scan archives (on-demand antivirus scans only)**|Controls whether to scan archive files (such as *.zip*, *.rar*, *.7z*) during on-demand scans. |
+|**Maximum on-demand scan threads**|Sets how many threads run on-demand scans. More threads use more CPU but finish faster.|
 
 For detailed instructions on configuring scan-after-definition-update, archive scanning, and maximum on-demand scan threads using CLI or managed JSON, see [Configure security settings in Microsoft Defender for Endpoint on Linux](./linux-preferences.md#antivirus-engine-preferences).
 
 ## Best practices
 
-Starting from version 101.23062.0001, Defender for Endpoint on Linux operates in passive mode by default, meaning real-time protection (RTP) is turned off. In this mode, it's recommended to use scheduled scans as needed to ensure the system is periodically protected.
+Starting from version 101.23062.0001, Defender for Endpoint on Linux operates in passive mode by default, meaning real-time protection (RTP) is turned off. In passive mode, it's recommended to use scheduled scans as needed to ensure the system is periodically protected.
  
 After installing Defender for Endpoint on Linux, it's a good practice to run a full scan (or a quick scan) to help identify and remediate any existing threats on the system.
  

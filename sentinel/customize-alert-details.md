@@ -5,13 +5,13 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security analyst, I want to customize alert details in my analytics rules so that I can ensure alerts are more relevant and actionable based on specific query results.
 
@@ -27,10 +27,10 @@ With the **alert details** feature, you can override the name, description, seve
 
 - Create custom, variable names and descriptions for your alerts. You can select fields in your alert's query output whose contents can be included in the name or description of each instance of the alert. If the selected field has no value in a given instance, the alert details for that instance will revert to the defaults specified on the **General** page of the analytics rule wizard.
 
-- Customize the severity, tactics, and other properties of a given instance of an alert (see the full list of properties below) with the values of any relevant fields from the query output. If the selected fields are empty or have values that don't match the field data type, the respective alert properties will revert to their defaults (for tactics and severity, the values specified on the **General** page of the analytics rule wizard).
+- Customize the severity, tactics, and other properties of a given instance of an alert (see the alert details properties table in this article) with the values of any relevant fields from the query output. If the selected fields are empty or have values that don't match the field data type, the respective alert properties will revert to their defaults (for tactics and severity, the values specified on the **General** page of the analytics rule wizard).
 
 > [!IMPORTANT]
-> - Some alert details' customizability (see those so indicated below) are currently in **PREVIEW**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
+> - Some alert details' customizability (see the preview-labeled properties in the alert details properties table in this article) are currently in **PREVIEW**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 > - [!INCLUDE [unified-soc-preview-without-alert](includes/unified-soc-preview-without-alert.md)]
 
 Use the following procedure to customize alert details. These steps are part of the [Microsoft Sentinel analytics rule creation wizard](detect-threats-custom.md), but they're addressed here independently to address the scenario of adding or changing alert details in an existing analytics rule.
@@ -112,7 +112,7 @@ The following limits apply when you customize alert details:
 
 ## Next steps
 
-In this document, you learned how to customize alert details in Microsoft Sentinel analytics rules. To learn more about alert enrichment, analytics rules, and entities in Microsoft Sentinel, see these related articles:
+For more information about alert enrichment, analytics rules, and entities in Microsoft Sentinel, see these articles:
 
 - Explore the other ways to enrich your alerts:
     - [Map data fields to entities in Microsoft Sentinel](map-data-fields-to-entities.md)

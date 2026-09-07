@@ -1,6 +1,31 @@
 {
   "redirections": [
     {
+      "source_path": "defender-endpoint/defender-endpoint-exclusions-reference.md",
+      "redirect_url": "/defender-endpoint/defender-endpoint-exclusions-configuration-reference",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/manage-automation-folder-exclusions.md",
+      "redirect_url": "/defender-endpoint/automation-folder-exclusions-configure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/manage-security-policies.md",
+      "redirect_url": "/defender-endpoint/endpoint-security-policies-configure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/common-exclusion-mistakes-microsoft-defender-antivirus.md",
+      "redirect_url": "/defender-endpoint/defender-endpoint-exclusions-common-mistakes",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/microsoft-defender-antivirus-on-windows-server.md",
+      "redirect_url": "/defender-endpoint/microsoft-defender-antivirus-windows-server-configure",
+      "redirect_document_id": true
+    },
+    {
       "source_path": "defender-endpoint/get-started-partner-integration.md",
       "redirect_url": "https://partner.microsoft.com",
       "redirect_document_id": false
@@ -82,7 +107,7 @@
     },
     {
       "source_path": "defender-endpoint/defender-endpoint-antivirus-exclusions.md",
-      "redirect_url": "/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions",
+      "redirect_url": "/defender-endpoint/defender-endpoint-exclusions-overview",
       "redirect_document_id": false
     },
     {
@@ -102,7 +127,7 @@
     },
     {
       "source_path": "defender-endpoint/submissions-suppressions-exclusions.md",
-      "redirect_url": "/defender-endpoint/navigate-defender-endpoint-antivirus-exclusions",
+      "redirect_url": "/defender-endpoint/defender-endpoint-exclusions-overview",
       "redirect_document_id": false
     },
     {
@@ -198,6 +223,46 @@
     {
       "source_path": "defender-endpoint/onboard-windows-client.md",
       "redirect_url": "/defender-endpoint/onboard-client",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/configure-exclusions-microsoft-defender-antivirus.md",
+      "redirect_url": "/defender-endpoint/microsoft-defender-antivirus-exclusions-configure",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/configure-extension-file-exclusions-microsoft-defender-antivirus.md",
+      "redirect_url": "/defender-endpoint/microsoft-defender-antivirus-exclusions-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/configure-process-opened-file-exclusions-microsoft-defender-antivirus.md",
+      "redirect_url": "/defender-endpoint/microsoft-defender-antivirus-exclusions-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md",
+      "redirect_url": "/defender-endpoint/microsoft-defender-antivirus-exclusions-overview#contextual-exclusions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/navigate-defender-endpoint-antivirus-exclusions.md",
+      "redirect_url": "/defender-endpoint/defender-endpoint-exclusions-overview",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/configure-server-exclusions-microsoft-defender-antivirus.md",
+      "redirect_url": "/defender-endpoint/microsoft-defender-antivirus-exclusions-windows-server",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "defender-endpoint/managing-exclusions.md",
+      "redirect_url": "/defender-endpoint/defender-endpoint-exclusions-configuration-reference",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "defender-endpoint/isolation-exclusions.md",
+      "redirect_url": "/defender-endpoint/network-isolation-exclusions",
       "redirect_document_id": true
     },
     {

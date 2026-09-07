@@ -5,9 +5,9 @@ ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/11/2026
+ms.date: 07/02/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -24,7 +24,7 @@ In this article, you learn how to review security initiatives so that your secur
 <a name="ot-security-initiative"></a>
 ## Review the OT Security initiative
 
-The **OT Security** initiative improves your OT site security posture by monitoring and protecting OT environments in the organization, and employing network layer monitoring. This initiative identifies devices and ensures that systems are working correctly, and data is protected.
+The **OT Security** initiative improves your OT site security posture by monitoring and protecting OT environments in the organization, and employing network layer monitoring. The **OT Security** initiative identifies devices and ensures that systems are working correctly, and data is protected.
 
 Your security teams can use the **OT Security** initiative to:
 
@@ -34,7 +34,7 @@ Your security teams can use the **OT Security** initiative to:
 <a name="enterprise-iot-security-initiative"></a>
 ## Review the Enterprise IoT Security initiative
 
-The **Enterprise IoT Security** initiative allows you to identify unmanaged IoT devices and enhance your organization's security. With continuous monitoring, vulnerability assessments, and tailored recommendations specifically designed for enterprise IoT devices, you gain comprehensive visibility into the risks posed by these devices. This initiative not only helps you understand the potential threats but also strengthens your organization's resilience in mitigating them.
+The **Enterprise IoT Security** initiative allows you to identify unmanaged IoT devices and enhance your organization's security. With continuous monitoring, vulnerability assessments, and tailored recommendations specifically designed for enterprise IoT devices, you gain comprehensive visibility into the risks posed by these devices. The **Enterprise IoT Security** initiative not only helps you understand the potential threats but also strengthens your organization's resilience in mitigating them.
 
 Review the full [security initiatives catalog](/security-exposure-management/initiatives-list).
 
@@ -61,10 +61,11 @@ If the **More data is required to support this initiative** section is displayed
 
 1. Select **create new sites** to [set up sites](set-up-sites.md).
 
-## Review initiatives
+<a name="review-initiatives"></a>
+## Review OT and Enterprise IoT security initiatives in the Defender portal
 
 1. Follow the procedure to [open the Initiatives page and review an initiative](/security-exposure-management/initiatives#view-initiatives-page).
-1. For the **OT Security** initiative, if you haven't yet onboarded Defender for IoT and set up sites, the **More data is required to support the OT Security initiative** section is displayed. In this case, see the [prerequisites for the OT Security initiative](#prerequisites-for-ot-security-initiative).
+1. For the **OT Security** initiative, if you haven't yet onboarded Defender for IoT and set up sites, the **More data is required to support the OT Security initiative** section is displayed. If this section is displayed, see the [prerequisites for the OT Security initiative](#prerequisites-for-ot-security-initiative).
 
 1. Review the data in the initiative page, including the initiative score, top metrics, and more (learn more about [security exposure management initiatives](/security-exposure-management/exposure-insights-overview)). For example, this **OT Security** initiative page shows an initiative score of 83%, and shows that 61.9% of the detected OT devices are protected.
 

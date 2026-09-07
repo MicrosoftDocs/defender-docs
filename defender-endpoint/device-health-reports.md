@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-ms.date: 06/17/2026
+ms.date: 07/03/2026
 ms.collection: 
 - m365-security
 - tier2
@@ -14,7 +14,7 @@ ms.subservice: ngp
 ms.reviewer: mkaminska
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 
 ai-usage: ai-assisted
 ---
@@ -25,13 +25,13 @@ ai-usage: ai-assisted
 
 
 
-The Device Health report provides information about the devices in your organization. The report includes trending information showing the sensor health state, antivirus status, OS platforms, Windows 10 versions, and Microsoft Defender Antivirus update versions.
+The Device Health report provides information about the devices in your organization. The Device Health report includes trending information showing the sensor health state, antivirus status, OS platforms, Windows 10 versions, and Microsoft Defender Antivirus update versions.
 
 > [!IMPORTANT]
 > For Windows Server 2012 R2 and Windows Server 2016 to appear in device health reports, these devices must be onboarded using the modern unified solution package. For more information, see [New functionality in the modern unified solution for Windows Server 2012 R2 and 2016](onboard-server.md#functionality-in-the-modern-unified-solution-for-windows-server-2016-and-windows-server-2012-r2).
 
 In the Microsoft Defender portal navigation panel, select **Reports**, and then open **Device health and compliance**.
-The Device health and compliance dashboard is structured in two tabs:
+The **Device health and compliance** dashboard in the Microsoft Defender portal is structured in two tabs:
 
 - The [**Sensor health & OS** tab](device-health-sensor-health-os.md#sensor-health--os-tab) provides general operating system information, divided into three cards that display the following device attributes:
   - [Sensor health card](device-health-sensor-health-os.md#sensor-health-card)
@@ -50,7 +50,7 @@ The Device health and compliance dashboard is structured in two tabs:
 
 ## Report access permissions
 
-To access the Device health and antivirus compliance report in the Microsoft Defender portal, the following permissions are required:
+To access the Device Health report (the **Device health and compliance** dashboard) in the Microsoft Defender portal, the following permissions are required:
 
 | Permission name | Permission type |
 |:---|:---|
@@ -96,6 +96,8 @@ To assign the View Data - Threat and vulnerability management (TVM) permission f
 > You can use the information gathered using Performance analyzer to better assess performance issues and apply remediation actions. 
 > See: [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 >
+
+### See also
 
 - [Create and manage roles for role-based access control](user-roles.md).
 - [Export device antivirus health details API methods and properties](api/device-health-api-methods-properties.md)

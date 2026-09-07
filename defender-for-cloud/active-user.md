@@ -2,22 +2,23 @@
 title: Assign a recommendation to an active user
 description: Learn how to assign recommendations to active users in Defender for Cloud to enhance security and streamline remediation processes.
 ms.topic: how-to
-ms.date: 05/24/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to assign recommendations to Active Users in Defender for Cloud to enhance security and streamline remediation processes.
 ai-usage: ai-assisted
 ---
 
 # Assign a recommendation to an active user
 
-Microsoft Defender for Cloud has an active user feature that helps security administrators identify the most active users who handle remediation recommendations. To secure cloud resources, security administrators must monitor and address potential threats and their associated recommendations.
+Microsoft Defender for Cloud has an active user feature. It helps security admins find the users who most often fix recommendations. To keep cloud resources safe, admins need to track and address potential threats and related recommendations.
 
-The active user feature suggests up to three potential active users. Defender for Cloud makes suggestions based on the users' control plane activities on the specific resource, its related resource group, or the associated subscription. This feature improves the speed and efficiency of the remediation process and strengthens overall security posture.
+The active user feature suggests up to three users. Defender for Cloud bases its suggestions on each user's control plane activity on the resource, its resource group, or the subscription. This feature speeds up fixes and strengthens your security posture.
 
-Security administrators can directly assign the recommendation to the most appropriate user from the suggested active user list. The assigned user receives a notification and a due date for remediation, and no one needs to determine responsibility. This approach streamlines the workflow and saves time for security teams.
+Admins can assign the recommendation to the best user from the suggested list. That user gets a notification and a due date, so no one has to figure out who is responsible. This approach saves time for security teams.
 
 ## Prerequisites
 
-Before you assign recommendations to active users, make sure you meet the following requirements:
+Before you start, make sure you meet these requirements:
 
 - [Enable the Defender for Cloud Security Posture Management (Defender CSPM) plan](tutorial-enable-cspm-plan.md).
 
@@ -42,7 +43,7 @@ To assign a recommendation to an active user:
 
 1. Select a recommendation that has a suggested owner.
 
-1. In the **Recommendation owner and set due date** section, Defender for Cloud suggests the top active user for the affected resource.
+1. In the **Recommendation owner and set due date** section, find the top suggested active user for the resource.
 
     :::image type="content" source="media/active-user/suggested-user.png" alt-text="Screenshot that shows the top suggested active user on the resource." lightbox="media/active-user/suggested-user.png":::
 
@@ -66,7 +67,7 @@ To assign a recommendation to an active user:
 
 1. Select **Create**.
 
-If you set an email notification, the active user receives an email with recommendation details and a link to that recommendation in Defender for Cloud.
+If you set an email notification, the user gets an email. The email includes the recommendation details and a link to view it in Defender for Cloud.
 
 ## Next steps
 

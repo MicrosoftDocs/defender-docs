@@ -5,7 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/24/2026
+ms.date: 07/02/2026
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 # Customer intent: As a Microsoft Defender Portal administrator or subscription owner, I want to configure log table tiers and data retention settings to optimize security operations needs and cost efficiency.
 ---
 
@@ -46,9 +48,9 @@ You can retain data in Microsoft Sentinel in one of two tiers:
 
 * **XDR data**: By default, Microsoft Defender XDR threat hunting data is always available in the Analytics tier for 30 days. You can extend retention of this data in the Analytics tier up to 90 days, which incurs ingestion costs, while storage remains free. Extending retention beyond 90 days in the Analytics tier also incurs storage costs. You can also ingest exclusively into the Data Lake tier, but the data remains available in the Analytics tier for 30 days. Ingesting XDR data directly into the Data Lake tier is more cost-effective, but it involves ingestion, storage, and processing costs. In this option, customers still get 30 days' worth of data in the Analytics tier at no additional cost.
 
-For more information about the differences between these two retention types, see [Compare the analytics and data lake tiers](#compare-the-analytics-and-data-lake-tiers).
+For more information about the differences between the Analytics tier and the Data Lake tier, see [Compare the analytics and data lake tiers](#compare-the-analytics-and-data-lake-tiers).
 
-This diagram shows the retention components of the analytics, data lake, and XDR default tiers, and which table types apply to each tier:
+The following diagram illustrates the retention components of the Analytics, Data Lake, and XDR default tiers, and the table types that apply to each tier:
 
 :::image type="content" source="media/manage-data-overview/tiers-retention-defender-portal.png" lightbox="media/manage-data-overview/tiers-retention-defender-portal.png" alt-text="Diagram that depicts the analytics and data lake tiers in the Microsoft Defender portal.":::
 
@@ -121,7 +123,10 @@ If you don't enable the Microsoft Sentinel XDR connector, XDR tables aren't auto
 
 You can choose to ingest supported XDR tables exclusively into the Data Lake tier by selecting the **Data Lake tier** option when configuring retention settings. For more information, see [Configure data retention and tiering](configure-data-connector.md?tabs=defender-portal#configure-data-retention-and-tiering).
 
-Stop ingesting data into the Analytics tier by resetting analytics retention and total retention to the default 30 days. This action disables the connector in the Azure portal.
+> [!WARNING]
+> Resetting analytics retention and total retention to the default 30 days disables the connector in the Azure portal.
+
+To stop ingesting data into the Analytics tier, reset analytics retention and total retention to the default 30 days.
 
 For more information about managing your tables and data, see [Manage your existing tables and data](manage-table-tiers-retention.md).
 

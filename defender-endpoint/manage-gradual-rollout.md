@@ -11,14 +11,14 @@ ms.collection:
 - tier2
 ms.topic: how-to
 ms.subservice: ngp
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender Antivirus
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Manage the gradual rollout process for Microsoft Defender updates
@@ -38,6 +38,7 @@ Updates are released monthly using a gradual release process. The gradual releas
 
 ## Prerequisites
 
+Make sure your environment meets the following requirements before configuring the gradual rollout process for Microsoft Defender updates.
 
 ### Supported operating systems
 
@@ -87,7 +88,7 @@ The following update channels are available:
 
 ### Update channels for security intelligence updates
 
-You can also assign a machine to a channel to define the cadence in which it receives security intelligence updates (SIUs), formerly referred to as signature, definition, or daily updates. Unlike the monthly process, this gradual release cycle occurs multiple times a day.
+You can also assign a machine to a channel to define the cadence in which it receives security intelligence updates, formerly referred to as signature, definition, or daily updates. Unlike the monthly process, this gradual release cycle occurs multiple times a day.
 
 |Channel name|Description|Application|
 |---|---|---|
@@ -126,7 +127,7 @@ To create your own custom gradual rollout process for monthly updates, you can u
 - Microsoft Intune
 - PowerShell
 
-For details on how to use these tools, see [Create a custom gradual rollout process for Microsoft Defender updates](configure-updates.md).
+For details on how to use Group Policy, Microsoft Intune, and PowerShell, see [Create a custom gradual rollout process for Microsoft Defender updates](configure-updates.md).
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:

@@ -122,7 +122,7 @@ You can use policies to help you monitor trends, see security threats, and gener
     1. On the **Log collectors** tab, configure the log collector.
 
 **Migration recommendation**  
-We recommend using Defender for Cloud Apps discovery in parallel with your current CASB solution. Start by configuring automatic firewall log upload to Defender for Cloud Apps [log collectors](discovery-docker.md). If you use Defender for Endpoint, in Microsoft Defender XDR, make sure you [turn on the option](mde-integration.md#how-to-integrate-microsoft-defender-for-endpoint-with-defender-for-cloud-apps) to forward signals to Defender for Cloud Apps. Configuring cloud discovery won't conflict with the log collection of your current CASB solution.
+We recommend using Defender for Cloud Apps discovery in parallel with your current CASB solution. Start by configuring automatic firewall log upload to Defender for Cloud Apps [log collectors](discovery-docker.md). If you use Defender for Endpoint, in the Defender portal, make sure you [turn on the option](mde-integration.md#how-to-integrate-microsoft-defender-for-endpoint-with-defender-for-cloud-apps) to forward signals to Defender for Cloud Apps. Configuring cloud discovery won't conflict with the log collection of your current CASB solution.
 
 ### To create a snapshot cloud discovery report
 

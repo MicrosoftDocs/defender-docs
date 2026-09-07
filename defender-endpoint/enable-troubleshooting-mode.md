@@ -79,7 +79,7 @@ You can query all troubleshooting mode events in advanced hunting.
 
       |Semester/Redstone|OS version|Release|
       |:---|:---|:---|
-      | 21H2/SV1|`22000.593` or later|[KB5011563: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5019275) |
+      | 21H2/SV1|`22000.593` or later|[KB5011563: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011563) |
       | 20H1/20H2/21H1|`19042.1620` or later<br/> `19041.1620` or later<br/> `19043.1620` or later|[KB5011543: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011543) |
       | Windows Server 2022 or later|`20348.617` or later|[KB5011558: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011558) |
       | Windows Server 2019 (RS5)|`17763.2746` or later |[KB5011551: Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB5011551) |
@@ -182,6 +182,5 @@ DeviceEvents
 - [Performance analyzer for Microsoft Defender Antivirus](tune-performance-defender-antivirus.md).
 - [Troubleshooting mode scenarios](troubleshooting-mode-scenarios.md)
 - [Protect security settings with tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md)
-
 
 

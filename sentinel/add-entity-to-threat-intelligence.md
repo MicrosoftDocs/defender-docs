@@ -6,11 +6,11 @@ ms.author: pauloliveria
 author: poliveria  
 ms.reviewer: yoninave
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 #Customer intent: As a security engineer, I want to add entities to threat intelligence during incident investigations so that my team can track and manage indicators of compromise effectively.
@@ -55,7 +55,7 @@ Perform the following steps to add an entity to threat intelligence from the Inc
 
 # [Investigation graph](#tab/cases)
 
-The [investigation graph](investigate-cases.md) is a visual, intuitive tool that presents connections and patterns and enables your analysts to ask the right questions and follow leads. Use it to add entities to your threat intelligence indicator lists by making them available across your workspace.
+The [investigation graph](investigate-cases.md) is a visual, intuitive tool that presents connections and patterns and enables your analysts to ask the right questions and follow leads. Use the investigation graph to add entities to your threat intelligence indicator lists by making them available across your workspace.
 
 1. On the Microsoft Sentinel menu, select **Incidents** from the **Threat management** section.
 
@@ -136,7 +136,7 @@ After you select **Add to TI** from either the Incident details page or the inve
 
 1. When all the fields are filled in to your satisfaction, select **Apply**. A message appears in the upper-right corner to confirm that your indicator was created.
 
-1. The entity is added as threat intelligence in your workspace. You can find it [in threat intelligence management interface](work-with-threat-indicators.md#view-your-threat-intelligence-in-the-management-interface). You can also query it [using the ThreatIntelIndicators table](work-with-threat-indicators.md#find-and-view-threat-intelligence-with-queries).
+1. The entity is added as threat intelligence in your workspace. You can find it in the [threat intelligence management interface](work-with-threat-indicators.md#view-your-threat-intelligence-in-the-management-interface). You can also query it by [finding and viewing threat intelligence with queries](work-with-threat-indicators.md#find-and-view-threat-intelligence-with-queries).
 
 ## Related content
 

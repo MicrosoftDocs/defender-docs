@@ -8,11 +8,11 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - sfi-ga-nochange
 description: "Admins can configure whether users can report malicious messages or calls in Microsoft Teams."
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -77,7 +77,7 @@ To view or configure user reporting in the Teams admin center, you need to be a 
 
 2. On the **Settings & policies** page, select either the **Global (Org-wide) default settings** tab for all users or **Custom policies for users & groups** for specific users.
 
-3. On the tab, go to the **Messaging** section and select **Messaging**. If you selected the **Custom policies for users & groups** tab in the previous step, do one of the following steps to edit the specific policy:
+3. On the selected tab (**Global (Org-wide) default settings** or **Custom policies for users & groups**), go to the **Messaging** section and select **Messaging**. If you selected the **Custom policies for users & groups** tab in the previous step, do one of the following steps to edit the specific policy:
    - Click on the policy name in the **Name** column.
    - Click anywhere in the row other than the **Name** column, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Edit** action that appears.
 
@@ -132,9 +132,9 @@ For more information about user reported items settings in the Defender portal, 
 
 ### Report malicious messages in Teams
 
-To report a malicious message in Teams, perform the following steps:
+Follow these steps to report a malicious message in Teams:
 
-1. In the Microsoft Teams client, hover over the malicious message without selecting it, and then select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> **Report this message**.
+1. In the Microsoft Teams client, hover over the malicious message without selecting it, then select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> **Report this message**.
 
    :::image type="content" source="media/submissions-user-report-message-in-teams-client-click-path.png" alt-text="Screenshot of the select path to report a message in the Microsoft Teams client." lightbox="media/submissions-user-report-message-in-teams-client-click-path.png":::
 
@@ -149,17 +149,17 @@ To report a malicious message in Teams, perform the following steps:
 
 ### Report non-malicious messages in Teams
 
-To report a non-malicious message in Teams, use the following steps:
+Follow these steps to report a non-malicious message in Teams:
 
-1. In the Teams chat or channel, hover over the message without selecting it, and then select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> **Report this message**.
+1. In the Teams chat or channel, hover over the message without selecting it, then select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> **Report this message**.
 
-2. In the **report this message** dialog that opens, select **Not a security concern**, and then select **Report**.
+2. In the **Report this message** dialog that opens, select **Not a security concern**, then select **Report**.
 
 ### Report calls in Teams
 
 Currently, only completed or missed one-to-one calls are supported.
 
-1. In the Microsoft Teams client, go to the call history view and then select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> **Report call**.
+1. In the Microsoft Teams client, go to the call history view and select :::image type="icon" source="media/defender-portal-icon-more-actions.png" border="false"::: **More options** \> **Report call**.
 
    :::image type="content" source="media/submissions-user-report-calls-in-teams-client-click-path.png" alt-text="Screenshot of the select path to report a call in the Microsoft Teams client." lightbox="media/submissions-user-report-calls-in-teams-client-click-path.png":::
 
@@ -172,6 +172,8 @@ Currently, only completed or missed one-to-one calls are supported.
 ## What happens after a user reports items from Teams?
 
 What happens to a user reported Teams item depends on the settings in the **Reported items destinations** section on the **User reported settings** page at <https://security.microsoft.com/securitysettings/userSubmission>:
+
+User reporting in Teams is supported only for users with an online Teams mailbox. The reporting mailbox configured in **User reported settings** must also be an Exchange Online mailbox. On-premises mailboxes aren't supported in either scenario.
 
 - **Send the reported items to** \> **Microsoft and my reporting mailbox**: The default user reporting mailbox is the Exchange Online mailbox of the global admin. The value for older Microsoft 365 organizations is unchanged.
 - **Send the reported items to** \> **Microsoft only**
@@ -192,3 +194,7 @@ For more information, see [User reported settings](submissions-user-reported-mes
 ## View and triage user reported items in Teams
 
 Information about user reported items in Teams is available on the **User reported** tab on the **Submissions** page at <https://security.microsoft.com/reportsubmission?viewid=user>. For more information, see [View user reported items to Microsoft](submissions-admin.md#view-user-reported-messages-to-microsoft).
+
+## Related content
+
+[Use the Submissions page to submit suspected spam, phish, URLs, legitimate email getting blocked, and email attachments to Microsoft](submissions-admin.md)

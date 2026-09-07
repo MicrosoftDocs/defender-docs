@@ -12,13 +12,13 @@ ms.collection:
 - mde-linux
 ms.topic: how-to
 ms.subservice: linux
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Use eBPF-based sensor for Microsoft Defender for Endpoint on Linux
 
@@ -76,13 +76,13 @@ The eBPF sensor is automatically enabled for all customers by default for agent 
 
 :::image type="content" source="/defender/media/defender-endpoint/ebpf-subsystem-linux.png" alt-text="ebpf subsystem highlight in the mdatp health command" lightbox="/defender/media/defender-endpoint/ebpf-subsystem-linux.png":::
 
-In case you want to manually disable eBPF then you can run the following command:
+To enable or disable the eBPF supplementary event provider, run the following command:
 
 ```bash
 sudo mdatp config ebpf-supplementary-event-provider --value [enabled/disabled]
 ```
 
-You can also update the mdatp_managed.json file:
+Alternatively, you can disable the eBPF supplementary event provider by setting `ebpfSupplementaryEventProvider` to `disabled` in the mdatp_managed.json file:
 
 ```JSON
 {
@@ -111,9 +111,9 @@ You can also check the status of eBPF (enabled/disabled) on your linux endpoints
 
 ## Immutable mode of AuditD
 
-For customers using AuditD in immutable mode, a reboot is required post enablement of eBPF in order to clear the audit rules added by Microsoft Defender for Endpoint. This requirement is a limitation in immutable mode of AuditD, which freezes the rules file and prohibits editing/overwriting. This issue is resolved with the reboot.
+For customers using AuditD in immutable mode, a reboot is required post enablement of eBPF in order to clear the audit rules added by Microsoft Defender for Endpoint. This requirement is a limitation in immutable mode of AuditD, which freezes the rules file and prohibits editing/overwriting. Rebooting clears the Microsoft Defender for Endpoint audit rules that can't be removed while AuditD is in immutable mode.
 
-Post reboot, run the following command to check if audit rules were cleared:
+After the reboot, list the current AuditD rules to confirm that the Defender for Endpoint audit rules were successfully cleared:
 
 ```bash
 % sudo auditctl -l
@@ -129,7 +129,7 @@ The output of previous command should show no rules or any user added rules. In 
 
 ### Troubleshooting and Diagnostics
 
-You can check the agent health status by running the `mdatp` health command. Make sure that the eBPF sensor for Defender for Endpoint on Linux is supported by checking the current kernel version by using the following command line:
+You can check the agent health status by running the `mdatp` health command. To verify that your kernel version meets the eBPF sensor requirements listed in [System prerequisites](#system-prerequisites), check the current kernel version by running the following command:
 
 ```bash
 uname -a
@@ -139,7 +139,7 @@ uname -a
 
 Be aware of the following known issues when using the eBPF sensor on Linux:
 
-1. Enabling eBPF on RHEL 8.1 version with SAP might result in kernel panic. To mitigate this issue, you can take one of the following steps:
+1. **Warning:** On RHEL 8.1 with SAP, enabling eBPF can cause a kernel panic. Before enabling eBPF on this configuration, take one of the following mitigation steps:
 
    - Use a distro version higher than RHEL 8.1.
    - Switch to AuditD mode if you need to use RHEL 8.1 version.
@@ -173,8 +173,9 @@ If you see increased resource consumption by Microsoft Defender on your endpoint
 sudo mdatp diagnostic  ebpf-statistics
 ```
 
+The following sample output shows the eBPF statistics collected over a 20-second monitoring interval, including the top file paths, initiator processes, and system call IDs:
+
 ```console
-Output
 Monitor 20 seconds
 Top file paths:
 /var/log/microsoft/mdatp/microsoft_defender.log : 10
@@ -198,7 +199,7 @@ Top syscall ids:
 87 : 3
 ```
 
-In the previous output, you can see that stress-ng is the top process generating large number of events and might result into performance issues. Most likely stress-ng is generating the system call with ID 82. You can create a ticket with Microsoft to get this process excluded.
+In the `mdatp diagnostic ebpf-statistics` output, stress-ng is the top process generating a large number of events and might result in performance issues. Most likely stress-ng is generating the system call with ID 82. You can create a ticket with Microsoft to get this process excluded.
 
 Exclusions applied to AuditD can't be migrated or copied to eBPF. Common concerns such as noisy logs, kernel panic, noisy syscalls are already taken care of by eBPF internally. In case you want to add any further exclusions, then reach out to Microsoft to get the necessary exclusions applied.
 

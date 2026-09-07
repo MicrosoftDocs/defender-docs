@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to ingest diagnostic data from Azure services to Microsoft Sentinel so that analysts can monitor logs for enhanced threat detection and response.
 
@@ -15,9 +15,9 @@ ms.custom: msecd-doc-authoring-1014
 
 # Connect Microsoft Sentinel to other Microsoft services by using diagnostic settings-based connections
 
-This article describes how to connect to Microsoft Sentinel by using diagnostic settings connections. Microsoft Sentinel uses the Azure foundation to provide built-in, service-to-service support for data ingestion from many Azure and Microsoft 365 services, Amazon Web Services, and various Windows Server services. There are a few different methods through which these connections are made.
+This article describes how to connect to Microsoft Sentinel by using diagnostic settings connections. Microsoft Sentinel uses the Azure foundation to provide built-in, service-to-service support for data ingestion from many Azure and Microsoft 365 services, Amazon Web Services, and various Windows Server services. There are a few different methods through which these diagnostic settings-based connections are made.
 
-This article presents information that is common to the Microsoft Sentinel data connectors that use diagnostic settings-based connections. Some of these types of connectors are managed by using Azure Policy. For diagnostic settings-based connectors that aren't managed by Azure Policy, use the standalone instructions.
+This article presents information that is common to the Microsoft Sentinel data connectors that use diagnostic settings-based connections. Some diagnostic settings-based connectors are managed by using Azure Policy. For diagnostic settings-based connectors that aren't managed by Azure Policy, use the instructions in [Connect via a standalone diagnostic settings-based connector](#connect-via-a-standalone-diagnostic-settings-based-connector).
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
 

@@ -9,17 +9,17 @@ ms.collection:
   - m365-security
   - tier2
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-ga-nochange
 description: Admins can learn how to configure connection filtering in Microsoft 365 to allow or block emails from email servers.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 07/27/2026
+ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
-ai-usage: ai-assisted
 ---
 
 # Configure connection filtering in cloud organizations
@@ -34,7 +34,7 @@ In all organizations with cloud mailboxes, connection filtering via the default 
 
 - **Safe list**: The _safe list_ in the default connection filter policy is a dynamic allowlist that requires no customer configuration. Microsoft identifies these trusted email sources from subscriptions to various non-Microsoft lists. You enable or disable the use of the safe list; you can't configure the servers in the list. Spam filtering is skipped on incoming messages from the email servers on the safe list.
 
-This article describes how to configure the default connection filter policy in the Microsoft 365 Microsoft Defender portal or in Exchange Online PowerShell. For more information about how Microsoft 365 uses connection filtering is part of your organization's overall anti-spam settings, see [Anti-spam protection](anti-spam-protection-about.md).
+This article describes how to configure the default connection filter policy in the Microsoft 365 Microsoft Defender portal or in Exchange Online PowerShell. For more information about how connection filtering fits into your organization's overall anti-spam settings in Microsoft 365, see [Anti-spam protection](anti-spam-protection-about.md).
 
 > [!NOTE]
 > The IP Allow List, safe list, and the IP Block List are one part of your overall strategy to allow or block email in your organization. For more information, see [Create sender allowlists](create-safe-sender-lists-in-office-365.md) and [Create sender blocklists](create-block-sender-lists-in-office-365.md).
@@ -85,14 +85,14 @@ Use the following steps to modify the default connection filter policy in the Mi
 
    - **Connection filtering** section: Select **Edit connection filter policy**. In the flyout that opens, configure the following settings:
 
-     - **Always allow messages from the following IP addresses or address range**: This setting is the IP Allow List. Click in the box, enter a value, and then press the ENTER key or select the complete value displayed below the box. Valid values are:
+     - **Always allow messages from the following IP addresses or address range**: This setting is the IP Allow List. In the IP Allow List box, enter the IP address or address range and press **Enter**. The entry is added as a separate item (displayed as a gray box with an **X** icon). After confirming the entry appears, select **Save**. Valid values are:
        - Single IP: For example, 192.168.1.1.
        - IP range: For example, 192.168.0.1-192.168.0.254.
        - CIDR IP: For example, 192.168.0.1/25. Valid subnet mask values are /24 through /32. To skip spam filtering for /1 to /23, see [Skip spam filtering for a CIDR IP outside of the available range](#skip-spam-filtering-for-a-cidr-ip-outside-of-the-available-range).
 
        Repeat this step as many times as necessary. To remove an existing entry, select :::image type="icon" source="media/defender-portal-icon-remove-selection.png" border="false"::: next to the entry.
 
-   - **Always block messages from the following IP addresses or address range**: This setting is the IP Block List. Enter a single IP, IP range, or CIDR IP in the box as previously described in the **Always allow messages from the following IP addresses or address range** setting.
+   - **Always block messages from the following IP addresses or address range**: This setting is the IP Block List. Enter a single IP (for example, 192.168.1.1), IP range (for example, 192.168.0.1-192.168.0.254), or CIDR IP (for example, 192.168.0.1/25) in the box and press **Enter**. The entry is added as a separate item (displayed as a gray box with an **X** icon). After confirming the entry appears, select **Save**.
 
    - **Turn on safe list**: Enable or disable the use of the safe list that specifies known, good senders to skip spam filtering. To use the safe list, select the check box.
 
@@ -132,7 +132,7 @@ Select the default connection filter policy by clicking anywhere in the row othe
 
 ## Use PowerShell to modify the default connection filter policy
 
-In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the following syntax:
+In [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell), use the **Set-HostedConnectionFilterPolicy** cmdlet to configure the default connection filter policy, including IP allow and block lists:
 
 ```powershell
 Set-HostedConnectionFilterPolicy -Identity Default [-AdminDisplayName <"Optional Comment">] [-EnableSafeList <$true | $false>] [-IPAllowList <IPAddressOrRange1,IPAddressOrRange2...>] [-IPBlockList <IPAddressOrRange1,IPAddressOrRange2...>]
@@ -146,13 +146,13 @@ Set-HostedConnectionFilterPolicy -Identity Default [-AdminDisplayName <"Optional
 - To _add or remove_ IP addresses or address ranges without affecting other existing entries, use the following syntax: `@{Add="IPAddressOrRange1","IPAddressOrRange2",...,"IPAddressOrRangeN";Remove="IPAddressOrRange3","IPAddressOrRange4",...,"IPAddressOrRangeN"}`.
 - To empty the IP Allow List or IP Block List, use the value `$null`.
 
-This example configures the IP Allow List and the IP Block List with the specified IP addresses and address ranges.
+The following example overwrites the IP Allow List and the IP Block List in the default connection filter policy with the specified IP addresses and address ranges.
 
 ```powershell
 Set-HostedConnectionFilterPolicy -Identity Default -IPAllowList 192.168.1.10,192.168.1.23 -IPBlockList 10.10.10.0/25,172.17.17.0/24
 ```
 
-This example adds and removes the specified IP addresses and address ranges from the IP Allow List.
+The following example adds new IP addresses and address ranges to the existing IP Allow List and removes an old entry, without replacing the entire list.
 
 ```powershell
 Set-HostedConnectionFilterPolicy -Identity Default -IPAllowList @{Add="192.168.2.10","192.169.3.0/24","192.168.4.1-192.168.4.5";Remove="192.168.1.10"}
@@ -166,7 +166,7 @@ To verify you successfully modified the default connection filter policy, do any
 
 - On the **Anti-spam policies** page in the Microsoft Defender portal at <https://security.microsoft.com/antispam>, select **Connection filter policy (Default)** from the list by clicking anywhere in the row other than the check box next to the name, and verify the policy settings in the details flyout that opens.
 
-- In Exchange Online PowerShell, run the following command and verify the settings:
+- In Exchange Online PowerShell, run the following command to review the current settings of the default connection filter policy and verify your changes:
 
   ```powershell
   Get-HostedConnectionFilterPolicy -Identity Default
@@ -176,7 +176,7 @@ To verify you successfully modified the default connection filter policy, do any
 
 ## Other considerations for the IP Allow List
 
-The following sections identify other items that you need to know about when you configure the IP Allow List.
+This section covers [CIDR IP limitations](#skip-spam-filtering-for-a-cidr-ip-outside-of-the-available-range), [selective domain filtering](#skip-spam-filtering-on-selective-email-domains-from-the-same-source), and [scenarios where IP Allow List messages are still filtered](#scenarios-where-messages-from-sources-in-the-ip-allow-list-are-still-filtered).
 
 > [!NOTE]
 > All incoming messages are scanned for malware and high confidence phishing, regardless of whether the message source is in the IP Allow List.
@@ -185,7 +185,7 @@ The following sections identify other items that you need to know about when you
 
 The IP Allow List supports only CIDR IPs with a network mask of /24 to /32.
 
-To skip spam filtering on messages from source email servers in the /1 to /23 range, you can use Exchange mail flow rules (also known as transport rules). However, we don't recommend using mail flow rules. Messages are blocked if an IP address in the /1 to /23 CIDR IP range appears on any of Microsoft's proprietary blocklists or non-Microsoft blocklists.
+To skip spam filtering on messages from source email servers in the /1 to /23 range, you can [use Exchange mail flow rules (transport rules)](/exchange/security-and-compliance/mail-flow-rules/use-rules-to-set-scl). However, we don't recommend using mail flow rules. Messages are blocked if an IP address in the /1 to /23 CIDR IP range appears on any of Microsoft's proprietary blocklists or non-Microsoft blocklists.
 
 Now that you're fully aware of the potential issues, you can create a mail flow rule with the following settings (at a minimum) to ensure that messages from these IP addresses skip spam filtering:
 
@@ -207,10 +207,14 @@ For example, the source email server 192.168.1.25 sends email from the domains c
    - Rule action: **Modify the message properties** \> **Set the spam confidence level (SCL)** \> **0**.
    - Rule exception: **The sender** \> **domain is** \> fabrikam.com (only the domain or domains that you want to skip spam filtering).
 
+Adding the source IP address to the IP Allow List is supposed to skip spam filtering for all domains from that source. However, this bypass is an input, not a final decision. Like the **Bypass spam filtering** (SCL -1) action in a mail flow rule, the IP Allow List bypass is subject to [Secure by default](secure-by-default.md), which evaluates the request and might not honor it. Some messages from the source can still be filtered.
+
+The **Set the spam confidence level (SCL)** to **0** might no longer reliably return those domains to filtering, because the requested SCL value is an input, not a decision.
+
 ### Scenarios where messages from sources in the IP Allow List are still filtered
 
 > [!NOTE]
-> These scenarios apply to all environments: standalone, hybrid, multi-geo, and cross-forest. Filtering behavior is based on security checks (for example, malware detection, phishing protection, or mail flow rules, not on the deployment model.
+> These scenarios apply to all environments: standalone, hybrid, multi-geo, and cross-forest. Filtering behavior is based on security checks (for example, malware detection, phishing protection, or mail flow rules, not on the deployment model).
 
 Messages from an email server in your IP Allow List are still subject to spam filtering in the following scenarios:
 
@@ -222,3 +226,7 @@ If you encounter either of these scenarios, you can create a mail flow rule with
 
 - Rule condition: **Apply this rule if** \> **The sender** \> **IP address is in any of these ranges or exactly matches** \> (your IP address or addresses).
 - Rule action: **Modify the message properties** \> **Set the spam confidence level (SCL)** \> **Bypass spam filtering**.
+
+## Related content
+
+[Preset security policies in cloud organizations](preset-security-policies.md)

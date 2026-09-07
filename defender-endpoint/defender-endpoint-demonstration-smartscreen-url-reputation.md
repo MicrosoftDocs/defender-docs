@@ -30,7 +30,7 @@ Test how Microsoft Defender SmartScreen helps you identify phishing and malware 
 - Client devices must be running Windows 11 or Windows 10
 - Server devices must be running Windows Server 2008 R2 SP1, Windows Server 2012 R2 and later, or Azure Stack HCI OS, version 23H2 and later.
 - Microsoft Edge browser required
-- For more information, see [Microsoft Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview)
+- For more information, see [Microsoft Defender SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/)
 
 ## SmartScreen for Microsoft Edge URL scenario demonstrations
 
@@ -92,7 +92,7 @@ A benign page hosting a malicious advertisement
 
 ## See also
 
-[Microsoft Defender SmartScreen Documentation](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview)
+[Microsoft Defender SmartScreen Documentation](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/)
 
 [Microsoft Defender for Endpoint - demonstration scenarios](defender-endpoint-demonstrations.md)
 

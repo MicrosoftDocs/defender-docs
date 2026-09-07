@@ -1,14 +1,14 @@
 ---
 title: Configure delegated access with governance relationships for multitenant organizations
-description: Learn how to set up governance relationships for managing multiple tenants in Microsoft Defender.
+description: Configure governance relationships in the Microsoft Defender portal to delegate access across customer or organizational tenants for multitenant organizations and MSSPs.
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 08/07/2026
 
 #customer-intent: As a security administrator for a managed security service provider (MSSP), I want to configure delegated access to my customers' tenants through governance relationships, so that I can manage their security operations without needing full administrative access.
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure delegated access with governance relationships for multitenant organizations (preview)
@@ -20,11 +20,15 @@ This article explains how to configure governance relationships for multitenant 
 
 ## Overview
 
-Governance relationships enable governing tenants (the home tenants that manage access) to manage security operations across multiple customer tenants (the tenants that grant delegated access) with fine-grained role assignments. This capability supports multitenant organizations (MTOs) and managed security service providers (MSSPs) that need to provide security services across multiple Microsoft Entra tenants.
+A governance relationship is a directional connection between two Microsoft Entra tenants that enables a governing tenant (the home tenant that manages access) to manage security operations across multiple customer tenants (the tenants that grant delegated access) with fine-grained role assignments. This capability supports multitenant organizations (MTOs) and managed security service providers (MSSPs) that need to provide security services across multiple Microsoft Entra tenants.
 
-Governance relationships for Microsoft Defender use the same model as [Microsoft Entra ID](/entra/id-governance/tenant-governance/governance-relationships) for delegating administrative access, but extended to support Microsoft Defender XDR workloads. By configuring governance relationships for Microsoft Defender, you can assign specific security roles to groups in the governing tenant, allowing them to manage security incidents, alerts, and configurations in the governed tenant without granting full administrative access.
+Governance relationships for Microsoft Defender use the same model as [Microsoft Entra ID](/entra/id-governance/tenant-governance/governance-relationships) for delegating administrative access, but extended to support [Microsoft Defender XDR](/defender-xdr/microsoft-365-defender) (cross-domain threat detection and response) workloads. By configuring governance relationships for Microsoft Defender, you can assign specific security roles to groups in the governing tenant, allowing them to manage security incidents, alerts, and configurations in the governed tenant without granting full administrative access.
+
+Administrators continue to use their accounts in the governing tenant. Tenant Governance doesn't create local administrator accounts or Microsoft Entra B2B guest accounts in the governed tenant. Instead, security groups selected in the governance policy template are represented in the governed tenant as remote tenant groups. You can automate governance relationships and templates by using the [Tenant Governance APIs in Microsoft Graph](/graph/api/resources/tenantgovernanceservices-tenantgovernance-overview).
 
 ### Key concepts
+
+The following terms are used throughout this article:
 
 - **Governing tenant**: The home tenant that manages access to other tenants (also called *home tenant* or *managing tenant*)
 - **Governed tenant**: The customer tenant that grants access to the governing tenant (also called *target tenant* or *managed tenant*)
@@ -48,7 +52,7 @@ Permissions:
 
 ## Enable tenant governance settings
 
-Before you can configure delegated access, you must enable the governed tenant to receive governance invitations. This setting is disabled by default.
+Before you can configure delegated access, you must enable the governed tenant to receive governance invitations. The **Enable invitations** setting is disabled by default.
 
 In the governed tenant in the Microsoft Defender portal, go to **System** > **Permissions** > **Delegated Access**, and turn on the **Enable invitations** toggle.
 
@@ -117,7 +121,7 @@ The governed tenant initiates the relationship by sending an invitation to the g
 
 ### Step 2: Create and send access request from governing tenant
 
-After it receives the invitation, the governing tenant creates a relationship template that defines delegated access permissions.
+After the governing tenant receives the invitation, it creates a relationship template that defines delegated access permissions.
 
 1. In the governing tenant, sign in to the Microsoft Defender MTO portal.
 
@@ -163,6 +167,8 @@ After the approval is complete, users in the specified security groups receive p
 
 Security groups used in the relationship template are synchronized to the governed tenant as "remote tenant groups." You can assign these groups to Microsoft Sentinel roles in the governed tenant to enable multitenant management capabilities.
 You can assign these groups to Azure Resource Manager (ARM) resources to enable Microsoft Sentinel management capabilities.
+
+The Microsoft Sentinel Azure RBAC assignments described in this section grant management-plane access to the selected resources. They don't automatically grant data-plane access, such as permission to read Azure Storage blob data or Azure Key Vault secrets. Assign any required data-plane roles separately and follow least-privilege principles.
 
 Assigning Microsoft Sentinel roles enables multitenant management features including:
 

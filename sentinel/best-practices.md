@@ -58,7 +58,7 @@ More than ingesting alerts and logs from other sources, Microsoft Sentinel also 
 
 ## Create custom integration solutions (partners) 
 
-For partners who want to create custom solutions that integrate with Microsoft Sentinel, see [Best practices for partners integrating with Microsoft Sentinel](isv/partner-integrations.md).
+For partners who want to create custom solutions that integrate with Microsoft Sentinel, see [Build and publish Microsoft Sentinel SIEM solutions](isv/sentinel-integration-guide.md).
 
 ## Plan incident management and response process
 

@@ -10,14 +10,14 @@ ms.collection:
 - tier2
 - mde-edr
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ms.subservice: edr
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Investigate domains and URLs
 
@@ -58,9 +58,9 @@ The URL overview section lists the URL, a link to further details at whois, the 
 
 Displays the original URL (existing URL information), with the query parameters and the application-level protocol. The domain details section includes the full domain details, such as registration date, modification date, and registrant contact info.
 
-The page also shows the Microsoft verdict of the URL or domain, device prevalence, emails, and user clicks. In the device prevalence section, you can see the number of devices that communicated with the URL or domain in the last 30 days, and pivot to the first or last event in the device timeline right away. To investigate initial access or if there's still a malicious activity in your environment.
+The URL and domain page also shows the Microsoft verdict of the URL or domain, device prevalence, emails, and user clicks. In the device prevalence section, you can see the number of devices that communicated with the URL or domain in the last 30 days, and pivot to the first or last event in the device timeline right away. To investigate initial access or if there's still a malicious activity in your environment.
 
-### Incidents and alerts
+### Incidents and alerts overview
 
 The Incident and alerts section displays a bar chart of all active alerts in incidents over the past 180 days.
 
@@ -75,9 +75,11 @@ The Prevalence section provides the details on the prevalence of the URL within 
 <a name="incident-and-alerts"></a>
 ## Incidents and alerts
 
+Use the **Incidents and alerts** tab to review incidents associated with the URL or domain.
+
 ![Screenshot of the Incidents and alerts tab listing incidents associated with the URL or domain.](media/domain-incidents.png)
 
-The incident and alerts tab provides a list of incidents that are associated with the URL or domain. The table shown here is a filtered version of the incidents visible on the Incident queue screen, showing only incidents associated with the URL or domain, their severity, impacted assets and more.
+The incident and alerts tab provides a list of incidents that are associated with the URL or domain. The incidents table on the **Incidents and alerts** tab is a filtered version of the incidents visible on the Incident queue screen, showing only incidents associated with the URL or domain, their severity, impacted assets and more.
 
 The incidents and alerts tab can be adjusted to show more or less information, by selecting **Customize columns** from the action menu above the column headers. The number of items displayed can also be adjusted, by selecting items per page on the same menu.
 
@@ -86,7 +88,7 @@ The incidents and alerts tab can be adjusted to show more or less information, b
 
 ![Screenshot of the Devices tab showing the number of distinct devices that communicated with the URL or domain over time.](media/domain-device-overview.png)
 
-The Devices tab provides a chronological view of all the devices that were observed for a specific URL or a domain. The Devices tab includes a trend chart and a customizable table listing device details, such as risk level, domain, and more. The Devices tab also shows the first and last event times where the device interacted with the URL or domain, and the action type of this event. Using the menu next to the device name, you can quickly pivot to the device timeline to further investigate what happened before or after the event that involved this URL or domain.
+The Devices tab provides a chronological view of all the devices that were observed for a specific URL or a domain. The Devices tab includes a trend chart and a customizable table listing device details, such as risk level, domain, and more. The Devices tab also shows the first and last event times where the device interacted with the URL or domain, and the action type for each event. Using the menu next to the device name, you can quickly pivot to the device timeline to further investigate what happened before or after the event that involved this URL or domain.
 
 Although the default time period is the past 30 days, you can customize the time period from the drop-down available at the corner of the card. The shortest range available is for prevalence over the past day, while the longest range is over the past six months.
 

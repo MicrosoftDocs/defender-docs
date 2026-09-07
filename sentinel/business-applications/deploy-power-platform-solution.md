@@ -4,9 +4,9 @@ description: Deploy the Microsoft Sentinel solution for Microsoft Business Apps 
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security administrator, I want to deploy a monitoring solution for Microsoft Power Platform and Microsoft Dynamics 365 Customer Engagement so that I can detect and respond to threats and suspicious activities in real-time.
@@ -15,7 +15,7 @@ ms.custom: msecd-doc-authoring-1014
 
 # Connect Microsoft Power Platform and Microsoft Dynamics 365 Customer Engagement to Microsoft Sentinel
 
-This article describes how to deploy the [Microsoft Sentinel solution for Microsoft Business Apps](../business-applications/solution-overview.md) to connect your Microsoft Power Platform and Microsoft Dynamics 365 Customer Engagement system to Microsoft Sentinel. The solution collects audit and activity logs to detect threats, suspicious activities, illegitimate activities, and more. Before you begin, make sure you meet the [prerequisites](#prerequisites).
+This article describes how to deploy the [Microsoft Sentinel solution for Microsoft Business Apps](../business-applications/solution-overview.md) to connect your Microsoft Power Platform and Microsoft Dynamics 365 Customer Engagement system to Microsoft Sentinel. The solution collects audit and activity logs to detect threats, suspicious activities, illegitimate activities, and more. Before you begin, make sure you meet the [prerequisites for this solution](#prerequisites).
 
 ## Prerequisites
 
@@ -62,7 +62,7 @@ When working with Microsoft Dataverse, Dataverse activity logging is available o
     - Otherwise, import the [Audit Settings solution for Dataverse only](https://aka.ms/AuditSettings/DataverseOnly).
 
 
-    The solution enables detailed auditing for each of the default entities listed in the article, [Audit Settings for Dataverse](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Microsoft%20Business%20Applications/Audit%20Settings/README.md).
+    The solution enables detailed auditing for each of the default entities listed in [Audit Settings for Dataverse](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Microsoft%20Business%20Applications/Audit%20Settings/README.md).
 
 - To enable auditing on custom entities, you must manually enable detailed auditing on each of the custom entities. For more information, see [Manage Dataverse auditing](/power-platform/admin/manage-dataverse-auditing#turn-on-or-off-auditing-for-specific-fields-on-an-entity).
 

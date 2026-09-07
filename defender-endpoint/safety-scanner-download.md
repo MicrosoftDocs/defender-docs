@@ -1,7 +1,7 @@
 ---
 title: Microsoft Safety Scanner Download
+description: Download Microsoft Safety Scanner to run a manual malware scan on Windows and reverse changes made by identified threats. See requirements and how to scan.
 ms.reviewer: 
-description: Get the Microsoft Safety Scanner tool to find and remove malware from Windows computers.
 keywords: security, malware
 ms.service: defender-endpoint
 ms.subservice: reference
@@ -27,7 +27,7 @@ Microsoft Safety Scanner is a scan tool designed to find and remove malware from
 - **[Download Microsoft Safety Scanner (64-bit)](https://go.microsoft.com/fwlink/?LinkId=212732)**
 
 > [!NOTE]
-> Safety Scanner is exclusively SHA-2 signed. Your devices must be updated to support SHA-2 in order to run Safety Scanner. To learn more, see [2019 SHA-2 Code Signing Support requirement for Windows and WSUS](https://support.microsoft.com/help/4472027/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
+> Safety Scanner is exclusively SHA-2 signed. Your devices must be updated to support SHA-2 in order to run Safety Scanner. To learn more, see [2019 SHA-2 Code Signing Support requirement for Windows and WSUS](https://support.microsoft.com/servicing/os/windows/2020/09/2019-sha-2-code-signing-support-requirement-for-windows-and-wsus).
 
 ## Important information
 
@@ -51,12 +51,12 @@ Safety Scanner helps remove malicious software from computers running Windows 11
 
 To remove this tool, delete the executable file (msert.exe by default).
 
-For more information about the Safety Scanner, see the support article on [how to troubleshoot problems using Safety Scanner](https://support.microsoft.com/kb/2520970).
+For more information about the Safety Scanner, see the support article on [how to troubleshoot problems using Safety Scanner](https://support.microsoft.com/Office/how-to-troubleshoot-an-error-when-you-run-the-microsoft-safety-scanner).
 
 ## Related resources
 
-- [Troubleshooting Safety Scanner](https://support.microsoft.com/help/2520970/how-to-troubleshoot-an-error-when-you-run-the-microsoft-safety-scanner)
+- [Troubleshooting Safety Scanner](https://support.microsoft.com/Office/how-to-troubleshoot-an-error-when-you-run-the-microsoft-safety-scanner)
 - [Microsoft Defender Antivirus](https://www.microsoft.com/windows/comprehensive-security)
-- [Removing difficult threats](https://support.microsoft.com/help/4466982/windows-10-troubleshoot-problems-with-detecting-and-removing-malware)
+- [Removing difficult threats](https://support.microsoft.com/defender/troubleshoot-problems-with-detecting-and-removing-malware)
 - [Submit file for malware analysis](https://www.microsoft.com/wdsi/filesubmission)
 - [Microsoft anti-malware and threat protection solutions](microsoft-defender-endpoint.md)

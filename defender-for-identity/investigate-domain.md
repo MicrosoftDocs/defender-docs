@@ -4,7 +4,7 @@ description: Learn how to investigate an Active Directory domain in Microsoft De
 #customer intent: As a security admin, I want to view the security posture of my Active Directory domains so that I can identify coverage gaps, review security policies, and act on recommendations.
 author: AbbyMSFT
 ms.author: abbyweisberg
-ms.date: 07/05/2026
+ms.date: 07/30/2026
 ms.topic: concept-article
 ms.service: microsoft-defender-for-identity
 ms.custom: msecd-doc-authoring-106
@@ -26,11 +26,14 @@ The Active Directory domain page in Microsoft Defender brings together domain he
 
 You can reach the Active Directory domain page through multiple entry points in Microsoft Defender:
 
+- On the **Identity dashboard**, select a domain from the **Active Directory protected domains** widget.
 - Select a domain name from the **Domain** column in the identity inventory.
 - Select a domain from a domain-related security alert or incident.
 - Search for a domain by name using the global search bar.
 
 To switch between domains when you're on the domain page, use the domain selector at the top right of the page.
+
+:::image type="content" source="media/investigate-domain/domain-page-identity-dashboard.png" alt-text="Screenshot that shows the Identity dashboard with the Active Directory protected domains widget." lightbox="media/investigate-domain/domain-page-identity-dashboard.png":::
 
 ## Overview tab
 
@@ -69,6 +72,18 @@ The tab includes default filters for **Status** (New, In progress) and **Alert s
 | **Categories** | The threat categories associated with the incident. |
 | **Impacted assets** | The assets affected by the incident. |
 | **Active alerts** | The number of active alerts in the incident. |
+
+## Security recommendations (Preview)
+
+For scoped users, the domain page shows security recommendations for the domains included in their assigned scope. This view helps scoped users focus on the identity risks that are relevant to the domains they're responsible for. Customers can use this experience to provide domain-level recommendation context without granting broader access across the environment. Each recommendation includes relevant risk information, affected assets, and suggested remediation actions to help scoped users understand what needs attention.
+
+:::image type="content" source="media/investigate-domain/domain-page-security-recommendations.png" alt-text="Screenshot that shows the Security recommendations tab of the domain page in Microsoft Defender." lightbox="media/investigate-domain/domain-page-security-recommendations.png":::
+
+| Column | Description |
+|---|---|
+| **Recommendation name** | The name of the security recommendation. Select a recommendation to view more details and remediation guidance. |
+| **Status** | The current status of the recommendation. |
+| **Last sync** | The date and time when the recommendation was last updated. |
 
 ## Security Policies tab
 

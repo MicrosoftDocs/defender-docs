@@ -1,16 +1,16 @@
 ---
 title: Create cloud discovery policies
 description: Create app discovery policies in Microsoft Defender for Cloud Apps to detect newly discovered apps and configure anomaly detection for cloud discovery logs.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Create cloud discovery policies
 
 
 
-You can create app discovery policies to alert you when new apps are detected. Defender for Cloud Apps also searches all the logs in your cloud discovery for anomalies.
+You can create app discovery policies to alert you when new apps are detected. Defender for Cloud Apps also searches all the logs in your cloud discovery for anomalies. This article explains how to create and configure app discovery policies to monitor newly discovered apps, and how to use cloud discovery anomaly detection to identify unusual usage patterns in your environment.
 
 ## Creating an app discovery policy
 
@@ -37,8 +37,8 @@ Discovery policies enable you to set alerts that notify you when new apps are de
     - Uploaded data
 
 1. Set a **Daily alert limit** under **Alerts**. Select if the alert is sent as an email. Then provide email addresses as needed.
-    - Selecting **Save alert settings as the default for your organization** enables future policies to use the setting.
-    - If you have a default setting, you can select **Use your organization's default settings**.
+    - Selecting **Save alert settings as the default for your organization** enables future policies to use these alert settings.
+    - If you have default alert settings saved for your organization, you can select **Use your organization's default settings**.
 
 1. Select **Governance** actions to apply when an app matches this policy. It can tag policies as **Sanctioned**, **Unsanctioned**, **Monitored**, or a custom tag.
 
@@ -75,7 +75,7 @@ Defender for Cloud Apps searches all the logs in your cloud discovery for anomal
 
 1. Under **Apply to** choose whether this policy applies **All continuous reports** or **Specific continuous reports**. Select whether the policy applies to **Users**, **IP addresses**, or both.
 
-    :::image type="content" source="media/apply-to-continous-reports.png" alt-text="Screenshot showing how to apply file polcies to specific continous reports" lightbox="media/apply-to-continous-reports.png":::
+    :::image type="content" source="media/apply-to-continous-reports.png" alt-text="Screenshot of Apply to settings for an app discovery policy with options for all or specific continuous reports and filters for users and IP addresses." lightbox="media/apply-to-continous-reports.png":::
 
     > [!IMPORTANT]
     > When you configure an app discovery policy and select **Apply to > All continuous reports**, multiple alerts are generated for each discovery stream, including the global stream which aggregates data from all sources. To control alert volume, select **Apply to > Specific continuous reports** and choose only the relevant streams for your policy.
@@ -83,8 +83,8 @@ Defender for Cloud Apps searches all the logs in your cloud discovery for anomal
 1. Select the dates during which the anomalous activity occurred to trigger the alert under **Raise alerts only for suspicious activities occurring after date.**
 
 1. Set a **Daily alert limit** under **Alerts**. Select if the alert is sent as an email. Then provide email addresses as needed.
-    - Selecting **Save alert settings as the default for your organization** enables future policies to use the setting.
-    - If you have a default setting, you can select **Use your organization's default settings**.
+    - Selecting **Save alert settings as the default for your organization** enables future policies to use these alert settings.
+    - If you have default alert settings saved for your organization, you can select **Use your organization's default settings**.
 
 1. Select **Create**.
 

@@ -1,8 +1,9 @@
 ---
-title: Resolve agentless scan error
-description: Troubleshoot disk scan error in Microsoft Defender for Cloud to ensure your resources are connected and protected.
-ms.date: 05/25/2025
+title: Resolve agentless scan errors for GCP VMs in Microsoft Defender for Cloud
+description: Troubleshoot missing agentless scan results for GCP VMs in Microsoft Defender for Cloud when the Compute Storage resource use restrictions policy blocks access to required disk, image, or snapshot resources.
+ms.date: 07/03/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security professional, I want to resolve the disk scan errors in Microsoft Defender for Cloud's GCP connector to ensure my resources are connected and protected.
 ai-usage: ai-assisted
 ---
@@ -43,9 +44,10 @@ By configuring your organization policies, you can control the resources that De
 
 1. Select **Save**.
 
-Defender for Cloud triggers agentless disk scanning with API calls. You'll know this fix worked after the next scheduled scan API call, which can take up to 24 hours.
+Defender for Cloud triggers agentless disk scanning with API calls. You'll know this policy change worked after the next scheduled scan API call, which can take up to 24 hours.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Common GCP questions](faq-general.yml)

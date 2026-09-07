@@ -4,35 +4,41 @@ description: Learn how to drive remediation of security recommendations by using
 services: defender-for-cloud
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Drive recommendation remediation by using governance rules
 
 Security teams are responsible for improving their organization's security posture, but team members might not always follow through to implement security recommendations. Security teams can set governance rules to help drive accountability and create a service-level agreement (SLA) around the remediation process.
 
-For an in-depth discussion about why governance rules are helpful, watch [this episode](episode-fifteen.md) of the *Defender for Cloud in the field* video series.
+For an in-depth discussion about why governance rules are helpful, watch [Episode 15 - Governance rules in Defender for Cloud](episode-fifteen.md) in the *Defender for Cloud in the field* video series.
 
-## Governance rules
+<a name="governance-rules"></a>
+## How governance rules work
 
-You can define rules that automatically assign an owner and a due date to address recommendations for specific resources. This feature provides resource owners with a clear set of tasks and deadlines to remediate recommendations.
+You can define rules that automatically assign an owner and a due date to address recommendations for specific resources. Governance rules provide resource owners with a clear set of tasks and deadlines to remediate recommendations.
 
-Learn how governance rules work in the following sections.
+Governance rules support [tracking](#tracking), [assignments](#assignments), [due dates](#due-dates), [owners](#owners), [notifications](#notifications), and [conflict resolution](#conflicts).
 
-### Tracking
+<a name="tracking"></a>
+### Track remediation progress
 
 Track the progress of remediation tasks by sorting by subscription, recommendation, or owner. You can easily find tasks that need more attention so that you can follow up.
 
-### Assignments
+<a name="assignments"></a>
+### Assign recommendations to owners
 
 Governance rules can identify resources that require remediation according to specific recommendations or severities. The rule assigns an owner and due date to ensure the recommendations are handled. Many governance rules can apply to the same recommendations, so the rule with the highest priority assigns the owner and due date.
 
-### Due dates
+<a name="due-dates"></a>
+### Set due dates for remediation
 
 The due date for remediation of a recommendation is based on a time frame of 7, 14, 30, or 90 days after the rule triggers the recommendation. For example, if the rule identifies the resource on March 1 and the remediation time frame is 14 days, March 15 is the due date. You can apply a grace period so that resources that need remediation don't affect your Microsoft Secure Score.
 
-### Owners
+<a name="owners"></a>
+### Assign owners to recommendations
 
 You can also set resource owners, which helps you find the right person to handle a recommendation.
 
@@ -40,23 +46,29 @@ In organizations that use resource tags to associate resources with an owner, yo
 
 When an owner isn't found on a resource, associated resource group, or associated subscription based on the tag, the owner is shown as unspecified.
 
-### Notifications
+<a name="notifications"></a>
+### Configure governance rule notifications
 
 By default, email notifications are sent weekly to resource owners. Emails include a list of on-time and overdue tasks.
 
 By default, the resource owner's manager receives an email that shows overdue recommendations, if the manager's email is found in the organizational Microsoft Entra ID.
 
-### Conflicts
+<a name="conflicts"></a>
+### Resolve conflicts between governance rules
 
 Conflicting rules are applied in scope order. For example, rules on a management scope for Azure management groups, Amazon Web Services (AWS) accounts, and Google Cloud Platform (GCP) organizations take effect before rules on scopes, like Azure subscriptions, AWS accounts, or GCP projects.
 
 ## Prerequisites
+
+Before you define a governance rule, make sure the following prerequisites are met:
 
 - The [Defender Cloud Security Posture Management (Defender CSPM) plan](concept-cloud-security-posture-management.md) must be enabled.
 - You need **Contributor**, **Security Admin**, or **Owner** permissions on the Azure subscriptions.
 - For AWS accounts and GCP projects, you need **Contributor**, **Security Admin**, or **Owner** permissions on the Defender for Cloud AWS or GCP connectors.
 
 ## Define a governance rule
+
+To create a governance rule in Microsoft Defender for Cloud, follow these steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 

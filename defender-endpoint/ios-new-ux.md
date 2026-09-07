@@ -6,14 +6,15 @@ ms.author: painbar
 author: paulinbar
 ms.reviewer: sunasing; denishdonga
 ms.localizationpriority: medium
-ms.date: 11/06/2025
+ms.date: 07/22/2026
 ms.collection: 
 - m365-security
 - tier3
 - mde-ios
 ms.topic: reference
 ms.subservice: ios
-ms.custom: sfi-image-nochange
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1015
+ai-usage: ai-assisted
 ---
 
 # User Experiences in Microsoft Defender for Endpoint on iOS
@@ -77,6 +78,9 @@ We updated all the subordinating screens associated with the **Device Protection
 
 1. **Device Health**
 
+   > [!NOTE]
+   > Microsoft is deprecating the Device Health feature. Deprecation begins in mid-July 2026 and finishes by late July 2026.
+
    :::image type="content" source="media/mde-device-health-new.png" alt-text="Screenshot that shows the new device health feature on the Defender for Endpoint on iOS app." lightbox="media/mde-device-health-new.png":::
 
 ### Recommendation cards for alerts
@@ -88,6 +92,9 @@ The structure of the dashboard is updated to include a recommendation card that 
     :::image type="content" source="media/mde-ios-web-protection-rec-card.png" alt-text="Screenshot that shows the web protection  recommendation card feature on the Defender for Endpoint on iOS app." lightbox="media/mde-ios-web-protection-rec-card.png":::
 
 1. **Device Health (iOS Update)**
+
+    > [!NOTE]
+    > Starting late July 2026, the Device Health (iOS Update) recommendation card no longer appears.
 
     :::image type="content" source="media/mde-ios-device-health-rec-card.png" alt-text="Screenshot that shows the device health recommendation card feature on the MDE iOS app." lightbox="media/mde-ios-device-health-rec-card.png":::
 

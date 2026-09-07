@@ -2,17 +2,17 @@
 title: Assign access to workload owners
 description: Learn how to assign access to a workload owner of an Amazon Web Service or Google Cloud Platform connector.
 ms.topic: how-to
-ms.date: 05/25/2026
-ms.custom: sfi-image-nochange
+ms.date: 07/03/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 #customer intent: As a workload owner, I want to learn how to assign access to my AWS or GCP connector so that I can view the suggested recommendations provided by Defender for Cloud.
 ai-usage: ai-assisted
 ---
 
 # Assign access to workload owners
 
-When you onboard your Amazon Web Service (AWS) or Google Cloud Platform (GCP) environments, Defender for Cloud automatically creates a security connector as an Azure resource in the connected subscription and resource group. Defender for Cloud also creates the identity provider as an Identity and Access Management (IAM) role required during onboarding.
+When you onboard your Amazon Web Service (AWS) or Google Cloud Platform (GCP) environments, Defender for Cloud creates a security connector as an Azure resource. It also sets up an Identity and Access Management (IAM) role as the identity provider.
 
-To assign permissions on a specific connector under the parent connector, first decide which AWS accounts or GCP projects users need to access. Then identify the security connectors that map to those accounts or projects.
+To assign permissions on a specific account or project connector, first decide which AWS accounts or GCP projects your users need. Then find the security connectors that match those accounts or projects.
 
 ## Prerequisites
 
@@ -22,9 +22,7 @@ To assign permissions on a specific connector under the parent connector, first 
 
 ## Configure permissions on the security connector
 
-Permissions for security connectors are managed through Azure role-based access control (RBAC).
-
-You can assign roles to users, groups, and applications at the subscription, resource group, or resource level.
+You manage permissions for security connectors through Azure role-based access control (RBAC). You can assign roles to users, groups, and applications at any level: subscription, resource group, or resource.
 
 To configure connector permissions:
 
@@ -48,7 +46,7 @@ To configure connector permissions:
 
     1. Select the **Types equals all** filter.
 
-    1. Enter `securityconnector` in the value field and add a check to the `microsoft.security/securityconnectors`.
+    1. Enter `securityconnector` in the value field and select `microsoft.security/securityconnectors`.
 
         :::image type="content" source="media/assign-access-to-workload/security-connector.png" alt-text="Screenshot that shows where the field is located and where to enter the value on the screen." lightbox="media/assign-access-to-workload/security-connector.png":::
 

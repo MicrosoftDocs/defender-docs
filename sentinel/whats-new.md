@@ -4,10 +4,12 @@ description: Learn about the latest new features and announcement in Microsoft S
 author: guywi-ms
 ms.author: guywild
 ms.topic: concept-article
-ms.date: 06/23/2026
-#Customer intent: As a security team member, I want to stay updated on the latest features and enhancements in Microsoft Sentinel so that I can effectively manage and optimize my organization's security posture.
+ms.date: 08/24/2026
+ai-usage: ai-assisted
+# customer intent: As a security team member, I want to stay updated on the latest features and enhancements in Microsoft Sentinel so that I can effectively manage and optimize my organization's security posture.
 ms.custom:
   - build-2025
+  - msecd-doc-authoring-1015
 ---
 
 # What's new in Microsoft Sentinel
@@ -17,6 +19,41 @@ This article lists recent features added for Microsoft Sentinel, and new feature
 The listed features were released in the last six months. For information about earlier features delivered, see our [Tech Community blogs](https://techcommunity.microsoft.com/t5/azure-sentinel/bg-p/AzureSentinelBlog/label-name/What's%20New).
 
 [!INCLUDE [reference-to-feature-availability](includes/reference-to-feature-availability.md)]
+
+## August 2026
+
+- [New data sources for UEBA behaviors and anomaly detection (Preview)](#new-data-sources-for-ueba-behaviors-and-anomaly-detection-preview)
+- [UEBA anomalies on behaviors (Preview)](#ueba-anomalies-on-behaviors-preview)
+- [SAP solution releases](#sap-solution-releases)
+
+### New data sources for UEBA behaviors and anomaly detection (Preview)
+
+Microsoft Sentinel UEBA expands coverage with new data sources for both the behaviors layer and anomaly detection.
+
+**Fortinet FortiGate behaviors**
+
+The UEBA behaviors layer now supports Fortinet FortiGate firewall events from the `CommonSecurityLog` table. More than 40 new behaviors identify administrative activity on FortiGate appliances, including rapid system reconfigurations, configuration backups, certificate changes, and security service disruptions. These behaviors are mapped to MITRE ATT&CK techniques including T1685, T1070, T1078, and T1602.002.
+
+**Check Point, Fortinet, Zscaler, and AWS GuardDuty anomalies**
+
+UEBA anomaly detection now supports Check Point, Fortinet FortiGate, and Zscaler firewall, VPN, and web proxy events from the `CommonSecurityLog` table. Ten new anomaly rules compare each user and device against its own history and organization-wide activity to identify:
+
+- Anomalous and failed VPN sign-ins
+- Unusual access to high-risk web categories
+- Bursts of security detections on a potentially compromised device
+- Suspicious administrative changes
+
+The new anomaly rules are mapped to MITRE ATT&CK techniques including T1078, T1133, T1110, T1071, T1562, and T1567. Events are enriched with source IP geolocation, ISP, and threat intelligence context.
+
+UEBA anomaly detection also supports identity-linked AWS GuardDuty findings from the `AWSGuardDuty` table, mapped to MITRE ATT&CK techniques including T1078, T1078.004, T1110, T1087.004, and T1567.002.
+
+### UEBA anomalies on behaviors (Preview)
+
+Microsoft Sentinel now adds contextual anomaly insights directly to UEBA behavior records. These insights help analysts identify first-seen activity, unusually high behavior volumes, uncommon values, and threat intelligence matches without manually correlating raw events. For more information, see [Investigate anomalies on UEBA behaviors](ueba-anomalies-on-behaviors.md).
+
+### SAP solution releases
+
+The [SAP agentless solution](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/SAP/Agentless/README.md) version 1.1.12 adds audit log performance enhancements and the `force-sal-filesystem` parameter. The [SAP BTP solution](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/SAP%20BTP/ReleaseNotes.md) version 3.1.1 adds an analytic rule for unaudited custom apps with login-only activity and renames analytic rules with the `SAP BTP` prefix. The [SAP LogServ solution](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/SAP%20LogServ/ReleaseNotes.md) version 3.0.5 lets customers using RISE with SAP activate existing ASIM-based security content for standard SAP LogServ logs; HANA detections now use Syslog instead of the custom log, with updated connector coverage and fallback handling. For more information, see the [SAP LogServ integration blog series](https://community.sap.com/t5/enterprise-resource-planning-blog-posts-by-members/ultimate-blog-series-sap-logserv-integration-with-microsoft-sentinel/ba-p/14126401).
 
 ## July 2026
 
@@ -300,7 +337,7 @@ For more information, see [How UEBA empowers analysts and streamlines workflows]
 
 - [Agentless data connector](sap/prerequisites-for-deploying-sap-continuous-threat-monitoring.md) for Sentinel Solution for SAP now generally available. Learn more from our [Tech Community blog](https://techcommunity.microsoft.com/blog/microsoftsentinelblog/microsoft-sentinel-for-sap-agentless-connector-ga/4464490).
 
-- Deprecation: Containerized SAP data connector will be out of support by September 30th 2026. [Migrate to our Agentless SAP data connector](sap/sap-agent-migrate.md) today. All new deployments only have the new agentless connector option that is billed at the same price.
+- Retirement: The containerized SAP data connector agent will be permanently disabled on September 14, 2026, and will stop delivering SAP logs to Microsoft Sentinel. Analytics rules, workbooks, hunting queries, and playbooks that depend on these logs will stop returning results for affected SAP systems. Creation of new containerized agents is already disabled. The generally available agentless data connector is the supported replacement, and the retirement doesn't change pricing or billing meters. [Migrate to the agentless SAP data connector](sap/sap-agent-migrate.md) before the retirement date.
 
 ### Call to action: update queries and automation by July 1, 2026 - standardized account entity naming in incidents and alerts
 

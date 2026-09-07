@@ -33,7 +33,7 @@ sections:
         answer: |
           If you get a false positive, you can submit the file for analysis at the [Microsoft Security Intelligence submission site](https://www.microsoft.com/en-us/wdsi/filesubmission).
 
-          You can also define an exclusion for Microsoft Defender Antivirus. See [Configure and validate exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md).
+          You can also define an exclusion for Microsoft Defender Antivirus. See [Configure and validate exclusions for Microsoft Defender Antivirus scans](microsoft-defender-antivirus-exclusions-configure.md).
       - question: |
           Do I need to turn EDR in block mode on if I have Microsoft Defender Antivirus running on devices?
         answer: |

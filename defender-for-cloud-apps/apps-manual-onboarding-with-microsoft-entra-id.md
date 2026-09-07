@@ -9,8 +9,8 @@ author:      damalkaw # GitHub alias
 ms.author:   damalkaw # Microsoft alias
 ms.service:  defender-for-cloud-apps
 ms.topic:   how-to
-ms.date:     06/16/2026
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.date:     07/03/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -22,6 +22,8 @@ Session controls in Microsoft Defender for Cloud Apps can be configured to work 
 
 
 ## Prerequisites
+
+Before you begin, make sure you have the required licenses, administrative access, and app configuration in place.
 
 ### Add admins to the app onboarding/maintenance list
 
@@ -127,7 +129,7 @@ Follow these steps to configure any app to be controlled by Defender for Cloud A
 
 ## Step 2: Add the app manually and install certificates, if necessary<a name="conf-app"></a><a name="add-app"></a>
 
-Applications in the app catalog are automatically populated into the table under Connected Apps. Check that the app you want to deploy is recognized in the Connected Apps table.
+Applications in the app catalog are automatically populated into the Connected Apps table on the Conditional Access App Control page. Check that the app you want to deploy is recognized in the Connected Apps table.
 
 1. In the menu bar of Defender for Cloud Apps, select the settings cog, and select the **Conditional Access App Control** tab to access a table of applications that can be configured with access and session policies.
 

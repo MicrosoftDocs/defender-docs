@@ -5,13 +5,13 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.service: microsoft-sentinel
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security analyst, I want to monitor the health and performance of my data connectors so that I can ensure uninterrupted data ingestion and quickly address any issues.
 
@@ -25,7 +25,7 @@ The following features allow you to perform this monitoring from within Microsof
 
 - **Data collection health monitoring workbook**: This workbook provides additional monitors, detects anomalies, and gives insight regarding the workspace’s data ingestion status. You can use the workbook’s logic to monitor the general health of the ingested data, and to build custom views and rule-based alerts.
 
-- ***SentinelHealth* data table**: Querying this table provides insights on health drifts, such as latest failure events per connector, or connectors with changes from success to failure states, which you can use to create alerts and other automated actions. The *SentinelHealth* data table is currently supported only for [selected data connectors](#supported-data-connectors).
+- ***SentinelHealth* data table**: Querying this table provides insights on health drifts, such as latest failure events per connector, or connectors with changes from success to failure states, which you can use to create alerts and other automated actions. The *SentinelHealth* data table is currently supported only for selected data connectors, such as Amazon Web Services, Dynamics 365, Office 365, and others listed in the [Supported data connectors](#supported-data-connectors) section later in this article.
 
 - [**View the health and status of your connected SAP systems**](monitor-sap-system-health.md): Review health information for your SAP systems under the SAP data connector, and use an alert rule template to get information about the health of the SAP agent's data collection.
 
@@ -90,7 +90,7 @@ The *SentinelHealth* data table is currently supported only for the following da
 
 ### Understanding SentinelHealth table events
 
-The following types of health events are logged in the *SentinelHealth* table:
+The *SentinelHealth* table is a Microsoft Sentinel log table that stores health events for supported data connectors. The following types of health events are logged in this table:
 
 - **Data fetch status change**. To prevent redundant auditing and reduce table size, Microsoft Sentinel logs this event once an hour while a data connector's status remains stable with either continuous success or failure events. If the data connector's status has continuous failures, additional details about the failures are included in the *ExtendedProperties* column.
 
@@ -178,7 +178,7 @@ The following steps show how to create an Azure Monitor alert rule that uses a S
 
 1. In an Azure Monitor alert rule, select your Microsoft Sentinel workspace as the rule scope, and **Custom log search** as the first condition.
 
-1. Customize the alert logic as needed, such as frequency or lookback duration, and then use the [health drift detection queries](#run-queries-to-detect-health-drifts) to search for health drifts.
+1. Customize the alert logic as needed, such as frequency or lookback duration, and then use the health drift detection queries from the [Run queries to detect health drifts](#run-queries-to-detect-health-drifts) section to search for health drifts.
 
 1. For the rule actions, select an existing action group or create a new one as needed to configure push notifications or other automated actions such as triggering a Logic App, Webhook, or Azure Function in your system.
 

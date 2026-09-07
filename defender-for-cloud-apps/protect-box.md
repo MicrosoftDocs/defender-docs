@@ -1,18 +1,18 @@
 ---
 title: Protect your Box environment | Microsoft Defender for Cloud Apps
 description: Learn how to connect Box to Microsoft Defender for Cloud Apps using the API connector for activity visibility, threat detection, and remediation controls.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # How Defender for Cloud Apps helps protect your Box environment
 
-As a cloud file storage and collaboration tool, Box enables your users to share their documents across your organization and partners in a streamlined and efficient way. Using Box might expose your sensitive data not only internally, but also to external collaborators, or even worse make it publicly available via a shared link. Such incidents can be caused by malicious actors, or by unaware employees.
+Box is a cloud storage and collaboration tool that lets your users share documents across your organization and with partners. However, using Box might expose sensitive data to external collaborators or make it publicly available via a shared link. These incidents can be caused by malicious actors or by unaware employees.
 
-Connecting Box to Defender for Cloud Apps gives you improved insights into your users' activities, provide threat detection using machine learning based anomaly detections, information protection detections such as detecting external information sharing, and enabling automated remediation controls.
+When you connect Box to Defender for Cloud Apps, you get better insights into your users' activities. The connection provides threat detection through machine learning, helps detect external information sharing, and enables automated remediation controls.
 
 ## Main threats
 
@@ -25,9 +25,10 @@ The main threats to consider in a Box environment include:
 - Ransomware
 - Unmanaged bring your own device (BYOD)
 
-## How Defender for Cloud Apps helps to protect your environment
+<a name="how-defender-for-cloud-apps-helps-to-protect-your-environment"></a>
+## Ways Defender for Cloud Apps protects your environment
 
-Defender for Cloud Apps helps protect your Box environment in the following ways:
+Defender for Cloud Apps protects your Box environment by helping you:
 
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Discover, classify, label, and protect regulated and sensitive data stored in the cloud](best-practices.md#discover-classify-label-and-protect-regulated-and-sensitive-data-stored-in-the-cloud)
@@ -67,10 +68,14 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## Connect Box to Microsoft Defender for Cloud Apps
 
-This section provides instructions for connecting Microsoft Defender for Cloud Apps to your existing Box account using the App Connector APIs. This connection gives you visibility into and control over Box use. For information about how Defender for Cloud Apps protects Box, see [Protect Box](protect-box.md).
+You can connect Microsoft Defender for Cloud Apps to your existing Box account using the App Connector APIs, which are the API-based integration method that Defender for Cloud Apps uses to connect to supported SaaS apps. The connection gives you visibility into and control over Box use. For information about how Defender for Cloud Apps protects Box, see [Protect Box](protect-box.md).
 
 > [!NOTE]
 > Deploying with an account that isn't an Admin account leads to a failure in the API test and doesn't allow Defender for Cloud Apps to scan all of the files in Box. If the inability to scan all files is a problem for you, you can deploy with a Co-Admin that has all of the privileges checked, but the API test will continue to fail and files owned by other admins in Box will not be scanned.
+
+### Prerequisites
+
+- A Box Admin account (or Co-Admin account with all privileges selected). Deploying with a non-Admin account causes the API test to fail and prevents Defender for Cloud Apps from scanning all files in Box.
 
 ### Configure Box
 
@@ -88,7 +93,8 @@ This section provides instructions for connecting Microsoft Defender for Cloud A
 
 Your data center details are shown in the Defender for Cloud Apps **About** page in the **Settings** area. For more information, see [View your data center](network-requirements.md#view-your-data-center).
 
-### Connect Defender for Cloud Apps
+<a name="connect-defender-for-cloud-apps"></a>
+### Connect Box to Defender for Cloud Apps
 
 After you configure Box, complete the following steps to connect your Box instance to Defender for Cloud Apps:
 
@@ -96,7 +102,7 @@ After you configure Box, complete the following steps to connect your Box instan
 
 1. In the **App connectors** page, select **+Connect an app**, and then select **Box**.
 
-    ![Screenshot showing the Box option in the App connectors page.](media/connect-box.png "Connect Box")
+    ![Screenshot of the App connectors page with Box available as a connector option.](media/connect-box.png "Connect Box")
 
 1. In the **Instance name** page, enter a name for the connection. Then select **Next**.
 

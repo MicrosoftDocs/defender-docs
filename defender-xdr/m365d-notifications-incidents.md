@@ -9,10 +9,10 @@ ms.collection:
   - m365-security
   - tier1
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender XDR
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -22,7 +22,7 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Prerelease](../includes/prerelease.md)]
 
-You can set up email notifications for your staff to get notified about new incidents or updates to existing incidents. You can choose to get notifications based on:
+You can set up email notifications for your staff to get notified about new incidents or updates to existing incidents. You can choose to get email notifications based on:
 
 - Alert severity
 - Alert sources 
@@ -32,10 +32,10 @@ You can set up email notifications for your staff to get notified about new inci
 You can easily select specific service sources that you want to get email notifications for.
  
 **Get more granularity with specific detection sources**:
-You can get notifications only for a specific detection source. 
+You can get email notifications only for a specific detection source. 
 
 **Set the severity per detection or service source**:
-You can choose to get email notifications only on specific severities per source. For example, you can get notified for Medium and High alerts for EDR and all severities for Microsoft Defender Experts.  
+You can choose to get email notifications only on specific severities for each service source or detection source. For example, you can get notified for Medium and High alerts for EDR and all severities for Microsoft Defender Experts.  
 
 The email notification contains important details about the incident like the incident name, severity, and categories, among others. You can also go directly to the incident and start your analysis right away. For more information, see [Investigate incidents](investigate-incidents.md).
 
@@ -62,7 +62,7 @@ Follow these steps to create a new rule and customize email notification setting
     :::image type="content" source="media/m365d-notifications-incidents/incident-notif-settings-small.png" alt-text="Screenshot of the Notification settings page for incident email notifications in the Microsoft Defender portal." lightbox="media/m365d-notifications-incidents/incident-notif-settings.png":::
 
 5. Select **Next**. On the **Recipients** page, add the email addresses where the incident notifications are to be sent. Select **Add** after typing each new email address. To test notifications and ensure that the recipients receive them in the inboxes, select **Send test email**.
-6. Select **Next**. On the **Review rule** page, review the settings of the rule, and then select **Create rule**. Recipients will start receiving incident notifications through email based on the settings.
+6. Select **Next**. On the **Review rule** page, review the settings of the rule, and then select **Create rule**. Recipients will start receiving incident notifications through email based on the rule settings you configured.
 
 To edit an existing rule, select it from the list of rules. On the pane with the rule name, select **Edit rule** and make your changes on the **Basics**, **Notification settings**, and **Recipients** pages.
 
@@ -71,7 +71,7 @@ To edit an existing rule, select it from the list of rules. On the pane with the
 
 To delete a rule, select it from the list of rules. On the pane with the rule name, select **Delete**.
 
-Once you get the notification, you can go directly to the incident and start your investigation right away. For more information on investigating incidents, see [Investigate incidents](investigate-incidents.md).
+Once you receive an incident email notification, you can go directly to the incident and start your investigation right away. For more information on investigating incidents, see [Investigate incidents](investigate-incidents.md).
 
 ## Next steps
 

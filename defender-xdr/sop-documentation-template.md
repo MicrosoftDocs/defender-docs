@@ -3,11 +3,11 @@ title: Create a compromised identity incident response SOP template
 description: Use this template to create and customize a standard operating procedure for compromised identity incident responses in Microsoft Defender XDR.
 ms.service: defender-xdr
 ms.topic: how-to
-ms.custom: msecd-doc-authoring-1012
+ms.custom: msecd-doc-authoring-1016
 author: mberdugo
 ms.author: monaberdugo
 ms.reviewer: Yuval Derman
-ms.date: 06/03/2026
+ms.date: 07/02/2026
 ms.collection:
   - m365-security
   - tier1
@@ -21,12 +21,14 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Use this article to create a reusable standard operating procedure (SOP) for compromised identity incidents. Replace each placeholder with organization-specific values before you publish or upload the SOP.
+Use this SOP template to create a reusable standard operating procedure (SOP) for compromised identity incidents. Replace each placeholder with organization-specific values before you publish or upload the SOP.
 
 > [!NOTE]
 > This template is a generic example intended as a starting point. Don't use it as-is. Customize every section, including triggers, decision points, queries, escalation paths, and remediation steps, to match your organization's environment, tooling, roles, and policies before you publish or upload it as an SOP.
 
 ## Prerequisites
+
+Before you customize or publish this SOP, confirm the following prerequisites:
 
 - Confirm who owns the SOP and who can approve changes for your organization.
 - Verify that your analysts can access the `SigninLogs` data and any other sources that your SOP references.
@@ -35,7 +37,7 @@ Use this article to create a reusable standard operating procedure (SOP) for com
 
 ## SOP metadata
 
-Use this section to identify the SOP owner, scope, and data sources.
+Record the SOP owner, scope, and data sources in the following metadata fields.
 
 - **Name:** `<Compromised identity incident response SOP>`
 - **Version:** `<v1.0>`
@@ -45,15 +47,15 @@ Use this section to identify the SOP owner, scope, and data sources.
 
 ## Purpose
 
-Use this SOP to triage, contain, investigate, remediate, and prevent incidents that indicate a compromised identity. Customize the scope, decision points, and escalation paths so that analysts can respond consistently during incidents that affect `<User>`, `<Group>`, or `<Business unit>`.
+Use the compromised identity incident response SOP to triage, contain, investigate, remediate, and prevent incidents that indicate a compromised identity. Customize the scope, decision points, and escalation paths so that analysts can respond consistently during incidents that affect `<User>`, `<Group>`, or `<Business unit>`.
 
 ## Triggers (when to invoke this SOP)
 
-Invoke this SOP when an incident, alert, or user report suggests that an identity might be compromised.
+Invoke the compromised identity incident response SOP when an incident, alert, or user report suggests that an identity might be compromised.
 
 - Alert examples include `Impossible travel`, `Unfamiliar sign-in properties`, `Password spray`, `MFA fatigue`, and `Suspicious inbox forwarding rules`.
-- Use this SOP when `<User>` reports unexpected MFA prompts, suspicious sign-in notifications, or account changes they didn't make.
-- Use this SOP when analysts observe successful sign-ins from unusual locations, risky IP addresses, or unfamiliar applications.
+- Invoke the compromised identity incident response SOP when `<User>` reports unexpected MFA prompts, suspicious sign-in notifications, or account changes they didn't make.
+- Invoke the compromised identity incident response SOP when analysts observe successful sign-ins from unusual locations, risky IP addresses, or unfamiliar applications.
 
 ## Triage phase
 
@@ -94,6 +96,8 @@ SigninLogs
 
 ### Validate with the user
 
+Validate the suspicious activity directly with the affected user before you decide on next actions.
+
 1. Contact `<User>` through an approved channel.
 1. Ask whether they recognize the sign-ins, locations, devices, applications, and MFA prompts.
 1. Ask whether they recently approved an MFA request, entered credentials into a prompt, shared a device, or traveled.
@@ -111,6 +115,8 @@ Contain the risk before you complete the full investigation, but apply organizat
 
 ### Contain the identity
 
+Use the following actions to contain the compromised identity while preserving evidence and minimizing business disruption.
+
 1. Revoke active sessions and refresh tokens for `<user@company.com>`.
 1. Force a password reset or secret rotation, based on the identity type.
 1. Disable the account temporarily if risk remains active and business approval allows it.
@@ -119,7 +125,7 @@ Contain the risk before you complete the full investigation, but apply organizat
 
 ## Investigation phase
 
-Use this phase to identify the likely entry point, validate control gaps, and define the blast radius.
+Use the investigation phase to identify the likely entry point, validate control gaps, and define the blast radius.
 
 ### Perform root cause analysis
 
@@ -139,12 +145,16 @@ SigninLogs
 
 ### Evaluate MFA
 
+Review MFA status and behavior to determine whether authentication controls failed or were bypassed.
+
 1. Determine whether MFA was enabled for `<user@company.com>` at the time of the incident.
 1. Check whether the attacker satisfied MFA, bypassed MFA, or enrolled a new authentication method.
 1. Identify gaps in Conditional Access, authentication strengths, token protection, or registration controls.
 1. Record whether you need to reset MFA methods or review recent MFA changes.
 
 ### Analyze blast radius and impact
+
+Assess the scope of access and potential business impact before closing the investigation.
 
 1. Review incident evidence for access to email, files, collaboration tools, cloud resources, or privileged roles.
 1. Check for suspicious inbox rules, forwarding rules, consent grants, mailbox access, lateral movement, or privilege escalation.
@@ -154,6 +164,8 @@ SigninLogs
 ## Remediation phase
 
 Complete the actions that remove attacker persistence and return the identity to a trusted state.
+
+### Remediate and recover
 
 1. Reset the password, rotate secrets, and require fresh sign-in for all active sessions.
 1. Remove malicious inbox rules, forwarding rules, OAuth app consent, or unauthorized authentication methods.
@@ -165,6 +177,8 @@ Complete the actions that remove attacker persistence and return the identity to
 ## Prevention phase
 
 Use lessons from the incident to reduce the likelihood of recurrence.
+
+### Prevent recurrence
 
 1. Enforce phishing-resistant MFA, stronger Conditional Access policies, and sign-in risk controls where available.
 1. Disable legacy authentication and remove unused service accounts, applications, or credentials.

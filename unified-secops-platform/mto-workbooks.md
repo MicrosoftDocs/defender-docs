@@ -10,21 +10,21 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender for Office 365 P2
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security administrator, I want to manage workbooks across multiple tenants to ensure consistent monitoring and reporting.
 ---
 
 # Use workbooks in multitenant management
 
-The Workbooks feature in Microsoft Sentinel enables users to manage and view workbooks across multiple tenants from a single page in the multitenant Organization portal. ​The Workbooks feature allows users to access an out-of-the-box multitenant workbook, Situational Awareness, which provides insights into tenant health, trends, and metrics. ​This article explains how to access and use the Workbooks feature in Microsoft Sentinel multitenant management. Before you begin, make sure you meet the [prerequisites](#prerequisites).
+Microsoft Sentinel lets you manage and view workbooks across multiple tenants from one page. You can use the built-in Situational Awareness workbook to track tenant health, trends, and key metrics. This article shows how to access and use workbooks in multitenant management. Before you begin, make sure you meet the [prerequisites for using workbooks in multitenant management](#prerequisites).
 
 ## Prerequisites
 
@@ -37,9 +37,9 @@ Before using Workbooks in multitenant management, ensure you have the following 
 
 ## Access a workbook​
 
-To navigate to the workbook page in the multitenant Organization portal in Microsoft Sentinel. ​
+Follow these steps to open the Workbooks page in the multitenant portal.
 
-1. In the left-hand navigation pane, select **Microsoft Sentinel** > **Workbooks**. ​The Workbooks page displays an aggregated list of all workbooks across your tenants.
+1. In the left-hand navigation pane, select **Microsoft Sentinel** > **Workbooks**. This page shows a combined list of all workbooks across your tenants.
 
    :::image type="content" source="./media/mto-workbooks/access-workbook.png" alt-text="Screenshot of Workbooks homepage.":::
 
@@ -51,19 +51,20 @@ To navigate to the workbook page in the multitenant Organization portal in Micro
 
 ## Open the situational awareness workbook
 
-Use the Situational Awareness workbook to get insights across your tenants, including health status, trends, and metrics. The Situational Awareness workbook is multitenant supported, so you can select which tenants to include.
+The Situational Awareness workbook shows health status, trends, and metrics across your tenants. It supports multiple tenants, so you can pick which ones to include.
 
-1. From the multitenant management portal, select the button below the Situational Awareness card
+1. In the multitenant management portal, select the button on the Situational Awareness card.
 
     :::image type="content" source="./media/mto-workbooks/situational-awareness-card.png" alt-text="Screenshot of Situational Awareness button.":::
 
-1. To choose which tenants to include, use the tenant selector in the top-right corner. ​ 
-Optionally, select **Edit selection** to select specific workspaces. ​
-Ensure your home tenant is included in the scope and has threat intelligence data in the selected workspace, and select **Apply**.
+1. Use the tenant selector in the top-right corner to pick which tenants to include.
+To pick specific workspaces, select **Edit selection**.
+Make sure your home tenant is in scope and has threat intelligence data. Then select **Apply**.
 
     :::image type="content" source="./media/mto-workbooks/tenant-scope.png" alt-text="Screenshot of tenant selector.":::
 
-## Explore the Workbook ​
+<a name="explore-the-workbook"></a>
+## Explore the situational awareness workbook
 
 Use the following workbook features to analyze data across tenants:
 
@@ -74,8 +75,8 @@ Use the following workbook features to analyze data across tenants:
 <a name="limitations"></a>
 ## Workbook limitations in multitenant management
 
-Be aware of the following limitations when using Workbooks in multitenant management:
+Note the following limits for Workbooks in multitenant management:
 
-* The Situational Awareness workbook uses threat intelligence data exclusively from the home tenant, and this setting can't be changed.
-* The Workbooks page doesn't currently support editing or creating workbooks. ​
-* Workbook templates are currently not supported in the aggregated view.
+* The Situational Awareness workbook only uses threat data from the home tenant. You can't change this setting.
+* You can't edit or create workbooks from the Workbooks page. ​
+* Workbook templates don't appear in the combined view.

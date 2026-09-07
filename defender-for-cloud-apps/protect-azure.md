@@ -1,11 +1,11 @@
 ---
 title: Protect your Azure environment
 description: Learn how to connect your Azure environment to Microsoft Defender for Cloud Apps using the API connector to monitor activities and detect threats.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # How Defender for Cloud Apps helps protect your Azure environment
@@ -53,7 +53,7 @@ For more information about remediating threats from apps, see [Governing connect
 
 ## Protect Azure in real time
 
-Review our best practices for [securing and collaborating with guests](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls) and [blocking and protecting the download of sensitive data to unmanaged or risky devices](best-practices.md#block-and-protect-download-of-sensitive-data-to-unmanaged-or-risky-devices).
+Review best practices for [securing and collaborating with guests](best-practices.md#secure-collaboration-with-external-users-by-enforcing-real-time-session-controls) and [blocking and protecting the download of sensitive data to unmanaged or risky devices](best-practices.md#block-and-protect-download-of-sensitive-data-to-unmanaged-or-risky-devices).
 
 ## Connect Azure to Microsoft Defender for Cloud Apps
 
@@ -74,6 +74,8 @@ When you connect Azure to Defender for Cloud Apps, keep in mind the following sc
 > - Defender for Cloud Apps monitors ARM activities only.
 
 ### Connect Azure to Defender for Cloud Apps
+
+To connect Azure to Defender for Cloud Apps, follow these steps:
 
 1. In the Microsoft Defender Portal, select **Settings**. Then choose **Cloud Apps**. Under **Connected apps**, select **App Connectors**.
 

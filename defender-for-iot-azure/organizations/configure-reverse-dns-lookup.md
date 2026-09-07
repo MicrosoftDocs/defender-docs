@@ -1,10 +1,10 @@
 ---
 title: Configure reverse DNS lookup for OT active monitoring - Microsoft Defender for IoT
 description: This article describes how to configure reverse DNS lookup for active monitoring with Microsoft Defender for IoT.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure DNS servers for reverse lookup resolution for OT monitoring
@@ -19,12 +19,11 @@ All CIDR formats are supported.
 
 Before configuring reverse DNS lookup, make sure you have:
 
-- An OT network sensor with [OT sensor software installed](ot-deploy/install-software-ot-sensor.md) and [configured and activated](ot-deploy/activate-deploy-sensor.md).
+- An OT network sensor with [OT sensor software installed](ot-deploy/install-software-ot-sensor.md) and [configured and activated your OT sensor](ot-deploy/activate-deploy-sensor.md).
 
 - Access to your OT network sensor as an **Admin** user. For more information, see [On-premises users and roles for OT monitoring with Defender for IoT](roles-on-premises.md).
 
 - Completed the prerequisites outlined in [Configure active monitoring for OT networks](configure-active-monitoring.md), and confirmed that active monitoring is right for your network.
-
 
 ## Define DNS servers
 
@@ -55,9 +54,7 @@ Use a test device to verify that the reverse DNS lookup schedule, DNS server, an
 
 1. In the **DNS reverse lookup test for server** dialog, enter an address in the **Lookup Address** and then select **Test**.
 
-## Next steps
-
-After configuring reverse DNS lookup, you can review resolved host names in:
+## Related content
 
 - [View your device inventory from a sensor console](how-to-investigate-sensor-detections-in-a-device-inventory.md)
 - [View your device inventory from the Azure portal](how-to-manage-device-inventory-for-organizations.md)

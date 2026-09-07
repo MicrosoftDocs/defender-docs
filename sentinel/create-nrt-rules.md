@@ -5,13 +5,13 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to configure near-real-time detection analytics rules so that analysts can achieve up-to-the-minute threat detection and automate responses in my security operations.
 
@@ -22,7 +22,7 @@ ms.custom: msecd-doc-authoring-1014
 > [**Custom detections**](/defender-xdr/custom-detections-overview?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) is now the best way to create new rules across Microsoft Sentinel SIEM Microsoft Defender XDR. With custom detections, you can reduce ingestion costs, get unlimited real-time detections, and benefit from seamless integration with Defender XDR data, functions, and remediation actions with automatic entity mapping. For more information, read [Custom detections are now the unified experience for creating detections in Microsoft Defender XDR](https://techcommunity.microsoft.com/blog/microsoftthreatprotectionblog/custom-detections-are-now-the-unified-experience-for-creating-detections-in-micr/4463875).
 
 
-Microsoft Sentinel’s [near-real-time analytics rules](near-real-time-rules.md) provide up-to-the-minute threat detection out-of-the-box. This type of rule was designed to be highly responsive by running its query at intervals just one minute apart.
+Microsoft Sentinel’s [near-real-time analytics rules](near-real-time-rules.md) provide up-to-the-minute threat detection out-of-the-box. Near-real-time analytics rules are designed to be highly responsive by running their queries at intervals just one minute apart.
 
 For the time being, NRT rule templates have limited application, as outlined in [Considerations for NRT rules](near-real-time-rules.md#considerations), but the technology is rapidly evolving and growing.
 
@@ -33,6 +33,8 @@ For the time being, NRT rule templates have limited application, as outlined in 
 To view your existing NRT rules, filter the analytics rules list by rule type:
 
 # [Defender portal](#tab/defender-portal)
+
+To view NRT rules in the Defender portal:
 
 1. From the Microsoft Defender navigation menu, expand **Microsoft Sentinel**, then **Configuration**. Select **Analytics**.
 
@@ -58,7 +60,7 @@ To view NRT rules in the Azure portal:
 
 ## Create NRT rules
 
-You create NRT rules the same way you create regular [scheduled-query analytics rules](detect-threats-custom.md):
+Create NRT rules by following the same procedure used for regular [scheduled-query analytics rules](detect-threats-custom.md):
 
 # [Defender portal](#tab/defender-portal)
 
@@ -82,7 +84,7 @@ To create an NRT rule in the Azure portal:
 
 ---
 
-3. Follow the steps in [Create a scheduled query analytics rule](detect-threats-custom.md) to complete the **Analytics rule wizard**.
+1. Follow the steps in [Create a scheduled query analytics rule](detect-threats-custom.md) to complete the **Analytics rule wizard**.
 
     The configuration of NRT rules is in most ways the same as that of scheduled analytics rules. 
 

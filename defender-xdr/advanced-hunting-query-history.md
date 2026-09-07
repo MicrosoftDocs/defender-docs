@@ -17,7 +17,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
@@ -27,12 +27,13 @@ ai-usage: ai-assisted
 
 
 
+<a name="query-history"></a>
+## Query history overview
+
 > [!IMPORTANT]
 > Some information relates to prereleased product which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
-## Query history
-
-Your previous queries appear in the **Query history** tab in the lower half of the advanced hunting page. You can run queries you have generated and run before even if you have already closed the query tab that contains the query. 
+Your previous queries appear in the **Query history** tab in the lower half of the advanced hunting page. You can rerun past queries even after closing the tab where they ran. 
 
 ## View the query history tab
 
@@ -40,7 +41,7 @@ To view your query history, select the **Query history** tab.
 
 :::image type="content" source="media/advanced-hunting-query-history/advanced-hunting-query-history.png" alt-text="Screenshot of the query history pane in advanced hunting" lightbox="media/advanced-hunting-query-history/advanced-hunting-query-history.png":::
 
-Your recent queries appear in order, with the most recent first. The query history stores up to 30 queries from the last 28 days.
+Recent queries appear with the newest first. The list keeps up to 30 queries from the last 28 days.
 
 By default, **Query history** shows these columns:
 - Time - when the query started
@@ -48,7 +49,7 @@ By default, **Query history** shows these columns:
 - Query time - how long the query took
 - State - whether the query finished, failed, or was throttled
 
-Select **Customize columns** to hide columns from your view.
+To hide columns, select **Customize columns**.
 
 
 
@@ -58,5 +59,4 @@ To reuse a previous query, select it. The **Run query** and **Use in editor** op
 
 :::image type="content" source="media/advanced-hunting-query-history/advanced-hunting-query-history-functions.png" alt-text="Screenshot of the query history functions in advanced hunting" lightbox="media/advanced-hunting-query-history/advanced-hunting-query-history-functions.png":::
 
-Select **Run query** to run the query right away. Select **Use in editor** to open the query in the editor so you can edit it first.
-
+Select **Run query** to run it right away, or select **Use in editor** to edit it first.

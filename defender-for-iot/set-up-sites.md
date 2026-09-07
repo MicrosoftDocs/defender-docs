@@ -5,17 +5,17 @@ ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/11/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1013
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Set up sites in Microsoft Defender for IoT
 
 Microsoft Defender for IoT in the Microsoft Defender portal includes the **Site security** page, which offers an overview of the security state of your entire operational technology (OT) environment. Your organization's security team use this page to regularly monitor the security status of your production sites.
 
-In this article, you learn how to set up a site in the **Site security** page.
+In this article, you learn how to set up a site in the **Site security** page. Before you begin, make sure you meet the [prerequisites](#prerequisites).
 
 Learn more about the [site security benefits and use cases](site-security-overview.md).
 
@@ -25,6 +25,7 @@ Learn more about the [site security benefits and use cases](site-security-overvi
 
 Before you create a site, make sure you meet the following prerequisites:
 
+- We recommend you have IP or MAC address details of at least one OT device at the site that is discovered by Microsoft Defender for Endpoint. You need these details when you associate devices with the site.
 - Review [the general prerequisites for Microsoft Defender for IoT](prerequisites.md).
 - Review the required site security permissions according to [RBAC requirements](set-up-rbac.md).
 - Have a Microsoft Defender for IoT license. For more information, see [Get started with Defender for IoT](get-started.md).
@@ -50,7 +51,7 @@ To set up a site and associate the OT devices in your network to it:
 <a name="associate-devices"></a>
 ## Associate devices with a site
 
-In this stage, you configure Defender for IoT to associate devices to the site, so it can correctly identify and associate all types of devices at the same site.
+In this stage, you configure Defender for IoT to associate devices to the site, so Defender for IoT can correctly identify and associate all types of devices at the same site.
 
 1. In the search bar, type either:
     - A public IP address
@@ -82,7 +83,7 @@ In this stage, you configure Defender for IoT to associate devices to the site, 
 <a name="preview-devices"></a>
 ## Preview devices before assigning them to a site
 
-In this stage, you review all of the devices discovered by the system. This gives admins the opportunity to review and remove devices before confirming the site creation. A list of all devices to be associated with this site is displayed.
+In this stage, you review all of the devices discovered by Defender for IoT. This gives admins the opportunity to review and remove devices before confirming the site creation. A list of all devices to be associated with this site is displayed.
 
 To manage devices in bulk, use the search bar to find devices by their name, IP, or MAC address.
 

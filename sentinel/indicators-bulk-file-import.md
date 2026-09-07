@@ -7,12 +7,12 @@ author: poliveria
 ms.reviewer: yoninave
 ms.service: microsoft-sentinel
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -22,7 +22,7 @@ ai-usage: ai-assisted
 
 # Add threat intelligence in bulk to Microsoft Sentinel from a CSV or JSON file
 
-This article demonstrates how to add indicators from a CSV or STIX objects from a JSON file into Microsoft Sentinel threat intelligence. Because threat intelligence sharing still happens across emails and other informal channels during an ongoing investigation, the ability to import that information quickly into Microsoft Sentinel is important to relay emerging threats to your team. These identified threats are then available to power other analytics, such as producing security alerts, incidents, and automated responses.
+This article demonstrates how to add indicators from a CSV or STIX objects from a JSON file into Microsoft Sentinel threat intelligence. Because threat intelligence sharing still happens across emails and other informal channels during an ongoing investigation, the ability to import that information quickly into Microsoft Sentinel is important to relay emerging threats to your team. The imported threat intelligence objects are then available to power other analytics, such as producing security alerts, incidents, and automated responses.
 
 > [!IMPORTANT]
 > [!INCLUDE [unified-soc-preview-without-alert](includes/unified-soc-preview-without-alert.md)]
@@ -64,7 +64,7 @@ Add multiple threat intelligence objects with a specially crafted CSV or JSON fi
 
 1. Consider grouping your threat intelligence by source because each file upload requires a source.
 
-The templates provide all the fields you need to create a single valid indicator, including required fields and validation parameters. Replicate that structure to populate more indicators in one file, or add STIX objects to the JSON file. For more information on the templates, see [Understand the import templates](indicators-bulk-file-import.md#understand-the-import-templates).
+The CSV and JSON templates provide all the fields you need to create a single valid indicator, including required fields and validation parameters. Replicate the template field structure to populate more indicators in one file, or add STIX objects to the JSON file. For more information on the templates, see [Understand the import templates](indicators-bulk-file-import.md#understand-the-import-templates).
 
 ## Upload the threat intelligence file
 
@@ -105,9 +105,11 @@ Microsoft Sentinel maintains the status of the file import for 30 days. The actu
 
 ## Understand the import templates
 
-Review each template to ensure that your threat intelligence is imported successfully. Be sure to reference the instructions in the template file and the supplemental guidance in the [CSV template structure](#csv-template-structure) and [JSON template structure](#json-template-structure) sections.
+Review the CSV and JSON templates to ensure that your threat intelligence is imported successfully. Be sure to reference the instructions in the CSV or JSON template file and the supplemental guidance in the [CSV template structure](#csv-template-structure) and [JSON template structure](#json-template-structure) sections.
 
 ### CSV template structure
+
+Use the CSV template options to choose the correct structure for your indicator data.
 
 1. On the **Indicator type** dropdown menu, select **CSV**. Then choose between the **File indicators** or **All other indicator types** options. 
 
@@ -121,7 +123,7 @@ Review each template to ensure that your threat intelligence is imported success
  
    The maximum file size for a CSV file import is 50 MB. 
 
-Here's an example domain-name indicator that uses the CSV template:
+The following CSV example shows how to format a domain-name indicator for bulk import using the CSV template schema:
 
 ```CSV
 threatTypes,tags,name,description,confidence,revoked,validFrom,validUntil,tlpLevel,severity,observableType,observableValue
@@ -129,6 +131,8 @@ Phishing,"demo, csv",MDTI article - Franken-Phish domainname,Entity appears in M
 ```
 
 ### JSON template structure
+
+The JSON template uses a single STIX 2.1 structure for all supported object types. Review the following details when you prepare your JSON file.
 
 1. There's only one JSON template for all STIX object types. The JSON template is based on the STIX 2.1 format.
 
@@ -142,7 +146,7 @@ Phishing,"demo, csv",MDTI article - Franken-Phish domainname,Entity appears in M
 
    The maximum file size for a JSON file import is 250 MB. 
 
-Here's an example `ipv4-addr` indicator and `attack-pattern` using the JSON file format:
+The following JSON example shows how to define an `ipv4-addr` indicator and an `attack-pattern` object for bulk import using the STIX 2.1 format:
 
 ```json
 [

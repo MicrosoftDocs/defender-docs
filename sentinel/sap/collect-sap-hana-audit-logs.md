@@ -1,16 +1,16 @@
 ---
 title: Collect SAP HANA audit logs in Microsoft Sentinel
-description: This article explains how to collect audit logs from your SAP HANA database.
+description: Learn how to ingest SAP HANA audit logs into Microsoft Sentinel for customer-managed environments, with guidance relevant to security, infrastructure, and SAP BASIS teams.
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #Customer intent: As a security analyst, I want to collect and analyze SAP HANA audit logs to Microsoft Sentinel so that I can monitor and respond to security events effectively.
 
 ---
@@ -89,6 +89,7 @@ T_Syslog | union isfuzzy= true (D_Syslog | where TimeGenerated != '1000-01-01T00
 ```
 
 See more information on the Kusto operators and functions used in the sample query, in the Kusto documentation:
+
 - [***let*** statement](/kusto/query/let-statement?view=microsoft-sentinel&preserve-view=true)
 - [***datatable*** operator](/kusto/query/datatable-operator?view=microsoft-sentinel&preserve-view=true)
 - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
@@ -115,8 +116,6 @@ Use the following built-in analytics rules to have Microsoft Sentinel start trig
 For more information, see [Microsoft Sentinel solution for SAP applications: security content reference](sap-solution-security-content.md).
 
 ## Related content
-
-Learn more about the Microsoft Sentinel solution for SAP applications:
 
 - [Deploy Microsoft Sentinel solution for SAP applications](deployment-overview.md)
 - [Deploy the Microsoft Sentinel solution for SAP BTP](deploy-sap-btp-solution.md)

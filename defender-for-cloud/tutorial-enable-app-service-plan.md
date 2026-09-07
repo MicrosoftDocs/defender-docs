@@ -2,14 +2,15 @@
 title: Protect your applications with Microsoft Defender for App Service
 description: Learn how to enable the Microsoft Defender for App Service plan on your Azure subscription to detect threats targeting your web apps and APIs.
 ms.topic: how-to
-ms.date: 05/14/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As an Azure administrator, I want to enable Microsoft Defender for App Service so that I can detect threats targeting my web applications.
 ai-usage: ai-assisted
 ---
 
 # Protect your applications with Microsoft Defender for App Service
 
-Microsoft Defender for App Service uses cloud scale to identify attacks that target applications running on [Azure App Service](https://azure.microsoft.com/services/app-service/). Requests to Azure applications pass through gateways that inspect and log traffic before routing it to your environment. This data helps identify exploits and attackers, and it helps learn new patterns.
+Microsoft Defender for App Service uses cloud scale to identify attacks that target applications running on [Azure App Service](https://azure.microsoft.com/services/app-service/). Requests to Azure applications pass through gateways that inspect and log traffic before routing it to your environment. The logged traffic data helps identify exploits and attackers, and it helps learn new patterns.
 
 When you enable Defender for App Service, you get these capabilities:
 
@@ -21,7 +22,7 @@ When you enable Defender for App Service, you get these capabilities:
   - The underlying sandboxes and VMs.
   - App Service internal logs - available because of the visibility that Azure has as a cloud provider.
 
-As a cloud-native solution, Defender for App Service can identify attack methods that apply to multiple targets. From a single host, it's hard to identify a distributed attack from a small subset of Internet Protocol (IP) addresses that crawl similar endpoints across multiple hosts.
+As a cloud-native solution, Defender for App Service can identify attack methods that apply to multiple targets. From a single host, a single host can't easily identify a distributed attack from a small subset of Internet Protocol (IP) addresses that crawl similar endpoints across multiple hosts.
 
 Together, the log data and infrastructure can show the full attack story, from a new attack in the wild to compromises on customer machines. Even if you deploy Microsoft Defender for App Service after a web app is exploited, it might still detect ongoing attacks.
 

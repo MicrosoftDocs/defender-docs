@@ -4,12 +4,12 @@ ms.reviewer: joshbregman, mattcall, pahuijbr, hayhov, oogunrinde
 description: Turn tamper protection on or off using tenant attach with Configuration Manager.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 author: limwainstein
 ms.author: lwainstein
 ms.custom: 
-- msecd-doc-authoring-1014
+- msecd-doc-authoring-1016
 - nextgen
 - admindeeplinkDEFENDER
 ms.subservice: ngp
@@ -26,7 +26,7 @@ ai-usage: ai-assisted
 # Manage tamper protection using tenant attach with Configuration Manager, version 2006
 
 
-[Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps protect certain [security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. If you're part of your organization's security team, and you're using [version 2006 of Configuration Manager](/intune/configmgr/core/plan-design/changes/whats-new-in-version-2006), you can manage the tamper protection feature for devices by using a method called *tenant attach*. Tenant attach enables you to sync your on-premises-only Configuration Manager devices into the Intune admin center, and then deliver endpoint security configuration policies to on-premises collections & devices. 
+[Tamper protection](prevent-changes-to-security-settings-with-tamper-protection.md) helps protect certain [tamper-protected security settings](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on), such as virus and threat protection, from being disabled or changed. If you're part of your organization's security team, and you're using [version 2006 of Configuration Manager](/intune/configmgr/core/plan-design/changes/whats-new-in-version-2006), you can manage the tamper protection feature for devices by using a method called *tenant attach*. Tenant attach enables you to sync your on-premises-only Configuration Manager devices into the Intune admin center, and then deliver endpoint security configuration policies to on-premises collections & devices. 
 
 Using Configuration Manager with tenant attach, you can turn on (or off) the tamper protection feature for some or all devices. 
 
@@ -64,7 +64,7 @@ Finish selecting options and settings for your policy and deploy the policy to y
 <a name="see-also"></a>
 ## Related content
 
-The following resources provide more information about tamper protection:
+Learn more about tamper protection:
 
 - [Frequently asked questions (FAQs) on tamper protection](faqs-on-tamper-protection.yml)
 - [Tech Community Blog: Announcing Tamper Protection for Configuration Manager Tenant Attach clients](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/announcing-tamper-protection-for-configuration-manager-tenant/ba-p/1700246#.X3QLR5Ziqq8.linkedin)

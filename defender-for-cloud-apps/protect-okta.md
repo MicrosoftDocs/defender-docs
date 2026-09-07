@@ -1,10 +1,10 @@
 ---
 title: Protect your Okta environment | Microsoft Defender for Cloud Apps
 description: Connect Okta to Microsoft Defender for Cloud Apps with the API connector to monitor admin activity, managed users, and sign-ins, and detect anomalous behavior.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -17,7 +17,8 @@ Connecting Okta to Defender for Cloud Apps gives you improved insights into your
 [!INCLUDE [security-posture-management-connector](includes/security-posture-management-connector.md)]
 
 
-## Main threats
+<a name="main-threats"></a>
+## Main threats to your Okta environment
 
 - Compromised accounts and insider threats
 
@@ -28,9 +29,10 @@ Defender for Cloud Apps helps you protect your Okta environment with the followi
 - [Detect cloud threats, compromised accounts, and malicious insiders](best-practices.md#detect-cloud-threats-compromised-accounts-malicious-insiders-and-ransomware)
 - [Use the audit trail of activities for forensic investigations](best-practices.md#use-the-audit-trail-of-activities-for-forensic-investigations)
 
-## SaaS security posture management
+<a name="saas-security-posture-management"></a>
+## SaaS security posture management for Okta
 
-[Connect Okta](#connect-okta-to-microsoft-defender-for-cloud-apps) to automatically get security recommendations for Okta in Microsoft Secure Score.
+Connect Okta to Microsoft Defender for Cloud Apps using the procedure below to automatically get security recommendations in Microsoft Secure Score.
 
 In Secure Score, select **Recommended actions** and filter by **Product** = **Okta**. For example, recommendations for Okta include:
 
@@ -56,7 +58,7 @@ For more information about creating policies, see [Create a policy](control-clou
 
 ## Automate governance controls
 
-Currently, there are no governance controls available for Okta. If you're interested in having governance actions for this connector, you can [open a support ticket](/defender-xdr/contact-defender-support) with details of the actions you want.
+Currently, there are no governance controls available for Okta. If you're interested in having governance actions for this connector, you can [contact Microsoft Defender support](/defender-xdr/contact-defender-support) with details of the actions you want.
 
 For more information about remediating threats from apps, see [Governing connected apps](governance-actions.md).
 
@@ -69,7 +71,7 @@ Review our best practices for [securing and collaborating with external users](b
 
 To connect Okta to Defender for Cloud Apps: 
 
-- Create an admin Service Account in Okta for Defender for Cloud Apps.
+- Create an Okta admin service account dedicated to Defender for Cloud Apps. You use this account to generate the API token required for the connector.
 - Make sure you use an account with Super Admin permissions.
 - Make sure your Okta account is verified.
 
@@ -82,17 +84,18 @@ The following procedure provides instructions for connecting Microsoft Defender 
 
 ### Configure Okta
 
-In the Okta console, create a token for the API. Copy the token value, you will need it later.
+In the Okta console, create a token for the API. Copy the token value. You will need the token value later.
 
 ### Configure Defender for Cloud Apps
 
+Perform the following steps in Defender for Cloud Apps to complete the Okta connection:
 
 1. In the Microsoft Defender Portal, select **Settings** > **Cloud Apps**. 
 1. Under **Connected apps**, select **App Connectors**.
 
 1. In the **App connectors page**, select **+Connect an app**, and then **Okta**.
 
-    ![Screenshot showing the Connect Okta option in the App connectors page.](media/connect-okta.png "Connect Okta")
+    ![Screenshot of the App connectors page with the Connect Okta option.](media/connect-okta.png "Connect Okta")
 
 1. In the next window, give your connection a name and select **Next**.
 1. In the **Enter details** window, in the **Domain** field, enter your Okta domain and paste your Token into the **Token** field.

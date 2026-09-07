@@ -176,7 +176,7 @@ Follow the steps below to identify the Defender for Endpoint Workspace ID and Wo
    - Server SKUs: Windows Server 2008 SP1 or Newer
    - Client SKUs: Windows 7 SP1 and later
 
-   The MMA agent needs to be installed on Windows devices. To install the agent, some systems need to download the [Update for customer experience and diagnostic telemetry](https://support.microsoft.com/help/3080149/update-for-customer-experience-and-diagnostic-telemetry) in order to collect the data with MMA. These system versions include but may not be limited to:
+   The MMA agent needs to be installed on Windows devices. To install the agent, some systems need to download the [Update for customer experience and diagnostic telemetry](https://support.microsoft.com/servicing/os/windows/2019/11/update-for-customer-experience-and-diagnostic-telemetry) in order to collect the data with MMA. These system versions include but may not be limited to:
 
    - Windows 8.1
    - Windows 7
@@ -186,8 +186,8 @@ Follow the steps below to identify the Defender for Endpoint Workspace ID and Wo
 
    Specifically, for Windows 7 SP1, the following patches must be installed:
 
-   - Install [KB4074598](https://support.microsoft.com/help/4074598/windows-7-update-kb4074598)
-   - Install either [.NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653) (or later) **or** [KB3154518](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the-net-framework). Do not install both on the same system.
+   - Install [KB4074598](https://support.microsoft.com/servicing/os/windows-7/2018/02/february-13-2018-kb4074598-monthly-rollup)
+   - Install either [.NET Framework 4.5 or later](/dotnet/framework/install/guide-for-developers) **or** [KB3154518](https://support.microsoft.com/topic/support-for-tls-system-default-versions-included-in-the-net-framework-3-5-1-on-windows-7-sp1-and-server-2008-r2-sp1-5ef38dda-8e6c-65dc-c395-62d2df58715a). Do not install both on the same system.
 
 1. If you're using a proxy to connect to the Internet see the Configure proxy settings section.
 
@@ -207,9 +207,9 @@ Microsoft Defender Antivirus is a built-in anti-malware solution that provides n
 
     In certain industries or some select enterprise customers might have specific needs on how Antivirus is configured.
 
-    [Quick scan versus full scan and custom scan](/windows/security/threat-protection/microsoft-defender-antivirus/scheduled-catch-up-scans-microsoft-defender-antivirus#quick-scan-versus-full-scan-and-custom-scan)
+    [Quick scan versus full scan and custom scan](schedule-antivirus-scans.md#comparing-the-quick-scan-full-scan-and-custom-scan)
 
-    For more information, see [Windows Security configuration framework](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-configuration-framework).
+    For more information, see [Windows Security configuration framework](https://github.com/microsoft/SecCon-Framework/blob/master/windows-security-configuration-framework.md).
 
     :::image type="content" source="media/cd7daeb392ad5a36f2d3a15d650f1e96.png" alt-text="The next-generation protection pane2" lightbox="media/cd7daeb392ad5a36f2d3a15d650f1e96.png":::
 
@@ -352,5 +352,3 @@ You have now successfully configured Controlled folder access in test mode.
 ## Related article
 
 - [Onboarding using Microsoft Configuration Manager](onboarding-endpoint-manager.md)
-
-

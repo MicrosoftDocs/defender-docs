@@ -1,6 +1,6 @@
 ---
 title: Set up your Microsoft Defender XDR trial lab or pilot environment
-description: Access Microsoft Defender portal then set up your Microsoft Defender XDR trial lab environment
+description: Set up a dedicated Microsoft Defender XDR trial lab or pilot environment in the Microsoft Defender portal, including tenant provisioning and subscription activation for a non-production evaluation.
 search.appverid: met150
 ms.service: defender-xdr
 ms.author: guywild
@@ -14,8 +14,8 @@ ms.collection:
   - highpri
   - tier1
 ms.topic: how-to
-ms.date: 06/15/2026
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.date: 07/02/2026
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -26,7 +26,7 @@ ai-usage: ai-assisted
 **Applies to:**
 - Microsoft Defender XDR
 
-This article guides you to set up a dedicated lab environment. For information on setting up a trial in production, see the new [Pilot and deploy Microsoft Defender XDR](pilot-deploy-overview.md) guide.
+This article guides you to set up a dedicated lab environment. For information on setting up a trial in production, see the new [Pilot and deploy Microsoft Defender](pilot-deploy-overview.md) guide.
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. This helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
@@ -97,7 +97,7 @@ Perform the following steps to enable your Microsoft 365 trial subscription.
 <a name="next-step"></a>
 ## Next steps
 
-|[Phase 3: Configure & Onboard](pilot-deploy-overview.md) | Configure each Microsoft Defender XDR pillar for your Microsoft Defender XDR trial lab or pilot environment and onboard your endpoints.
+|[Phase 3: Configure & Onboard](pilot-deploy-overview.md) | Configure each Microsoft Defender pillar for your Microsoft Defender trial lab or pilot environment and onboard your endpoints.
 |:-------|:-----|
 
 

@@ -1,11 +1,11 @@
 ---
 title: Commonly used information protection policies | Microsoft Defender for Cloud Apps
 description: This article outlines the steps to configure many information protection policies in Defender for Cloud Apps.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: MayaAbelson
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Commonly used Microsoft Defender for Cloud Apps information protection policies
 
@@ -14,13 +14,15 @@ ms.custom: msecd-doc-authoring-1014
 
 
 
-Defender for Cloud Apps file policies allow you to enforce a wide range of automated processes. Policies can be set to provide information protection, including continuous compliance scans, legal eDiscovery tasks, and DLP for sensitive content shared publicly.
+This article shows how to create and configure Defender for Cloud Apps file and session policies for common information protection scenarios. These scenarios include detecting external sharing of sensitive data, encrypting data at rest, blocking downloads, and more. Each scenario lists its own prerequisites, such as connected apps or Microsoft Purview Information Protection integration.
 
-Defender for Cloud Apps can monitor any file type based on more than 20 metadata filters, for example, access level, and file type. For details about available metadata filters and policy configuration options, see [File policies](data-protection-policies.md).
+Defender for Cloud Apps can monitor any file type. It supports more than 20 metadata filters, such as access level and file type. Several of the policies in this article use the Data Classification Service (DCS), which inspects file content to identify sensitive information types. For more information, see [File policies](data-protection-policies.md#file-policy-reference).
 
 ## Detect and prevent external sharing of sensitive data
 
 Detect when files with personally identifying information or other sensitive data are stored in a Cloud service and shared with users who are external to your organization that violates your company's security policy and creates a potential compliance breach.
+
+Some of the policies in this section use the Data Classification Service (DCS) as the inspection method to identify sensitive information in your files.
 
 ### Prerequisites
 
@@ -42,7 +44,7 @@ To create a file policy that detects externally shared sensitive data:
 
 ## Detect externally shared confidential data
 
-Detect when files that are labeled **Confidential** and are stored in a cloud service are shared with external users, violating company policies.
+Detect when files labeled **Confidential** in a cloud service are shared with external users. This sharing violates company policies.
 
 ### Prerequisites
 
@@ -56,17 +58,17 @@ To create a file policy that detects externally shared confidential data:
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **File policy**.
 
-1. Set the filter **Sensitivity label** to **Microsoft Purview Information Protection** equals the **Confidential** label, or your company's equivalent.
+1. Set the filter **Sensitivity label** to **Microsoft Purview Information Protection**. Select the **Confidential** label, or your company's equivalent.
 
 1. Set the filter **Access Level** equals **Public (Internet) / Public / External**.
 
-1. Optional: Set the **Governance** actions to be taken on files when a violation is detected. The governance actions available vary between services.
+1. Optional: Set the **Governance** actions for files when a violation is detected. The available actions vary between services.
 
 1. Create the file policy.
 
 ## Detect and encrypt sensitive data at rest
 
-Detect files containing personally identifying information and other sensitive data that is share in a cloud app and apply sensitivity labels to limit access only to employees in your company.
+Detect files that contain personal data or other sensitive data shared in a cloud app. Then apply sensitivity labels to limit access to employees in your company.
 
 ### Prerequisites
 
@@ -76,13 +78,15 @@ Detect files containing personally identifying information and other sensitive d
 
 ### Steps
 
-Use the following procedure to create the policy:
+This policy uses the Data Classification Service (DCS), which inspects file content for sensitive information types.
+
+Use the following steps to create the policy:
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **File policy**.
 
-1. Under **Inspection method**, select **Data Classification Service (DCS)** and under **Select type** select the type of sensitive information you want DCS to inspect.
+1. Under **Inspection method**, select **Data Classification Service (DCS)**. Under **Select type**, select the type of sensitive data you want DCS to inspect.
 
-1. Under **Governance actions**, check **Apply sensitivity label** and select the sensitivity label that your company uses to restrict access to company employees.
+1. Under **Governance actions**, check **Apply sensitivity label**. Select the label your company uses to restrict access to employees.
 
     > [!NOTE]
     > The ability to apply a sensitivity label directly in Defender for Cloud Apps is currently only supported for Box, Google Workspace, SharePoint online and OneDrive for Business.
@@ -211,7 +215,7 @@ Perform the following steps to detect publicly accessible S3 buckets:
 
 ## Detect and protect GDPR related data across file storage apps
 
-Detect files that are shared in cloud storage apps and contain personally identifying information and other sensitive data that are bound by a GDPR compliance policy. Then, automatically apply sensitivity labels to limit access only to authorized personnel.
+Detect files in cloud storage apps that contain personal data or other sensitive data subject to GDPR. Then apply sensitivity labels to limit access to authorized personnel.
 
 ### Prerequisites
 
@@ -225,9 +229,9 @@ Use the following steps to create the GDPR-related data protection policy:
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**. Create a new **File policy**.
 
-1. Under **Inspection method**, select **Data Classification Service (DCS)**, and under **Select type** select one or more information types that comply with the GDPR compliance, for example: EU debit card number, EU drivers license number, EU national/regional identification number, EU passport number, EU SSN, SU tax identification number.
+1. Under **Inspection method**, select **Data Classification Service (DCS)**. Under **Select type**, select one or more GDPR-related information types. Examples include EU debit card number, EU drivers license number, EU national/regional identification number, EU passport number, EU SSN, and EU tax identification number.
 
-1. Set the **Governance** actions to be taken on files when a violation is detected, by selecting **Apply sensitivity label** for each supported app.
+1. Set the **Governance** actions for files when a violation is detected. Select **Apply sensitivity label** for each supported app.
 
     > [!NOTE]
     > Currently, **Apply sensitivity label** is only supported for Box, Google Workspace, SharePoint online and OneDrive for business.

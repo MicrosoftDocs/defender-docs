@@ -186,7 +186,7 @@ To collect a WPR trace using the command-line tool wpr.exe:
 
 - [Troubleshoot Microsoft Defender Antivirus settings](troubleshoot-settings.md)
 
-- [Configure and validate exclusions for Microsoft Defender Antivirus scans](configure-exclusions-microsoft-defender-antivirus.md)
+- [Configure and validate exclusions for Microsoft Defender Antivirus scans](microsoft-defender-antivirus-exclusions-configure.md)
 
 - [Troubleshoot performance issues related to Microsoft Defender Antivirus](troubleshoot-performance-issues.md)
 

@@ -2,24 +2,25 @@
 title: Set up Azure Policy guest configuration on machines protected by Microsoft Defender for Cloud
 description: Learn how to install the guest configuration on machines protected by Microsoft Defender for Cloud to assess OS misconfigurations. 
 ms.topic: how-to
-ms.date: 02/19/2025
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Install the Azure machine configuration extension
 
-Defender for Cloud assesses operating system configuration against the [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) compute security baselines in the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction).
+Defender for Cloud assesses operating system configuration against the [Windows security baseline](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux security baseline](/azure/governance/policy/samples/guest-configuration-baseline-linux) compute security baselines in the [Microsoft Cloud Security Benchmark (MCSB)](/security/benchmark/azure/introduction).
 
 The information needed for assessment is collected by the Azure machine configuration extension (formerly known as the Azure Policy guest configuration).
 
-This article describes how to deploy the extension.
+This article describes how to deploy the Azure machine configuration extension.
 
 ## Prerequisites
 
 **Requirement** | **Details**
 --- | ---
 **Plan** | To receive operating system recommendations based on MCSB compute security baselines, [Defender for Servers Plan 2](defender-for-servers-overview.md) must be enabled.
-**Machine support** |  Review supported Azure VMs and Azure Arc VMs running  [Windows](support-matrix-defender-for-servers.md#windows-machine-support) and [Linux](support-matrix-defender-for-servers.md#linux-machine-support).
+**Machine support** |  Review supported Azure VMs and Azure Arc VMs running  [Windows machine support](support-matrix-defender-for-servers.md#windows-machine-support) and [Linux machine support](support-matrix-defender-for-servers.md#linux-machine-support).
 **Extension requirements** |  Review [extension deployment requirements](/azure/governance/machine-configuration/overview#enable-machine-configuration) for Azure VMs.
 **Permissions** | To view the recommendations and explore the OS baseline data, you need Read permission on the relevant Azure subscription.
 
@@ -28,13 +29,14 @@ This article describes how to deploy the extension.
 
 ## Install on AWS/GCP
 
-For AWS/GCP machines, the machine configuration is installed by default when you select Arc provisioning in the [AWS](quickstart-onboard-aws.md) or [GCP](quickstart-onboard-gcp.md) connector.
+For AWS/GCP machines, the machine configuration is installed by default when you select Arc provisioning in the [onboard AWS machines](quickstart-onboard-aws.md) or [onboard GCP machines](quickstart-onboard-gcp.md) connector.
 
 ## Install on on-premises machines
 
 For on-premises machines, the machine configuration is enabled by default when you [onboard on-premises VMs as Azure Arc-enabled VMs](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
-## Install on an Azure machines
+<a name="install-on-an-azure-machines"></a>
+## Install on Azure machines
 
 With Defender for Servers Plan 2 enabled, you can install the machine configuration extension on machines using a Defender for Cloud recommendation.
 
@@ -59,9 +61,10 @@ For Azure VMs, you can autoprovision installation of guest configuration extensi
 
 1. Select **Continue**.
 
-With the machine configuration extension enabled on machine, the machine can then be assessed against [Windows](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux](/azure/governance/policy/samples/guest-configuration-baseline-linux) operating systems baselines.
+With the machine configuration extension enabled on a machine, that machine can be assessed against [Windows security baseline](/azure/governance/policy/samples/guest-configuration-baseline-windows) and [Linux security baseline](/azure/governance/policy/samples/guest-configuration-baseline-linux).
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Review OS misconfiguration recommendations](apply-security-baseline.md)

@@ -1,9 +1,9 @@
 ---
 title: Back up and restore OT network sensors from the sensor console - Microsoft Defender for IoT
 description: Learn how to back up and restore Microsoft Defender for IoT OT network sensors from the sensor console.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-ropc-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ropc-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -85,7 +85,7 @@ We recommend saving your OT sensor backup files on your internal network. To do 
     sudo nano /etc/samba/user
     ```
 
-1. Add your SMB server credentials in the following format:
+1. Add the SMB server credentials used to authenticate with the shared backup folder, in the following format:
 
    ```text
    username=<user name>
@@ -160,4 +160,4 @@ For more information, see the [OT sensor CLI reference](cli-ot-sensor.md#restore
 
 ## Next steps
 
-For more information, see [Maintain OT network sensors from the GUI](how-to-manage-individual-sensors.md).
+For GUI-based sensor maintenance tasks, see [Maintain OT network sensors from the GUI](how-to-manage-individual-sensors.md).

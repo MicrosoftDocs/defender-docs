@@ -1,8 +1,10 @@
 ---
-title: Additional integration with external solutions
-description: This article provides information integrating third-party solutions with Defender for Cloud Apps.
-ms.date: 01/29/2023
+title: Integrate Microsoft Defender for Cloud Apps with external security solutions
+description: Integrate Microsoft Defender for Cloud Apps with third-party threat intelligence feeds, MDM/MTD solutions, and UEBA solutions to enrich investigations and apply device-aware session controls.
+ms.date: 07/03/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 # Additional integrations with external solutions
 
@@ -23,10 +25,12 @@ The Defender for Cloud Apps robust platform allows you to integrate with a wide 
 - **UEBA solutions**  
     You can use multiple UEBA solutions to cater for different workloads and scenarios, where each UEBA solution relies on multiple data sources to identify suspicious and anomalous user behavior. Additionally, external UEBA solutions can be integrated with Microsoft's security ecosystem through Microsoft Entra ID Protection.
 
-    Once integrated, policies can be used to identify risky users, apply adaptive controls, and automatically remediate dangerous users by setting the user's risk level to high. Once a user is set to high, the relevant policy actions are enforced, such as resetting a user's password, requiring MFA authentication, or forcing a user to use a managed device.
+    Once an external UEBA solution is integrated with Microsoft Entra ID Protection, policies can be used to identify risky users, apply adaptive controls, and automatically remediate dangerous users by setting the user's risk level to high. Once a user is set to high, the relevant policy actions are enforced, such as resetting a user's password, requiring MFA authentication, or forcing a user to use a managed device.
 
     Defender for Cloud Apps allows security teams to automatically or manually confirm a user as compromised to ensure fast remediation of compromised users.
 
     For more information, see [How does Microsoft Entra ID use my risk feedback](/azure/active-directory/identity-protection/howto-identity-protection-risk-feedback#how-does-azure-ad-use-my-risk-feedback).
 
-If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support)
+## Get support
+
+If you run into any problems, we're here to help. To get assistance or support for your product issue, please [open a support ticket](/defender-xdr/contact-defender-support).

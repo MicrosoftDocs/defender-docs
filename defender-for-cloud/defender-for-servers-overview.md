@@ -2,9 +2,10 @@
 title: Overview of Defender for Servers in Defender for Cloud
 description: Get an overview of the Defender for Servers plan in Microsoft Defender for Cloud, including its features and integration with other Defender services.
 ms.topic: concept-article
-ms.date: 04/23/2026
-# customer intent: I want to understand how the Defender for Servers plan in Defender for Cloud can help reduce security risk and protect against threats.
+ms.date: 08/10/2026
+#customer intent: As a security professional, I want to understand how Defender for Servers reduces security risk so that I can protect machines from threats.
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1015
 ---
 
 # Defender for Servers
@@ -12,7 +13,7 @@ ai-usage: ai-assisted
 The Defender for Servers plan in Microsoft Defender for Cloud reduces security risk and exposure for machines in your organization. It provides recommendations to improve and remediate security posture. Defender for Servers also protects machines against real-time security threats and attacks.
 
 > [!NOTE]
-> Defender for Servers no longer supports the Log Analytics agent and Azure Monitoring Agent (AMA). [Agentless machine scanning](concept-agentless-data-collection.md) and the [integration with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md) replace these agents for most of the plan's features. 
+> Defender for Servers no longer uses the Log Analytics agent or Azure Monitor Agent (AMA) for most plan features. [Agentless machine scanning](concept-agentless-data-collection.md) and the [integration with Microsoft Defender for Endpoint](integration-defender-for-endpoint.md) replace these agents for those features. AMA remains a supported collection method for the [500-MB data ingestion benefit](data-ingestion-benefit.md).
 
 ## Benefits
 
@@ -68,6 +69,8 @@ For more details about billing scenarios and licensing, see [Common questions ab
 ## Plan protection features
 
 Plan features are summarized in the table.
+
+For a comparison of AWS and GCP coverage by plan, see the [multicloud workload protection support matrix](multicloud-support-matrix.md).
 
 | Feature | Plan 1 (P1) | Plan 2 (P2) | Cloud availability |
 |--|--|--|--|

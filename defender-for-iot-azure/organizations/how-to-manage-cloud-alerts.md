@@ -1,9 +1,9 @@
 ---
-title: View and manage alerts on the Azure portal - Microsoft Defender for IoT
+title: View and Manage Alerts on the Azure Portal
 description: Learn about viewing and managing alerts triggered by cloud-connected Microsoft Defender for IoT network sensors on the Azure portal.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: enterprise-iot, msecd-doc-authoring-1014
+ms.custom: enterprise-iot, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -26,15 +26,17 @@ Microsoft Defender for IoT alerts enhance your network security and operations w
 
 Before you view or manage alerts in the Azure portal, make sure the following prerequisites are met:
 
-- **To have alerts in Defender for IoT**, you must have an [OT sensor onboarded](onboard-sensors.md), and network data streaming into Defender for IoT.
+- To have alerts in Defender for IoT, you must have an [OT sensor onboarded](onboard-sensors.md), and network data streaming into Defender for IoT.
 
-- **To view alerts on the Azure portal**, you must have access as a [Security Reader](/azure/role-based-access-control/built-in-roles#security-reader), [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner)
+- To view alerts on the Azure portal, you must have access as a [Security Reader](/azure/role-based-access-control/built-in-roles#security-reader), [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner)
 
-- **To manage alerts on the Azure portal**, you must have access as a [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner). Alert management activities include modifying their statuses or severities, *Learning* an alert, accessing PCAP data, or using alert suppression rules.
+- To manage alerts on the Azure portal, you must have access as a [Security Admin](/azure/role-based-access-control/built-in-roles#security-admin), [Contributor](/azure/role-based-access-control/built-in-roles#contributor), or [Owner](/azure/role-based-access-control/built-in-roles#owner). Alert management activities include modifying their statuses or severities, *Learning* an alert, accessing PCAP data, or using alert suppression rules.
 
 For more information, see [Azure user roles and permissions for Defender for IoT](roles-azure.md).
 
 ## View alerts on the Azure portal
+
+To view alerts in the Azure portal, follow these steps:
 
 1. In [Defender for IoT](https://portal.azure.com/#view/Microsoft_Azure_IoT_Defender/IoTDefenderDashboard/~/Getting_started) on the Azure portal, select the **Alerts** page on the left. By default, the following details are shown in the grid:
 
@@ -44,7 +46,7 @@ For more information, see [Azure user roles and permissions for Defender for IoT
     | **Name** |  The alert title. |
     | **Site** |  The site associated with the sensor that detected the alert, as listed on the [Sites and sensors](how-to-manage-sensors-on-the-cloud.md#sensor-management-options-from-the-azure-portal) page.|
     | **Engine** |  The [Defender for IoT detection engine](architecture.md#defender-for-iot-analytics-engines) that detected the activity and triggered the alert. <br><br>**Note**: A value of **Micro-agent** indicates that the event was triggered by the Defender for IoT [Device Builder](../device-builders/index.yml) platform. |
-    | **Last detection** | The last time the alert was detected. <br><br>- If an alert's status is **New**, and the same traffic is seen again, the **Last detection** time is updated for the same alert. <br>- If the alert's status is **Closed** and traffic is seen again, the **Last detection** time is *not* updated, and a new alert is triggered.<br><br>**Note**: While the sensor console displays an alert's **Last detection** field in real-time, Defender for IoT in the Azure portal may take up to one hour to display the updated time. This delay in the Azure portal explains why the last detection time in the sensor console isn't the same as the last detection time in the Azure portal.  |
+    | **Last detection** | The last time the alert was detected. <br><br>- If an alert's status is **New**, and the same traffic is seen again, the **Last detection** time is updated for the same alert. <br>- If the alert's status is **Closed** and traffic is seen again, the **Last detection** time is *not* updated, and a new alert is triggered.<br><br>**Note**: While the sensor console displays an alert's **Last detection** field in real-time, Defender for IoT in the Azure portal might take up to one hour to display the updated time. This delay in the Azure portal explains why the last detection time in the sensor console isn't the same as the last detection time in the Azure portal.  |
     | **Status** | The alert status: *New*, *Active*, *Closed* <br><br>For more information, see [Alert statuses and triaging options](alerts.md#alert-statuses-and-triaging-options).|
     | **Source device** |The IP address, MAC address, or the name of the device where the traffic that triggered the alert originated.  |
     | **Tactics** | The [MITRE ATT&CK stage](https://attack.mitre.org/tactics/ics/). |
@@ -70,8 +72,10 @@ For more information, see [Azure user roles and permissions for Defender for IoT
 <a name="considerations"></a>
 ### Considerations for viewing alerts
 
+Keep the following considerations in mind when viewing alerts:
+
 - If you're seeing more alerts than expected, you might want to create suppression rules to prevent alerts from being triggered for legitimate network activity. For more information, see [Suppress irrelevant alerts](how-to-accelerate-alert-incident-response.md#suppress-irrelevant-alerts).
-- When you view alerts in the alert list, some alerts may not correlate with alerts on specific sensors. For more information, see [Investigate alerts that don't correlate with specific sensors](respond-ot-alert.md#investigate-alerts-that-dont-correlate-with-a-specific-sensor).
+- When you view alerts in the alert list, some alerts might not correlate with alerts on specific sensors. For more information, see [Investigate alerts that don't correlate with specific sensors](respond-ot-alert.md#investigate-alerts-that-dont-correlate-with-a-specific-sensor).
 
 ### Filter alerts displayed
 
@@ -87,7 +91,7 @@ Use the **Group by** menu at the top-right to collapse the grid into subsections
 
 For example, while the total number of alerts appears in the alerts summary, you might want more specific information about alert count breakdown, such as the number of alerts with a specific severity, protocol, or site.
 
-Supported grouping options include *Engine*, *Name*, *Sensor*, *Severity*, and *Site*.
+Supported grouping options include **Engine**, **Name**, **Sensor**, **Severity**, and **Site**.
 
 ## View details and remediate a specific alert
 
@@ -113,17 +117,17 @@ You can update both severity and status for a single alert or for a selection of
 
 For more information, see [Alert statuses and triaging options](alerts.md#alert-statuses-and-triaging-options).
 
-- **To manage a single alert**:
+- To manage a single alert:
 
     1. In Defender for IoT in the Azure portal, select the **Alerts** page on the left, and then select an alert in the grid.
     1. Either on the details pane on the right, or in an alert details page itself, select the new status and/or severity.
 
-- **To manage multiple alerts in bulk**:
+- To manage multiple alerts in bulk:
 
     1. In Defender for IoT in the Azure portal, select the **Alerts** page on the left, and then select the alerts in the grid that you want to modify.
     1. Use the :::image type="icon" source="media/how-to-manage-sensors-on-the-cloud/status-icon.png" border="false"::: **Change status** and/or :::image type="icon" source="media/how-to-manage-sensors-on-the-cloud/severity-icon.png" border="false"::: **Change severity** options in the toolbar to update the status and/or the severity for all the selected alerts.
 
-- **To learn one or more alerts**:
+- To learn one or more alerts:
 
     In Defender for IoT in the Azure portal, select the **Alerts** page on the left, and then do one of the following:
 
@@ -132,7 +136,7 @@ For more information, see [Alert statuses and triaging options](alerts.md#alert-
 
 ## Access alert PCAP data
 
-You might want to access raw traffic files, also known as *packet capture files* or *PCAP* files as part of your investigation. If you're a SOC or OT security engineer, access PCAP files directly from the Azure portal to help you investigate faster.
+You might want to access raw traffic files, also known as *packet capture files* or *PCAP* files, as part of your investigation. If you're a SOC or OT security engineer, access PCAP files directly from the Azure portal to help you investigate faster.
 
 To access raw traffic files for your alert, select **Download PCAP** in the top-left corner of your alert details page.
 
@@ -158,7 +162,7 @@ The file is generated, and you're prompted to save it locally.
 
 ## Remediate aggregated alert violations
 
-To reduce alert fatigue, Defender for IoT combines multiple instances of the same alert violation with identical parameters into a single alert item, called an *aggregated alert*, on the Alerts page. You can identify an aggregated alert by the *Multiple violations* message that appears under the Source device IP. Use the **Violations** tab to investigate further and the **Take action** tab to remediate the alerts.
+To reduce alert fatigue, Defender for IoT combines multiple instances of the same alert violation with identical parameters into a single alert item, called an *aggregated alert*, on the Alerts page. You can identify an aggregated alert by the *Multiple violations* message that appears under the Source device IP. Use the **Violations** tab to investigate further and the **Take action** tab to remediate the underlying alert violations.
 
 1. On the **Alerts** page, select an alert in the grid to display more details in the pane on the right.
 
@@ -179,9 +183,7 @@ To reduce alert fatigue, Defender for IoT combines multiple instances of the sam
 > [!NOTE]
 > After you learn an alert, the same alert might be triggered again if the new alert has different violation parameters. To check why the alert was triggered, review the list of violations in the CSV file you downloaded in step 3.
 
-## Next steps
-
-For more information about alert types and triage states, see the following article:
+## Next step
 
 > [!div class="nextstepaction"]
 > [Microsoft Defender for IoT alerts](alerts.md)

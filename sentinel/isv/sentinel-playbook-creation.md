@@ -6,7 +6,8 @@ author: mberdugo
 ms.reviewer: sshuster
 ms.service: microsoft-sentinel
 ms.topic: how-to
-ms.date: 1/23/2025
+ms.date: 06/28/2026
+ai-usage: ai-assisted
 
 #CustomerIntent: As a ISV partner, I want to create and publish playbooks for my Microsoft Sentinel solution so that I can provide inbuilt automation use cases to my customers.
 ---
@@ -27,7 +28,7 @@ Due to the growing number of alerts and incidents, security operations center (S
 
 To understand more about potential use cases for playbooks, see [Recommended playbook use cases, templates, and examples](/azure/sentinel/automation/playbook-recommendations).
 
-## Create and publish playbooks for example scenarios
+## Create and publish playbooks, for example,  scenarios
 
 Microsoft Sentinel playbooks are based on Azure Logic Apps, a cloud platform that enables the creation and execution of automated workflows with minimal to no coding. You can use the visual designer and select prebuilt operations to efficiently build workflows that integrate and manage your applications, data, services, and systems. For more information, see [What is Azure Logic Apps?](/azure/logic-apps/logic-apps-overview)
 
@@ -159,3 +160,172 @@ Here are **Readme.md** file references:
 - [Playbook Readme.md file](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Minemeld/Playbooks/MinemeldPlaybooks/Minemeld-CreateIndicator)
 
 :::image type="content" source="media/sentinel-playbook-creation/playbook-folder-structure.png" alt-text="Screenshot of the playbook folder structure in GitHub."  Lightbox="media/sentinel-playbook-creation/playbook-folder-structure.png" :::
+
+## Playbook file structure and packaging requirements
+
+Each playbook is an Azure Logic Apps workflow exported as an ARM template. The two required files are `azuredeploy.json` and `readme.md`, placed in `Solutions/<YourSolutionName>/Playbooks/<PlaybookName>/`.
+
+### azuredeploy.json
+
+The `$schema` must be `https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#`. Every template requires a `PlaybookName` parameter, a `metadata` block, connection variables derived from `PlaybookName`, and workflow tags:
+
+```json
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "PlaybookName": {
+      "defaultValue": "MyProduct-EnrichIncident",
+      "type": "string"
+    }
+  },
+  "variables": {
+    "AzureSentinelConnectionName": "[concat('azuresentinel-', parameters('PlaybookName'))]",
+    "MyProductConnectionName": "[concat('myproduct-', parameters('PlaybookName'))]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Logic/workflows",
+      "name": "[parameters('PlaybookName')]",
+      "tags": {
+        "LogicAppsCategory": "security",
+        "hidden-SentinelTemplateName": "[parameters('PlaybookName')]",
+        "hidden-SentinelTemplateVersion": "1.0"
+      },
+      "identity": { "type": "SystemAssigned" },
+      "properties": {
+        "definition": { ... },
+        "parameters": { ... }
+      },
+      "metadata": {
+        "title": "MyProduct - Enrich Incident",
+        "description": "Enriches a Sentinel incident with threat data from MyProduct.",
+        "prerequisites": ["MyProduct API key stored in Key Vault"],
+        "postDeployment": [
+          "1. Authorize Logic App connections.",
+          "2. Assign Sentinel Responder role to managed identity.",
+          "3. Attach to an automation rule."
+        ],
+        "lastUpdateTime": "2026-06-01T00:00:00.000Z",
+        "entities": ["IP", "Account"],
+        "tags": ["Enrichment"],
+        "releaseNotes": [
+          { "version": "1.0", "title": "Initial release", "notes": ["Initial release."] }
+        ],
+        "support": { "tier": "partner" },
+        "author": { "name": "Your Company" }
+      }
+    }
+  ]
+}
+```
+
+| `metadata` field | Notes |
+|---|---|
+| `title` | Playbook display name. |
+| `description` | What the playbook does and which entity or incident type it acts on. |
+| `prerequisites` | Array of strings listing required API keys, licenses, and role assignments. Use `["None"]` if there are none. |
+| `postDeployment` | Numbered steps: authorize connections, assign roles, attach to an automation rule. |
+| `lastUpdateTime` | ISO 8601 timestamp, for example `"2026-06-01T00:00:00.000Z"`. |
+| `entities` | Entity types the playbook acts on, such as `"Account"`, `"IP"`, `"URL"`, `"Host"`, and `"FileHash"`. |
+| `tags` | Action tags: `"Enrichment"`, `"Remediation"`, `"Response"`, `"Notification"`, `"Utilities"`. |
+| `releaseNotes` | Array of `{ "version", "title", "notes": [...] }` objects. Required. |
+| `support.tier` | `"community"`, `"partner"`, or `"microsoft"`. |
+| `author.name` | Author display name. |
+
+### Trigger type
+
+The playbook can be triggered by either a Sentinel incident or an individual alert. The two trigger types have different use cases and are implemented in different ways:
+
+
+| | Incident trigger | Alert trigger |
+|---|---|---|
+| **When it fires** | When a Sentinel incident is created or updated | When an individual alert fires (before grouping into an incident) |
+| **Attached via** | Automation rule | Analytics rule → automated response |
+| **Recommended for** | Most use cases.  Richer context, easier to write | Legacy scenarios |
+| **ARM trigger type** | `ApiConnectionWebhook` with `sentinel-incident-trigger` body | `ApiConnectionWebhook` with `sentinel-alert-trigger` body |
+
+
+The following directory structures are valid for playbooks with a single trigger type or both trigger types. The ARM template file must be named `azuredeploy.json`. Include a `readme.md` file at the playbook root to detail configuration steps during and after deployment.
+
+```
+Solutions/<YourSolutionName>/Playbooks/
+└── <PlaybookName>/
+    ├── azuredeploy.json
+    └── readme.md
+```
+
+The layout below uses both trigger types. Each variant gets its own ARM template; one `readme.md` at the playbook root covers both:
+
+```
+└── <PlaybookName>/
+    ├── incident-trigger/
+    │   └── azuredeploy.json
+    ├── alert-trigger/
+    │   └── azuredeploy.json
+    └── readme.md
+```
+
+> [!CAUTION]
+> Common ARM-TTK failures in playbook PRs include the following:
+> - Missing `PlaybookName` parameter. The workflow resource `name` must be `"[parameters('PlaybookName')]"`
+> - Connection names not derived from `PlaybookName`. Use `"[concat('azuresentinel-', parameters('PlaybookName'))]"`
+> - Wrong `$schema`. Use `2019-04-01`, not the older `2015-01-01`
+> - Hardcoded subscription IDs, tenant IDs, or resource group names. Use `subscription().subscriptionId` and `resourceGroup().location`
+> - Missing `releaseNotes` in `metadata`
+
+### readme.md
+
+The readme.md file is validated during PR review. Missing sections are consistently flagged as blockers. Copy and fill in the template below:
+
+```markdown
+# <PlaybookName>
+
+<One sentence describing what the playbook does and which entity or incident type it acts on.>
+
+## Quick Deployment
+
+**Deploy with incident trigger** (recommended)
+
+After deployment, attach this playbook to an **automation rule** so it runs when the incident is created.
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FSolutions%2F<YourSolution>%2FPlaybooks%2F<PlaybookName>%2Fincident-trigger%2Fazuredeploy.json)
+[![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FSolutions%2F<YourSolution>%2FPlaybooks%2F<PlaybookName>%2Fincident-trigger%2Fazuredeploy.json)
+
+**Deploy with alert trigger**
+
+After deployment, attach this playbook to an **analytics rule** under Automated response.
+
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FSolutions%2F<YourSolution>%2FPlaybooks%2F<PlaybookName>%2Falert-trigger%2Fazuredeploy.json)
+[![Deploy to Azure Gov](https://aka.ms/deploytoazuregovbutton)](https://portal.azure.us/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FSolutions%2F<YourSolution>%2FPlaybooks%2F<PlaybookName>%2Falert-trigger%2Fazuredeploy.json)
+
+## Prerequisites
+
+<List required API keys, licenses, or custom connectors that must be deployed first. Use "None" if there are no prerequisites.>
+
+## Post-deployment
+
+1. Assign the **Microsoft Sentinel Responder** role to the Logic App's managed identity.
+2. Authorize Logic App API connections: open each connection resource → **Edit API connection** → **Authorize** → sign in.
+3. <If applicable: grant Graph/REST API permissions to the managed identity's service principal object ID.>
+4. Attach the playbook to an automation rule (incident trigger) or analytics rule automated response (alert trigger).
+
+## Screenshots
+
+<Add at least one screenshot of the Logic App designer view.>
+```
+
+For a single-trigger playbook, include only the relevant button pair and omit the trigger subfolder from the path (`...%2FPlaybooks%2F<PlaybookName>%2Fazuredeploy.json`).
+
+| Section | PR failure if missing? | Reason |
+|---|---|
+| Quick Deployment buttons | Yes | Reviewers flag missing deploy buttons on every submission |
+| Prerequisites | Yes | At least `None` must be present |
+| Post-deployment steps | Yes | Missing role assignment steps are the most common blocker |
+| Screenshots | Yes |
+
+### Reference examples
+
+- [Microsoft Entra ID — Block-AADUser (incident + alert + entity triggers)](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Microsoft%20Entra%20ID/Playbooks/Block-AADUser)
+- [CrowdStrike Falcon — CrowdStrike_Base (Key Vault + base playbook pattern)](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/CrowdStrike%20Falcon%20Endpoint%20Protection/Playbooks/CrowdStrike_Base)
+- [Okta Single Sign-On — OktaCustomConnector (custom connector ARM template)](https://github.com/Azure/Azure-Sentinel/tree/master/Solutions/Okta%20Single%20Sign-On/Playbooks/OktaCustomConnector)

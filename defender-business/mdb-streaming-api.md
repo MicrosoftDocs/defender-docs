@@ -3,7 +3,7 @@ title: Use the streaming API with Microsoft Defender for Business
 description:  The Defender for Endpoint streaming API is available for Defender for Business and Microsoft 365 Business Premium. Stream of device file, registry, network, sign-in events, and other data to Azure Event Hubs, Azure Storage, and Microsoft Sentinel to support advanced hunting and attack detection.
 author: chrisda
 ms.author: chrisda
-ms.date: 06/11/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.service:  microsoft-365-security
 ms.localizationpriority: medium
@@ -15,7 +15,7 @@ ms.collection:
 - tier1
 ms.reviewer: davidb, nehabha, efratka
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1013
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Use the streaming API with Microsoft Defender for Business
@@ -45,10 +45,9 @@ To stream Defender for Business data to Microsoft Sentinel, complete the followi
 
 ## Use the streaming API with Event Hubs
 
-To configure streaming to Azure Event Hubs, complete the following steps.
+[Azure Event Hubs](/azure/event-hubs/event-hubs-about) requires an Azure subscription. Before you begin, make sure to create an [event hub](/azure/event-hubs/) in your organization. Then, sign in to the [Azure portal](https://ms.portal.azure.com/), go to **Subscriptions** \> **Your subscription** \> **Resource Providers** \> **Register to Microsoft.insights**.
 
-> [!NOTE]
-> [Azure Event Hubs](/azure/event-hubs/event-hubs-about) requires an Azure subscription. Before you begin, make sure to create an [event hub](/azure/event-hubs/) in your organization. Then, sign in to the [Azure portal](https://ms.portal.azure.com/), go to **Subscriptions** \> **Your subscription** \> **Resource Providers** \> **Register to Microsoft.insights**.
+To configure streaming to Azure Event Hubs, complete the following steps.
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
@@ -88,15 +87,18 @@ The following JSON sample shows the format of each event hub message that Azure 
 }
 ```
 
-Each event hub message in Azure Event Hubs contains a list of records. Each record contains the event name, the time Defender for Business received the event, the organization to which it belongs (you get events from your organization only), and the event in JSON format in a property called "**properties**". For more information about the schema, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
+Each event hub message in Azure Event Hubs contains a list of records. Each record contains the event name, the time Defender for Business received the event, the organization to which it belongs (you get events from your organization only), and the event in JSON format in a property called "**properties**". For more information about the schema of Advanced Hunting events streamed to Azure Event Hubs, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
 ## Use the streaming API with Azure Storage
 
-Azure Storage requires an Azure subscription. Before you begin, make sure to create a [Storage account](/azure/storage/common/storage-account-overview) in your organization. Then, sign in to your [Azure organization](https://ms.portal.azure.com/), and go to **Subscriptions** \> **Your subscription** \> **Resource Providers** \> **Register to Microsoft.insights**.
+To configure streaming to Azure Storage, complete the following steps.
+
+> [!NOTE]
+> [Azure Storage](/azure/storage/common/storage-introduction) requires an Azure subscription. Before you begin, make sure to create a [Storage account](/azure/storage/common/storage-account-overview) in your organization. Then, sign in to your [Azure organization](https://ms.portal.azure.com/), and go to **Subscriptions** \> **Your subscription** \> **Resource Providers** \> **Register to Microsoft.insights**.
 
 ### Enable raw data streaming
 
-To enable raw data streaming to Azure Storage, complete the following steps.
+Raw data streaming forwards security event data from Defender for Business directly to your Azure Storage account, where you can retain and analyze it. To enable raw data streaming to Azure Storage, complete the following steps.
 
 1. Go to the [Microsoft Defender portal](https://security.microsoft.com) and sign in.
 
@@ -126,7 +128,7 @@ A blob container is created for each event type. The following JSON sample shows
   }
   ```
 
-Each blob contains multiple rows. Each row contains the event name, the time Defender for Business received the event, the organization to which it belongs (you get events from your organization only), and the event in JSON format properties. For more information about the schema of Microsoft Defender for Endpoint events, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
+Each blob contains multiple rows. Each row contains the event name, the time Defender for Business received the event, the organization to which the event belongs (you get events from your organization only), and the event in JSON format properties. For more information about the advanced hunting event data streamed to Azure Storage, see [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
 
 ## See also
 

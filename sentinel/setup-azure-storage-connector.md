@@ -3,11 +3,11 @@ title: Set up the Azure Storage connector to stream logs to Microsoft Sentinel
 description: Learn how to set up the Azure Storage Blob connector to ingest logs from Azure Storage into Microsoft Sentinel using the Codeless Connector Framework.
 author: EdB-MSFT
 ms.author: edbaynash
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 ms.topic: how-to
 ms.service: microsoft-sentinel
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security engineer, I want to set up an Azure Storage Blob connector so that I can ingest logs from Azure Storage into Microsoft Sentinel.
 
@@ -32,7 +32,7 @@ Before you begin, ensure you have:
 
 ## Connector resource overview
 
-The Azure Storage Blob connector uses a queue-based blob-pointer model to subscribe to blob-created events in your storage account. An Event Grid system topic subscription listens for blob creation activity and pushes events, based on configurable filtering criteria, to an Azure Storage queue. Multiple connector instances can ingest from the same container while scoping files by folder and file pattern. You can control filtering through the portal or the connector ARM template by setting blob prefix and suffix patterns.
+The Azure Storage Blob connector uses a queue-based blob-pointer model to subscribe to blob-created events in your storage account. An Event Grid system topic subscription listens for blob creation activity and pushes events, based on configurable filtering criteria, to an Azure Storage queue. Multiple connector instances can ingest from the same container while scoping files by folder and file pattern. You can control filtering through the portal or the connector Azure Resource Manager (ARM) template by setting blob prefix and suffix patterns.
 
 :::image type="content" source="./media/setup-azure-storage-connector/overview-diagram.png" lightbox="./media/setup-azure-storage-connector/overview-diagram.png" alt-text="A diagram showing the Azure Storage Blob connector architecture, including blob created events, Event Grid, storage queue, and Microsoft Sentinel ingestion flow.":::
 
@@ -42,7 +42,7 @@ The Microsoft Sentinel connector:
 - Fetches files from the Azure Storage Blob container based on the path in the queue message.
 - Deletes the queue message after successful forwarding.
 
-The connector authenticates to the Storage Account by using a service principal accessible to the connector application. For the application IDs per cloud and the full template schema, see the [Azure Storage Blob connectors API reference](data-connection-rules-reference-azure-storage.md). Use the ARM template automation to verify that the service principal exists and to apply the required role assignments on the storage account.
+The connector authenticates to the Storage Account by using a service principal accessible to the connector application. For the application IDs per cloud and the full template schema, see the [Azure Storage Blob connectors API reference](data-connection-rules-reference-azure-storage.md). Use the ARM template automation to verify that the connector service principal exists and to apply the required role assignments on the storage account.
 
 ## Create an Azure Storage Blob connector
 

@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to export and import analytics rules using ARM templates so that I can manage and control my Microsoft Sentinel deployments as code.
 
@@ -21,6 +21,8 @@ ms.custom: msecd-doc-authoring-1014
 > [!IMPORTANT]
 > Exporting and importing rules is in **PREVIEW**. See the [Supplemental Terms of Use for Microsoft Azure Previews](https://azure.microsoft.com/support/legal/preview-supplemental-terms/) for additional legal terms that apply to Azure features that are in beta, preview, or otherwise not yet released into general availability.
 
+This article shows you how to export Microsoft Sentinel analytics rules to Azure Resource Manager (ARM) template JSON files and import rules from those files into other workspaces or tenants. Use this feature to manage your analytics rules as code, enabling version control and consistent deployment across environments.
+
 <a name="introduction"></a>
 ## How ARM template export and import works for analytics rules
 
@@ -30,7 +32,8 @@ The exported JSON file is workspace-independent, so it can be imported to other 
 
 The file includes all the parameters defined in the analytics rule, so for **Scheduled** rules it includes the underlying query and its accompanying scheduling settings, the severity, incident creation, event- and alert-grouping settings, assigned MITRE ATT&CK tactics, and more. Any type of analytics rule - not just **Scheduled** - can be exported to a JSON file.
 
-## Export rules
+<a name="export-rules"></a>
+## Export analytics rules to ARM templates
 
 Perform the following steps to export an analytics rule to an ARM template file:
 
@@ -47,7 +50,8 @@ Perform the following steps to export an analytics rule to an ARM template file:
     >
     > - Be aware that in this scenario, a single file (named *Azure_Sentinel_analytic_**rules**.json*) will be created, and will contain JSON code for all the exported rules.
 
-## Import rules
+<a name="import-rules"></a>
+## Import analytics rules from ARM templates
 
 Perform the following steps to import an analytics rule from an ARM template file:
 

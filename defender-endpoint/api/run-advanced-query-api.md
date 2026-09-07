@@ -13,7 +13,8 @@ ms.collection:
 ms.topic: reference
 ms.subservice: reference
 ms.custom: api
-ms.date: 03/12/2026
+search.appverid: met150
+ms.date: 07/28/2026
 appliesto:
   - Microsoft Defender for Endpoint
 ---
@@ -23,7 +24,9 @@ appliesto:
 [!INCLUDE [Microsoft Defender XDR rebranding](../../includes/microsoft-defender.md)]
 
 > [!WARNING]
-> This advanced hunting API is an older version with limited capabilities. A more comprehensive version of the advanced hunting API that can query more tables is already available in the **[Microsoft Graph security API](/graph/api/resources/security-api-overview)**. See **[Advanced hunting using Microsoft Graph security API](/graph/api/resources/security-api-overview#advanced-hunting)**
+> The Microsoft Defender for Endpoint advanced hunting API is old and has limited capabilities. A more comprehensive version of the advanced hunting API that can query more tables is already available in the **[Microsoft Graph security API](/graph/api/resources/security-api-overview)**. For more information, see **[Advanced hunting using Microsoft Graph security API](/graph/api/resources/security-api-overview#advanced-hunting)**.
+>
+> The Microsoft Defender for Endpoint advanced hunting API is transitioning to the Microsoft Graph security API, which includes advanced hunting capabilities. The Microsoft Graph security API provides broader data coverage, improved consistency, and better scalability for automation and security workflows. Retirement began in January 2026. After retirement completes, the Microsoft Defender for Endpoint advanced hunting API no longer functions. For the retirement timeline, see [MC1220762](https://admin.microsoft.com/Adminportal/Home#/MessageCenter/:/messages/MC1220762). For more information to help with your migration, see **[Use the Microsoft Graph security API](/graph/api/resources/security-api-overview)**.
 
 [!INCLUDE [Microsoft Defender for Endpoint API URIs for US Government](../../includes/microsoft-defender-api-usgov.md)]
 

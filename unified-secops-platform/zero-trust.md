@@ -39,7 +39,7 @@ For more information, see:
 - [What is Microsoft Defender XDR?](/defender-xdr/microsoft-365-defender)
 - [What is Microsoft Defender for Cloud?](/azure/defender-for-cloud/defender-for-cloud-introduction)
 - [What is Microsoft Entra ID Protection?](/entra/id-protection/overview-identity-protection)
-- [What is Microsoft Defender Threat Intelligence (Defender TI)?](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti)
+- [What is Microsoft Threat Intelligence in Microsoft Defender XDR?](/defender-xdr/defender-threat-intelligence)
 - [What is Microsoft Security Copilot?](/copilot/security/microsoft-security-copilot)
 - [What is Microsoft Security Exposure Management?](/security-exposure-management/get-started-exposure-management)
 - [What is Microsoft Sentinel?](/azure/sentinel/overview?tabs=defender-portal)

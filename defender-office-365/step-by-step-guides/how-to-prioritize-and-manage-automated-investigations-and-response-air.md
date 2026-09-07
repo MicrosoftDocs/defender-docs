@@ -10,21 +10,21 @@ ms.collection:
 - m365-security
 - tier3
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Prioritize and manage Automated Investigations and Response (AIR)
 
-Automated Investigation and Response (AIR) saves your security operations team time and effort.
+Automated Investigation and Response (AIR) saves your security operations team time and effort. This article explains how to review, approve, and manage AIR actions from the Action Center in the Microsoft Defender portal.
 
 - When alerts are triggered, automated investigation will determine the scope of impact of a threat in your organization and provide recommended remediation actions.
 - Security teams can save time by leveraging AIR automation to reduce the need for manual hunting.
 - These investigations can identify emails that haven't been cleaned-up by Zero-hour Auto Purge (ZAP) or other remediation.
 - AIR investigations also identify mailbox configurations that may be risky or indicate a compromised mailbox.
 
-Investigation actions (and investigations) are accessible from several points in the Microsoft Security portal: via *Incidents*, via *Alerts*, or via *Action Center*. Which entry point an admin uses is based on the workflow the admin is pursuing.
+Investigation actions (and investigations) are accessible from several points in the Microsoft Security portal: via *Incidents*, via *Alerts*, or via *Action Center*. Whether an admin uses Incidents, Alerts, or Action Center depends on the workflow the admin is pursuing.
 
 ## Why use the Action Center workflow
 
@@ -44,7 +44,7 @@ Perform the following steps to review and approve pending AIR actions in the Act
 2. When the Action center loads, filter and prioritize by clicking columns to sort the actions, or press **Filters** to apply a filter such as *entity type* (for a particular URL) or action type (such as soft delete email).
 3. A flyout will open once an action is clicked. The flyout appears on the right-hand side of the screen for review.
 4. For more information about why an action is requested, select **Open investigation page** in the flyout to learn more about the investigation or alerts linked to the selected action. (Admins can also approve actions seen on the investigation page by selecting the *Pending Actions* tab.)
-5. Otherwise, select **Approve** to take the recommended action directly from the Action Center.
+5. If you don't need more investigation details, select **Approve** to take the recommended action directly from the Action Center.
 6. Reject the action, if you determine it's unnecessary.
 
 ## Check AIR history

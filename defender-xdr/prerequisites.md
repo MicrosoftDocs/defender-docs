@@ -19,13 +19,13 @@ ms.custom: sfi-ga-nochange
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Learn about licensing and other requirements for provisioning and using [Microsoft Defender XDR](microsoft-365-defender.md).
+Learn about licensing and other requirements for provisioning and using [Microsoft Defender](microsoft-365-defender.md).
 
 ## Licensing requirements
 
-Microsoft Defender XDR natively correlates Microsoft security products' signals, providing security operations teams a single pane of glass to detect, investigate, respond, and protect your assets. These signals are dependent on the license that you have and the access provisioned to you.
+Microsoft Defender natively correlates Microsoft security products' signals, providing security operations teams a single pane of glass to detect, investigate, respond, and protect your assets. These signals are dependent on the license that you have and the access provisioned to you.
 
-Any of these licenses give you access to Microsoft Defender XDR features via the Microsoft Defender portal without any additional cost:
+Any of these licenses give you access to Microsoft Defender features via the Microsoft Defender portal without any additional cost:
 
 - Microsoft 365 E5 or A5
 - Microsoft 365 E3 with the Microsoft Defender Suite add-on
@@ -47,7 +47,7 @@ For more information, [view the Microsoft 365 Enterprise service plans](https://
 
 > [!NOTE]
 > - Automatic attack disruption requires Microsoft Defender for Endpoint Plan 2. For more information, see [Configure automatic attack disruption capabilities](configure-attack-disruption.md).
-> - Threat analytics also requires Defender for Endpoint Plan 2. For more information, see [Threat analytics in Microsoft Defender XDR](threat-analytics.md).
+> - Threat analytics also requires Defender for Endpoint Plan 2. For more information, see [Threat analytics in Microsoft Defender](threat-analytics.md).
 
 > Don't have license yet? [Try or buy a Microsoft 365 subscription](/microsoft-365/commerce/try-or-buy-microsoft-365)
 
@@ -60,20 +60,20 @@ Go to Microsoft 365 admin center ([admin.microsoft.com](https://admin.microsoft.
 
 ## Required permissions
 
-You must at least be a **security administrator** in Microsoft Entra ID to turn on Microsoft Defender XDR. For the list of roles required to use Microsoft Defender XDR and information on how access to data is regulated, read about [managing access to Microsoft Defender XDR](m365d-permissions.md).
+You must at least be a **security administrator** in Microsoft Entra ID to turn on Microsoft Defender. For the list of roles required to use Microsoft Defender and information on how access to data is regulated, read about [managing access to Microsoft Defender](m365d-permissions.md).
 
 > [!IMPORTANT]
 > Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
 ## Browser requirements
 
-Access Microsoft Defender XDR in the Microsoft Defender portal using Microsoft Edge, Internet Explorer 11, or any HTML 5 compliant web browser.
+Access Microsoft Defender in the Microsoft Defender portal using Microsoft Edge, Internet Explorer 11, or any HTML 5 compliant web browser.
 
 ## Availability to US GCC, GCC High, and other US government institutions
 
-For information related to US Government customers, see [Microsoft Defender XDR for US Government customers](usgov.md).
+For information related to US Government customers, see [Microsoft Defender for US Government customers](usgov.md).
 
-Currently, the Microsoft Defender for Office 365 integration into the unified Microsoft Defender XDR features are not available to customers in the following Office 365 datacenter locations:
+Currently, the Microsoft Defender for Office 365 integration into the unified Microsoft Defender features are not available to customers in the following Office 365 datacenter locations:
 
 - Norway
 - South Africa
@@ -83,7 +83,7 @@ Currently, the Microsoft Defender for Office 365 integration into the unified Mi
 
 ## Related articles
 
-- [Microsoft Defender XDR overview](microsoft-365-defender.md)
+- [Microsoft Defender overview](microsoft-365-defender.md)
 - [Turn on Microsoft Defender XDR](m365d-enable.md)
 - [Manage access and permissions](m365d-permissions.md)
 

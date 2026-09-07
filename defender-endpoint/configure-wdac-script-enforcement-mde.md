@@ -11,8 +11,8 @@ ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.custom: msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: msecd-doc-authoring-1016
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender for Endpoint Plan 1 and Plan 2
 - Microsoft Defender XDR
@@ -22,10 +22,12 @@ ai-usage: ai-assisted
 
 # Allow Microsoft Defender for Endpoint scripts with WDAC script enforcement
 
-This article explains how to configure allow rules in Windows Defender Application Control (WDAC), also known as [App Control for Business](/windows/security/application-security/application-control/app-control-for-business/appcontrol), to let built-in Microsoft Defender for Endpoint PowerShell scripts run in **FullLanguage** mode. Without the appropriate WDAC allow rules, MDE features that rely on PowerShell scripts don't work as expected.
+This article explains how to configure allow rules in Windows Defender Application Control (WDAC), also known as [App Control for Business](/windows/security/application-security/application-control/app-control-for-business/appcontrol), to let built-in Microsoft Defender for Endpoint PowerShell scripts run in **FullLanguage** mode. Without the appropriate WDAC allow rules, MDE features that rely on PowerShell scripts don't work as expected. Before you start, review the [prerequisites and planning considerations](#before-you-begin).
 
 <a name="applies-to"></a>
 ## Supported platforms and requirements
+
+This configuration requires the following platforms and components:
 
 - Windows 10 or later
 - Windows Server 2019 or later
@@ -380,6 +382,9 @@ To finish the certificate-based rule setup:
 1. Deploy the updated policy using your standard deployment method (for example, Microsoft Intune, Group Policy, or Configuration Manager).
 
 ## Create path-based allow rules (use only when necessary)
+
+> [!WARNING]
+> Broad path-based allow rules can weaken your security posture. Avoid user-writable locations and wide wildcards.
 
 Path-based allow rules trust all content in a specific folder. Use path-based rules only when certificate-based rules aren't feasible, such as for unsigned line-of-business scripts that you fully control.
 

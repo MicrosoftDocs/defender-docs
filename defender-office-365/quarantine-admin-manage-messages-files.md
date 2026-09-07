@@ -9,13 +9,13 @@ ms.collection:
   - m365-security
   - tier1
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - seo-marvel-apr2020
   - sfi-ga-nochange
   - sfi-image-nochange
 description: Admins can learn how to view and manage quarantined messages for all users in Microsoft 365 organizations with cloud mailboxes. Admins in organizations with Microsoft Defender for Office 365 can also manage quarantined files in SharePoint, OneDrive, and Microsoft Teams.
 ms.service: defender-office-365
-ms.date: 06/15/2026
+ms.date: 08/31/2026
 ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/eop-about" target="_blank">Built-in security features for all cloud mailboxes</a>
@@ -51,6 +51,8 @@ Watch this short video to learn how to manage quarantined messages as an admin.
 
 ## What do you need to know before you begin?
 
+Before you begin, review the following portal access, permissions, and retention information:
+
 - To open the Microsoft Defender portal, go to <https://security.microsoft.com>. To go directly to the **Quarantine** page, use <https://security.microsoft.com/quarantine>.
 
 - To connect to Exchange Online PowerShell, see [Connect to Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell).
@@ -64,7 +66,8 @@ Watch this short video to learn how to manage quarantined messages as an admin.
     - _Take action on quarantined messages for all users_: Membership in the **Quarantine Administrator**, **Security Administrator**, or **Organization Management** role groups.
       - _Submit messages from quarantine to Microsoft_: Membership in the **Security Administrator** role groups.
       - _Use **Block sender** to [add senders to your own Blocked Senders list](#block-email-senders-from-quarantine)_: Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**. Assigning any permission that gives admin access to quarantine (for example, **Security Reader** or **Global Reader**) gives access to **Block sender** in quarantine if the user filters the quarantine results by **Recipient** \> **Only me**.
-    - _Read-only access to quarantined messages for all users_: Membership in the **Security Reader** or **Global Reader** role groups.
+    - _Read-only access to quarantined messages for all users_: Membership in the **Global Reader**, **Security Reader**, or **Security Operator** role groups.
+    - _Preview and download quarantined messages for all users_: Membership in the **Global Reader**, **Security Reader**, or **Security Operator** role groups.
   - [Microsoft Entra permissions](/entra/identity/role-based-access-control/manage-roles-portal): Membership in these roles gives users the required permissions _and_ permissions for other features in Microsoft 365:
     - _Take action on quarantined messages for all users_: Membership in the **Security Administrator** or **Global Administrator**<sup>\*</sup> roles.
 
@@ -73,7 +76,8 @@ Watch this short video to learn how to manage quarantined messages as an admin.
 
       - _Submit messages from quarantine to Microsoft_:  Membership in the **Security Administrator** role.
       - _Use **Block sender** to [add senders to your own Blocked Senders list](#block-email-senders-from-quarantine)_: Admins see **Block sender** only if they filter the quarantine results by **Recipient** \> **Only me** instead of the default value **All users**. Assigning any permission that gives admin access to quarantine (for example, **Security Reader** or **Global Reader**) gives access to **Block sender** in quarantine if the user filters the quarantine results by **Recipient** \> **Only me**.
-    - _Read-only access to quarantined messages for all users_: Membership in the **Global Reader** or **Security Reader** roles.
+    - _Read-only access to quarantined messages for all users_: Membership in the **Global Reader**, **Security Reader**, or **Security Operator** roles.
+    - _Preview and download quarantined messages for all users_: Membership in the **Global Reader**, **Security Reader**, or **Security Operator** roles.
 
   > [!NOTE]
   > Currently, roles assigned through Azure Privileged Identity Management aren't supported in quarantine. For more information about PIM, see [Privileged Identity Management (PIM) and why to use it with Microsoft Defender for Office 365](/defender-office-365/pim-in-mdo-configure).
@@ -160,6 +164,7 @@ To filter the entries, select :::image type="icon" source="media/defender-portal
   - **Admin action - File type block**: Messages blocked as malware by the common attachments filter in anti-malware policies. For more information, see [Anti-malware policies](anti-malware-protection-about.md#anti-malware-policies).
   - **Phishing**: The spam filter verdict was **Phishing** or anti-phishing protection quarantined the message ([spoof settings](anti-phishing-policies-about.md#spoof-settings) or [impersonation protection](anti-phishing-policies-about.md#impersonation-settings-in-anti-phishing-policies-in-microsoft-defender-for-office-365)).
   - **High confidence phishing**
+  - **Password protected item**: Safe Attachments quarantined the message because it contains an encrypted (password-protected) attachment that can't be scanned. For more information, see [Encrypted (password-protected) attachments in Safe Attachments policies](safe-attachments-about.md#encrypted-password-protected-attachments-in-safe-attachments-policies).
 - **Recipient**: Select one of the following values:
   - **All users** (the default value, even if it doesn't appear selected)
   - **Only me**: Show messages sent to the currently signed in recipient only. This value is required for admins to see the [Allow sender](#allow-email-senders-from-quarantine) and [Block sender](#block-email-senders-from-quarantine) actions.
@@ -284,7 +289,7 @@ After you select the quarantined message, the available actions are described in
 
 #### Release quarantined email
 
-This action isn't available for email messages already released (the **Release status** value is **Released**).
+The **Release** action isn't available for email messages already released (the **Release status** value is **Released**).
 
 Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.
 
@@ -292,6 +297,7 @@ Messages are automatically deleted from quarantine after the date shown in the *
 - You can't choose to release messages only to recipients who didn't receive the released message.
 - Members of the **Security Administrators** role group can see and use the **Submit the message to Microsoft to improve detection** and **Allow email with similar attributes** options.
 - Users can report false positives to Microsoft from quarantine, depending on the value of the **Reporting from quarantine** setting in [user reported settings](submissions-user-reported-messages-custom-mailbox.md).
+- For messages quarantined by Safe Attachments because they contain an encrypted (password-protected) attachment that couldn't be scanned, you release the message with full authority without providing the attachment password. Only end users are prompted for the password when they release these messages themselves. For more information, see [Encrypted (password-protected) attachments in Safe Attachments policies](safe-attachments-about.md#encrypted-password-protected-attachments-in-safe-attachments-policies).
 
 > [!TIP]
 >
@@ -640,7 +646,7 @@ In the details flyout that opens, the following information is available:
   - **Last modified By**: The user who last modified the file.
   - **Secure Hash Algorithm 256-bit (SHA-256) value**: You can use this hash value to identify the file in other reputation stores or in other locations in your environment.
 
-To take action on the file, see the next section.
+To take action on the file, see [Take action on quarantined files](#take-action-on-quarantined-files).
 
 > [!TIP]
 > To see details about other quarantined files without leaving the details flyout, use :::image type="icon" source="media/updownarrows.png" border="false"::: **Previous item** and **Next item** at the top of the flyout.
@@ -659,7 +665,7 @@ After you select the quarantined file, the available actions in the file details
 
 #### Release quarantined files from quarantine
 
-This action isn't available for files already released (the **Released status** value is **Released**).
+The **Release file** action isn't available for files already released (the **Released status** value is **Released**).
 
 Messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages, but the blocked file remains in SharePoint or OneDrive in the blocked state.
 
@@ -822,7 +828,7 @@ After you select the quarantined Teams message, the available actions are descri
 
 #### Release quarantined Teams messages
 
-This action isn't available for Teams messages already released (the **Release status** value is **Released**).
+The **Release** action isn't available for Teams messages already released (the **Release status** value is **Released**).
 
 Teams messages are automatically deleted from quarantine after the date shown in the **Expires** column if you don't release or manually remove the messages.
 
@@ -913,11 +919,11 @@ When you select multiple quarantined messages on the **Teams messages** tab by s
 
 When a user requests the release of a quarantined Teams message, the **Release status** value changes to **Release requested**, and an admin can approve or deny the request.
 
-For more information, see [Approve or deny release requests from users](#approve-or-deny-release-requests-from-users-for-quarantined-email).
+For more information, see [Approve or deny release requests from users for quarantined email](#approve-or-deny-release-requests-from-users-for-quarantined-email).
 
 ## Use PowerShell to manage quarantined messages
 
-The [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) cmdlets that you use to view and manage messages and files in quarantine are described in this section.
+As an alternative to the Microsoft Defender portal, you can use the following [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online-powershell) cmdlets to view and manage quarantined messages and files:
 
 - [Delete-QuarantineMessage](/powershell/module/exchangepowershell/delete-quarantinemessage)
 - [Export-QuarantineMessage](/powershell/module/exchangepowershell/export-quarantinemessage)
@@ -925,6 +931,10 @@ The [Exchange Online PowerShell](/powershell/exchange/connect-to-exchange-online
 - [Preview-QuarantineMessage](/powershell/module/exchangepowershell/preview-quarantinemessage): This cmdlet is for messages only, not quarantined files.
 - [Release-QuarantineMessage](/powershell/module/exchangepowershell/release-quarantinemessage)
 
-## For more information
+> [!IMPORTANT]
+> The _PermissionTo\*_ properties returned by **Get-QuarantineMessage** reflect the permissions of the user who runs the cmdlet. For example, admins who have permission to release quarantined messages might see the value `True` for the _PermissionToRelease_, _PermissionToAllowSender_, and _PermissionToDownload_ properties, even when the quarantine policy assigned to the message is `AdminOnlyAccessPolicy`. These values don't represent the actions available to message recipients. To view the end-user permissions configured in a quarantine policy, use **Get-QuarantinePolicy** as described in [View quarantine policies in PowerShell](quarantine-policies.md#view-quarantine-policies-in-powershell).
+
+<a name="for-more-information"></a>
+## Related content
 
 For additional background and answers to common questions, see [Quarantined messages FAQ](quarantine-faq.yml).

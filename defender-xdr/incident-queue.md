@@ -160,12 +160,11 @@ You can name an asset&mdash;such as a user, device, mailbox, application name, o
 
 ## Specify a time range
 
-The default list of incidents is for those that occurred in the last six months. You can specify a new time range from the drop-down box next to the calendar icon by selecting:
+The default list of incidents is for those that occurred in the last week. You can specify a new time range from the drop-down box next to the calendar icon by selecting:
 
 - One day
 - Three days
 - One week
-- 30 days
 - 30 days
 - Six months
 - A custom range in which you can specify both dates and times

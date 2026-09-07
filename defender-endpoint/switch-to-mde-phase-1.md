@@ -13,10 +13,10 @@ ms.collection:
   - tier1
 ms.topic: how-to
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - migrationguides
   - admindeeplinkDEFENDER
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 ms.reviewer: jesquive, chventou, jonix, chriggs, owtho, yongrhee
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -26,12 +26,15 @@ ai-usage: ai-assisted
 ---
 # Migrate to Microsoft Defender for Endpoint - Phase 1: Prepare
 
+## Phase 1: Prepare
 
 | ![Diagram of migration phases highlighting Phase 1: Prepare as the current step.](media/phase-diagrams/prepare.png#lightbox)<br/>Phase 1: Prepare | [![Diagram of migration phases highlighting Phase 2: Set up.](media/phase-diagrams/setup.png#lightbox)](switch-to-mde-phase-2.md)<br/>[Phase 2: Set up](switch-to-mde-phase-2.md) | [![Diagram of migration phases highlighting Phase 3: Onboard.](media/phase-diagrams/onboard.png#lightbox)](switch-to-mde-phase-3.md)<br/>[Phase 3: Onboard](switch-to-mde-phase-3.md) |
 |--|--|--|
 |*You're here!*| | |
 
 **Welcome to the Prepare phase of [migrating to Defender for Endpoint](switch-to-mde-overview.md#the-migration-process)**.
+
+In this phase, you ensure your organization's environment is ready before you set up and onboard Defender for Endpoint. This includes getting licensing in place, granting portal access, verifying network connectivity, and capturing performance baselines so you can detect any changes after onboarding.
 
 This migration phase includes the following steps:
 
@@ -65,7 +68,7 @@ Need help with updating your organization's devices? See the following resources
 
 ## Step 2: Get Microsoft Defender for Endpoint Plan 1 or Plan 2
 
-Now that you've updated your organization's devices, the next step is to get Defender for Endpoint, assign licenses, and make sure the service is provisioned.
+After updating your organization's devices, get Defender for Endpoint, assign licenses, and make sure the service is provisioned.
 
 1. Buy or try Defender for Endpoint today. [Start a free trial or request a quote](https://aka.ms/mdatp). Microsoft 365 E3 includes Defender for Endpoint Plan 1, and Microsoft 365 E5 includes Defender for Endpoint Plan 2.
 

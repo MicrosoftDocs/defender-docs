@@ -2,12 +2,13 @@
 title: Download a CSV report
 description: Learn how to download and export your alerts and recommendations to a CSV file from Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 06/30/2025
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a user, I want to learn how to download a CSV report of all alerts from Microsoft Defender for Cloud so that I can analyze the data.
 ai-usage: ai-assisted
 ---
 
-# Download a CSV report
+# Download alerts and recommendations as CSV reports in Defender for Cloud
 
 Microsoft Defender for Cloud has the ability to export all alerts and recommendations to a CSV file. This feature is useful when you want to analyze the data in a different tool or share it with others.
 
@@ -19,11 +20,15 @@ Microsoft Defender for Cloud has the ability to export all alerts and recommenda
 
 ## Prerequisites
 
+Before you export alerts or recommendations, make sure you meet the following prerequisites:
+
 - You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
 - You must [enable Microsoft Defender for Cloud](get-started.md#enable-defender-for-cloud-on-your-azure-subscription) on your Azure subscription.
 
 ## Export alerts to a CSV file
+
+To export your security alerts to a CSV file, follow these steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -37,6 +42,8 @@ Microsoft Defender for Cloud has the ability to export all alerts and recommenda
 
 ## Export recommendations to a CSV file
 
+To export your security recommendations to a CSV file, follow these steps:
+
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
 1. Search for and select **Microsoft Defender for Cloud**.
@@ -45,7 +52,8 @@ Microsoft Defender for Cloud has the ability to export all alerts and recommenda
 
 1. Select **Download CSV report**.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Security alerts schemas](alerts-schemas.md)

@@ -76,7 +76,7 @@ Before you begin, make sure that you have the following prerequisites:
 
 To access the Defender for IoT application within Splunk, you need to download the application from the Splunkbase application store.
 
-**To access the Defender for IoT application in Splunk**:
+To access the Defender for IoT application in Splunk:
 
 1. Navigate to the [Splunkbase](https://splunkbase.splunk.com/) application store.
 
@@ -86,7 +86,7 @@ To access the Defender for IoT application within Splunk, you need to download t
 
 1. Select the **LOGIN TO DOWNLOAD BUTTON**.
 
-## Next steps
+## Next step
 
 > [!div class="nextstepaction"]
 > [Integrations with Microsoft and partner services](integrate-overview.md)

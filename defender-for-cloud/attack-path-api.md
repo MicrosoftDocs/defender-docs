@@ -1,8 +1,9 @@
 ---
-title: Retrieve attack path data with API
-description: Learn how to Retrieve attack path data with APIs in Microsoft Defender for Cloud and enhance the security of your environment.
+title: Retrieve attack path data with the Azure Resource Graph API
+description: Query attack path data programmatically in Microsoft Defender for Cloud by using the Azure Resource Graph API.
 ms.topic: how-to
-ms.date: 05/25/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a developer, I want to learn how to retrieve attack path data with APIs in Microsoft Defender for Cloud so that I can enhance the security of my environment.
 ai-usage: ai-assisted
 ---
@@ -26,7 +27,7 @@ securityresources
 ```
 
 **Get all instances for a specific attack path**:
-For example, `Internet exposed VM with high severity vulnerabilities and read permission to a Key Vault`.
+The following query filters attack path resources within a specific subscription and matches them by display name. Replace `<DISPLAY_NAME>` with the name of the attack path, for example, `Internet exposed VM with high severity vulnerabilities and read permission to a Key Vault`.
 
 ```kusto
 securityresources
@@ -64,7 +65,8 @@ The following table lists the data fields returned from the API response:
 | Properties.graphComponent.connections | List of connections graph components related to the attack path |
 | Properties.AttackPathID | The unique identifier of the attack path instance |
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Build queries with cloud security explorer](how-to-manage-cloud-security-explorer.md)

@@ -1,10 +1,11 @@
 ---
 title: Enable gated deployment for AKS by using the managed cluster API
 description: Learn how to enable gated deployment for AKS by configuring a managed identity for the gated deployment agent through the managed cluster API.
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a Kubernetes administrator, I want to enable gated deployment for AKS by using the managed cluster API so that the gated deployment agent can access vulnerability findings artifacts in Azure Container Registry.
 author: Elazark
 ms.author: elkrieger
-ms.date: 06/01/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ---
@@ -49,6 +50,8 @@ Before you begin, make sure that:
 
 ## Configure the managed identity
 
+Perform the following steps to configure the managed identity for gated deployment:
+
 1. [Create a Managed Service Identity (MSI) that the gated deployment agent uses](/entra/identity/managed-identities-azure-resources/manage-user-assigned-managed-identities-azure-portal).
 
 1. [Assign the **AcrPull** role (or an equivalent read role)](/azure/container-registry/container-registry-rbac-built-in-roles-overview?tabs=registries-configured-with-rbac-registry-abac-repository-permissions) to the MSI on all ACRs the cluster uses.
@@ -63,7 +66,7 @@ Before you begin, make sure that:
 
     :::image type="content" source="media/gated-deployment-infrastructure-as-code/identities.png" alt-text="Screenshot of the managed cluster API configuration showing the identities parameter in the security gating section." lightbox="media/gated-deployment-infrastructure-as-code/identities.png":::
 
-    This ensures the gated deployment agent can use the MSI at runtime.
+    Setting the MSI's objectId in the identities parameter ensures that the gated deployment agent can use the MSI at runtime.
 
 ## Next step
 

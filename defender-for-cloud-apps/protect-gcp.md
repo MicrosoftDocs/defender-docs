@@ -1,23 +1,24 @@
 ---
 title: Protect your Google Cloud Platform environment | Microsoft Defender for Cloud Apps
 description: Connect Google Cloud Platform to Microsoft Defender for Cloud Apps by using the API connector to monitor admin and sign-in activity and detect threats such as brute-force attacks and unusual VM deletions.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # How Defender for Cloud Apps helps protect your Google Cloud Platform (GCP) environment
 
 
-Google Cloud Platform is an IaaS provider that enables your organization to host and manage their entire workloads in the cloud. Along with the benefits of leveraging infrastructure in the cloud, your organization's most critical assets might be exposed to threats. Exposed assets include storage instances with potentially sensitive information, compute resources that operate some of your most critical applications, ports, and virtual private networks that enable access to your organization.
+Google Cloud Platform (GCP) is a cloud provider that lets your organization host and manage workloads in the cloud. The cloud offers many benefits, but it can also expose critical assets to threats. These assets include storage with sensitive data, compute resources that run key apps, ports, and virtual private networks.
 
-Connecting GCP to Defender for Cloud Apps helps you secure your assets and detect potential threats by monitoring administrative and sign-in activities, notifying on possible brute force attacks, malicious use of a privileged user account, and unusual deletions of virtual machines (VMs).
+When you connect GCP to Defender for Cloud Apps, you can better secure your assets and detect threats. The service monitors admin and sign-in activities. It alerts you to brute force attacks, misuse of privileged accounts, and unusual deletions of virtual machines (VMs).
     
-## Main threats
+<a name="main-threats"></a>
+## Main threats to your GCP environment
 
-Connecting GCP to Defender for Cloud Apps helps you detect and address the following threats:
+Defender for Cloud Apps helps you find and address these GCP threats:
 
 - Abuse of cloud resources
 - Compromised accounts and insider threats
@@ -59,9 +60,9 @@ blocking and protecting the download of sensitive data to unmanaged or risky dev
 
 ## Connect Google Cloud Platform to Microsoft Defender for Cloud Apps
 
-The following instructions describe how to connect Microsoft Defender for Cloud Apps to your existing Google Cloud Platform (GCP) account using the connector APIs. This connection gives you visibility into and control over GCP use. For information about how Defender for Cloud Apps protects GCP, see [Protect GCP](protect-gcp.md).
+The following instructions describe how to connect Microsoft Defender for Cloud Apps to your existing Google Cloud Platform (GCP) account using the connector APIs. The connector gives you visibility into and control over GCP use. For information about how Defender for Cloud Apps protects GCP, see [Protect GCP](protect-gcp.md).
 
-We recommend that you use a dedicated project for the integration and restrict access to the project to maintain stable integration and prevent deletions/modifications of the setup process.
+We recommend that you use a dedicated project for the Defender for Cloud Apps–GCP integration and restrict access to the project to maintain stable integration and prevent deletions or modifications of the setup process.
 
 > [!NOTE]
 > The instructions for connecting your GCP environment for auditing follow [Google's recommendations](https://cloud.google.com/blog/products/it-ops/best-practices-for-working-with-google-cloud-audit-logging) for consuming aggregated logs. The integration leverages Google StackDriver and will consume additional resources that might impact your billing. The consumed resources are:
@@ -97,7 +98,7 @@ You can connect GCP **Security auditing** to your Defender for Cloud Apps connec
 To create a service account and assign the required roles, perform the following steps:
 
 1. Create a dedicated service account.
-1. Copy the **Email** value, you'll need this later.
+1. Copy the **Email** value. You'll need the service account email address later.
 1. Assign the **Pub/Sub Admin** role to the service account.
 1. Assign the **Logs Configuration Writer** role to the service account at the organization level.
 
@@ -115,7 +116,7 @@ To generate a private key for the service account, perform the following steps:
 
 #### Retrieve your Organization ID
 
-Make a note of your **Organization ID**, you'll need this later. For more information, see [Getting your organization ID](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
+Make a note of your **Organization ID**. You'll need the Organization ID later. For more information, see [Getting your organization ID](https://cloud.google.com/resource-manager/docs/creating-managing-organization#retrieving_your_organization_id).
 
 
 ### Connect Google Cloud Platform auditing to Defender for Cloud Apps
@@ -142,8 +143,8 @@ This procedure describes how to add the GCP connection details to connect Google
 
 
 1. In the **Enter details** page, do the following, and then select **Submit**.
-    1. In the **Organization ID** box, enter the organization you made a note of earlier.
-    1. In the **Private key file** box, browse to the JSON file you downloaded earlier.
+    1. In the **Organization ID** box, enter the **Organization ID** you saved previously.
+    1. In the **Private key file** box, browse to the JSON private key file you downloaded when you created the service account key.
 
     :::image type="content" source="media/connect-gcp-app-audit.png" alt-text="Screenshot that shows where to enter the organization ID and private key file in the Defender portal." lightbox="media/connect-gcp-app-audit.png":::
 
@@ -152,8 +153,8 @@ This procedure describes how to add the GCP connection details to connect Google
 1. In the list of connectors, on the row in which the GCP connector appears, select **Edit settings**.
 
 1. In the **Enter details** page, do the following, and then select **Submit**.
-    1. In the **Organization ID** box, enter the organization you made a note of earlier.
-    1. In the **Private key file** box, browse to the JSON file you downloaded earlier.
+    1. In the **Organization ID** box, enter the **Organization ID** you saved previously.
+    1. In the **Private key file** box, browse to the JSON private key file you downloaded when you created the service account key.
 
     :::image type="content" source="media/connect-gcp-app-audit.png" alt-text="Screenshot that shows where to enter the organization ID and private key file in the Defender portal." lightbox="media/connect-gcp-app-audit.png":::
 

@@ -1,15 +1,18 @@
 ---
 title: Query the enterprise exposure graph in Microsoft Security Exposure Management
 description: Learn how to query the enterprise exposure graph to understand security risk in Microsoft Security Exposure Management.
-ms.topic: overview
+ms.topic: reference
+ms.author: dlanger
+author: dlanger
 ms.date: 07/30/2025
+ai-usage: ai-assisted
 ---
 
 # Query the enterprise exposure graph
 
 Use the enterprise exposure graph in [Microsoft Security Exposure Management](microsoft-security-exposure-management.md) to proactively hunt for enterprise exposure threats across endpoints, cloud environments, and hybrid infrastructures in [advanced hunting](https://security.microsoft.com/v2/advanced-hunting) in the Microsoft Defender portal. With the integration of Defender for Cloud in the Defender portal, the exposure graph now includes cloud node types and entities from Azure, AWS, and GCP environments.
 
-This article provides some examples, tips, and hints for constructing queries in the enterprise exposure graph.
+The following sections provide examples, tips, and hints for constructing queries in the enterprise exposure graph.
 
 ## Prerequisites
 
@@ -126,11 +129,11 @@ ExposureGraphNodes
 
 To query the exposure graph:
 
-1. In the [Microsoft Defender portal](https://security.microsoft.com/), select **hunting -> advanced hunting**.
+1. In the [Microsoft Defender portal](https://security.microsoft.com/), select **Hunting > Advanced hunting**.
 
 1. In the Query area, type your query. Use the graph schema, functions, and operator tables or the following examples to help you build your query.
 
-1. Select **run query**.
+1. Select **Run query**.
 
 ## Graph-oriented query examples
 

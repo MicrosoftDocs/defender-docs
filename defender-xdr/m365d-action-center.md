@@ -5,7 +5,7 @@ ms.service: defender-xdr
 ms.author: guywild
 author: guywi-ms
 ms.localizationpriority: medium
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.collection:
 - m365-security
 - tier2
@@ -60,6 +60,8 @@ You can navigate to the list of actions pending approval in two different ways:
 <a name="using-the-action-center"></a>
 ## Use the Action center
 
+Use the following steps to open and work with the Action center:
+
 1. Go to <a href="https://go.microsoft.com/fwlink/p/?linkid=2077139" target="_blank">Microsoft Defender portal</a> and sign in.
 
 2. In the navigation pane under **Actions and submissions**, choose **Action center**. Or, in the Automated investigation & response card in the homepage, select **View pending actions**.
@@ -99,7 +101,8 @@ All actions, whether they're pending approval or were already taken, are tracked
 
 In addition to remediation actions that are taken automatically as a result of [automated investigations](m365d-autoir.md), the Action center also tracks actions your security team has taken to address detected threats, and actions that were taken as a result of threat protection features in Microsoft Defender XDR. For more information about automatic and manual remediation actions, see [Remediation actions](m365d-remediation-actions.md).
 
-## Viewing action source details
+<a name="viewing-action-source-details"></a>
+## View action source details
 
 The Action center includes an **Action source** column that tells you where each action came from. The following table describes possible **Action source** values:
 
@@ -150,7 +153,5 @@ You have the following options:
 
 ## Next step
 
-For more information, see the following article:
-
-- [View and manage remediation actions](m365d-autoir-actions.md)
+For more information, see [View and manage remediation actions](m365d-autoir-actions.md).
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

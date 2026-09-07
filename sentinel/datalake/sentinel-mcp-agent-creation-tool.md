@@ -1,36 +1,37 @@
 ---
-title: Agent creation tool collection in Microsoft Sentinel MCP server
+title: Agent Creation Tool Collection in Microsoft Sentinel MCP Server
 titleSuffix: Microsoft Security  
 description: Learn about the different tools available in the Agent creation collection in Microsoft Sentinel 
 ms.author: pauloliveria
 author: poliveria
 ms.reviewer: macasgra
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security analyst, I want to know the different tools available to create AI agents
 ---
 
 # Create AI agents with agent creation collection
 
-The agent creation tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server lets you create effective Microsoft Security Copilot agents. This article explains how to add the tool collection to your code editor and describes each tool and its parameters. Before you start, make sure you meet the prerequisites listed in the next section.
+The agent creation tool collection in the Microsoft Sentinel Model Context Protocol (MCP) server lets you create effective Microsoft Security Copilot agents. This article explains how to add the tool collection to your code editor and describes each tool and its parameters. Before you start, make sure you meet the [prerequisites](#prerequisites).
 
 ## Prerequisites
 
 To access the agent creation tool collection, you must have the following prerequisites:
+
 - [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot)
 - Any of the supported AI-powered code editors and agent-building platforms:
-    - [Visual Studio Code](sentinel-mcp-use-tool-visual-studio-code.md) 
+  - [Visual Studio Code](sentinel-mcp-use-tool-visual-studio-code.md) 
 
 ## Add the agent creation collection
 
-First, set up the Microsoft Sentinel unified MCP server. Follow the steps for your [code editor or agent-building platform](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools).
+The Microsoft Sentinel unified MCP server exposes Sentinel tool collections, including the agent creation collection, to supported code editors and agent-building platforms. To get started, set up the unified MCP server. Follow the steps in [Get started with Microsoft Sentinel MCP server](sentinel-mcp-get-started.md#add-microsoft-sentinels-collection-of-mcp-tools) for your code editor or agent-building platform.
 
-Use the following endpoint URL to connect to the agent creation collection in your code editor:
+When you configure your code editor's MCP settings, use the following endpoint URL for the Security Copilot agent creation tool collection. Enter this URL as the MCP server endpoint to connect your editor to the agent creation tools:
 
 ```text
 https://sentinel.microsoft.com/mcp/security-copilot-agent-creation
@@ -45,6 +46,7 @@ After adding the agent creation tool collection, you can use the following sampl
 The following tools help you search for capabilities, create, compose, evaluate, and deploy Security Copilot agents.
 
 ### Search for tools (`search_for_tools`)
+
 This tool finds relevant tools, including skills, agents and MCP tools, in Security Copilot that can be used to fulfill the intent.
 
 | Parameters | Required? | Description | 
@@ -52,6 +54,7 @@ This tool finds relevant tools, including skills, agents and MCP tools, in Secur
 | `userQuery`| Yes |The query or problem statement to find relevant tools for (for example, "Defender incident details"). |
 
 ### Start agent creation (`start_agent_creation`)
+
 This tool creates a new Security Copilot session to start building a new agent.
 
 | Parameters | Required? | Description | 
@@ -60,6 +63,7 @@ This tool creates a new Security Copilot session to start building a new agent.
 
  
 ### Compose agent (`compose_agent`)
+
 This tool iterates on composing the Security Copilot agent definition in YAML (a structured text format used for configuration).
 
 | Parameters | Required? | Description | 
@@ -69,6 +73,7 @@ This tool iterates on composing the Security Copilot agent definition in YAML (a
 | `existingDefinition`| No |Optional existing agent definition YAML for the tool to edit. This could be generated from this tool's previous runs or provided by adding a YAML file to the context. |
 
 ### Get evaluation (`get_evaluation`)
+
 This tool is called after running the `search_for_tools`, `start_agent_creation`, and `compose_agent` tools to retrieve the result.
 
 | Parameters | Required? | Description | 
@@ -78,6 +83,7 @@ This tool is called after running the `search_for_tools`, `start_agent_creation`
 | `evaluationID`| Yes |The identifier of the evaluation |
 
 ### Deploy agent (`deploy_agent`)
+
 This tool uploads the agent to the Security Copilot user or workspace scope.
 
 | Parameters | Required? | Description | 
@@ -87,5 +93,6 @@ This tool uploads the agent to the Security Copilot user or workspace scope.
 | `agentSkillsetName`| Yes |Agent skill set name. This must exactly match the `Name` value under **Descriptor** in the agent definition YAML. |
 
 ## Related content
+
 - [What is Microsoft Sentinel’s support for Model Context Protocol (MCP)?](sentinel-mcp-overview.md) 
 - [Get started with Microsoft Sentinel MCP server](sentinel-mcp-get-started.md)

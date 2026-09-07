@@ -7,12 +7,12 @@ ms.author: painbar
 author: paulinbar
 ms.topic: how-to
 ms.localizationpriority: medium
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 ai-usage: ai-generated
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# Schedule antivirus scans on Linux (preview)
+# Schedule antivirus scans on Linux
 
 This article describes how to configure scheduled antivirus scans on Microsoft Defender for Endpoint on Linux. It's intended for IT and security administrators who manage Linux devices and want to ensure continuous antivirus protection through centralized scan scheduling. Before you begin, review the [prerequisites](#prerequisites) to ensure your environment meets the necessary requirements.
 
@@ -105,7 +105,7 @@ You can configure scheduled antivirus scans on Linux using one of the following 
    1. On the **Assignments** page, select the groups that receive this profile. Then select **Next**.
    1. On the **Review + create** page, when you're done, select **Save**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
-   For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](./manage-security-policies.md).
+   For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](endpoint-security-policies-configure.md).
 
    :::image type="content" source="media/schedule-antivirus-scans-linux/schedule-antivirus-scans-linux.png" alt-text="Screenshot of Endpoint security policies option.":::
 
@@ -148,9 +148,10 @@ The following example configures:
 }
 ```
 
-### Use command line
+<a name="use-command-line"></a>
+### Use the command line to configure scheduled scans
 
-You can configure scheduled antivirus scans directly on a Linux device using the mdatp command-line tool. This approach is useful for testing or single-device configuration.
+You can configure scheduled antivirus scans directly on a Linux device using the Microsoft Defender for Endpoint command-line tool (`mdatp`). This approach is useful for testing or single-device configuration.
 
 **Enable scheduled scans:**
 

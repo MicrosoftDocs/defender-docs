@@ -1,13 +1,13 @@
 ---
 title: Create data mining queries and reports in Defender for IoT
 description: Create data mining queries and generate detailed reports about OT network devices in Defender for IoT, including connectivity, ports, firmware, programming commands, and device state.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
-# Create data mining queries
+# Create data mining queries on an OT sensor
 
 Run data mining queries to view details about the network devices detected by your OT sensor, like internet connectivity, ports and protocols, firmware versions, programming commands, and device state.
 
@@ -43,7 +43,7 @@ Select a report to view today’s data. Use the :::image type="icon" source="med
 
 Create your own custom data mining report if you have reporting needs not covered by the out-of-the-box reports. Once created, custom data mining reports are visible to all users.
 
-**To create a custom data mining report**:
+To create a custom data mining report:
 
 1. Sign into the OT sensor and select **Data Mining** > **Create report**.
 
@@ -73,9 +73,9 @@ Each data mining report on an OT sensor has the following options for managing y
 | :::image type="icon" source="media/how-to-generate-reports/manage-icon.png" border="false"::: **Manage report** | Update the values of an existing custom data mining report. This option is disabled for Recommended reports. |
 | :::image type="icon" source="media/how-to-generate-reports/edit-icon.png" border="false"::: **Edit mode** | Select to remove specific results from the saved report. |
 
-For example, select **Manage report** to update the data your report includes by editing the **Name**, **Choose category**, **Order by**, **Filter by**, and **Add filter type** fields.
+To update an existing custom data mining report, select **Manage report** and edit the **Name**, **Choose category**, **Order by**, **Filter by**, and **Add filter type** fields.
 
-## Next steps
+## Related content
 
 - View additional reports based on cloud-connected sensors in the Azure portal. For more information, see [Visualize Microsoft Defender for IoT data with Azure Monitor workbooks](workbooks.md)
 

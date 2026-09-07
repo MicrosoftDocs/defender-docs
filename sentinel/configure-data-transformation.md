@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security engineer, I want to configure ingestion-time data transformation and custom log ingestion so that I can control, filter, and enrich data before it is ingested into Microsoft Sentinel.
@@ -67,7 +67,8 @@ For [workspace transformations](/azure/azure-monitor/essentials/data-collection-
 - Walk through a tutorial for [configuring workspace transformation using the Azure portal](/azure/azure-monitor/logs/tutorial-workspace-transformations-portal).
 - Walk through a tutorial for [configuring workspace transformation using Azure Resource Manager (ARM) templates and REST API](/azure/azure-monitor/logs/tutorial-workspace-transformations-api).
 
-### More on data collection rules
+<a name="more-on-data-collection-rules"></a>
+### Data collection rule structure and transformation reference
 
 For more information, see [data collection rules](/azure/azure-monitor/essentials/data-collection-rule-overview):
 
@@ -75,7 +76,7 @@ For more information, see [data collection rules](/azure/azure-monitor/essential
 - [Data collection transformations in Azure Monitor (preview)](/azure/azure-monitor/essentials/data-collection-transformations)
 
 
-After you complete one of the DCR configuration procedures linked above, return to Microsoft Sentinel to verify that your data is being ingested based on the transformation you configured. It may take up to 60 minutes for the data transformation configurations to apply.
+After you complete a Log Ingestion API or workspace transformation DCR configuration procedure, return to Microsoft Sentinel to verify that your data is being ingested based on the transformation you configured. It may take up to 60 minutes for the data transformation configurations to apply.
 
 
 ## Migrate to ingestion-time data transformation
@@ -85,6 +86,9 @@ If you currently have custom Microsoft Sentinel data connectors, or built-in, AP
 Use one of the following methods:
 
 - Configure a DCR to define, from scratch, the custom ingestion from your data source to a new table. You might use this option if you want to use a new schema that doesn't have the current column suffixes, and doesn't require query-time Kusto Query Language (KQL) functions to standardize your data.
+
+    > [!WARNING]
+    > Deleting the legacy table and custom data connector is irreversible and might affect existing queries, workbooks, or integrations that reference them.
 
     After you've verified that your data is properly ingested to the new table, you can delete the legacy table, as well as your legacy, custom data connector.
 

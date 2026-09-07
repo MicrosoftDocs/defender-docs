@@ -11,11 +11,11 @@ ms.collection:
 - security-copilot
 - msec-ai-copilot
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender XDR
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #customer intent: As a security analyst, I want to learn about the Threat Intelligence Briefing Agent in Microsoft Defender so that I can generate threat intelligence briefings efficiently.
 ---
 
@@ -26,13 +26,13 @@ ms.custom: msecd-doc-authoring-1014
 >[!NOTE]
 > This article discusses the Threat Intelligence Briefing Agent embedded experience in Microsoft Defender portal. To learn more about the standalone experience in Security Copilot, read [Threat Intelligence Briefing Agent (standalone experience)](/copilot/security/threat-intel-briefing-agent).
 
-Threat intelligence analysts face many challenges when they create useful, actionable briefings. Building a briefing requires collecting data from multiple threat feeds, tools, and portals. Analysts must then filter, correlate, and analyze this data to map risks to their organization. All of this work happens before they can even start writing the report. Because these steps can take hours or even days, threats often change before the briefing is ready, which can make it outdated.  
+Threat intelligence analysts face many challenges when they create useful, actionable briefings. Building a briefing requires collecting data from multiple threat feeds, tools, and portals. Analysts must then filter, correlate, and analyze this data to map risks to their organization. All of this work happens before they can even start writing the report. Because these steps can take hours or even days, threats often change before the briefing is ready, which can make the briefing outdated.  
 
 The Microsoft Security Copilot Threat Intelligence Briefing Agent in Microsoft Defender addresses these pain points. It generates threat intelligence briefings based on the latest threat actor activity and both internal and external vulnerability information in a matter of minutes. It can help security teams save time by creating a customized, relevant report that provides CISOs, security managers, and analysts with key situational awareness and a solid foundation for defense work.
 
 The agent uses automation and generative AI along with broad threat intelligence data. As it builds the briefing, it picks each next step based on the result of the previous one. This lets it decide in real time which threats to include and rank. The agent then turns the collected threat intelligence and vulnerability findings into a clear report that different audiences can read and act on.
 
-The Threat Intelligence Briefing Agent is best suited for customers who turn on Microsoft Defender for Endpoint and Microsoft Defender External Attack Surface, as the agent relies on signals and insights from these first-party integrations to deliver accurate and context-rich reports.
+The Threat Intelligence Briefing Agent is best suited for customers who turn on Microsoft Defender for Endpoint and Microsoft Defender External Attack Surface, as the agent relies on signals and insights from these first-party integrations to deliver accurate and context-rich reports. Before you get started, review the [prerequisites](#prerequisites) to ensure you have the required products, plugins, and permissions in place.
 
 Watch this video to see the Threat Intelligence Briefing Agent in action, from setup to generating your first briefing.
 > [!VIDEO  https://learn-video.azurefd.net/vod/player?id=07ffea67-4ebf-4f13-9a7e-dcc49bcaac93]
@@ -49,7 +49,8 @@ To open Threat analytics, go to **Threat intelligence** > **Threat analytics** i
 
 Before you set up the Threat Intelligence Briefing Agent, make sure you have the following products, plugins, and permissions in place.
 
-### Products
+<a name="products"></a>
+### Required products
 You need [Microsoft Security Copilot](/copilot/security/microsoft-security-copilot) to run this agent.
 
 ### Security Copilot plugins
@@ -63,7 +64,7 @@ The following plugin is optional but can add more context to the output:
 ### User account permissions 
 
 >[!IMPORTANT]
-> **Identity and permissions requirement:** This agent must connect to a user account or a new [agent identity](#set-up-an-agent-identity-for-the-agent) (recommended). The agent can read data from Defender External Attack Surface Management and Defender Vulnerability Management. Set up the right permissions on the account or identity before you configure the agent.
+> **Identity and permissions requirement:** This agent must connect to a user account or a new [agent identity (service principal)](#set-up-an-agent-identity-for-the-agent) (recommended). The agent can read data from Defender External Attack Surface Management and Defender Vulnerability Management. Set up the right permissions on the account or identity before you configure the agent.
 
 The user account connected to the agent or the created agent identity must have these permissions:
 
@@ -84,12 +85,13 @@ The user account connected to the agent or the created agent identity must have 
 >[!TIP]
 > Consider using a dedicated service account for running agents to maintain separation of duties and enhance security monitoring.
 
-### Trigger
+<a name="trigger"></a>
+### Agent trigger
 This agent runs at the set time interval that you configured during setup, or manually when you want to run it.
 
 ## Set up an agent identity for the agent
 
-A service principal is an application identity in Microsoft Entra ID that lets an app access resources on its own behalf. The Threat Intelligence Briefing Agent can run under a dedicated [agent identity](https://aka.ms/WhatAreAgentIdentities) (service principal) with only the minimal read permissions required in Microsoft Defender. This section describes how you can create or reuse a least-privileged role, register the agent's service principal, and assign the role.
+A service principal is an application identity in Microsoft Entra ID that lets an app access resources on its own behalf. The Threat Intelligence Briefing Agent can run under a dedicated [agent identity](https://aka.ms/WhatAreAgentIdentities) (service principal) with only the minimal read permissions required in Microsoft Defender. This section describes how you can create or reuse a least-privileged role, register the agent's service principal, and assign the least-privileged role.
 
 Before setting up an agent identity for the Threat Intelligence Briefing Agent, make sure that you have the agent in your environment. You must also have the following prerequisites:
 
@@ -108,7 +110,7 @@ To set up an agent identity:
 
 1. **Register the agent's service principal (agent identity)**
    
-   First, get a Microsoft Graph access token. You use this token to authenticate the API calls in the following steps. Run the following commands as a tenant admin:
+   First, get a Microsoft Graph access token. The following Azure CLI command retrieves a Microsoft Graph bearer token that you reuse in the subsequent curl requests to register the service principal. Run the following command as a tenant admin:
 
    ```azurecli-interactive
    TOKEN=$(az account get-access-token \
@@ -117,7 +119,7 @@ To set up an agent identity:
       --query accessToken -o tsv)
    ```
 
-   Next, create the service principal for the agent identity in your tenant:
+   Next, register the service principal for the agent identity in your tenant by sending a POST request to Microsoft Graph. This request creates the service principal object that the agent uses to authenticate:
 
    ```azurecli-interactive
    curl -X POST https://graph.microsoft.com/v1.0/servicePrincipals \
@@ -127,7 +129,7 @@ To set up an agent identity:
          "appId": "43d7b169-1d9e-4d32-8cd8-06c5974ed90c"
       }'
    ```
-   **Optional:** Run the following request to look up the service principal by app ID and confirm it was created:
+   **Optional:** To verify that the service principal was created successfully, run the following GET request. This request queries Microsoft Graph for the service principal by app ID and returns its details so you can validate the setup before proceeding:
    ```azurecli-interactive
    curl -X GET "https://graph.microsoft.com/v1.0/servicePrincipals?$filter=appId eq '43d7b169-1d9e-4d32-8cd8-06c5974ed90c'" \
      -H "Authorization: Bearer $TOKEN"

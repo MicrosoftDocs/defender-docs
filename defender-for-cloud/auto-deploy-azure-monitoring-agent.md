@@ -1,9 +1,9 @@
 ---
 title: Azure Monitor Agent (AMA) in Microsoft Defender for Cloud
-description: Learn about using the Azure Monitor Agent in Microsoft Defender for Cloud
+description: Learn how Microsoft Defender for Cloud uses the Azure Monitor Agent (AMA) for Defender for SQL Servers on Machines and the free data ingestion benefit in Defender for Servers Plan 2.
 ms.topic: how-to
-ms.date: 05/27/2026
-ms.custom: template-how-to
+ms.date: 07/03/2026
+ms.custom: template-how-to, msecd-doc-authoring-1013
 #customer intent: As a user, I want to understand how Microsoft Defender for Cloud uses Azure Monitor Agent for SQL Servers on Machines so I can configure it correctly.
 ai-usage: ai-assisted
 ---

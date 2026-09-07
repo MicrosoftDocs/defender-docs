@@ -1,9 +1,9 @@
 ---
 title: Investigate alerts in Microsoft Defender for Identity
 description: Learn how to investigate and respond to security alerts issued by Microsoft Defender for Identity
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -30,9 +30,9 @@ Together, the alert story, alert graph, and Important information give you a com
 > For more information about differences in how alerts are presented in the Defender portal, see [View and manage alerts](understanding-security-alerts.md).
 
 ## Take action from the details pane
-Once you've selected an alert of interest, the details pane changes to display information about the selected alert, historic information when it's available, and offer recommended actions to take action on this alert.
+Once you've selected an alert of interest, the details side pane changes to display information about the selected alert, historic information when it's available, and offer recommended actions to take action on this alert.
 
-After completing your investigation, return to the selected alert, mark its status as Resolved, and classify it as either False alert or True alert. Classifying alerts helps tune this capability to provide more true alerts and less false alerts.
+After completing your investigation, return to the selected alert, mark its status as Resolved, and classify it as either False alert or True alert. Classifying alerts helps tune Defender for Identity to provide more true alerts and fewer false alerts.
 
 
 ### Advanced security alert investigation
@@ -57,7 +57,7 @@ The downloaded file includes summary details about the alert on the first tab, i
 
 All involved entities, including accounts, computers, and resources are listed, separated by their role. Details are provided for the source, destination, or attacked entity, depending on the alert.
 
-Most of the tabs include the following data per entity:
+Most tabs in the exported Excel alert report include the following data per entity:
 
 - Name
 - Details
@@ -73,7 +73,7 @@ Most of the tabs include the following data per entity:
   - Network Activities
   - Event Activities
 
-Some alerts have extra tabs, such as details about:
+Some exported Excel alert reports include extra tabs, such as details about:
 
 - Attacked accounts when the suspected attack used Brute Force.
 - Domain Name System (DNS) servers when the suspected attacked involved network mapping reconnaissance (DNS).
@@ -88,7 +88,7 @@ Investigations can be as detailed as needed. Here are some ideas of ways to inve
 
 ### Related entities
 
-In each alert, the last tab provides the **Related Entities**. Related entities are all entities involved in a suspicious activity, without the separation of the "role" they played in the alert. Each entity has two Json files, the Unique Entity Json and Unique Entity Profile Json. Use these two Json files to learn more about the entity and to help you investigate the alert.
+Each alert includes a **Related Entities** tab that lists all entities involved in a suspicious activity, without separating them by the role they played in the alert. Each entity has two Json files, the Unique Entity Json and Unique Entity Profile Json. Use these two Json files to learn more about the entity and to help you investigate the alert.
 
 <a name="unique-entity-json-file"></a>
 #### Unique Entity JSON file format

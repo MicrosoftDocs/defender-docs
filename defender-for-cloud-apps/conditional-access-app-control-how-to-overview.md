@@ -1,16 +1,16 @@
 ---
 title: Use Defender for Cloud Apps Conditional Access app control | Microsoft Defender for Cloud Apps
 description: Learn how to use Microsoft Defender for Cloud Apps Conditional Access app control to create access and session policies for real-time monitoring and control over access to cloud apps.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Use Defender for Cloud Apps Conditional Access app control
 
-Use Microsoft Defender for Cloud Apps Conditional Access app control to create access and session policies that monitor and control user access to cloud apps in real time. This guide walks through onboarding your apps, setting up a Conditional Access policy, and creating and testing your access and session policies.
+Use Microsoft Defender for Cloud Apps Conditional Access app control to create access and session policies that monitor and control user access to cloud apps in real time. This guide walks through onboarding your apps, setting up a Conditional Access policy, and creating and testing your access and session policies. Before you begin, make sure you meet the [prerequisites](#prerequisites).
 
 ## Conditional Access app control usage flow (Preview)
 
@@ -22,7 +22,7 @@ The following image shows the high level process for configuring and implementin
 
 Before you start using Conditional Access app control, understand whether your apps are managed by Microsoft Entra or another identity provider (IdP). 
 
-- **Microsoft Entra apps** are automatically onboarded for Conditional Access app control, and are immediately available for you to use in your access and session policy conditions (Preview). Can be manually onboarded before you can select them in your access and session policy conditions.
+- **Microsoft Entra apps** are automatically onboarded for Conditional Access app control and are immediately available for you to use in your access and session policy conditions (Preview). Microsoft Entra apps can also be manually onboarded before you select them in your access and session policy conditions.
 
 - **Apps that use non-Microsoft IdPs** must be manually onboarded before you can select them in your access and session policy conditions.
 
@@ -47,11 +47,11 @@ Before you configure Conditional Access app control, make sure the following pre
 
 ## Create a Microsoft Entra ID Conditional Access policy
 
-Your access or session policy requires a Microsoft Entra ID Conditional Access policy to control traffic.
+Access and session policies need a Conditional Access policy in Microsoft Entra ID. This policy controls traffic to your cloud apps.
 
-For a sample of creating a Conditional Access policy, see the [access policy](access-policy-aad.md) and [session policy](session-policy-aad.md) creation docs. 
+For steps to create one, see the [access policy](access-policy-aad.md) and [session policy](session-policy-aad.md) guides.
 
-For more information, see [Conditional Access policies](/azure/active-directory/conditional-access/overview) and [Building a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies).
+To learn more, see [Conditional Access policies](/azure/active-directory/conditional-access/overview) and [Building a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies).
 
 ## Create your access and session policies
 

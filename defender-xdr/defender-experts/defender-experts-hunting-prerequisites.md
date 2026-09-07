@@ -107,11 +107,13 @@ The following sections enumerate additional information about the service's data
 
 ### Data collection, usage, and retention
 
-All data used for hunting from existing Defender services will continue to reside in the customer's original Microsoft Defender service storage location. [Learn more](/microsoft-365/enterprise/o365-data-locations)
-
-Defender Experts Hunting operational data, such as case tickets and analyst notes, are generated and stored in a Microsoft data center in the EU region for customers whose Defender data is in scope of European Union data boundary and in the US region for other customers, for the length of the service, irrespective of the Microsoft Defender service storage location. Data generated for the reporting dashboard is stored in customer's Microsoft Defender service storage location. Reporting data and operational data will be retained for a grace period of no more than 90 days after a customer's subscription expires. If the customer terminates their subscription, data will be deleted within 30 days.
-
-Microsoft experts hunt over [advanced hunting logs](../advanced-hunting-schema-tables.md) in Microsoft Defender advanced hunting tables. The data in these tables depend on the set of Defender services the customer is enabled for (for example, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Entra ID). Experts also use a large set of internal threat intelligence data to inform their hunting and automation.
+- All data used for hunting from existing Defender services continues to reside in the customer's original Microsoft Defender service storage location.
+- Data generated for Defender Experts reports and other experiences in the Defender portal is stored in the customer's Microsoft Defender service storage location.
+- Defender Experts Hunting for Gov operational data, such as case tickets and analyst notes, is generated and stored in Microsoft data centers in the US region for GCC customers.
+- Defender Experts Hunting operational data, such as case tickets and analyst notes, is generated and stored in Microsoft data centers in the EU region for customers whose Defender data is in scope of European Union data boundary.
+- Defender Experts Hunting operational data, such as case tickets and analyst notes, is generated and stored in Microsoft data centers worldwide for other customers, irrespective of their Microsoft Defender service storage location.
+- Reporting data and operational data will be retained for a grace period of no more than 90 days after a customer's subscription expires. If the customer terminates their subscription, data will be deleted within 30 days.
+- Microsoft experts hunt over [advanced hunting logs](../advanced-hunting-schema-tables.md) in Microsoft Defender advanced hunting tables. The data in these tables depends on the set of Defender services the customer is enabled for (for example, Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Entra ID). Experts also use a large set of internal threat intelligence data to inform their hunting and automation.
 
 > [!NOTE]
 > Microsoft Defender for Cloud is integrated with Microsoft Defender. This integration allows security teams to access Defender for Cloud alerts and incidents within the Microsoft Defender portal. The Defender Experts Hunting - Servers add-on service accesses data through the Defender portal, so the same data collection, usage, and retention policies apply to this service.
@@ -122,7 +124,7 @@ When you purchase and onboard to Defender Experts Hunting, you're granting permi
 
 ### Availability
 
-This service is available worldwide for customers in our commercial public clouds. It's currently not available to customers in government and sovereign clouds.
+Defender Experts Hunting follows Microsoft 365 and Office 365 international availability. The service is available for customers in our commercial public cloud. In addition, the Defender Experts Hunting for Gov service is available to GCC customers who do not require FedRAMP authorization, such as many State & Local Government (SLG) customers. Defender Experts Hunting is not available in government cloud (i.e. to GCC-H, DoD, etc. customers) and sovereign cloud at this time.
 
 ### Languages
 

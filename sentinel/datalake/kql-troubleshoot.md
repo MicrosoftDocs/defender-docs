@@ -1,5 +1,5 @@
 ---  
-title: Troubleshoot KQL queries for the data lake
+title: Troubleshoot KQL Queries for the Data Lake
 titleSuffix: Microsoft Security   
 description:  Troubleshoot KQL queries for the Microsoft Sentinel data lake.
 ms.author: edbaynash  
@@ -20,31 +20,28 @@ ms.custom: msecd-doc-authoring-1014
 
 # Troubleshoot KQL queries for the Microsoft Sentinel data lake
 
-
 Use the following checklist to resolve common issues when working with KQL (Kusto Query Language) queries and jobs in Microsoft Sentinel data lake.
 
-+ Check for prerequisites before running queries or jobs. For more information, see [Roles and permissions for the Microsoft Sentinel data lake](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
+- Check for prerequisites before running queries or jobs. For more information, see [Roles and permissions for the Microsoft Sentinel data lake](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
 
-+ Ensure that you selected the correct workspaces before executing KQL queries or jobs.
-+ Confirm that all referenced tables and workspaces exist and are accessible.
-+ Use only supported KQL operators and commands to avoid execution errors.
-+ Adjust the query with filters such as time range to avoid query timeouts.
+- Ensure that you selected the correct workspaces before executing KQL queries or jobs.
+- Confirm that all referenced tables and workspaces exist and are accessible.
+- Use only supported KQL operators and commands to avoid execution errors.
+- Adjust the query with filters such as time range to avoid query timeouts.
 
 Job-specific validation:
 
-+ Verify that you have the correct role for the target workspace when creating new custom tables via jobs. For more information, see [Roles and permissions for the Microsoft Sentinel data lake](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
-+ Test queries in a KQL editor to catch syntax and logic errors before submitting them as jobs.
-+ Ensure job names are unique across all jobs in the tenant, including Notebooks jobs.
-+ Validate that the query output schema aligns with the destination table in column names, and data types.
-+ Verify job status and track progress.
+- Verify that you have the correct role for the target workspace when creating new custom tables via jobs. For more information, see [Roles and permissions for the Microsoft Sentinel data lake](../roles.md#roles-and-permissions-for-the-microsoft-sentinel-data-lake).
+- Test queries in a KQL editor to catch syntax and logic errors before submitting them as jobs.
+- Ensure job names are unique across all jobs in the tenant, including Notebooks jobs.
+- Validate that the query output schema aligns with the destination table in column names, and data types.
+- Verify job status and track progress.
 
-+ Refer to the [KQL query error messages](#kql-query-error-messages) table and the [KQL job error messages](#kql-job-error-messages) table for specific error messages and resolution steps.
+- Refer to the [KQL query error messages](#kql-query-error-messages) table and the [KQL job error messages](#kql-job-error-messages) table for specific error messages and resolution steps.
 
 > [!NOTE]
 > Data promoted to the analytics tier may take 15-30 minutes to appear in Advanced Hunting depending on the data size and query complexity.
 > Partial results may be promoted if the job's query exceeds the one-hour limit.
-
-
 
 ## KQL query error messages
 
@@ -68,8 +65,6 @@ The following table lists common KQL query error messages, their causes, and rec
 | **Client does not have access to any workspaces or client provided invalid workspace(s) in the scope.** | The query uses an invalid workspace ID. | Enter the correct workspace ID and try again. |
 | **Unexpected control command** | Using control commands (for example, `show`) isn't allowed. | No action needed. |
 
-
-
 ## KQL job error messages
 
 The following table describes common KQL job error messages and how to resolve them.
@@ -85,3 +80,7 @@ The following table describes common KQL job error messages and how to resolve t
 | **The KQL query failed to execute due to syntax or logic errors.** | The query contains invalid syntax, unsupported functions, unsupported data types, or incorrect references. | Test the query in KQL queries or Azure Data Explorer before using the query in the KQL job. |
 | **KQL job name must be unique.** | The job name already exists in the tenant. | Provide a unique name for the job. |
 | **Invalid column name. It should start with a letter and contain only letters, numbers, and underscores (_), _ResourceId.** | Job has output columns contain an unsupported format. | Update the query and rename columns. |
+
+- [KQL and the Microsoft Sentinel data lake](kql-overview.md)
+- [Run KQL queries on the Microsoft Sentinel data lake](kql-queries.md)
+- [Sample KQL queries for Microsoft Sentinel data lake](kql-sample-queries.md)

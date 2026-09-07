@@ -2,14 +2,15 @@
 title: Build Cloud Security Explorer queries to identify vulnerabilities in Kubernetes clusters
 description: Learn how to build queries with Cloud Security Explorer in Microsoft Defender for Cloud to investigate vulnerabilities in Kubernetes clusters.
 ms.topic: how-to
-ms.date: 05/26/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security professional, I want to build Cloud Security Explorer queries in Microsoft Defender for Cloud to identify vulnerabilities in Kubernetes clusters.
 ai-usage: ai-assisted
 ---
 
 # Build Cloud Security Explorer queries to identify vulnerabilities in Kubernetes clusters
 
-Use Cloud Security Explorer to identify vulnerabilities in your Kubernetes clusters. The following examples show how to build queries to investigate container images and cluster nodes, and can be adapted to filter results based on your requirements.
+Use Cloud Security Explorer to find vulnerabilities in your Kubernetes clusters. The following examples show how to build queries that check container images and cluster nodes. You can adapt these queries to filter results based on your needs.
 
 For an introduction to Cloud Security Explorer queries, see [Build queries with Cloud Security Explorer](how-to-manage-cloud-security-explorer.md).
 

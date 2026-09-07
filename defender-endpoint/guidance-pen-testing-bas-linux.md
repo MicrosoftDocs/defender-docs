@@ -4,11 +4,11 @@ description: Learn how to configure Microsoft Defender for Endpoint on Linux for
 author: paulinbar
 ms.author: painbar
 ms.reviewer: rutujadange
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ai-usage: ai-assisted
 #customer intent: As a penetration tester, I want to configure Defender for Endpoint on Linux with full protection so that my evaluation results reflect true detection capabilities.
 ---
@@ -58,7 +58,7 @@ It's common for penetration testers to use just the default mode or enable only 
 
 - **Additional antivirus and sensor capabilities**: These settings enable deeper inspection of file, process, and network activity, along with extended telemetry collection from the system. Together, they improve detection depth, increase visibility into attack techniques, and reduce the chances of missed signals during BAS and penetration testing by capturing more system-level events and enforcing stronger scanning behavior.
 
-Enable all of the protection settings listed above by creating the managed JSON configuration profile (`mdatp_managed.json`) on the path `/etc/opt/microsoft/mdatp/managed`. Copy the following content to `mdatp_managed.json`. The path can differ if you use a custom path for installation. For more information, see [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
+Enable all of the protection settings listed above by creating the managed JSON configuration profile (`mdatp_managed.json`) on the path `/etc/opt/microsoft/mdatp/managed`. Copy the following configuration, which enables real-time protection, behavioral monitoring, cloud-delivered protection, and advanced sensor capabilities, to `mdatp_managed.json`. The path can differ if you use a custom path for installation. For more information, see [Set preferences for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-preferences).
 
 ```json
 {
@@ -90,14 +90,14 @@ After deploying the configuration file, verify device health:
 - Run the `mdatp health` command to verify device health.
 
 > [!NOTE]
-> Some of these advanced sensor settings will be progressively enabled by default in the Defender for Endpoint agent to simplify configuration for administrators. As this rollout continues, explicit configuration will no longer be required for those capabilities, and they'll be gradually removed from documentation.
+> Some of these advanced sensor settings will be progressively enabled by default in the Defender for Endpoint agent to simplify configuration for administrators. As the rollout of these advanced sensor settings continues, explicit configuration will no longer be required for those capabilities, and they'll be gradually removed from documentation.
 
 > [!NOTE]
 > Evaluation guidance enables additional advanced antivirus and sensor capabilities to maximize detection coverage and visibility. These settings can increase resource usage. For best results, use them in adequately sized environments. Low-resource environments might experience performance degradation or reduced evaluation accuracy.
 
 ### Enable new protection capabilities currently in preview
 
-To get the most current and comprehensive assessment of Defender's detection and prevention depth, enable new protection capabilities that might be in preview. These capabilities incorporate protections for emerging threats and evolving attack techniques, ensuring that BAS and penetration-test exercises reflect Defender's latest security advancements. To get **early access to new protection capabilities currently in preview**:
+To get the most current and comprehensive assessment of Defender's detection and prevention depth, enable new protection capabilities that might be in preview. These preview protection capabilities incorporate protections for emerging threats and evolving attack techniques, ensuring that BAS and penetration-test exercises reflect Defender's latest security advancements. To get **early access to new protection capabilities currently in preview**:
 
 - Contact your Microsoft account executive for guided enablement (Preview feature).
 
@@ -151,7 +151,7 @@ To collect diagnostic data, follow these steps:
 
 1. Run the following command to collect the logs: `sudo mdatp diagnostic create`.
 
-For more information, see [Microsoft Defender for Endpoint on Linux resources](/defender-endpoint/linux-resources).
+For more information about diagnostic logs and troubleshooting tools, see [Microsoft Defender for Endpoint on Linux resources](/defender-endpoint/linux-resources).
 
 ### Step 2: Gather information
 
@@ -176,7 +176,7 @@ Report to Microsoft promptly. The advanced hunting telemetry data wraps around a
 | MDSI portal | The MDSI portal is a service provided by Microsoft Defender Security Intelligence. It allows users to submit files for malware analysis. Microsoft Defender security researchers analyze these files to determine if they're threats, unwanted applications, or normal files. The portal is used to report detection concerns to Microsoft Defender Research, submit files for analysis, and track the results of submissions. |
 | Microsoft Defender portal | If you have a subscription to Microsoft Defender XDR, or your subscription includes Defender for Endpoint Plan 2, you can use the **Submissions** page in the Microsoft Defender portal. |
 
-Submit the data you gathered in Steps 1 and 2 by using either the MDSI portal or the Microsoft Defender portal:
+Submit the diagnostic logs and required investigation details by using either the MDSI portal or the Microsoft Defender portal:
 
 1. **MDSI portal**: Go to the [MDSI portal](https://www.microsoft.com/wdsi), and then select **Submit files**. Follow the guidance on the page.
 

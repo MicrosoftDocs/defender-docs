@@ -1,8 +1,9 @@
 ---
-title: Enable sensitive data threat detection
-description: Learn how to enable and configure sensitive data threat detection in Microsoft Defender for Storage to protect your data and enhance security.
-ms.date: 06/02/2026
+title: Enable sensitive data threat detection in Defender for Storage
+description: Learn what sensitive data threat detection includes in Microsoft Defender for Storage, how to interpret sensitivity findings in alerts, and how to align detection with Microsoft Purview settings.
+ms.date: 07/03/2026
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security professional, I want to enable and configure sensitive data threat detection in Microsoft Defender for Storage so that I can protect my organization's data from exposure and enhance overall security.
 
 ai-usage: ai-assisted
@@ -10,7 +11,7 @@ ai-usage: ai-assisted
 
 # Enable sensitive data threat detection
 
-Sensitive data threat detection is enabled by default when you enable Defender for Storage. You can enable or disable it in the Azure portal or with other at-scale methods. For instructions, see [Configure Defender for Storage](/azure/storage/common/azure-defender-storage-configure). This feature is included in the price of Defender for Storage.
+Sensitive data threat detection is enabled by default when you enable Defender for Storage. You can enable or disable it in the Azure portal or with other at-scale methods. For instructions, see [Configure Defender for Storage](/azure/storage/common/azure-defender-storage-configure). Sensitive data threat detection is included in the price of Defender for Storage.
 
 This article explains what sensitive data threat detection includes, how to interpret sensitivity findings in alerts, and how to align detection with Microsoft Purview sensitivity settings.
 
@@ -37,7 +38,8 @@ To customize data sensitivity discovery for your organization, create custom sen
 
 You can also create and publish sensitivity labels for your tenant in Microsoft Purview. The sensitivity label scope includes Items, Schematized data assets, and autolabeling rules (recommended). For details, see [Sensitivity labels in Microsoft Purview](/microsoft-365/compliance/sensitivity-labels).
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Enable Defender for Storage](connect-azure-subscription.md)

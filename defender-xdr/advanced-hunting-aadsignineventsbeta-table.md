@@ -1,5 +1,5 @@
 ---
-title: AADSignInEventsBeta table in the advanced hunting schema
+title: AADSignInEventsBeta table in the advanced hunting schema (deprecated)
 description: Learn about the Microsoft Entra sign-in events table of the advanced hunting schema
 ms.service: defender-xdr
 ms.subservice: adv-hunting
@@ -12,21 +12,23 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+- msecd-doc-authoring-1018
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 11/04/2025
+ms.date: 07/27/2026
+ai-usage: ai-assisted
 ---
 
-# AADSignInEventsBeta
+# AADSignInEventsBeta (deprecated)
 
 
 
 > [!IMPORTANT]
-> On December 9, 2025, the `AADSignInEventsBeta` table will be replaced by [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md). This change will be made to remove the former's preview status and to align it with the existing product branding. 
+> On October 19, 2026, the `AADSignInEventsBeta` table will be deprecated and replaced by [`EntraIdSignInEvents`](advanced-hunting-entraidsigninevents-table.md). This change removes the former's preview status and aligns it with the existing product branding.
 >
->The `EntraIdSignInEvents` table is already available. To ensure a smooth transition, make sure that you update your queries that use the `AADSignInEventsBeta` table to use `EntraIdSignInEvents` before the previously mentioned date. 
+> The `EntraIdSignInEvents` table is already available. All queries that use `AADSignInEventsBeta` will be migrated automatically to `EntraIdSignInEvents` on October 19, 2026.
 
 >[!IMPORTANT]
 > The `AADSignInEventsBeta` table is currently in beta and is being offered on a short-term basis to allow you to hunt through Microsoft Entra sign-in events. Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table.

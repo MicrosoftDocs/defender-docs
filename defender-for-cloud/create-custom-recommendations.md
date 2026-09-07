@@ -2,7 +2,8 @@
 title: Create custom standards and recommendations in Microsoft Defender for Cloud
 description: Learn how to create custom security standards and recommendations in Microsoft Defender for Cloud across Azure, AWS, and GCP with KQL queries and Azure Policy.
 ms.topic: how-to
-ms.date: 05/24/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a user, I want to learn how to create custom security standards and recommendations in Microsoft Defender for Cloud.
 ai-usage: ai-assisted
 ---
@@ -16,7 +17,10 @@ This article describes how to:
 - Create custom recommendations for all clouds (Azure, AWS, and GCP) with a Kusto Query Language (KQL) query.
 - Assign custom recommendations to a custom security standard.
 
-## Before you start
+<a name="before-you-start"></a>
+## Prerequisites
+
+Before you create custom recommendations or standards, make sure you meet the following requirements:
 
 - You need Owner permissions on the subscription to create a new security standard.
 - You need Security Admin permissions to create custom recommendations.
@@ -78,7 +82,8 @@ We recommend using the query editor to create a recommendation query. You can al
 
 1. Select **Run query** to test the query you created.
 1. When the query is ready, cut and paste it from the editor into the **Recommendation query** pane.
-1. Continue with step 7 from the [Create a custom recommendation section](#create-a-custom-recommendation).
+1. Select **Next**, select the relevant standards for the recommendation, select the custom standards to assign, and then select **Review and create**.
+1. Review the recommendation details and select **Create**.
 
 #### Query templates and examples
 
@@ -205,14 +210,14 @@ Always end your query with: `| project Id, Name, Environment, Identifiers, Addit
 
 **Assessment mapping:**
 
-Every query must set a `HealthStatus` value for each resource. Use the `iff()` function to evaluate your condition and assign the status:
+Every query must set a `HealthStatus` value for each resource. Use the following pattern as the core health evaluation logic in your custom recommendation query, replacing the placeholder condition with your own test:
 
 ```kql
 | extend condition = (your condition here)
 | extend HealthStatus = iff(condition, 'UNHEALTHY', 'HEALTHY')
 ```
 
-In this pattern, edit only the `condition` expression. Keep the `HealthStatus` line unchanged:
+In this pattern, edit only the `condition` expression. Keep the following `HealthStatus` expression unchanged in your query so Defender for Cloud can classify matching resources as compliant or non-compliant:
 
 ```kql
 | extend HealthStatus = iff(condition, 'UNHEALTHY', 'HEALTHY')
@@ -274,7 +279,7 @@ You can create custom recommendations and standards in Defender for Cloud by cre
 
 To create a custom recommendation or standard with Azure Policy (legacy):
 
-1. Create one or more policy definitions in the [Azure Policy portal](/azure/governance/policy/tutorials/create-custom-policy-definition), or [programmatically](/azure/governance/policy/how-to/programmatically-create).
+1. Create one or more policy definitions in the [Azure Policy portal](/azure/governance/policy/tutorials/create-custom-policy-definition), or [create policy definitions programmatically](/azure/governance/policy/how-to/programmatically-create).
 1. [Create a policy initiative](/azure/governance/policy/concepts/initiative-definition-structure) that contains the custom policy definitions.
 
 ### Onboard the initiative as a custom standard (legacy)
@@ -286,6 +291,8 @@ To onboard an initiative to a custom security standard in Defender for Cloud, yo
 To onboard a custom initiative:
 
 #### Example to onboard a custom initiative
+
+Use the following REST request to create or update the Azure Policy initiative that backs your custom Defender for Cloud standard:
 
 ```http
 PUT https://management.azure.com/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/policySetDefinitions/{policySetDefinitionName}?api-version=2021-06-01
@@ -343,7 +350,7 @@ Request body (JSON):
 
 #### Example to remove an assignment
 
-This example shows you how to remove an assignment:
+To remove a legacy custom standard from a subscription, use the following REST request to delete the policy assignment:
 
 ```http
 DELETE https://management.azure.com/{subscription}/providers/Microsoft.Authorization/policyAssignments/{policyAssignmentName}?api-version=2018-05-01
@@ -358,7 +365,7 @@ The two types of information you can add are:
 - **RemediationDescription** – String
 - **Severity** – Enum [Low, Medium, High]
 
-The metadata should be added to the policy definition for a policy that is part of the custom initiative. It should be in the 'securityCenter' property, as shown:
+The metadata should be added to the policy definition for a policy that is part of the custom initiative. The metadata should be in the 'securityCenter' property, as shown:
 
 ```json
 {
@@ -371,7 +378,7 @@ The metadata should be added to the policy definition for a policy that is part 
 }
 ```
 
-Here's another example of a custom policy including the metadata/securityCenter property:
+The following example shows a complete custom policy definition that includes the `securityCenter` metadata property with remediation and severity details:
 
   ```json
   {

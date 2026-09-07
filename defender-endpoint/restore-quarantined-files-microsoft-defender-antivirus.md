@@ -5,8 +5,8 @@ ms.service: defender-endpoint
 ms.localizationpriority: medium
 author: chrisda
 ms.author: chrisda
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: yongrhee, pahuijbr
 ms.subservice: ngp
 ms.topic: how-to
@@ -24,9 +24,11 @@ ai-usage: ai-assisted
 
 # Restore quarantined files in Microsoft Defender Antivirus
 
-Depending on how Microsoft Defender Antivirus is configured, it quarantines suspicious files. If you're certain a quarantined file isn't a threat, you can restore it on your Windows device.
+Depending on how Microsoft Defender Antivirus is configured, it quarantines suspicious files. If you're certain a quarantined file isn't a threat, you can restore it on your Windows device. This article describes how to restore quarantined files by using the Windows Security app, the MpCmdRun command-line utility, or the Microsoft Defender for Endpoint portal.
 
 ## Prerequisites
+
+Before you restore quarantined files, verify that your environment meets the following requirements.
 
 ### Supported operating systems
 
@@ -34,7 +36,8 @@ The following operating systems support restoring quarantined files:
 
 - Windows
 
-## Using the Windows Security app
+<a name="using-the-windows-security-app"></a>
+## Restore quarantined files using the Windows Security app
 
 To restore a quarantined file by using the Windows Security app, perform the following steps:
 
@@ -46,7 +49,8 @@ To restore a quarantined file by using the Windows Security app, perform the fol
 
 1. Select an item you want to keep, and choose an action, such as **Restore**.
 
-## Using the MpCmdRun command line
+<a name="using-the-mpcmdrun-command-line"></a>
+## Restore quarantined files using MpCmdRun
 
 Use the following steps to restore quarantined files from the command line using the MpCmdRun utility:
 
@@ -55,7 +59,7 @@ Use the following steps to restore quarantined files from the command line using
    In an elevated Command Prompt (a Command Prompt window you opened by selecting **Run as administrator**), run the following commands:
 
    > [!TIP]
-   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, it goes to `%ProgramFiles%\Windows Defender`.
+   > The first command changes the directory to the latest version of \<antimalware platform version\> in `%ProgramData%\Microsoft\Windows Defender\Platform\<antimalware platform version>`. If that path doesn't exist, the command changes the directory to `%ProgramFiles%\Windows Defender`.
 
    ```dos
    (set "_done=" & if exist "%ProgramData%\Microsoft\Windows Defender\Platform\" (for /f "delims=" %d in ('dir "%ProgramData%\Microsoft\Windows Defender\Platform" /ad /b /o:-n 2^>nul') do if not defined _done (cd /d "%ProgramData%\Microsoft\Windows Defender\Platform\%d" & set _done=1)) else (cd /d "%ProgramFiles%\Windows Defender")) >nul 2>&1
@@ -82,7 +86,8 @@ The **Download file** button can have the following states:
 
 For more information, see [Download or collect file](respond-file-alerts.md#download-or-collect-file).
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Configure remediation for scans](configure-remediation-microsoft-defender-antivirus.md)
 - [Review scan results](review-scan-results-microsoft-defender-antivirus.md)

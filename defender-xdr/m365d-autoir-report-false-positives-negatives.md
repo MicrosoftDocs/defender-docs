@@ -9,12 +9,12 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.custom: 
+ms.custom:
 - msecd-doc-authoring-1014
 - autoir
 - admindeeplinkDEFENDER
 ms.reviewer: evaldm, isco
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender XDR
 ai-usage: ai-assisted
@@ -64,7 +64,8 @@ If a remediation action was taken on an entity (such as a device or an email mes
 > [!TIP]
 > See [Undo completed actions](m365d-autoir-actions.md#undo-completed-actions).
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [View the details and results of an automated investigation](m365d-autoir-results.md)
 - [Proactively hunt for threats with advanced hunting in Microsoft Defender XDR](advanced-hunting-overview.md)

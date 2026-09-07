@@ -2,7 +2,10 @@
 title: What is Microsoft Security Exposure Management?
 description: Learn how Microsoft Security Exposure Management enhances and extends security posture management.
 ms.topic: overview
+ms.author: dlanger
+author: dlanger
 ms.date: 07/30/2025
+ai-usage: ai-assisted
 ---
 
 # What is Microsoft Security Exposure Management?
@@ -12,7 +15,7 @@ Microsoft Security Exposure Management is a security solution that provides a un
 With the integration of Defender for Cloud in the Defender portal, MSEM now provides comprehensive exposure management across endpoints and cloud environments, aggregating signals from Azure, AWS, and GCP (via Defender for Cloud integration) alongside traditional on-premises signals. This unified exposure graph covers devices, identities, cloud assets, and external attack surfaces, aligning with Gartner's Continuous Threat Exposure Management (CTEM) approach to provide end-to-end visibility and risk management.
 
 > [!NOTE]
-> Microsoft Security Exposure Management data and capabilities are currently unavailable in U.S Government clouds - GCC, GCC High, and DoD.
+> Microsoft Security Exposure Management is available in Public Cloud only. It's not available in national/sovereign clouds (US Gov, China Gov, or other sovereign clouds).
 
 ## Who uses Security Exposure Management?
 
@@ -38,8 +41,11 @@ With Security Exposure Management you can:
 - **Discover and safeguard critical assets**: Security Exposure Management marks predefined assets and assets you customize as critical across all domains including devices, identities, and cloud resources. This enables you to focus and prioritize on those critical assets to ensure security and business continuity.
 
 - **Manage exposure**: Security Exposure Management provides tools to manage security exposure, and mitigate exposure risk.
+  - The **Overview** dashboard organizes work around two core actions:
+    - **Resolve Now** — Prioritized, actionable items across Patch, Mitigate, and Fix categories, focused on internet-exposed and business-critical assets.
+    - **Monitor Exposure** — A real-time view of internet-exposed resources (cloud assets, devices, shadow resources) and domain initiative scores across Code, Endpoint, Cloud, Identity, and SaaS.
   - Exposure insights aggregate security posture data, and provide rich context around the security posture state of your asset inventory.
-  - You leverage these insights to prioritize security efforts and investments.
+  - Use these insights to prioritize security efforts and investments.
   - Insights include security events, recommendations, metrics, and security initiatives.
   - As you manage exposure risk, attack paths show you how an attacker might breach your attack surface, including hybrid attack paths that span on-premises and cloud contexts.
     - Security Exposure Management generates attack paths based on data collected across assets and workloads from multiple environments. It simulates attack scenarios, and identifies weaknesses that an attacker could exploit across endpoints and cloud resources.

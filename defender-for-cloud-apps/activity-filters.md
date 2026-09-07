@@ -1,10 +1,10 @@
 ---
 title: Investigate activities in Microsoft Defender for Cloud Apps
-description: This article provides a list of activities, filters, and match parameters that can be applied to activity policies.
-ms.date: 06/16/2026
+description: Learn how to investigate app activities, understand activity types, and use filters to analyze events in Microsoft Defender for Cloud Apps.
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: gayasalomon
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -67,7 +67,7 @@ You can view more information about each activity, by selecting the Activity its
 > [!NOTE]
 > The **IP address category** is assigned automatically based on threat intelligence and can be manually overridden using [IP address ranges](ip-tags.md).
 
-The fields in the Activity drawer provide contextual links to additional activities and drill-downs you might want to perform from the drawer directly. For example, if you move your cursor next to the IP address category, you can use the **add to filter** icon ![Icon for adding the activity to a filter.](media/activity-filters/add-to-filter-icon.png) to immediately add the IP address to the current page's filter. You can also use the settings cog icon ![Settings cog icon used to access configuration settings](media/activity-filters/contextual-settings-icon.png) that pops up to arrive directly at the settings page necessary to modify the configuration of one of the fields, such as **User groups**.
+The fields in the Activity drawer provide contextual links to additional activities and drill-downs you might want to perform from the drawer directly. For example, if you move your cursor next to the IP address category, you can use the **add to filter** icon ![Screenshot of the Add to filter icon used to add an activity to the current filter.](media/activity-filters/add-to-filter-icon.png) to immediately add the IP address to the current page's filter. You can also use the settings cog icon ![Screenshot of the Settings control for accessing configuration settings.](media/activity-filters/contextual-settings-icon.png) that pops up to arrive directly at the settings page necessary to modify the configuration of one of the fields, such as **User groups**.
 
 You can also use the icons at the top of the tab to:
 
@@ -83,7 +83,8 @@ You can also use the icons at the top of the tab to:
 
 For a list of governance actions available, see [Activity governance actions](governance-actions.md#activity-governance-actions).
 
-#### User insights
+<a name="user-insights"></a>
+#### View user insights
 
 The investigation experience includes insights about the acting user. With a single click, you can get a comprehensive overview of the user, including which location they connected from, how many open alerts they're involved with, and their metadata information.
 
@@ -103,9 +104,10 @@ Selecting it opens the Activity drawer **User** tab provides the following insig
 :::image type="content" source="media/user-insights.png" alt-text="Screenshot that shows user insights, user activities, and frequent alert locations for Defender for Cloud apps." lightbox="media/user-insights.png":::
 
 
-#### IP address insights
+<a name="ip-address-insights"></a>
+#### View IP address insights
 
-Because IP address information is crucial for almost all investigations, you can view detailed information about IP addresses in the Activity drawer. From within a specific activity, you can select the IP address tab to view consolidated data about the IP address, including the number of open alerts for the particular IP address, a trend graph of recent activity, and a location map. This enables easy to drill down when investigating impossible travel alerts, for example. In addition, you can easily understand where the IP address was used and whether it was involved in suspicious activities. You can also perform actions directly in the IP address drawer that enable you to tag an IP address as risky, VPN, or corporate to ease future investigation and policy creation.
+Because IP address information is crucial for almost all investigations, you can view detailed information about IP addresses in the Activity drawer. From within a specific activity, you can select the IP address tab to view consolidated data about the IP address, including the number of open alerts for the particular IP address, a trend graph of recent activity, and a location map. This consolidated view enables you to drill down easily when investigating impossible travel alerts, for example. In addition, you can easily understand where the IP address was used and whether it was involved in suspicious activities. You can also perform actions directly in the IP address drawer that enable you to tag an IP address as risky, VPN, or corporate to ease future investigation and policy creation.
 
 To view IP address insights:
 

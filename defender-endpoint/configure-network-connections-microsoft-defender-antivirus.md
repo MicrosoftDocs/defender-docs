@@ -7,8 +7,8 @@ ms.localizationpriority: medium
 author: paulinbar
 ms.author: painbar
 ms.topic: how-to
-ms.custom: nextgen, msecd-doc-authoring-1014
-ms.date: 06/17/2026
+ms.custom: nextgen, msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ms.reviewer: yongrhee; pahuijbr
 ms.collection:
 - m365-security
@@ -38,7 +38,7 @@ The following operating systems are supported:
 
 The Microsoft Defender Antivirus cloud service provides fast, strong protection for your endpoints. While it's optional to enable and use the cloud-delivered protection services provided by Microsoft Defender Antivirus, it's highly recommended because it provides important and timely protection against emerging threats on your endpoints and network. For more information, see [Enable cloud-delivered protection](enable-cloud-protection-microsoft-defender-antivirus.md), which describes how to enable the service by using Intune, Microsoft Configuration Manager, Group Policy, PowerShell cmdlets, or individual clients in the Windows Security app.
 
-After you've enabled the service, you need to configure your network or firewall to allow connections between network and your endpoints. Computers must have access to the internet and reach the Microsoft cloud services for proper operation.
+After you've enabled Microsoft Defender Antivirus cloud-delivered protection, you need to configure your network or firewall to allow connections between network and your endpoints. Computers must have access to the internet and reach the Microsoft cloud services for proper operation.
 
 > [!NOTE]
 > The Microsoft Defender Antivirus cloud service delivers updated protection to your network and endpoints. The cloud service should not be considered as protection for or against files that are stored in the cloud; instead, the cloud service uses distributed resources and machine learning to deliver protection for your endpoints at a faster rate than the traditional Security intelligence updates, and applies to file-based and file-less threats, regardless of where the threats originate.
@@ -46,9 +46,9 @@ After you've enabled the service, you need to configure your network or firewall
 <a name="services-and-urls"></a>
 ## Required Microsoft Defender Antivirus services and URLs
 
-The table in this section lists services and their associated website addresses (URLs).
+The following table lists services and their associated website addresses (URLs).
 
-Make sure that there are no firewall or network filtering rules denying access to these URLs. Otherwise, you must create an allow rule specifically for those URLs. The URLs in the following table use port `443` for communication. (Port `80` is also required for some URLs, as noted in the following table.)
+Make sure that there are no firewall or network filtering rules denying access to the Microsoft Defender Antivirus connectivity URLs listed in the following table. Otherwise, you must create an allow rule specifically for the required Microsoft Defender Antivirus connectivity URLs. The Microsoft Defender Antivirus connectivity URLs use port `443` for communication. (Port `80` is also required for some URLs, as noted in the service and URL table.)
 
 |Service and description|URL|
 |---|---|
@@ -85,7 +85,7 @@ For more information about MpCmdRun, see [Configure and manage Microsoft Defende
 <a name="error-messages"></a>
 #### Common cloud validation error messages
 
-Here are some error messages you might see:
+Here are some error messages you might see. If the connectivity test starts but fails, the output begins with a timestamp and then shows a `ValidateMapsConnection` failure:
 
 ```console
 Start Time: <Day_of_the_week> MM DD YYYY HH:MM:SS
@@ -93,15 +93,21 @@ MpEnsureProcessMitigationPolicy: hr = 0x1
 ValidateMapsConnection
 ```
 
+If the device can't reach MAPS due to a connectivity issue, the command returns an error similar to one of the following examples:
+
 ```console
 ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80070006 httpcore=451)
 MpCmdRun.exe: hr = 0x80070006
 ```
 
+If certificate validation or TLS negotiation fails, you might see output similar to the following:
+
 ```console
 ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80072F8F httpcore=451)
 MpCmdRun.exe: hr = 0x80072F8F
 ```
+
+If the connection is interrupted or times out, the validation command can return output similar to the following:
 
 ```output
 ValidateMapsConnection failed to establish a connection to MAPS (hr=0x80072EFE httpcore=451)
@@ -111,14 +117,18 @@ MpCmdRun.exe: hr = 0x80072EFE
 <a name="root-causes"></a>
 #### Root causes of cloud validation failures
 
-The root cause of these error messages is that the device doesn't have its system-wide `WinHttp` proxy configured. If you don't set the system-wide WinHttp proxy, then the operating system isn't aware of the proxy and can't fetch the CRL (the operating system does this, not Defender for Endpoint), which means that TLS connections to URLs like `http://cp.wd.microsoft.com/` don't succeed. You see successful (response 200) connections to the endpoints, but the MAPS connections would still fail.
+The root cause of the `ValidateMapsConnection` error messages is that the device doesn't have its system-wide `WinHttp` proxy configured. If you don't set the system-wide WinHttp proxy, then the operating system isn't aware of the proxy and can't fetch the certificate revocation list (CRL) (the operating system does this, not Defender for Endpoint), which means that TLS connections to URLs like `http://cp.wd.microsoft.com/` don't succeed. You see successful (response 200) connections to the endpoints, but the MAPS connections would still fail.
 
 <a name="solutions"></a>
 #### Solutions for cloud validation failures
 
+Use one of the following approaches to resolve cloud validation failures:
+
 - **Preferred solution**: Configure the system-wide WinHttp proxy that allows the CRL check.
 
 - **Alternate solution**: Configuring the following `SSLOption` registry key and value to Disable the CRL check for SpyNet only. The `SSLOptions` registry key doesn't affect other services. Disabling the CRL check isn't a best practice because the device no longer checks for revoked certificates or certificate pinning.
+
+  To disable the CRL check for SpyNet, import a registry file with the following content:
 
   ```text
   Windows Registry Editor Version 5.00
@@ -164,7 +174,7 @@ To view the fake malware detection in the Windows Security app, perform the foll
    > [!NOTE]
    > Versions of Windows 10 before version 1703 have a different user interface. See [Microsoft Defender Antivirus in the Windows Security app](microsoft-defender-security-center-antivirus.md).
 
-   The Windows event log will also show [Troubleshoot Microsoft Defender Antivirus event ID 1116](troubleshoot-microsoft-defender-antivirus.yml).
+   The Windows event log will also show Microsoft Defender Antivirus event ID 1116. For more information, see [Troubleshoot Microsoft Defender Antivirus event ID 1116](troubleshoot-microsoft-defender-antivirus.yml).
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
@@ -174,7 +184,10 @@ To view the fake malware detection in the Windows Security app, perform the foll
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
 
-## See also
+<a name="see-also"></a>
+## Related content
+
+For related guidance, see the following resources:
 
 - [Configure device proxy and Internet connectivity settings for Microsoft Defender for Endpoint](configure-proxy-internet.md)
 - [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](use-group-policy-microsoft-defender-antivirus.md)

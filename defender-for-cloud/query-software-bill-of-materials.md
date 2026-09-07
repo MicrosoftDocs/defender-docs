@@ -2,24 +2,27 @@
 title: Query software bill of materials (SBOM)
 description: Learn how to query Software Bill of Materials (SBOM) results in Microsoft Defender for Cloud's Cloud Security Explorer.
 ms.topic: how-to
-ms.date: 06/11/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Query software bill of materials (SBOM)
 
 Microsoft Defender for Cloud's DevOps Security agentless scanning capabilities automatically generate a Software Bill of Materials (SBOM) for connected code repositories. When a scan finishes, the process publishes the repository and identified packages to the [cloud security graph](concept-attack-path.md#what-is-the-cloud-security-graph).
 
-You can use Defender for Cloud's [cloud security explorer](concept-attack-path.md#what-is-cloud-security-explorer) to query this data. By using the cloud security explorer, you can locate specific packages (dependencies) and identify exactly which repositories use them. Use this information to identify the impact radius of a vulnerable package version across your organization.
+You can use Defender for Cloud's [cloud security explorer](concept-attack-path.md#what-is-cloud-security-explorer) to query the repository and package data in the cloud security graph. By using the cloud security explorer, you can locate specific packages (dependencies) and identify exactly which repositories use them. Use the query results to identify the impact radius of a vulnerable package version across your organization.
 
 ## Prerequisites
+
+Before you build a package query, make sure the following prerequisites are met:
 
 * [Enable agentless scanning](agentless-code-scanning.md#enable-agentless-code-scanning-on-your-azure-devops-and-github-organizations) in your DevOps connector.
 * Wait for the initial scan to complete so the Software Bill of Materials (SBOM) data is populated in the Cloud Map.
 
 ## Build a package query
 
-By using the cloud security explorer, you can build a query to find repositories that include specific packages (dependencies) and versions.
+By using Cloud Security Explorer in Microsoft Defender for Cloud, you can build a query to find repositories that include specific packages (dependencies) and versions.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/).
 
@@ -73,7 +76,8 @@ To add a filter that searches for a specific package version, continue building 
 
 The query runs and all repositories containing the specified package and version are presented. Select a repository from the results to view further details about the installed software and its security posture.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Common questions about DevOps Security](faq-defender-for-devops.yml)

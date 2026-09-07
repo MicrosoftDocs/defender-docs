@@ -9,14 +9,14 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Defender for Endpoint Plan 1
 - Microsoft Defender for Endpoint Plan 2
 - Microsoft Defender for Business
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #customer intent: As a security administrator, I want to create dynamic rules for devices in asset rule management so that I can automatically assign tags and device values based on certain criteria.
 ---
 
@@ -35,7 +35,7 @@ You can create dynamic rules in the **Asset rule management** in the Microsoft D
 
 ## Create a new dynamic rule
 
-A rule can be based on device name, domain, OS platform, internet facing status, onboarding status and manual device tags. You can select or create a tag that will be applied based on the conditions you've set.
+A rule can be based on device name, domain, OS platform, internet facing status, onboarding status and manual device tags. You can select an existing tag or create a new tag. The selected or newly created tag is applied based on the conditions you set.
 
 The following steps guide you on how to create a new dynamic rule in Microsoft Defender XDR:
 
@@ -70,7 +70,7 @@ You can see the dynamic tags assigned on the **Device Inventory** page in the Mi
 
 To see tags on individual devices:
 
-1. Select **Devices** from the **Assets** navigation menu in the [Microsoft Defender portal](https://security.microsoft.com).
+1. In the [Microsoft Defender portal](https://security.microsoft.com), select **Devices** from the **Assets** navigation menu.
 
 2. In the **Device Inventory** page, select the device name that you want to view.
 
@@ -81,6 +81,11 @@ To see tags on individual devices:
 <a name="updating-rules"></a>
 ### Update an existing dynamic rule
 
-Dynamic tags and device values set by dynamic rules can't be manually updated. To edit, delete, or turn off a rule, on the **Asset Rule Management** page, select the rule and then select **Edit**, **Delete**, or **Turn off**.
+Dynamic tags and device values set by dynamic rules can't be manually updated.
+
+> [!WARNING]
+> Deleting a dynamic rule removes it and can affect tag or device value assignments. If you want to keep the rule but stop applying it, select **Turn off** instead of **Delete**.
+
+To edit, delete, or turn off a rule, on the **Asset Rule Management** page, select the rule and then select **Edit**, **Delete**, or **Turn off**.
 
 :::image type="content" source="media/configure-asset-rules/update-rule.png" alt-text="Screenshot of the rule details page" lightbox="media/configure-asset-rules/update-rule.png":::

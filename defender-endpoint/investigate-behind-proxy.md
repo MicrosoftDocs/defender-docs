@@ -11,11 +11,11 @@ ms.collection:
 - mde-edr
 ms.topic: how-to
 ms.subservice: edr
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 
 ai-usage: ai-assisted
 ---
@@ -28,7 +28,8 @@ The proxy acts as if it was the target endpoint. When a forward proxy acts as th
 
 Defender for Endpoint supports advanced HTTP level monitoring through network protection. When network protection is turned on, a new type of event is surfaced that exposes the real target domain names.
 
-## Use network protection to monitor network connection behind a firewall
+<a name="use-network-protection-to-monitor-network-connection-behind-a-firewall"></a>
+## Use network protection to monitor connections behind a forward proxy or firewall
 
 Monitoring network connection behind a forward proxy is possible due to other network events that originate from network protection. To see these network events on a device timeline, turn on network protection (at the minimum in audit mode).
 
@@ -44,13 +45,14 @@ If you don't configure it, network blocking is turned off by default.
 
 For more information, see [Enable network protection](enable-network-protection.md).
 
-## Investigation impact
+<a name="investigation-impact"></a>
+## How network protection reveals real targets behind forward proxies
 
-When network protection is turned on, you'll see that on a device's timeline the IP address keeps representing the proxy, while the real target address shows up.
+When network protection is turned on, a device's timeline shows the proxy IP address while also displaying the real target address.
 
 :::image type="content" source="media/atp-proxy-investigation.png" alt-text="The network events on device's timeline" lightbox="media/atp-proxy-investigation.png":::
 
-Other events triggered by the network protection layer are now available to surface the real domain names even behind a proxy.
+Additional network protection connection events are available to surface the real domain names even behind a proxy.
 
 Event's information:
 
@@ -58,9 +60,9 @@ Event's information:
 
 ## Hunt for connection events using advanced hunting
 
-All new connection events are available for you to hunt on through advanced hunting as well. Since these events are connection events, you can find them under the DeviceNetworkEvents table under the `ConnectionSuccess` action type.
+The network protection connection events are also available through advanced hunting. You can find them in the DeviceNetworkEvents table under the `ConnectionSuccess` action type.
 
-Using this simple query shows you all the relevant events:
+The following query returns all relevant ConnectionSuccess events:
 
 ```console
 DeviceNetworkEvents

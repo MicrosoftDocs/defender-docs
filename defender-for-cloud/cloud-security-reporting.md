@@ -2,17 +2,19 @@
 title: Cloud security reporting in Microsoft Defender portal
 description: Learn how to create, customize, and export cloud security reports in Microsoft Defender portal, including built-in reports and custom report options.
 ms.topic: how-to
-ms.date: 06/30/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Cloud security reporting in Microsoft Defender portal
 
 Microsoft Defender portal provides integrated reporting capabilities for cloud security data, enabling you to create, customize, and share security insights across your organization.
 
-You can view built-in reports, create custom reports tailored to your needs, and export reports to PDF for sharing with stakeholders. These capabilities enable you to generate and manage reports based on Cloud security data and tailor them to your organization needs.
+You can view built-in reports, create custom reports tailored to your needs, and export reports to PDF for sharing with stakeholders. Built-in reports, custom reports, and PDF export enable you to generate and manage reports based on cloud security data and tailor them to your organization's needs.
 
-## Capabilities
+<a name="capabilities"></a>
+## Cloud security reporting capabilities
 
 Cloud security reporting enables you to:
 
@@ -29,6 +31,8 @@ Cloud security reporting enables you to:
 Before using cloud security reporting, ensure the following requirements are met:
 
 ### Environment requirements
+
+The following environment requirement must be met:
 
 - A Microsoft Defender for Cloud paid plan is enabled
 
@@ -53,6 +57,8 @@ Or one of the following permissions:
 
 ### Supported cloud environments
 
+Cloud security reporting is available in the following cloud environments:
+
 - Available in commercial clouds (Azure, AWS, and GCP)
 - Not available in sovereign clouds
 
@@ -61,7 +67,7 @@ Or one of the following permissions:
 To access cloud reporting:
 
 1. Go to the **Reporting** page in the Microsoft Defender portal.
-. Select the **Cloud** tab.
+1. Select the **Cloud** tab.
 
 :::image type="content" source="media/cloud-security-reporting/reports-cloud.png" alt-text="Screenshot of Microsoft Defender Reports page with the Cloud tab selected, showing Unified security summary and Query resources reports." lightbox="media/cloud-security-reporting/reports-cloud.png":::
 
@@ -82,33 +88,33 @@ The **CNAPP Executive summary** report provides a consolidated, high-level summa
 
 #### Overview
 
-Provides a high-level snapshot of key security indicators across your cloud environment.
+The Overview section provides a high-level snapshot of key security indicators across your cloud environment.
 
 :::image type="content" source="media/cloud-security-reporting/executive-summary-report.png" alt-text="Screenshot of CNAPP Executive summary showing threat detection, cloud secure score, and security coverage cards with view buttons." lightbox="media/cloud-security-reporting/executive-summary-report.png":::
 
 #### Secure score
 
-Shows how the cloud secure score changes over time, with breakdowns that help identify areas with higher risk or slower improvement.
+This section shows how the cloud secure score changes over time, with breakdowns that help identify areas with higher risk or slower improvement.
 
 #### Vulnerability management
 
-Provides insights into vulnerability exposure and remediation across your cloud environments.
+This section provides insights into vulnerability exposure and remediation across your cloud environments.
 
 #### Security recommendations
 
-Displays detected security recommendations across the environment, highlighting configuration gaps and best practice deviations that can be remediated to reduce risk.
+This section displays detected security recommendations across the environment, highlighting configuration gaps and best practice deviations that can be remediated to reduce risk.
 
 #### Investigation & response
 
-Summarizes detection and response activity across your environment.
+This section summarizes detection and response activity across your environment.
 
 #### Regulatory compliance
 
-Shows compliance posture across supported regulatory frameworks, highlighting non-compliant standards and areas that require attention.
+This section shows compliance posture across supported regulatory frameworks, highlighting non-compliant standards and areas that require attention.
 
 #### When to use this report
 
-Use the **CNAPP Executive summary** report when you need to:
+Use the **CNAPP** (cloud-native application protection platform) **Executive summary** report when you need to:
 
 - Get a quick, executive-level view of overall cloud security risk
 - Monitor trends in secure score, vulnerabilities, and alerts over time
@@ -121,21 +127,21 @@ The **Cloud posture** report provides a centralized view of your overall cloud s
 
 #### Overview
 
-Summarizes the current security posture, including the cloud secure score and Defender CSPM plan coverage across your environments.
+This section summarizes the current security posture, including the cloud secure score and Defender CSPM plan coverage across your environments.
 
 :::image type="content" source="media/cloud-security-reporting/cloud-posture-report.png" alt-text="Screenshot of Cloud posture report showing cloud secure score, Defender CSPM plan coverage, and security posture trends over time." lightbox="media/cloud-security-reporting/cloud-posture-report.png":::
 
 #### Security posture
 
-Shows how the cloud secure score evolves over time, with breakdowns by environment and workload to help identify areas with higher risk exposure.
+This section shows how the cloud secure score evolves over time, with breakdowns by environment and workload to help identify areas with higher risk exposure.
 
 #### Recommendations
 
-Highlights actionable security recommendations and remediation status to help prioritize remediation efforts based on impact.
+This section highlights actionable security recommendations and remediation status to help prioritize remediation efforts based on impact.
 
 #### Regulatory compliance
 
-Displays compliance posture against supported regulatory standards and frameworks, helping identify compliance gaps and track progress toward regulatory requirements.
+This section displays compliance posture against supported regulatory standards and frameworks, helping identify compliance gaps and track progress toward regulatory requirements.
 
 #### When to use this report
 
@@ -245,7 +251,10 @@ You can filter the reports list to find specific reports.
 
 Report visibility controls who can access each report in your organization.
 
-### Visibility options
+<a name="visibility-options"></a>
+### Review report visibility options
+
+The following visibility options are available for reports:
 
 - **Private**: Only you can view this report.
 - **Tenant-level access**: Users who have permission to view data across the entire tenant can view this report.

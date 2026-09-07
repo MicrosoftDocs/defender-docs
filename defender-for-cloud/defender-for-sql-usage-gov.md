@@ -2,7 +2,8 @@
 title: Enable Microsoft Defender for SQL Servers on Machines government
 description: Learn how to protect your Microsoft SQL Servers on Azure VMs, on government clouds with Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 04/23/2025
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to enable Defender for SQL servers on machines so that I can protect my SQL servers in various environments.
 ai-usage: ai-assisted
 ---
@@ -27,12 +28,13 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 | SQL IaaS Extension (IaaS)| - Publisher: Microsoft.SqlServer.Management<br>  - Type: SqlIaaSAgent |
 | SQL IaaS Extension (Arc)| - Publisher: Microsoft.AzureData<br>  - Type: WindowsAgent.SqlServer|
 | AMA extension (IaaS and Arc) | - Publisher: Microsoft.Azure.Monitor<br>  - Type: AzureMonitorWindowsAgent |
-| **Region requirement** | When you enable the plan, a resource group is created in the East US. Ensure this region isn't blocked in your environment. |
-| **Resource naming conventions** | Defender for SQL uses the following naming convention when creating our resources: <br> - Data Collection Rule: `MicrosoftDefenderForSQL--dcr` <br> - DCRA: `/Microsoft.Insights/MicrosoftDefenderForSQL-RulesAssociation` <br> - Resource group: `DefaultResourceGroup-` <br> - Log analytics workspace: `D4SQL--` <br> - Defender for SQL uses *MicrosoftDefenderForSQL* as a *createdBy* database tag. <br><br> Ensure that Deny policies don't block this naming convention. |
+| **Region requirement** | When you enable the plan, a resource group is created in the East US. Ensure East US isn't blocked in your environment. |
+| **Resource naming conventions** | Defender for SQL uses the following naming convention when creating our resources: <br> - Data Collection Rule: `MicrosoftDefenderForSQL--dcr` <br> - DCRA: `/Microsoft.Insights/MicrosoftDefenderForSQL-RulesAssociation` <br> - Resource group: `DefaultResourceGroup-` <br> - Log analytics workspace: `D4SQL--` <br> - Defender for SQL uses *MicrosoftDefenderForSQL* as a *createdBy* database tag. <br><br> Ensure that Deny policies don't block the Defender for SQL resource naming convention listed above. |
 | **Supported SQL Server Versions**| SQL Server 2012 or later is supported for SQL instances. |
 | **Supported Operating Systems**| Windows Server 2012 R2 or later. |
 
-## Enable the plan
+<a name="enable-the-plan"></a>
+## Enable Defender for SQL Servers on Machines
 
 1. In the Azure portal, search for and select **Microsoft Defender for Cloud**.
 
@@ -48,7 +50,8 @@ The Defender for SQL Servers on Machines plan is one of the Defender for Databas
 
 1. Select **Continue** > **Save**.
 
-## Select a workspace
+<a name="select-a-workspace"></a>
+## Select a Log Analytics workspace
 
 Select a Log Analytics workspace to work with the Defender for SQL on Machines plan.
 
@@ -75,7 +78,8 @@ Depending on your environment, it can take a few hours to discover and protect S
 
 As a required final step, [verify that all machines are protected](verify-machine-protection-gov.md). Verification confirms that the deployment completed and that your SQL instances are protected.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Verify that all machines are protected](verify-machine-protection-gov.md)

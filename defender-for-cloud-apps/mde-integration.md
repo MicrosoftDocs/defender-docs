@@ -1,11 +1,11 @@
 ---
 title: Integrate Microsoft Defender for Endpoint
 description: This article describes how to integrate Microsoft Defender for Endpoint with Defender for Cloud Apps for enhanced visibility into Shadow IT and risk management.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Integrate Microsoft Defender for Endpoint with Microsoft Defender for Cloud Apps
@@ -18,6 +18,8 @@ The out-of-the-box integration between Microsoft Defender for Cloud Apps and Mic
 > This article focuses on shadow IT discovery capabilities from Defender for Endpoint logs. For more information on shadow IT governing capabilities via Defender for Endpoint, see [Govern discovered apps using Microsoft Defender for Endpoint](mde-govern.md).
 
 ## Prerequisites
+
+Before you configure the integration, make sure you meet the following prerequisites:
 
 - Microsoft Defender for Cloud Apps license
 
@@ -52,7 +54,7 @@ The out-of-the-box integration between Microsoft Defender for Cloud Apps and Mic
 
 On its own, Defender for Cloud Apps collects logs from your endpoints using either [logs you upload](create-snapshot-cloud-discovery-reports.md) or by [configuring automatic log upload](discovery-docker.md). The out-of-the-box integration enables you to take advantage of the logs Defender for Endpoint's agent creates when it runs on Windows and monitors network transactions. Use these Defender for Endpoint network transaction logs for Shadow IT discovery across the Windows devices on your network.
 
-The integration doesn't require extra deployment steps or routing or mirroring traffic from your endpoints, and works as follows:
+The integration doesn't require extra deployment steps or routing or mirroring traffic from your endpoints. It provides the following capabilities:
 
 - **Logs from your endpoints that are sent to Defender for Cloud Apps provide user and device information for traffic activities**. Pairing device context with the username provides a full picture across your network enabling you to determine which user did which activity from which device.
 - **When you identify a risky user, check the devices that the user accessed to detect potential risks**. If you identify a risky device, check all the users who used it to detect further potential risks.

@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 description: Admins can learn how to create and manage payloads for Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ai-usage: ai-assisted
@@ -37,7 +37,7 @@ To see the available payloads, open the Microsoft Defender portal at <https://se
 >
 > Microsoft provides Attack simulation training payloads to help customers simulate real-world attack techniques. Microsoft does not provide legal advice, and customers remain responsible for determining the appropriate use of any payloads in their own environment. For questions relating to applicable laws, trademark use, or other legal considerations, customers should consult their own legal advisors.
 
-The information that's available on the tabs is described in the following list:
+The information that's available on the **MDO recommendations**, **Global payloads**, and **Tenant payloads** tabs is described in the following list:
 
 - **MDO recommendations** tab: The following information is shown for each payload:
   - **Payload name**
@@ -148,6 +148,8 @@ You can also create custom payloads that use QR codes as phishing links as descr
 > Before you use a QR code payload in simulations, be sure to examine the available fields and content in the payload.
 
 ## Create payloads
+
+Use the following steps to create a custom payload on the **Tenant payloads** tab.
 
 > [!NOTE]
 >
@@ -425,7 +427,7 @@ The payload wizard opens with the settings and values of the selected payload. T
 
 ## Copy payloads
 
-To copy an existing payload on the **Tenant payloads** or **Global payloads** tabs, do one of the following steps:
+To copy an existing payload on the **Tenant payloads** or **Global payloads** tabs, do one of the following steps. If you're copying a built-in payload from the **Global payloads** tab, be sure to change the **Name** value in the wizard so the copied payload doesn't appear on the **Tenant payloads** page with the same name as the built-in payload.
 
 - Select the payload by clicking the check box next to the name, and then select the :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Copy payload** action that appears.
 - Select the payload by clicking **⋮** (**Actions**) at the end of the row, and then select :::image type="icon" source="media/defender-portal-icon-edit.png" border="false"::: **Copy payload**.

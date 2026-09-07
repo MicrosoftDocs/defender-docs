@@ -5,7 +5,7 @@ ms.topic: reference
 ms.date: 07/01/2026
 ---
 
-# Risk Evaluation Framework changelog
+# Risk evaluation framework changelog
 
 The Risk Evaluation Framework (REF) changelog documents MSEM-initiated changes that affect how security risk is evaluated in your environment. Changes reflect updates to **inputs and components** of the REF - such as scope, weights, and coverage - not the underlying scoring formula.
 
@@ -36,4 +36,6 @@ MSEM initiates REF changes, not customer actions. They might include:
 
 | Date | Change type | Description | More information |
 | -------- | -------- | -------- | -------- |
-| 30 June 2026 | New recommendations added |200+ multi-cloud recommendations are now generally available.|[What's new in Defender for Cloud](/azure/defender-for-cloud/release-notes#expanded-multicloud-security-coverage-is-now-generally-available)|
+| 30 June 2026 | New recommendations added | 200+ multi-cloud recommendations are now generally available.| [What's new in Defender for Cloud](/azure/defender-for-cloud/release-notes#expanded-multicloud-security-coverage-is-now-generally-available) |
+| 26 July 2026 | New recommendations added | 80+ Defender for SQL Vulnerability Assessment recommendations are now generally available | [Database-level recommendations experience for SQL Vulnerability Assessment](https://aka.ms/SQLVARecommendations) |
+

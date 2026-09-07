@@ -51,7 +51,7 @@ In case of an MSSP, many if not all of the above requirements apply, making mult
 
 - [Partner data connectors](data-connectors-reference.md) are often based on API or agent collections, and therefore are not attached to a specific Microsoft Entra tenant.
 
-Use [Azure Lighthouse](/azure/lighthouse/how-to/onboard-customer) to help manage multiple Microsoft Sentinel instances in different tenants.u
+Use [Azure Lighthouse](/azure/lighthouse/how-to/onboard-customer) to help manage multiple Microsoft Sentinel instances in different tenants.
 
 ## Microsoft Sentinel multiple workspace architecture
 

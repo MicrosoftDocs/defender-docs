@@ -9,9 +9,9 @@ ms.localizationpriority: medium
 ms.collection: 
 - m365-security
 - tier1
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
@@ -42,7 +42,7 @@ To set up device discovery:
 
 ## Control which devices perform standard discovery
 
-To customize the list of devices used to perform standard discovery, do one of the following:
+You can customize the list of devices used to perform standard discovery in either of these ways:
 
 - Enable standard discovery on all onboarded devices that support device discovery.
 - Select a subset or subsets of your devices using device tags (see [Set up device discovery](configure-device-discovery.md#set-up-device-discovery)). When you select subsets of devices using device tags, all other devices run basic discovery only.
@@ -77,7 +77,7 @@ The list sorts networks based on the total number of devices seen on the network
 
 ### Manage monitored networks
 
-You might want to monitor a network, for example, if you have a new corporate office or a remote site that needs to be monitored. For more information, see [Monitored networks](device-discovery.md#monitored-networks).
+You might want to monitor a network, for example, if you have a new corporate office or a remote site that you want to include in device discovery. For more information, see [Monitored networks](device-discovery.md#monitored-networks).
 
 To manage monitored networks, in the device discovery settings, select **Monitored networks**, select the three dots next to a name of a network, and select one of the following options.
 
@@ -115,7 +115,7 @@ If you encounter issues with device discovery or authenticated network scans, se
 
 ## Explore devices in the network
 
-You can use the following advanced hunting query to get more context about each network name described in the Monitored networks list. The query lists all the onboarded devices that were connected to a certain network within the last seven days.
+You can use the following advanced hunting query to get more context about each network name shown in the [Monitored networks](#view-and-manage-monitored-networks) list. The query lists all the onboarded devices that were connected to a certain network within the last seven days.
 
 ```kusto
 DeviceNetworkInfo

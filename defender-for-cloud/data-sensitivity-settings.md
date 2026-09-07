@@ -2,14 +2,15 @@
 title: Customize data sensitivity settings
 description: Learn how to customize data sensitivity settings in Microsoft Defender for Cloud to better manage and protect your organization's sensitive data.
 ms.topic: how-to
-ms.date: 05/25/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to customize data sensitivity settings so that I can better manage and protect sensitive data in my organization.
 ai-usage: ai-assisted
 ---
 
 # Customize data sensitivity settings
 
-This article describes how to customize data sensitivity settings in Microsoft Defender for Cloud.
+This article describes how to customize data sensitivity settings in Microsoft Defender for Cloud. Before you begin, make sure you review the [prerequisites and requirements](concept-data-security-posture-prepare.md#configure-data-sensitivity-settings) and enable sensitive data discovery in your Defender for Cloud plan.
 
 Data sensitivity settings are used to identify and focus on managing the critical sensitive data in your organization.
 
@@ -18,17 +19,17 @@ In this article, Defender cloud security posture management (Defender CSPM) refe
 - You can select sensitive information types and sensitivity labels from the Microsoft Purview portal in Defender for Cloud.
     - By default, Defender for Cloud uses [built-in sensitive information types](/microsoft-365/compliance/sensitive-information-type-learn-about) from Microsoft Purview.
     - Some information types and labels are enabled by default.
-    - Sensitive data discovery supports a subset of those built-in types. See the [reference list of supported sensitive information types](sensitive-info-types.md), including defaults.
+    - Sensitive data discovery supports a subset of the built-in sensitive information types from Microsoft Purview. See the [reference list of supported sensitive information types](sensitive-info-types.md), including defaults.
     - You can modify the default settings on the **Data sensitivity** page.
 - If you import labels, you can set sensitivity thresholds that determine the minimum threshold sensitivity level for a label to be marked as sensitive in Defender for Cloud.
 
-This configuration helps you focus on your critical sensitive resources and improve the accuracy of the sensitivity insights.
+Customizing data sensitivity settings helps you focus on your critical sensitive resources and improve the accuracy of the sensitivity insights.
 
 ## Before you start
 
 Before you customize data sensitivity settings, ensure the following requirements are met:
 
-- Make sure that you [review the prerequisites and requirements](concept-data-security-posture-prepare.md#configure-data-sensitivity-settings) for customizing data sensitivity settings.
+- Make sure that you [prerequisites and requirements for configuring data sensitivity settings](concept-data-security-posture-prepare.md#configure-data-sensitivity-settings).
 - In Defender for Cloud, enable sensitive data discovery capabilities in the [Defender CSPM](data-security-posture-enable.md) and/or [Defender for Storage](defender-for-storage-data-sensitivity.md) plans.
 
 Changes in sensitivity settings take effect the next time that resources are discovered.
@@ -61,7 +62,7 @@ If you're using Microsoft Purview sensitivity labels, make sure that:
 
 - You set the label scope to **files and other data assets**, and configure the [auto-labeling rule for Office apps](/purview/apply-sensitivity-label-automatically#how-to-configure-auto-labeling-for-office-apps).
 
-- Your labels are [published](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) with a label policy that is in effect.
+- Your labels are [published with a label policy](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) that is in effect.
 
 You can set a threshold to determine the minimum sensitivity level for a label to be marked as sensitive in Defender for Cloud.
 
@@ -82,7 +83,8 @@ You can set a threshold to determine the minimum sensitivity level for a label t
 > - You can't select a sub label in the threshold. However, you can see the sublabel as the affected label on resources in attack path/Cloud Security Explorer, if the parent label is part of the threshold (part of the sensitive labels selected).
 > - The same settings apply to any supported resource (object storage and databases).
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Review risks](data-security-review-risks.md) to sensitive data

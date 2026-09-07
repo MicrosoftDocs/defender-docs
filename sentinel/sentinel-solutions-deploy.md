@@ -4,12 +4,12 @@ description: Learn how to find and deploy Sentinel packaged solutions containing
 ms.author: edbaynash
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security operations administrator, I want to discover, install, and centrally manage out-of-the-box content so that I can efficiently enhance and maintain my security monitoring capabilities.
@@ -36,7 +36,7 @@ If you're a partner who wants to create your own solution, see the [Microsoft Se
 
 ## Prerequisites
 
-In order to install, update, and delete standalone content or solutions in content hub, you need the **Microsoft Sentinel Contributor** role at the resource group level.
+To install, update, or delete standalone content or solutions in content hub, you need the **Microsoft Sentinel Contributor** role at the resource group level.
 
 For more information about other roles and permissions supported for Microsoft Sentinel, see [Permissions in Microsoft Sentinel](roles.md).
   
@@ -51,7 +51,7 @@ The content hub offers the best way to find new content or manage the solutions 
 
 1. Search for the solutions or standalone content items that you need. Either select specific values from the filters, or enter a search term into the **Search** box. Searches use AI to support fuzzy searches and approximate vocabulary.
 
-    When searching, make sure to press **ENTER** to start the search. The number of search results is limited to 50 items, including both solutions and content items found within solutions. If you don't find what you're looking for, try refining the search expression or use different filters.
+    Press **ENTER** to start the search. Results are limited to 50 items, including solutions and content items within solutions. If you don't find what you need, refine your search or try different filters.
 
     For more information, see [Categories for Microsoft Sentinel out-of-the-box content and solutions](sentinel-solutions.md#categories-for-microsoft-sentinel-out-of-the-box-content-and-solutions).
 
@@ -134,7 +134,7 @@ If you're using the API to install solution packages or individual templates, fo
    - To retrieve a package, use the [Get Product Package API](/rest/api/securityinsights/product-package/get).
    - To retrieve an individual template, use the [Get Product Template API](/rest/api/securityinsights/product-template/get).
 
-2. In the API response, locate the `properties.mainTemplate` field. This field contains the ARM template JSON that defines the solution or template resources.
+2. In the API response, locate the `properties.mainTemplate` field. This field contains the Azure Resource Manager (ARM) template JSON that defines the solution or template resources.
 
 3. Deploy the extracted `mainTemplate` using an [ARM template deployment](/azure/azure-resource-manager/templates/overview#template-deployment-process), either through the Rest API, Azure CLI, or PowerShell.
 
@@ -155,7 +155,7 @@ Centrally manage content items for installed solutions from the content hub.
 
 ### Manage each content type
 
-The following sections provide some tips on how to work with the different content types as you manage a solution.
+The following sections describe how to work with [data connectors](#data-connector), [analytics rules](#analytics-rule), [hunting queries](#hunting-query), [workbooks](#workbook), [parsers](#parser), and [playbooks](#playbook) as you manage a solution.
 
 <a name="data-connector"></a>
 #### Connect a data connector
@@ -192,12 +192,12 @@ Run the provided hunting query or customize it.
 
 1. To customize your hunting query, select the link in the **Content name** column.
 
-   From the hunting gallery, you can create a clone of the read-only hunting query template by going to the ellipses menu. Hunting queries created in this way display as items in the content hub **Created content** column.
+   In the hunting gallery, select the ellipses menu to clone the read-only query template. Cloned queries appear in the content hub **Created content** column.
 
 <a name="workbook"></a>
 #### Create a workbook from a template
 
-To customize a workbook created from a template, create an instance of a workbook.
+To customize a workbook, save a copy from the template.
 
 1. Select **View template** to open the workbook and see the visualizations.
 1. Select **Save** to create an instance of the workbook template.
@@ -230,22 +230,24 @@ Create a playbook from a template.
 
 ## Find the support model for your content
 
-Each solution and standalone content item explains its support model on its details pane, in the **Support** box, where either **Microsoft** or a partner's name is listed. For example:
+Each solution and standalone content item shows its support model in the **Support** box on its details pane. The box lists either **Microsoft** or a partner name. For example:
 
 :::image type="content" source="media/sentinel-solutions-deploy/find-support-details.png" alt-text="Screenshot of where you can find your support model for your solution." lightbox="media/sentinel-solutions-deploy/find-support-details.png":::
 
-When contacting support, you might need other details about your solution, such as a publisher, provider, and plan ID values. Find this information on the details page in the **Usage information & support** tab.
+When you contact support, you might need the publisher, provider, or plan ID for your solution. Find these details on the **Usage information & support** tab of the details page.
 
 :::image type="content" source="media/sentinel-solutions-deploy/usage-support.png" alt-text="Screenshot of usage and support details for a solution.":::
 
 ## Next steps
 
+Many solutions include data connectors that you need to configure so that you can start ingesting your data into Microsoft Sentinel. Each data connector has its own set of requirements that are detailed on the data connector page in Microsoft Sentinel. 
+
+For more information, see [Connect your data source](data-connectors-reference.md).
+
+## Related content
+
 - Learn more about [Microsoft Sentinel solutions](sentinel-solutions.md).
 - See the full Microsoft Sentinel solutions catalog in the [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?filters=solution-templates&page=1&search=sentinel).
 - Find domain specific solutions in the [Microsoft Sentinel content hub catalog](sentinel-solutions-catalog.md).
 - [Delete installed Microsoft Sentinel out-of-the-box content and solutions](sentinel-solutions-delete.md).
-
-Many solutions include data connectors that you need to configure so that you can start ingesting your data into Microsoft Sentinel. Each data connector has its own set of requirements that are detailed on the data connector page in Microsoft Sentinel. 
-
-For more information, see [Connect your data source](data-connectors-reference.md).
 

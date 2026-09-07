@@ -51,6 +51,9 @@ For more information, see:
 
 ## UEBA anomalies
 
+> [!NOTE]
+> The UEBA anomalies listed in this section are stored in the `Anomalies` table. For anomaly insights added directly to UEBA behavior records in the `BehaviorInfo` table, see [Investigate anomalies on UEBA behaviors](ueba-anomalies-on-behaviors.md).
+
 Sentinel UEBA detects anomalies based on dynamic baselines created for each entity across various data inputs. Each entity's baseline behavior is set according to its own historical activities, those of its peers, and those of the organization as a whole. Anomalies can be triggered by the correlation of different attributes such as action type, geo-location, device, resource, ISP, and more.
 
 You must [enable UEBA and anomaly detection in your Sentinel workspace](enable-entity-behavior-analytics.md) to detect UEBA anomalies.
@@ -64,12 +67,20 @@ UEBA detects anomalies based on these anomaly rules:
 - [UEBA Anomalous Activity in GCP Audit Logs](#ueba-anomalous-activity-in-gcp-audit-logs)
 - [UEBA Anomalous Activity in Okta_CL](#ueba-anomalous-activity-in-okta_cl)
 - [UEBA Anomalous Authentication](#ueba-anomalous-authentication)
+- [UEBA Anomalous CheckPoint Anomalous VPN Login](#ueba-anomalous-checkpoint-anomalous-vpn-login)
+- [UEBA Anomalous CheckPoint Device Compromised](#ueba-anomalous-checkpoint-device-compromised)
+- [UEBA Anomalous CheckPoint Failed VPN Login](#ueba-anomalous-checkpoint-failed-vpn-login)
+- [UEBA Anomalous CheckPoint Unusual Web Access](#ueba-anomalous-checkpoint-unusual-web-access)
 - [UEBA Anomalous Code Execution](#ueba-anomalous-code-execution)
 - [UEBA Anomalous Data Destruction](#ueba-anomalous-data-destruction)
 - [UEBA Anomalous Data Transfer from Amazon S3](#ueba-anomalous-data-transfer-from-amazon-s3)
 - [UEBA Anomalous Defensive Mechanism Modification](#ueba-anomalous-defensive-mechanism-modification)
 - [UEBA Anomalous Failed Sign-in](#ueba-anomalous-failed-sign-in)
 - [UEBA Anomalous Federated or SAML Identity Activity in AwsCloudTrail](#ueba-anomalous-federated-or-saml-identity-activity-in-awscloudtrail)
+- [UEBA Anomalous Fortinet Anomalous VPN Authentication](#ueba-anomalous-fortinet-anomalous-vpn-authentication)
+- [UEBA Anomalous Fortinet Suspicious Firewall Policy Change](#ueba-anomalous-fortinet-suspicious-firewall-policy-change)
+- [UEBA Anomalous Fortinet Unusual Web Category Browsing](#ueba-anomalous-fortinet-unusual-web-category-browsing)
+- [UEBA Anomalous GuardDuty Finding Activity in AWS (Preview)](#ueba-anomalous-guardduty-finding-activity-in-aws-preview)
 - [UEBA Anomalous IAM Privilege Modification in AwsCloudTrail](#ueba-anomalous-iam-privilege-modification-in-awscloudtrail)
 - [UEBA Anomalous Infrastructure Usage in GCP Audit Logs](#ueba-anomalous-infrastructure-usage-in-gcp-audit-logs)
 - [UEBA Anomalous Login in GCP Audit Logs](#ueba-anomalous-login-in-gcp-audit-logs)
@@ -83,6 +94,9 @@ UEBA detects anomalies based on these anomaly rules:
 - [UEBA Anomalous Secret or KMS Key Access in GCP Audit Logs](#ueba-anomalous-secret-or-kms-key-access-in-gcp-audit-logs)
 - [UEBA Anomalous Sign-in](#ueba-anomalous-sign-in)
 - [UEBA Anomalous STS AssumeRole Behavior in AwsCloudTrail](#ueba-anomalous-sts-assumerole-behavior-in-awscloudtrail)
+- [UEBA Anomalous Zscaler Anomalous VPN Authentication](#ueba-anomalous-zscaler-anomalous-vpn-authentication)
+- [UEBA Anomalous Zscaler Suspicious Administrative Change](#ueba-anomalous-zscaler-suspicious-administrative-change)
+- [UEBA Anomalous Zscaler Unusual High Risk Web Category Access](#ueba-anomalous-zscaler-unusual-high-risk-web-category-access)
 
 Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA anomalies with a confidence score specific to your tenant and source. 
 
@@ -112,6 +126,160 @@ Sentinel uses enriched data from the BehaviorAnalytics table to identify UEBA an
 | **MITRE ATT&CK techniques:**     | T1136 - Create Account                                             |
 | **MITRE ATT&CK sub-techniques:** | Cloud Account                                                      |
 | **Activity:**                    | Core Directory/UserManagement/Add user                             |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous CheckPoint Anomalous VPN Login
+
+**Description:** Unusual successful VPN logins to a Check Point gateway from public (non-private) source IP addresses. Anomalies are determined by comparing the source IP address, resolved country/region, and ISP of each login against the user's own history and against organization-wide patterns. First-time logins from a new IP address or country/region, or logins from a country/region never before seen in the tenant, might indicate impossible travel, compromised credentials, or unauthorized remote access.
+
+| Attribute | Value |
+| --- | --- |
+| **Anomaly type:** | UEBA |
+| **Data sources:** | CommonSecurityLog (Check Point) |
+| **MITRE ATT&CK tactics:** | Initial Access, Persistence |
+| **MITRE ATT&CK techniques:** | T1078 - Valid Accounts, T1133 - External Remote Services |
+| **Activity:** | `AnomalousVpnLogin` - a successful Check Point VPN login with a populated `SourceUserName` and a public `SourceIP` |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous CheckPoint Device Compromised
+
+**Description:** An unusual burst of Check Point IPS, Anti-Bot, or Anti-Virus prevention detections on a single device. Anomalies are determined by comparing the device's daily detection volume against its own 30-day history, and are raised when the volume deviates significantly from that baseline. Such bursts might indicate exploitation attempts against the device, or malware propagating from it.
+
+| Attribute | Value |
+| --- | --- |
+| **Anomaly type:** | UEBA |
+| **Data sources:** | CommonSecurityLog (Check Point) |
+| **MITRE ATT&CK tactics:** | Execution, Initial Access |
+| **MITRE ATT&CK techniques:** | T1059 - Command and Scripting Interpreter, T1203 - Exploitation for Client Execution |
+| **Activity:** | `DeviceCompromised` - IPS, Anti-Bot, Anti-Virus, or Antivirus detections of `Medium` severity or higher, with a prevention `DeviceAction` (`Prevent`, `Block`, `Drop`, `Reject`), on a device with no associated user |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous CheckPoint Failed VPN Login
+
+**Description:** Unusual patterns of failed VPN login attempts against a Check Point VPN-1 & FireWall-1 gateway. Anomalies are determined by comparing the source IP address, resolved geolocation, and ISP of failed logins against the user's historical baseline. A first-time failure from a new IP address, or an unusual concentration of failures, might indicate brute-force attacks, credential stuffing, or unauthorized access attempts against the VPN gateway.
+
+| Attribute | Value |
+| --- | --- |
+| **Anomaly type:** | UEBA |
+| **Data sources:** | CommonSecurityLog (Check Point) |
+| **MITRE ATT&CK tactics:** | Credential Access, Initial Access |
+| **MITRE ATT&CK techniques:** | T1110 - Brute Force, T1078 - Valid Accounts |
+| **Activity:** | `FailedVpnLogin` - `DeviceProduct` is `VPN-1 & FireWall-1`, `SourceUserName` is populated, `Activity` contains a login or authentication token, and `DeviceAction` is `Drop`, `Reject`, or `Block` |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous CheckPoint Unusual Web Access
+
+**Description:** Unusual device access to high-risk web categories through Check Point URL Filtering, such as phishing, malware, botnet, command-and-control, cryptomining, and anonymizer sites. Anomalies are determined by comparing the accessed web category against the device's own history and against categories previously observed anywhere in the organization. First-time access to a high-risk category might indicate malware staging, social engineering, or a policy violation.
+
+| Attribute | Value |
+| --- | --- |
+| **Anomaly type:** | UEBA |
+| **Data sources:** | CommonSecurityLog (Check Point) |
+| **MITRE ATT&CK tactics:** | Command and Control, Initial Access |
+| **MITRE ATT&CK techniques:** | T1071 - Application Layer Protocol, T1189 - Drive-by Compromise |
+| **Activity:** | `UnusualWebAccess` - `DeviceProduct` is `URL Filtering`, `Computer` is populated with no associated `SourceUserName`, and `DeviceCustomString5` contains a high-risk web category |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous Fortinet Anomalous VPN Authentication
+
+**Description:** Unusual successful VPN authentications to a Fortinet FortiGate appliance from public (non-private) source IP addresses. Anomalies are determined by comparing the source IP address, resolved country/region, and ISP of each authentication against the user's own history and against organization-wide patterns. First-time authentications from a new IP address or country/region might indicate impossible travel, compromised credentials, or unauthorized remote access.
+
+| Attribute | Value |
+| --- | --- |
+| **Anomaly type:** | UEBA |
+| **Data sources:** | CommonSecurityLog (Fortinet) |
+| **MITRE ATT&CK tactics:** | Initial Access, Persistence |
+| **MITRE ATT&CK techniques:** | T1078 - Valid Accounts, T1133 - External Remote Services |
+| **Activity:** | `AnomalousVpnAuthentication` - a successful FortiGate VPN authentication (`event:vpn`, `vpn success`, `vpn event success`) with a populated `SourceUserName` and a public `SourceIP` |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous Fortinet Suspicious Firewall Policy Change
+
+**Description:** An unusual burst of administrative firewall policy changes on a Fortinet FortiGate appliance. Anomalies are determined by comparing the device's daily volume of configuration-change events against its own 30-day history. A significant deviation from that baseline might indicate defense evasion, firewall rule tampering, or unauthorized policy modification by a compromised administrative account.
+
+| Attribute | Value |
+| --- | --- |
+| **Anomaly type:** | UEBA |
+| **Data sources:** | CommonSecurityLog (Fortinet) |
+| **MITRE ATT&CK tactics:** | Defense Evasion, Persistence |
+| **MITRE ATT&CK techniques:** | T1562 - Impair Defenses, T1098 - Account Manipulation |
+| **Activity:** | `SuspiciousFirewallPolicyChange` - FortiGate system events (`event:system`) whose `DeviceEventClassID` is `37124`, `37127`, `37128`, `37129`, or `37134`, and whose action is `add`, `create`, `update`, `modify`, `edit`, `delete`, `set`, or `unset` |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous Fortinet Unusual Web Category Browsing
+
+**Description:** Unusual device access to high-risk URL categories through Fortinet FortiGate web filtering, such as phishing, malware, spyware, botnet, command-and-control, and ransomware sites. Anomalies are determined by comparing the accessed URL category against the device's own history and against categories previously observed anywhere in the organization. First-time access to a high-risk category might indicate malware staging, social engineering, or a policy violation.
+
+| Attribute | Value |
+| --- | --- |
+| **Anomaly type:** | UEBA |
+| **Data sources:** | CommonSecurityLog (Fortinet) |
+| **MITRE ATT&CK tactics:** | Command and Control, Initial Access |
+| **MITRE ATT&CK techniques:** | T1071 - Application Layer Protocol, T1189 - Drive-by Compromise |
+| **Activity:** | `UnusualWebCategoryBrowsing` - FortiGate `webfilter` events where `Computer` is populated with no associated `SourceUserName`, and `DeviceCustomString2` contains a high-risk URL category |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous GuardDuty Finding Activity in AWS (Preview)
+
+**Description:** Unusual AWS GuardDuty finding activity associated with identities and resources. Anomalies include first-time finding types, unusual frequency or bursts, and spikes in finding severity or volume compared with historical and peer activity, which may indicate emerging compromise or attacker progression.
+
+| Attribute | Value |
+| -------------------------------- | ------------------------------------------------------------------- |
+| **Anomaly type:** | UEBA |
+| **Data sources:** | AWS GuardDuty findings |
+| **MITRE ATT&CK tactics:** | Initial Access, Credential Access, Discovery, Exfiltration |
+| **MITRE ATT&CK techniques:** | T1078, T1078.004 - Valid Accounts; T1110 - Brute Force; T1087.004 - Account Discovery: Cloud Account; T1567.002 - Exfiltration Over Web Service: Exfiltration to Cloud Storage |
+| **Activity:** | GuardDuty finding activity |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous Zscaler Anomalous VPN Authentication
+
+**Description:** Unusual Zscaler Private Access VPN authentications from public (non-private) source IP addresses. Anomalies are determined by comparing the source IP address, resolved country/region, and ISP of each authentication against the user's own history and against organization-wide patterns. Deviations might indicate compromised credentials, session hijacking, or unauthorized remote access.
+
+| Attribute | Value |
+| --- | --- |
+| **Anomaly type:** | UEBA |
+| **Data sources:** | CommonSecurityLog (Zscaler) |
+| **MITRE ATT&CK tactics:** | Initial Access, Persistence |
+| **MITRE ATT&CK techniques:** | T1078 - Valid Accounts, T1133 - External Remote Services |
+| **Activity:** | `AnomalousVpnAuthentication` - login or authentication activity on a Zscaler product other than `NSSWeblog` or `NSSDNSlog`, with a populated `SourceUserName`, a public `SourceIP`, and a non-administrative `DeviceAction` |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous Zscaler Suspicious Administrative Change
+
+**Description:** Atypical administrative changes in the Zscaler portal, such as policy edits, user provisioning, and administrator sign-in and sign-out events. Anomalies are determined by comparing each administrative action against the actions the user has performed before, and against actions previously observed anywhere in the organization. First-time or uncommon administrative actions might indicate privileged account compromise, or malicious insider activity that weakens security controls.
+
+| Attribute | Value |
+| --- | --- |
+| **Anomaly type:** | UEBA |
+| **Data sources:** | CommonSecurityLog (Zscaler) |
+| **MITRE ATT&CK tactics:** | Persistence, Defense Evasion |
+| **MITRE ATT&CK techniques:** | T1098 - Account Manipulation, T1562 - Impair Defenses |
+| **Activity:** | `SuspiciousAdministrativeChange` - `SIGN_IN`, `SIGN_OUT`, `CREATE`, `UPDATE`, or `DELETE` in `DeviceAction`, on a Zscaler product other than `NSSWeblog` or `NSSDNSlog`, with a populated `SourceUserName` |
+
+[Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
+
+### UEBA Anomalous Zscaler Unusual High Risk Web Category Access
+
+**Description:** Unusual user access to high-risk web categories through the Zscaler proxy, such as malware, phishing, spyware, command-and-control, anonymizer, and proxy-avoidance sites. Anomalies are determined by comparing the accessed category against the user's own history and against categories previously observed anywhere in the organization. First-time access to a high-risk category might indicate malware staging, phishing, or deliberate evasion of web security policy.
+
+| Attribute | Value |
+| --- | --- |
+| **Anomaly type:** | UEBA |
+| **Data sources:** | CommonSecurityLog (Zscaler) |
+| **MITRE ATT&CK tactics:** | Command and Control, Exfiltration |
+| **MITRE ATT&CK techniques:** | T1071 - Application Layer Protocol, T1567 - Exfiltration Over Web Service |
+| **Activity:** | `UnusualHighRiskWebCategoryAccess` - `DeviceProduct` is `NSSWeblog`, `SourceUserName` and `RequestURL` are populated, and `DeviceCustomString2` contains a high-risk web category |
 
 [Back to UEBA anomalies list](#ueba-anomalies) | [Back to top](#anomalies-detected-by-the-microsoft-sentinel-machine-learning-engine)
 

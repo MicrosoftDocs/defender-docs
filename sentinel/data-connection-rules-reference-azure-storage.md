@@ -6,7 +6,7 @@ ms.author: edbaynash
 author: EdB-MSFT
 ms.reviewer: krishsa
 ms.topic: reference
-ms.date: 02/19/2026
+ms.date: 08/07/2026
 ms.service: microsoft-sentinel
 
 ---
@@ -14,6 +14,8 @@ ms.service: microsoft-sentinel
 # Azure Storage Blob data connector reference for the Codeless Connector Framework
 
 To create an Azure Storage Blob data connector with the Codeless Connector Framework (CCF), use this reference in addition to the [Microsoft Sentinel REST API for Data Connectors](/rest/api/securityinsights/data-connectors/create-or-update) article. 
+
+In this ingestion pattern, a producer writes data to Azure Blob Storage. Azure Event Grid sends blob creation events to an Azure Storage queue, where they're buffered until the connector processes them. The connector then reads the blobs and routes their contents through an Azure Monitor data collection rule (DCR) to the destination table. This durable queue-based design supports backpressure handling and resilient ingestion for high-volume data sources.
 
 Each `dataConnector` represents a specific *connection* of a Microsoft Sentinel data connector. One data connector might have multiple connections, which fetch data from different endpoints. The JSON configuration built using this reference document is used to complete the deployment template for the CCF data connector.
 
@@ -103,6 +105,8 @@ StorageAccountBlobContainer auth example:
 ## Request configuration
 
 The request section describes the Azure Storage queues that receive blob created event messages.
+
+Before you configure this section, create the notification and dead-letter queues. Configure an Azure Event Grid subscription on the storage account to send `Microsoft.Storage.BlobCreated` events to the notification queue specified by **QueueUri**. For more information, see [Quickstart: Route Blob storage events to a web endpoint with the Azure portal](/azure/storage/blobs/storage-blob-event-quickstart).
 
 | Field | Required | Type | Description |
 |----|----|----|-----|

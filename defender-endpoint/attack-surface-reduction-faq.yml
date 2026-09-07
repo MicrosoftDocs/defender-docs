@@ -119,7 +119,7 @@ sections:
       - question: |
           I'm switching from a non-Microsoft security solution to Microsoft Defender for Endpoint. Is there an easy way to import my old rules to attack surface reduction?
         answer: |
-          In most cases, it's easier and better to start with the baseline recommendations suggested by [Defender for Endpoint](/windows/security/threat-protection) than to attempt to import rules from another security solution. Use **Audit** mode, monitoring, and analytics to configure Defender for Endpoint.
+          In most cases, it's easier and better to start with the baseline recommendations suggested by [Defender for Endpoint](microsoft-defender-endpoint.md) than to attempt to import rules from another security solution. Use **Audit** mode, monitoring, and analytics to configure Defender for Endpoint.
 
           The default configuration for most attack surface reduction rules, combined with Defender for Endpoint's real-time protection, protects against a large number of exploits and vulnerabilities.
 
@@ -131,7 +131,7 @@ sections:
           Yes. For more information, see the following articles:
 
           - [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules)
-          - [Configure and validate exclusions based on file extension and folder location](/windows/security/threat-protection/microsoft-defender-antivirus/configure-extension-file-exclusions-microsoft-defender-antivirus#use-wildcards-in-the-file-name-and-folder-path-or-extension-exclusion-lists).
+          - [Use wildcards in exclusions](/defender-endpoint/microsoft-defender-antivirus-exclusions-overview#wildcards-in-microsoft-defender-antivirus-exclusions).
 
       - question: |
           Do attack surface reduction rules cover all apps?

@@ -134,7 +134,7 @@ The following table lists the columns available in the Defender for IoT device i
 | **Subtype** | The device's subtype, such as *Speaker* or *Smart TV*. <br>**Default**: `Managed Device` |Editable in Azure|
 | **Tags** | The device's tags.  |Editable in Azure|
 |**Type** * | The device type, such as *Communication* or *Industrial*. <br>**Default**: `Miscellaneous`  |Editable in Azure and OT sensor |
-|**Vendor** *| The name of the device's vendor, as defined in the MAC address.  < Also inconsistent - in inventory called vendor, in pane called hardware vendor>|Editable in Azure |
+|**Vendor** *| The name of the device's hardware vendor, as defined in the MAC address. |Editable in Azure |
 | **VLAN**  * | The device's VLAN.  |Not editable|
 |**Zone** | The device's zone.  |Not editable|
 

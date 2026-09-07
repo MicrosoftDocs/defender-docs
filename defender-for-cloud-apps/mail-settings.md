@@ -1,10 +1,10 @@
 ---
 title: Configure Defender for Cloud Apps user email notifications
-description: Customize the email notifications Defender for Cloud Apps sends to end users when a breach is detected, including sender identity, email design templates, and scope limitations.
-ms.date: 06/16/2026
+description: Customize end-user email notifications in Defender for Cloud Apps by uploading HTML templates with branding, titles, and content placeholders. Learn which notification types support these customizations and how they differ from admin notifications.
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Naama-Goldbart 
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -75,7 +75,7 @@ The following types of notifications use the custom email templates:
 
 ## Sample email template
 
-Below is a sample email template:
+The following code is a sample email template:
 
 ```html
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

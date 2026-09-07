@@ -8,20 +8,20 @@ ms.reviewer: zeinam
 ms.service: microsoft-sentinel  
 ms.topic: how-to
 ms.subservice: sentinel-platform
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 
 ms.collection: ms-security  
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---  
 
 # Visualize data in Microsoft Sentinel data lake using workbooks
  
-Microsoft Sentinel workbooks let SOC teams visualize and monitor security data directly from the data lake. Analysts use KQL (Kusto Query Language) to query the lake without duplicating or transforming data. Select Sentinel data lake as the data source in a workbook to run the same queries used for investigations and hunting. Then render results as interactive charts and tables for monitoring and reporting. This approach keeps analytics consistent across queries, supports longer data retention, and scales with high-volume historical data. These capabilities make workbooks ideal for threat hunting, trend analysis, and executive dashboards.
+Microsoft Sentinel workbooks let SOC teams visualize and monitor security data directly from the data lake. Analysts use KQL (Kusto Query Language) to query the lake without duplicating or transforming data. Select Sentinel data lake as the data source in a workbook to run the same queries used for investigations and hunting. Then render results as interactive charts and tables for monitoring and reporting. Running workbook queries directly against the Sentinel data lake keeps analytics consistent across queries, supports longer data retention, and scales with high-volume historical data. Consistent analytics, longer data retention, and high-volume scalability make workbooks ideal for threat hunting, trend analysis, and executive dashboards.
  
 This article walks you through the process of creating workbooks for using Microsoft Sentinel data lake as the data source. For more information on using workbooks with Sentinel, see [Visualize and monitor your data by using workbooks in Microsoft Sentinel](/azure/sentinel/monitor-your-data?tabs=defender-portal).
 
-Query performance matters because workbook visuals can autorefresh and run many times. Add time filters, summarize results, and project only the columns you need. These steps prevent queries from scanning too much historical data. Well-scoped queries keep dashboards fast while still using long-term data for analysis.
+Query performance matters because workbook visuals can autorefresh and run many times. Add time filters, summarize results, and project only the columns you need. Adding time filters, summarizing results, and projecting only the required columns prevent queries from scanning too much historical data. Well-scoped queries keep dashboards fast while still using long-term data for analysis.
 
 ## Create a workbook with Microsoft Sentinel data lake as the data source
 
@@ -68,7 +68,7 @@ Follow these steps to create a workbook that uses Microsoft Sentinel data lake a
  
     :::image type="content" source="./media/workbooks-for-data-lake/edit-new-query.png" alt-text="Screenshot showing the editing of a new query and visualization." lightbox="./media/workbooks-for-data-lake/edit-new-query.png":::
 
-    This visual shows the top 10 AWS principal identities with the most failed API calls in AWSCloudTrail logs. Failed events are counted and filtered to show identities with repeated errors. Use this chart to spot suspicious or misconfigured identities that produce unusual failure patterns.
+    This visual shows the top 10 AWS principal identities with the most failed API calls in AWSCloudTrail logs. Failed events are counted and filtered to show identities with repeated errors. Use the failed-events bar chart to spot suspicious or misconfigured identities that produce unusual failure patterns.
     
     > [!NOTE]
     > The **Visualization** type **Set by query** isn't supported. 

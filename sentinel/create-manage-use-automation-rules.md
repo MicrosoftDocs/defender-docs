@@ -5,12 +5,12 @@ ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: sshuster
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 
@@ -47,7 +47,7 @@ You also want to determine your use case. What are you trying to accomplish with
 
 ### Determine the trigger
 
-Do you want this automation to be activated when new incidents or alerts are created? Or anytime an incident gets updated?
+Do you want this automation rule to be activated when new incidents or alerts are created? Or anytime an incident gets updated?
 
 Automation rules are triggered **when an incident is created or updated** or **when an alert is created**. Recall that incidents include alerts, and that both alerts and incidents can be created by analytics rules, of which there are several types, as explained in [Threat detection in Microsoft Sentinel](threat-detection.md).
 
@@ -55,22 +55,22 @@ The following table shows the different possible scenarios that cause an automat
 
 | Trigger type | Events that cause the rule to run |
 | --------- | ------------ |
-| **When incident is created** | **Microsoft Defender portal:**<li>A new incident is created in the Microsoft Defender portal.<br><br>**Microsoft Sentinel not onboarded to the Defender portal:**<li>A new incident is created by an analytics rule.<li>An incident is ingested from Microsoft Defender XDR.<li>A new incident is created manually. |
-| **When incident is updated** | <li>An incident's status is changed (closed/reopened/triaged).<li>An incident's owner is assigned or changed.<li>An incident's severity is raised or lowered.<li>Alerts are added to an incident.<li>Comments, tags, or tactics are added to an incident. |
-| **When alert is created** | <li>An alert is created by a Microsoft Sentinel **Scheduled** or **NRT** analytics rule. |
+| **When incident is created** | **Microsoft Defender portal:**<br>- A new incident is created in the Microsoft Defender portal.<br><br>**Microsoft Sentinel not onboarded to the Defender portal:**<br>- A new incident is created by an analytics rule.<br>- An incident is ingested from Microsoft Defender XDR.<br>- A new incident is created manually. |
+| **When incident is updated** | - An incident's status is changed (closed/reopened/triaged).<br>- An incident's owner is assigned or changed.<br>- An incident's severity is raised or lowered.<br>- Alerts are added to an incident.<br>- Comments, tags, or tactics are added to an incident. |
+| **When alert is created** | - An alert is created by a Microsoft Sentinel **Scheduled** or **NRT** analytics rule. |
 
 > [!NOTE]
 > **In the Defender portal:** Alert triggers work only on Microsoft Sentinel alerts. To automate responses to alerts across Microsoft Sentinel, Microsoft Defender, and XDR platforms, use the **[Enhanced Alert Trigger](automation/generate-playbook.md#enhanced-alert-trigger)**.
 
 ## Create your automation rule
 
-The steps in this section apply to most automation rule scenarios.
+The following steps apply to most automation rule creation scenarios.
 
 If you're looking to suppress noisy incidents and are working in the Azure portal, try [handling false positives](false-positives.md#add-exceptions-with-automation-rules-azure-portal-only).
 
 If you want to create an automation rule to apply to a specific analytics rule, see [Set automated responses and create the rule](detect-threats-custom.md#set-automated-responses-and-create-the-rule).
 
-**To create your automation rule**:
+To create your automation rule:
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select the **Configuration** > **Automation** page. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Configuration** > **Automation**.
 
@@ -88,7 +88,7 @@ If you want to create an automation rule to apply to a specific analytics rule, 
 
 ### Choose your trigger
 
-From the **Trigger** drop-down, select the appropriate trigger according to the circumstance for which you're creating the automation rule&mdash;**When incident is created**, **When incident is updated**, or **When alert is created**.
+From the **Trigger** drop-down, select the trigger that matches when you want the automation rule to run&mdash;**When incident is created**, **When incident is updated**, or **When alert is created**.
 
 > [!NOTE]
 > If your workspace is onboarded to the Microsoft Defender portal, the trigger drop-down also includes the **Case created** and **Case updated** triggers from [Simple Flows](automation/create-basic-automation-rules-simple-flows.md) (preview).
@@ -145,7 +145,7 @@ Use the options in the **Conditions** area to define conditions for your automat
 
     If you selected **When an incident is updated** as the trigger, start by defining your conditions, and then adding extra operators and values as needed.
 
-**To define your conditions**:
+To define your conditions:
 
 1. Select a property from the first drop-down box on the left. You can begin typing any part of a property name in the search box to dynamically filter the list, so you can find what you're looking for quickly.
 
@@ -160,23 +160,23 @@ Use the options in the **Conditions** area to define conditions for your automat
 
     | Property | Operator set |
     | -------- | -------- |
-    | - **Title**<br>- **Description**<br>- All listed **entity properties**<br>&nbsp;&nbsp;(see [supported entity properties](automation-rule-reference.md)) | - Equals/Does not equal<br>- Contains/Does not contain<br>- Starts with/Does not start with<br>- Ends with/Does not end with |
-    | - **Tag** (See [individual vs. collection](automate-incident-handling-with-automation-rules.md#tag-property-individual-vs-collection)) | **Any individual tag:**<br>- Equals/Does not equal<br>- Contains/Does not contain<br>- Starts with/Does not start with<br>- Ends with/Does not end with<br><br>**Collection of all tags:**<br>- Contains/Does not contain |
-    | - **Severity**<br>- **Status**<br>- **Custom details key** | - Equals/Does not equal |
-    | - **Tactics**<br>- **Alert product names**<br>- **Custom details value**<br>- **Analytic rule name** | - Contains/Does not contain |
+    | - Title<br>- Description<br>- All listed entity properties<br>&nbsp;&nbsp;(see [supported entity properties](automation-rule-reference.md)) | - Equals/Does not equal<br>- Contains/Does not contain<br>- Starts with/Does not start with<br>- Ends with/Does not end with |
+    | - Tag (See [individual vs. collection](automate-incident-handling-with-automation-rules.md#tag-property-individual-vs-collection)) | Any individual tag:<br>- Equals/Does not equal<br>- Contains/Does not contain<br>- Starts with/Does not start with<br>- Ends with/Does not end with<br><br>Collection of all tags:<br>- Contains/Does not contain |
+    | - Severity<br>- Status<br>- Custom details key | - Equals/Does not equal |
+    | - Tactics<br>- Alert product names<br>- Custom details value<br>- Analytic rule name | - Contains/Does not contain |
 
     #### Conditions available with the update trigger
 
     | Property | Operator set |
     | -------- | -------- |
-    | - **Title**<br>- **Description**<br>- All listed **entity properties**<br>&nbsp;&nbsp;(see [supported entity properties](automation-rule-reference.md)) | - Equals/Does not equal<br>- Contains/Does not contain<br>- Starts with/Does not start with<br>- Ends with/Does not end with |
-    | - **Tag** (See [individual vs. collection](automate-incident-handling-with-automation-rules.md#tag-property-individual-vs-collection)) | **Any individual tag:**<br>- Equals/Does not equal<br>- Contains/Does not contain<br>- Starts with/Does not start with<br>- Ends with/Does not end with<br><br>**Collection of all tags:**<br>- Contains/Does not contain |
-    | - **Tag** (in addition to above)<br>- **Alerts**<br>- **Comments** | - Added |
-    | - **Severity**<br>- **Status** | - Equals/Does not equal<br>- Changed<br>- Changed from<br>- Changed to |
-    | - **Owner** | - Changed. If an incident's owner is updated via API, you must include the [*userPrincipalName* or *ObjectID*](/rest/api/securityinsights/automation-rules/get#incidentownerinfo) for the change to be detected by automation rules. |
-    | - **Updated by**<br>- **Custom details key** | - Equals/Does not equal |
-    | - **Tactics** | - Contains/Does not contain<br>- Added |
-    | - **Alert product names**<br>- **Custom details value**<br>- **Analytic rule name** | - Contains/Does not contain |
+    | - Title<br>- Description<br>- All listed entity properties<br>&nbsp;&nbsp;(see [supported entity properties](automation-rule-reference.md)) | - Equals/Does not equal<br>- Contains/Does not contain<br>- Starts with/Does not start with<br>- Ends with/Does not end with |
+    | - Tag (See [individual vs. collection](automate-incident-handling-with-automation-rules.md#tag-property-individual-vs-collection)) | Any individual tag:<br>- Equals/Does not equal<br>- Contains/Does not contain<br>- Starts with/Does not start with<br>- Ends with/Does not end with<br><br>Collection of all tags:<br>- Contains/Does not contain |
+    | - Tag (in addition to above)<br>- Alerts<br>- Comments | - Added |
+    | - Severity<br>- Status | - Equals/Does not equal<br>- Changed<br>- Changed from<br>- Changed to |
+    | - Owner | - Changed. If an incident's owner is updated via API, you must include the [*userPrincipalName* or *ObjectID*](/rest/api/securityinsights/automation-rules/get#incidentownerinfo) for the change to be detected by automation rules. |
+    | - Updated by<br>- Custom details key | - Equals/Does not equal |
+    | - Tactics | - Contains/Does not contain<br>- Added |
+    | - Alert product names<br>- Custom details value<br>- Analytic rule name | - Contains/Does not contain |
 
     #### Conditions available with the alert trigger
 
@@ -223,11 +223,11 @@ To add one of these conditions based on an incident's tags, take the following s
 
 #### Conditions based on custom details
 
-You can set the value of a [custom detail surfaced in an incident](surface-custom-details-in-alerts.md) as a condition of an automation rule. Recall that custom details are data points in raw event log records that can be surfaced and displayed in alerts and the incidents generated from them. Use custom details to get to the actual relevant content in your alerts without having to dig through query results. 
+You can set the value of a [custom detail surfaced in an incident](surface-custom-details-in-alerts.md) as a condition of an automation rule. Recall that custom details are data points in raw event log records that can be surfaced and displayed in alerts and the incidents generated from them. Use custom details to get to the actual relevant content in your alerts without having to dig through query results.
 
 **Known limitation**: When using custom detail values, the **Does not contain** operator might fail to evaluate correctly when multiple (two or more) distinct values are present.
 
-**To add a condition based on a custom detail**:
+To add a condition based on a custom detail:
 
 1. Create a new automation rule as described in [Create your automation rule](#create-your-automation-rule).
 
@@ -322,13 +322,11 @@ Playbook actions within an automation rule might be treated differently under so
 | Less than two minutes | Up to two minutes after playbook began running,<br>but no more than 10 seconds after the playbook is completed |
 | More than two minutes | Two minutes after playbook began running,<br>regardless of whether or not it was completed |
 
-## Next steps
+## Related content
 
-In this document, you learned how to use automation rules to centrally manage response automation for Microsoft Sentinel incidents and alerts.
-
-- To learn how to add advanced conditions with `OR` operators to automation rules, see [Add advanced conditions to Microsoft Sentinel automation rules](add-advanced-conditions-to-automation-rules.md).
-- To learn more about automation rules, see [Automate incident handling in Microsoft Sentinel with automation rules](automate-incident-handling-with-automation-rules.md)
-- To learn more about advanced automation options, see [Automate threat response with playbooks in Microsoft Sentinel](automate-responses-with-playbooks.md).
-- To learn how to use automation rules to add tasks to incidents, see [Create incident tasks in Microsoft Sentinel using automation rules](create-tasks-automation-rule.md).
-- To migrate alert-trigger playbooks to be invoked by automation rules, see [Migrate your Microsoft Sentinel alert-trigger playbooks to automation rules](migrate-playbooks-to-automation-rules.md)
-- For help with implementing automation rules and playbooks, see [Tutorial: Use playbooks to automate threat responses in Microsoft Sentinel](tutorial-respond-threats-playbook.md).
+- [Add advanced conditions to Microsoft Sentinel automation rules](add-advanced-conditions-to-automation-rules.md).
+- [Automate incident handling in Microsoft Sentinel with automation rules](automate-incident-handling-with-automation-rules.md)
+- [Automate threat response with playbooks in Microsoft Sentinel](automate-responses-with-playbooks.md).
+- [Create incident tasks in Microsoft Sentinel using automation rules](create-tasks-automation-rule.md).
+- [Migrate your Microsoft Sentinel alert-trigger playbooks to automation rules](migrate-playbooks-to-automation-rules.md)
+- [Tutorial: Use playbooks to automate threat responses in Microsoft Sentinel](tutorial-respond-threats-playbook.md).

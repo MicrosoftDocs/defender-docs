@@ -1,10 +1,10 @@
 ---
 title: Scope your Defender for Cloud Apps deployment by users and groups
 description: Control which users and groups are monitored in Defender for Cloud Apps by configuring scoped deployment inclusions and exclusions.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Scope your deployment to specific users or user groups
@@ -27,7 +27,7 @@ You might not want to use Microsoft Defender for Cloud Apps for all the users in
 
   - **External users** group - All users who aren't members of any of the managed domains you configured for your organization.
 
-- Setting an include rule automatically excludes all groups not within the included group. For example, if you set a rule to include all members of the US-office groups, any groups who aren't part of that group won't be monitored.
+- Setting an include rule automatically excludes all groups not within the included group. For example, if you set a rule to include all members of the US-office groups, any groups not included in the US-office groups won't be monitored.
 
 - Excluded user groups override included user groups. If you include the user group **UK-employees** but exclude **Marketing**, Microsoft Defender for Cloud Apps doesn't monitor marketing members from the UK even if they're members of the **UK-employees** group.
 
@@ -78,7 +78,7 @@ The following user activities are monitored:
 |Raymond|Sales managers|Power BI only|
 
 > [!NOTE]
-> The group scoping in these rules doesn't affect other apps.
+> The group scoping in the example include and exclude rules doesn't affect other apps.
 > In the example, for Salesforce, the monitoring includes all activities for all user groups.
 
 ## Verify your scoped deployment
@@ -86,7 +86,7 @@ The following user activities are monitored:
 After you configure scoped deployment, check for new events in the **Activity log** or the **CloudAppEvents** table.
 
 If no new events appear, or events from excluded accounts appear, the scoped user accounts might not be correctly correlated with the application’s account identifiers. This issue can occur when one application uses a UPN as the account ID and another application uses a different account ID format or a non‑UPN value.
-To resolve this issue, create an additional scoped deployment group for the app whose account ID format differs from the other connected apps.
+To resolve this account-correlation issue, create an additional scoped deployment group for the app whose account ID format differs from the other connected apps.
 
 
 ## Next steps

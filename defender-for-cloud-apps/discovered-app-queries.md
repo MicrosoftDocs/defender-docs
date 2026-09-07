@@ -1,17 +1,17 @@
 ---
 title: Discovered app filters and queries | Microsoft Defender for Cloud Apps
 description: This article provides a list of Defender for Cloud Apps discovered app filters and queries and explains how to work with them.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Filter and query discovered apps in Microsoft Defender for Cloud Apps
 
 
 
-When you have a large number of discovered apps, you'll find it useful to filter and query them. This article describes what filters are available and how to query your discovered apps.
+When you have a large number of discovered apps, you'll find it useful to filter and query them. You can use basic and advanced filters on the **Discovered apps** page in the Microsoft Defender Portal to narrow results by risk score, app category, compliance, usage, and other criteria. You can also save custom queries or use suggested queries to quickly identify apps that need attention. This article describes what filters are available and how to query your discovered apps.
 
 ## Discovered app filters
 
@@ -47,7 +47,7 @@ To create a custom app tag:
 3. To apply an app tag, in the **Discovered apps** tab, select the three dots at the far right of the app name. Select the app tag to apply.
 
 > [!NOTE]
->You can also create a new app tag directly in the **Discovered apps** table by selecting **Create app tag** after selecting the three dots to the right of any selected app. When you create the tag from the discovered app, you can apply it to the app. You can also access the **App tags** screen by selecting the **Manage tags** link in the corner.
+>You can also create a new app tag directly in the **Discovered apps** table by selecting **Create app tag** after selecting the three dots to the right of any selected app. When you create the tag from the discovered app, you can apply the tag to the app. You can also access the **App tags** screen by selecting the **Manage tags** link in the corner.
 > ![Screenshot of the option to create a custom app tag directly from a discovered app.](media/create-app-tag-from-app.png)
 
 ## Discovered app queries

@@ -1,10 +1,10 @@
 ---
 title: Plan capacity for deployment | Microsoft Defender for Identity
-description: Plan your deployment and decide how many Microsoft Defender for Identity servers are needed to support your network.
-ms.date: 06/15/2026
+description: Use the Microsoft Defender for Identity sizing tool to assess whether domain controllers have sufficient resources for sensor v2 deployments. Includes prerequisites and manual sizing guidance.
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -13,7 +13,7 @@ ai-usage: ai-assisted
 > [!NOTE]
 > The capacity planning tool was designed for version 2.x of the sensor due to its resource-intensive network processes. Sensor v3.x does not require a sizing tool since it relies mainly on Windows events and event tracing, which significantly reduces resource requirements.
 
-Use the Microsoft Defender for Identity sizing tool to determine whether your domain controller servers have enough resources for a Microsoft Defender for Identity sensor v2. Before you run the sizing tool, review the [Prerequisites](#prerequisites) section later in this article.
+Use the Microsoft Defender for Identity sizing tool to determine whether your domain controller servers have enough resources for a Microsoft Defender for Identity sensor v2. Before you run the sizing tool, review the [Prerequisites](#prerequisites).
 
 While domain controller performance may not be affected if the server doesn't have required resources, the Defender for Identity sensor may not operate as expected. For more information, see [Microsoft Defender for Identity prerequisites](prerequisites-sensor-version-2.md).
 
@@ -32,6 +32,8 @@ Before you run the sizing tool, complete the following prerequisites:
 To ensure accurate results, only run the sizing tool *before* you've installed any Defender for Identity sensors in your environment.
 
 ## Use the sizing tool
+
+Use the following steps to run the sizing tool and review the results:
 
 1. Run the Defender for Identity sizing tool, **TriSizingTool.exe**, from the zip file you downloaded.
 
@@ -94,7 +96,7 @@ When determining sizing, keep in mind the total number of cores and total amount
 
 ## Manual sizing estimation for domain controllers
 
-If you're unable to use the Defender for Identity sizing tool described earlier in this article, you can manually estimate whether your domain controller servers have enough resources for a Defender for Identity sensor instead.
+If you're unable to use the Defender for Identity sizing tool described in [Use the sizing tool](#use-the-sizing-tool), you can manually estimate whether your domain controller servers have enough resources for a Defender for Identity sensor instead.
 
 Manually gather the packet/second counter information from all your domain controllers, over 24 hours with a low collection interval like 5 seconds. For each domain controller, calculate the daily average and the busiest period (15 minutes) average.  
 

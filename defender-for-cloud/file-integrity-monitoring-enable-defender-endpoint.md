@@ -1,9 +1,9 @@
 ---
 title: Enable File Integrity Monitoring 
-description: Learn how to enable File Integrity Monitoring when you collect data with Microsoft Defender for Endpoint.
+description: Configure File Integrity Monitoring in Microsoft Defender for Cloud after enabling Defender for Servers Plan 2. Use the Defender for Endpoint agent and agentless machine scanning to collect monitoring data.
 ms.topic: how-to
-ms.date: 03/22/2026
-ms.custom: sfi-image-nochange
+ms.date: 07/03/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to enable File Integrity Monitoring so that I can detect unauthorized changes to critical files.
 ai-usage: ai-assisted
 ---
@@ -12,7 +12,7 @@ ai-usage: ai-assisted
 
 In Defender for Servers Plan 2 in Microsoft Defender for Cloud, the [File Integrity Monitoring](file-integrity-monitoring-overview.md) feature helps to keep enterprise assets and resources secure. It scans and analyzes operating system files, Windows registries, application software, and Linux system files for changes that might indicate an attack.
 
-After you enable Defender for Servers Plan 2, follow the instructions in this article to configure File Integrity Monitoring using the Microsoft Defender for Endpoint agent and agentless machine scanning to collect data.
+After you enable Defender for Servers Plan 2, follow the steps below to configure File Integrity Monitoring using the Microsoft Defender for Endpoint agent and agentless machine scanning to collect data.
 
 > [!NOTE]
 >
@@ -25,7 +25,7 @@ After you enable Defender for Servers Plan 2, follow the instructions in this ar
 
 - You must enable [Defender for Servers Plan 2](tutorial-enable-servers-plan.md) on your subscription.
 
-- You must install the [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) agent through the Defender for Servers [extensions](faq-defender-for-servers.yml) on machines you want to monitor.
+- You must install the [Defender for Endpoint](/defender-endpoint/microsoft-defender-endpoint) agent through the [Defender for Servers extensions](faq-defender-for-servers.yml) on machines you want to monitor.
 
 - You must connect Non-Azure machines with [Azure Arc](/azure/azure-arc/servers/learn/quick-enable-hybrid-vm).
 
@@ -47,7 +47,8 @@ Before you begin, verify that the Defender for Endpoint client version on your m
 
 - **Linux machines** - The Defender for Endpoint agent is automatically updated if autoprovisioning is turned on for the machines in Defender for Cloud. After the MDE.Linux extension is installed on a Linux machine, the machine attempts to update the agent version each time the Virtual Machine (VM) reboots. You can also [update the agent version manually](/defender-endpoint/linux-updates).
 
-## Enable File Integrity Monitoring
+<a name="enable-file-integrity-monitoring"></a>
+## Enable File Integrity Monitoring in the Azure portal
 
 File Integrity Monitoring isn't enabled by default. You can enable it in the Microsoft Defender for Cloud portal.
 
@@ -99,7 +100,7 @@ File Integrity Monitoring isn't enabled by default. You can enable it in the Mic
 
 ## Review enablement status for File Integrity Monitoring
 
-Review the File Integrity Monitoring enablement to ensure it's correct and all prerequisites are met.
+Review the File Integrity Monitoring enablement to ensure the configuration is correct and all prerequisites are met.
 
 1. Go to **Workload protection** > **File Integrity Monitoring**.
 
@@ -123,7 +124,7 @@ Review the File Integrity Monitoring enablement to ensure it's correct and all p
 
 If you disable File Integrity Monitoring, no new events are collected. However, the data collected before the disablement, remains in the Log Analytics workspace, in accordance with the workspace retention policy.
 
-Disable as follows:
+To disable File Integrity Monitoring, follow these steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 
@@ -148,5 +149,5 @@ It identifies both as Modify actions. As a result, when a new file is created, t
 
 ## Related content
 
-- Events collected for File Integrity Monitoring are included in the data types eligible for the 500-MB benefit for Defender for Servers Plan 2 customers. [Learn more about the benefit](data-ingestion-benefit.md).
-- [Review changes](file-integrity-monitoring-review-changes.md) in File Integrity Monitoring.
+- Events collected for File Integrity Monitoring are included in the data types eligible for the 500-MB benefit for Defender for Servers Plan 2 customers. [Learn about the data ingestion benefit](data-ingestion-benefit.md).
+- [Review File Integrity Monitoring changes](file-integrity-monitoring-review-changes.md).

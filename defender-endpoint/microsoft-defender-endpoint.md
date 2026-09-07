@@ -11,7 +11,7 @@ ms.collection:
 - essentials-overview
 ms.custom: intro-overview
 ms.topic: overview
-ms.date: 06/17/2026
+ms.date: 07/28/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -33,7 +33,7 @@ Defender for Endpoint also integrates with the broader Microsoft security ecosys
 * [Microsoft Defender for Cloud](/azure/defender-for-cloud/)
 * [Microsoft Defender for Cloud Apps](/defender-cloud-apps/)
 * [Microsoft Defender for Identity](/defender-for-identity/)
-* [Microsoft Defender for Office](/defender-office-365/)
+* [Microsoft Defender for Office 365](/defender-office-365/)
 * [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management)
 * [Microsoft Sentinel](/azure/sentinel/)
 * [Microsoft threat intelligence](threat-protection-integration.md)
@@ -55,6 +55,10 @@ Defender for Endpoint is available with several licensing options, including Def
 
 > [!TIP]
 > The more Microsoft Defender workloads you deploy (identity, email, cloud apps, and endpoints), the stronger your overall protection becomes. Each workload contributes signals that enrich detection, correlation, and automated response in the unified Defender portal.
+
+### Server licensing and Defender for Servers
+
+If you're using Defender for Endpoint on servers, you might be eligible for a discount if you're also using [Microsoft Defender for Servers](/azure/defender-for-cloud/defender-for-servers-overview). Learn about [licensing discounts available when you have both Defender for Endpoint and Defender for Servers](/azure/defender-for-cloud/faq-defender-for-servers#can-i-get-a-discount-if-i-already-have-a-microsoft-defender-for-endpoint-license-).
 
 ## Defender for Endpoint capabilities
 

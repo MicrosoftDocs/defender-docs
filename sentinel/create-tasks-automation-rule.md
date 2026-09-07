@@ -1,17 +1,17 @@
 ---
-title: Create incident tasks in Microsoft Sentinel using automation rules
+title: Create Incident Tasks in Microsoft Sentinel using Automation Rules
 description: Use automation rules to automatically add incident task lists in Microsoft Sentinel and standardize analyst response workflows across incidents.
 ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
 ms.reviewer: sshuster
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 
@@ -32,11 +32,11 @@ This article addresses the following scenarios that apply to SOC managers, senio
 - [View automation rules with incident task actions](#view-automation-rules-with-incident-task-actions)
 - [Add tasks to incidents with automation rules](#add-tasks-to-incidents-with-automation-rules)
 
-Another such scenario is addressed in the following companion article:
+The scenario of adding tasks to incidents with playbooks is addressed in the following companion article:
 
 - [Add tasks to incidents with playbooks](create-tasks-playbook.md)
 
-Another article, at the following links, addresses scenarios that apply more to SOC analysts:
+The [Work with tasks](work-with-tasks.md) article addresses the following scenarios that apply more to SOC analysts:
 
 - [View and follow incident tasks](work-with-tasks.md#view-and-follow-incident-tasks)
 - [Manually add an ad-hoc task to an incident](work-with-tasks.md#manually-add-an-ad-hoc-task-to-an-incident)
@@ -46,7 +46,6 @@ Another article, at the following links, addresses scenarios that apply more to 
 ## Prerequisites
 
 The **Microsoft Sentinel Responder** role is required to create automation rules and to view and edit incidents, both of which are necessary to add, view, and edit tasks.
-
 
 ## View automation rules with incident task actions
 
@@ -64,12 +63,14 @@ In the **Automation** page, you can filter the view of automation rules to see o
 
     :::image type="content" source="media/create-tasks-automation-rule/filtered-grid-on-actions.png" alt-text="Screenshot showing the results of the filter on the automation rules grid.":::
 
-    These are the automation rules that add tasks to incidents. The **Analytics rule names** column tells you which analytics rules these automation rules are conditioned on, so you'll have a general idea of which incidents are affected.
+    The filtered results are the automation rules that add tasks to incidents. The **Analytics rule names** column tells you which analytics rules these automation rules are conditioned on, so you'll have a general idea of which incidents are affected.
 
     > [!NOTE]
     > To have exact knowledge of whether an automation rule will apply to a particular incident, you must open the rule to see if any additional conditions are defined, besides the analytics rule condition. If other conditions are defined, the scope of the affected incidents will be accordingly narrowed.
 
 ## Add tasks to incidents with automation rules
+
+Perform the following steps to add tasks to incidents by using an automation rule:
 
 1. In the **Automation** page, select **+ Create** and select **Automation rule**.
 
@@ -117,10 +118,11 @@ Give your automation rule a name that describes what it does.
     1. The order of execution of the automation rules, as determined by the number in the **Order** setting, and...
     1. The order of the **Add task** actions defined within each automation rule.
 
-## Next steps
+## Related content
 
-- Learn more about [incident tasks](incident-tasks.md).
-- Learn how to [investigate incidents](investigate-cases.md).
-- Learn how to add tasks to groups of incidents automatically using [playbooks](create-tasks-playbook.md).
-- Learn how to [use tasks to handle incident workflow in Microsoft Sentinel](work-with-tasks.md).
-- Learn more about [automation rules](automate-incident-handling-with-automation-rules.md) and how to [create and manage automation rules](./create-manage-use-automation-rules.md).
+- [Use tasks to manage incidents in Microsoft Sentinel in the Azure portal](incident-tasks.md)
+- [Investigate incidents with Microsoft Sentinel (legacy)](investigate-cases.md)
+- [Create and perform incident tasks in Microsoft Sentinel using playbooks](/azure/sentinel/automation/create-tasks-playbook)
+- [Work with incident tasks in Microsoft Sentinel in the Azure portal](work-with-tasks.md).
+- [Automate threat response in Microsoft Sentinel with automation rules](automate-incident-handling-with-automation-rules.md)
+- [Create and use Microsoft Sentinel automation rules to manage response](create-manage-use-automation-rules.md).

@@ -2,8 +2,8 @@
 title: Connect your GCP Project
 description: Connect your GCP project or organization to Microsoft Defender for Cloud to protect workloads and assess your security posture.
 ms.topic: install-set-up-deploy
-ms.date: 01/13/2026
-ms.custom: sfi-image-nochange
+ms.date: 08/04/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1018
 ai-usage: ai-assisted
 ---
 
@@ -50,6 +50,9 @@ When connecting GCP projects to Azure subscriptions, consider the following:
 - GCP projects are connected to Microsoft Defender for Cloud at the project level.
 - You can connect multiple GCP projects to a single Azure subscription.
 - You can connect multiple GCP projects across multiple Azure subscriptions.
+
+> [!NOTE]
+> For the best experience and performance in the Azure portal, we recommend limiting each portal view to 10,000 resources or fewer. For larger GCP environments, distribute GCP connectors among multiple Azure subscriptions. Use the Azure portal global filter to select the subscriptions you want to view. This recommendation doesn't apply to the Defender portal.
 
 Learn more about the [Google Cloud resource hierarchy](https://cloud.google.com/resource-manager/docs/cloud-platform-resource-hierarchy#resource-hierarchy-detail).
 

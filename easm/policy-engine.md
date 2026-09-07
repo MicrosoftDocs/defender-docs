@@ -4,10 +4,10 @@ description: Automate inventory curation by leveraging the policy engine to proa
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Create and manage policies with policy engine automation
@@ -42,7 +42,7 @@ The Policies page displays a list of all active policies in your Defender EASM r
 To create a policy in your Defender EASM resource, perform the following steps:
 
 1. Navigate to the Policies page by selecting **Policies** from the **Manage** section of the left-hand navigation pane within your Defender EASM resource.
-2. Select **+ Add Policy**. This action opens a right-hand pane to configure the policy.
+2. Select **+ Add Policy**. Selecting this button opens a right-hand pane to configure the policy.
 
   [![Screenshot of Policies page with Add Policies button highlighted and policy configuration panel open.](media/policies-3.png)](media/policies-3.png#lightbox)
 
@@ -50,7 +50,7 @@ To create a policy in your Defender EASM resource, perform the following steps:
 4. Then select the query that triggers the policy; any assets that match the query parameters are automatically updated with the designated action. For instance, you may want to label all expiring entities (e.g. domains, SSL certificates) with a "needs renewal" label. You can create a saved query that searches for metadata that expires within 30 days or is already expired. You can then designate that the system applies a "needs renewal" label to all applicable assets. You can either select to power the policy with a previously saved filter, or you can create a new query. All saved queries are visible within the dropdown, or select Create new saved query to configure new filter parameters. If you would like to view the assets that match your query before setting up a policy, it is recommended that you first create a saved query from the Inventory page.
 5. Once all fields are configured, select Add to create your policy.
 
-It takes newly created policies up to one week to apply changes to your inventory. Once the changes are implemented, you see them reflected in the Change history tab. You can also see the impacted assets when using the **Policy name** filter on your inventory, and the **Policies** page lists an accurate count of impacted assets. Preexisting policies update any newly applicable assets within five to seven days of the last run.
+Newly created policies can take up to one week to apply changes to your inventory. Once the changes are implemented, you see them reflected in the Change history tab. You can also see the impacted assets when using the **Policy name** filter on your inventory, and the **Policies** page lists an accurate count of impacted assets. Preexisting policies update any newly applicable assets within five to seven days of the last run.
 
 ## Edit or delete policies
 

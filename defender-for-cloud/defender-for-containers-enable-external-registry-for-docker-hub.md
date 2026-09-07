@@ -3,15 +3,15 @@ title: Onboard Docker Hub registries to Microsoft Defender for Containers
 description: Connect your Docker Hub organization to Defender for Containers for vulnerability scanning by creating a dedicated user account and access token.
 ms.service: defender-for-cloud
 ms.topic: how-to
-ms.date: 05/25/2026
-ms.custom: sfi-image-nochange
+ms.date: 07/03/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to connect my Docker Hub registries to Microsoft Defender for Containers so that I can assess image vulnerabilities in Docker Hub.
 ai-usage: ai-assisted
 ---
 
 # Onboard Docker Hub registries to Microsoft Defender for Containers
 
-Microsoft Defender for Containers connects to your Docker Hub organization to assess vulnerabilities in container images.
+Microsoft Defender for Containers connects to your Docker Hub organization to assess vulnerabilities in container images. Before you start, make sure you meet the [prerequisites](#before-you-begin).
 
 To connect Docker Hub to Defender for Containers, you need to:
 
@@ -51,7 +51,7 @@ To create an access token for the dedicated Docker Hub user:
 
 1. Generate an access token with **Read-Only** permissions.
 
-1. Save the access token and the Docker Hub user name for later use.
+1. Save the access token and the Docker Hub user name to use when configuring the Defender for Cloud Docker Hub connector.
 
 1. Continue with [configure the Defender for Cloud Docker Hub connector](agentless-vulnerability-assessment-docker-hub.md#onboard-docker-hub-to-defender-for-cloud).
 

@@ -5,10 +5,10 @@ ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/11/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1013
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Investigate incidents and alerts
@@ -19,7 +19,7 @@ Alerts are the basis of all incidents and indicate the occurrence of malicious o
 
 Learn more about [alert investigation in Microsoft Defender XDR](/defender-xdr/investigate-alerts) and [incident investigation in Microsoft Defender XDR](/defender-xdr/investigate-incidents) in the Defender portal.
 
-The following sections explain how to investigate a Microsoft Defender for IoT incident and its associated alerts, and how to remediate the security issues raised by those alerts.
+This section explains how to investigate a Microsoft Defender for IoT incident and its associated alerts, and how to remediate the security issues they raise.
 
 Alerts in the **Incidents** page uniquely combine IT and OT environment signals to detect potential threats and data leaks. The **Incidents** page displays:
 
@@ -67,9 +67,9 @@ Defender for IoT generates its own unique alert.
 <a name="advanced-hunting"></a>
 ## Use advanced hunting to investigate IoT alerts
 
-Use the **Site** property listed in the **DeviceInfo** table to write queries for advanced hunting. This allows you to filter devices according to a specific site, for example, all devices that communicated with malicious devices at a specific site.
+Advanced hunting is a query-based investigation feature in the Defender portal that lets you explore security data across your environment. Use the **Site** property listed in the **DeviceInfo** table to write queries for advanced hunting. Using the **Site** property allows you to filter devices according to a specific site, for example, all devices that communicated with malicious devices at a specific site.
 
-The following query lists all endpoint devices with the specific IP address at the San Francisco site.
+The following query filters the **DeviceInfo** table to return all endpoint devices that match a specific public IP address at the San Francisco site.
 
 ```kusto
 DeviceInfo

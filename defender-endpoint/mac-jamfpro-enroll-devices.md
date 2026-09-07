@@ -12,21 +12,22 @@ ms.collection:
 - mde-macos
 ms.topic: how-to
 ms.subservice: macos
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 
 ai-usage: ai-assisted
 ---
 # Enroll Microsoft Defender for Endpoint on macOS devices into Jamf Pro
 
-This article walks you through enrolling macOS devices that run Microsoft Defender for Endpoint into Jamf Pro for centralized management. It covers two enrollment methods—Enrollment Invitations and Prestage Enrollments—and the steps to complete device enrollment.
+Learn how to enroll macOS devices into Jamf Pro for centralized management with Microsoft Defender for Endpoint. This article covers two methods—Enrollment Invitations and Prestage Enrollments—and the steps to complete enrollment.
 
-## Enroll macOS devices
+<a name="enroll-macos-devices"></a>
+## Choose an enrollment method
 
-There are multiple methods of getting enrolled to JamF.
+There are multiple methods of enrolling macOS devices in Jamf Pro.
 
 This article covers two enrollment methods: Enrollment Invitations and Prestage Enrollments.
 
@@ -37,7 +38,7 @@ For a complete list, see [About Computer Enrollment](https://docs.jamf.com/9.9/c
 
 ## Enrollment Method 1: Enrollment Invitations
 
-Use enrollment invitations to send an email-based enrollment link to macOS device users from the Jamf Pro dashboard.
+With this method, you send an email link to device users. They use the link to enroll their macOS device in Jamf Pro.
 
 1. In the Jamf Pro dashboard, navigate to **Enrollment invitations**.
 
@@ -47,7 +48,7 @@ Use enrollment invitations to send an email-based enrollment link to macOS devic
 
    :::image type="content" source="media/b6c7ad56d50f497c38fc14c1e315456c.png" alt-text="The close up of a logo description automatically generated" lightbox="media/b6c7ad56d50f497c38fc14c1e315456c.png":::
 
-1. In **Specify Recipients for the Invitation** > under **Email Addresses** enter the e-mail address(es) of the recipients.
+1. Under **Specify Recipients for the Invitation**, in the **Email Addresses** field, enter the recipient email addresses.
 
     :::image type="content" source="media/718b9d609f9f77c8b13ba88c4c0abe5d.png" alt-text="The configuration settings2" lightbox="media/718b9d609f9f77c8b13ba88c4c0abe5d.png":::
 
@@ -69,7 +70,7 @@ Use enrollment invitations to send an email-based enrollment link to macOS devic
 
 ## Enrollment Method 2: Prestage Enrollments
 
-Use Prestage Enrollments to automatically enroll new macOS devices into Jamf Pro when they're first set up.
+With this method, new macOS devices enroll in Jamf Pro during initial setup.
 
 1. In the Jamf Pro dashboard, navigate to **Prestage enrollments**.
 
@@ -77,15 +78,16 @@ Use Prestage Enrollments to automatically enroll new macOS devices into Jamf Pro
 
 1. Follow the instructions in [Computer PreStage Enrollments](https://docs.jamf.com/9.9/casper-suite/administrator-guide/Computer_PreStage_Enrollments.html).
 
-## Enroll macOS device
+<a name="enroll-macos-device"></a>
+## Complete device enrollment on macOS
 
 Complete the following steps on the macOS device to finish enrollment and install the MDM profile.
 
-1. Select **Continue** and install the CA certificate from a **System Preferences** window.
+1. Select **Continue**. In the **System Preferences** window, install the CA certificate.
 
    :::image type="content" source="media/jamfpro-ca-certificate.png" alt-text="The Jamf Pro enrollment1" lightbox="media/jamfpro-ca-certificate.png":::
 
-1. Once CA certificate is installed, return to the browser window and select **Continue** and install the MDM profile.
+1. After the CA certificate installs, go back to the browser window. Select **Continue** to install the MDM profile.
 
    :::image type="content" source="media/jamfpro-install-mdm-profile.png" alt-text="The Jamf Pro enrollment2" lightbox="media/jamfpro-install-mdm-profile.png":::
 

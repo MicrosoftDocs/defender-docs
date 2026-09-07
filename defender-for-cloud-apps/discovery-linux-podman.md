@@ -1,16 +1,18 @@
 ---
 title: Configure automatic log upload using on-premises Podman on Linux | Microsoft Defender for Cloud Apps
 description: This article describes how to configure automatic log upload for continuous reports in Defender for Cloud Apps using a Podman container on Linux in an on-premises server.
-ms.date: 12/21/2023
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure automatic log upload using Podman
 
 [!INCLUDE [Banner for top of topics](includes/banner.md)]
 
-This article describes how to configure automatic log upload for continuous reports in Defender for Cloud Apps using a Podman container on Linux in an on-premises server. Customers using RHEL 7.1 or higher must use Podman for automatic log collection.
+This article describes how to configure automatic log upload for continuous reports in Defender for Cloud Apps using a Podman container on Linux in an on-premises server. Continuous reports automatically upload logs from your network firewalls and proxies to Cloud Discovery, providing ongoing visibility into cloud app usage across your organization. Use this Podman-based on-premises deployment when your environment runs RHEL 7.1 or higher, which requires Podman instead of Docker for automatic log collection. The configuration tasks include setting up a data source, deploying a log collector container, and verifying that logs are uploaded successfully.
 
 ## Prerequisites
 
@@ -20,7 +22,8 @@ Before you start:
 - Since Docker and Podman can't coexist on the same machine, make sure to uninstall any Docker installations before running Podman.
 - Make sure that you're signed in to the RHEL machine as user `root` to deploy Podman
 
-## Setup and configuration
+<a name="setup-and-configuration"></a>
+## Set up automatic log upload using Podman
 
 1. Sign into the Defender portal and select **Settings > Cloud Apps > Cloud Discovery > Automatic log upload**.
 
@@ -60,7 +63,7 @@ Before you start:
 If you're not getting firewall logs from your Podman container, check the following:
 
 1. Make sure that rsyslog rotates on the log collector.
-1. If you've made changes, wait a couple of hours and run the following command to see if anything's changed:
+1. If you've changed the container configuration or firewall and syslog settings, wait a couple of hours and run the following command to see whether the log status changed:
 
     ```bash
     podman logs <container name>

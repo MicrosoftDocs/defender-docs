@@ -1,16 +1,16 @@
 ---
 title: Install the sensor v2.x | Microsoft Defender for Identity
 description: Learn how to download and install the Microsoft Defender for Identity sensor v2.x on domain controllers, AD FS servers, AD CS servers, or Microsoft Entra Connect servers.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: rlitinsky
 ai-usage: ai-assisted
-ms.custom: sfi-ropc-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ropc-nochange, msecd-doc-authoring-1016
 ---
 
 # Download and install a Microsoft Defender for Identity sensor v2.x
 
-Download and install the Defender for Identity sensor v2.x on domain controllers, or on AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. Standalone sensor installation is also covered in [Install the v2.x sensor in the Defender portal](#install-the-v2x-sensor-in-the-defender-portal). Before you begin, review the [prerequisites](#prerequisites), including .NET Framework, server specifications, and certificate requirements.
+Download and install the Defender for Identity sensor v2.x on domain controllers, or on AD FS, AD CS, and Microsoft Entra Connect servers that aren't domain controllers. Standalone sensor installation is also covered in [Install the v2.x sensor in the Defender portal](#install-the-v2x-sensor-in-the-defender-portal). Before you begin, review the [sensor installation prerequisites](#prerequisites), including .NET Framework, server specifications, and certificate requirements.
 
 > [!TIP]
 > For domain controllers running Windows Server 2019 or later, deploy the [Defender for Identity sensor v3.x](deploy-sensor-v3.md) instead. The v3.x sensor is activated from the Defender portal and doesn't require a downloaded installation package.
@@ -38,6 +38,8 @@ Before you start, make sure that you have:
 
 ## Download the sensor package
 
+Perform the following steps to download the sensor installation package from the Microsoft Defender portal.
+
 1. In [Microsoft Defender XDR](https://security.microsoft.com), go to **System > Settings** > **Identities**.
 
 1. Select the **Sensors** tab, which displays all of your Defender for Identity sensors. For example:
@@ -64,9 +66,9 @@ Before you start, make sure that you have:
    > [!Note]
    > To download the installation package behind a firewall or proxy server, make sure you allow network traffic to the following FQDNs through TCP/443.
    > 
-   > sensorpackage-prd.mdi.securitycenter.microsoft.com
-   > sensorpackage-fm.mdi.securitycenter.microsoft.us
-   > sensorpackage-ff.mdi.securitycenter.microsoft.us
+   > - sensorpackage-prd.mdi.securitycenter.microsoft.com
+   > - sensorpackage-fm.mdi.securitycenter.microsoft.us
+   > - sensorpackage-ff.mdi.securitycenter.microsoft.us
 
 ## Install the v2.x sensor in the Defender portal
 
@@ -142,7 +144,7 @@ Make the Defender for Identity sensor package dependent on the deployment of the
 
 ### Commands for running a silent installation
 
-Use the following commands to perform a fully silent installation of the Defender for Identity sensor, by using the access key you copied in [Download the sensor package](#download-the-sensor-package).
+Use the following commands to perform a fully silent installation of the Defender for Identity sensor, by using the access key that you copied when you [downloaded the sensor package](#download-the-sensor-package).
 
 #### cmd.exe syntax
 
@@ -154,7 +156,7 @@ Use the following cmd.exe syntax for a silent installation:
 
 #### PowerShell syntax
 
-Use the following PowerShell syntax for a silent installation:
+If you're launching the installer from PowerShell, use the following syntax for the same silent installation command:
 
 ```powershell
 .\"Azure ATP sensor Setup.exe" /quiet NetFrameworkCommandLineArguments="/q" AccessKey="<Access Key>"
@@ -165,6 +167,8 @@ Use the following PowerShell syntax for a silent installation:
 
 #### Installation options
 
+The following table lists the available installation options for a silent installation.
+
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
 |`Quiet`|`/quiet`|Yes|Runs the installer without displaying UI or prompts.|
@@ -172,6 +176,8 @@ Use the following PowerShell syntax for a silent installation:
 |`NetFrameworkCommandLineArguments="/q"`|`NetFrameworkCommandLineArguments="/q"`|Yes|Specifies the parameters for the .NET Framework installation. Must be set to enforce the silent installation of .NET Framework.|
 
 #### Installation parameters
+
+The following table describes the available installation parameters for a silent installation.
 
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
@@ -182,6 +188,8 @@ Use the following PowerShell syntax for a silent installation:
 |`LogsPath`|`LogsPath=""`|No|Sets the path for the Defender for Identity sensor logs. Default path: `%programfiles%\Azure Advanced Threat Protection Sensor`.|
 
 #### Examples
+
+The following examples show common silent installation commands.
 
 Use the following command to silently install the Defender for Identity sensor with the access key passed directly on the command line:
 
@@ -197,7 +205,7 @@ Alternatively, use the following command to read the access key from a text file
 
 ### Command for running a silent installation with a proxy configuration
 
-Use the following command to configure your proxy together with a silent installation:
+The following syntax shows the optional proxy parameters you can include when running a silent installation. Values in brackets are optional:
 
 ```cmd
 "Azure ATP sensor Setup.exe" [/quiet] [/Help] [ProxyUrl="http://proxy.internal.com"] [ProxyUserName="domain\proxyuser"] [ProxyUserPassword="ProxyPassword"]`
@@ -206,7 +214,10 @@ Use the following command to configure your proxy together with a silent install
 > [!NOTE]
 > If you previously configured your proxy by using legacy options, including WinINet or a registry key update, you need to make any changes with the same method that you used originally. For more information, see [Change proxy configuration using legacy methods](configure-proxy.md#change-proxy-configuration-using-legacy-methods).
 
-#### Installation parameters
+<a name="installation-parameters-1"></a>
+#### Proxy installation parameters
+
+The following table lists the proxy-related installation parameters.
 
 |Name|Syntax|Mandatory for silent installation?|Description|
 |-------------|----------|---------|---------|
@@ -228,7 +239,10 @@ After you install a sensor, you can follow extra steps:
   - [Configure port mirroring](configure-port-mirroring.md)
   - [Configure Windows event forwarding to your Defender for Identity standalone sensor](configure-event-forwarding.md)
 
-## Next step
+<a name="next-step"></a>
+## Next steps
+
+After installing the sensor, continue to configure your sensor settings.
 
 > [!div class="step-by-step"]
 > [Configure Microsoft Defender for Identity sensor settings](configure-sensor-settings.md)

@@ -4,12 +4,12 @@ description: This article shows how to define an access restriction policy for M
 ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 
 #Customer intent: As a security engineer using Standard-plan playbooks, I want to define an access restriction policy for playbooks so that I can ensure only authorized services can access sensitive workflows.
@@ -82,15 +82,14 @@ Perform the following steps to define an access restriction policy for a Standar
 
 1. Select **Add rule**.
 
-## Sample policy
+<a name="sample-policy"></a>
+## Review a sample access restriction policy
 
 After following the procedure in this article,  your policy should look as follows:
 
 :::image type="content" source="../media/define-playbook-access-restrictions/resulting-rule.png" alt-text="Screenshot showing rules as they should appear in your access restriction policy.":::
 
 ## Related content
-
-For more information, see:
 
 - [Automate threat response with Microsoft Sentinel playbooks](automate-responses-with-playbooks.md)
 - [Use playbooks with automation rules in Microsoft Sentinel](tutorial-respond-threats-playbook.md)

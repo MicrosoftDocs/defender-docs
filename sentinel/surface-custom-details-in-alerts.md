@@ -5,13 +5,13 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: idpelleg
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security analyst, I want to surface custom event details in alerts so that I can triage, investigate, and respond to incidents more efficiently.
@@ -34,11 +34,11 @@ Perform the following steps to surface custom event details in an analytics rule
 
 1. Enter the **Analytics** page in the portal through which you access Microsoft Sentinel:
 
-    # [Defender portal](#tab/defender)
+    # [Microsoft Defender portal](#tab/defender)
 
     From the Microsoft Defender navigation menu, expand **Microsoft Sentinel**, then **Configuration**. Select **Analytics**.
 
-    # [Azure portal](#tab/azure)
+    # [Microsoft Azure portal](#tab/azure)
 
     From the **Configuration** section of the Microsoft Sentinel navigation menu, select **Analytics**.
 

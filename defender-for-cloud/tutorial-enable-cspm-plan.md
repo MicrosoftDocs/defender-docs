@@ -12,7 +12,10 @@ Defender Cloud Security Posture Management (CSPM) in Microsoft Defender for Clou
 
 Defender for Cloud continually assesses your resources, subscriptions, and organization for security issues. Defender for Cloud shows you your security posture with the secure score. The secure score is an aggregated score of the security findings that tells you about your current security situation. The higher the score, the lower the identified risk level.
 
-When you enable Defender for Cloud, you automatically enable the **Foundational CSPM capabilities**. These capabilities are part of the free services offered by Defender for Cloud.
+Foundational CSPM provides free security posture management capabilities in Defender for Cloud.
+
+> [!IMPORTANT]
+> Starting October 27, 2026, Foundational CSPM will move to an opt-in model and will no longer be enabled by default for new Azure subscriptions. The free plan will continue to be available at no cost and can be enabled at any time based on your organization's needs. Existing subscriptions that already have Foundational CSPM enabled will remain enabled unless you turn off the plan. For more information, see [Opt in to Foundational CSPM](foundational-cspm-opt-in.md).
 
 You can enable the **Defender CSPM** plan, which offers extra protections for your environments such as governance, regulatory compliance, cloud security explorer, attack path analysis, and agentless scanning for machines.
 
@@ -35,7 +38,7 @@ You can learn more about Defender CSPM's pricing on [the pricing page](https://a
 
 ## Enable the Defender CSPM plan
 
-When you enable Microsoft Defender for Cloud, you automatically get the protections offered by the Foundational CSPM capabilities. To access the other features provided by Defender CSPM, you need to enable the Defender CSPM plan on your subscription.
+Foundational CSPM provides free posture management capabilities. To access the additional capabilities provided by Defender CSPM, enable the Defender CSPM plan on your subscription.
 
 **To enable the Defender CSPM plan on your subscription**:
 

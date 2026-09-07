@@ -1,9 +1,11 @@
 ---
 title: Onboard non-Microsoft IdP catalog apps for Conditional Access app control | Microsoft Defender for Cloud Apps
 description: Learn how to deploy Conditional Access app control with Microsoft Defender for Cloud Apps, for catalog apps with a non-Microsoft IdP.
-ms.date: 05/15/2024
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: Mravela
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Onboard non-Microsoft IdP catalog apps for Conditional Access app control
@@ -15,6 +17,8 @@ Access and session controls in Microsoft Defender for Cloud apps work with both 
 This article describes how to configure your IdP to work with Defender for Cloud Apps. Integrating your IdP with Defender for Cloud Apps automatically onboards all catalog apps from your IdP for Conditional Access app control.
 
 ## Prerequisites
+
+Before you begin, make sure your environment meets the following requirements:
 
 - Your organization must have the following licenses to use conditional access app control:
 
@@ -31,7 +35,7 @@ Fully performing and testing the procedures in this article requires that you ha
 
 ## Configure your IdP to work with Defender for Cloud Apps
 
-This procedure describes how to route app sessions from other IdP solutions to Defender for Cloud Apps.
+The following procedure describes how to route app sessions from other IdP solutions to Defender for Cloud Apps.
 
 > [!TIP]
 > The following articles provide detailed examples of this procedure:
@@ -65,7 +69,7 @@ This procedure describes how to route app sessions from other IdP solutions to D
     > - Some identity providers do not allow you to change the SAML attributes or URL properties of a gallery / catalog app.
     > - When you configure a custom app, you can test the app with Defender for Cloud Apps access and session controls, without changing your organization's existing configured behavior.
 
-    Copy your app's single sign-on configuration information for use later in this procedure. When you're finished, select **Next** to continue.
+    Copy your app's single sign-on configuration information because you will enter it in the IdP configuration steps that follow. When you're finished, select **Next** to continue.
 
 1. Continuing on the **IDENTITY PROVIDER** page of the wizard, either upload a metadata file from your IdP or enter app data manually.
 
@@ -74,7 +78,7 @@ This procedure describes how to route app sessions from other IdP solutions to D
     - The **Single sign-on service URL**. This is the URL that your IdP uses to receive single sign-on requests.
     -  A SAML certificate, if your IdP provides one. In such cases, select the **Use identity provider's SAML certificate** option, and then upload the certificate file.
 
-1. Continuing on the **IDENTITY PROVIDER** page of the wizard, copy both the single sign-on URL and all attributes and values for use later in this procedure.
+1. Continuing on the **IDENTITY PROVIDER** page of the wizard, copy both the single sign-on URL and all attributes and values so that you can enter them in your IdP's custom app configuration in the next steps.
 
     When you're done, select **Next** to continue.
 

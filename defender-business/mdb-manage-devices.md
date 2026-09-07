@@ -6,7 +6,7 @@ ms.author: chrisda
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 06/11/2026
+ms.date: 07/03/2026
 ms.reviewer: nehabha
 ms.collection:
 - SMB
@@ -14,7 +14,7 @@ ms.collection:
 - m365-initiative-defender-business
 - tier1
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1013
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Manage devices in Microsoft Defender for Business
@@ -54,7 +54,7 @@ Use the following steps to take available response actions on a device that has 
 Microsoft Defender Antivirus is a key component of next-generation protection in Defender for Business. To view the state of Microsoft Defender Antivirus, you have several options:
 
 - Use the [Device health report](mdb-reports.md#device-health-report).
-- Use one of the methods described in [How to confirm the state of Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-compatibility#how-to-confirm-the-state-of-microsoft-defender-antivirus).
+- Use methods such as PowerShell, Group Policy, or the Windows Security app as described in [How to confirm the state of Microsoft Defender Antivirus](/defender-endpoint/microsoft-defender-antivirus-compatibility#how-to-confirm-the-state-of-microsoft-defender-antivirus).
 
 Microsoft Defender Antivirus has one of the following states on devices:
 
@@ -107,11 +107,11 @@ To learn more about different threats, visit the [Microsoft Security Intelligenc
 
 ## Onboard a device
 
-For more information, see [Onboard devices to Defender for Business](mdb-onboard-devices.md).
+To onboard a device to Defender for Business, see [Onboard devices to Defender for Business](mdb-onboard-devices.md).
 
 ## Offboard a device
 
-For more information, see [Offboarding a device](mdb-offboard-devices.md).
+To remove a device from Defender for Business, see [Offboarding a device](mdb-offboard-devices.md).
 
 ## Next steps
 

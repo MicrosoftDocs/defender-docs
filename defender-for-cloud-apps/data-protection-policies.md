@@ -1,10 +1,10 @@
 ---
 title: File policies in Microsoft Defender for Cloud Apps
-description: This article describes the procedure for setting up a data policy to monitor and control the data and files in your organization's cloud app use.
-ms.date: 06/16/2026
+description: Configure file policies in Microsoft Defender for Cloud Apps to monitor files across cloud apps and automate actions for compliance, DLP, and governance scenarios.
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: MayaAbelson
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -21,7 +21,7 @@ Defender for Cloud Apps engines perform content inspection by extracting text fr
 
 ## Policies
 
-The engine combines three aspects under each policy:
+The Defender for Cloud Apps content inspection engine combines three aspects under each policy:
 
 * Content scan based on preset templates or custom expressions.
 
@@ -64,15 +64,15 @@ To create a new file policy, follow this procedure:
 
 1. Select **Create policy** and select **File policy**.
 
-   ![Create an Information Protection policy.](media/create-policy-from-information-protection-tab.png)
+   ![Screenshot of the Information Protection tab in Policy management showing the Create policy option for file policies.](media/create-policy-from-information-protection-tab.png)
    
 1. Give your policy a name and description. You can also base it on a template. For more information about policy templates, see [Control cloud apps with policies](control-cloud-apps-with-policies.md).
 
 1. Assign a **Policy severity** to your policy. If Defender for Cloud Apps is configured to send notifications based on a specific policy severity level, this level determines whether matches for the policy trigger a notification.
 
-1. Select a **Category** and link the policy to the most appropriate risk type. The **Category** field is informative only and helps you search for specific policies and alerts later, based on risk type. The risk might already be preselected according to the category for which you chose to create the policy. By default, File policies are set to DLP.
+1. Select a **Category** and link the policy to the most appropriate risk type. The **Category** field is informative only and helps you search for specific policies and alerts later, based on risk type. The risk type might already be preselected according to the category for which you chose to create the policy. By default, File policies are set to DLP.
 
-1. **Create a filter for the files this policy will act on** to set which discovered apps trigger this policy. Narrow down the policy filters until you reach an accurate set of files you wish to act upon. Be as restrictive as possible to avoid false positives. For example, if you wish to remove public permissions, remember to add the **Public** filter, if you wish to remove an external user, use the "External" filter and so on.
+1. **Create a filter for the files this policy will act on** to set which discovered apps trigger this policy. Narrow down the policy filters until you reach an accurate set of files you wish to act upon. Be as restrictive as possible to avoid false positives. For example, if you wish to remove public permissions, remember to add the **Public** filter, if you wish to remove an external user, use the **Access level** filter and select **External**, and so on.
 
     > [!NOTE]
     > The file policy,'Contains' filter searches only for complete words. These words must be separated by punctuation marks like commas, dots, hyphens, or spaces.
@@ -113,7 +113,8 @@ To create a new file policy, follow this procedure:
 
 1. To view file policy matches, go to **Policies** -> **Policy management**. Here you can see files that are suspected to violate the policy. Filter the results to display only the file policies using the **Type** filter at the top. For more information about the matches for each policy, under the **Count** column, select the number of **matches** for a policy. Alternatively, select the three dots at the end of the row for a policy and choose **View all matches**. Selecting **View all matches** opens the **File policy report**. Select the **Matching now** tab to see files that currently match the policy. Select the **History** tab to see a history back to up to six months of files that matched the policy.
 
-## Limitations
+<a name="limitations"></a>
+## File policy limitations
 
 * You're limited to 50 file policies in Defender for Cloud Apps.
 
@@ -138,7 +139,7 @@ Use the following best practices when creating and managing file policies in Def
 
 ## File policy reference
 
-The following file policy reference provides explanations for each policy type and the fields that can be configured for each policy.
+The following sections provide explanations for each policy type and the fields that can be configured for each policy.
 
 A **File policy** is an API-based policy that enables you to control your organization's content in the cloud, taking into account over 20 file metadata filters (including owner and sharing level) and content inspection results. Based on the policy results, governance actions can be applied. The content inspection engine can be extended via 3rd-party DLP engines and anti-malware solutions.
 
@@ -154,7 +155,7 @@ Each policy is composed of the following parts:
 
 ## View file policy results
 
-You can go to the Policy center to review file policy violations.
+Go to **Policies** > **Policy management** in the Microsoft Defender Portal to review file policy violations.
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, go to **Policies** -> **Policy management**, and then select the **Information protection** tab.
 
@@ -174,7 +175,7 @@ You can go to the Policy center to review file policy violations.
 
 File filters allow you to apply specific criteria to your file policies and focus on files that meet conditions such as file type, access level, and share status. File filters support file types such as PDF, Office files, RTF, HTML, and code files.
 
-Below is a list of the file filters that can be applied:
+The following file filters can be applied to file policies:
 
 :::image type="content" source="media/file-policies/screenshot-showing-different-file-types.png" alt-text="Screenshot showing different file types" lightbox="media/file-policies/screenshot-showing-different-file-types.png":::
 
@@ -258,7 +259,7 @@ Labels include:
 
 - **Owner OU** – Include or exclude file owners that belong to certain organizational units. For example, all public files except files shared by *EMEA_marketing*. Applies only to files stored in Google Drive.
 
-- **Parent folder** – Include or exclude a specific folder (doesn't apply to subfolders). For example, all publicly shared files except for files in this folder.
+- **Parent folder** – Include or exclude a specific folder (doesn't apply to subfolders). For example, all publicly shared files except for files in a specified folder.
 
   > [!NOTE]
   > Defender for Cloud Apps only detects new SharePoint and OneDrive folders after some file activity occurs in them.
@@ -269,6 +270,8 @@ Labels include:
 After Defender for Cloud Apps identifies files as posing a malware or DLP risk, we recommend you investigate the files. If you determine the files are safe, you can authorize them. Authorizing a file removes it from the malware detection report and suppresses future matches on this file.
 
 ### To authorize files
+
+To authorize a file, complete the following steps:
 
 1. In the Microsoft Defender Portal, under **Cloud Apps**, select **Policies** -> **Policy management**. Select the **Information protection** tab.
 1. In the list of policies, on the row in which the policy that triggered the investigation appears, in the **Count** column, select the **matches** link.

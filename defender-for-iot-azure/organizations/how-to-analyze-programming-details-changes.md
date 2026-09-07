@@ -1,9 +1,9 @@
 ---
 title: Analyze programming details and changes on an OT sensor - Microsoft Defender for IoT
 description: Discover suspicious programming activity by investigating programming events occurring on your network devices.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -11,9 +11,9 @@ ai-usage: ai-assisted
 
 Enhance forensics by displaying programming events occurring on your network devices and analyzing any code changes using the OT sensor. Watching for programming events helps you investigate suspicious programming activity, such as:
 
-  - **Human error**: An engineer programming the wrong device.
-  - **Corrupted programming automation**: Programming errors due to automation failures.
-  - **Hacked systems**: Unauthorized users logged into a programming device.
+- **Human error**: An engineer programming the wrong device.
+- **Corrupted programming automation**: Programming errors due to automation failures.
+- **Hacked systems**: Unauthorized users logged into a programming device.
 
 Use the **Programming Timeline** tab on your OT network sensor to review programming data, such as when investigating an alert about unauthorized programming, after a planned controller update, or when a process or machine isn't working correctly and you want to understand who made the last update and when.
 
@@ -60,7 +60,7 @@ To access programming data from the device inventory:
 
 1. On the device details page, select the **Programming Timeline** tab.
 
-    For example: 
+    For example:
 
     :::image type="content" source="media/analyze-programming/programming-timeline-window-device-inventory.png" alt-text="Screenshot of programming timeline tab on device details page." lightbox="media/analyze-programming/programming-timeline-window-device-inventory.png":::
 
@@ -96,9 +96,10 @@ For example:
 
 :::image type="content" source="media/analyze-programming/programming-timeline-2.png" alt-text="Screenshot of viewing programming details in programming timeline." lightbox="media/analyze-programming/programming-timeline-2.png":::
 
-## Compare programming detail files
+<a name="compare-programming-detail-files"></a>
+## Compare OT device programming files
 
-This procedure describes how to compare multiple programming detail files to identify discrepancies or investigate the files for suspicious activity.
+Compare multiple programming detail files to identify discrepancies or investigate suspicious activity.
 
 **To compare files:**
 
@@ -116,6 +117,7 @@ This procedure describes how to compare multiple programming detail files to ide
 
     Scroll through the files to see the programming details and any differences between the files. Differences between the two files are highlighted in green and red.
 
-## Next steps
+## Next step
 
-To ensure your sensor has complete and accurate device data for programming analysis, you can also [Import device information to a sensor](how-to-import-device-information.md).
+> [!div class="nextstepaction"]
+> [Import device information to a sensor](how-to-import-device-information.md).

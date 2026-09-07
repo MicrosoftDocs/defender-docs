@@ -1,6 +1,6 @@
 ---
 title: Integrate your SIEM tools with Microsoft Defender XDR
-description: Learn how to use REST API and configure supported security information and events management tools to receive and pull detections.
+description: Integrate supported SIEM tools with Microsoft Defender XDR by using REST APIs and connectors to pull incidents and stream event data.
 ms.service: defender-xdr
 ms.author: edbaynash
 author: EdB-MSFT
@@ -9,21 +9,25 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
 - Microsoft Defender for Endpoint   
 - Microsoft Defender XDR
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Integrate your SIEM tools with Microsoft Defender XDR
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
+This article describes how to integrate supported security information and event management (SIEM) tools with Microsoft Defender XDR. You can pull incidents through the REST API or stream event data through Azure Event Hubs to platforms such as Splunk, ArcSight, Elastic, and IBM QRadar.
+
 <a name='pull-microsoft-365-defender-incidents-and-streaming-event-data-using-security-information-and-events-management-siem-tools'></a>
 
-## Pull Microsoft Defender incidents and streaming event data using security information and events management (SIEM) tools
+<a name="pull-microsoft-defender-incidents-and-streaming-event-data-using-security-information-and-events-management-siem-tools"></a>
+
+## Use SIEM tools to pull Microsoft Defender incidents and streaming event data
 
 > [!NOTE]
 >
@@ -63,7 +67,7 @@ For more information on Microsoft Defender incident properties including contain
 
 Using the new, fully supported Splunk Add-on for Microsoft Security that supports:
 
-- Ingesting incidents that contain alerts from the following products, which are mapped onto Splunk's Common Information Model (CIM):
+- Ingesting incidents that contain alerts from the following products, which are mapped onto Splunk's Common Information Model (CIM), a standard schema for normalizing event data:
 
   - Microsoft Defender
   - Microsoft Defender for Endpoint
@@ -83,12 +87,12 @@ For more information on:
 <a name="micro-focus-arcsight"></a>
 ### Ingest incidents into Micro Focus ArcSight
 
-The new SmartConnector for Microsoft Defender XDR ingests incidents into ArcSight and maps these onto its Common Event
+The new SmartConnector for Microsoft Defender XDR ingests incidents into ArcSight and maps the incident data onto its Common Event
 Framework (CEF).
 
 For more information on the new ArcSight SmartConnector for Microsoft Defender XDR, see [ArcSight Product Documentation](https://www.microfocus.com/documentation/arcsight/arcsight-smartconnectors-8.4/microsoft-365-defender/index.html).
 
-The SmartConnector replaces the previous FlexConnector for Microsoft Defender for Endpoint that's now retired.
+The SmartConnector replaces the previous FlexConnector for Microsoft Defender for Endpoint, which is now retired.
 
 <a name="elastic"></a>
 ### Ingest incidents into Elastic
@@ -124,6 +128,6 @@ For more information on the Elastic streaming API integration, see [Microsoft M3
 
 ## Related content
 
-[Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
+- [Use the Microsoft Graph security API - Microsoft Graph | Microsoft Learn](/graph/api/resources/security-api-overview)
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

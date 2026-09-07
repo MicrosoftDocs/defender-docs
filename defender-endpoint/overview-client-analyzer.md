@@ -26,7 +26,7 @@ The [Microsoft Defender for Endpoint Client Analyzer](https://aka.ms/MDEClientAn
 Besides obvious sensor health issues, MDECA can collect other traces, logs, and diagnostic information for troubleshooting complex scenarios such as:
 
 - Application compatibility (AppCompat), performance, network connectivity, or
-- Unexpected behavior related to [Endpoint Data Loss Prevention](/microsoft-365/compliance/endpoint-dlp-learn-about).
+- Unexpected behavior related to [Endpoint Data Loss Prevention](/purview/endpoint-dlp-learn-about).
 
 ## Use the client analyzer on devices running Windows, Linux, or macOS
 

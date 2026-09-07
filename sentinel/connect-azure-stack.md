@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to connect Azure Stack Hub virtual machines to Microsoft Sentinel so that analysts can efficiently monitor and manage security threats across our hybrid cloud environment.
 
@@ -17,7 +17,7 @@ ms.custom: msecd-doc-authoring-1014
 
 With Microsoft Sentinel, you can monitor your VMs running on Azure and Azure Stack Hub in one place. To on-board your Azure Stack machines to Microsoft Sentinel, you first need to add the virtual machine extension to your existing Azure Stack Hub virtual machines. 
 
-After you connect Azure Stack Hub machines, choose from a gallery of dashboards that surface insights based on your data. These dashboards can be easily customized to your needs.
+After you connect Azure Stack Hub machines, choose from a gallery of dashboards that surface insights based on data collected from your Azure Stack Hub virtual machines. Microsoft Sentinel dashboards can be easily customized to your needs.
 
 ## Add the virtual machine extension 
 
@@ -33,7 +33,7 @@ Add the **Azure Monitor, Update, and Configuration Management** virtual machine 
 
 1. Select the **Azure Monitor, Update, and Configuration Management** extension and select **Create**. The **Install extension** configuration window opens.
 
-   ![Screenshot of the Azure Stack Hub portal showing the Install extension settings page for the Azure Monitor, Update, and Configuration Management extension.](./media/connect-azure-stack/azure-monitor-extension-fix.png)  
+   ![Screenshot of the Azure Stack Hub portal showing the Install extension settings for the Azure Monitor, Update, and Configuration Management extension.](./media/connect-azure-stack/azure-monitor-extension-fix.png)  
 
    >[!NOTE]
    > If you do not see the **Azure Monitor, Update and Configuration Management** extension listed in your marketplace, reach out to your Azure Stack Hub operator to make it available.

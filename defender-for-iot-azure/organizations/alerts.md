@@ -1,9 +1,9 @@
 ---
 title: Microsoft Defender for IoT alerts
 description: Learn about Microsoft Defender for IoT alerts across the Azure portal and OT network sensors.
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
   - enterprise-iot
   - sfi-image-nochange
 ai-usage: ai-assisted
@@ -11,7 +11,11 @@ ai-usage: ai-assisted
 
 # Microsoft Defender for IoT alerts
 
+## Overview
+
 Microsoft Defender for IoT alerts enhance your network security and operations with real-time details about events logged in your network. Alerts are triggered when OT network sensors detect changes or suspicious activity in network traffic that needs your attention.
+
+This article describes how to view, investigate, and manage Defender for IoT alerts across the Azure portal, OT network sensors, and Microsoft 365 Defender, including alert statuses, triaging options, and remediation workflows.
 
 For example:
 
@@ -37,13 +41,15 @@ While you can view alert details, investigate alert context, and triage and mana
 
 ### Alert management considerations
 
+Consider the following behaviors and limitations when managing alerts:
+
 - Any alerts generated from different sensors in the same zone within a 10-minute timeframe, with the same type, status, alert protocol, and associated devices, are listed as a single, unified alert.
     - The 10-minute timeframe is based on the alert's *first detection* time. 
     - The single, unified alert lists all of the sensors that detected the alert. 
     - Alerts are combined based on the *alert* protocol, and not the device protocol.
     - For more information, see:
         - [Alert data retention](references-data-retention.md#alert-data-retention)
-        - [Accelerating OT alert workflows](#accelerating-ot-alert-workflows)
+        - [Accelerating OT alert workflows](alerts.md#accelerating-ot-alert-workflows)
         - [Alert statuses and triaging options](alerts.md#alert-statuses-and-triaging-options)
         - [Plan OT sites and zones](best-practices/plan-corporate-monitoring.md#plan-ot-sites-and-zones)
 - Alert options also differ depending on your location and user role. For more information, see [Azure user roles and permissions](roles-azure.md) and [On-premises users and roles](roles-on-premises.md).
@@ -64,7 +70,7 @@ Alert grouping appears in both the OT sensor console and the Azure portal. For m
 
 ## Focused alerts in OT/IT environments
 
-Organizations where sensors are deployed between OT and IT networks deal with many alerts, related to both OT and IT traffic. The amount of alerts, some of which are irrelevant, can cause alert fatigue and affect overall performance. To address these challenges, Defender for IoT's detection policy steers its different [alert engines](alert-engine-messages.md#supported-alert-types) to focus on alerts with business impact and relevance to an OT network, and reduce low-value IT related alerts. For example, the **Unauthorized internet connectivity** alert is highly relevant in an OT network, but has relatively low value in an IT network.
+Organizations where sensors are deployed between operational technology (OT) and information technology (IT) networks deal with many alerts, related to both OT and IT traffic. The amount of alerts, some of which are irrelevant, can cause alert fatigue and affect overall performance. To address these challenges, Defender for IoT's detection policy steers its different [alert engines](alert-engine-messages.md#supported-alert-types) to focus on alerts with business impact and relevance to an OT network, and reduce low-value IT related alerts. For example, the **Unauthorized internet connectivity** alert is highly relevant in an OT network, but has relatively low value in an IT network.
 
 To focus the alerts triggered in these environments, all alert engines, except for the *Malware* engine, trigger alerts only if they detect a related OT subnet or protocol. 
 
@@ -80,7 +86,7 @@ Users working in hybrid environments might be managing OT alerts in [Defender fo
 > [!NOTE]
 > While the sensor console displays an alert's **Last detection** field in real-time, Defender for IoT in the Azure portal may take up to one hour to display the updated time. This display delay explains a scenario where the last detection time in the sensor console isn't the same as the last detection time in the Azure portal.
 
-Alert statuses are otherwise fully synchronized between the Azure portal and the OT sensor. This synchronization means that regardless of where you manage the alert in Defender for IoT, the alert is updated in other locations as well.
+Alert statuses are otherwise fully synchronized between the Azure portal and the OT sensor. This synchronization means that regardless of whether you manage the alert in the Azure portal or on the OT sensor, the alert is updated in both locations.
 
 Setting an alert status to **Closed** or **Muted** on a sensor updates the alert status to **Closed** on the Azure portal.
 
@@ -148,7 +154,7 @@ Use the following table to learn more about each alert status and triage option.
 
 Use learning mode to perform an initial triage on the alerts in your network, *learning* those you want to mark as authorized, expected activity. Learned traffic doesn't generate new alerts the next time the same traffic is detected.
 
-For more information, see [Create a learned baseline of OT alerts](ot-deploy/create-learned-baseline.md).
+For more information about learning mode, see [Create a learned baseline of OT alerts](ot-deploy/create-learned-baseline.md).
 
 ## Alert investigation and remediation
 
@@ -156,11 +162,11 @@ Alert investigation allows you to understand the context of the alert, including
 
 After you triage and investigate an alert, you can take remediation actions to resolve any issues identified during your investigation.
 
-For more information, see [Investigate and respond to an OT network alert](respond-ot-alert.md).
-
-## Next steps
+For more information about investigating and remediating OT alerts, see [Investigate and respond to an OT network alert](respond-ot-alert.md).
 
 Review alert types and messages to help you understand and plan remediation actions and playbook integrations. For more information, see [OT monitoring alert types and descriptions](alert-engine-messages.md).
+
+## Next steps
 
 > [!div class="nextstepaction"]
 > [View and manage alerts from the Azure portal](how-to-manage-cloud-alerts.md)

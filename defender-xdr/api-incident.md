@@ -11,7 +11,7 @@ ms.collection:
  - must-keep
 ms.topic: reference
 ms.custom: api
-ms.date: 04/18/2025
+ms.date: 08/07/2026
 appliesto:
  - Microsoft Defender XDR
 ---
@@ -58,9 +58,9 @@ Refer to the respective method articles for more details on how to construct a r
 | redirectIncidentId | nullable long | The Incident ID the current Incident was merged to. |
 | incidentName | string | The name of the Incident. |
 | createdTime | DateTimeOffset | The date and time (in UTC) the Incident was created. |
-| lastUpdateTime | DateTimeOffset | The date and time (in UTC) the Incident was last updated. |
+| lastUpdateTime | DateTimeOffset | The date and time (in UTC) the incident was last updated. Use this property to identify incidents that changed after they were created. |
 | assignedTo | string | Owner of the Incident. |
-| severity | Enum | Severity of the Incident. Possible values are: `UnSpecified`, `Informational`, `Low`, `Medium`, and `High`. |
+| severity | Enum | Severity of the incident. Possible values are: `UnSpecified`, `Informational`, `Low`, `Medium`, and `High`. Severity can change as alerts are added to or removed from the incident. The incident resource doesn't provide a history of severity changes. |
 | status | Enum | Specifies the current status of the incident. Possible values are: `Active`, `InProgress`, `Resolved`, and `Redirected`. |
 | classification | Enum | Specification of the incident. Possible values are: `TruePositive`, `Informational, expected activity`, and `FalsePositive`. |
 | determination | Enum | Specifies the determination of the incident. <p>Possible determination values for each classification are: <br><li> <b>True positive</b>: `Multistage attack` (MultiStagedAttack), `Malicious user activity` (MaliciousUserActivity), `Compromised account` (CompromisedUser) – consider changing the enum name in public api accordingly, `Malware` (Malware), `Phishing` (Phishing), `Unwanted software` (UnwantedSoftware), and `Other` (Other). <li> <b>Informational, expected activity:</b> `Security test` (SecurityTesting), `Line-of-business application` (LineOfBusinessApplication), `Confirmed activity` (ConfirmedUserActivity) - consider changing the enum name in public api accordingly, and `Other` (Other). <li>  <b>False positive:</b> `Not malicious` (Clean) - consider changing the enum name in public api accordingly, `Not enough data to validate` (InsufficientData), and `Other` (Other). |

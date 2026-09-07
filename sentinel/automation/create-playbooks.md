@@ -4,30 +4,32 @@ description: Learn how to create and manage Microsoft Sentinel playbooks to auto
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #Customer intent: As a security analyst, I want to manage automated response playbooks so that I can efficiently handle incidents and alerts in my environment.
 
 ---
 
-# Create and manage Microsoft Sentinel playbooks 
+# Create and manage Microsoft Sentinel playbooks
 
 Playbooks are collections of procedures that can be run from Microsoft Sentinel in response to an entire incident, to an individual alert, or to a specific entity. A playbook can help automate and orchestrate your response and can be attached to an automation rule to run automatically when specific alerts are generated or when incidents are created or updated. Playbooks can also be run manually on-demand on specific incidents, alerts, or entities.
 
-This article describes how to create and manage Microsoft Sentinel playbooks. Before you begin, make sure you meet the [prerequisites](#prerequisites), including an Azure subscription and the required Logic App Azure roles. You can later attach these playbooks to analytics rules or automation rules, or run them manually on specific incidents, alerts, or entities.
+This article describes how to create and manage Microsoft Sentinel playbooks. Before you begin, make sure you meet the [playbook prerequisites](#prerequisites), including an Azure subscription and the required Logic App Azure roles. You can later attach these playbooks to analytics rules or automation rules, or run them manually on specific incidents, alerts, or entities.
 
 > [!NOTE]
 >
-> Playbooks in Microsoft Sentinel are based on workflows built in [Azure Logic Apps](/azure/logic-apps/logic-apps-overview), which means that you get all the power, customizability, and built-in templates of logic apps. Additional charges may apply. For pricing information, visit the [Azure Logic Apps pricing page](https://azure.microsoft.com/pricing/details/logic-apps/).
+> Playbooks in Microsoft Sentinel are based on workflows built in [Azure Logic Apps overview](/azure/logic-apps/logic-apps-overview), which means that you get all the power, customizability, and built-in templates of logic apps. Additional charges may apply. For pricing information, visit the [Azure Logic Apps pricing page](https://azure.microsoft.com/pricing/details/logic-apps/).
 
 [!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 
 ## Prerequisites
+
+Before you create or manage playbooks, make sure you meet the following prerequisites:
 
 - An Azure account and subscription. If you don't have a subscription, [create a free Azure account](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
@@ -43,7 +45,7 @@ This article describes how to create and manage Microsoft Sentinel playbooks. Be
 
   For more information, see the following documentation:
 
-  - [Access to logic app operations](/azure/logic-apps/logic-apps-securing-a-logic-app#access-to-logic-app-operations)
+  - [Secure access to logic app operations in Azure Logic Apps](/azure/logic-apps/logic-apps-securing-a-logic-app#access-to-logic-app-operations)
   - [Microsoft Sentinel playbook prerequisites](automate-responses-with-playbooks.md#prerequisites).
 
 - Before you create your playbook, we recommend that you read [Azure Logic Apps for Microsoft Sentinel playbooks](../automation/logic-apps-playbooks.md).
@@ -70,7 +72,7 @@ Follow these steps to create a new playbook in Microsoft Sentinel:
      - **Playbook with alert trigger**
      - **Playbook with entity trigger**
 
-     The following example continues with the **Playbook with entity trigger**.
+     In this example, select **Playbook with entity trigger**.
 
    - If you're creating a **Standard** playbook, select **Blank playbook** and then [prepare a **Standard** logic app playbook](create-playbooks.md?tabs=standard#prepare-playbook-logic-app).
 
@@ -136,7 +138,7 @@ Follow these steps to create your playbook:
       | **Service principal** | A service principal represents an entity that requires access to resources that are secured by a Microsoft Entra tenant. For more information, see [Service principal object](/entra/identity-platform/app-objects-and-service-principals). |
       | **Managed identity** | An identity that is automatically managed in Microsoft Entra ID. Apps can use this identity to access resources that support Microsoft Entra authentication and to obtain Microsoft Entra tokens without having to manage any credentials. <br><br>For optimal security, Microsoft recommends using a managed identity for authentication when possible. This option provides superior security and helps keep authentication information secure so that you don't have to manage this sensitive information. For more information, see the following resources: <br><br>- [What are managed identities for Azure resources](/entra/identity/managed-identities-azure-resources/overview)? <br>- [Authenticate access and connections to Azure resources with managed identities in Azure Logic Apps](/azure/logic-apps/authenticate-with-managed-identity). | 
 
-      For more information, see [Authentication prompts](#authentication-prompts).
+      For more information about authentication options and prompts, see [Authenticate connections for your playbook actions](#authentication-prompts).
 
    1. Based on your selected authentication option, provide the necessary parameter values for the corresponding option.
 
@@ -275,7 +277,7 @@ To add a Microsoft Sentinel trigger to your workflow, follow these steps:
       | **Service principal** | A service principal represents an entity that requires access to resources that are secured by a Microsoft Entra tenant. For more information, see [Service principal object](/entra/identity-platform/app-objects-and-service-principals). |
       | **Managed identity** | An identity that is automatically managed in Microsoft Entra ID. Apps can use this identity to access resources that support Microsoft Entra authentication and to obtain Microsoft Entra tokens without having to manage any credentials. <br><br>For optimal security, Microsoft recommends using a managed identity for authentication when possible. This option provides superior security and helps keep authentication information secure so that you don't have to manage this sensitive information. For more information, see the following resources: <br><br>- [What are managed identities for Azure resources](/entra/identity/managed-identities-azure-resources/overview)? <br>- [Authenticate access and connections to Azure resources with managed identities in Azure Logic Apps](/azure/logic-apps/authenticate-with-managed-identity). |
 
-      For more information, see [Authentication prompts](#authentication-prompts).
+      For more information about the authentication types and prompts shown by the Microsoft Sentinel connector, see [Authenticate connections for your playbook actions](#authentication-prompts).
 
    1. Based on your selected authentication option, provide the necessary parameter values for the corresponding option.
 
@@ -310,7 +312,7 @@ This selection opens the **Add an action** pane where you can browse or search f
 
 In each action, when you select inside a field, you get the following options:
 
-- **Dynamic content** (lightning icon): Choose from a list of available outputs from the preceding actions in the workflow, including the Microsoft Sentinel trigger. For example, these outputs can include the attributes of an alert or incident that was passed to the playbook, including the values and attributes of all the [mapped entities](../map-data-fields-to-entities.md) and [custom details](../surface-custom-details-in-alerts.md) in the alert or incident. You can add references to the current action by selecting these outputs.
+- **Dynamic content** (lightning icon): Choose from a list of available outputs from the preceding actions in the workflow, including the Microsoft Sentinel trigger. For example, these outputs can include the attributes of an alert or incident that was passed to the playbook, including the values and attributes of all the [map data fields to entities](../map-data-fields-to-entities.md) and [surface custom details in alerts](../surface-custom-details-in-alerts.md) in the alert or incident. You can add references to the current action by selecting these outputs.
 
   For examples that show using dynamic content, see [Use entity playbooks with no incident ID](#dynamic-content-entity-playbooks-with-no-incident-id) and [Work with custom details](#dynamic-content-work-with-custom-details).
 
@@ -320,7 +322,7 @@ For more information, see [Supported triggers and actions in Microsoft Sentinel 
 
 ### Dynamic content: Entity playbooks with no incident ID
 
-Playbooks created with the **Microsoft Sentinel entity** trigger often use the **Incident ARM ID** field, for example, to update an incident after taking action on the entity. If such a playbook is triggered in a scenario that's unconnected to an incident, such as when threat hunting, there's no incident ID to populate this field. Instead, the field is populated with a null value. As a result, the playbook might fail to run to completion. 
+Playbooks created with the **Microsoft Sentinel entity** trigger often use the **Incident ARM ID** field, which contains the Azure Resource Manager identifier for the associated incident. This field is used, for example, to update an incident after taking action on the entity. If such a playbook is triggered in a scenario that's unconnected to an incident, such as when threat hunting, there's no incident ID to populate this field. Instead, the field is populated with a null value. As a result, the playbook might fail to run to completion. 
 
 To prevent this failure, we recommend that you create a condition that checks for a value in the incident ID field before the workflow takes any other actions. You can prescribe a different set of actions to take if the field has a null value, due to the playbook not being run from an incident.
 
@@ -346,13 +348,13 @@ When you finish, your condition looks similar to the following example:
 
 ### Dynamic content: Work with custom details
 
-In the **Microsoft Sentinel incident** trigger, the **Alert custom details** output is an array of JSON objects where each represents a [custom detail from an alert](../surface-custom-details-in-alerts.md). Custom details are key-value pairs that let you surface information from events in the alert so they can be represented, tracked, and analyzed as part of the incident.
+In the **Microsoft Sentinel incident** trigger, the **Alert custom details** output is an array of JSON objects where each represents a custom detail, as described in [Surface custom details in alerts](../surface-custom-details-in-alerts.md). Custom details are key-value pairs that let you surface information from events in the alert so they can be represented, tracked, and analyzed as part of the incident.
 
 This field in the alert is customizable, so its schema depends on the type of event that is surfaced. To generate the schema that determines how to parse the custom details output, provide the data from an instance of this event:
 
 1. On the Microsoft Sentinel workspace menu, under **Configuration**, select **Analytics**.
 
-1. Follow the steps to create or open an existing [scheduled query rule](../create-analytics-rules.md?tabs=azure-portal) or [NRT query rule](../create-nrt-rules.md?tabs=azure-portal).
+1. Follow the steps to create or open an existing [create a scheduled analytics rule](../create-analytics-rules.md?tabs=azure-portal) or [create an NRT analytics rule](../create-nrt-rules.md?tabs=azure-portal).
 
 1. On the **Set rule logic** tab, [expand the **Custom details** section](../surface-custom-details-in-alerts.md?tabs=azure), for example:
 
@@ -428,10 +430,6 @@ Select a playbook to open its Azure Logic Apps page, which shows more details ab
 <a name="related-content"></a>
 
 ## Related content
-
-After you create your playbook, attach it to rules to be triggered by events in your environment, or run your playbooks manually on specific incidents, alerts, or entities.
-
-For more information, see:
 
 - [Automate and run Microsoft Sentinel playbooks](run-playbooks.md)
 - [Authenticate playbooks to Microsoft Sentinel](authenticate-playbooks-to-sentinel.md)

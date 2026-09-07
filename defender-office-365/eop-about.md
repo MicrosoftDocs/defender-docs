@@ -56,7 +56,7 @@ The following diagram shows how the built-in security features for all cloud mai
 
    In on-premises organizations with Exchange Enterprise CAL with Services licenses, [data loss prevention (DLP)](/exchange/security-and-compliance/data-loss-prevention/data-loss-prevention) checks also happen at this point.
 
-4. The message passes through content filtering, which includes anti-spam and anti-phishing filtering:
+4. The message passes through anti-spam and anti-phishing filtering:
    - Anti-spam policies identify messages as bulk, spam, high confidence spam, phishing, or high confidence phishing.
 
      High confidence phishing messages are always delivered to quarantine. By default, only admins can view and interact with high confidence phishing messages.

@@ -5,7 +5,7 @@ ms.service: defender-endpoint
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.collection: 
 - m365-security
 - tier2
@@ -17,14 +17,14 @@ appliesto:
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Protect your organization against web threats
 
 
 Web threat protection is part of [Web protection](web-protection-overview.md) in Defender for Endpoint. It uses [network protection](network-protection.md) to secure your devices against web threats. By integrating with Microsoft Edge and popular third-party browsers like Chrome and Firefox, web threat protection stops web threats without a web proxy and can protect devices while they're away or on premises. Web threat protection stops access to phishing sites, malware vectors, exploit sites, untrusted or low-reputation sites, and sites that you've blocked because they're in your [custom indicator list](indicators-overview.md).
 
-Before you configure web threat protection, review the [prerequisites](#prerequisites) in this article, including enabling network protection or Microsoft Defender SmartScreen.
+Before you configure web threat protection, review the [Prerequisites](#prerequisites) section, which requires enabling network protection or Microsoft Defender SmartScreen.
 
 > [!NOTE]
 > It might take up to two hours for devices to receive new custom indicators.
@@ -45,7 +45,7 @@ To turn on network protection on your devices:
 
 ## Configure web threat protection
 
-The legacy **Web protection** policy in Intune has been deprecated and web threat protection will be enabled if the prerequisites are met.
+The legacy **Web protection** policy in Intune has been deprecated and web threat protection is enabled if [network protection](enable-network-protection.md) or [Microsoft Defender SmartScreen](/deployedge/microsoft-edge-policies#smartscreenenabled) is enabled on your devices.
 
 
 ## Related articles

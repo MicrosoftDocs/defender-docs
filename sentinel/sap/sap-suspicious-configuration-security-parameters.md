@@ -4,20 +4,21 @@ description: Learn about the security parameters in the SAP system that the Micr
 ms.author: monaberdugo
 author: mberdugo
 ms.topic: reference
-ms.date: 09/15/2024
+ms.date: 08/04/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
+ai-usage: ai-assisted
 #Customer intent: As a security administrator, I want to monitor SAP security parameters so that I can detect and respond to suspicious configuration changes effectively.
 
 ---
 
 # Monitored SAP security parameters for detecting suspicious configuration changes
 
-This article lists the static security parameters in the SAP system that the Microsoft Sentinel solution for SAP applications monitors as part of the [*SAP - (Preview) Sensitive Static Parameter has Changed* analytics rule](sap-solution-security-content.md#monitor-the-configuration-of-static-sap-security-parameters-preview).
+This article lists the static security parameters in the SAP system that the Microsoft Sentinel solution for SAP applications monitors as part of the [*SAP - (Preview) Sensitive Static Parameter has Changed* analytics rule](sap-solution-security-content.md).
 
-The Microsoft Sentinel solution for SAP applications provides updates for this content according to SAP best practice changes. Add parameters to watch for by changing values according to your organization's needs, and turn off specific parameters in the [*SAPSystemParameters* watchlist](sap-solution-security-content.md#systemparameters).
+The Microsoft Sentinel solution for SAP applications provides updates for this content according to SAP best practice changes. Add parameters to watch for by changing values according to your organization's needs, and turn off specific parameters in the [*SAPSystemParameters* watchlist](sap-solution-security-content.md).
 
 This article doesn't describe the parameters, and isn't a recommendation to configuring the parameters. For configuration considerations, consult your SAP admins. For parameter descriptions, see the SAP documentation.
 
@@ -25,7 +26,7 @@ Content in this article is intended for your **SAP BASIS** teams.
 
 ## Prerequisites
 
-For the Microsoft Sentinel solution for SAP applications to successfully monitor the SAP security parameters, the solution needs to successfully monitor the SAP PAHI table at regular intervals. For more information, see [Verify that the PAHI table is updated at regular intervals](preparing-sap.md#verify-that-the-pahi-table-is-updated-at-regular-intervals).
+For the Microsoft Sentinel solution for SAP applications to successfully monitor the SAP security parameters, the solution needs to successfully monitor the SAP PAHI table at regular intervals. Confirm with your SAP BASIS team that the `SAP_COLLECTOR_FOR_PERFMONITOR` job is scheduled to run hourly so that the PAHI table stays current.
 
 ### Authentication parameters
 
@@ -118,5 +119,5 @@ For the Microsoft Sentinel solution for SAP applications to successfully monitor
 
 For more information, see:
 
-- [Connect your SAP system to Microsoft Sentinel](deploy-data-connector-agent-container.md)
+- [Connect your SAP system to Microsoft Sentinel](deploy-data-connector-agentless.md)
 - [Troubleshoot your Microsoft Sentinel solution for SAP applications solution deployment](sap-deploy-troubleshoot.md)

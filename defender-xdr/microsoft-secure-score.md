@@ -115,16 +115,16 @@ If you turn on security defaults, you are awarded full points for the following 
 
 <a name='manage-permissions-with-microsoft-365-defender-unified-role-based-access-controlrbac'></a>
 
-### Manage permissions with Microsoft Defender XDR Unified role-based access control (RBAC)
+### Manage permissions with Microsoft Defender Unified role-based access control (RBAC)
 
-With [Microsoft Defender XDR Unified role-based access control(RBAC)](manage-rbac.md), you can create custom roles with specific permissions for Secure Score. These permissions are located under the **Security posture** category in Defender XDR Unified RBAC permissions model and are named **Exposure Management (read)** for read-only access and **Exposure Management (manage)** for users who will have access to manage Secure Score recommendations.
+With [Microsoft Defender Unified role-based access control(RBAC)](manage-rbac.md), you can create custom roles with specific permissions for Secure Score. These permissions are located under the **Security posture** category in Defender Unified RBAC permissions model and are named **Exposure Management (read)** for read-only access and **Exposure Management (manage)** for users who will have access to manage Secure Score recommendations.
 
-In order for users to access Secure Score data, a custom role in Defender XDR Unified RBAC shall be assigned with the **Microsoft Security Exposure Management** data source.
+In order for users to access Secure Score data, a custom role in Defender Unified RBAC shall be assigned with the **Microsoft Security Exposure Management** data source.
 
-To start using Microsoft Defender XDR Unified RBAC to manage your Secure Score permissions, see [Microsoft Defender XDR Unified role-based access control (RBAC)](manage-rbac.md).
+To start using Microsoft Defender Unified RBAC to manage your Secure Score permissions, see [Microsoft Defender Unified role-based access control (RBAC)](manage-rbac.md).
 
 > [!NOTE]
-> Defender XDR Unified RBAC is automatically active for Secure Score access. Once a custom role with one of the permissions is created, it has an immediate impact on assigned users. There is no need to activate it.
+> Defender Unified RBAC is automatically active for Secure Score access. Once a custom role with one of the permissions is created, it has an immediate impact on assigned users. There is no need to activate it.
 > 
 > Currently, the model is only supported in the Microsoft Defender portal. If you want to use GraphAPI (for example, for internal dashboards or Defender for Identity Secure Score) you should continue to use Microsoft Entra roles. Support GraphAPI is planned at a later date.
 
@@ -132,7 +132,7 @@ To start using Microsoft Defender XDR Unified RBAC to manage your Secure Score p
 
 ### Microsoft Entra global roles permissions
 
-Microsoft Entra global roles (for example, Security Administrator) can still be used to access Secure Score. Users who have the supported Microsoft Entra global roles, but aren't assigned to a custom role in Microsoft Defender XDR Unified RBAC continue to have access to view (and manage where permitted) Secure Score data as outlined:
+Microsoft Entra global roles (for example, Security Administrator) can still be used to access Secure Score. Users who have the supported Microsoft Entra global roles, but aren't assigned to a custom role in Microsoft Defender Unified RBAC continue to have access to view (and manage where permitted) Secure Score data as outlined:
 
 The following roles have read and write access and can make changes, directly interact with Secure Score, and can assign read-only access to other users:
 
@@ -150,7 +150,7 @@ The following roles have read-only access and aren't able to edit status or note
 - Global Reader
 
 > [!NOTE]
-> If you want to follow the principle of least privilege access (where you only give users and groups the permissions, they need to do their job), Microsoft recommends that you remove any existing elevated Microsoft Entra global roles for users and/or security groups assigned a custom role with Secure Score permissions. This will ensure that the custom Microsoft Defender XDR Unified RBAC roles will take effect.
+> If you want to follow the principle of least privilege access (where you only give users and groups the permissions, they need to do their job), Microsoft recommends that you remove any existing elevated Microsoft Entra global roles for users and/or security groups assigned a custom role with Secure Score permissions. This will ensure that the custom Microsoft Defender Unified RBAC roles will take effect.
 
 ## Risk awareness
 

@@ -146,7 +146,7 @@ When analysts write Advanced Hunting or custom detection queries using UEBA-rela
 
 For more information, see: 
 - [Proactively hunt for threats with advanced hunting in Microsoft Defender](/defender-xdr/advanced-hunting-overview).
-- [KQL join operator](/kusto/query/join-operator?view=microsoft-sentinel).
+- [KQL join operator](/kusto/query/join-operator?view=microsoft-sentinel&preserve-view=true).
 - [UEBA data sources](ueba-reference.md#ueba-data-sources).
 - [Anomalies detected by the Microsoft Sentinel machine learning engine](anomalies-reference.md).
 

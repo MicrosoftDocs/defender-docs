@@ -2,7 +2,7 @@
 title: Report spam, non-spam, phishing, suspicious emails, Teams messages, and files to Microsoft
 author: chrisda
 ms.author: chrisda
-ms.date: 06/23/2026
+ms.date: 07/22/2026
 ms.topic: overview
 ms.localizationpriority: medium
 ms.assetid: c31406ea-2979-4fac-9288-f835269b9d2f
@@ -30,6 +30,9 @@ Admins in Microsoft 365 organizations with Microsoft Defender for Endpoint also 
 
 Watch this video for more information about the unified submissions experience.
 > [!VIDEO https://learn-video.azurefd.net/vod/player?id=65c688e4-8b79-4a39-a731-ddbffa053448]
+
+Watch this video to learn how users report suspicious email messages, email attachments, and Teams messages to Microsoft.
+> [!VIDEO https://www.youtube.com/embed/jC1k3Pc2Mwc]
 
 ## Report suspicious email messages to Microsoft
 

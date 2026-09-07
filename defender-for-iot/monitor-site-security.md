@@ -5,13 +5,13 @@ ms.service: defender-for-iot
 author: limwainstein
 ms.author: lwainstein
 ms.localizationpriority: medium
-ms.date: 06/11/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1013
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# Monitor site security
+# Monitor site security for Microsoft Defender for IoT in the Defender portal
 
 Microsoft Defender for IoT in the Microsoft Defender portal includes the **Site security** page, which offers an overview of the security state of your entire OT environment. Your organization's security team can use this page to regularly monitor the security status of your production sites.
 
@@ -37,7 +37,7 @@ The **Site security** page gives you an overview of the security status of your 
 
 :::image type="content" source="media/monitor-site-security/site-security-page-blurred.png" alt-text="Screenshot showing the site security page with a list of sites." lightbox="media/monitor-site-security/site-security-page-blurred.png":::
 
-The data displayed in the **Site security** page is the total aggregated data for the entire environment, and might include data for sites that you don't have access to. When you drill down into device data from the **Site security** page's site list table, the **Device Inventory** page only displays data for devices you can access.
+The data displayed in the **Site security** page is the total aggregated data for the entire environment, and might include data for sites that you don't have access to. When you select a device count in the site list table, the **Device Inventory** page only displays data for devices you can access.
 
 ## Review site protection information
 
@@ -55,7 +55,7 @@ Review the top **How protected are your sites** section to get the following inf
 
 Review the site specific data in the sites list table.
 
-Note that the data displayed in the sites list table is the total aggregated data for the entire environment, and might include data for sites that you don't have access to. When you drill down into device data, the **Device Inventory** page only displays data for devices you can access.
+Note that the data displayed in the sites list table is the total aggregated data for the entire environment, and might include data for sites that you don't have access to. When you select a device count in the site list table, the **Device Inventory** page only displays data for devices you can access.
 
 |Column | Description|Next steps |
 |----|----|----|

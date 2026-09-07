@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender XDR
 ai-usage: ai-assisted
@@ -59,11 +59,13 @@ For more information, see these blog posts:
 <a name="alert-details"></a>
 ## Alert details for suspicious email forwarding activity
 
-To review the Suspicious Email Forwarding Activity alert, open the **Alerts** page to see the **Activity list** section. Here's an example.
+To review the Suspicious Email Forwarding Activity alert:
 
-:::image type="content" source="media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-list.png" alt-text="List of activities related to the alert" lightbox="media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-list.png":::
+1. Open the **Alerts** page to see the **Activity list** section. Here's an example.
 
-Select **Activity**  to view the details of the selected alert activity in the sidebar. Here's an example.
+   :::image type="content" source="media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-list.png" alt-text="List of activities related to the alert" lightbox="media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-list.png":::
+
+1. Select **Activity** to view the details of the selected alert activity in the sidebar. Here's an example.
 
 :::image type="content" source="media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-details.png" alt-text="Details of the activity" lightbox="media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-activity-details.png":::
 
@@ -76,7 +78,7 @@ While investigating this alert, you must determine:
 
 ### Is the user account and its mailbox compromised?
 
-By looking at sender's past behavior and recent activities, you should be able to determine whether the user's account should be considered compromised or not. You can see the details of alerts raised from the user's page in the Microsoft Defender portal.
+By looking at the forwarding user's past behavior and recent activities, you should be able to determine whether the user's account should be considered compromised or not. You can see the details of alerts raised from the user's page in the Microsoft Defender portal.
 
 You can also analyze these other activities for the affected mailbox:
 
@@ -109,7 +111,7 @@ You can investigate an email forwarding alert using Threat Explorer or with adva
 
 Threat Explorer provides an interactive investigation experience for email related threats to determine whether the flagged email-forwarding activity is suspicious or not. You can use the following indicators from the alert information:
 
-- Suspicious Recipients List (SRL) / Recipients List (RL): Use the SRL or RL from the alert to find these details:
+- Suspicious Recipients List (SRL) / Recipients List (RL): The alert includes an SRL or RL that identifies the recipients involved in the forwarding activity. Use these lists to find the following details:
 
     :::image type="content" source="media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-recipients-list.png" alt-text="Example of the list of recipients" lightbox="media/alert-grading-playbook-email-forwarding/alert-grading-playbook-email-forwarding-recipients-list.png":::
 
@@ -231,11 +233,11 @@ You can also find suspicious forwarding rules using the Exchange admin center, b
 <a name="additional-investigation"></a>
 ### Investigate IP addresses and new forwarding rules
 
-Along with the evidence gathered during this investigation, you can determine if there are new forwarding rules being created. Investigate the IP address associated with the rule. Ensure that it is not an anomalous IP address and is consistent with usual activities performed by the user.
+Along with the evidence gathered during the suspicious email forwarding investigation, you can determine if there are new forwarding rules being created. Investigate the IP address associated with the rule. Ensure that it is not an anomalous IP address and is consistent with usual activities performed by the user.
 
 ## Recommended actions
 
-Once you determine that the activities associated make this alert a True Positive, classify the alert and take these actions for remediation:
+Once you determine that the associated email forwarding activities make this alert a True Positive, classify the alert and take these actions for remediation:
 
 1. Disable and delete the inbox forwarding rule.
 2. For the InboxRule forwarding type, reset the user's account credentials.

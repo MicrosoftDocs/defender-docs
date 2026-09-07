@@ -10,11 +10,11 @@ ms.collection:
 - tier2
 ms.topic: how-to
 ms.subservice: edr
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 
 ai-usage: ai-assisted
 ---
@@ -39,6 +39,8 @@ You can view a list of all the suppression rules and manage them in one place. Y
 
 
 ## View details of a suppression rule
+
+To view the details of a suppression rule, perform the following steps:
 
 1. In the navigation pane, select **Settings** \> **Endpoints** \> **Rules** \> **Alert suppression**. The list of suppression rules that users in your organization have created is displayed.
 

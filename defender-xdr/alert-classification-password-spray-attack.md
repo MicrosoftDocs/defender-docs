@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ms.collection:
   - m365-security
   - tier2
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender XDR
 ai-usage: ai-assisted
@@ -21,7 +21,7 @@ ai-usage: ai-assisted
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-Threat actors use innovative ways to compromise their target environments. One type of attack gaining traction is the password spray attack, where attackers aim to access many accounts within a network with minimal effort. Unlike traditional brute force attacks, where threat actors try many passwords on a single account, password spray attacks focus on guessing the correct password for many accounts with a limited set of commonly used passwords. This approach makes the attack particularly effective against organizations with weak or easily guessable passwords, leading to severe data breaches and financial losses for organizations.
+Threat actors use innovative ways to compromise their target environments. One type of attack gaining traction is the password spray attack, where attackers aim to access many accounts within a network with minimal effort. Unlike traditional brute force attacks, where threat actors try many passwords on a single account, password spray attacks focus on guessing the correct password for many accounts with a limited set of commonly used passwords. The password spray technique makes the attack particularly effective against organizations with weak or easily guessable passwords, leading to severe data breaches and financial losses for organizations.
 
 Attackers use automated tools to repeatedly attempt to gain access to a specific account or system using a list of commonly used passwords. Attackers sometimes abuse legitimate cloud services by creating many virtual machines (VMs) or containers to launch a password spray attack.
 
@@ -69,7 +69,7 @@ Examine the impacted user's recent activity for signs of account misuse across s
 
 - [Multi-factor authentication (MFA)](/microsoft-365/admin/security-and-compliance/multi-factor-authentication-microsoft-365)-related attacks
 
-   - Attackers use **MFA fatigue** to bypass this security measure that organizations adopt to protect their systems. **Check for multiple MFA requests raised by an impacted user account.**
+   - Attackers use **MFA fatigue**—repeated authentication prompts intended to pressure users into approving access—to bypass this security measure that organizations adopt to protect their systems. **Check for multiple MFA requests raised by an impacted user account.**
    - Attackers might perform **MFA tampering** using an impacted user account with elevated privileges by disabling MFA protection for other accounts within the tenant. **Check for suspicious admin activities performed by an impacted user.**
 
 - Internal phishing attacks
@@ -84,7 +84,7 @@ Examine the impacted user's recent activity for signs of account misuse across s
 
 [Advanced hunting](advanced-hunting-overview.md) is a query-based threat hunting tool that lets you inspect events in your network and locate threat indicators.
 
-Use these queries to gather more information related to the password spray alert and determine whether the activity is suspicious.
+Use these queries to gather more information related to the password spray alert and determine whether the alerted sign-in activity is suspicious.
 
 Ensure you have access to the following tables:
 - [AadSignInEventsBeta](advanced-hunting-aadsignineventsbeta-table.md)
@@ -110,7 +110,7 @@ IdentityLogonEvents
 | where TargetIPAddress >= 25
 ```
 
-Use this query to identify other activities from the alerted ISP.
+Use this query to identify other activities from the ISP listed in the alert details.
 
 ```kusto
 CloudAppEvents
@@ -120,7 +120,7 @@ CloudAppEvents
 | summarize count() by Application, ActionType, bin(Timestamp, 1h)
 ```
 
-Use this query to identify sign-in patterns for the impacted user.
+Use this query to identify sign-in patterns for the user account identified in the alert.
 
 ```kusto
 IdentityLogonEvents
@@ -146,7 +146,7 @@ AADSignInEventsBeta
 | where FailureCount >= 10
 ```
 
-Use this query to identify MFA reset activities.
+Use this query to identify MFA reset activities. The following query defines MFA-related reset and bypass action types, then correlates matching cloud app events with alert data to surface suspicious MFA changes.
 
 ```kusto
 let relevantActionTypes = pack_array("Disable Strong Authentication.","system.mfa.factor.deactivate", "user.mfa.factor.update", "user.mfa.factor.reset_all", "core.user_auth.mfa_bypass_attempted");
@@ -158,9 +158,11 @@ AlertInfo
 | where ActionType in (relevantActionTypes)
 | where RawEventData contains "success"
 | project Timestamp, ReportId, AccountObjectId, IPAddress, ActionType
+```
 
+Use the following query to check whether MFA strong authentication requirements were removed from user accounts in Microsoft Entra ID, which can indicate post-compromise MFA tampering:
 
-
+```kusto
 CloudAppEvents
 | where Timestamp > ago(1d)
 | where ApplicationId == 11161 
@@ -175,7 +177,7 @@ CloudAppEvents
 | project Timestamp, ReportId, AccountObjectId, ActivityObjects, TargetObjectId
 ```
 
-Use this query to find suspicious inbox rules created by the impacted user during sessions associated with suspected compromise. This query helps identify post-compromise activity where attackers create inbox rules to hide or redirect email.
+Use this query to find suspicious inbox rules created by the user account identified in the password spray alert during sessions flagged as suspicious in your investigation. This query helps identify post-compromise activity where attackers create inbox rules to hide or redirect email.
 
 ```kusto
 CloudAppEvents

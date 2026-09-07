@@ -4,13 +4,13 @@ description: This article explains how (and why) to take your existing playbooks
 ms.topic: how-to
 ms.author: monaberdugo
 author: mberdugo
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to migrate my alert-trigger playbooks to automation rules so that I can streamline automation management and prepare for the deprecation of analytics rule triggers.
 
@@ -22,7 +22,7 @@ We recommend that you migrate existing playbooks built on alert triggers and mig
 
 - If you're migrating a playbook that's used by only one analytics rule, follow the instructions under [Create an automation rule from an analytics rule](#create-an-automation-rule-from-an-analytics-rule).
 
-- If you’re migrating a playbook that's used by multiple analytics rules, follow the instructions under [Create a new automation rule from the Automation page](#create-a-new-automation-rule-from-the-automation-page).
+- If you're migrating a playbook that's used by multiple analytics rules, follow the instructions under [Create a new automation rule from the Automation page](#create-a-new-automation-rule-from-the-automation-page).
 
 [!INCLUDE [unified-soc-preview](../includes/unified-soc-preview.md)]
 
@@ -44,17 +44,17 @@ The ability to invoke playbooks from analytics rules will be **deprecated effect
 
 ## Prerequisites
 
-You'll need the:
+You need these roles:
 
-- **Logic Apps Contributor** role to create and edit playbooks
+- **Logic Apps Contributor** role to create and edit playbooks.
 
-- **Microsoft Sentinel Contributor** role to attach a playbook to an automation rule
+- **Microsoft Sentinel Contributor** role to attach a playbook to an automation rule.
 
-For more information, see [Microsoft Sentinel playbook prerequisites](automate-responses-with-playbooks.md#prerequisites).
+To learn more, see [Microsoft Sentinel playbook prerequisites](automate-responses-with-playbooks.md#prerequisites).
 
 ## Create an automation rule from an analytics rule
 
-Use this procedure if you're migrating a playbook that's used by only one analytics rule. If the playbook is used by multiple analytics rules, use [Create a new automation rule from the Automation page](#create-a-new-automation-rule-from-the-automation-page).
+Follow these steps to migrate a playbook that's used by only one analytics rule. If the playbook is used by multiple analytics rules, use [Create a new automation rule from the Automation page](#create-a-new-automation-rule-from-the-automation-page).
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select the **Configuration** > **Analytics** page. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Configuration** > **Analytics**.
 
@@ -84,7 +84,7 @@ Use this procedure if you're migrating a playbook that's used by only one analyt
 
 ## Create a new automation rule from the Automation page
 
-Use this procedure if you’re migrating a playbook that's used by multiple analytics rules. Otherwise, use [Create an automation rule from an analytics rule](#create-an-automation-rule-from-an-analytics-rule)
+Use this procedure if you're migrating a playbook that's used by multiple analytics rules. Otherwise, use [Create an automation rule from an analytics rule](#create-an-automation-rule-from-an-analytics-rule)
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), select the **Configuration** > **Analytics** page. For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Configuration** > **Analytics**.
 
@@ -94,7 +94,7 @@ Use this procedure if you’re migrating a playbook that's used by multiple anal
 
 1. Under **Conditions**, select the analytics rules you want to run a particular playbook or a set of playbooks on.
 
-1. Under **Actions**, for each playbook you want this rule to invoke, select **+ Add action**. The **Run playbook** action is automatically selected and grayed out. 
+1. Under **Actions**, for each playbook you want this rule to invoke, select **+ Add action**. The **Run playbook** action is automatically selected and grayed out.
 
 1. Select from the list of available playbooks in the drop-down list in the line below. Order the actions according to the order in which you want the playbooks to run by selecting the up/down arrows next to each action.
 
@@ -103,8 +103,6 @@ Use this procedure if you’re migrating a playbook that's used by multiple anal
 1. Edit the analytics rule or rules that invoked these playbooks (the rules you specified under **Conditions**), removing the playbook from the **Alert automation (classic)** section of the **Automated response** tab.
 
 ## Related content
-
-For more information, see:
 
 - [Automate threat response in Microsoft Sentinel with automation rules](../automate-incident-handling-with-automation-rules.md)
 - [Authenticate playbooks to Microsoft Sentinel](authenticate-playbooks-to-sentinel.md)

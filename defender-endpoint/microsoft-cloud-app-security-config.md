@@ -11,18 +11,18 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 06/17/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
 
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 # Configure Microsoft Defender for Cloud Apps in Microsoft Defender for Endpoint
 
 
-To benefit from Microsoft Defender for Endpoint cloud app discovery signals, turn on Microsoft Defender for Cloud Apps integration.
+Turn on Microsoft Defender for Cloud Apps integration to use cloud app discovery signals from Defender for Endpoint.
 
 > [!NOTE]
 > This feature will be available with an E5 license for [Enterprise Mobility + Security](https://www.microsoft.com/en-us/security) on devices running Windows 10 and Windows 11.
@@ -38,7 +38,7 @@ To enable the Microsoft Defender for Cloud Apps integration, follow these steps:
 1. Select **Microsoft Defender for Cloud Apps** and switch the toggle to **On**.
 1. Click **Save preferences**.
 
-Once you turn on the Microsoft Defender for Cloud Apps integration, Microsoft Defender for Endpoint immediately starts forwarding discovery signals to Defender for Cloud Apps.
+After you turn on this integration, Defender for Endpoint starts forwarding discovery signals to Defender for Cloud Apps right away.
 
 ## View the data collected
 

@@ -67,9 +67,9 @@ The availability of these features is summarized in the following table:
 
 The following Windows security features complement attack surface reduction in Defender for Endpoint, but are configured and managed separately:
 
-- **Microsoft Defender Application Guard** provides hardware-based isolation for Microsoft Edge, opening untrusted sites in a container to protect your organization. For more information, see [Microsoft Defender Application Guard overview](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
-- **Windows Defender Application Control (WDAC)** ensures that only trusted applications run on your devices. For more information, see [Application control for Windows](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control).
-- **Windows Firewall** controls inbound and outbound network traffic on devices. For more information, see [Windows Firewall with advanced security](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security).
+- **Microsoft Defender Application Guard** provides hardware-based isolation for Microsoft Edge, opening untrusted sites in a container to protect your organization. For more information, see [Microsoft Defender Application Guard overview](/windows/security/application-security/application-isolation/microsoft-defender-application-guard/md-app-guard-overview).
+- **Windows Defender Application Control (WDAC)** ensures that only trusted applications run on your devices. For more information, see [Application control for Windows](/windows/security/application-security/application-control/app-control-for-business/appcontrol).
+- **Windows Firewall** controls inbound and outbound network traffic on devices. For more information, see [Windows Firewall with advanced security](/windows/security/operating-system-security/network-security/windows-firewall).
 
 ## How attack surface reduction fits into Defender for Endpoint
 

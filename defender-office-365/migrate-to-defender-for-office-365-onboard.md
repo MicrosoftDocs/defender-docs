@@ -12,7 +12,7 @@ ms.collection:
 ms.custom: migrationguides
 description: "Complete the steps for migrating from a non-Microsoft protection service or device to Microsoft Defender for Office 365 protection."
 ms.service: defender-office-365
-ms.date: 6/15/2023
+ms.date: 07/24/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
 ---
@@ -33,7 +33,7 @@ Welcome to **Phase 3: Onboard** of your **[migration to Microsoft Defender for O
 4. [Tune impersonation protection and mailbox intelligence](#step-4-tune-impersonation-protection-and-mailbox-intelligence)
 5. [Use data from user reported messages to measure and adjust](#step-5-use-data-from-user-reported-messages-to-measure-and-adjust)
 6. [(Optional) Add more users to your pilot and iterate](#step-6-optional-add-more-users-to-your-pilot-and-iterate)
-7. [Extend Microsoft 365 protection to all users and turn off the SCL=-1 mail flow rule](#step-7-extend-microsoft-365-protection-to-all-users-and-turn-off-the-scl-1-mail-flow-rule)
+7. [Extend Microsoft 365 protection to all users and turn off the bypass spam filtering mail flow rule](#step-7-extend-microsoft-365-protection-to-all-users-and-turn-off-the-bypass-spam-filtering-mail-flow-rule)
 8. [Switch your MX records](#step-8-switch-your-mx-records)
 
 ## Step 1: Begin onboarding Security Teams
@@ -167,7 +167,9 @@ As you find and fix issues, you can add more users to the pilot groups (and corr
 
 - It's also a good idea to examine unnecessary overrides. In other words, look at the verdicts that Microsoft 365 would have provided on the messages. If Microsoft 365  rendered the correct verdict, then the need for override is greatly diminished or eliminated.
 
-## Step 7: Extend Microsoft 365 protection to all users and turn off the SCL=-1 mail flow rule
+<a name='step-7-extend-microsoft-365-protection-to-all-users-and-turn-off-the-scl-1-mail-flow-rule'></a>
+
+## Step 7: Extend Microsoft 365 protection to all users and turn off the bypass spam filtering mail flow rule
 
 Do the steps in this section when you're ready to switch your MX records to point to Microsoft 365.
 
@@ -178,7 +180,7 @@ Do the steps in this section when you're ready to switch your MX records to poin
 
    - Change the scope of the policies that you created and adjusted during the pilot to include all users (for example, all recipients in all domains). Remember, if multiple policies of the same type (for example, anti-phishing policies) apply to the same user (individually, by group membership, or email domain), only the settings of the policy with the highest priority (lowest priority number) are applied, and processing stops for that type of policy.
 
-2. Turn off the SCL=-1 mail flow rule (you can turn it off without deleting it).
+2. Turn off the bypass spam filtering mail flow rule (spam confidence level or SCL -1). You can turn it off without deleting it.
 
 3. Verify that the previous changes have taken effect, and that Defender for Office 365 is now properly enabled for all users. At this point, all of the protection features of Defender for Office 365 are now allowed to act on mail for all recipients, but that mail has already been scanned by your existing protection service.
 
@@ -191,7 +193,7 @@ You can pause at this stage for more large-scale data recording and tuning.
 > - When you switch the MX record for your domain, it can take up to 48 hours for the changes to propagate throughout the internet.
 > - We recommend lowering the TTL value of your DNS records to enable faster response and possible rollback (if required). You can revert to the original TTL value after the switchover is complete and verified.
 > - You should consider starting with changing domains that are used less frequently. You can pause and monitor before moving to larger domains. However, even if you do this, you still should make sure that all users and domains are covered by policies, because secondary SMTP domains are resolved to primary domains prior to the policy application.
-> - Multiple MX records for a single domain will technically work, allowing you to have split routing, provided that you have followed all the guidance in this article. Specifically, you should make sure that policies are applied to all users, that the SCL=-1 mail flow rule is applied only to mail that passes through your existing protection service as described in [Setup Step 3: Maintain or create the SCL=-1 mail flow rule](migrate-to-defender-for-office-365-setup.md#step-3-maintain-or-create-the-scl-1-mail-flow-rule). However, this configuration introduces behavior that makes troubleshooting much more difficult, and therefore we do not typically recommend it, especially for extended periods of time.
+> - Multiple MX records for a single domain will technically work, allowing you to have split routing, provided that you have followed all the guidance in this article. Specifically, you should make sure that policies are applied to all users, that the bypass spam filtering mail flow rule is applied only to mail that passes through your existing protection service as described in [Setup Step 3: Maintain or create the bypass spam filtering mail flow rule](migrate-to-defender-for-office-365-setup.md#step-3-maintain-or-create-the-bypass-spam-filtering-mail-flow-rule). However, this configuration introduces behavior that makes troubleshooting much more difficult, and therefore we do not typically recommend it, especially for extended periods of time.
 > - Before you switch your MX records, verify that the following settings are not enabled on the inbound connector from the protection service to Microsoft 365. Typically, the connector will have one or more of the following settings configured:
 >   - **and require that the subject name on the certificate that the partner uses to authenticate with Office 365 matches this domain name** (*RestrictDomainsToCertificate*)
 >   - **Reject email messages if they aren't sent from within this IP address range** (*RestrictDomainsToIPAddresses*)
@@ -200,7 +202,7 @@ You can pause at this stage for more large-scale data recording and tuning.
 
 When you're ready, switch the MX record for your domains. You can migrate all of your domains at once. Or, you can migrate less frequently used domains first, and then migrate the rest later.
 
-Feel free to pause and evaluate here at any point. But, remember: once you turn off the SCL=-1 mail flow rule, users might have two different experiences for checking false positives. The sooner you can provide a single, consistent experience, the happier your users and help desk teams will be when they have to troubleshoot a missing message.
+Feel free to pause and evaluate here at any point. But, remember: once you turn off the bypass spam filtering mail flow rule, users might have two different experiences for checking false positives. The sooner you can provide a single, consistent experience, the happier your users and help desk teams will be when they have to troubleshoot a missing message.
 
 ## Next steps
 

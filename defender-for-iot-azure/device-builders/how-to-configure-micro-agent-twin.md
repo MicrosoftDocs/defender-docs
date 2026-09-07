@@ -1,15 +1,15 @@
 ---
-title: Configure a micro agent twin
+title: Configure a Micro Agent T#### win
 description: Learn how to view and update Microsoft Defender for IoT micro agent twin configuration properties, such as message frequency and collector settings, through the Azure portal.
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Configure a Microsoft Defender for IoT micro agent twin
 
-The Microsoft Defender for IoT micro agent twin lets you customize the security agent's behavior for each device. By editing the module identity twin's desired properties in the Azure portal, you can control settings such as message frequency, collector enablement, and cache sizes. This article walks you through viewing and updating those configuration properties in IoT Hub.
+The Microsoft Defender for IoT micro agent twin lets you customize the security agent's behavior for each device. By editing the module identity twin's desired properties in the Azure portal, you can control settings such as message frequency, collector enablement, and cache sizes. This article walks you through viewing and updating those configuration properties in IoT Hub. Before you begin, make sure you have the required Azure account, Defender for IoT subscription, and IoT Hub setup described in the [Prerequisites](#prerequisites).
 
 [!INCLUDE [device-agents-note](../includes/device-agents-note.md)]
 
@@ -25,7 +25,7 @@ Before you configure the micro agent twin, make sure you have the following prer
 
 ## Micro agent configuration
 
-**To view and update the micro agent twin configuration**:
+To view and update the micro agent twin configuration:
 
 1. Navigate to the [Azure portal](https://portal.azure.com).
 
@@ -86,17 +86,14 @@ Before you configure the micro agent twin, make sure you have the following prer
     ```
     For the full list of supported properties, see [Micro agent configurations](concept-micro-agent-configuration.md).
 
-    The agent successfully set the new configuration if the value of `"latest_state"`, under the `"reported"` section shows `"success"`.
+    The micro agent successfully set the new configuration if the value of `"latest_state"`, under the `"reported"` section shows `"success"`.
 
     :::image type="content" source="media/tutorial-micro-agent-configuration/reported-success.png" alt-text="Screenshot of a successful configuration change.":::
 
-    If the agent fails to set the new configuration, the value of `"latest_state"`, under the `"reported"` section will show `"failed"`. If the configuration update fails, the `"latest_invalid_fields"` will contain a list of the fields that are invalid.
+    If the micro agent fails to set the new configuration, the value of `"latest_state"`, under the `"reported"` section will show `"failed"`. If the configuration update fails, the `"latest_invalid_fields"` will contain a list of the fields that are invalid.
 
 <a name="next-steps"></a>
 ## Related content
 
-For more information about micro agent configurations and event aggregation, see:
-
 - [Micro agent configurations](concept-micro-agent-configuration.md)
-
 - [Micro agent event collection](concept-event-aggregation.md)

@@ -1,10 +1,10 @@
 ---
-title: Create ASIM parsers using an AI agent in Microsoft Sentinel
-description: Use GitHub Copilot skills to create, validate, deploy, and package ASIM parsers in Microsoft Sentinel so you can normalize security data faster.
+title: Create ASIM parsers using AI agent skills in Microsoft Sentinel
+description: Use GitHub Copilot or the Microsoft Sentinel VS Code extension skills to create, validate, deploy, and package ASIM parsers in Microsoft Sentinel so you can normalize security data faster.
 ms.author: derricklee
 author: derricklee
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/15/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1012
 
@@ -13,9 +13,9 @@ ms.custom: msecd-doc-authoring-1012
 
 ---
 
-# Get started with creating ASIM parsers using GitHub Copilot
+# Get started with creating ASIM parsers using AI Skills
 
-Use GitHub Copilot skills to create, validate, deploy, and package Advanced Security Information Model (ASIM) parsers. These skills automate the parser workflow from source data collection and Kusto Query Language (KQL) parser generation to validation, Log Analytics deployment, and pull request packaging. By the end of this guide, you'll have a working ASIM parser in your workspace, ready for production use.
+Use [Agent skills](/agent-framework/agents/skills) to create, validate, deploy, and package Advanced Security Information Model (ASIM) parsers. These skills are available in GitHub Copilot CLI and in the [Microsoft Sentinel VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-security.ms-sentinel). They automate the parser workflow from source data collection and Kusto Query Language (KQL) parser generation to validation, Log Analytics deployment, and pull request packaging. By the end of this guide, you'll have a working ASIM parser in your workspace, ready for production use.
 
 ## Prerequisites
 
@@ -23,16 +23,18 @@ Before you begin, make sure you have the following items in place:
 
 - An active Microsoft Sentinel workspace
 
-- [GitHub Copilot](https://github.com/features/copilot/cli/)
+- One of the following:
+    - [GitHub Copilot](https://github.com/features/copilot/cli/)
+    - [Microsoft Sentinel VS Code extension](https://marketplace.visualstudio.com/items?itemName=ms-security.ms-sentinel)
 
-- [PowerShell 7](https://learn.microsoft.com/powershell/scripting/install/install-powershell-on-windows)
+- [PowerShell 7](/powershell/scripting/install/install-powershell-on-windows)
 
-- [Azure CLI](https://learn.microsoft.com/cli/azure/install-azure-cli)
+- [Azure CLI](/cli/azure/install-azure-cli)
     - You should have query access to your Sentinel Log Analytics workspace.
 
 - A local clone of the [Azure-Sentinel](https://github.com/Azure/Azure-Sentinel) repository. [Fork the repository](https://github.com/Azure/Azure-Sentinel/fork) so that you can submit pull requests with your parsers for Microsoft review.
 
-### Quick start
+### Quick start with GitHub Copilot CLI
 
 To run the ASIM parser creation workflow in Copilot CLI, follow these steps:
 
@@ -47,6 +49,22 @@ To run the ASIM parser creation workflow in Copilot CLI, follow these steps:
 1. Select Claude Sonnet 4.6+ or Claude Opus 4.6+ for best results by running `/model` .
 
 1. Prompt Copilot in the session to create an ASIM parser with the following prompt: `Create an ASIM parser for me.`
+
+### Quick start with the Microsoft Sentinel VS Code extension
+
+The extension includes the same ASIM parser skills and orchestrates the workflow identically to the CLI experience.
+
+To run the ASIM parser creation workflow using the Microsoft Sentinel VS Code extension, follow these steps:
+
+1. Install the [Microsoft Sentinel extension](https://marketplace.visualstudio.com/items?itemName=ms-security.ms-sentinel) from the VS Code Marketplace.
+
+1. Open your preferred workspace/repository in VS Code.
+
+1. Open the Copilot chat panel and select Claude Sonnet 4.6+ or Claude Opus 4.6+ for best results. Prompt: `Create an ASIM parser for me.`
+
+:::image type="content" source="media/normalization-create-parsers-ai-agent/vscode-extension-experience.png" alt-text="Screenshot of the agent experience on Visual Studio Code." lightbox="media/normalization-create-parsers-ai-agent/vscode-extension-experience.png":::
+
+## ASIM Parser Creation Orchestration
 
 The `asim-parser-creator-orchestrator` skill orchestrates the ASIM parser creation workflow, which calls specialized skills at each step. The following sections describe each stage of the process.
 

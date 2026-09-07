@@ -6,12 +6,12 @@ ms.author: lwainstein
 author: limwainstein
 ms.reviewer: ericlaw
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.collection:
 - m365-security
 - tier2
 - mde-asr
-ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1014
+ms.custom: admindeeplinkDEFENDER, msecd-doc-authoring-1016
 ms.topic: how-to
 ms.subservice: asr
 appliesto:
@@ -29,7 +29,7 @@ Web content filtering is part of the [Web protection](web-protection-overview.md
 
 Configure policies across your device groups to block selected categories. Blocking a category prevents users within specified device groups from accessing URLs associated with the category. For any category that's not blocked, the URLs are automatically audited. Your users can access audited URLs without disruption, and you gather access statistics to help create a more custom policy decision. Your users see a block notification if an element on the page they're viewing is making calls to a blocked resource.
 
-Web content filtering is available in major web browsers, with blocks performed by Windows Defender SmartScreen (Microsoft Edge) and network protection (Chrome, Firefox, Brave, and Opera). Supported browsers include Microsoft Edge, Google Chrome, Mozilla Firefox, Brave, Opera, and Internet Explorer. For the full list of requirements, see the [web content filtering prerequisites](#prerequisites) section in this article.
+Web content filtering is available in major web browsers, with blocks performed by Windows Defender SmartScreen (Microsoft Edge) and network protection (Chrome, Firefox, Brave, and Opera). Supported browsers include Microsoft Edge, Google Chrome, Mozilla Firefox, Brave, Opera, and Internet Explorer. For the full list of requirements, including subscription, operating system, browser, and protection prerequisites, see the prerequisites section later in this article.
 
 ## Benefits of web content filtering
 
@@ -50,7 +50,7 @@ Ensure you meet the requirements described in the following table:
 |Portal access|You must have access to the [Microsoft Defender portal](https://security.microsoft.com).|
 |Operating system|Your organization's devices must be running one of the following operating systems with the [latest antivirus/antimalware updates](microsoft-defender-antivirus-updates.md): <br/>- Windows 11<br/>- Windows 10 Anniversary Update (version 1607) or later <br/>- Windows Server 2019 or later <br/>- For macOS availability, see [Network Protection for macOS](network-protection-macos.md)<br/>- For Linux availability, see [Network Protection for Linux](network-protection-linux.md)|
 |Browser|Your devices must be running one of the following browsers: <br/>- Microsoft Edge<br/>- Google Chrome<br/>- Mozilla Firefox<br/>- Brave<br/>- Opera<br/>- Internet Explorer|
-|Related protection|[Windows Defender SmartScreen](/windows/security/threat-protection/microsoft-defender-smartscreen/microsoft-defender-smartscreen-overview) and [network protection](network-protection.md) must be enabled on your organization's devices.|
+|Related protection|[Windows Defender SmartScreen](/windows/security/operating-system-security/virus-and-threat-protection/microsoft-defender-smartscreen/) and [network protection](network-protection.md) must be enabled on your organization's devices.|
 
 <a name="data-handling"></a>
 ## Web content filtering data storage and privacy
@@ -93,6 +93,13 @@ Policies can be deployed to block any of the following parent or child categorie
 > *Remote proxy sites* are categorized as *Illegal Software*. This classification is based on their inherent ability to route traffic to any destination, which can include access to unwanted, malicious, or illegal content. As with any other blocked site, an organization can choose to use an "allow" indicator to allow access to a site that would otherwise be blocked based on its Web Content Filtering category.
 
 ### Create a policy
+
+> [!NOTE]
+>
+> - There might be up to 2 hours of latency between the time a policy is created and when it's enforced on the device.
+> - You can deploy a policy without selecting any categories to block. This action creates an audit-only policy to help you understand user behavior before creating a block policy.
+> - If you're removing a policy or changing device groups at the same time, there could be a delay in policy deployment.
+> - Blocking the "Uncategorized" category could lead to unexpected and undesired results.
 
 To add a new policy, follow these steps:
 
@@ -166,7 +173,7 @@ Select **Reports** \> **Web protection** to view cards with information about we
 
 ### Web activity by category
 
-This card lists the parent web content categories with the largest increase or decrease in the number of access attempts. You can explore changes in web activity patterns in your organization from last 30 days, 3 months, or 6 months. Select a category name to view more information.
+The **Web activity by category** card lists the parent web content categories with the largest increase or decrease in the number of access attempts. You can explore changes in web activity patterns in your organization from last 30 days, 3 months, or 6 months. Select a category name to view more information.
 
 In the first 30 days of using web content filtering, your organization might not have enough data to display the Web activity by category card.
 
@@ -174,13 +181,13 @@ In the first 30 days of using web content filtering, your organization might not
 
 ### Web content filtering summary card
 
-This card displays the distribution of blocked access attempts across the different parent web content categories. Select one of the colored bars to view more information about a specific parent web category.
+The **Web content filtering summary** card displays the distribution of blocked access attempts across the different parent web content categories. Select one of the colored bars to view more information about a specific parent web category.
 
 :::image type="content" source="media/web-content-filtering-summary.png" alt-text="The web content filtering summary card" lightbox="media/web-content-filtering-summary.png":::
 
 ### Web activity summary card
 
-This card displays the total number of requests for web content across all URLs.
+The **Web activity summary** card displays the total number of requests for web content across all URLs.
 
 :::image type="content" source="media/web-activity-summary.png" alt-text="The web activity summary card" lightbox="media/web-activity-summary.png":::
 

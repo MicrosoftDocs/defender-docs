@@ -1,9 +1,9 @@
 ---
-title: Basic setup
+title: Set up Microsoft Defender for Cloud Apps
 description: Set up your Defender for Cloud Apps environment and enable the Identity inventory integration to get a centralized view of identities.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 # Basic setup for Defender for Cloud Apps
@@ -30,19 +30,20 @@ Perform the following steps to set up your Defender for Cloud Apps environment:
 
    Logos are stored in publicly accessible storage. The source URL for your image is protected and stored internally. 
 
-   Providing this image is voluntary, it’s up to you to decide if you want to share this data with us. You can also choose to delete this image at any time and it will be deleted from our storage. This decision does not affect the security of your organization or your users in any way.
+   Providing this image is voluntary, it’s up to you to decide if you want to share this data with us. You can also choose to delete the logo at any time, and the logo file will be deleted from our storage. This decision does not affect the security of your organization or your users in any way.
 
-1. Make sure you add a list of your **Managed domains** to identify internal users. Adding managed domains is a crucial step. Defender for Cloud Apps uses the managed domains to determine which users are internal, external, and where files should and shouldn't be shared. This information is used for reports and alerts.
+1. Make sure you add a list of your **Managed domains** to identify internal users. Adding managed domains is a crucial step. Defender for Cloud Apps uses the managed domains to determine which users are internal, external, and where files should and shouldn't be shared. Managed domain data is used for reports and alerts.
 
     * Users in domains that aren't configured as internal are marked as external. People outside the organization aren't scanned for activities or files.
 
-1. If you're integrating with Microsoft Purview Information Protection, see [Microsoft Purview Information Protection Integration](azip-integration.md) for information.
-
-    * To work with Microsoft Purview Information Protection integration, you must enable the [App connector for Microsoft 365](./connect-office-365.md).
+1. If you're integrating with Microsoft Purview Information Protection, make sure you first enable the [App connector for Microsoft 365](./connect-office-365.md). Then see [Microsoft Purview Information Protection Integration](azip-integration.md) for setup information.
 
 ## Enable Identity inventory integration
 
 Enable Identity Inventory Integration to ingest cloud app accounts into the [Identity inventory](/defender-for-identity/identity-inventory), providing a centralized view of identities across on-premises, cloud, and SaaS environments.
+
+> [!WARNING]
+> After you enable Identity Inventory Integration, the integration can't be disabled.
 
 Review the following important considerations before enabling this setting:
 
@@ -56,9 +57,8 @@ Review the following important considerations before enabling this setting:
   - Cloud discovery user enrichment and anonymization
   - RBAC scoping
 
-  These features continue to use the Cloud Application Accounts inventory. For more information, see the relevant Defender for Cloud Apps documentation.
+  These features continue to use the Cloud Application Accounts inventory. For more information, see [Cloud app accounts](accounts.md).
 - The existing **Cloud Apps Accounts view remains available** to ensure backward compatibility.
-- After you enable Identity Inventory Integration, **the integration can't be disabled**.
 
 <!-- TODO: Confirm with Itai whether the fwlink (https://go.microsoft.com/fwlink/?LinkId=2359589) is live and what it points to. -->
 

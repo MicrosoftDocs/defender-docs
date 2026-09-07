@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: ofshezaf
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to stream and filter DNS server logs using a cloud-based monitoring agent so that analysts can detect and mitigate potential threats efficiently.
 
@@ -19,7 +19,7 @@ This article describes how to use the Azure Monitor Agent (AMA) connector to str
 
 DNS is a widely used protocol, which maps between host names and computer readable IP addresses. Because DNS wasn’t designed with security in mind, the service is highly targeted by malicious activity, making its logging an essential part of security monitoring. Some well-known threats that target DNS servers include DDoS attacks targeting DNS servers, DNS DDoS Amplification, DNS hijacking, and more.
 
-While some mechanisms were introduced to improve the overall security of this protocol, DNS servers are still a highly targeted service. Organizations can monitor DNS logs to better understand network activity, and to identify suspicious behavior or attacks targeting resources within the network. The **Windows DNS Events via AMA** connector provides this type of visibility. For example, use the connector to identify clients that try to resolve malicious domain names, view and monitor request loads on DNS servers, or view dynamic DNS registration failures.
+While some mechanisms were introduced to improve the overall security of the DNS protocol, DNS servers are still a highly targeted service. Organizations can monitor DNS logs to better understand network activity, and to identify suspicious behavior or attacks targeting resources within the network. The **Windows DNS Events via AMA** connector provides visibility into DNS network activity and suspicious behavior. For example, use the connector to identify clients that try to resolve malicious domain names, view and monitor request loads on DNS servers, or view dynamic DNS registration failures.
 
 > [!NOTE]
 > The Windows DNS Events via AMA connector only supports analytical log events.
@@ -34,7 +34,7 @@ Before you begin, verify that you have:
 - DNS server role installed with **DNS-Server** analytical event logs enabled.
   DNS analytical event logs aren't enabled by default. For more information, see [Enable analytical event logging](/windows-server/networking/dns/dns-logging-and-diagnostics#enable-analytical-event-logging).
 
-To collect events from any system that isn't an Azure virtual machine, ensure that [Azure Arc](/azure/azure-monitor/agents/azure-monitor-agent-manage) is installed. Install and enable Azure Arc before you enable the Azure Monitor Agent-based connector. This requirement includes:
+To collect events from any system that isn't an Azure virtual machine, ensure that [Azure Arc](/azure/azure-monitor/agents/azure-monitor-agent-manage) is installed. Install and enable Azure Arc before you enable the Azure Monitor Agent-based connector. The Azure Arc installation requirement applies to:
 
 - Windows servers installed on physical machines
 - Windows servers installed on on-premises virtual machines
@@ -205,7 +205,7 @@ This filter instructs the connector not to collect EventID 256 or EventID 257 or
 
 **Using the API**:
 
-The following JSON defines two filters in the DCR: the first excludes events with EventID 256, 257, or 260 that have an AAAA (IPv6) query type, and the second excludes EventID 230 with specific error result details.
+The following JSON shows the equivalent filter definitions for the API. The first filter excludes events with EventID 256, 257, or 260 that have an AAAA (IPv6) query type, and the second filter excludes EventID 230 with specific error result details.
 
 ```json
 "Filters": [
@@ -262,7 +262,7 @@ To define different values in a single field, use the **OR** operator.
 
 **Using the API**:
 
-The following JSON defines a filter that excludes DNS query events matching specific domains and their subdomains. Review these considerations for [wildcard filtering in DNS AMA domain filters](#use-wildcards). 
+The following JSON shows the equivalent domain exclusion filter for the DCR API payload, excluding DNS query events that match specific domains and their subdomains. Review these considerations for [wildcard filtering in DNS AMA domain filters](#use-wildcards). 
 
 ```json
 "Filters": [ 

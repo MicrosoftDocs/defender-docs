@@ -11,17 +11,17 @@ ms.collection:
 - m365-security
 - tier1
 ms.reviewer: pahuijbr
-ms.date: 06/17/2026
+ms.date: 07/03/2026
 appliesto: Microsoft Defender for Endpoint Plan 1, Microsoft Defender for Endpoint Plan 2, Microsoft Defender XDR
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Microsoft Defender for Endpoint streamlined connectivity URLs - commercial
 
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/microsoft-defender.md)]
 
-This article includes a list of the streamlined connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in commercial cloud environments.
+This article includes a list of the streamlined connectivity URLs required to onboard and maintain devices in Microsoft Defender for Endpoint in commercial cloud environments. Use these URLs to configure your network firewall or proxy settings so that devices can communicate with Defender for Endpoint cloud services. Before configuring these URLs, review the [streamlined connectivity prerequisites](configure-device-connectivity.md#prerequisites) to confirm device eligibility, component versions, and OS requirements.
 
 ## Prerequisites
 
@@ -29,10 +29,14 @@ For device eligibility, component versions, and OS requirements, see the [stream
 
 ### Notes
 
+Keep the following considerations in mind for devices that don't fully support the streamlined connectivity model:
+
 - Devices running Defender for Endpoint delivered via the Microsoft Monitoring Agent (MMA, also known as the Log Analytics Agent) continue to use the associated legacy method. Specifically, devices running on Windows 7 SP1, Windows 8.1, Windows Server 2008 R2, and Windows Server 2012 R2, and 2016 devices not upgraded to the modern unified solution. For the list of additional URLs, see [Windows 7, 8.1, 2008R2 (MMA)](#windows-7-81-2008r2-mma).
 - Devices running Windows version 1607, 1703, 1709, 1803 can onboard using the new onboarding package but still require a longer list of URLs. The [Windows 1607 to 1803](#windows-1607-to-1803) section lists the other URLs required.
 
 ## Common endpoints
+
+The following sections list the endpoint URLs commonly required across scenarios, including core functionality, updates, and certificate validation.
 
 ### URLs used for core functionality
 
@@ -92,10 +96,10 @@ The following table lists additional optional or scenario-specific URLs used by 
 <a name="ip-addresses"></a>
 ## Required IP addresses for streamlined connectivity
 
-The following Defender for Endpoint-dedicated, static IP ranges can be used as an alternative to URLs in certain scenarios without hostname resolution capability.
+> [!IMPORTANT]
+> Static IP ranges don't replace connectivity to other required services such as SmartScreen, Windows Update, and CRL. If those services aren't reachable directly, use a solution like ConfigMgr, WSUS, or file-share methods to apply updates or to support browsing security. See [Common endpoints](#common-endpoints) for more details, and ensure devices are running an operating system version and client component update level that supports streamlined connectivity.
 
-> [!NOTE]
-> Keep connectivity with other required services, like SmartScreen, Windows Update, CRL. Otherwise, use a solution like ConfigMgr, WSUS, or file-share methods to apply updates or to support browsing security. See [Common endpoints](#common-endpoints) for more details, and ensure devices are running an operating system version and client component update level that supports streamlined connectivity.
+The following Defender for Endpoint-dedicated, static IP ranges can be used as an alternative to URLs in certain scenarios without hostname resolution capability.
 
 If you're using Microsoft Defender for Cloud or Intune with the **auto from connector** option to onboard new devices, ensure to toggle on the **Apply streamlined connectivity settings to devices managed by Intune and Defender for Cloud** in advanced settings on security.microsoft.com. Onboarded servers don't automatically switch to the new destinations as defined in the Azure service tags. Ensure the servers can connect to the previous standard destinations, or onboard them again to reconfigure them to be able to use the new service tags or IP addresses.
 

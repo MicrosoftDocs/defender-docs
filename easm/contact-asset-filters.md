@@ -5,17 +5,19 @@ description: This article outlines the filter functionality available in Microso
 author: danielledennis
 ms.author: dandennis
 ms.service: defender-easm
-ms.date: 12/14/2022
+ms.date: 07/02/2026
 ms.topic: how-to
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
-# Contact asset filters
+# Use contact asset filters in Microsoft Defender EASM
 
-These filters specifically apply to contact assets. Use these filters when searching for a specific contact. 
+The following filters specifically apply to contact assets. Use the contact-asset filters when searching for a specific contact. 
 
 ## Freeform filters  
 
-The following filters require that the user manually enters the value with which they want to search.  This list is organized by the number of applicable operators for each filter, then alphabetically. Many of these values are case-sensitive.
+The following filters require that the user manually enters the value with which they want to search.  This list is organized by the number of applicable operators for each filter, then alphabetically. Many of the manually entered values are case-sensitive.
 
 |       Filter name  |     Description                                 |     Value format    |     Applicable operators                                                                                                                                                                                                                              |
 |--------------------|-------------------------------------------------|---------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

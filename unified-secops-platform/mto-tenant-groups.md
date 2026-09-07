@@ -9,12 +9,12 @@ ms.collection:
 - tier1
 - usx-security
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 appliesto:
 - Microsoft Defender XDR
 - Microsoft Sentinel in the Microsoft Defender portal
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Create and manage tenant groups in Microsoft Defender multitenant management
@@ -26,7 +26,9 @@ Tenant groups in Microsoft Defender multitenant management let you organize the 
 
 ## Prerequisites
 
-Before you create tenant groups, onboard your tenants to the Microsoft Defender multitenant portal. Only onboarded tenants appear when you create or edit a group. To learn more, see [Set up Microsoft Defender multitenant management](mto-requirements.md) and [Manage tenants with Microsoft Defender multitenant management](mto-tenants.md).
+Before you create tenant groups, onboard your tenants to the Microsoft Defender multitenant portal. Only onboarded tenants appear when you create or edit a group.
+
+For setup steps, see [Set up Microsoft Defender multitenant management](mto-requirements.md). To manage tenants, see [Manage tenants with Microsoft Defender multitenant management](mto-tenants.md).
 
 <a name="permissions"></a>
 ## Required permissions
@@ -41,7 +43,7 @@ To access tenant groups, you need the following permissions.
 **Product-specific RBAC (for example, Microsoft Defender for Endpoint or Microsoft Defender for Identity)**
 
 - [Security Administrator](/entra/identity/role-based-access-control/permissions-reference#security-administrator)
-- Custom RBAC roles that grant visibility across products. See [Custom roles for role-based access control](/defender-xdr/custom-roles).
+- Custom RBAC roles with access across products. For details, see [Custom roles for role-based access control](/defender-xdr/custom-roles).
 
 **[Unified role-based access control (URBAC)](/defender-xdr/manage-rbac)**
 
@@ -50,7 +52,7 @@ To access tenant groups, you need the following permissions.
 
 To learn more about URBAC permissions, see [Manage unified role-based access control (URBAC) for multitenant management](mto-urbac.md).
 
-Users only see tenants they can access through B2B or [granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction). A tenant group might contain tenants that a user can't access.
+Users only see tenants they have access to through B2B or [granular delegated admin privileges (GDAP)](/partner-center/gdap-introduction). A tenant group can include tenants that a user can't see.
 
 ## Access tenant groups
 
@@ -80,9 +82,9 @@ To switch the multitenant view to a different tenant group, follow these steps:
 
    :::image type="content" source="media/mto-tenant-groups/multitenant-view-settings.png" alt-text="Screenshot of the Multi-tenant view settings page in the Microsoft Defender portal, with the Open multitenant management icon highlighted in the top-right corner." lightbox="media/mto-tenant-groups/multitenant-view-settings.png":::
 
-After you switch groups, check the views in the multitenant portal. Confirm that the data comes only from tenants in the selected group.
+After you switch groups, check that the portal shows data only from tenants in that group.
 
-If someone adds or removes tenants from a group while you have that view open, the portal shows a notification. Refresh the view to load the updated data.
+If someone changes the group while you have it open, the portal shows a notice. Refresh to load the new data.
 
 :::image type="content" source="media/mto-tenant-groups/group-changes-detected.png" alt-text="Screenshot of the Group changes detected dialog with Refresh and reload and Cancel buttons.":::
 

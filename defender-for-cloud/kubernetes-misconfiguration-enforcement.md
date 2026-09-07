@@ -1,10 +1,11 @@
 ---
 title: Kubernetes misconfiguration enforcement
 description: Learn how to enable and configure Kubernetes misconfiguration enforcement in Microsoft Defender for Containers to audit or block misconfigured workloads at deployment time.
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a Kubernetes administrator, I want to enforce Kubernetes security best practices at deployment time so that I can prevent misconfigured workloads from running in my clusters.
 author: dlanger
 ms.author: dlanger
-ms.date: 07/01/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
 ---
@@ -46,7 +47,7 @@ Before you begin, make sure that:
   > [!NOTE]
   > Agentless threat protection is enabled by default when you enable Defender for Containers for AWS or GCP. If it was disabled, enable it before you configure Kubernetes misconfiguration enforcement.
 
-- **If you're using Helm for manual deployment:** Make sure [`helm`](https://helm.sh/docs/intro/install/) is installed and available in your command-line environment. Then, [manually enable misconfiguration enforcement with Helm](#manually-enable-misconfiguration-enforcement-with-helm).
+- **If you're using Helm for manual deployment:** Make sure Helm is installed ([Helm installation instructions](https://helm.sh/docs/intro/install/)) and available in your command-line environment. Then, [manually enable misconfiguration enforcement with Helm](#manually-enable-misconfiguration-enforcement-with-helm).
 
 - Kubernetes ValidatingAdmissionPolicy is enabled on the cluster. Kubernetes 1.30 and later versions enable this capability by default.
 
@@ -57,17 +58,19 @@ Before you begin, make sure that:
 
 ## Manually enable misconfiguration enforcement with Helm
 
+Before you start, make sure you completed the [prerequisites](#prerequisites), including enabling Defender for Containers and verifying your permissions.
+
 To manually enable misconfiguarion enforcement with Helm:
 
 1. Follow the [Helm installation guide for the Defender for Containers sensor](deploy-helm.md) for your environment.
 
-1. During Helm chart installation, use the latest supported chart tag from the following Helm repository:
+1. During Helm chart installation, use the latest supported chart tag. Use the following OCI artifact reference to select the Microsoft Defender for Containers policy bundle during gated deployment configuration:
 
    ```bash
    oci://mcr.microsoft.com/azuredefender-preview/microsoft-defender-for-containers
    ```
 
-1. Include the following value:
+1. Set the following Helm value to enable misconfiguration policies in the Defender admission controller so that policy enforcement is applied to your cluster:
 
    ```bash
    defender-admission-controller.enableMisconfigurationPolicies=true
@@ -77,7 +80,7 @@ After misconfiguration enforcement is enabled, the default audit rule is created
 
 ## Create a misconfiguration enforcement policy
 
-By default, Defender for Containers creates the **Default K8s misconfiguration rule** in **Audit** mode, scoped to all resources. While in **Audit** mode, the admission controller logs violations but allows deployments to continue. You can create custom policies scoped to specific subscriptions, clusters, or namespaces.
+By default, Defender for Containers creates the **Default K8s misconfiguration rule** in **Audit** mode, scoped to all resources. While in **Audit** mode, the admission controller (the Kubernetes component that evaluates resources against your policies before they're admitted into the cluster) logs violations but allows deployments to continue. You can create custom policies scoped to specific subscriptions, clusters, or namespaces.
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
 

@@ -10,8 +10,9 @@ ms.collection:
 - tier2
 - demo
 ms.topic: how-to
+ms.custom: msecd-doc-authoring-1015
 ms.subservice: asr
-ms.date: 06/16/2026
+ms.date: 08/12/2026
 ai-usage: ai-assisted
 #customer intent: As a security administrator, I want to use a ransomware test file to confirm that controlled folder access blocks ransomware from encrypting files in a protected folder so that I can verify CFA before I deploy it in my environment.
 appliesto:
@@ -53,7 +54,9 @@ For the full list of requirements, supported operating systems, and protection m
    - Downloads a ransomware test file (`ransomware_testfile_unsigned.exe`) to `c:\demo\CFATestFiles`, and a clean test file (`testfile_safe.txt`) to `c:\demo`.
    - Turns on CFA in **Enabled** (block) mode and adds `c:\demo` to the protected folders list (without affecting your other protected folders).
 
-   > [!NOTE]
+   > [!IMPORTANT]
+   > The setup script adds `c:\demo` to the Microsoft Defender Antivirus exclusion list. Don't run `ransomware_testfile_unsigned.exe` from `c:\demo` or one of its subfolders when you're testing for a CFA block or detection. Processes that run from an antivirus-excluded path might be treated as trusted and might not generate the expected CFA block or detection. Before you run the demonstration, copy `ransomware_testfile_unsigned.exe` to a folder that isn't excluded from Microsoft Defender Antivirus.
+   >
    > Because `WindowsDefender_CFA_SetupScript.ps1` is shared with the [block an untrusted app demonstration](defender-endpoint-demonstration-controlled-folder-access-block-app.md), it also downloads the CFA test tool (`CFAtool.exe`). That tool isn't used in this ransomware scenario.
 
 1. Before you run the script, allow it to run by setting the execution policy to `RemoteSigned` for the current session. Run the following command in an elevated PowerShell session:
@@ -98,7 +101,8 @@ Any other status, such as `2 (Audit)`, only logs activity and doesn't block, so 
 
 If you ran the setup script, the ransomware test file is already downloaded to `c:\demo\CFATestFiles`, and CFA already protects `c:\demo`:
 
-1. In File Explorer, go to `c:\demo\CFATestFiles`, and then run the ransomware test file (`ransomware_testfile_unsigned.exe`). It isn't actual ransomware; it only tries to encrypt the files in `c:\demo`.
+1. In File Explorer, go to `c:\demo\CFATestFiles`, and copy `ransomware_testfile_unsigned.exe` to a folder that isn't excluded from Microsoft Defender Antivirus. Don't run the test file from `c:\demo` or one of its subfolders.
+1. Run `ransomware_testfile_unsigned.exe` from the folder that isn't excluded from Microsoft Defender Antivirus. It isn't actual ransomware; it only tries to encrypt the files in `c:\demo`.
 
 If you didn't run the setup script, the following manual steps are required:
 
@@ -122,7 +126,9 @@ If you didn't run the setup script, the following manual steps are required:
 
 1. Download the ransomware test file (`ransomware_testfile_unsigned.exe`) from <https://demo.wd.microsoft.com/Content/ransomware_testfile_unsigned.exe> and save it to `c:\demo`.
 
-1. Run the ransomware test file. It isn't actual ransomware; it only tries to encrypt the files in `c:\demo`.
+1. Copy `ransomware_testfile_unsigned.exe` to a folder that isn't excluded from Microsoft Defender Antivirus. Don't run the test file from `c:\demo` or one of its subfolders.
+
+1. Run `ransomware_testfile_unsigned.exe` from the folder that isn't excluded from Microsoft Defender Antivirus. It isn't actual ransomware; it only tries to encrypt the files in `c:\demo`.
 
 In either case, about five seconds after you run the ransomware test file, a notification appears that CFA blocked the encryption attempt. To view the resulting block and audit events, see [Monitor controlled folder access (CFA) activity](controlled-folder-access-monitor.md).
 
@@ -134,7 +140,9 @@ In either case, about five seconds after you run the ransomware test file, a not
    Set-MpPreference -EnableControlledFolderAccess Disabled
    ```
 
-1. Run the ransomware test file (`ransomware_testfile_unsigned.exe`).
+1. Run the original ransomware test file from the antivirus-excluded folder:
+   - If you ran the setup script, run `c:\demo\CFATestFiles\ransomware_testfile_unsigned.exe`.
+   - If you used the manual steps, run `c:\demo\ransomware_testfile_unsigned.exe`.
 
 With CFA turned off, the test file encrypts the files in `c:\demo` and you get a warning message. Run the test file once more to decrypt the files.
 
@@ -185,6 +193,8 @@ Or, if you used the minimal manual steps, do the following:
    ```
 
 Whichever method you used, the cleanup script doesn't remove the `c:\demo` Microsoft Defender Antivirus exclusion that the setup script (or the manual steps) added. To fully revert the changes, do the following steps:
+
+1. Delete any copies of `ransomware_testfile_unsigned.exe` that you made outside `c:\demo`.
 
 1. Delete the `c:\demo` folder and the test files it contains. Do this step _before_ you remove the exclusion in the next step. Otherwise, when real-time protection resumes for the folder, Microsoft Defender Antivirus detects the leftover test files (such as the ransomware test file and the decryption tool) and quarantines them. Run the following command in an elevated PowerShell session:
 

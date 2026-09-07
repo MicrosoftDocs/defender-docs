@@ -1,14 +1,16 @@
 ---
 title: Identity Security dashboard in Microsoft Defender for Identity (Preview)
 description: Learn how to work with the Identity Security dashboard in Microsoft Defender for Identity to monitor identity-related security risks.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms.reviewer: maelgami 
-ms.custom: sfi-ga-blocked, msecd-doc-authoring-1014
+ms.custom: sfi-ga-blocked, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
 # Identity Security dashboard overview (Preview)
+
+## Microsoft Defender for Identity dashboard
 
 The Microsoft Defender for Identity **Dashboard** page shows data to help you better analyze your security posture, understand how well you're protected, identify vulnerabilities, and perform recommended actions.
 
@@ -57,7 +59,7 @@ The following table describes the key insights shown on the dashboard:
 
 | Name | Description |
 | ----- | ---- |
-| **Users identified in a risky lateral movement path** | Indicates any sensitive accounts with risky lateral movement paths, which are windows of opportunity for attackers and can expose risks.<br><br>We recommend that you take action on any sensitive accounts found with risky lateral movement paths to minimize your risk. <br><br>For more information, see [Understand and investigate Lateral Movement Paths (LMPs) with Microsoft Defender for Identity](understand-lateral-movement-paths.md). |
+| **Users identified in a risky lateral movement path** | Indicates any sensitive accounts with risky lateral movement paths, which are windows of opportunity for attackers and can expose risks.<br><br>We recommend that you take action on any sensitive accounts found with risky lateral movement paths to minimize your risk. <br><br>For more information, see [Understand and investigate lateral movement paths with Microsoft Defender for Identity](understand-lateral-movement-paths.md). |
 | **Dormant Active Directory users** | Lists accounts that have been left unused for at least 180 days. <br><br>Inactive accounts that are a part of sensitive groups provide an easy path into your organization. We recommend removing those users from sensitive groups. |
 
 <a name="dashboard-widgets"></a>

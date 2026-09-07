@@ -2,7 +2,7 @@
 title: Enable threat protection for AI services
 description: Learn how to enable threat protection for AI services on your Azure subscription for Microsoft Defender for Cloud.
 ms.topic: install-set-up-deploy
-ms.date: 04/01/2026
+ms.date: 07/29/2026
 ai-usage: ai-assisted
 ---
 
@@ -40,7 +40,7 @@ With the AI services threat protection plan enabled, you can control whether the
 
 - **[Suspicious prompt evidence](#enable-suspicious-prompt-evidence)**: receive alerts for suspicious portions of user prompts and model responses to help analyze AI-related security alerts, with sensitive data automatically redacted. These prompt snippets appear in the Defender portal as part of each alert’s evidence.
 
-- **[Data security for AI interactions](#enable-data-security-for-microsoft-foundry-with-microsoft-purview)**: allows Microsoft Purview to access and analyze prompts, responses, and related metadata to provide data security and compliance capabilities such as SIT classification, auditing, insider risk, communication compliance, and eDiscovery. It is a paid Purview feature and is not included in the Defender for AI Services plan.
+- **[Data security for AI interactions](#enable-data-security-for-microsoft-with-microsoft-purview)**: allows Microsoft Purview to access and analyze prompts, responses, and related metadata to provide data security and compliance capabilities such as SIT classification, auditing, insider risk, communication compliance, and eDiscovery. It is a paid Purview feature and is not included in the Defender for AI Services plan.
 
 - **[AI model security](#enable-ai-model-security)**: AI model scanning gives you a clear, unified view of all your models registered in Azure Machine Learning Registries. It helps teams stay ahead of security risks by automatically checking for issues like serialization vulnerabilities, malware, and missing scans. By surfacing misconfigurations and integrating seamlessly with Defender for Cloud and developer workflows, it ensures your AI models are continuously protected and ready for production.
 
@@ -70,7 +70,10 @@ If User prompt evidence is disabled, Microsoft Defender for Cloud continues anal
 
 1. Select **Continue**.
 
-### Enable Data Security for Microsoft Foundry with Microsoft Purview
+### Enable Data Security for Microsoft with Microsoft Purview
+
+> [!IMPORTANT]
+> The current Microsoft Purview configuration method for Microsoft Foundry is being deprecated. A new configuration method is now available. For more information, see [Manage compliance and security in Microsoft Foundry](/azure/foundry/control-plane/how-to-manage-compliance-security).
 
 > [!NOTE]
 > This feature requires a Microsoft Purview license, which isn't included with Microsoft Defender for Cloud's Defender for AI Services plan.

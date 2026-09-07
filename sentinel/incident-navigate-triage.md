@@ -5,11 +5,11 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: mmagenheim
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 appliesto:
     - Microsoft Sentinel in the Azure portal
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #Customer intent: As a security analyst, I want to learn the basics of navigating, triaging, and managing Microsoft Sentinel incidents in the Azure portal so that I can start investigating and responding to security incidents.
 ---
 
@@ -19,6 +19,8 @@ This article describes how to navigate and run basic triage on your incidents in
 
 ## Prerequisites
 
+Before you investigate incidents, make sure you have the following roles and permissions.
+
 - The [**Microsoft Sentinel Responder**](/azure/role-based-access-control/built-in-roles#microsoft-sentinel-responder) role assignment is required to investigate incidents.
 
     Learn more about [roles in Microsoft Sentinel](roles.md).
@@ -26,6 +28,8 @@ This article describes how to navigate and run basic triage on your incidents in
 - If you have a guest user that needs to assign incidents, the user must be assigned the [Directory Reader](/azure/active-directory/roles/permissions-reference#directory-readers) role in your Microsoft Entra tenant. Regular (nonguest) users have this role assigned by default.
 
 ## Navigate and triage incidents
+
+Use the following steps to navigate to and triage incidents in Microsoft Sentinel.
 
 1. From the Microsoft Sentinel navigation menu, under **Threat management**, select **Incidents**.
 

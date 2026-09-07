@@ -1,10 +1,10 @@
 ---
 title: View your OAuth app details with app governance | Microsoft Defender for Cloud Apps
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 description: Learn how to view app details with app governance in Microsoft Defender XDR with Microsoft Defender for Cloud Apps.
 ms.reviewer: anandd512
-ms.custom: sfi-image-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -16,7 +16,7 @@ For example, view a list of apps in your tenant, together with relevant app meta
 
 ## Prerequisites
 
-Your sign-in account must have one of [these roles](app-governance-get-started.md#roles) to view app governance data.
+Your sign-in account must have one of the [required app governance roles](app-governance-get-started.md#roles) to view app governance data.
 
 ## View the apps in your tenant
 
@@ -57,24 +57,27 @@ Select a specific app in the grid to view more details on an app details pane. S
 
 Company administrators can use the **Disable app** and **Enable app** controls in the details pane to enable or disable an app.
 
-### Summary tab
+<a name="summary-tab"></a>
+### Review app details on the Summary tab
 
-Shows more data about the app, such as the date first consented and the App ID. To see the properties of the app as registered in Microsoft Entra ID, select **View in Microsoft Entra ID**.
+The **Summary** tab shows more data about the app, such as the date first consented and the App ID. To see the properties of the app as registered in Microsoft Entra ID, select **View in Microsoft Entra ID**.
 
 :::image type="content" source="media/app-governance-visibility-insights-view-apps/app-governance-app-summary.png" alt-text="Screenshot of an app details pane with the Summary tab showing." lightbox="media/app-governance-visibility-insights-view-apps/app-governance-app-summary.png":::
 
-### Risk score tab
+<a name="risk-score-tab"></a>
+### Review risk details on the Risk score tab
 
-Shows a 1-100 risk score for the app, where higher values mean greater risk. The risk score helps you quickly prioritize which apps need attention first. The tab shows the risk summary, including the factors behind the app's risk score.
+The **Risk score** tab shows a 1-100 risk score for the app, where higher values mean greater risk. The risk score helps you quickly prioritize which apps need attention first. The **Risk score** tab also shows the risk summary, including the factors behind the app's risk score.
 
 > [!NOTE]
 > The Risk score tab is available only for OAuth apps registered in Microsoft Entra ID.
 
 :::image type="content" source="media/app-governance-visibility-insights-view-apps/app-governance-app-risk-score.png" alt-text="Screenshot of an app details pane with the Risk score tab showing." lightbox="media/app-governance-visibility-insights-view-apps/app-governance-app-risk-score.png":::
 
-### Graph tab
+<a name="graph-tab"></a>
+### Review app connections on the Graph tab
 
-Shows a visual identity graph that illustrates how the app connects to other entities in your organization, like users, resources, SaaS workloads, and critical assets. Select any node or edge in the graph to open a details pane with deeper context. When applicable, the pane also shows attack paths involving the selected nodes or edges. To explore further, select **View in map** below the graph to open the full Attack Map experience in a new window.
+The **Graph** tab shows a visual identity graph that illustrates how the app connects to other entities in your organization, like users, resources, SaaS workloads, and critical assets. Select any node or edge in the graph to open a details pane with deeper context. When applicable, the graph details pane also shows attack paths involving the selected nodes or edges. To explore further, select **View in map** below the graph to open the full Attack Map experience in a new window.
 
 The graph can also surface the AI agent behind an app. For OAuth apps tied to Microsoft Copilot Studio agents, expand the OAuth app node to view the connected agent.
 
@@ -83,23 +86,26 @@ The graph can also surface the AI agent behind an app. For OAuth apps tied to Mi
 
 :::image type="content" source="media/app-governance-visibility-insights-view-apps/app-governance-app-graph.png" alt-text="Screenshot of an app details pane with the Graph tab showing." lightbox="media/app-governance-visibility-insights-view-apps/app-governance-app-graph.png":::
 
-### Data usage tab
+<a name="data-usage-tab"></a>
+### Review app activity on the Data usage tab
 
-Shows a graph of data usage over time, for Exchange, SharePoint, OneDrive, and Teams resources via Microsoft Graph and EWS APIs. The **Data usage** tab supports filtering usage insights by priority accounts only.
+The **Data usage** tab shows a graph of data usage over time, for Exchange, SharePoint, OneDrive, and Teams resources via Microsoft Graph and Exchange Web Services (EWS) APIs. The **Data usage** tab supports filtering usage insights by priority accounts only.
 
 :::image type="content" source="media/app-governance-visibility-insights-view-apps/app-governance-app-data-usage.png" alt-text="Screenshot of the Data usage tab." lightbox="media/app-governance-visibility-insights-view-apps/app-governance-app-data-usage.png":::
 
-### Users tab
+<a name="users-tab"></a>
+### Review user access on the Users tab
 
-Shows a list of users who are using the app, whether they're a priority account, and the amount of data downloaded and uploaded.
+The **Users** tab shows a list of users who are using the app, whether they're a priority account, and the amount of data downloaded and uploaded.
 
-If an app is *admin consented*, the **Total consented users** are all users in the tenant.
+If an app has been granted admin consent (approved for the entire organization by an administrator), the **Total consented users** are all users in the tenant.
 
 :::image type="content" source="media/app-governance-visibility-insights-view-apps/app-governance-app-users.png" alt-text="Screenshot of an app details pane with the Users tab showing." lightbox="media/app-governance-visibility-insights-view-apps/app-governance-app-users.png":::
 
-### Permissions tab
+<a name="permissions-tab"></a>
+### Review app permissions on the Permissions tab
 
-Shows a summary and list of the Graph API and legacy permissions granted to the app, consent type, privilege level, and whether they're in use. This also shows the Microsoft Entra roles granted to the app, including its type (built-in or custom), privilege level, and whether it grants tenant-wide access. 
+The **Permissions** tab shows a summary and list of the Graph API and legacy permissions granted to the app, consent type, privilege level, and whether they're in use. This also shows the Microsoft Entra roles granted to the app, including its type (built-in or custom), privilege level, and whether it grants tenant-wide access. 
 Select a role to view its granular permissions, descriptions, and privilege levels.
 
 > [!NOTE]
@@ -109,9 +115,10 @@ Select a role to view its granular permissions, descriptions, and privilege leve
 
 For more information, see the [Microsoft Graph permissions reference](/graph/permissions-reference).
 
-### Sensitivity labels tab
+<a name="sensitivity-labels-tab"></a>
+### Review sensitivity labels on the Sensitivity labels tab
 
-Shows how frequently items with certain sensitivity labels were accessed by the app on Microsoft 365.
+The **Sensitivity labels** tab shows how frequently items with certain sensitivity labels were accessed by the app on Microsoft 365.
 
 :::image type="content" source="media/app-governance-visibility-insights-view-apps/app-governance-app-sensitive-labels-details.png" alt-text="Screenshot of the Sensitivity labels tab." lightbox="media/app-governance-visibility-insights-view-apps/app-governance-app-sensitive-labels-details.png":::
 

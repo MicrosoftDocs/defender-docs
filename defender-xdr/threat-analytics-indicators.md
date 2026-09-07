@@ -15,7 +15,7 @@ ms.custom:
 - msecd-doc-authoring-1014
 - cx-ti
 - cx-ta
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
@@ -36,31 +36,32 @@ Because IOCs are valuable information in the context of prevalent threats and th
 ## View IOCs in threat analytics
 To access the indicators section, go to the **Threat analytics** page, open the report about the tracked threat, and select the **Indicators** tab.
 
-If you're a verified customer, you can immediately see the list of IOCs displayed in this section.
+If you're a verified customer, you can immediately see the list of IOCs displayed in the **Indicators** tab.
 
 :::image type="content" source="/defender-xdr/media/ta-indicators/indicators-full.png" alt-text="Screenshot of the Indicators tab in a threat analytics report." lightbox="/defender-xdr/media/ta-indicators/indicators-full.png":::
 
-Otherwise, the **Indicators** tab displays a message that access to indicators is restricted. 
+If you're not a verified customer, the **Indicators** tab displays a message that access to indicators is restricted. 
 
 :::image type="content" source="media/threat-analytics-indicators/indicators-restricted.png" alt-text="Screenshot of a restricted Indicators tab in a threat analytics report." lightbox="media/threat-analytics-indicators/indicators-restricted.png":::
 
 ## Unlock access to indicators
-To unlock the indicators section, follow these steps:
+To unlock the **Indicators** tab, complete these steps:
 
-1. On the **Indicators** page, select **Complete Verification**
-1. On the verification page that opens, provide the required information and supporting documents, if applicable
-1. Select **Submit verification request**
+1. On the **Indicators** page, select **Complete Verification**.
+1. Provide the required information and any supporting documents.
+1. Select **Submit verification request**.
 
-The verification process might take at least an hour. After the verification process completes, refresh the **Indicators** tab. If your tenant is validated successfully, you see the list of IOCs displayed in the **Indicators** tab.
+Verification can take an hour or more. After it completes, refresh the **Indicators** tab. If your tenant is validated, the list of IOCs appears.
 
 >[!NOTE]
 >In some cases, we might require additional information during the verification process. We communicate these requirements through email.
 
-If you still don't have access to the **Indicators** section after going through the verification process, contact the email address displayed on the page.
+If you still don't have access to the **Indicators** section after going through the verification process, contact the email address displayed on the **Indicators** page.
 
 :::image type="content" source="media/threat-analytics-indicators/indicators-contact.png" alt-text="Screenshot of a restricted Indicators tab in a threat analytics report showing the email address to contact." lightbox="media/threat-analytics-indicators/indicators-contact.png":::
 
-## See also
+<a name="see-also"></a>
+## Related content
 
 - [Threat analytics overview](threat-analytics.md)
 - [Understand the analyst report section](threat-analytics-analyst-reports.md)

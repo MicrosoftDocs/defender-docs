@@ -126,7 +126,7 @@ For more information on other proxy configuration settings, see [Configure devic
 
 The Defender for Endpoint agent depends on Microsoft Defender Antivirus to scan files and provide information about them.
 
-Configure Security intelligence updates on the Defender for Endpoint devices whether Microsoft Defender Antivirus is the active anti-malware solution or not. For more information, see [Manage Microsoft Defender Antivirus updates and apply baselines](/windows/security/threat-protection/microsoft-defender-antivirus/manage-updates-baselines-microsoft-defender-antivirus).
+Configure Security intelligence updates on the Defender for Endpoint devices whether Microsoft Defender Antivirus is the active anti-malware solution or not. For more information, see [Manage Microsoft Defender Antivirus updates and apply baselines](microsoft-defender-antivirus-updates.md).
 
 When Microsoft Defender Antivirus isn't the active anti-malware in your organization and you use the Defender for Endpoint service, Microsoft Defender Antivirus goes into passive mode.
 
@@ -148,6 +148,5 @@ If you're running a non-Microsoft anti-malware client and use Mobile Device Mana
 - [Set up Microsoft Defender for Endpoint deployment](production-deployment.md)
 
 - [Onboard devices](onboard-configure.md)
-
 
 

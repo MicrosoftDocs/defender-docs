@@ -9,9 +9,11 @@ ms.collection:
   - m365-security
   - tier2
 description: Admins can learn about the Training modules that are available to use in Training campaigns in Attack simulation training in Microsoft Defender for Office 365 Plan 2.
-ms.date: 06/30/2025
+ms.date: 07/03/2026
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 2</a>
+ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Training modules for Training campaigns in Attack simulation training
@@ -74,7 +76,7 @@ The **Training modules** page shows the following information for each module. Y
 
 To find a Training module in the list, type the name of the module in the :::image type="icon" source="media/defender-portal-icon-search.png" border="false"::: **Search** box, and then press the ENTER key.
 
-Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to filter the information on the page. The following filters are available in the flyout that opens:
+Select :::image type="icon" source="media/defender-portal-icon-filter.png" border="false"::: **Filter** to filter the information on the page. After you select **Filter**, the following filters are available in the flyout:
 
 - **Source**
 - **Language**

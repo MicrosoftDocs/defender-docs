@@ -1,9 +1,10 @@
 ---
 title: Review the software inventory in Defender for Cloud
 description: Learn how to review the software inventory in Microsoft Defender for Cloud
-ms.date: 06/02/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 # Review the software inventory
 
@@ -14,7 +15,7 @@ The software inventory feature, provided by Defender Vulnerability Management, s
 - Defender for Cloud shows the integrated software inventory on the **Inventory** page, summarizing software running on resources connected to Defender for Cloud.
 - To query and retrieve inventory data at scale, use [Azure Resource Graph (ARG)](/azure/governance/resource-graph/index). For deep custom insights, use [Kusto Query Language (KQL)](/azure/data-explorer/kusto/query/).
 
-This article explains how to review the software inventory.
+This article explains how to review the software inventory. Before you begin, review the [prerequisites](#prerequisites) to ensure the required Defender plans are enabled.
 
 ## Prerequisites
 
@@ -26,7 +27,8 @@ To see the software inventory, enable one of these paid plans.
 > [!NOTE]
 > If software that isn't supported appears in the inventory, only limited data is available.
 
-## Review the software inventory
+<a name="review-the-software-inventory"></a>
+## Browse the software inventory
 
 1. In Defender for Cloud, select **Inventory**.
 1. If prerequisites are in place, the **Installed applications** filter shows you a list of software deployed in the environment.
@@ -95,6 +97,8 @@ securityresources
 ```
 
 ## Export the inventory
+
+You can export filtered inventory data to a CSV file or save queries in Resource Graph Explorer for later use.
 
 1. To save filtered inventory in CSV form, select **Download CSV report**.
 1. To save a query in Resource Graph Explorer, select **Open a query**. When you're ready to save a query, select **Save as** and in **Save query**, specify a query name and description, and whether the query is private or shared.

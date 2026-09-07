@@ -47,7 +47,7 @@ Other services supported in the Microsoft Defender portal, but not licensed with
 | [**Microsoft Security Exposure Management**](/security-exposure-management/microsoft-security-exposure-management) | Provides a unified view of security posture across company assets and workloads, enriching asset information with security context. |
 | [**Microsoft Security Copilot**](/copilot/security/microsoft-security-copilot) | Provides AI-driven insights and recommendations to enhance your security operations. |
 | [**Microsoft Defender for Cloud**](/azure/defender-for-cloud/) | Protects multi-cloud and hybrid environments with advanced threat detection and response. |
-| [**Microsoft Defender Threat Intelligence**](/defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti) | Streamlines threat intelligence workflows by aggregating and enriching critical data sources to correlate indicators of compromise (IOCs) with related articles, actor profiles, and vulnerabilities. |
+| [**Microsoft Threat Intelligence**](/defender-xdr/defender-threat-intelligence) | Streamlines threat intelligence workflows by aggregating and enriching critical data sources to correlate indicators of compromise (IOCs) with related articles, actor profiles, and vulnerabilities. |
 | [**Microsoft Entra ID Protection**](/entra/id-protection/overview-identity-protection) | Evaluates risk data from sign-in attempts to evaluate the risk of each sign-in to your environment. |
 | **[Microsoft Purview Insider Risk Management](/purview/insider-risk-management)** | Correlates various signals to identify potential malicious or inadvertent insider risks, such as IP theft, data leakage and security violations. |
 
@@ -71,7 +71,7 @@ Before you deploy Microsoft Defender services for unified security operations, r
 | Microsoft Security Exposure Management                   | [Prerequisites and support](/security-exposure-management/prerequisites)  |
 | Microsoft Security Copilot                               | [Minimum requirements](/copilot/security/get-started-security-copilot#minimum-requirements)  |
 | Microsoft Defender for Cloud                             | [Start planning multicloud protection](/azure/defender-for-cloud/plan-multicloud-security-get-started) and other articles in the same section. |
-| Microsoft Defender Threat Intelligence                   | [Prerequisites for Defender Threat Intelligence](/defender/threat-intelligence/learn-how-to-access-microsoft-defender-threat-intelligence-and-make-customizations-in-your-portal#prerequisites) |
+| Microsoft Threat Intelligence                            | [Get started with Microsoft Threat Intelligence](/defender-xdr/defender-threat-intelligence#get-started) |
 | Microsoft Entra ID Protection                            | [Prerequisites for Microsoft Entra ID Protection](/entra/id-protection/how-to-deploy-identity-protection#prerequisites) |
 | Microsoft Purview Insider Risk Management | [Get started with insider risk management](/purview/insider-risk-management-configure?tabs=purview-portal) |
 

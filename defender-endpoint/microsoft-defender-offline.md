@@ -3,10 +3,10 @@ title: Microsoft Defender Offline scan in Windows
 description: You can use Microsoft Defender Offline Scan straight from the Microsoft Defender Antivirus app. You can also manage how it's deployed in your network.
 ms.service: defender-endpoint
 ms.localizationpriority: medium
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 author: limwainstein
 ms.author: lwainstein
-ms.custom: nextgen, msecd-doc-authoring-1014
+ms.custom: nextgen, msecd-doc-authoring-1016
 ms.reviewer: yongrhee
 ms.subservice: ngp
 ms.topic: how-to
@@ -32,7 +32,7 @@ ai-usage: ai-assisted
 |**Firmware/ Rootkit**|  Operating system <br/> Driver <br/> Memory (Heap) <br/> Application <br/> Identity <br/> Cloud|
 
 > [!NOTE]
-> The protection for this feature focuses on the Firmware/Rootkit.
+> The protection for Microsoft Defender Offline Scan focuses on firmware and rootkits.
 
 Microsoft Defender Offline is an anti-malware scanning tool that lets you boot and run a scan from a trusted environment. The scan runs from outside the normal Windows kernel so it can target malware that attempts to bypass the Windows shell, such as viruses and rootkits that infect or overwrite the master boot record (MBR).
 
@@ -66,12 +66,12 @@ To receive Microsoft Defender Offline Scan updates:
 
 - Update Microsoft Defender Antivirus how you normally deploy updates to endpoints. Use a supported version of the: 
 
-  - [Platform Update](https://www.microsoft.com/security/portal/definitions/adl.aspx)
+  - [Platform Update](https://www.microsoft.com/wdsi/defenderupdates)
 
   - [Engine Update](microsoft-defender-antivirus-updates.md)
 
   - Security Intelligence Updates
-    - You can manually download and install the latest protection updates from the [Microsoft Malware Protection Center](https://www.microsoft.com/security/portal/definitions/adl.aspx) 
+    - You can manually download and install the latest protection updates from the [Microsoft Malware Protection Center](https://www.microsoft.com/wdsi/defenderupdates)
     - See the [Manage Microsoft Defender Antivirus Security intelligence updates](manage-protection-updates-microsoft-defender-antivirus.md) article for more information.
 
 - Users must be signed in with local administrator privileges.
@@ -79,7 +79,7 @@ To receive Microsoft Defender Offline Scan updates:
 - Windows Recovery Environment (WinRE) needs to be enabled. 
 
 > [!NOTE]
-> If WinRE is disabled, the Windows Defender Offline scan doesn't run and no error messages are displayed. Nothing happens even if the machine is restarted manually. To fix this, you only have to enable WinRE. 
+> If WinRE is disabled, the Windows Defender Offline scan doesn't run and no error messages are displayed. Nothing happens even if the machine is restarted manually. To resolve this issue, enable WinRE. 
 >
 > - To check the WinRE status, you can execute this command-line: `reagentc /info`.
 > - If the status is Disabled, you can enable it by executing this command-line: `reagentc /enable`.
@@ -94,7 +94,7 @@ If Microsoft Defender Antivirus determines that you need to run Microsoft Defend
 
    The user is also notified within the Microsoft Defender Antivirus client. If you're using Intune to manage devices, you can see the notification in Intune.
 
-- You can manually force an offline scan that is built-in Windows 10, version 1607 or newer, and Windows 11. Or, for older operating systems such as Windows 7 SP1 and Windows 8.1, you can create bootable media to run an offline scan (see [Windows 7 Service Pack 1 and Windows 8.1](#in-windows-7-service-pack-1-and-windows-81) later in this article).
+- You can manually force an offline scan that is built-in Windows 10, version 1607 or newer, and Windows 11. Or, for older operating systems such as Windows 7 SP1 and Windows 8.1, you can create bootable media to run an offline scan (see the [In Windows 7 Service Pack 1 and Windows 8.1](#in-windows-7-service-pack-1-and-windows-81) section).
 
 In Configuration Manager, you can identify the status of endpoints by navigating to **Monitoring > Overview > Security > Endpoint Protection Status > System Center Endpoint Protection Status**.
 
@@ -158,7 +158,7 @@ Starting with Windows 10, version 1607 or newer, and Windows 11, Microsoft Defen
 
 ### Use PowerShell cmdlets to run an offline scan
 
-Use the following cmdlets:
+Run the following cmdlet to initiate a Microsoft Defender Offline scan, which reboots the device into an isolated environment to detect persistent malware:
 
 ```PowerShell
 Start-MpWDOScan
@@ -170,7 +170,10 @@ See [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](u
 
 Use the [**MSFT_MpWDOScan**](/previous-versions/windows/desktop/legacy/dn455323(v=vs.85)) class to run an offline scan.
 
-The following WMI script snippet will immediately run a Microsoft Defender Offline scan, which will cause the endpoint to restart, run the offline scan, and then restart and boot into Windows.
+> [!IMPORTANT]
+> Running this command immediately restarts the endpoint to begin the offline scan. Save all files and close applications before continuing.
+
+The following WMI command triggers a Microsoft Defender Offline scan, which restarts the endpoint, performs the offline scan, and then boots back into Windows.
 
 ```console
 wmic /namespace:\\root\Microsoft\Windows\Defender path MSFT_MpWDOScan call Start
@@ -180,11 +183,13 @@ For more information about Windows Defender WMI APIs, see [Windows Defender WMIv
 
 #### In Windows 7 Service Pack 1 and Windows 8.1:
 
+To run Microsoft Defender Offline on Windows 7 SP1 or Windows 8.1, create bootable media and then use it to scan the endpoint:
+
 1. Download Windows Defender Offline and install it to a CD, DVD, or USB flash drive using the following links:
      - [Download the 64-bit version (msstool64.exe)](https://go.microsoft.com/fwlink/?LinkID=234124)
      - [Download the 32-bit version (msstool32.exe)](https://go.microsoft.com/fwlink/?LinkID=234123)
 
-    If you're not sure which version to download, see [Is my PC running the 32-bit or 64-bit version of Windows?](https://support.microsoft.com/windows/32-bit-and-64-bit-windows-frequently-asked-questions-c6ca9541-8dce-4d48-0415-94a3faa2e13d).
+    If you're not sure which version to download, see [Is my PC running the 32-bit or 64-bit version of Windows?](https://support.microsoft.com/Windows/Experience/Compatibility/32-bit-and-64-bit-windows-frequently-asked-questions).
 
 1. To get started, find a blank CD, DVD, or USB flash drive with at least 250 MB of free space, and then run the tool. You are guided through the steps to create the removable media.
 
@@ -253,6 +258,3 @@ Windows Defender Antivirus downloaded and configured Windows Defender Offline to
 > - [Microsoft Defender for Endpoint on Linux](microsoft-defender-endpoint-linux.md)
 > - [Configure Defender for Endpoint on Android features](android-configure.md)
 > - [Configure Microsoft Defender for Endpoint on iOS features](ios-configure-features.md)
-
-
-

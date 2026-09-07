@@ -1,16 +1,16 @@
 ---
 title: Build Azure Logic Apps with Microsoft Sentinel MCP tools
 titleSuffix: Microsoft Security  
-description: Learn how to set up an Azure Logic App using Microsoft Sentinel's collection of Model Context Protocol (MCP) tools  
+description: Learn how to use the Microsoft Sentinel entity analyzer MCP tool in Azure Logic Apps to enrich entities and automate verdicts.
 ms.author: pauloliveria
 author: poliveria
 ms.reviewer: macasgra
 ms.topic: how-to
-ms.date: 06/12/2026
+ms.date: 07/01/2026
 ms.service: microsoft-sentinel
 ms.subservice: sentinel-platform
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #customer intent: As a security analyst, I want to build Azure Logic Apps using Microsoft Sentinel MCP tools.
 ---
@@ -104,7 +104,7 @@ The following screenshot is an example output you receive from the action in the
 For more information about the specific input and output in the Connector, see [Microsoft Sentinel MCP](/connectors/sentinelmcp/).
 
 ## Authenticate to the connector
-Every logic app connector requires an authentication connection. This new action type supports Microsoft Entra ID, service principals, and managed identities. As is the case with the MCP server, the logic app's identity requires **Security reader** to operate.
+Every logic app connector requires an authentication connection. This action type supports Microsoft Entra ID, service principals, and managed identities. The logic app's identity requires the **Security reader** role to operate.
 
 ## Additional information
 

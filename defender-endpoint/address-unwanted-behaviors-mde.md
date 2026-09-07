@@ -3,14 +3,14 @@ title: Address unwanted behaviors in Microsoft Defender for Endpoint
 description: Use exclusions, indicators, and other techniques to address false positives, performance issues, and app incompatibilities in Microsoft Defender for Endpoint.
 author: limwainstein
 ms.author: lwainstein
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
 ms.reviewer: joshbregman
 ms.custom:
-- msecd-doc-authoring-1014
+- msecd-doc-authoring-1016
 - partner-contribution
 - msecd-doc-authoring-1012
 ms.collection:
@@ -44,12 +44,12 @@ At a high level, the process for addressing an unwanted behavior in Defender for
    | The [Microsoft Defender portal](https://security.microsoft.com) | To help identify what's happening, take one or more of the following actions: <br/>- [Investigate alerts](alerts-queue.md) <br/>- [Use advanced hunting](/defender-xdr/advanced-hunting-overview) <br/>- [View reports](threat-protection-reports.md) |
    | On the device | To identify the issue, take one or more of the following steps: <br/>- [Use performance analyzer tools](tune-performance-defender-antivirus.md) <br/>- [Review event logs and error codes](troubleshoot-microsoft-defender-antivirus.yml) <br/>- [Check your protection history](microsoft-defender-security-center-antivirus.md) |
 
-2. Depending on your findings from the previous step, you might take one or more of the following actions:
+2. Depending on your findings about which capability is causing the unwanted behavior, you might take one or more of the following actions:
 
    - [Suppress alerts in the Microsoft Defender portal](manage-suppression-rules.md)
    - [Define custom remediation actions](configure-remediation-microsoft-defender-antivirus.md)
    - [Submit a file to Microsoft for analysis](admin-submissions-mde.md)
-   - [Define exclusions for Microsoft Defender Antivirus](configure-exclusions-microsoft-defender-antivirus.md)
+   - [Define exclusions for Microsoft Defender Antivirus](microsoft-defender-antivirus-exclusions-configure.md)
    - [Create indicators for Defender for Endpoint](indicator-manage.md)
 
    Tamper protection affects whether exclusions can be modified or added. See [What happens when tamper protection is turned on](prevent-changes-to-security-settings-with-tamper-protection.md#what-happens-when-tamper-protection-is-turned-on).
@@ -58,7 +58,7 @@ At a high level, the process for addressing an unwanted behavior in Defender for
 
 ## Examples of unwanted behaviors
 
-The following example scenarios show cases that can be addressed by using exclusions and indicators. For more information about exclusions, see [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md).
+The following example scenarios show cases that can be addressed by using exclusions and indicators. For more information about exclusions, see [Exclusions overview](defender-endpoint-exclusions-overview.md).
 
 ### An app is detected by Microsoft Defender Antivirus when the application runs
 
@@ -86,7 +86,7 @@ In this scenario, a custom app accesses a set of file types, and the set is dete
 **How to address**: Define exclusions for Microsoft Defender Antivirus, such as a file or path exclusion that might include wildcards. Or define a custom file path exclusion. See the following articles:
 
 - [Address false positives/negatives in Microsoft Defender for Endpoint](defender-endpoint-false-positives-negatives.md)
-- [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+- [Configure and validate exclusions based on file extension and folder location](microsoft-defender-antivirus-exclusions-configure.md)
 
 ### An application is detected by Microsoft Defender Antivirus as a "behavior" detection
 
@@ -94,8 +94,8 @@ In this scenario, Microsoft Defender Antivirus detects an application because of
 
 **How to address**: Define a process exclusion. See the following articles:
 
-- [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
-- [Configure exclusions for files opened by processes](configure-process-opened-file-exclusions-microsoft-defender-antivirus.md)
+- [Configure and validate exclusions based on file extension and folder location](microsoft-defender-antivirus-exclusions-configure.md)
+- [Configure exclusions for files opened by processes](microsoft-defender-antivirus-exclusions-configure.md)
 
 ### An app is considered a potentially unwanted application (PUA)
 
@@ -104,7 +104,7 @@ In this scenario, an app is detected as PUA, and you want to allow it to run.
 **How to address**: Define an exclusion for the app. See the following articles:
 
 - [Exclude files from PUA protection](detect-block-potentially-unwanted-apps-microsoft-defender-antivirus.md#exclude-files-from-pua-protection)
-- [Configure and validate exclusions based on file extension and folder location](configure-extension-file-exclusions-microsoft-defender-antivirus.md)
+- [Configure and validate exclusions based on file extension and folder location](microsoft-defender-antivirus-exclusions-configure.md)
 
 ### An app is blocked from writing to a protected folder
 
@@ -122,27 +122,27 @@ In this scenario, a third-party app that isn't a threat is detected and identifi
 
 In this scenario, a legitimate app is detected and identified as malicious by an [attack surface reduction (ASR) rule](attack-surface-reduction-rules-overview.md) in Microsoft Defender Antivirus. The ASR rule [Block JavaScript or VBScript from launching downloaded executable content](attack-surface-reduction-rules-reference.md#block-javascript-or-vbscript-from-launching-downloaded-executable-content) blocks any downloaded content when the user tries to use the app.
 
-For the available methods to see ASR rule detections in Defender for Endpoint, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md).
+To learn how to view ASR rule detections in Defender for Endpoint, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md).
 
 **How to address**:
 
 Use the **Attack surface reduction rules** report to see the detections, affected devices, and affected files. In particular, you can download the full file and path information for the affected files to exclude from the ASR rule on the [Add exclusions tab](attack-surface-reduction-rules-report.md#manage-exclusions-on-the-add-exclusions-tab) of the report.
 
-For the available methods to configure ASR rule exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+To learn how to configure ASR rule exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
 ### Word templates that contain macros that launch other apps are blocked
 
 In this scenario, the ASR rule [Block Win32 API calls from Office macros](attack-surface-reduction-rules-reference.md#block-win32-api-calls-from-office-macros) blocks Microsoft Word when a user opens documents created from Microsoft Word templates that contain macros, and those macros launch other applications.
 
-For the available methods to see ASR rule detections in Defender for Endpoint, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md).
+To learn how to view ASR rule detections in Defender for Endpoint, see [Monitor attack surface reduction (ASR) rule activity](attack-surface-reduction-rules-monitor.md).
 
 **How to address**:
 
 Use the **Attack surface reduction rules** report to see the detections, affected devices, and affected files. In particular, you can download the full file and path information for the affected files to exclude from the ASR rule on the [Add exclusions tab](attack-surface-reduction-rules-report.md#manage-exclusions-on-the-add-exclusions-tab) of the report.
 
-For the available methods to configure ASR rule exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
+To learn how to configure ASR rule exclusions, see [File and folder exclusions for ASR rules](attack-surface-reduction-rules-overview.md#file-and-folder-exclusions-for-asr-rules).
 
 ## See also
 
-- [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)
-- [Managing exclusions reference](managing-exclusions.md)
+- [Exclusions overview](defender-endpoint-exclusions-overview.md)
+- [Managing exclusions reference](defender-endpoint-exclusions-configuration-reference.md)

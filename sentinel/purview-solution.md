@@ -5,9 +5,9 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 #Customer intent: As a security engineer, I want to integrate data governance logs with Microsoft Sentinel so that analysts can prioritize and investigate critical security incidents involving sensitive information.
 
@@ -70,7 +70,7 @@ The Microsoft Purview solution provides two analytics rule templates out-of-the-
 - The generic version, *Sensitive Data Discovered in the Last 24 Hours*, monitors for the detection of any classifications found across your data estate during a Microsoft Purview scan.
 - The customized version, *Sensitive Data Discovered in the Last 24 Hours - Customized*, monitors and generates alerts each time the specified classification, such as Social Security Number, has been detected.
 
-Use the following procedure to customize the Microsoft Purview analytics rules' queries to detect assets with specific classification, sensitivity label, source region, and more. Combine the data generated with other data in Microsoft Sentinel to enrich your detections and alerts.
+Use the procedure in [Modify the Microsoft Purview analytics rule templates](#modify-the-microsoft-purview-analytics-rule-templates) to customize the Microsoft Purview analytics rules' queries to detect assets with specific classification, sensitivity label, source region, and more. Combine the data generated with other data in Microsoft Sentinel to enrich your detections and alerts.
 
 > [!NOTE]
 > Microsoft Sentinel analytics rules are KQL queries that trigger alerts when suspicious activity has been detected. Customize and group your rules together to create incidents for your SOC team to investigate.
@@ -107,7 +107,7 @@ Use the following steps to create and customize a Microsoft Purview analytics ru
     | where TimeGenerated > ago (24h)
     ```
 
-    See more information on the following items used in the preceding example, in the Kusto documentation:
+    See more information on the following items used in the sample `PurviewDataSensitivityLogs` query, in the Kusto documentation:
     - [***where*** operator](/kusto/query/where-operator?view=microsoft-sentinel&preserve-view=true)
     - [***ago()*** function](/kusto/query/ago-function?view=microsoft-sentinel&preserve-view=true)
 

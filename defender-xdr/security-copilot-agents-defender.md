@@ -70,7 +70,7 @@ This section details the Microsoft Security Copilot agents that are available in
 
 - [Security Alert Triage Agent (Preview)](#security-alert-triage-agent-preview)
 - [Threat Intelligence Briefing Agent](#threat-intelligence-briefing-agent)
-- [Threat Hunting Agent](#threat-hunting-agent)
+- [Threat Hunting Assistant](#threat-hunting-assistant)
 - [Security Analyst Agent](#security-analyst-agent)
 - [Dynamic Threat Detection Agent](#dynamic-threat-detection-agent)
 
@@ -134,15 +134,15 @@ When running the Threat Intelligence Briefing Agent with an [agent identity](thr
 > [!IMPORTANT]
 > Allow time for permission updates to synchronize across Microsoft Defender services before running the agent.
 
-### Threat Hunting Agent
+### Threat Hunting Assistant
 
-The [Threat Hunting Agent](advanced-hunting-security-copilot-threat-hunting-agent.md) revolutionizes threat hunting by enabling you to investigate threats using natural language from start to finish. It not only generates KQL queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower you to hunt threats faster, more accurately, and with greater confidence.
+The [Threat Hunting Assistant](advanced-hunting-security-copilot-threat-hunting-assistant.md) revolutionizes threat hunting by enabling you to investigate threats using natural language from start to finish. It not only generates KQL queries but also interprets results, surfaces insights, and guides you through full hunting sessions. These capabilities empower you to hunt threats faster, more accurately, and with greater confidence.
 
 :::image type="content" source="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-answer.png" alt-text="Screenshot of the Copilot pane in advanced hunting with the answer highlighted." lightbox="./media/advanced-hunting-security-copilot/advanced-hunting-security-copilot-agent-answer.png":::
 
 ### Security Analyst Agent
 
-The [Security Analyst Agent](/copilot/security/security-analyst-agent) helps security analysts quickly identify, assess, and prioritize risks by performing ready-to-use or custom analyses on security data. The agent provides actionable and prioritized insights, recommendations, and reports to uncover top vulnerabilities and risks. It supports data from Microsoft Defender XDR, Sentinel Log Analytics, or Sentinel Data Lake, and can perform complex analysis tasks such as anomaly detection, clustering, risk scoring, and forecasting without requiring code or queries.
+The [Security Analyst Agent](/copilot/security/security-analyst-agent) helps security analysts quickly identify, assess, and prioritize risks by performing ready-to-use or custom analyses on security data. The agent provides actionable and prioritized insights, recommendations, and reports to uncover top vulnerabilities and risks. It supports data from Microsoft Defender, Sentinel Log Analytics, or Sentinel Data Lake, and can perform complex analysis tasks such as anomaly detection, clustering, risk scoring, and forecasting without requiring code or queries.
 
 | Attribute | Description |
 |---|---|

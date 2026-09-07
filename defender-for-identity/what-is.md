@@ -1,7 +1,7 @@
 ---
 title: Microsoft Defender for Identity Overview
 description: Learn how Microsoft Defender for Identity helps detect, investigate, and respond to identity-based attacks across on-premises, cloud, and hybrid environments.
-ms.date: 02/19/2026
+ms.date: 07/23/2026
 ms.topic: overview
 #customer intent: As a security analyst or identity administrator, I want to understand what Microsoft Defender for Identity does and when to use it so that I can detect and respond to identity-based attacks.
 ms.reviewer: AbbyMSFT
@@ -42,7 +42,7 @@ These insights help organizations strengthen identity resilience and reduce the 
 
 ### Detect identity-based threats
 
-Defender for Identity is designed to detect threats that specifically target identities, including both human and nonh-uman identities such as service accounts, synchronization accounts, and applications. Detection is based on behavioral analytics and signal correlation rather than single events.
+Defender for Identity is designed to detect threats that specifically target identities, including both human and non-human identities such as service accounts, synchronization accounts, and applications. Detection is based on behavioral analytics and signal correlation rather than single events.
 
 Defender for Identity monitors and analyzes identity activity such as:
 
@@ -61,7 +61,7 @@ The following table shows how Defender for Identity detections align to key stag
 | Lateral movement| Detects attempts to move laterally and expand control of sensitive identities and across different environments. |
 | AD Domain dominance | Highlights behavior associated with full domain compromise, such as remote code execution on domain controllers, DCShadow, malicious domain controller replication, and Golden Ticket activity. |
 
-Attackers often begin with any accessible identity and then move laterally toward high value targets such as privileged accounts such as domain administrators, global admin, application admins and sensitive data. Defender for Identity helps identify these behaviors early by building behavioral profiles for users, devices, and accounts and detecting deviations that indicate attacker activity.
+Attackers often begin with any accessible identity and then move laterally toward high-value targets such as domain administrators, global administrators, and application administrators, along with sensitive data. Defender for Identity helps identify these behaviors early by building behavioral profiles for users, devices, and accounts and detecting deviations that indicate attacker activity.
 
 ### Investigate identity threats
 

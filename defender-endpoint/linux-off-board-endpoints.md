@@ -14,7 +14,7 @@ ms.collection:
 - tier3
 - mde-linux
 search.appverid: met150
-ms.date: 04/16/2026
+ms.date: 08/11/2026
 ---
 
 # Offboard or uninstall Microsoft Defender for Endpoint on Linux
@@ -57,12 +57,13 @@ After a device has been successfully offboarded or uninstalled, the Defender app
 
 ## Offboard a device
 
-Two methods are available to offboard a Linux server from Microsoft Defender for Endpoint:
+Three methods are available to offboard a Linux server from Microsoft Defender for Endpoint:
 
-- Offboard using a script
+- Offboard using a script.
 - Offboard using an offboarding JSON file.
+- Offboard using the API.
 
-Both methods achieve the same result, so you can choose the one that best fits your scenario.
+All methods achieve the same result, so you can choose the one that best fits your scenario.
 
 ### Offboard using a script 
 
@@ -86,6 +87,10 @@ Both methods achieve the same result, so you can choose the one that best fits y
 1. Select **Download package** and then select **Download**. The zipped folder is named *WindowsDefenderATPOffboardingPackage_valid_until_YYYY-MM-DD.zip* (where YYYY-MM-DD is the expiry date of the package).  
 1. Extract the contents of the ZIP file and locate the *mdatp_offboard.json* file.
 1. Copy *mdatp_offboard.json* to the following location on the Linux server: `/etc/opt/microsoft/mdatp/mdatp_offboard.json`
+
+### Offboard using the API
+
+Use the [Offboard machine API](api/offboard-machine-api.md) to automate offboarding a Linux server from Defender for Endpoint.
 
 ## Uninstall the Defender application from a Linux server
 

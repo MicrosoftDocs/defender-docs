@@ -53,7 +53,7 @@ Besides the preceding rule types, there are some other specialized template type
 
 ### Scheduled rules 
 
-By far the most common type of analytics rule, **Scheduled** rules are based on [Kusto queries](/kusto/query/?view=microsoft-sentinel&toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) that are configured to run at regular intervals and examine raw data from a defined "lookback" period. If the number of results captured by the query passes the threshold configured in the rule, the rule produces an alert.
+By far the most common type of analytics rule, **Scheduled** rules are based on [Kusto queries](/kusto/query/?toc=/azure/sentinel/TOC.json&bc=/azure/sentinel/breadcrumb/toc.json) that are configured to run at regular intervals and examine raw data from a defined "lookback" period. If the number of results captured by the query passes the threshold configured in the rule, the rule produces an alert.
 
 The queries in [scheduled rule templates](create-analytics-rule-from-template.md) were written by security and data science experts, either from Microsoft or from the vendor of the solution providing the template. Queries can perform complex statistical operations on their target data, revealing baselines and outliers in groups of events.
 
@@ -102,7 +102,7 @@ For more information about *Microsoft security* incident creation rules, see [Au
 
 Take advantage of threat intelligence produced by Microsoft to generate high fidelity alerts and incidents with the **Microsoft Threat Intelligence Analytics** rule. This unique rule isn't customizable, but when enabled, automatically matches Common Event Format (CEF) logs, Syslog data or Windows DNS events with domain, IP and URL threat indicators from Microsoft Threat Intelligence. Certain indicators contain more context information through MDTI (**Microsoft Defender Threat Intelligence**).
 
-For more information on how to enable this rule, see [Use matching analytics to detect threats](use-matching-analytics-to-detect-threats.md).<br>For more information on MDTI, see [What is Microsoft Defender Threat Intelligence](/../defender/threat-intelligence/what-is-microsoft-defender-threat-intelligence-defender-ti).
+For more information on how to enable this rule, see [Use matching analytics to detect threats](use-matching-analytics-to-detect-threats.md).<br>For more information on MDTI, see [What is Microsoft Defender Threat Intelligence](/defender-xdr/defender-threat-intelligence).
 
 ### Advanced multistage attack detection (Fusion)
 

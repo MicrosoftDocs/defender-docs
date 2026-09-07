@@ -1,10 +1,10 @@
 ---
 title: Filter and query activities | Microsoft Defender for Cloud Apps
 description: Use activity filters and saved queries in Microsoft Defender for Cloud Apps to investigate events, narrow results, and refine activity searches.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - sfi-ga-nochange
   - sfi-image-nochange
 ai-usage: ai-assisted
@@ -14,7 +14,7 @@ ai-usage: ai-assisted
 
 
 
-This article provides descriptions and instructions for Defender for Cloud Apps activity filters and queries.
+This article describes how to use activity filters and saved queries in Microsoft Defender for Cloud Apps to investigate events, narrow search results, and monitor user and app behavior. You'll learn about the available filter fields, how to create and save custom queries, and how to query or export activities from up to six months back.
 
 <a name="activity-filters"></a>
 ## Use activity filters
@@ -94,7 +94,7 @@ The following list describes the activity filters that can be applied. Most filt
 
 - Registered ISP - The ISP from which the activity was performed.
 
-- Source - Search by the source from which the activity was detected. The source can be any of the following:
+- Source - Search by the source from which the activity was detected. The source can be **App connector** or **App connector analysis**:
   - App connector - Logs coming directly from the app's API connector.
   - App connector analysis - Defender for Cloud Apps enrichments based on information scanned by the API connector.
 
@@ -157,7 +157,7 @@ Additionally, you can use the suggested queries as a starting point for a new qu
 
 To investigate activities older than 30 days, you can navigate to the **Activity log** and select **Investigate 6 months back** in the top right-hand corner of the screen:
 
-![Screenshot of the Activity log page with the Investigate 6 months back option highlighted in the top right corner.](media/investigate-six-months-back.png)
+![Screenshot of the Activity log page showing the option to investigate activity from the past six months.](media/investigate-six-months-back.png)
 
 In the **Investigate 6 months back** view, you can define the filters as you normally would in the **Activity Log**, with the following differences:
 
@@ -175,7 +175,7 @@ In the **Investigate 6 months back** view, you can define the filters as you nor
 
 For example: 
 
-![Screenshot of activity log filters with the six-month investigation view showing available filter fields such as Activity ID, Activity type, and IP address.](media/filter-six-months-back.png)
+![Screenshot of activity log filters in the six-month investigation view showing fields like Activity ID, Activity type, and IP address.](media/filter-six-months-back.png)
 
 
 ### Export activities six months back
@@ -208,7 +208,7 @@ To access exported files and check export status, navigate to **Reports -> Cloud
 
 Reports that include private activities are marked with an Eye icon in the reports page.  
 
-![Icon indicating that the exported report includes private activities](media/activity-filters-queries/eye-icon-to-indicate-private-report.png)
+![Icon of an eye indicating that the exported report includes private activities.](media/activity-filters-queries/eye-icon-to-indicate-private-report.png)
 
 ## Next steps
 

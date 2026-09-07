@@ -1,19 +1,20 @@
 ---
-title: Manage MCSB in Microsoft Defender for Cloud
-description: Learn how to manage the  MCSB standard in Microsoft Defender for Cloud
+title: Manage the Microsoft Cloud Security Benchmark in Microsoft Defender for Cloud
+description: Learn how to manage Microsoft Cloud Security Benchmark (MCSB) recommendations, configure parameters, and resolve policy conflicts in Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 05/20/2025
-ms.custom: sfi-image-nochange
+ms.date: 07/03/2026
+ms.custom: sfi-image-nochange, msecd-doc-authoring-1013
 ai-usage: ai-assisted
 ---
 
 # Manage MCSB recommendations in Defender for Cloud
 
-Microsoft Defender for Cloud assesses resources against [security standards](security-policy-concept.md). By default, when you onboard cloud accounts to Defender for Cloud, the [Microsoft Cloud Security Benchmark (MCSB) standard](concept-regulatory-compliance.md) is enabled. Defender for Cloud starts assessing the security posture of your resource against controls in the MCSB standard, and issues security recommendations based on the assessments.
+Microsoft Defender for Cloud assesses resources against [security policies and standards in Defender for Cloud](security-policy-concept.md). By default, when you onboard cloud accounts to Defender for Cloud, the [Microsoft Cloud Security Benchmark (MCSB) standard](concept-regulatory-compliance.md) is enabled. Defender for Cloud starts assessing the security posture of your resource against controls in the MCSB standard, and issues security recommendations based on the assessments.
 
 This article describes how you can manage recommendations provided by MCSB.
 
-## Before you start
+<a name="before-you-start"></a>
+## Prerequisites
 
  There are two specific roles in Defender for Cloud that can view and manage security elements:
 
@@ -64,11 +65,12 @@ You can only enforce a recommendation from the recommendation details page.
 
 1. Select **Save**.
 
-The setting takes effect immediately, but recommendations will update based on their freshness interval (up to 12 hours).
+The enforce setting takes effect immediately, but recommendations update based on their freshness interval (up to 12 hours).
 
-## Modify additional parameters
+<a name="modify-additional-parameters"></a>
+## Modify additional recommendation parameters
 
-You might want to configure additional parameters for some recommendations. For example, diagnostic logging recommendations have a default retention period of one day. You can change that default value.
+You might want to configure additional parameters for some recommendations. For example, diagnostic logging recommendations have a default retention period of one day. You can change the default retention period value.
 
 In the recommendation details page, the **Additional parameters** column indicates whether a recommendation has associated additional parameters.
 
@@ -84,7 +86,8 @@ In the recommendation details page, the **Additional parameters** column indicat
 
 If you want to revert changes, select **Reset to default** to restore the default value for the recommendation.
 
-## Identify potential conflicts
+<a name="identify-potential-conflicts"></a>
+## Identify conflicts between recommendation settings
 
 Potential conflicts can arise when you have multiple assignments of standards with different values.
 
@@ -95,11 +98,11 @@ Potential conflicts can arise when you have multiple assignments of standards wi
 1. To identify conflicts in additional parameters, in **Add**, select **Additional parameters conflict** > **Has conflict** to identify any conflicts.
 1. If conflicts are found, in **Recommendation settings**, select the required value, and save.
 
-All assignments on the scope will be aligned with the new setting, resolving the conflict.
+All standard assignments in the selected scope are aligned with the value you selected in **Recommendation settings**, resolving the conflict.
 
 ## Next steps
 
-This page explained security policies. For related information, see the following pages:
+Related information:
 
 - [Learn how to set policies using PowerShell](/azure/governance/policy/assign-policy-powershell)
 - [Learn how to edit a security policy in Azure Policy](/azure/governance/policy/tutorials/create-and-manage)

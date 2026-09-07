@@ -9,7 +9,7 @@ ai-usage: ai-assisted
 
 # AI threat protection in Microsoft Defender for Cloud
 
-Microsoft Defender for Cloud's threat protection for artificial intelligence (AI) services identifies threats to generative AI applications and agents in real time and helps respond to security issues. Defender for Cloud's AI threat protection works with [Azure AI Content Safety Prompt Shields](/azure/ai-services/content-safety/concepts/jailbreak-detection) and Microsoft's threat intelligence to provide security alerts for threats like data leakage, data poisoning, jailbreak, credential theft, and more.
+Microsoft Defender for Cloud's threat protection for artificial intelligence (AI) services identifies threats to generative AI applications in real time and helps respond to security issues. Defender for Cloud's AI threat protection works with [Azure AI Content Safety Prompt Shields](/azure/ai-services/content-safety/concepts/jailbreak-detection) and Microsoft's threat intelligence to provide security alerts for threats like data leakage, data poisoning, jailbreak, credential theft, and more.
 
 ## Defender XDR integration
 

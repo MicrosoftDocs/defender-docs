@@ -55,7 +55,7 @@ To learn more about Microsoft 365 Apps update channels, see [Overview of update 
 ### Enable Application Guard for Office
 
 1. Operating system requirements:
-   - **Windows 10**: Verify [September 8. 2020 KB4571756](https://support.microsoft.com/topic/b7de4a66-00ce-c620-ab48-b4e3a89954ed) is installed.
+   - **Windows 10**: Verify [September 8. 2020 KB4571756](https://support.microsoft.com/servicing/os/windows-10/2020/09/september-8-2020-kb4571756-os-build-19041-508) is installed.
    - **Windows 11**: No specific requirements.
 
 2. In **Windows Features**, select **Microsoft Defender Application Guard**, and then select **OK**. Enabling the Application Guard feature prompts for a system reboot. You can reboot now or after step 3.

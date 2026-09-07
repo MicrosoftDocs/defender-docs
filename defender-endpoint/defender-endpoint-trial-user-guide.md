@@ -4,7 +4,7 @@ description: Use this guide to get the most of your 90-day free trial. See how D
 author: limwainstein
 ms.author: lwainstein
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.collection: 
 - m365-security
 - tier2
@@ -12,7 +12,7 @@ ms.service: defender-endpoint
 ms.subservice: onboard
 ms.localizationpriority: medium
 ms.reviewer: 
-ms.custom: sfi-ga-nochange, msecd-doc-authoring-1014
+ms.custom: sfi-ga-nochange, msecd-doc-authoring-1016
 ai-usage: ai-assisted
 ---
 
@@ -116,11 +116,11 @@ To onboard devices (endpoints), follow these general steps:
 <a name="step-5-configure-capabilities"></a>
 ## Step 5: Configure Defender for Endpoint trial capabilities 
 
-After onboarding devices (endpoints), you'll configure the various capabilities, such as endpoint detection and response, next-generation protection, and attack surface reduction.
+After you onboard devices, set up capabilities such as endpoint detection and response, next-generation protection, and attack surface reduction.
 
-Use the [device onboarding options](onboarding.md) to choose components to configure. We recommend configuring all available capabilities, but you're able to skip the ones that don't apply.
+Use the [device onboarding options](onboarding.md) to choose which components to set up. We recommend that you configure all capabilities, but you can skip any that don't apply.
 
-After you have onboarded devices, [run a detection test](run-detection-test.md). 
+After you onboard devices, [run a detection test](run-detection-test.md). 
 
 <a name="step-6-visit-the-microsoft-defender-portal"></a>
 ## Step 6: Review alerts and device data in the Microsoft Defender portal

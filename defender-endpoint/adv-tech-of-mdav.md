@@ -25,7 +25,7 @@ Microsoft Defender Antivirus and the multiple engines that lead to the advanced 
 
 Many of these engines are built into the client and provide advanced protection against most threats in real time.
 
-These next-generation protection engines provide [industry-best](/windows/security/threat-protection/intelligence/top-scoring-industry-antivirus-tests) detection and blocking capabilities and ensure that protection is:
+These next-generation protection engines provide [industry-best](/defender-xdr/top-scoring-industry-tests) detection and blocking capabilities and ensure that protection is:
 
 - **Accurate**: Threats both common and sophisticated, many which are designed to try to slip through protections, are detected and blocked.
 - **Real-time**: Threats are prevented from getting on to devices, stopped in real-time at first sight, or detected and remediated in the least possible time (typically within a few milliseconds).

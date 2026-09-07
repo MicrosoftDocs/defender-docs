@@ -9,20 +9,20 @@ ms.collection:
 - m365-security
 - tier2
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
   - Microsoft Defender for Business
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Manage the live response file library in Microsoft Defender for Endpoint
 
 The **Library management** page in the Microsoft Defender portal allows you to manage files used during Microsoft Defender for Endpoint live response sessions. You can also add, view, and delete files in the library, instead of uploading them during a live response session.
 
-This article describes how to view, add, and manage files in the live response library.
+The **Library management** page describes how to view, add, and manage files in the live response library.
 
 For more information about live response, see [Investigate entities on devices using live response](live-response.md).
 
@@ -84,7 +84,7 @@ To view and analyze a file:
 <a name="manage-files"></a>
 ## Manage files in the library
 
-The following options are available for managing existing files in the library:
+The library provides options to Upload, Refresh, View details, View file, Analyze, Download, Delete, and Filter files:
 
 | Option | Description | Available from |
 |--------|-------------|----------------|

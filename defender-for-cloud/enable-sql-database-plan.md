@@ -2,7 +2,8 @@
 title: Deploy Defender for Azure SQL Databases
 description: Enable Defender for Azure SQL Databases as part of the Databases plan to protect SQL resources with threat detection and response in Defender for Cloud.
 ms.topic: how-to
-ms.date: 06/02/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a database administrator, I want to enable Defender for Azure SQL Databases so that I can enhance the security of my databases.
 ai-usage: ai-assisted
 ---
@@ -32,7 +33,7 @@ Enabling the Defender for Azure SQL Databases plan activates protection for all 
 
 1. In the Defender for Cloud menu, select **Environment settings**.
 
-1. Select the relevant Azure subscription, AWS account, or GCP project.
+1. Select the Azure subscription, AWS account, or GCP project where you want to enable Defender for Azure SQL Databases.
 
 1. Locate the Databases plan and select **Select types**.
 
@@ -46,7 +47,8 @@ Enabling the Defender for Azure SQL Databases plan activates protection for all 
 
 1. Select **Save**.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Enable Microsoft Defender for SQL servers on machines](defender-for-sql-usage.md)

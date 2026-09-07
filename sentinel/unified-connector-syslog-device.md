@@ -27,9 +27,9 @@ For more information about the related Microsoft Sentinel solution for each of t
 
 [Follow instructions](https://aka.ms/sentinel-barracudacloudfirewall-connector) to configure syslog streaming. Use the IP address or hostname for the Linux machine with the Microsoft Sentinel agent installed for the **Destination IP** address.
 
-## Blackberry CylancePROTECT
+<!--- ## Blackberry CylancePROTECT
 
-[Follow these instructions](https://docs.blackberry.com/en/unified-endpoint-security/blackberry-ues/cylance-syslog-guide/Configure_Syslog_Settings) to configure the CylancePROTECT to forward syslog. Use the IP address or hostname for the Linux device with the Linux agent installed as the **Destination IP** address.
+Follow these instructions (docs.blackberry.com/en/unified-endpoint-security/blackberry-ues/cylance-syslog-guide/Configure_Syslog_Settings) to configure the CylancePROTECT to forward syslog. Use the IP address or hostname for the Linux device with the Linux agent installed as the **Destination IP** address. --->
 
 ## Cisco Application Centric Infrastructure (ACI)
 
@@ -71,7 +71,7 @@ This data connector was developed using Cisco Stealthwatch version 7.3.2
 >
 > Update the parser and specify the hostname of the source machines transmitting the logs in the parser's first line.
 >
-> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **CiscoUCS**. Alternatively, directly load the [function code](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Cisco%20UCS/Parsers/CiscoUCS.yaml). It might take about 15-minutes post-installation to update. 
+> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **CiscoUCS**. Alternatively, directly load the [function code](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Cisco%20UCS/Parsers/CiscoUCS.yaml). It might take about 15-minutes post-installation to update.
 > Although the solution references the deprecated **Log Analytics agent** connector, you can continue to use the same solution, including the referenced parser, with the **Syslog via AMA** data connector instead.
 
 ## Cisco Web Security Appliance (WSA)
@@ -95,7 +95,7 @@ Configure Citrix ADC (former NetScaler) to forward logs via Syslog.
 For more information, see the [Citrix ADC (former NetScaler) documentation](https://docs.netscaler.com/).
 
 > [!NOTE]
-> The functionality of this data connector is reliant on a Kusto Function-based parser, which is integral to its operation. This parser is deployed  as part of the solution installation. To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **CitrixADCEvent**. Alternatively, you can directly load the [function code](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Citrix%20ADC/Parsers/CitrixADCEvent.yaml). It might take about 15 minutes post-installation to update. 
+> The functionality of this data connector is reliant on a Kusto Function-based parser, which is integral to its operation. This parser is deployed  as part of the solution installation. To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **CitrixADCEvent**. Alternatively, you can directly load the [function code](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Citrix%20ADC/Parsers/CitrixADCEvent.yaml). It might take about 15 minutes post-installation to update.
 > Although the solution references the deprecated **Log Analytics agent** connector, you can continue to use the same solution, including the referenced parser, with the **Syslog via AMA** data connector instead.
 >
 > This parser requires a watchlist named `Sources_by_SourceType`.
@@ -104,7 +104,7 @@ For more information, see the [Citrix ADC (former NetScaler) documentation](http
 >
 > ii. Open watchlist `Sources_by_SourceType` and add entries for this data source.
 >
-> ii. The SourceType value for CitrixADC is `CitrixADC`. 
+> ii. The SourceType value for CitrixADC is `CitrixADC`.
 > For more information, see [Manage Advanced Security Information Model (ASIM) parsers](/azure/sentinel/normalization-manage-parsers?WT.mc_id=Portal-fx#configure-the-sources-relevant-to-a-source-specific-parser).
 
 ## Digital Guardian Data Loss Prevention
@@ -141,13 +141,13 @@ Configure ESET PROTECT to send all events through Syslog.
 
 This data connector was developed using Exabeam Advanced Analytics i54 (Syslog)
 
-## Forescout
+<!--- ## Forescout
 
 Complete the following steps to get Forescout logs into Microsoft Sentinel.
 
-1. [Select an Appliance to Configure.](https://docs.forescout.com/bundle/syslog-3-6-1-h/page/syslog-3-6-1-h.Select-an-Appliance-to-Configure.html)
-1. [Follow these instructions](https://docs.forescout.com/bundle/syslog-3-6-1-h/page/syslog-3-6-1-h.Send-Events-To-Tab.html#pID0E0CE0HA) to forward alerts from the Forescout platform to a syslog server.
-1. [Configure](https://docs.forescout.com/bundle/syslog-3-6-1-h/page/syslog-3-6-1-h.Syslog-Triggers.html) the settings in the **Syslog Triggers** tab.
+1. Select an Appliance to Configure (docs.forescout.com/bundle/syslog-3-6-1-h/page/syslog-3-6-1-h.Select-an-Appliance-to-Configure.html).
+1. Follow these instructions (docs.forescout.com/bundle/syslog-3-6-1-h/page/syslog-3-6-1-h.Send-Events-To-Tab.html#pID0E0CE0HA) to forward alerts from the Forescout platform to a syslog server.
+1. Configure (docs.forescout.com/bundle/syslog-3-6-1-h/page/syslog-3-6-1-h.Syslog-Triggers.html) the settings in the **Syslog Triggers** tab. --->
 
 This data connector was developed using Forescout Syslog Plugin version: v3.6
 
@@ -157,7 +157,7 @@ This data connector was developed using Forescout Syslog Plugin version: v3.6
 
 ## ISC Bind
 
-1. Follow these instructions to configure the ISC Bind to forward syslog: [DNS Logs](https://kb.isc.org/docs/aa-01526). 
+1. Follow these instructions to configure the ISC Bind to forward syslog: [DNS Logs](https://kb.isc.org/docs/aa-01526).
 1. Configure syslog to send the syslog traffic to the agent. Use the IP address or hostname for the Linux device with the Linux agent installed as the **Destination IP** address.
 
 ## Infoblox Network Identity Operating System (NIOS)
@@ -167,12 +167,12 @@ This data connector was developed using Forescout Syslog Plugin version: v3.6
 > [!NOTE]
 > The functionality of this data connector is reliant on a Kusto Function-based parser, which is integral to its operation. This parser is deployed  as part of the solution installation.
 >
-> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **Infoblox**. Alternatively, you can directly load the [function code](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Infoblox%20NIOS/Parsers/Infoblox.yaml). It might take about 15 minutes post-installation to update. 
+> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **Infoblox**. Alternatively, you can directly load the [function code](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Infoblox%20NIOS/Parsers/Infoblox.yaml). It might take about 15 minutes post-installation to update.
 > Although the solution references the deprecated **Log Analytics agent** connector, you can continue to use the same solution, including the referenced parser, with the **Syslog via AMA** data connector instead.
-> 
+>
 > This parser requires a watchlist named **`Sources_by_SourceType`**.
 >
->i. If you don't have watchlist already created, create a watchlist from Microsoft Sentinel in the [Azure portal](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FASIM%2Fdeploy%2FWatchlists%2FASimSourceType.json). 
+>i. If you don't have watchlist already created, create a watchlist from Microsoft Sentinel in the [Azure portal](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2FAzure-Sentinel%2Fmaster%2FASIM%2Fdeploy%2FWatchlists%2FASimSourceType.json).
 >
 >ii. Open watchlist **`Sources_by_SourceType`** and add entries for this data source.
 >
@@ -188,11 +188,11 @@ This data connector was developed using Ivanti Unified Endpoint Management Relea
 
 ## Juniper SRX
 
-1. Complete the following instructions to configure the Juniper SRX to forward syslog: 
+1. Complete the following instructions to configure the Juniper SRX to forward syslog:
 
-   - [Traffic Logs (Security Policy Logs)](https://kb.juniper.net/InfoCenter/index?page=content&id=KB16509&actp=METADATA) 
+   - [Traffic Logs (Security Policy Logs)](https://kb.juniper.net/InfoCenter/index?page=content&id=KB16509&actp=METADATA)
    - [System Logs](https://kb.juniper.net/InfoCenter/index?page=content&id=kb16502)
- 
+
 2. Use the IP address or hostname for the Linux device with the Linux agent installed as the **Destination IP** address.
 
 ## McAfee Network Security Platform
@@ -221,7 +221,7 @@ The following functions are deployed:
 
 - vimFileEventLinuxSysmonFileCreated, vimFileEventLinuxSysmonFileDeleted
 - vimProcessCreateLinuxSysmon, vimProcessTerminateLinuxSysmon
-- vimNetworkSessionLinuxSysmon 
+- vimNetworkSessionLinuxSysmon
 
 [Read more](https://aka.ms/AboutASIM)
 
@@ -237,8 +237,8 @@ OpenVPN server logs are written into common syslog file (depending on the Linux 
 ## Oracle Database Audit
 
 Complete the following steps.
- 
-1. Create the Oracle database [Follow these steps.](/azure/virtual-machines/workloads/oracle/oracle-database-quick-create) 
+
+1. Create the Oracle database [Follow these steps.](/azure/virtual-machines/workloads/oracle/oracle-database-quick-create)
 1. Sign in to the Oracle database you created. [Follow these steps](https://docs.oracle.com/cd/F49540_01/DOC/server.815/a67772/create.htm).
 1. Enable unified logging over syslog by **Alter the system to enable unified logging** [Following these steps](https://docs.oracle.com/en/database/oracle/oracle-database/21/refrn/UNIFIED_AUDIT_COMMON_SYSTEMLOG.html#GUID-9F26BC8E-1397-4B0E-8A08-3B12E4F9ED3A).
 1. Create and  **enable an Audit policy for unified auditing** [Follow these steps](https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/CREATE-AUDIT-POLICY-Unified-Auditing.html#GUID-8D6961FB-2E50-46F5-81F7-9AEA314FC693).
@@ -252,8 +252,8 @@ Complete the following steps.
 > The functionality of this data connector is reliant on a Kusto Function-based parser, which is integral to its operation. This parser is deployed  as part of the solution installation.
 >
 > Update the parser and specify the hostname of the source machines transmitting the logs in the parser's first line.
-> 
-> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **PulseConnectSecure**. Alternatively, directly load the [function code](https://aka.ms/sentinel-PulseConnectSecure-parser). It might take about 15 minutes post-installation to update. 
+>
+> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **PulseConnectSecure**. Alternatively, directly load the [function code](https://aka.ms/sentinel-PulseConnectSecure-parser). It might take about 15 minutes post-installation to update.
 > Although the solution references the deprecated **Log Analytics agent** connector, you can continue to use the same solution, including the referenced parser, with the **Syslog via AMA** data connector instead.
 
 ## RSA SecurID
@@ -266,7 +266,7 @@ Complete the following steps to get RSA® SecurID Authentication Manager logs in
 >
 > Update the parser and specify the hostname of the source machines transmitting the logs in the parser's first line.
 >
-> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **RSASecurIDAMEvent**. Alternatively, you can directly load the [function code](https://aka.ms/sentinel-rsasecuridam-parser). It might take about 15 minutes post-installation to update. 
+> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **RSASecurIDAMEvent**. Alternatively, you can directly load the [function code](https://aka.ms/sentinel-rsasecuridam-parser). It might take about 15 minutes post-installation to update.
 > Although the solution references the deprecated **Log Analytics agent** connector, you can continue to use the same solution, including the referenced parser, with the **Syslog via AMA** data connector instead.
 
 This data connector was developed using RSA SecurID Authentication Manager version: 8.4 and 8.5
@@ -279,8 +279,8 @@ This data connector was developed using RSA SecurID Authentication Manager versi
 > [!NOTE]
 > The functionality of this data connector is reliant on a Kusto Function-based parser, which is integral to its operation. This parser is deployed  as part of the solution installation.
 >
-> Update the parser and specify the hostname of the source machines transmitting the logs in the parser's first line. 
-> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **SophosXGFirewall**. Alternatively, directly load the [function code](https://aka.ms/sentinel-SophosXG-parser). It might take about 15 minutes post-installation to update. 
+> Update the parser and specify the hostname of the source machines transmitting the logs in the parser's first line.
+> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **SophosXGFirewall**. Alternatively, directly load the [function code](https://aka.ms/sentinel-SophosXG-parser). It might take about 15 minutes post-installation to update.
 > Although the solution references the deprecated **Log Analytics agent** connector, you can continue to use the same solution, including the referenced parser, with the **Syslog via AMA** data connector instead.
 
 
@@ -292,8 +292,8 @@ This data connector was developed using RSA SecurID Authentication Manager versi
 > [!NOTE]
 > The functionality of this data connector is reliant on a Kusto Function-based parser, which is integral to its operation. This parser is deployed  as part of the solution installation.
 >
-> Update the parser and specify the hostname of the source machines transmitting the logs in the parser's first line. 
-> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **SymantecEndpointProtection**. Alternatively, you can directly load the [function code](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/Symantec%20Endpoint%20Protection/Parsers/SymantecEndpointProtection.yaml). It might take about 15 minutes post-installation to update. 
+> Update the parser and specify the hostname of the source machines transmitting the logs in the parser's first line.
+> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **SymantecEndpointProtection**. Alternatively, you can directly load the [function code](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/Symantec%20Endpoint%20Protection/Parsers/SymantecEndpointProtection.yaml). It might take about 15 minutes post-installation to update.
 > Although the solution references the deprecated **Log Analytics agent** connector, you can continue to use the same solution, including the referenced parser, with the **Syslog via AMA** data connector instead.
 
 ## Symantec ProxySG
@@ -314,8 +314,8 @@ This data connector was developed using RSA SecurID Authentication Manager versi
 > The functionality of this data connector is reliant on a Kusto Function-based parser, which is integral to its operation. This parser is deployed  as part of the solution installation.
 >
 > Update the parser and specify the hostname of the source machines transmitting the logs in the parser's first line.
-> 
-> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **SymantecProxySG**. Alternatively, directly load the [function code](https://aka.ms/sentinel-SymantecProxySG-parser). It might take about 15 minutes post-installation to update. 
+>
+> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **SymantecProxySG**. Alternatively, directly load the [function code](https://aka.ms/sentinel-SymantecProxySG-parser). It might take about 15 minutes post-installation to update.
 > Although the solution references the deprecated **Log Analytics agent** connector, you can continue to use the same solution, including the referenced parser, with the **Syslog via AMA** data connector instead.
 
 ## Symantec VIP
@@ -325,9 +325,9 @@ This data connector was developed using RSA SecurID Authentication Manager versi
 > [!NOTE]
 > The functionality of this data connector is reliant on a Kusto Function-based parser, which is integral to its operation. This parser is deployed  as part of the solution installation.
 >
-> Update the parser and specify the hostname of the source machines transmitting the logs in the parser's first line. 
+> Update the parser and specify the hostname of the source machines transmitting the logs in the parser's first line.
 >
-> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **SymantecVIP**. Alternatively, directly load the [function code](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Symantec%20VIP/Parsers/SymantecVIP.yaml). It might take about 15 minutes post-installation to update. 
+> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias **SymantecVIP**. Alternatively, directly load the [function code](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/Symantec%20VIP/Parsers/SymantecVIP.yaml). It might take about 15 minutes post-installation to update.
 > Although the solution references the deprecated **Log Analytics agent** connector, you can continue to use the same solution, including the referenced parser, with the **Syslog via AMA** data connector instead.
 
 ## VMware ESXi
@@ -343,7 +343,7 @@ This data connector was developed using RSA SecurID Authentication Manager versi
 >
 > Update the parser and specify the hostname of the source machines transmitting the logs in the parser's first line.
 >
-> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias VMwareESXi. Alternatively, directly load the [function code](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/VMWareESXi/Parsers/VMwareESXi.yaml). It might take about 15 minutes post-installation to update. 
+> To access the function code within Log Analytics, navigate to the Log Analytics/Microsoft Sentinel Logs section, select Functions, and search for the alias VMwareESXi. Alternatively, directly load the [function code](https://raw.githubusercontent.com/Azure/Azure-Sentinel/master/Solutions/VMWareESXi/Parsers/VMwareESXi.yaml). It might take about 15 minutes post-installation to update.
 > Although the solution references the deprecated **Log Analytics agent** connector, you can continue to use the same solution, including the referenced parser, with the **Syslog via AMA** data connector instead.
 
 ## WatchGuard Firebox

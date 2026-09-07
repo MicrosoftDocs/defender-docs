@@ -18,7 +18,7 @@ ms.custom: msecd-doc-authoring-1014
 
 # Summarize an incident with Microsoft Copilot in Microsoft Defender
 
-Microsoft Defender XDR applies the capabilities of [Security Copilot](/security-copilot/microsoft-security-copilot) to summarize incidents. Incident summaries provide impactful information and insights to simplify investigation tasks. Investigations are often time-consuming and involve numerous steps.
+Microsoft Defender applies the capabilities of [Security Copilot](/security-copilot/microsoft-security-copilot) to summarize incidents. Incident summaries provide impactful information and insights to simplify investigation tasks. Investigations are often time-consuming and involve numerous steps.
 
 This guide outlines how to access the summarizing capability of Copilot in Defender and what information is included in the summary, including information on providing feedback.
 
@@ -32,7 +32,7 @@ If you're new to Security Copilot, familiarize yourself with it by reading the f
 - [Understand authentication in Security Copilot](/security-copilot/authentication)
 - [Prompting in Security Copilot](/security-copilot/prompting-security-copilot)
 
-Incident responders can access the right context to investigate and remediate incidents through Defender XDR's correlation capabilities and Security Copilot's AI-powered data processing and contextualization. With an incident summary, responders get important information quickly to help in their investigation.
+Incident responders can access the right context to investigate and remediate incidents through Defender's correlation capabilities and Security Copilot's AI-powered data processing and contextualization. With an incident summary, responders get important information quickly to help in their investigation.
 
 ## Security Copilot integration in Microsoft Defender
 

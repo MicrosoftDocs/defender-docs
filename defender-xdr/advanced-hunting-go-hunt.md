@@ -17,7 +17,7 @@ appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 ---
 
@@ -50,7 +50,7 @@ Selecting **Go hunt** or **Hunt for related events** passes different queries, d
 You can use *go hunt* to query for information about a user, device, or any other type of entity; the query checks all relevant schema tables for any events involving that entity to return information. To keep the results manageable, the query is:
 
 - scoped to around the same time period as the earliest activity in the past 30 days that involves the entity
-- associated with the incident.
+- associated with the incident that includes the entity.
 
 Here is an example of the go hunt query for a device:
 

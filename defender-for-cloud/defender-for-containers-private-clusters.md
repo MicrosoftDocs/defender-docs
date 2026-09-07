@@ -2,14 +2,15 @@
 title: Deploy Defender for Containers to private clusters (Preview)
 description: Learn how to deploy Microsoft Defender for Containers to private clusters by using preview Helm charts and the Azure Arc Preview release train.
 ms.topic: how-to
-ms.date: 06/01/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a security administrator, I want to deploy Defender for Containers to private clusters so that I can protect nonpublic Kubernetes environments.
 ai-usage: ai-assisted
 ---
 
 # Deploy Defender for Containers to private clusters
 
-Private clusters isolate Kubernetes environments from the internet and, in this context, restricted connectivity means no direct access to the Kubernetes API server. Defender for Containers extends threat detection and security visibility to these environments, so you can maintain protection coverage while preserving private cluster network boundaries.
+This article explains how to deploy Microsoft Defender for Containers to private Kubernetes clusters by using Helm charts or an Azure Arc-enabled Kubernetes extension. Private clusters isolate Kubernetes environments from the internet, which means no direct access to the Kubernetes API server. Defender for Containers extends threat detection and security visibility to these environments, so you can maintain protection coverage while preserving private cluster network boundaries. Before you begin, review the [prerequisites](#prerequisites).
 
 ## Prerequisites
 
@@ -35,7 +36,7 @@ Before you begin, ensure the following prerequisites are met:
 
 Defender for Containers Helm charts are published to `mcr.microsoft.com/azuredefender/microsoft-defender-for-containers`.
 Private clusters are supported in 0.11.X chart versions.
-Use the following tabs to install the components for your environment.
+Use the **Helm on Amazon EKS**, **Helm on Google Kubernetes Engine**, or **Azure Arc-enabled Kubernetes** tab to install the components for your environment.
 
 # [Helm on Amazon EKS](#tab/helm-eks)
 

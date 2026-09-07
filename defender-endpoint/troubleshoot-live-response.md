@@ -58,8 +58,5 @@ Live response uses Defender for Endpoint sensor registration with WNS service in
 
 Refer to the following articles to fully understand the WpnService service behavior and requirements:
 
-- [Windows Push Notification Services (WNS) overview](/windows/uwp/design/shell/tiles-and-notifications/windows-push-notification-services--wns--overview)
-- [Enterprise Firewall and Proxy Configurations to Support WNS Traffic](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
-- [Microsoft Push Notifications Service (MPNS) Public IP ranges](https://www.microsoft.com/download/details.aspx?id=44535)
-
-
+- [Windows Push Notification Services (WNS) overview](/windows/apps/develop/notifications/push-notifications/wns-overview)
+- [Enterprise firewall configurations to support WNS traffic](/windows/apps/develop/notifications/push-notifications/firewall-allowlist-config)

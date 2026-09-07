@@ -1,9 +1,10 @@
 ---
 title: Migrate from Defender for Storage (classic)
 description: Learn about how to migrate from Defender for Storage (classic) to the new Defender for Storage plan to take advantage of its enhanced capabilities and pricing.
-ms.date: 04/19/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 ---
 
 # Migrate from Defender for Storage (classic)
@@ -25,7 +26,7 @@ On March 28, 2023, we introduced the new Defender for Storage plan. This plan of
 
 The new pricing plan charges based on the number of storage accounts you protect, simplifying calculations and allowing for easy scaling as your needs change. For detailed pricing information, see [the pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
-To take advantage of these features, we recommend moving to the new Defender for Storage plan by February 5, 2025.
+To take advantage of the enhanced monitoring, malware scanning, sensitive data detection, and predictable pricing in the new plan, we recommend moving to the new Defender for Storage plan by February 5, 2025.
 
 > [!NOTE]
 > After February 5, 2025, you can no longer enable Defender for Storage (classic), the legacy per-transaction pricing plan, in most scenarios. The only exception is for subscriptions that already have the per-transaction pricing **enabled**.
@@ -36,9 +37,12 @@ Defender for Storage (Classic) offers two pricing structures: per-transaction an
 
 ### Impact on the Defender for Storage (classic) per-transaction plan
 
+> [!IMPORTANT]
+> Switching to the new Defender for Storage plan is irreversible. After you switch, you can no longer revert to the Defender for Storage (classic) per-transaction or per-storage account plans at either the subscription or storage account level.
+
 The classic per-transaction plan will no longer be available for new storage accounts and subscriptions. Existing accounts will retain the plan without future features and updates, so we encourage you to move to the new plan for the enhanced features and simplified pricing. If your subscription or storage account already has the classic per-transaction plan enabled, it will remain active, but enabling this plan at the resource level will only be possible for these existing subscriptions.
 
-If you have policies that enforce the classic per-transaction plan without specifying the per-transaction subplan, existing subscriptions will retain their current plan, while new subscriptions will default to the new plan. However, if you specify the per-transaction subplan, it will fail for new subscriptions. Once you switch to the new plan, you can no longer revert to the Defender for Storage (classic) per-transaction or per-storage account plans at either the subscription or storage account level.
+If you have policies that enforce the classic per-transaction plan without specifying the per-transaction subplan, existing subscriptions will retain the classic per-transaction plan already enabled on those subscriptions, while new subscriptions will default to the new plan. However, if you specify the per-transaction subplan, the policy assignment will fail for new subscriptions. Once you switch to the new plan, you can no longer revert to the Defender for Storage (classic) per-transaction or per-storage account plans at either the subscription or storage account level.
 
 ## Identify active Defender for Storage plans
 
@@ -66,10 +70,11 @@ We provide three options to find out your Defender for Storage plans enablement 
     | project properties, tenantId, subscriptionId, IsInTrialPeriod, IsEnabled, DefenderForStoragePlan, MalwareScanningEnabled, MalwareScanningCapping, SensitiveDataDiscoveryEnabled
     ```
 
-- **Detailed analysis with PowerShell script**: For a more detailed investigation, including information at both the subscription and resource levels (with add-ons configuration), run [this PowerShell script](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Powershell%20scripts/Analyze%20Defender%20For%20Storage%20Configuration/Analyze-DefenderForStorageConfig.ps1).
+- **Detailed analysis with PowerShell script**: For a more detailed investigation, including information at both the subscription and resource levels (with add-ons configuration), run the [Analyze-DefenderForStorageConfig.ps1 PowerShell script](https://github.com/Azure/Microsoft-Defender-for-Cloud/blob/main/Powershell%20scripts/Analyze%20Defender%20For%20Storage%20Configuration/Analyze-DefenderForStorageConfig.ps1).
 - **Workbook for subscription-level coverage details**: Use the provided workbook to see which plans are enabled at the subscription level and their configuration details. To access the workbook, see [Microsoft Defender for Storage - Price Estimation Dashboard](https://github.com/Azure/Microsoft-Defender-for-Cloud/tree/main/Workbooks/Microsoft%20Defender%20for%20Storage%20Price%20Estimation).
 
-## Migration methods
+<a name="migration-methods"></a>
+## Choose a migration method for Defender for Storage (classic)
 
 To enable and configure the new Microsoft Defender for Storage plan, you have several options:
 
@@ -95,7 +100,7 @@ You can use the following methods to identify the active policies:
 
 ### Azure Resource Graph Explorer
 
-To identify active policies in your subscription using [Azure Resource Graph Explorer](https://ms.portal.azure.com/#view/HubsExtension/ArgQueryBlade), run the following query that includes the old Defender for Storage policies. If you have custom policies, modify the query accordingly:
+To identify active policies in your subscription using [Azure Resource Graph Explorer](https://ms.portal.azure.com/#view/HubsExtension/ArgQueryBlade), run the following query. This query searches Azure Resource Graph for policy assignments scoped to the specified subscription that match the old Defender for Storage policy names. If you have custom policies, modify the query accordingly:
 
 ```kusto
 policyresources
@@ -106,13 +111,14 @@ policyresources
 
 ### PowerShell
 
-To identify active policies in your subscription using PowerShell, run:
+To identify active policies in your subscription using PowerShell, run the following command. This command lists all Azure Policy assignments at the subscription scope so you can verify which Defender for Storage policies are applied:
 
 ```powershell
 Get-AzPolicyAssignment -Scope "/subscriptions/{subscriptionId}"
 ```
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 In this article, you learned about migrating to the new Microsoft Defender for Storage plan.
 

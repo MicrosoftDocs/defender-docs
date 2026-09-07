@@ -2,8 +2,9 @@
 title: Create a ticket in Defender for Cloud 
 description: Learn how to create a ticket in Defender for Cloud that connects and synchronizes with your ServiceNow account.
 ms.topic: how-to
-ms.date: 08/20/2024
+ms.date: 07/03/2026
 ai-usage: ai-assisted
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a user, I want to learn how to Create a ticket in Defender for Cloud for my ServiceNow account.
 ---
 
@@ -12,6 +13,8 @@ ai-usage: ai-assisted
 The integration between Defender for Cloud with ServiceNow's IT Service Management (ITSM) module, allows Defender for Cloud customers to create tickets in Defender for Cloud that connect to a ServiceNow account. ServiceNow tickets are then linked directly to recommendations in Defender for Cloud. When a ticket is connected to a recommendation, the two platforms can facilitate efficient incident management and resolution.
 
 ## Prerequisites
+
+Before you create tickets in ServiceNow, make sure the following prerequisites are met:
 
 - Have an [application registry in ServiceNow](https://www.opslogix.com/knowledgebase/servicenow/kb-create-a-servicenow-api-key-and-secret-for-the-scom-servicenow-incident-connector).
 
@@ -47,7 +50,7 @@ Security admins can create and assign tickets directly from the Defender for Clo
 1. Select the ticket type.
 
    > [!NOTE]
-   > In ServiceNow, there are several types of tickets that can be used to manage and track different types of incidents, requests, and tasks. Only incident, change request, and problem are supported with this integration.
+   > In ServiceNow, there are several types of tickets that can be used to manage and track different types of incidents, requests, and tasks. Only incident, change request, and problem ticket types are supported with the Defender for Cloud and ServiceNow ITSM integration.
 
    :::image type="content" border="true" source="./media/create-ticket-servicenow/assignment-type.png" alt-text="Screenshot of how to complete the assignment type.":::
 
@@ -69,9 +72,10 @@ Security admins can create and assign tickets directly from the Defender for Clo
 After the assignment is created, the Ticket ID assigned to this affected resource will appear next to the resource in the recommendation. The Ticket ID represents the ticket created in the ServiceNow portal. You can select the Ticket ID to navigate to the newly created incident in the ServiceNow portal.
 
 > [!NOTE]
-> When the integration is deleted, all of the assignments will be deleted. Deletion can take up to 24 hrs.
+> When the Defender for Cloud–ServiceNow integration instance is deleted, all associated assignments are also deleted. Deletion can take up to 24 hrs.
 
-## Next step
+<a name="next-step"></a>
+## Next steps
 
 > [!div class="nextstepaction"]
 > [Assign an owner to a recommendation or severity level](create-governance-rule-servicenow.md)

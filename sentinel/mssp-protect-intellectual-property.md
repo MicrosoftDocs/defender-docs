@@ -1,5 +1,5 @@
 ---
-title: Protecting managed security service provider (MSSPs) intellectual property in Microsoft Sentinel
+title: Protect Managed Security Service Provider (MSSPs) Intellectual Property in Microsoft Sentinel
 description: Protect Microsoft Sentinel intellectual property such as analytics rules, hunting queries, playbooks, and workbooks. Compare protection approaches for CSP and EA/PAYG customer purchasing models.
 author: EdB-MSFT
 ms.topic: how-to
@@ -13,7 +13,7 @@ ms.custom: msecd-doc-authoring-1014
 
 ---
 
-# Protecting MSSP intellectual property in Microsoft Sentinel
+# Protect MSSP intellectual property in Microsoft Sentinel
 
 This article describes the methods that managed security service providers (MSSPs) can use to protect intellectual property they've developed in Microsoft Sentinel, such as Microsoft Sentinel analytics rules, hunting queries, playbooks, and workbooks.
 
@@ -24,9 +24,9 @@ The method you choose depends on how each of your customers buys Azure; whether 
 
 If you're reselling Azure as a Cloud Solutions Provider (CSP), you're managing the customer's Azure subscription. Thanks to [Admin-On-Behalf-Of (AOBO)](/partner-center/azure-plan-manage), which lets partner admin agents manage a customer's subscription, users in the Admin Agents group (the Partner Center role whose members administer customer subscriptions) from your MSSP tenant are granted Owner access to the customer's Azure subscription, and the customer has no access by default.
 
-If other users from the MSSP tenant, outside of the Admin Agents group, need to access the customer environment, we recommend that you use [Azure Lighthouse](multiple-tenants-service-providers.md). Azure Lighthouse enables you to grant users or groups with access to a specific scope, such as a resource group or subscription, using one of the built-in roles.
+If other users from the MSSP tenant, outside of the Admin Agents group, need to access the customer environment, we recommend that you use [Azure Lighthouse](multiple-tenants-service-providers.md). Azure Lighthouse allows you to grant users or groups with access to a specific scope, such as a resource group or subscription, using one of the built-in roles.
 
-If you need to provide customer users with access to the Azure environment, we recommend that you grant them access at *resource group* level, rather than the entire subscription, so that you can show / hide parts of the environment as needed.
+If you need to provide customer users with access to the Azure environment, we recommend that you grant them access at *resource group* level rather than the entire subscription, so that you can show/hide parts of the environment as needed.
 
 For example:
 
@@ -37,14 +37,13 @@ For example:
 Even with granting access at the resource group level, customers have access to log data for the resources they can access, such as logs from a VM, even without access to Microsoft Sentinel. For more information, see [Manage access to Microsoft Sentinel data by resource](resource-context-rbac.md).
 
 > [!TIP]
-> If you need to provide your customers with access to the entire subscription, you may want to see the guidance in [Enterprise Agreements (EA) / Pay-as-you-go (PAYG)](#enterprise-agreements-ea--pay-as-you-go-payg).
->
+> If you need to provide your customers with access to the entire subscription, see the guidance in [Protect MSSP intellectual property in Enterprise Agreement and Pay-as-you-go environments](#enterprise-agreements-ea--pay-as-you-go-payg).
 
 ### Sample Microsoft Sentinel CSP architecture
 
 The following image describes how the CSP permissions described in the [Cloud Solutions Providers (CSP)](#cloud-solutions-providers-csp) section might work when providing access to CSP customers:
 
-:::image type="content" source="media/mssp-protect-intellectual-property/csp-customers.png" alt-text="Protect your Microsoft Sentinel intellectual property with CSP customers.":::
+:::image type="content" source="media/mssp-protect-intellectual-property/csp-customers.png" alt-text="Diagram showing how to protect your Microsoft Sentinel intellectual property with CSP customers.":::
 
 In this image:
 
@@ -80,11 +79,11 @@ workspace('<customer-workspace-explicit-identifier>').SecurityEvent
 
 When adding a `workspace` statement to your analytics rules, consider the following:
 
-- **Use the customer's explicit workspace identifier** in the cross workspace query for best performance. For more information, see [Identifier formats for cross workspace queries](/azure/azure-monitor/logs/cross-workspace-query#arguments).
+- **Use the customer's explicit workspace identifier**: Use the customer workplace identifier in the cross workspace query for best performance. For more information, see [Identifier formats for cross workspace queries](/azure/azure-monitor/logs/cross-workspace-query#arguments).
 
-- **No alerts in the customer workspace**. Rules created in this manner, don't create alerts or incidents in the customer workspace. Both alerts and incidents exist in your MSSP workspace only.
+- **No alerts in the customer workspace**: Rules created in this manner don't create alerts or incidents in the customer workspace. Both alerts and incidents exist in your MSSP workspace only.
 
-- **Create separate alerts for each customer**. When you create cross-workspace analytics rules, we also recommend that you use separate alert rules for each customer and detection, because the workspace statement is different in each case.
+- **Create separate alerts for each customer**: When you create cross-workspace analytics rules, we also recommend that you use separate alert rules for each customer and detection, because the workspace statement is different in each case.
 
     You can add the customer name to the alert rule name to easily identify the customer where the alert is triggered. Separate alerts may result in a large number of rules, which you might want to manage using scripting, or [Microsoft Sentinel as Code](https://techcommunity.microsoft.com/t5/azure-sentinel/deploying-and-managing-azure-sentinel-as-code/ba-p/1131928).
 
@@ -92,7 +91,7 @@ When adding a `workspace` statement to your analytics rules, consider the follow
 
     :::image type="content" source="media/mssp-protect-intellectual-property/mssp-rules-per-customer.png" alt-text="Create separate rules in your MSSP workspace for each customer.":::
 
-- **Create separate MSSP workspaces for each customer**. Creating separate rules for each customer and detection may cause you to reach the maximum number of analytics rules for your workspace (512). If you have many customers and expect to reach this limit, you may want to create a separate MSSP workspace for each customer.
+- **Create separate MSSP workspaces for each customer**: Creating separate rules for each customer and detection may cause you to reach the maximum number of analytics rules for your workspace (512). If you have many customers and expect to reach this limit, you may want to create a separate MSSP workspace for each customer.
 
     For example:
 
@@ -102,7 +101,6 @@ When adding a `workspace` statement to your analytics rules, consider the follow
 > The key to using cross-workspace analytics rules successfully is using automation to manage a large set of rules across your workspaces.
 >
 > For more information, see [Cross-workspace analytics rules](https://techcommunity.microsoft.com/t5/azure-sentinel/what-s-new-cross-workspace-analytics-rules/ba-p/1664211)
->
 
 ### Workbooks
 
@@ -118,22 +116,22 @@ If you want the customer to be able to view the workbook visualizations, while s
 
 Exporting your workbook to Power BI:
 
-- **Makes the workbook visualizations easier to share**. You can send the customer a link to the Power BI dashboard, where they can view the reported data, without requiring Azure access permissions.
-- **Enables scheduling**. Configure Power BI to send emails periodically that contain a snapshot of the dashboard for that time.
+- **Makes the workbook visualizations easier to share**: You can send the customer a link to the Power BI dashboard, where they can view the reported data, without requiring Azure access permissions.
+- **Enables scheduling**: Configure Power BI to send emails periodically that contain a snapshot of the dashboard for that time.
 
 For more information, see [Import Azure Monitor log data into Power BI](/azure/azure-monitor/logs/log-powerbi).
 
 ### Playbooks
 
-You can protect your playbooks as follows, depending on where the  analytic rules that trigger the playbook have been created:
+You can protect your playbooks as follows, depending on where the analytic rules that trigger the playbook have been created:
 
-- **Analytics rules created in the MSSP workspace**.  Make sure to create your playbooks in the MSSP tenant, and that you get all incident and alert data from the MSSP workspace. You can attach the playbooks whenever you create a new rule in your workspace.
+- **Analytics rules created in the MSSP workspace**: Make sure to create your playbooks in the MSSP tenant, and that you get all incident and alert data from the MSSP workspace. You can attach the playbooks whenever you create a new rule in your workspace.
 
     For example:
 
     :::image type="content" source="media/mssp-protect-intellectual-property/rules-in-mssp-workspace.png" alt-text="Rules created in the MSSP workspace.":::
 
-- **Analytics rules created in the customer workspace**. Use Azure Lighthouse to attach analytics rules from the customer's workspace to a playbook hosted in your MSSP workspace. In this case, the playbook gets the alert and incident data, and any other customer information, from the customer workspace.
+- **Analytics rules created in the customer workspace**: Use Azure Lighthouse to attach analytics rules from the customer's workspace to a playbook hosted in your MSSP workspace. In this case, the playbook gets the alert and incident data, and any other customer information, from the customer workspace.
 
     For example:
 
@@ -146,11 +144,8 @@ However, if the playbook needs to access non-Azure resources in the customer’s
 > [!NOTE]
 > If you use automation rules together with your playbooks, you must set the automation rule permissions on the resource group where the playbooks live.
 > For more information, see [Permissions for automation rules to run playbooks](automate-incident-handling-with-automation-rules.md#permissions-for-automation-rules-to-run-playbooks).
->
 
-## Next steps
-
-For more information, see:
+## Related content
 
 - [Microsoft Sentinel Technical Playbook for MSSPs](https://cloudpartners.transform.microsoft.com/download?assetname=assets/Azure-Sentinel-Technical-Playbook-for-MSSPs.pdf&download=1)
 - [Manage multiple tenants in Microsoft Sentinel as an MSSP](multiple-tenants-service-providers.md)

@@ -1,13 +1,13 @@
 ---
 title: Microsoft Defender for Endpoint - Mobile Threat Defense
 ms.reviewer: tdoucette, sunasing, denishdonga
-description: Overview of Mobile Threat Defense in Microsoft Defender for Endpoint
+description: Learn how the Microsoft Defender for Endpoint mobile threat defense solution protects Android and iOS devices against web, network, and app-based threats.
 ms.service: defender-endpoint
 ms.subservice: onboard
 ms.author: lwainstein
 author: limwainstein
 ms.localizationpriority: medium
-ms.date: 03/19/2026
+ms.date: 07/20/2026
 ms.collection:
 - m365-security
 - tier2
@@ -21,12 +21,15 @@ appliesto:
 
 Microsoft Defender for Endpoint on Android and iOS is our **mobile threat defense (MTD)** solution. Companies are often proactive in protecting computers from vulnerabilities and attacks, but mobile devices often go unmonitored and unprotected. Although mobile platforms have some built-in protection (for example, app isolation and vetted consumer app stores), these platforms remain vulnerable to web-based or other sophisticated attacks. As more people use devices to access sensitive work information, it's imperative that companies deploy an MTD solution to protect devices and resources.
 
+> [!NOTE]
+> This overview covers the Microsoft Defender for Endpoint mobile threat defense solution. Don't confuse it with the Android Mobile Threat Defense (MTD) Role, which is an Android Enterprise platform role that you assign to Defender for Endpoint for additional platform-level protections. For more information, see [Android Mobile Threat Defense (MTD) Role for Microsoft Defender for Endpoint](android-mobile-threat-defense-role.md).
+
 Microsoft Defender for Endpoint on Android and iOS provides the following key capabilities:
 
 |Capability|Description|
 |---|---|
 |Web Protection|Anti-phishing, blocking unsafe network connections, and support for custom indicators for URLs and domains. (File and IP indicators aren't currently supported.)|
-|Malware Protection (Android-only)|Scanning for malicious apps and APK Files.|
+|Malware Protection (Android-only)|Scanning for malicious apps, APK files, and non-APK files, such as documents, archives, and scripts. For more information, see [Configure non-APK file scanning](android-configure.md#configure-non-apk-file-scanning).|
 |Jailbreak Detection (iOS-only)|Detection of jailbroken devices.|
 |Root Detection (Android - Preview)|Detection of rooted devices.|
 |Microsoft Defender Vulnerability Management (MDVM)|Vulnerability assessment of onboarded mobile devices. Includes OS and Apps vulnerabilities assessment for both Android and iOS. For more information, see [What is Microsoft Defender Vulnerability Management](/defender-vulnerability-management/defender-vulnerability-management).|
@@ -165,6 +168,7 @@ Need help with deploying or configuring Defender for Endpoint on Android & iOS? 
 
 ## Resources
 
+- [Android Mobile Threat Defense (MTD) Role for Microsoft Defender for Endpoint](android-mobile-threat-defense-role.md)
 - [Microsoft Defender for Endpoint on Android](microsoft-defender-endpoint-android.md)
 - [Microsoft Defender for Endpoint on iOS](microsoft-defender-endpoint-ios.md)
 - Stay informed about upcoming releases by reading our [announcements](https://aka.ms/mdeblog).

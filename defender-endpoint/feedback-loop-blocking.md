@@ -28,7 +28,7 @@ appliesto:
 
 ## Overview
 
-Feedback-loop blocking, also referred to as rapid protection, is a component of [behavioral blocking and containment capabilities](behavioral-blocking-containment.md) in [Microsoft Defender for Endpoint](/windows/security/threat-protection/). With feedback-loop blocking, devices across your organization are better protected from attacks. 
+Feedback-loop blocking, also referred to as rapid protection, is a component of [behavioral blocking and containment capabilities](behavioral-blocking-containment.md) in [Microsoft Defender for Endpoint](microsoft-defender-endpoint.md). With feedback-loop blocking, devices across your organization are better protected from attacks.
 
 ## Prerequisites
 
@@ -55,7 +55,7 @@ If your organization is using Defender for Endpoint, feedback-loop blocking is e
 
 - [Attack surface reduction](attack-surface-reduction-rules-overview.md)
 
-- [Next-generation protection](/windows/security/threat-protection/microsoft-defender-antivirus/configure-microsoft-defender-antivirus-features) (antivirus)
+- [Next-generation protection](configure-microsoft-defender-antivirus-features.md) (antivirus)
 
 > [!TIP]
 > If you're looking for Antivirus related information for other platforms, see:
@@ -72,6 +72,4 @@ If your organization is using Defender for Endpoint, feedback-loop blocking is e
 - [Behavioral blocking and containment](behavioral-blocking-containment.md)
 
 - [(Blog) Behavioral blocking and containment: Transforming optics into protection](https://www.microsoft.com/security/blog/2020/03/09/behavioral-blocking-and-containment-transforming-optics-into-protection/)
-
-
 

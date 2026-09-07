@@ -69,7 +69,7 @@ items:
             displayName: standalone
     - name: Configure Windows event auditing
       href: deploy/configure-windows-event-collection.md
-  - name: Migrate from sensor v2 to sensor v3 (Preview)
+  - name: Migrate from sensor v2 to sensor v3
     href: deploy/migrate-to-sensor-v3.md
   - name: Validate the sensor deployment
     href: deploy/test-sensor.md
@@ -160,8 +160,6 @@ items:
     items:
     - name: Manage related identities and accounts
       href: manage-related-identities-accounts.md
-    - name: Create custom account correlation rules
-      href: custom-account-correlation-rules.md
   - name: View and manage health issues
     href: health-alerts.md
   - name: Best practices for security testing
@@ -184,6 +182,8 @@ items:
       href: vpn-integration.md
     - name: Set entity tags
       href: entity-tags.md
+    - name: Account correlation rules
+      href: custom-account-correlation-rules.md
     - name: Configure detection exclusions
       href: exclusions.md
     - name: Email and syslog notifications

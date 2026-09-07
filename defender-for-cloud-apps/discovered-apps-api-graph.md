@@ -2,10 +2,10 @@
 title: Work with discovered apps via Graph API | Microsoft Defender for Cloud Apps
 description: Learn how to work with apps discovered by Microsoft Defender for Cloud Apps via Graph API.
 ms.topic: how-to #Don't change
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.reviewer: Mravela
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 #customer intent: As a security engineer, I want to work with discovered apps via API so that I can customize and automate the Microsoft Defender for Cloud Apps **Discovered apps** page functionality.
 ---
 
@@ -35,16 +35,16 @@ For more information, see:
 
 ## Get data about discovered apps
 
-To get a high level summary of all the data available on your **Discovered apps** page, run the following GET command:
+To list all available uploaded streams and get a high-level summary of the data available on your **Discovered apps** page, run the following GET command. The response includes the stream IDs you need for subsequent queries:
 
 ```http
 GET https://graph.microsoft.com/beta/security/dataDiscovery/cloudAppDiscovery/uploadedStreams
 ```
 
-To drill down to data for a specific stream:
+To drill down to data for a specific stream returned by the previous GET request:
 
-1. Copy the relevant `<streamID>` value from the `GET .../uploadedStreams` response.
-1. Run the following GET command using the `<streamID>` value:
+1. Copy the relevant `<streamID>` value (the `id` property of the uploaded stream) from the `GET .../uploadedStreams` response.
+1. Run the following GET command, replacing `<streamId>` with the `id` value from the previous response:
 
     ```http
     GET https://graph.microsoft.com/beta/security/dataDiscovery/cloudAppDiscovery/uploadedStreams/<streamId>/aggregatedAppsDetails(period=duration'P90D')
@@ -60,7 +60,7 @@ GET https://graph.microsoft.com/beta/security/dataDiscovery/cloudAppDiscovery/
 
 ## Get the userIdentifier of all users, devices, or IP addresses using a specific app
 
-Identify the users, devices, or IP addresses that are currently using a specific app, run one of the following commands:
+After retrieving an app `<id>` from the `aggregatedAppsDetails` response, run one of the following commands to identify the users, devices, or IP addresses that are currently using that app:
 
 - **To return users**:
 
@@ -82,7 +82,7 @@ Identify the users, devices, or IP addresses that are currently using a specific
 
 ## Use filters to see apps by category
 
-Use filters to see apps of a specific category, such as apps that are categorized as *Marketing*, and are also not HIPPA compliant. For example, run:
+Use filters to see apps of a specific category, such as apps that are categorized as *Marketing*, and are also not HIPPA compliant. For example, the following request returns marketing-category apps from the specified stream that are marked as not HIPAA compliant:
 
 ```http
 GET  https://graph.microsoft.com/beta/security/dataDiscovery/cloudAppDiscovery/uploadedStreams/<MDEstreamId>/aggregatedAppsDetails (period=duration 'P30D')?$filter= (appInfo/Hippa eq 'false') and category eq 'Marketing'  

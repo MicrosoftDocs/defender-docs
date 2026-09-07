@@ -2,9 +2,9 @@
 title: Validate alerts in Microsoft Defender for Cloud
 description: Learn how to validate security alerts in Microsoft Defender for Cloud to ensure your system is properly configured and can effectively monitor threats.
 ms.topic: how-to
-ms.custom: linux-related-content
+ms.custom: linux-related-content, msecd-doc-authoring-1013
 #customer intent: As a security admin, I want to validate Microsoft Defender for Cloud alerts so that I can confirm detections and response workflows are working as expected.
-ms.date: 05/25/2026
+ms.date: 07/03/2026
 ai-usage: ai-assisted
 ---
 
@@ -14,7 +14,7 @@ This article explains how to validate that your system is configured for Microso
 
 ## What are security alerts?
 
-Alerts are notifications that Defender for Cloud generates when it detects threats on your resources. It prioritizes and lists the alerts along with the information needed to quickly investigate the problem. Defender for Cloud also provides recommendations to remediate an attack.
+Alerts are notifications that Defender for Cloud generates when it detects threats on your resources. Defender for Cloud ranks alerts by severity and lists them with key details. You can use this information to quickly investigate each problem. Defender for Cloud also provides steps to help you remediate an attack.
 
 For more information, see [Security alerts in Defender for Cloud](alerts-overview.md) and [Managing and responding to security alerts](manage-respond-alerts.md).
 
@@ -24,7 +24,7 @@ To receive all the alerts, your machines and the connected Log Analytics workspa
 
 ## Generate sample security alerts
 
-If you're using the new preview alerts experience as described in [Manage and respond to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md), you can create sample alerts from the security alerts page in the Azure portal.
+If you use the new preview alerts experience, you can create sample alerts from the security alerts page in the Azure portal. For more details, see [Manage and respond to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md).
 
 ## Create sample alerts
 
@@ -46,7 +46,7 @@ A notification appears letting you know that the sample alerts are created:
 
 :::image type="content" source="media/alert-validation/notification-sample-alerts-creation.png" alt-text="Screenshot showing notification that the sample alerts are being generated." lightbox="media/alert-validation/notification-sample-alerts-creation.png":::
 
-After a few minutes, the alerts appear on the security alerts page. They also appear anywhere else that you've configured to receive your Microsoft Defender for Cloud security alerts (connected SIEMs, email notifications, and so on).
+After a few minutes, the sample alerts appear on the security alerts page. The sample alerts also appear anywhere else that you've configured to receive your Microsoft Defender for Cloud security alerts (connected SIEMs, email notifications, and so on).
 
 :::image type="content" source="media/alert-validation/sample-alerts.png" alt-text="Screenshot showing sample alerts in the security alerts list." lightbox="media/alert-validation/sample-alerts.png":::
 
@@ -55,11 +55,12 @@ After a few minutes, the alerts appear on the security alerts page. They also ap
 
 ## Simulate alerts on your Azure virtual machines (VMs) (Windows)
 
-Before you begin, make sure that Microsoft Defender for Endpoint runs with Real-Time protection enabled. To verify this setting, see [Configure real-time protection in Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus).
+Before you begin, make sure that:
 
-After the Microsoft Defender for Endpoint agent is installed on your machine as part of Defender for Servers integration, follow these steps on the machine where you want to simulate the attacked resource.
+- The Defender for Endpoint agent is installed on your machine through Defender for Servers.
+- Microsoft Defender for Endpoint has Real-Time protection turned on. To check this setting, see [Configure real-time protection in Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus).
 
-Open an elevated command-line prompt on the device and run the script:
+On the machine you want to test, open an elevated command prompt and run the script:
 
 1. Go to **Start** and type `cmd`.
 1. Right-select **Command Prompt** and select **Run as administrator**.
@@ -72,24 +73,27 @@ Open an elevated command-line prompt on the device and run the script:
 
     :::image type="content" source="media/alert-validation/powershell-no-exit.png" alt-text="Screenshot showing PowerShell message line." lightbox="media/alert-validation/powershell-no-exit.png":::
 
-Alternatively, you can use the [EICAR](https://www.eicar.org/download-anti-malware-testfile/) test string to perform this test. Create a text file, paste the EICAR line, and save the file as an executable file to your machine's local drive.
+Alternatively, you can use the [EICAR](https://www.eicar.org/download-anti-malware-testfile/) test string to simulate the alert on Windows. Create a text file, paste the EICAR line, and save the file as an executable file to your machine's local drive.
 
 ## Simulate alerts on your Azure virtual machines (VMs) (Linux)
 
-Before you begin, make sure that Microsoft Defender for Endpoint runs with Real-Time protection enabled. To verify this setting, see [Configure real-time protection in Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus).
+Before you begin, make sure that:
 
-After the Microsoft Defender for Endpoint agent is installed on your machine as part of Defender for Servers integration, follow these steps from the machine you want to be the attacked resource of the alert:
+- The Microsoft Defender for Endpoint agent is installed on your machine as part of Defender for Servers integration.
+- Microsoft Defender for Endpoint runs with Real-Time protection enabled. To verify this setting, see [Configure real-time protection in Microsoft Defender Antivirus](/microsoft-365/security/defender-endpoint/configure-real-time-protection-microsoft-defender-antivirus).
+
+On the machine where you want to simulate the attacked resource, follow these steps:
 
 1. Open a Terminal window, copy and run the following command: `curl -O https://secure.eicar.org/eicar.com.txt`
-1. The Command Prompt window closes automatically. If successful, a new alert should appear in Defender for Cloud Alerts blade in 10 minutes.
+1. The Terminal window closes automatically. If successful, a new alert should appear in the Defender for Cloud Alerts blade within 10 minutes.
 
 ## Simulate alerts on Kubernetes
 
-Defender for Containers provides security alerts for your clusters and underlying cluster nodes. Defender for Containers monitors the control plane (API server) and the containerized workload.
+Defender for Containers creates alerts for your clusters and cluster nodes. It watches both the control plane (API server) and the container workload.
 
-You can simulate alerts for the control plane and the workload using the [Kubernetes alerts simulation tool](alerts-containers.md#kubernetes-alerts-simulation-tool).
+To simulate alerts for the Defender for Containers control plane and containerized workload, use the [Kubernetes alerts simulation tool](alerts-containers.md#kubernetes-alerts-simulation-tool).
 
-Learn more about defending your Kubernetes nodes and clusters with [Microsoft Defender for Containers](defender-for-containers-introduction.md).
+To learn more, see [Microsoft Defender for Containers](defender-for-containers-introduction.md).
 
 ## Simulate alerts for App Service
 
@@ -104,7 +108,8 @@ You can simulate alerts for resources running on [App Service](/azure/app-servic
     1. Copy the website name into the URL: `https://<website-name>.azurewebsites.net/This_Will_Generate_ASC_Alert`.
 1. An alert is generated within about 2 to 4 hours.
 
-## Simulate alerts for Storage ATP (Advanced Threat Protection)
+<a name="simulate-alerts-for-storage-atp-advanced-threat-protection"></a>
+## Simulate alerts for Storage Advanced Threat Protection (ATP)
 
 To validate threat detection for Microsoft Defender for Storage, complete the following steps:
 
@@ -124,7 +129,8 @@ To validate threat detection for Microsoft Defender for Storage, complete the fo
 1. Open the [Tor browser download page](https://www.torproject.org/download/) and install the Tor browser.
 1. In the Tor browser, navigate to the SAS URL. You should now see and can download the file that was uploaded.
 
-## Test AppServices alerts
+<a name="test-appservices-alerts"></a>
+## Simulate alerts for App Service (EICAR)
 
 **To simulate an app services EICAR alert:**
 
@@ -134,11 +140,12 @@ To validate threat detection for Microsoft Defender for Storage, complete the fo
 
 ## Validate Azure Key Vault Threat Detection
 
-To validate Azure Key Vault threat detection, complete the prerequisites and then follow these steps:
+To validate Azure Key Vault threat detection, [create a key vault by using the Azure portal](/azure/key-vault/general/quick-create-portal) and then follow these steps:
 
 ### Prerequisites
 
 - [Create a key vault by using the Azure portal](/azure/key-vault/general/quick-create-portal).
+- [Add a secret to the key vault](/azure/key-vault/secrets/quick-create-portal#add-a-secret-to-key-vault).
 
 ### Validation steps
 
@@ -152,9 +159,10 @@ To validate Azure Key Vault threat detection:
 1. In the TOR Browser, sign out from the Azure portal and close the browser.
 1. After some time, Defender for Key Vault triggers an alert with detailed information about this suspicious activity.
 
-## Next steps
+<a name="next-steps"></a>
+## Related content
 
-This article introduced you to the alerts validation process. Now that you're familiar with this validation, explore the following articles:
+Learn more about alerts and threat detection in Defender for Cloud:
 
 - [Validating Azure Key Vault threat detection in Microsoft Defender for Cloud](https://techcommunity.microsoft.com/t5/microsoft-defender-for-cloud/validating-azure-key-vault-threat-detection-in-microsoft/ba-p/1220336)
 - [Managing and responding to security alerts in Microsoft Defender for Cloud](manage-respond-alerts.md) - Learn how to manage alerts and respond to security incidents in Defender for Cloud.

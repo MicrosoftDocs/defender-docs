@@ -6,7 +6,7 @@ ms.author: chrisda
 ms.reviewer: aylamckorkle
 ms.service: defender-office-365
 ms.topic: article
-ms.date: 06/11/2025
+ms.date: 07/17/2026
 ms.custom:
 ms.assetid:
 ms.collection:
@@ -44,6 +44,7 @@ The rest of this article describes the operation, goals, and deployment consider
 2. **Select an approved non-Microsoft security vendor**:
    - Darktrace/EMAIL
    - KnowBe4 Defend Platform
+   - VIPRE Integrated Email Security (IES)
 
 3. **Enable integration**: After you onboard to the non-Microsoft security vendor, their solution is seamlessly and automatically incorporated into your security architecture.
 
@@ -174,7 +175,7 @@ A: The highest verdict takes precedence using the following order (from most ser
 
 ### Q: What if I use a different non-Microsoft vendor?
 
-A: Currently, ICES Vendor Ecosystem integration is available only for Darktrace and KnowBe4. If you use a different ICES/CAPES vendor, you can't take advantage of this integration.
+A: Currently, ICES Vendor Ecosystem integration is available only for Darktrace, KnowBe4, and VIPRE Security Group. If you use a different ICES/CAPES vendor, you can't take advantage of this integration.
 
 ### Q: Is there a charge for the non-Microsoft verdict data and actions by Defender for Office 365 policies?
 

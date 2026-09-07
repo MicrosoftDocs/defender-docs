@@ -6,13 +6,13 @@ ms.author: pauloliveria
 author: poliveria  
 ms.reviewer: yoninave
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/01/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
 ms.collection: usx-security
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 
 
 #Customer intent: As a security admin, I want to integrate my threat intelligence platform with Microsoft Sentinel to ingest threat intelligence, generating alerts and incidents so that I can centralize and enhance threat detection and response.
@@ -25,7 +25,7 @@ ms.custom: msecd-doc-authoring-1014
 > This data connector will be deprecated and will stop collecting data in **June 2026**. We recommend transitioning to the new Threat Intelligence Upload Indicators API data connector as soon as possible to ensure uninterrupted data collection.
 > For more information, see [Connect your threat intelligence platform to Microsoft Sentinel with the upload API](connect-threat-intelligence-upload-api.md).
 
-Many organizations use threat intelligence platform (TIP) solutions to aggregate threat indicator feeds from various sources. From the aggregated feed, the data is curated to apply to security solutions such as network devices, EDR/XDR solutions, or security information and event management (SIEM) solutions such as Microsoft Sentinel. By using the TIP data connector, you can use these solutions to import threat indicators into Microsoft Sentinel. 
+Many organizations use threat intelligence platform (TIP) solutions to aggregate threat indicator feeds from various sources. From the aggregated feed, the data is curated to apply to security solutions such as network devices, EDR/XDR solutions, or security information and event management (SIEM) solutions such as Microsoft Sentinel. By using the TIP data connector, you can use your TIP solution to import threat indicators into Microsoft Sentinel. 
 
 Because the TIP data connector works with the [Microsoft Graph Security tiIndicators API](/graph/api/resources/tiindicator) to import threat indicators, you can use the connector to send indicators to Microsoft Sentinel (and to other Microsoft security solutions like Defender XDR) from any other custom TIP that can communicate with that API.
 
@@ -64,15 +64,14 @@ Whether you're working with a TIP or a custom solution, the tiIndicators API req
 - Directory (tenant) ID
 - Client secret
 
-You can get this information from Microsoft Entra ID through app registration, which includes the following three steps:
+You can get the application ID, tenant ID, and client secret from Microsoft Entra ID through app registration, which includes the following three steps:
 
 - Register an app with Microsoft Entra ID.
 - Specify the permissions required by the app to connect to the Microsoft Graph tiIndicators API and send threat indicators.
-- Get consent from your organization to grant these permissions to this application.
+- Get consent from your organization to grant the Microsoft Graph tiIndicators API permissions to this application.
 
 <a name='register-an-application-with-azure-active-directory'></a>
-
-#### Register an application with Microsoft Entra ID
+### Register an application with Microsoft Entra ID
 
 Register an app in Microsoft Entra ID to obtain the application ID and tenant ID needed for TIP integration.
 
@@ -82,9 +81,9 @@ Register an app in Microsoft Entra ID to obtain the application ID and tenant ID
 
     :::image type="content" source="media/connect-threat-intelligence-tip/threat-intel-register-application.png" alt-text="Screenshot that shows registering an application.":::
 
-1. On the screen that opens, copy the **Application (client) ID** and **Directory (tenant) ID** values. You need these two pieces of information later to configure your TIP or custom solution to send threat indicators to Microsoft Sentinel. The third piece of information you need, the client secret, comes later.
+1. On the screen that opens, copy the **Application (client) ID** and **Directory (tenant) ID** values. You need the application ID and tenant ID later to configure your TIP or custom solution to send threat indicators to Microsoft Sentinel. The third piece of information you need, the client secret, comes later.
 
-#### Specify the permissions required by the application
+### Specify the permissions required by the application
 
 Grant the application the API permission it needs to send threat indicators.
 
@@ -96,13 +95,13 @@ Grant the application the API permission it needs to send threat indicators.
 
 1. On the **Select an API** page, select the **Microsoft Graph** API. Then choose from a list of Microsoft Graph permissions.
 
-1. At the prompt **What type of permissions does your application require?**, select **Application permissions**. This permission is the type used by applications that authenticate with app ID and app secrets (API keys).
+1. At the prompt **What type of permissions does your application require?**, select **Application permissions**. Application permissions are used by applications that authenticate with app ID and app secrets (API keys).
 
-1. Select **ThreatIndicators.ReadWrite.OwnedBy**, and then select **Add permissions** to add this permission to your app's list of permissions.
+1. Select **ThreatIndicators.ReadWrite.OwnedBy**, and then select **Add permissions** to add the **ThreatIndicators.ReadWrite.OwnedBy** permission to your app's list of permissions.
 
     :::image type="content" source="media/connect-threat-intelligence-tip/threat-intel-api-permissions-1.png" alt-text="Screenshot that shows specifying permissions.":::
 
-#### Get consent from your organization to grant these permissions
+### Get consent from your organization to grant these permissions
 
 1. To grant consent, a privileged role is required. For more information, see [Grant tenant-wide admin consent to an application](/entra/identity/enterprise-apps/grant-admin-consent?pivots=portal).
 
@@ -123,9 +122,10 @@ After your app is registered and permissions are granted, you need to get a clie
 1. Select **Add**, and then copy the client secret.
 
     > [!IMPORTANT]
-    > You must copy the client secret before you leave this screen. You can't retrieve this secret again if you go away from this page. You need this value when you configure your TIP or custom solution.
+    > You must copy the client secret before you leave this screen. You can't retrieve this secret again if you go away from this page. You need the client secret when you configure your TIP or custom solution.
 
-## Input this information into your TIP solution or custom application
+<a name="input-this-information-into-your-tip-solution-or-custom-application"></a>
+## Enter the application ID, tenant ID, and client secret into your TIP solution or custom application
 
 You now have all three pieces of information you need to configure your TIP or custom solution to send threat indicators to Microsoft Sentinel:
 
@@ -139,11 +139,11 @@ Enter these values in the configuration of your integrated TIP or custom solutio
 
 1. For the action, specify **alert**.
 
-After the configuration is finished, threat indicators are sent from your TIP or custom solution, through the Microsoft Graph tiIndicators API, targeted at Microsoft Sentinel.
+After you finish configuring your TIP or custom solution with the application ID, tenant ID, and client secret, threat indicators are sent from your TIP or custom solution, through the Microsoft Graph tiIndicators API, targeted at Microsoft Sentinel.
 
 ## Enable the TIP data connector in Microsoft Sentinel
 
-The last step in the integration process is to enable the TIP data connector in Microsoft Sentinel. Enabling the connector is what allows Microsoft Sentinel to receive the threat indicators sent from your TIP or custom solution. These indicators are available to all Microsoft Sentinel workspaces for your organization. To enable the TIP data connector for each workspace, follow these steps:
+The last step in the integration process is to enable the TIP data connector in Microsoft Sentinel. Enabling the TIP data connector allows Microsoft Sentinel to receive the threat indicators sent from your TIP or custom solution. These indicators are available to all Microsoft Sentinel workspaces for your organization. To enable the TIP data connector for each workspace, follow these steps:
 
 1. For Microsoft Sentinel in the [Azure portal](https://portal.azure.com), under **Content management**, select **Content hub**. <br>For Microsoft Sentinel in the [Defender portal](https://security.microsoft.com/), select **Microsoft Sentinel** > **Content management** > **Content hub**.
 
@@ -157,7 +157,7 @@ The last step in the integration process is to enable the TIP data connector in 
 
 1. Find and select the **Threat Intelligence Platforms - BEING DEPRECATED** data connector, and then select **Open connector page**.
 
-1. Because you already finished the app registration and configured your TIP or custom solution to send threat indicators, the only step left is to select **Connect**.
+1. Because you already finished the app registration and configured your TIP or custom solution to send threat indicators, select **Connect** to finish enabling the TIP data connector.
 
 Within a few minutes, threat indicators should begin flowing into this Microsoft Sentinel workspace. You can find the new indicators on the **Threat intelligence** pane, which you can access from the Microsoft Sentinel menu.
 

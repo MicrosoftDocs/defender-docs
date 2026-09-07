@@ -6,7 +6,7 @@ ms.author: chrisda
 ms.topic: how-to
 ms.service: defender-business
 ms.localizationpriority: medium
-ms.date: 06/11/2026
+ms.date: 07/03/2026
 ms.reviewer: efratka, nehabha
 ms.collection:
 - SMB
@@ -15,7 +15,7 @@ ms.collection:
 - highpri
 - tier1
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1013
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Assign security roles and permissions in Microsoft Defender for Business
@@ -34,7 +34,8 @@ Your organization's security team needs certain permissions to perform tasks, su
 
 Permissions are granted through certain roles in the [Microsoft Entra ID](/entra/identity/role-based-access-control/manage-roles-portal). These roles can be assigned in the Microsoft 365 admin center or in the Microsoft Entra admin center.
 
-## What to do
+<a name="what-to-do"></a>
+## Choose where to assign roles and permissions
 
 Use the following links to learn about Defender for Business roles, manage assignments, and continue to the next steps:
 
@@ -103,7 +104,7 @@ Use the following steps in the Microsoft Entra admin center to open a user accou
 
 ## Next steps
 
-Continue with the following articles to complete setup:
+After you assign roles and permissions, continue with the remaining Defender for Business setup steps:
 
-- Proceed to [Step 4: Set up email notifications for your security team](mdb-email-notifications.md).
-- [Step 5: Onboard devices to Microsoft Defender for Business](mdb-onboard-devices.md)
+- [Set up email notifications for your security team](mdb-email-notifications.md). Configure email notifications so your security team receives alerts about new threats and vulnerabilities.
+- [Onboard devices to Microsoft Defender for Business](mdb-onboard-devices.md). Enroll your organization's devices so they're protected by Defender for Business.

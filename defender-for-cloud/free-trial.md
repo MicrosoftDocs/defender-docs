@@ -2,7 +2,8 @@
 title: Check the status of your free trial
 description: Learn how to check the status of your 30 day free trial of Microsoft Defender for Cloud.
 ms.topic: how-to
-ms.date: 05/28/2026
+ms.date: 07/03/2026
+ms.custom: msecd-doc-authoring-1013
 #customer intent: As a new user, I want to check the status of my free trial of Microsoft Defender for Cloud to understand my usage and remaining trial period.
 ai-usage: ai-assisted
 ---
@@ -15,9 +16,11 @@ The free trial lasts for 30 days, or until you reach the usage limit for certain
 
 Once the usage limit is met or once the 30-day trial ends, charges begin based on the plans enabled in your environment. To learn more about these plans, their usage limits, and associated costs, see the [Defender for Cloud pricing page](https://azure.microsoft.com/pricing/details/defender-for-cloud/). You can also [estimate costs with the Defender for Cloud cost calculator](cost-calculator.md).
 
-If you have multiple subscriptions, each subscription has its own free trial period. You need to check the status of each subscription's free trial individually. Azure gives you a 30-day free trial every time you activate a new plan. For example, if you activate Defender for Servers, you get 30 days free. If at a later time you activate Defender for Cloud Security Posture Management (DCSPM), you get another 30 days for that plan. Amazon Web Service (AWS) and Google Cloud Project get one trial per account or GCP project, regardless of which plan is enabled or when.
+If you have multiple subscriptions, each subscription has its own free trial period. You need to check the status of each subscription's free trial individually. Azure gives you a 30-day free trial every time you activate a new plan. For example, if you activate Defender for Servers, you get 30 days free. If at a later time you activate Defender for Cloud Security Posture Management (DCSPM), you get another 30 days for that plan. Amazon Web Service (AWS) gets one trial per AWS account, and Google Cloud Project gets one trial per GCP project, regardless of which plan is enabled or when.
 
 ## Prerequisites
+
+Before you check your free trial status, make sure you meet the following requirements:
 
 - You need a Microsoft Azure subscription. If you don't have an Azure subscription, you can [sign up for a free subscription](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn).
 
@@ -41,7 +44,7 @@ Azure allows you to check the status of your free trial by using the built-in Az
 
 1. Select **PowerShell**.
 
-1. Run the following command to check the status of your free trial:
+1. Run the following command to list the Defender for Cloud pricing configurations for your subscription, including the free trial status of each plan:
 
    ```powershell
    Get-AzSecurityPricing

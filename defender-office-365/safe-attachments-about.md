@@ -10,7 +10,10 @@ ms.collection:
   - tier1
 description: Admins can learn about the Safe Attachments feature in Microsoft Defender for Office 365.
 ms.service: defender-office-365
-ms.date: 05/22/2026
+ms.custom:
+  - msecd-doc-authoring-1015
+ms.date: 07/17/2026
+ai-usage: ai-assisted
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/defender-office-365/mdo-about#defender-for-office-365-plan-1-vs-plan-2-cheat-sheet" target="_blank">Microsoft Defender for Office 365 Plan 1 and Plan 2</a>
   - ✅ <a href="https://learn.microsoft.com/defender-xdr/microsoft-365-defender" target="_blank">Microsoft Defender XDR</a>
@@ -87,6 +90,8 @@ This section describes the settings in Safe Attachments policies:
 
   The recommendation for Standard and Strict policy settings is to enable redirection. For more information, see [Safe Attachments settings](recommended-settings-for-eop-and-office365.md#safe-attachments-settings).
 
+- **Block messages containing encrypted attachments that could not be scanned**: When you select **Block** as the **Safe Attachments unknown malware response**, you can turn on this setting to quarantine messages that contain encrypted (password-protected) attachments. This setting applies when Safe Attachments can't scan or detonate the attachments, for example, when the password isn't available. Affected messages are held in quarantine instead of being delivered until an admin or the recipient releases them. For more information, see the [Encrypted (password-protected) attachments in Safe Attachments policies](#encrypted-password-protected-attachments-in-safe-attachments-policies) section later in this article.
+
 - **Priority**: If you create multiple policies, you can specify the order that they're applied. No two policies can have the same priority, and policy processing stops after the first policy is applied (the highest priority policy for that recipient).
 
   For more information about the order of precedence and how multiple policies are evaluated and applied, see [Order and precedence of email protection](how-policies-and-protections-are-combined.md).
@@ -120,6 +125,55 @@ There are scenarios where Dynamic Delivery is unable to replace attachments in m
 - Exchange Online organizations where Exclaimer is enabled. To resolve this issue, see [KB4014438](https://support.microsoft.com/help/4014438).
 - [S/MIME)](/exchange/security-and-compliance/smime-exo/smime-exo) encrypted messages.
 - You configured the Dynamic Delivery action in a Safe Attachments policy, but the recipient doesn't support Dynamic Delivery (for example, the recipient is a mailbox in an on-premises Exchange organization). However, [Safe Links in Microsoft Defender for Office 365](safe-links-policies-configure.md) is able to scan Office file attachments that contain URLs (if Safe Links scanning of support Office apps is turned on in the applicable Safe Links policy).
+
+## Encrypted (password-protected) attachments in Safe Attachments policies
+
+> [!NOTE]
+> In this context, _encrypted_ means the attachment is password-protected. It doesn't refer to messages or files that are protected by Microsoft Purview Message Encryption, S/MIME, or Rights Management.
+
+Encrypted (password-protected) attachments are common in business workflows, but they create inspection challenges. Safe Attachments opens email attachments in a virtual environment to check them for malicious content (a process known as _detonation_). Safe Attachments can't fully scan or detonate a password-protected attachment unless the password is available (for example, extracted from the email body during scanning).
+
+You configure Safe Attachments policies to quarantine messages that contain password-protected attachments when scanning or detonation can't complete. Affected messages are quarantined instead of delivered. They stay in quarantine until they're released:
+
+- **Admins** can release the message at any time with full authority, without needing the password. For instructions, see [Manage quarantined messages and files as an admin in Microsoft Defender for Office 365](quarantine-admin-manage-messages-files.md).
+- **Users** can self-release their own quarantined message by supplying the password for the attachment, if the assigned quarantine policy allows users to release their own messages. Users can't release these messages directly from a quarantine notification email. Instead, they select **Review message** in the notification to open the message in the Microsoft Defender portal, select **Release email**, and then enter the attachment password. For instructions, see [Find and release quarantined messages as a user in Microsoft Defender for Office 365](quarantine-end-user.md).
+
+On the **Quarantine** page in the Defender portal, these messages have the **Password protected item** quarantine reason value.
+
+When a user supplies the password, Safe Attachments runs a just-in-time detonation (a new scan) of the attachment before release. The password is used only to open and rescan the attachment. It isn't stored.
+
+- If the attachment is found to be safe, the message is released to the mailbox.
+- If the attachment is found to be malicious or still can't be scanned, the message stays in quarantine for an admin to review.
+
+Currently, the password can be submitted only once for each quarantined message. Retrying with another password isn't supported.
+
+By default, this setting evaluates password-protected attachments of all file types. In the **Exclude these attachment types** section, you can exclude specific attachment types from the setting:
+
+- **Acrobat (pdf)**
+- **Archive (zip, gzip, 7z, rar, tar only)**
+- **Office (doc, docx, xls, xlsx, ppt, pptx only)**
+- **All other file types**
+
+Attachments are identified by their true file type, not only by the file name extension.
+
+A **Quarantine policy** value determines what recipients can do with these quarantined messages and whether they receive quarantine notifications. By default, the quarantine policy named DefaultFullAccessWithNotificationPolicy is used. For more information, see [Anatomy of a quarantine policy](quarantine-policies.md#anatomy-of-a-quarantine-policy).
+
+This setting supports messages where a single password unlocks the attachments:
+
+- A message with one password-protected attachment.
+- A message with multiple password-protected attachments that all use the same password. The user enters the password once to evaluate and possibly release the message.
+
+Messages that contain multiple password-protected attachments with different passwords aren't handled by this setting. The same limitation applies to a single archive (for example, a ZIP file) that contains multiple items protected by different passwords. These messages continue to be processed as they are today, without the quarantine and self-release experience.
+
+> [!IMPORTANT]
+> Users should enter only the password for the attachment in the release view. They should never enter account passwords, banking passwords, or other unrelated credentials. Users should supply the attachment password only when they expected the message and can validate the sender and business context. Report unexpected protected messages to your security operations (SecOps) team.
+
+In Defender for Office 365 Plan 2, security operations teams can identify messages with password-protected attachments by using [advanced hunting](/defender-xdr/advanced-hunting-overview):
+
+```kusto
+EmailAttachmentInfo
+| where AdditionalFields contains "IsPasswordProtectedItem"
+```
 
 ## Submit files for analysis
 

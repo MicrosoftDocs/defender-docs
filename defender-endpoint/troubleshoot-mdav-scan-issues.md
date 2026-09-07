@@ -10,7 +10,10 @@ ms.collection:
 - tier3
 ms.topic: troubleshooting
 ms.subservice: ngp
-ms.date: 03/20/2026
+ms.date: 08/20/2026
+ms.custom: msecd-doc-authoring-1015
+ai-usage: ai-assisted
+#customer intent: As a security administrator, I want to troubleshoot Microsoft Defender Antivirus scans so that I can identify and resolve scan configuration and performance issues.
 ---
 
 # Troubleshoot Microsoft Defender Antivirus scan issues
@@ -61,7 +64,7 @@ The following table summarizes antivirus settings in Microsoft Intune for Window
 |Scan|Archive Max Depth||
 |Scan|Archive Max Size||
 |Scan|Check For Signatures Before Running Scan|This policy setting allows you to manage whether a check for new virus and spyware security intelligence occurs before running a scan. It applies to scheduled scans, but has no effect on scans initiated manually from the user interface or scans from the [Command Prompt](command-line-arguments-microsoft-defender-antivirus.md): `MpCmdrun.exe -Scan [Options]`.|
-|Scan|Disable Catchup Full Scan|This policy setting allows you to configure catch-up scans for scheduled full scans. A catch-up scan is a scan that's initiated because a regularly scheduled scan was missed. Usually, these scheduled scans are missed because the computer was turned off at the scheduled time. <br/><br/>If you disable or don't configure this setting, catch-up scans for scheduled full scans occur. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone signs into the computer. If there's no scheduled scan configured, no catch-up scan runs. <br/><br/> If you enable this setting, catch-up scans for scheduled full scans are disabled.|
+|Scan|Disable Catchup Full Scan|This policy setting controls whether catch-up scans run after scheduled full scans are missed. Because the setting name begins with _Disable_, **Enabled** disables catch-up full scans, and **Disabled** enables them. <br/><br/>If you disable this setting and a device misses two consecutive scheduled full scans, a catch-up scan starts the next time someone signs in. Catch-up scans require a configured scheduled scan. <br/><br/>If you don't configure this setting, the client default applies, and catch-up full scans are disabled.|
 |Scan|Enable Low CPU Priority|This policy setting allows you to enable or disable low CPU priority for scheduled scans. <br/>- If you enable this setting, low CPU priority is used during scheduled scans. <br/>- If you disable or don't configure this setting, no changes are made to CPU priority for scheduled scans.|
 |General|Excluded Extensions||
 |General|Excluded Paths||
@@ -187,8 +190,8 @@ For more information, see [Performance analyzer for Microsoft Defender Antivirus
 
 One outcome of this process might be identifying files or paths that you want to exclude from antivirus scans to improve performance. Make sure to review the following articles:
 
-- [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)
-- [Contextual file and folder exclusions](configure-contextual-file-folder-exclusions-microsoft-defender-antivirus.md)
+- [Exclusions overview](defender-endpoint-exclusions-overview.md)
+- [Contextual file and folder exclusions](microsoft-defender-antivirus-exclusions-overview.md#contextual-exclusions)
 
 ## Reviewing Event logs
 
@@ -225,4 +228,4 @@ Get-WinEvent -LogName 'Microsoft-Windows-Windows Defender/Operational' | where i
 ## See also
 
 - [About scheduled quick or full Microsoft Defender Antivirus scans](schedule-antivirus-scans.md)
-- [Exclusions overview](navigate-defender-endpoint-antivirus-exclusions.md)
+- [Exclusions overview](defender-endpoint-exclusions-overview.md)

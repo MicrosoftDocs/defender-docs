@@ -1,6 +1,6 @@
 ---
 title: Manage predictive shielding in Microsoft Defender
-description: Manage the predictive shielding feature in Microsoft Defender.
+description: Review predictive shielding details, enrich prediction data with Defender for Identity, track policy modifications with advanced hunting queries, and undo shielding actions in Microsoft Defender.
 ms.service: defender-xdr
 ms.author: monaberdugo
 author: mberdugo
@@ -11,12 +11,12 @@ ms.collection:
   - usx-security
   - usx-security
 ms.topic: how-to
-ms.date: 06/16/2026
+ms.date: 07/02/2026
 appliesto:
   - Microsoft Defender XDR
   - Microsoft Defender for Endpoint
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Manage predictive shielding in Microsoft Defender (Preview)
@@ -84,7 +84,7 @@ On the incident details page, select the **Activities** tab and filter by the **
 
 ### Review the triggering alert information
 
-To investigate the alert that triggered a specific predictive shielding action, select that action's triggering alert either from the incident details pane or from the activity page.
+To investigate the alert that triggered a specific predictive shielding action, select the triggering alert for the action you are investigating, either from the incident details pane or from the activity page.
 
 :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-view-triggering-alert.png" alt-text="Screenshot of the alert details pane showing relevant alert data." lightbox="media/shield-predict-threats-manage/shield-predict-threats-view-triggering-alert.png":::
 
@@ -102,11 +102,11 @@ To add the Defender for Identity sensor, see [Deploy Microsoft Defender for Iden
 
 ### Enriched data example
 
-In the following scenario:
+This example scenario shows how enriched data enhances predictive shielding:
 
 - Both Microsoft Defender for Endpoint and Microsoft Defender for Identity are enabled in the environment. 
-- An attacker gained a foothold on a jump box and conducted malicious activities that led to compromising a workstation (WSA).
-- The enriched data reveals suspicious PowerShell activities on WSA, **indicating the attacker's intent to perform remote credential harvesting on WSB**.
+- An attacker gained a foothold on a jump box and conducted malicious activities that led to compromising a workstation named WSA.
+- The enriched data reveals suspicious PowerShell activities on WSA, **indicating the attacker's intent to perform remote credential harvesting on another workstation, WSB**.
 - This enrichment adds predictive data on the incident, and indicates intent for further compromise.
 
 :::image type="content" source="media/shield-predict-threats-manage/shield-predict-threats-enriched-data.png" alt-text="Screenshot of enriched predictive shielding data in an incident, showing user and Active Directory details.":::

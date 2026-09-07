@@ -1,16 +1,16 @@
 ---
 title: Connect CyberArk Identity to Microsoft Defender for Identity (Preview)
 description: Learn how to connect your CyberArk Identity app to Defender for Identity using the API connector.
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ms.topic: how-to
 ms. reviewer: Himanch
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Connect CyberArk Identity to Microsoft Defender for Identity (Preview)
 
-This section provides instructions for connecting Microsoft Defender for Identity to your existing CyberArk Identity account using the connector APIs. Connecting Defender for Identity to CyberArk Identity gives you visibility into and control over CyberArk identities.  
+Learn how to connect Microsoft Defender for Identity to your existing CyberArk Identity account by using the connector APIs. Connecting Defender for Identity to CyberArk Identity gives you visibility into and control over CyberArk identities. Before you begin, review the [Prerequisites](#prerequisites) to confirm you have the required roles and permissions.
 
 ## Prerequisites 
 
@@ -20,7 +20,7 @@ Before connecting your CyberArk Identity to Microsoft Defender for Identity, mak
 
 - The System Admin role is required to create an application.
 
-**Microsoft Entra and Defender XDR role-based access options**
+**Microsoft Entra and Defender role-based access options**
 
 To configure the CyberArk Identity connector in Microsoft Defender for Identity, your account must have either of the following access configurations assigned:
 
@@ -30,12 +30,12 @@ To configure the CyberArk Identity connector in Microsoft Defender for Identity,
 
     - Security Admin 
 
-- **Defender XDR Unified RBAC permission:** 
+- **Defender Unified RBAC permission:**
     - Core security settings (manage)
 
 ## Connect CyberArk Identity to Microsoft Defender for Identity 
 
-The following instructions explain how to connect Microsoft Defender for Identity to your dedicated CyberArk Identity account by using the connector APIs. Connecting Defender for Identity to a dedicated CyberArk Identity account gives you visibility into and control over CyberArk Identity use.
+This procedure explains how to connect Microsoft Defender for Identity to a dedicated CyberArk Identity account by using the connector APIs. Connecting Defender for Identity to a dedicated CyberArk Identity account gives you visibility into and control over CyberArk Identity use.
 
 ### Create a custom CyberArk Identity role
 
@@ -51,7 +51,7 @@ Create a custom role in CyberArk Identity with User Management administrative ri
 
 ### Create a CyberArk OAuth Confidential Client
 
-To support ongoing API access, create a new user and assign the custom role.
+To support ongoing API access, create a new user and assign the custom role. If you need to tag identities as privileged accounts in the Microsoft Defender portal, you must also add the user to the **Privileged Cloud Auditors** role.
 
 1. Sign in to CyberArk Identity console as a system administrator.
 1. Navigate to **Identity Administration > Core Services > Users**.

@@ -1,18 +1,18 @@
 ---
 title: Protect your NetDocuments environment | Microsoft Defender for Cloud Apps
 description: Connect NetDocuments to Microsoft Defender for Cloud Apps by using the API connector to gain visibility into activity and detect anomalous behavior.
-ms.date: 06/16/2026
+ms.date: 07/03/2026
 ms.topic: how-to
 ms.reviewer: AmitMishaeli
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # How Defender for Cloud Apps helps protect your NetDocuments environment
 
-As a productivity and collaboration cloud solution, NetDocuments holds sensitive information for an organization. Any abuse of NetDocuments by a malicious actor or any human error might expose an organization's most critical assets and services to potential attacks.
+NetDocuments is a cloud solution for productivity and collaboration that stores sensitive data. Misuse by a bad actor or a human error can expose critical assets to attacks.
 
-Connecting NetDocuments to Defender for Cloud Apps gives security teams improved insights into NetDocuments activities and provides threat detection for anomalous behavior.
+Connect NetDocuments to Defender for Cloud Apps to get better visibility into user activity and detect unusual behavior.
 
 <a name="main-threats"></a>
 ## Main threats to your NetDocuments environment
@@ -41,7 +41,7 @@ The following table lists the policy types you can use to control NetDocuments:
 
 | **Type**                           | **Name**                                                     |
 | ---------------------------------- | ------------------------------------------------------------ |
-| Built-in  anomaly detection policy | [Activity from   anonymous IP addresses](anomaly-detection-policy.md#activity-from-anonymous-ip-addresses)  <br /> [Activity from   infrequent country](anomaly-detection-policy.md#activity-from-infrequent-country) <br /> [Activity from   suspicious IP addresses](anomaly-detection-policy.md#activity-from-suspicious-ip-addresses)  <br /> [Impossible travel](anomaly-detection-policy.md#impossible-travel)  <br /> [Activity   performed by terminated user](anomaly-detection-policy.md#activity-performed-by-terminated-user) (requires Microsoft Entra ID as IdP) <br /> [Unusual file share activities](anomaly-detection-policy.md#unusual-activities-by-user)  <br /> [Unusual file deletion activities](anomaly-detection-policy.md#unusual-activities-by-user) <br /> [Unusual   administrative activities](anomaly-detection-policy.md#unusual-activities-by-user)  <br /> [Unusual multiple file download activities](anomaly-detection-policy.md#unusual-activities-by-user)  |
+| Built-in  anomaly detection policy | [Activity from   anonymous IP addresses](anomaly-detection-policy.md#activity-from-anonymous-ip-addresses)  <br /> [Activity from   infrequent country](anomaly-detection-policy.md#activity-from-infrequent-country) <br /> [Activity from   suspicious IP addresses](anomaly-detection-policy.md#activity-from-suspicious-ip-addresses)  <br /> [Impossible travel](anomaly-detection-policy.md#impossible-travel)  <br /> [Activity   performed by terminated user](anomaly-detection-policy.md#activity-performed-by-terminated-user) (requires Microsoft Entra ID as the identity provider (IdP)) <br /> [Unusual file share activities](anomaly-detection-policy.md#unusual-activities-by-user)  <br /> [Unusual file deletion activities](anomaly-detection-policy.md#unusual-activities-by-user) <br /> [Unusual   administrative activities](anomaly-detection-policy.md#unusual-activities-by-user)  <br /> [Unusual multiple file download activities](anomaly-detection-policy.md#unusual-activities-by-user)  |
 | Activity  policy                   | Built a customized policy by the NetDocuments [Audit Log](https://support.netdocuments.com/hc/en-us/articles/205220260-Consolidated-Activity-Log) activities |
 
 >[!NOTE]
@@ -52,13 +52,13 @@ For more information about creating policies, see [Create a policy](control-clou
 
 ## Automate governance controls
 
-In addition to monitoring for potential threats, you can apply and automate the following NetDocuments governance actions to remediate detected threats:
+You can also apply and automate NetDocuments governance actions to fix detected threats:
 
 | **Type**        | **Action**                                                   |
 | --------------- | ------------------------------------------------------------ |
 | User governance | Notify user on  alert (via Microsoft Entra ID)<br />  Require user to sign in again (via Microsoft Entra ID)   <br /> Suspend user (via Microsoft Entra ID) |
 
-For more information about remediating threats from apps, see [Governing connected apps](governance-actions.md).
+To learn more about fixing threats from apps, see [Governing connected apps](governance-actions.md).
 
 ## Protect NetDocuments in real time
 
@@ -66,9 +66,9 @@ Review our best practices for [securing and collaborating with external users](b
 
 ## SaaS security posture management (Preview)
 
-After you [connect NetDocuments to Microsoft Defender for Cloud Apps](#connect-netdocuments-to-microsoft-defender-for-cloud-apps), you automatically get security posture recommendations for NetDocuments in Microsoft Secure Score. In Secure Score, select **Recommended actions** and filter by **Product** = **NetDocument**. NetDocument supports security recommendations to *Adopt SSO (Single sign on) in NetDocument*.
+After you connect NetDocuments to Defender for Cloud Apps, you automatically get security posture recommendations for NetDocuments in Microsoft Secure Score. In Secure Score, select **Recommended actions** and filter by **Product** = **NetDocument**. NetDocument supports security recommendations to *Adopt SSO (Single sign on) in NetDocument*.
 
-For more information about SaaS security posture management and Microsoft Secure Score, see:
+To learn more, see:
 
 - [Security posture management for SaaS apps](security-saas.md)
 - [Microsoft Secure Score](/microsoft-365/security/defender/microsoft-secure-score)

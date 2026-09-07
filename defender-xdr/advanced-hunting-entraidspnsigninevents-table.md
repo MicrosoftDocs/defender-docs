@@ -12,20 +12,22 @@ ms.collection:
 ms.custom:
 - cx-ti
 - cx-ah
+- msecd-doc-authoring-1018
 appliesto:
     - Microsoft Defender XDR
     - Microsoft Sentinel in the Microsoft Defender portal
 ms.topic: reference
-ms.date: 02/05/2026
+ms.date: 07/27/2026
+ai-usage: ai-assisted
 ---
 
 # EntraIdSpnSignInEvents
 
 
 > [!IMPORTANT]
-> On December 9, 2025, the `EntraIdSpnSignInEvents` table will replace [`AADSpnSignInEventsBeta`](advanced-hunting-aadspnsignineventsbeta-table.md). This change will be made to remove the latter's preview status and to align it with the existing product branding. Both tables will coexist until `AADSpnSignInEventsBeta` is deprecated after the said date.
+> On October 19, 2026, the `EntraIdSpnSignInEvents` table will replace [`AADSpnSignInEventsBeta`](advanced-hunting-aadspnsignineventsbeta-table.md). This change removes the latter's preview status and aligns it with the existing product branding. Both tables will coexist until `AADSpnSignInEventsBeta` is deprecated on that date.
 >
->To ensure a smooth transition, make sure that you update your queries that use the `AADSpnSignInEventsBeta` table to use `EntraIdSpnSignInEvents` before the previously mentioned date. Your custom detections will be updated automatically and won't require any changes.
+> All queries that use the `AADSpnSignInEventsBeta` table will be migrated automatically to `EntraIdSpnSignInEvents` on October 19, 2026. Your custom detections won't require any changes.
 
 > [!IMPORTANT]
 > Customers need to have a Microsoft Entra ID P2 license to collect and view activities for this table.
@@ -58,10 +60,19 @@ For information on other tables in the advanced hunting schema, see [the advance
 |`Longitude`|`string`|The east to west coordinates of the sign-in location|
 |`RequestId`|`string`|Unique identifier of the request|
 |`ReportId`|`string`|Unique identifier for the event|
+|`IsConfidentialClient`|`boolean`|Indicates whether the sign-in was performed by a confidential client application|
+|`GatewayJA4`|`string`|JA4 fingerprint derived from the TLS Client Hello request that identifies the client's TLS configuration|
+|`SessionId`|`string`|Unique number assigned to a user by a website's server for the duration of the visit or session|
+|`UserAgent`|`string`|User agent information from the web browser or other client application|
+|`TenantId`|`string`|Unique identifier representing the organization's instance of Microsoft Entra ID|
+|`Type`|`string`|Name of the table|
+|`SourceSystem`|`string`|Source system for the record|
+|`TimeGenerated`|`datetime`|Date and time when the record was generated|
+|`UniqueTokenId`|`string`|Unique identifier for the token passed during sign-in, used to correlate the sign-in with the token request|
 
 ## Related articles
 
-- [EntraIdSignInEvents](./advanced-hunting-aadsignineventsbeta-table.md)
+- [EntraIdSignInEvents](./advanced-hunting-entraidsigninevents-table.md)
 - [Advanced hunting overview](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-overview)
 - [Learn the query language](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-query-language)
 - [Understand the schema](/windows/security/threat-protection/microsoft-defender-atp/advanced-hunting-schema-reference)

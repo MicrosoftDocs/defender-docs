@@ -9,9 +9,9 @@ ms.collection:
   - msftsolution-secops
   - tier2
 ms.topic: how-to
-ms.date: 06/15/2026
+ms.date: 07/02/2026
 ai-usage: ai-assisted
-ms.custom: msecd-doc-authoring-1014
+ms.custom: msecd-doc-authoring-1016
 ---
 
 # Step 1. Plan for Microsoft Defender XDR operations readiness
@@ -35,7 +35,7 @@ The SOC is the frontline of defense to security events and incidents. When an ev
 
 ## Centralize monitoring and logging of your organization's security sources
 
-Usually, the SOC team's core function is to make sure all security devices such as firewalls, intrusion prevention systems, data loss prevention systems, vulnerability management systems, and identity systems are functioning correctly and being monitored. The SOC teams work with the broader network operations such as identity, DevOps, cloud, application, data science, and other business teams to ensure the analysis of security information is centralized and secured. Additionally, the SOC team is responsible for maintaining logs of the data in useable and readable formats, which could include parsing and normalizing disparate formats.
+Usually, the SOC team's core function is to make sure all security devices are working correctly and being monitored. These devices include firewalls, intrusion prevention systems, data loss prevention systems, vulnerability management systems, and identity systems. The SOC teams work with broader network operations teams, such as identity, DevOps, cloud, application, data science, and other business teams. Together, they make sure that security information analysis is centralized and secured. The SOC team also maintains logs in usable and readable formats. This work can include parsing and normalizing different data formats.
 
 ## Establish Red, Blue, and Purple team operational readiness
 
@@ -43,5 +43,5 @@ Every SOC team should test its preparedness in responding to a cyber incident. T
 
 ## Next step
 
-As the next step in this series, [Perform a SOC integration readiness assessment using the Zero Trust Framework](integrate-microsoft-365-defender-secops-readiness.md).
+For guidance on assessing SOC integration readiness, see [Perform a SOC integration readiness assessment using the Zero Trust Framework](integrate-microsoft-365-defender-secops-readiness.md).
 [!INCLUDE [Microsoft Defender XDR rebranding](../includes/defender-m3d-techcommunity.md)]

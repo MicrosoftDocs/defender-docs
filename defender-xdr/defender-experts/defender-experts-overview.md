@@ -13,8 +13,8 @@ ms.topic: overview
 ms.custom:
 - cx-ti
 - cx-dex
-- msecd-doc-authoring-1012
-ms.date: 06/29/2026
+- msecd-doc-authoring-1018
+ms.date: 07/27/2026
 ai-usage: ai-assisted
 ---
 
@@ -26,7 +26,7 @@ The suite offers the following services tailored to different security needs:
 
 | Service | What it does | Coverage |
 |---|---|---|
-| [Defender Experts MDR](#defender-experts-mdr) | Managed extended detection and response | Microsoft Defender environment |
+| [Defender Experts MDR](#defender-experts-mdr) | Managed extended detection and response | Microsoft Defender workloads, and supported third-party sources through Microsoft Sentinel |
 | [Defender Experts Hunting](#defender-experts-hunting) | Proactive threat hunting | Endpoints, Microsoft 365, cloud apps, identity, and servers |
 | [Defender Experts for Servers](#defender-experts-for-servers) | Managed detection and response for servers | Azure, AWS, and GCP via Defender for Cloud |
 | [Defender Experts Threat Intelligence](#defender-experts-threat-intelligence) | Curated threat briefings and proactive threat alerts | Your industry, geography, and environment |
@@ -38,6 +38,8 @@ The suite offers the following services tailored to different security needs:
 ## Defender Experts MDR
 
 **Microsoft Defender Experts MDR** is a managed extended detection and response service that helps your SOC focus and accurately respond to incidents that matter. It provides coverage for customers who use Microsoft Defender services, including Microsoft Defender for Endpoint, Microsoft Defender for Office 365, Microsoft Defender for Identity, Microsoft Defender for Cloud Apps, and Microsoft Entra ID.
+
+The service is available in two plans. Plan 1 covers your Microsoft Defender workloads. Plan 2 includes everything in Plan 1 and extends expert triage and investigation to supported third-party sources that you ingest through Microsoft Sentinel.
 
 Key capabilities:
 

@@ -90,7 +90,7 @@ Starting May 19, 2025, security operations center (SOC) analysts can now view th
 - Connecting or disconnecting to open wireless networks
 - Download/installation/removal of self-signed certificates
 
-These events can be viewed in the Timeline tab of a device page. For more information, see [Network protection](android-configure.md#network-protection).
+These events can be viewed in the Timeline tab of a device page. For more information, see [Network protection](android-configure.md#configure-network-protection).
 
 ## April 2025
 

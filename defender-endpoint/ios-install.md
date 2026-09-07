@@ -12,7 +12,8 @@ ms.collection:
 - mde-ios
 ms.topic: install-set-up-deploy
 ms.subservice: ios
-ms.date: 03/28/2025
+search.appverid: met150
+ms.date: 07/28/2026
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
   - Microsoft Defender for Endpoint Plan 2
@@ -29,7 +30,7 @@ This article describes deploying the Defender for Endpoint on iOS (using the Mic
 
 - Ensure iOS enrollment is done for your users. Users need to have a Defender for Endpoint license assigned in order to use the Microsoft Defender app. Refer to [Assign licenses to users](/azure/active-directory/users-groups-roles/licensing-groups-assign) for instructions on how to assign licenses.
 
-- Ensure that end users have the Company Portal app installed, have signed in, and have completed enrollment.
+- Ensure that end users have the Company Portal app installed, have signed in, and have completed enrollment. For [just-in-time (JIT) registration](/intune/device-enrollment/apple/setup-just-in-time-registration) scenarios where the Company Portal app isn't required, the device must be registered with the Microsoft Authenticator app.
 
 > [!NOTE]
 > The Microsoft Defender app is available in the [Apple App Store](https://aka.ms/mdatpiosappstore).

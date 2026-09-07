@@ -8,9 +8,9 @@ ms.collection:
     - m365-security
     - tier2
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1016
   - sfi-image-nochange
-ms.date: 06/15/2026
+ms.date: 07/03/2026
 description: Learn how to speed up the process of detecting and addressing compromised user accounts with automated investigation and response capabilities in Microsoft Defender for Office 365 Plan 2.
 ms.service: defender-office-365
 appliesto:
@@ -83,9 +83,8 @@ Keep the following guidance in mind when investigating and responding to comprom
 
 - **Automation assists your security operations team**. Automated investigation and response capabilities can detect a compromised user early on and enable your security operations team to take action to remediate the threat. For help reviewing or approving remediation actions, see [Review and approve actions](air-review-approve-pending-completed-actions.md).
 
-## Next steps
-
-Continue with the following related tasks and resources:
+<a name="next-steps"></a>
+## Related resources
 
 - [Review the required permissions to use AIR capabilities](air-about.md#required-permissions-and-licensing-for-air)
 
@@ -93,4 +92,4 @@ Continue with the following related tasks and resources:
 
 - [Learn about AIR in Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/automated-investigations)
 
-- [Visit the Microsoft 365 Roadmap to see what's coming soon and rolling out](https://www.microsoft.com/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Office%20365)
+- [Microsoft 365 Roadmap for Defender for Office 365](https://www.microsoft.com/microsoft-365/roadmap?filters=Microsoft%20Defender%20for%20Office%20365)

@@ -10,7 +10,7 @@ ms.pagetype: security
 ms.author: pauloliveria
 author: poliveria
 ms.custom:
-  - msecd-doc-authoring-1014
+  - msecd-doc-authoring-1015
   - cx-ti
   - cx-ean
   - sfi-image-nochange
@@ -21,7 +21,7 @@ ms.collection:
   - essentials-manage
 ms.topic: how-to
 search.appverid: met150
-ms.date: 06/16/2026
+ms.date: 07/20/2026
 ai-usage: ai-assisted
 ---
 
@@ -83,6 +83,14 @@ You can find the **Ask Defender Experts** option in several places throughout th
 - **Incidents page actions menu**:
 
   :::image type="content" source="media/incidents-page-actions-menu.png" alt-text="Screenshot of the Ask Defender Experts menu option in the Incidents page actions menu in the Microsoft Defender portal." lightbox="media/incidents-page-actions-menu.png":::
+
+- **Defender Experts overview page**:
+
+  :::image type="content" source="media/defender-experts-hunting-ask-experts/ade-overview-page-final.png" alt-text="Screenshot of the Ask Defender Experts option on the Defender Experts overview page in the Microsoft Defender portal." lightbox="media/defender-experts-hunting-ask-experts/ade-overview-page-final.png":::
+
+- **Defender Experts message center**:
+
+  :::image type="content" source="media/defender-experts-hunting-ask-experts/ade-message-center.png" alt-text="Screenshot of the Ask Defender Experts option in the Defender Experts message center in the Microsoft Defender portal." lightbox="media/defender-experts-hunting-ask-experts/ade-message-center.png":::
 
 ## Where to view responses from Defender Experts
 

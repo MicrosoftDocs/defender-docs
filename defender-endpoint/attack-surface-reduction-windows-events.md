@@ -10,8 +10,8 @@ ms.collection:
   - m365-security
   - tier2
   - mde-asr
-ms.custom: msecd-doc-authoring-1014
-ms.date: 06/16/2026
+ms.custom: msecd-doc-authoring-1016
+ms.date: 07/02/2026
 ai-usage: ai-assisted
 appliesto:
   - Microsoft Defender for Endpoint Plan 1
@@ -58,7 +58,7 @@ All attack surface reduction events are located in **Applications and Services L
 
 1. Continue to expand the path for [ASR rule events](#asr-rule-events), [controlled folder access events](#controlled-folder-access-events), [exploit protection events](#exploit-protection-events), or [network protection events](#network-protection-events).
 
-1. Find and filter the events you want to see by using the event ID tables in the preceding sections, or by creating [custom views in Event Viewer](#use-custom-views-in-windows-event-viewer-to-view-attack-surface-reduction-events).
+1. Find and filter the events you want to see by using the event ID tables in the [ASR rule events](#asr-rule-events), [controlled folder access events](#controlled-folder-access-events), [exploit protection events](#exploit-protection-events), and [network protection events](#network-protection-events) sections, or by creating [custom views in Event Viewer](#use-custom-views-in-windows-event-viewer-to-view-attack-surface-reduction-events).
 
 ### ASR rule events
 
@@ -178,7 +178,7 @@ To paste XML directly into a custom view, complete the following steps:
 
 1. In the **Actions** pane, select **Create Custom View...**
 
-1. Go to the XML tab and select **Edit query manually**. A warning indicates that you can't edit the query using the **Filter** tab when you use the XML option. Select **Yes**.
+1. Go to the XML tab. Note that if you select **Edit query manually**, you can't edit the query later by using the **Filter** tab. Select **Edit query manually**, and then select **Yes** to confirm.
 
 1. Paste the XML code for attack surface reduction rules, controlled folder access, exploit protection, or network protection from the [custom XML templates](#custom-xml-templates-for-attack-surface-reduction-events) into the XML section.
 
