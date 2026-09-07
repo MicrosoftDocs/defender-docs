@@ -31,6 +31,9 @@ Use the following table to interpret the results:
 
 If any findings remain, consult the response details for guidance on remediation steps. Legacy SAP systems often require extra SAP notes. Furthermore, see the [troubleshooting section](../sap/sap-deploy-troubleshoot.md) for common issues and resolutions.
 
+> [!TIP]
+> It is a good practice to run the function module `RSAU_API_GET_LOG_DATA` manually to verify correct behavior on the SAP ERP source before further investigation of any upstream issues. Use the ["SAP Security Audit Log Smoke Test" article](https://github.com/Azure/Azure-Sentinel/blob/master/Solutions/SAP/Tools/IntegrationSuite/AUDIT-LOG-SMOKE-TEST.md) for more guidance.
+
 **After completion**:
 
 Undeploy the scheduled **Prerequisite checker** iflow once SAP system check was completed successfully. Repeat this sequence for every new SAP system that shall be onboarded.
