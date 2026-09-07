@@ -270,6 +270,8 @@
               href: advanced-hunting-errors.md
         - name: Work with query results
           href: advanced-hunting-query-results.md
+        - name: Best practices for graph mapping
+          href: advanced-hunting-graph-mapping-best-practices.md
         - name: Rerun query in query history
           href: advanced-hunting-query-history.md
         - name: Data schema
