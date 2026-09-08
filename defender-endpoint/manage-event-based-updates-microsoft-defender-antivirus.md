@@ -106,7 +106,7 @@ To configure protection update checks before scans in Group Policy, perform the 
 To require Microsoft Defender Antivirus to check for updated signatures before starting a scheduled scan, run the following cmdlet:
 
 ```PowerShell
-Set-MpPreference -CheckForSignaturesBeforeRunningScan
+Set-MpPreference -CheckForSignaturesBeforeRunningScan $true
 ```
 
 For more information, see [Use PowerShell cmdlets to configure and run Microsoft Defender Antivirus](use-powershell-cmdlets-microsoft-defender-antivirus.md) and [Defender Antivirus cmdlets](/powershell/module/defender/index).
@@ -221,6 +221,5 @@ For more information about managing Microsoft Defender Antivirus updates, see th
 - [Manage updates for endpoints that are out of date](manage-outdated-endpoints-microsoft-defender-antivirus.md)
 - [Manage updates for mobile devices and virtual machines (VMs)](manage-updates-mobile-devices-vms-microsoft-defender-antivirus.md)
 - [Microsoft Defender Antivirus in Windows 10](microsoft-defender-antivirus-windows.md)
-
 
 
