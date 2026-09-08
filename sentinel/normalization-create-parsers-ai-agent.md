@@ -4,7 +4,7 @@ description: Use GitHub Copilot or the Microsoft Sentinel VS Code extension skil
 ms.author: derricklee
 author: derricklee
 ms.topic: how-to
-ms.date: 07/30/2026
+ms.date: 09/07/2026
 ai-usage: ai-assisted
 ms.custom: msecd-doc-authoring-1012
 
