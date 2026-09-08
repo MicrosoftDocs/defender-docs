@@ -489,8 +489,6 @@ The following table lists the firewall requirements for scenarios where Azure vi
 | Azure Commercial | `https://<data collection endpoint name>.<Azure cloud region>.ingest.monitor.azure.com` | Data collection Endpoint | Port 443 | Outbound | Yes |
 | Azure Government | `https://login.microsoftonline.us` | Authorization server (the Microsoft identity platform) | Port 443 | Outbound | Yes |
 | Azure Government | Replace '.com' above with '.us' | Data collection Endpoint | Port 443 | Outbound | Yes |
-| Microsoft Azure operated by 21Vianet | `https://login.chinacloudapi.cn` | Authorization server (the Microsoft identity platform) | Port 443 | Outbound | Yes |
-| Microsoft Azure operated by 21Vianet | Replace '.com' above with '.cn' | Data collection Endpoint | Port 443 | Outbound | Yes |
 
 ## Plugin version history
 

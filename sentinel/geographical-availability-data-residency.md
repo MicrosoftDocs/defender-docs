@@ -5,7 +5,7 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: concept-article
-ms.date: 05/28/2026
+ms.date: 08/18/2026
 ms.custom: references_regions
 
 
@@ -37,7 +37,6 @@ Microsoft Sentinel processes data in one of the following locations:
 
 - For Log Analytics workspaces located in Europe, Microsoft Sentinel processes customer data in Europe.
 - For Log Analytics workspaces located in Israel, Microsoft Sentinel processes customer data in Israel.
-- For Log Analytics workspaces located in any of the China 21Vianet regions, Microsoft Sentinel processes customer data in China 21Vianet.
 - For workspaces located in any other location, Microsoft Sentinel processes customer data in a US region.
 
 When you onboard Microsoft Sentinel from the Defender portal, the service might process data in the destination regions specified during onboarding, or in the existing Microsoft Defender XDR regions if applicable. The raw data storage location, however, remains unchanged. For more information, see [Data security and retention in Microsoft Defender XDR](/defender-xdr/data-privacy).
@@ -52,7 +51,6 @@ The following table shows the supported regions supporting Microsoft Sentinel SI
 | |   **United States** | • Central US<br>• East US<br>• East US 2<br>• East US 2 EUAP<br>• North Central US<br>• South Central US<br>• West US<br>• West US 2<br>• West US 3<br>• West Central US<br><br>**Azure government** <br>• USGov Arizona<br>• USGov Virginia<br>• USNat East<br>• USNat West<br>• USSec East<br>• USSec West| • Central US<br>• East US<br>• East US 2<br>• South Central US<br>• West US 2 |
 |**South America** | **Brazil** | • Brazil South<br>• Brazil Southeast |
 |**Asia and Middle East** | |• East Asia<br>• Southeast Asia | • Southeast Asia |
-| | **China 21Vianet**| • China East 2<br>• China North 3|
 | | **India**| • Central India<br>• Jio India West<br>• Jio India Central| • Central India |
 | | **Israel** | • Israel Central | • Israel Central |
 | | **Japan** | • Japan East<br>• Japan West| • Japan East |
