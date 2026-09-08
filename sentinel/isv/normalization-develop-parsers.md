@@ -4,7 +4,8 @@ description: This article explains how to develop, test, and deploy Microsoft Se
 ms.author: edbaynash
 author: EdB-MSFT
 ms.topic: how-to
-ms.date: 11/09/2021
+ms.date: 09/07/2026
+ai-usage: ai-assisted
 
 
 #Customer intent: As a security analyst, I want to develop custom ASIM parsers so that I can normalize and analyze security event data from various sources in a consistent format.
@@ -84,6 +85,16 @@ A custom parser is a KQL query developed in the Microsoft Sentinel **Logs** page
 
 **Filter** > **Parse** > **Prepare fields**
 
+### Keep parser operations record-local
+
+Normalize each source record independently. A source record can produce zero records after filtering or one normalized record.
+
+- Read event records from only the declared source table. Don't perform same-table or cross-table event enrichment with a second table read, event-record `join`, workspace-table or watchlist reference, `externaldata`, or another external tabular source.
+- Preserve record cardinality. Don't turn one source record into multiple normalized records. If the source combines multiple logical events in one record, correct the connector or source event format.
+- Don't use any `mv-*` operator, including `mv-expand` and `mv-apply`.
+- Don't correlate, deduplicate, aggregate, or reaggregate event records with `summarize`, `distinct`, `arg_min`, `arg_max`, or an equivalent operation.
+
+Query-local static mappings created with `datatable` and applied with `lookup` are allowed when each lookup key is unique. Use scalar expressions, direct access to dynamic values, and values available in the current row. If a field can't be mapped without a prohibited pattern, correct the connector or source event shape, or leave a nonmandatory field unmapped.
 
 ### Filtering
 
@@ -104,23 +115,11 @@ Event | where Source == "Microsoft-Windows-Sysmon" and EventID == 1
 > [!IMPORTANT]
 > A parser should not filter by time. The query that uses the parser will apply a time range. 
 
-#### Filtering by source type using a Watchlist
+#### Filter by source fields
 
-In some cases, the event itself does not contain information that would allow filtering for specific source types.
+Use physical fields in the current event to identify the source type. Don't query a watchlist or another table to identify relevant records.
 
-For example, Infoblox DNS events are sent as Syslog messages, and are hard to distinguish from Syslog messages sent from other sources. In such cases, the parser relies on a list of sources that defines the relevant events. This list is maintained in the [**Sources_by_SourceType**](../normalization-manage-parsers.md#configure-the-sources-relevant-to-a-source-specific-parser) watchlist.
-
-To use the ASimSourceType watchlist in your parsers, use the `_ASIM_GetSourceBySourceType` function in the parser filtering section. For example, the Infoblox DNS parser restricts records to only Infoblox NIOS sources by including the following filter, ensuring the parser processes only relevant Syslog records:
-
-```kusto
-  | where Computer in (_ASIM_GetSourceBySourceType('InfobloxNIOS'))
-```
-
-To use this sample in your parser:
-
- * Replace `Computer` with the name of the field that includes the source information for your source. You can keep this as `Computer` for any parsers based on Syslog.
-
- * Replace the `InfobloxNIOS` token with a value of your choice for your parser. Inform parser users that they must update the `ASimSourceType` watchlist using your selected value, as well as the list of sources that send events of this type.
+If the event doesn't contain enough information to distinguish its source or event type, update the connector to include a source identifier or route the events to a source-specific table. Don't compensate for missing source information with table enrichment.
 
 #### Filtering based on parser parameters
 
@@ -208,7 +207,7 @@ For example, the original unique event ID may be sent as an integer, but ASIM re
 
 #### Derived fields and values
 
-The value of the source field, once extracted, may need to be mapped to the set of values specified for the target schema field. The functions `iff`, `case`, and `lookup` can be helpful to map available data to target values.
+The value of the source field, once extracted, might need to be mapped to the set of values specified for the target schema field. Use scalar expressions such as `iff` and `case`, or a query-local static `datatable` with `lookup`, to map available data to target values.
 
 For example, the Microsoft DNS parser derives a normalized success or failure outcome from source-specific event and response codes. The parser assigns the `EventResult` field based on the Event ID and Response Code using an `iff` statement, as follows:
 
@@ -216,56 +215,31 @@ For example, the Microsoft DNS parser derives a normalized success or failure ou
    extend EventResult = iff(EventId==257 and ResponseCode==0 ,'Success','Failure')
 ```
 
-To map several values, define the mapping using the `datatable` operator and use `lookup` to perform the mapping. For example, some sources report numeric DNS response codes and the network protocol, while the schema mandates the more common text labels representation for both. The following example demonstrates how to create lookup tables that map numeric protocol identifiers and DNS response codes to their normalized text labels, and then apply those lookups to the parsed data using `datatable` and `lookup`:
+Use `case` when a source value can map to several normalized values. For example:
 
 ```kusto
-   let NetworkProtocolLookup = datatable(Proto:real, NetworkProtocol:string)[
-        6, 'TCP',
-        17, 'UDP'
-   ];
-    let DnsResponseCodeLookup=datatable(DnsResponseCode:int,DnsResponseCodeName:string)[
-      0,'NOERROR',
-      1,'FORMERR',
-      2,'SERVFAIL',
-      3,'NXDOMAIN',
-      ...
-   ];
-   ...
-   | lookup DnsResponseCodeLookup on DnsResponseCode
-   | lookup NetworkProtocolLookup on Proto
+| extend NetworkProtocol = case(
+    Proto == 6, "TCP",
+    Proto == 17, "UDP",
+    ""
+)
 ```
 
-Notice that lookup is useful and efficient also when the mapping has only two possible values. 
-
-When the mapping conditions are more complex combine `iff`, `case`, and `lookup`. The example below shows how to combine `lookup` and `case`. The `lookup` example above returns an empty value in the field `DnsResponseCodeName` if the lookup value is not found. The `case` example below augments it by using the result of the `lookup` operation if available, and specifying additional conditions otherwise. Use this approach to handle unmatched lookup values by falling back to additional conditions or a default label:
+For larger static mappings, define a query-local dimension table and apply it with `lookup`. The right side of the lookup must be a locally defined static `datatable`, not a workspace table, watchlist, or external data source. Define only one row for each lookup key so one source record can't produce multiple normalized records. For example:
 
 ```kusto
-   | extend DnsResponseCodeName = 
-      case (
-        DnsResponseCodeName != "", DnsResponseCodeName,
-        DnsResponseCode between (3841 .. 4095), 'Reserved for Private Use',
-        'Unassigned'
-      )
-
+let NetworkProtocolLookup = datatable(Proto:real, NetworkProtocol:string)
+[
+    6, "TCP",
+    17, "UDP"
+];
+...
+| lookup NetworkProtocolLookup on Proto
 ```
-
-Microsoft Sentinel provides built-in helper functions for common lookup values. Instead of manually building a `datatable` and `lookup` for well-known mappings, you can use these functions to populate the normalized field directly. For example, the `DnsResponseCodeName` lookup above can be implemented using one of the following functions:
-
-```kusto
-
-| extend DnsResponseCodeName = _ASIM_LookupDnsResponseCode(DnsResponseCode)
-
-| invoke _ASIM_ResolveDnsResponseCode('DnsResponseCode')
-```
-
-The first option accepts as a parameter the value to look up and let you choose the output field and therefore useful as a general lookup function. The second option is more geared towards parsers, takes as input the name of the source field, and updates the needed ASIM field, in this case `DnsResponseCodeName`.
-
-For a full list of ASIM help functions, refer to [ASIM functions](../normalization-functions.md)
-
 
 #### Enrichment fields
 
-In addition to the fields available from the source, a resulting ASIM event includes enrichment fields that the parser should generate. In many cases, the parsers can assign a constant value to these fields. Populate the standard enrichment fields so each parsed record includes consistent product, vendor, and schema metadata, for example:
+In addition to the fields available from the source, a resulting ASIM event includes enrichment fields that the parser should generate. These schema fields use values from the current row or constants and don't require table enrichment. In many cases, the parsers can assign a constant value to these fields. Populate the standard enrichment fields so each parsed record includes consistent product, vendor, and schema metadata, for example:
 
 ```kusto
   | extend                  
@@ -320,36 +294,10 @@ For example, when parsing a custom log table, remove the remaining source-specif
 
 ### Handle parsing variants
 
->[!IMPORTANT]
-> The different variants represent *different* event types, commonly mapped to different schemas, develop separate parsers
+> [!IMPORTANT]
+> Develop separate parsers for variants that represent different event types or map to different schemas.
 
-In many cases, events in an eventstream include variants that require different parsing logic. To parse different variants in a single parser either use conditional statements such as `iff` and `case`, or use a union structure.
-
-To use `union` to handle multiple variants, create a separate function for each variant and use the union statement to combine the results:
-
-``` Kusto
-let AzureFirewallNetworkRuleLogs = AzureDiagnostics
-    | where Category == "AzureFirewallNetworkRule"
-    | where isnotempty(msg_s);
-let parseLogs = AzureFirewallNetworkRuleLogs
-    | where msg_s has_any("TCP", "UDP")
-    | parse-where
-        msg_s with           networkProtocol:string 
-        " request from "     srcIpAddr:string
-        ":"                  srcPortNumber:int
-    …
-    | project-away msg_s;
-let parseLogsWithUrls = AzureFirewallNetworkRuleLogs
-    | where msg_s has_all ("Url:","ThreatIntel:")
-    | parse-where
-        msg_s with           networkProtocol:string 
-        " request from "     srcIpAddr:string
-        " to "               dstIpAddr:string
-    ...
-union parseLogs,  parseLogsWithUrls…
-```
-
-To avoid duplicate events and excessive processing, make sure each function starts by filtering, using native fields, only the events that it is intended to parse. Also, if needed, use project-away at each branch, before the union.
+If variants of the same event type require different parsing logic, use scalar conditional expressions such as `iff` and `case` while preserving one output record for each source record. Don't create tabular branches and recombine them with `union`, because branches can process or return the same source record more than once.
 
 ## Deploy parsers
 
@@ -368,7 +316,7 @@ To deploy a large number of parsers, we recommend using parser ARM templates, as
 You can also combine multiple templates to a single deploy process using [linked templates](/azure/azure-resource-manager/templates/linked-templates?tabs=azure-powershell#linked-template)
 
 > [!TIP]
-> ARM templates can combine different resources, so parsers can be deployed alongside connectors, analytic rules, or watchlists, to name a few useful options. For example, your parser can reference a watchlist deployed alongside it.
+> ARM templates can combine different resources, so parsers can be deployed alongside connectors, analytic rules, or watchlists. Keep the parser independent of watchlists and other tables.
 > 
 
 ## Test parsers
