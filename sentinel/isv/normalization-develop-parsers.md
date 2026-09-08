@@ -97,6 +97,15 @@ Normalize each source record independently. A source record can produce zero rec
 
 Query-local static mappings created with `datatable` and applied with `lookup` are allowed when each lookup key is unique. Use scalar expressions, direct access to dynamic values, and values available in the current row. If a field can't be mapped without a prohibited pattern, correct the connector or source event shape, or leave a nonmandatory field unmapped.
 
+Normalize each source record independently. A source record can produce zero records after filtering or one normalized record.
+
+- Read event records from only the declared source table. Don't perform same-table or cross-table event enrichment with a second table read, event-record `join`, workspace-table or watchlist reference, `externaldata`, or another external tabular source.
+- Preserve record cardinality. Don't turn one source record into multiple normalized records. If the source combines multiple logical events in one record, correct the connector or source event format.
+- Don't use any `mv-*` operator, including `mv-expand` and `mv-apply`.
+- Don't correlate, deduplicate, aggregate, or reaggregate event records with `summarize`, `distinct`, `arg_min`, `arg_max`, or an equivalent operation.
+
+Query-local static mappings created with `datatable` and applied with `lookup` are allowed when each lookup key is unique. Use scalar expressions, direct access to dynamic values, and values available in the current row. If a field can't be mapped without a prohibited pattern, correct the connector or source event shape, or leave a nonmandatory field unmapped.
+
 <a name="filtering"></a>
 ### Filter relevant source records
 
