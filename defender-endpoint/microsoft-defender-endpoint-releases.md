@@ -29,6 +29,8 @@ This table includes supported releases for all supported platforms in the past s
 
 |OS  |Build |Month released|Details  |Learn more  |
 |---------|---------|---------|---------|---------|
+|iOS |1.1.80270104|Sep 2026|- Build: 1.1.80270104<br>- Release: Sep 7, 2026|[Release details and updates](#ios--sep-2026--platform-version-1180270104)|
+|Android |1.0.9228.0101|Aug 2026|- Build: 1.0.9228.0101<br>- Release: Aug 31, 2026|[Release details and updates](#android--aug-2026--platform-1092280101)|
 |Windows Antivirus |Platform 4.18.26080.3 / Engine 1.1.26080.3|August 2026|- Platform: 4.18.26080.3<br>- Engine: 1.1.26080.3<br>- Security intelligence: 1.159.11.0|[Release details and updates](#windows-antivirus--august-2026--platform-418260803--engine-11260803)|
 |Android |1.0.9212.0102|Aug 2026|- Build: 1.0.9212.0102<br>- Release: Aug 20, 2026|[Release details and updates](#android--aug-2026--platform-1092120102)|
 |iOS |1.1.80120102|Aug 2026|- Build: 1.1.80120102<br>- Release: Aug 20, 2026|[Release details and updates](#ios--aug-2026--platform-version-1180120102)|
@@ -809,6 +811,21 @@ Fixed an issue in the January 2026 release, where real-time scanning of the /dev
 
 See the full list of [Android UX improvements](android-new-ux.md).
 
+### Android | Aug 2026 | Platform: 1.0.9228.0101
+
+#### Release details
+
+| Platform version| Release Date |
+| -------- | -------- |
+|1.0.9228.0101|Aug 31, 2026|
+
+#### Enhancements and features
+
+| Feature Area | Update Summary |
+|---|---|
+| Feature Enhancements | Improved authentication resilience by suppressing unnecessary interactive auth prompts on token-expired broker failures.<br> Added support for Android 17 with an updated target SDK for platform compatibility and compliance. |
+| Deprecation | Deprecating the following tracks in GP Console:<br> 1. Enterprise Selfhost (Closed test track)<br> 2. Private Preview (Closed test track) |
+
 ### Android | Aug 2026 | Platform: 1.0.9212.0102
 
 #### Release details
@@ -1060,6 +1077,21 @@ See the full list of [Android UX improvements](android-new-ux.md).
 ## iOS releases
 
 For the latest UX improvements, see [iOS UX improvements](ios-new-ux.md).
+
+### iOS | Sep 2026 | Platform Version: 1.1.80270104
+
+#### Release details
+
+| Platform version | Release Date |
+| -------- | -------- |
+| 1.1.80270104 | Sep 7, 2026 |
+
+#### Enhancements and features
+
+|**Feature Area**| **Update Summary**|
+| -------- | -------- |
+| Enhancements | Added and enhanced support for iOS 27. |
+| Bug fixes and improvement | Fixed UI bug in feedback flow for iOS 27.<br> GSA tile will not be shown if no channels/rules are present in GSA policy. |
 
 ### iOS | Aug 2026 | Platform Version: 1.1.80120102
 

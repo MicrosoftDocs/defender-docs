@@ -5,7 +5,7 @@ ms.author: guywild
 author: guywi-ms
 ms.reviewer: noak
 ms.topic: concept-article
-ms.date: 06/29/2025
+ms.date: 08/18/2026
 appliesto:
     - Microsoft Sentinel in the Microsoft Defender portal
     - Microsoft Sentinel in the Azure portal
@@ -87,8 +87,6 @@ The following geographical regions aren't currently supported for the customer-e
 
 - EU customers, due to EUDB compliance limitations
 - Israel
-- Azure operated by 21Vianet 
-
 For more information, see [Geographical availability and data residency in Microsoft Sentinel](geographical-availability-data-residency.md).
 
 
